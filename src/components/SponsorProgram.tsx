@@ -285,12 +285,12 @@ const SponsorProgram: React.FC = () => {
                                     className="w-[30px] h-[30px] object-contain"
                                 />
                             </div>
-                            <Link
+                            <a
                                 href="tel:+380992671566"
                                 className="text-white font-bold text-[20px] ml-[0.6vw] hover:underline"
                             >
                                 (050) 949 82 09
-                            </Link>
+                            </a>
                         </div>
                         <div className="flex items-center gap-2 max-h-[6vh] animate-pulse" style={{marginTop: '20px'}}>
                             <div className="bg-white rounded-full p-2" style={{marginLeft: '50px'}}>
@@ -300,13 +300,13 @@ const SponsorProgram: React.FC = () => {
                                     className="w-[30px] h-[30px] object-contain"
                                 />
                             </div>
-                            <Link
+                            <a
                                 href="https://t.me/@ivanovich112"
                                 className="text-white text-[17px] font-bold ml-[0.5vw] hover:underline"
                                 style={{marginRight: '105px'}}
                             >
                                 TELEGRAM
-                            </Link>
+                            </a>
                         </div>
                         <div className="flex items-center gap-2 max-h-[6vh] animate-pulse" style={{marginTop: '20px'}}>
                             <div className="bg-white rounded-full p-2" style={{marginLeft: '80px'}}>
@@ -316,12 +316,12 @@ const SponsorProgram: React.FC = () => {
                                     className="w-[30px] h-[30px] object-contain"
                                 />
                             </div>
-                            <Link
+                            <a
                                 href="viber://chat?number=%2B992671566"
                                 className="text-white text-[17px] font-bold ml-[1vw] hover:underline"
                             >
                                 rugby.support@gmail.com
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
