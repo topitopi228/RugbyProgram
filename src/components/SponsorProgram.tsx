@@ -152,7 +152,7 @@ const SponsorProgram: React.FC = () => {
                                     style={{marginTop: '2vh'}}
                                 />
                             </div>
-                            <div className="flex-1">
+                            <div className="flex-1" style={{marginTop:'3vh'}}>
                                 <p className="text-black text-xl mb-4">{translations[language].zakarpattiaDesc1}</p>
                                 <p className="text-black text-xl mb-4">{translations[language].zakarpattiaDesc2}</p>
                                 <p className="text-black text-xl mb-4">{translations[language].zakarpattiaDesc3}</p>
@@ -188,7 +188,7 @@ const SponsorProgram: React.FC = () => {
                                     style={{marginTop: '2vh'}}
                                 />
                             </div>
-                            <div className="flex-1">
+                            <div className="flex-1" style={{marginTop:'9vh'}}>
                                 <p className="text-black text-xl mb-4">{translations[language].u16Desc1}</p>
                                 <p className="text-black text-xl mb-4">{translations[language].u16Desc2}</p>
                                 <p className="text-black text-xl mb-4">{translations[language].u16Desc3}</p>
@@ -224,7 +224,7 @@ const SponsorProgram: React.FC = () => {
                                     style={{marginTop: '2vh'}}
                                 />
                             </div>
-                            <div className="flex-1">
+                            <div className="flex-1" style={{marginTop:'10vh'}}>
 
                                 <p className="text-black mb-4 text-xl">{translations[language].stadiumDesc1}</p>
                                 <p className="text-black mb-4 text-xl">{translations[language].stadiumDesc2}</p>
@@ -241,20 +241,27 @@ const SponsorProgram: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="text-white py-8 w-full" id="contacts" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
+            <div className="text-white py-8 w-full" id="contacts" style={{ borderRadius: '10px', padding: 0, minHeight: '40vh', backgroundColor: 'rgba(50, 50, 50, 0.9)' }}>
                 <div
                     className="container mx-auto flex flex-row items-center max-w-full px-0"
-                    style={{borderRadius: '10px', padding: 0, minHeight: '40vh'}}
+                    style={{borderRadius: '10px', padding: 0, minHeight: '30vh'}}
                 >
                     {/* Логотип */}
-                    <div className="text-center mt-[7vh]" style={{marginLeft: '240px', marginTop: '15vh'}}>
+                    <div className="text-center mt-[7vh]" style={{marginLeft: '10vw', marginTop: '10vh'}}>
                         <img
                             src="/logo_rugby.png"
                             alt="Wins Trans Logo"
-                            className="logo-contact-png rounded-lg w-[200px] h-[200px] mb-5"
-                            style={{width: '500px'}}
+                            className="logo-contact-png rounded-lg w-[200px] h-[100px] mb-5"
+                            style={{width: '300px'}}
+                        />
+                        <img
+                            src="/logo_ukr.jpg"
+                            alt="Ukraine Logo"
+                            className="logo-contact-png rounded-lg w-[200px] h-[100px] mt-5"
+                            style={{width: '300px'}}
                         />
                     </div>
+
                     {/* Контакти */}
                     <div
                         className={`flex flex-col items-start gap-${isMobile ? 4 : 6} mt-[10vh] px-0 ${
@@ -271,8 +278,9 @@ const SponsorProgram: React.FC = () => {
                             className={`text-${isMobile ? 'text-2xl' : 'text-3xl'} font-bold text-yellow-400 ${
                                 isMobile ? 'mb-1' : 'mb-2'
                             }`}
+                            style={{marginBottom:'1vh'}}
                         >
-                            <Link to="/" className="text-white text-l">
+                            <Link to="/" className="text-white text-lg" style={{marginBottom:'1vh'}}>
                                 {translations[language].contactTitle}
                             </Link>
                         </h1>
@@ -282,43 +290,44 @@ const SponsorProgram: React.FC = () => {
                                 <img
                                     src="/phone-call-white.png"
                                     alt="Phone"
-                                    className="w-[30px] h-[30px] object-contain"
+                                    className="w-[20px] h-[20px] object-contain"
                                 />
                             </div>
                             <a
                                 href="tel:+380992671566"
-                                className="text-white font-bold text-[20px] ml-[0.6vw] hover:underline"
+                                className="text-white font-bold text-[15px] ml-[0.6vw] hover:underline"
                             >
                                 (050) 949 82 09
                             </a>
                         </div>
                         <div className="flex items-center gap-2 max-h-[6vh] animate-pulse" style={{marginTop: '20px'}}>
-                            <div className="bg-white rounded-full p-2" style={{marginLeft: '50px'}}>
+                            <div className="bg-white rounded-full p-2" style={{marginLeft: '60px'}}>
                                 <img
                                     src="/telegram.png"
                                     alt="Telegram"
-                                    className="w-[30px] h-[30px] object-contain"
+                                    className="w-[20px] h-[20px] object-contain"
                                 />
                             </div>
                             <a
                                 href="https://t.me/@ivanovich112"
-                                className="text-white text-[17px] font-bold ml-[0.5vw] hover:underline"
+                                className="text-white text-[13px] font-bold ml-[0.5vw] hover:underline"
                                 style={{marginRight: '105px'}}
                             >
                                 TELEGRAM
                             </a>
                         </div>
                         <div className="flex items-center gap-2 max-h-[6vh] animate-pulse" style={{marginTop: '20px'}}>
-                            <div className="bg-white rounded-full p-2" style={{marginLeft: '80px'}}>
+                            <div className="bg-white rounded-full p-2" style={{marginLeft: '100px'}}>
                                 <img
                                     src="/gmail.png"
                                     alt="Gmail"
-                                    className="w-[30px] h-[30px] object-contain"
+                                    className="w-[20px] h-[20px] object-contain"
                                 />
                             </div>
                             <a
                                 href="viber://chat?number=%2B992671566"
-                                className="text-white text-[17px] font-bold ml-[1vw] hover:underline"
+                                className="text-white text-[15px] font-bold ml-[1vw] hover:underline"
+                                style={{marginRight:'1vw'}}
                             >
                                 rugby.support@gmail.com
                             </a>

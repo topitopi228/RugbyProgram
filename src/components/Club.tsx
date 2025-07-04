@@ -191,7 +191,7 @@ const Club: React.FC = () => {
                 </div>
                 {/* Галерея */}
                 <div className="mt-10 flex justify-center items-center" style={{maxWidth: '85vw', marginTop: '10vh'}}>
-                    <div className="relative flex flex-row w-full max-w-4xl" style={{minWidth: '100%'}}>
+                    <div className="relative flex flex-row w-full max-w-4xl" style={{minWidth: '100%',marginLeft:'20vw'}}>
                         <button
                             className="bg-gray-100/50 text-white p-4 hover:bg-gray-300 transition-colors"
                             onClick={handlePrev}
@@ -209,7 +209,7 @@ const Club: React.FC = () => {
                         <button
                             className="bg-gray-100/50 text-white p-4 hover:bg-gray-300 transition-colors"
                             onClick={handleNext}
-                            style={{height: '5vh', borderRadius: '5px', marginTop: '30vh'}}
+                            style={{height: '5vh', borderRadius: '5px', marginTop: '30vh',marginRight:'10vw'}}
                         >
                             <img src="/next-button.png" alt="Next" className="w-full h-full object-cover"/>
                         </button>

@@ -86,21 +86,22 @@ const Navbar: React.FC = () => {
         <div className="flex space-x-2 pr-4 items-center">
           <button
             onClick={() => setLanguage('UA')}
-            className={`text-xl ${language === 'UA' ? 'text-yellow-400' : 'text-white'} hover:text-yellow-400`}
+            className={`text-lg ${language === 'UA' ? 'text-yellow-400' : 'text-white'} hover:text-yellow-400`}
+
           >
             UA
           </button>
           <span className="text-white">|</span>
           <button
             onClick={() => setLanguage('EN')}
-            className={`text-xl ${language === 'EN' ? 'text-yellow-400' : 'text-white'} hover:text-yellow-400`}
+            className={`text-lg ${language === 'EN' ? 'text-yellow-400' : 'text-white'} hover:text-yellow-400`}
           >
             EN
           </button>
           <span className="text-white">|</span>
           <button
             onClick={() => setLanguage('HUN')}
-            className={`text-xl ${language === 'HUN' ? 'text-yellow-400' : 'text-white'} hover:text-yellow-400`}
+            className={`text-lg ${language === 'HUN' ? 'text-yellow-400' : 'text-white'} hover:text-yellow-400`}
           >
             HUN
           </button>
