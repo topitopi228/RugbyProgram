@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
             className={`bg-gray-800 fixed top-0 left-0 w-full p-2 md:p-4 transition-transform duration-300 ${
                 isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
             } z-10 flex flex-col md:flex-row items-center justify-between`}
-            style={{borderRadius: '5px', maxHeight: '11vh', minHeight: '10%'}}
+            style={{borderRadius: '5px', maxHeight: '11vh', minHeight: '6vw'}}
         >
             <header className="py-2 md:py-4 w-full md:w-auto">
                 <div className="container mx-auto text-center md:max-w-100" style={{padding: '0'}}>

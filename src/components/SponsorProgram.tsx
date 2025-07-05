@@ -120,43 +120,40 @@ const SponsorProgram: React.FC = () => {
         <>
             <div className="min-h-screen flex flex-col justify-between">
                 <div className="text-center py-10" style={{marginTop: '90px', backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
-                    <h2 className="text-4xl font-bold text-white mb-6">{translations[language].supportTitle}</h2>
-                    <p className="text-lg text-white mb-8">{translations[language].supportText}</p>
-                    <ul className="text-left max-w-2xl mx-auto text-lg text-white mb-8 list-disc pl-6">
+                    <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">{translations[language].supportTitle}</h2>
+                    <p className="md:text-lg text-white mb-8">{translations[language].supportText}</p>
+                    <ul className="text-left max-w-2xl mx-auto md:text-lg text-white mb-8 list-disc pl-6">
                         {translations[language].supportList.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
-                    <p className="text-lg text-white mb-8">{translations[language].readyText}</p>
+                    <p className="md:text-lg text-white mb-8">{translations[language].readyText}</p>
                     <div className="flex flex-col gap-15">
                         <div
-                            className="bg-gray-100/80 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center"
-                            style={{maxWidth: '70vw', marginLeft: '15vw',marginTop:'5vh'}}
+                            className="bg-gray-100/80 p-6 rounded-lg shadow-md flex flex-col  md:flex-row items-center"
+                            style={{maxWidth: '70vw', marginLeft: '15vw', marginTop: '5vh'}}
                         >
                             <div className="mb-4 md:mb-0 md:mr-6">
-                                <h3 className="text-4xl font-semibold text-gray-800 mb-2">{translations[language].zakarpattiaTitle}</h3>
+                                <h3 className="text-2xl md:text-4xl font-semibold text-gray-800 mt-0 mb-2">{translations[language].zakarpattiaTitle}</h3>
                                 <div
-                                    className="border-t-2 border-gray-300 w-full my-4"
+                                    className="border-t-2 border-gray-300 w-full my-4 md:min-h-3 mt-0 min-h-2"
                                     style={{
                                         borderRadius: '7px',
-                                        maxHeight: '1.4vh',
-                                        minHeight: '1.4vh',
                                         background: '#1e2838',
                                     }}
                                 />
                                 <img
                                     src="/sharkani1.JPG"
                                     alt="Закарпатські Шаркани"
-                                    className="w-full md:w-130 h-100 object-cover rounded-lg"
+                                    className="w-full md:w-130 md:h-100 md:mt-0 object-cover rounded-lg h-60 "
                                     onClick={() => handleImageClick('/sharkani1.JPG')}
-                                    style={{marginTop: '2vh'}}
                                 />
                             </div>
-                            <div className="flex-1" style={{marginTop:'3vh'}}>
-                                <p className="text-black text-xl mb-4">{translations[language].zakarpattiaDesc1}</p>
-                                <p className="text-black text-xl mb-4">{translations[language].zakarpattiaDesc2}</p>
-                                <p className="text-black text-xl mb-4">{translations[language].zakarpattiaDesc3}</p>
-                                <p className="text-black text-xl mb-4">{translations[language].zakarpattiaBenefits}</p>
+                            <div className="flex-1 mt-0" >
+                                <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaDesc1}</p>
+                                <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaDesc2}</p>
+                                <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaDesc3}</p>
+                                <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaBenefits}</p>
                                 <Link
                                     to="/club"
                                     className="mt-4 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
@@ -172,27 +169,24 @@ const SponsorProgram: React.FC = () => {
                             <div className="mb-4 md:mb-0 md:mr-6">
                                 <h3 className="text-4xl font-semibold text-gray-800 mb-2">{translations[language].u16Title}</h3>
                                 <div
-                                    className="border-t-2 border-gray-300 w-full my-4"
+                                    className="border-t-2 border-gray-300 w-full my-4 md:min-h-3 mt-0 min-h-2"
                                     style={{
                                         borderRadius: '7px',
-                                        maxHeight: '1.4vh',
-                                        minHeight: '1.4vh',
                                         background: '#1e2838',
                                     }}
                                 />
                                 <img
                                     src="/u-16.JPG"
                                     alt="Закарпатські Шаркани"
-                                    className="w-full md:w-130 h-100 object-cover rounded-lg"
+                                    className="w-full md:w-130 md:h-100 object-cover rounded-lg"
                                     onClick={() => handleImageClick('/u-16.JPG')}
-                                    style={{marginTop: '2vh'}}
                                 />
                             </div>
-                            <div className="flex-1" style={{marginTop:'9vh'}}>
-                                <p className="text-black text-xl mb-4">{translations[language].u16Desc1}</p>
-                                <p className="text-black text-xl mb-4">{translations[language].u16Desc2}</p>
-                                <p className="text-black text-xl mb-4">{translations[language].u16Desc3}</p>
-                                <p className="text-black text-xl mb-4">{translations[language].u16Benefits}</p>
+                            <div className="flex-1 md:mt-15" >
+                                <p className="text-black md:text-xl mb-4">{translations[language].u16Desc1}</p>
+                                <p className="text-black md:text-xl mb-4">{translations[language].u16Desc2}</p>
+                                <p className="text-black md:text-xl mb-4">{translations[language].u16Desc3}</p>
+                                <p className="text-black md:text-xl mb-4">{translations[language].u16Benefits}</p>
                                 <Link
                                     to="/national-team"
                                     className="mt-4 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
@@ -208,28 +202,26 @@ const SponsorProgram: React.FC = () => {
                             <div className="mb-4 md:mb-0 md:mr-6">
                                 <h3 className="text-4xl font-semibold text-gray-800 mb-2">{translations[language].stadiumTitle}</h3>
                                 <div
-                                    className="border-t-2 border-gray-300 w-full my-4"
+                                    className="border-t-2 border-gray-300 w-full my-4 md:min-h-3 mt-0 min-h-2"
                                     style={{
                                         borderRadius: '7px',
-                                        maxHeight: '1.4vh',
-                                        minHeight: '1.4vh',
                                         background: '#1e2838',
                                     }}
                                 />
                                 <img
                                     src="/gdynia.png"
                                     alt="Gdynia"
-                                    className="w-full md:w-130 h-100 object-cover rounded-lg"
+                                    className="w-full md:w-130 md:h-100 object-cover rounded-lg"
                                     onClick={() => handleImageClick('/gdynia.png')}
                                     style={{marginTop: '2vh'}}
                                 />
                             </div>
-                            <div className="flex-1" style={{marginTop:'10vh'}}>
+                            <div className="flex-1" >
 
-                                <p className="text-black mb-4 text-xl">{translations[language].stadiumDesc1}</p>
-                                <p className="text-black mb-4 text-xl">{translations[language].stadiumDesc2}</p>
-                                <p className="text-black mb-4 text-xl">{translations[language].stadiumDesc3}</p>
-                                <p className="text-black mb-4 text-xl">{translations[language].stadiumDesc4}</p>
+                                <p className="text-black mb-4 md:text-xl">{translations[language].stadiumDesc1}</p>
+                                <p className="text-black mb-4 md:text-xl">{translations[language].stadiumDesc2}</p>
+                                <p className="text-black mb-4 md:text-xl">{translations[language].stadiumDesc3}</p>
+                                <p className="text-black mb-4 md:text-xl">{translations[language].stadiumDesc4}</p>
                                 <Link
                                     to="/stadium"
                                     className="mt-4 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
@@ -241,46 +233,42 @@ const SponsorProgram: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="text-white py-8 w-full" id="contacts" style={{ borderRadius: '10px', padding: 0, minHeight: '40vh', backgroundColor: 'rgba(50, 50, 50, 0.9)' }}>
+            <div className="text-white py-8 w-full md:min-h-40 md:p-0" id="contacts" style={{
+                borderRadius: '10px',
+                padding: 0,
+                backgroundColor: 'rgba(50, 50, 50, 0.9)'
+            }}>
                 <div
-                    className="container mx-auto flex flex-row items-center max-w-full px-0"
-                    style={{borderRadius: '10px', padding: 0, minHeight: '30vh'}}
+                    className="container mx-auto flex flex-row items-center max-w-full px-0 p-0 "
+                    style={{borderRadius: '10px'}}
                 >
                     {/* Логотип */}
-                    <div className="text-center mt-[7vh]" style={{marginLeft: '10vw', marginTop: '10vh'}}>
+                    <div className="text-center mt-7 " style={{marginLeft: '10vw'}}>
                         <img
                             src="/logo_rugby.png"
                             alt="Wins Trans Logo"
-                            className="logo-contact-png rounded-lg w-[200px] h-[100px] mb-5"
-                            style={{width: '300px'}}
+                            className="logo-contact-png rounded-lg md:w-[250px] md:h-[100px] mb-5"
+
                         />
                         <img
                             src="/logo_ukr.jpg"
                             alt="Ukraine Logo"
-                            className="logo-contact-png rounded-lg w-[200px] h-[100px] mt-5"
-                            style={{width: '300px'}}
+                            className="logo-contact-png rounded-lg md:w-[250px] md:h-[100px] mt-5"
                         />
                     </div>
 
-                    {/* Контакти */}
-                    <div
-                        className={`flex flex-col items-start gap-${isMobile ? 4 : 6} mt-[10vh] px-0 ${
-                            isMobile ? 'mt-[5vh] gap-4' : 'mt-[10vh] gap-6'
-                        }`}
-                        style={{marginLeft: '5vw'}}
-                    ></div>
                     {/* Форма */}
                     <div
-                        className={`flex flex-col items-center ${isMobile ? 'gap-1 mt-[5vh]' : 'gap-2 mt-[10vh]'} max-w-full px-0`}
+                        className={`flex flex-col items-center p-0  max-w-full px-0 mt-7`}
                         style={{marginLeft: '5vw', maxHeight: '25vh'}}
                     >
                         <h1
-                            className={`text-${isMobile ? 'text-2xl' : 'text-3xl'} font-bold text-yellow-400 ${
+                            className={`text font-bold text-yellow-400 ${
                                 isMobile ? 'mb-1' : 'mb-2'
                             }`}
-                            style={{marginBottom:'1vh'}}
+                            style={{marginBottom: '1vh'}}
                         >
-                            <Link to="/" className="text-white text-lg" style={{marginBottom:'1vh'}}>
+                            <Link to="/" className="text-white md:text-lg text-s" style={{marginBottom: '1vh'}}>
                                 {translations[language].contactTitle}
                             </Link>
                         </h1>
@@ -290,12 +278,12 @@ const SponsorProgram: React.FC = () => {
                                 <img
                                     src="/phone-call-white.png"
                                     alt="Phone"
-                                    className="w-[20px] h-[20px] object-contain"
+                                    className="w-[20px] md:h-[20px] object-contain"
                                 />
                             </div>
                             <a
                                 href="tel:+380992671566"
-                                className="text-white font-bold text-[15px] ml-[0.6vw] hover:underline"
+                                className="text-white font-bold md:text-[15px] ml-[0.6vw] hover:underline"
                             >
                                 (050) 949 82 09
                             </a>
@@ -327,7 +315,7 @@ const SponsorProgram: React.FC = () => {
                             <a
                                 href="viber://chat?number=%2B992671566"
                                 className="text-white text-[15px] font-bold ml-[1vw] hover:underline"
-                                style={{marginRight:'1vw'}}
+                                style={{marginRight: '1vw'}}
                             >
                                 rugby.support@gmail.com
                             </a>
