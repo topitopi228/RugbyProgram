@@ -75,7 +75,7 @@ const AboutUs: React.FC = () => {
                 </div>
                 <div className="">
                     <img src="/photo_about.png" alt="About Us Photo" className="w-full h-auto object-cover rounded-lg"
-                        style={{marginTop:'0vh',minHeight: '70vh',minWidth:'35vw',marginLeft:'5vw'}}/>
+                        style={{marginTop:'0vh',minHeight: '73vh',minWidth:'35vw',marginLeft:'5vw'}}/>
                 </div>
             </div>
             <div className="flex flex-row items-center justify-between w-full max-w-6xl mx-auto mt-6"
@@ -86,7 +86,7 @@ const AboutUs: React.FC = () => {
                 </div>
                 <div className="">
                     <img src="/mount.png" alt="About Us Photo" className="w-full h-auto object-cover rounded-lg"
-                         style={{marginTop: '0vh', minHeight: '60vh', minWidth: '35vw', marginLeft: '5vw'}}/>
+                         style={{marginTop: '0vh', minHeight: '80vh', minWidth: '35vw', marginLeft: '5vw'}}/>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ import Club from './components/Club';
 import NationalTeam from './components/NationalTeam';
 import Stadium from './components/Stadium';
 import { LanguageProvider } from './components/LanguageContext.tsx';
-import AboutUs from "./components/AboutUs.tsx";
+import AboutUs from './components/AboutUs.tsx';
 import Navbar from './components/Navbar';
 
 const App: React.FC = () => {
@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <div
           className="min-h-screen relative"
           style={{
-            backgroundImage: `url(/rugby_back.jpg)`,
+            backgroundImage: `url(/rugby_back.jpg)`, // Зображення для десктопів
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -34,13 +34,25 @@ const App: React.FC = () => {
           >
             <Routes>
               <Route path="/" element={<SponsorProgram />} />
-               <Route path="/about" element={<AboutUs/>}/>
+              <Route path="/about" element={<AboutUs />} />
               <Route path="/club" element={<Club />} />
               <Route path="/national-team" element={<NationalTeam />} />
               <Route path="/stadium" element={<Stadium />} />
               <Route path="/contact" element={<SponsorProgram />} />
             </Routes>
           </main>
+          {/* Медіа-запити для мобільних */}
+          <style>
+            {`
+              @media (max-width: 640px) {
+                .min-h-screen {
+                  background-image: url(/rugby_back_mob.jpg); /* Мобільна версія */
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+            `}
+          </style>
         </div>
       </Router>
     </LanguageProvider>
