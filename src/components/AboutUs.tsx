@@ -10,7 +10,8 @@ const AboutUs = () => {
             aboutText: 'Ми — молоді українські регбісти, гравці національної збірної України з регбі-7 та регбі-15, діючі тренери збірної U-16, а також наставники юнацьких і дитячих команд в Україні та Польщі.\n' +
                 '🔹 Максим Дуля — гравець напівпрофесійного клубу РК «Поділля»\n' +
                 '🔹 Антон [Прізвище] — гравець професійного польського клубу РК «Гдиня»\n' +
-                'Ми створили цей проєкт, щоб стати провідниками для українських юних регбістів до Олімпійської арени. Ми мріємо і працюємо над тим, щоб Україна не лише боксувала — а перемагала і в командних ігрових видах спорту.',
+                'Ми створили цей проєкт, щоб стати провідниками для українських юних регбістів до Олімпійської арени.\n'+
+                'Ми мріємо і працюємо над тим, щоб Україна не лише боксувала — а перемагала і в командних ігрових видах спорту.',
             uniquenessTitle: 'Наша унікальність: Інновації та натхнення',
             uniquenessText: 'Ми — одні з перших, хто почав змінювати правила гри.\n' +
                 'Буквально. Ми започаткували в Україні новий формат: регбі 1 на 1.\n' +
@@ -102,36 +103,36 @@ const AboutUs = () => {
                 <h1 className="text-5xl font-bold mb-6">{translations[language].projectTitle}</h1>
                 <p className="text-xl mb-4 whitespace-pre-line">{translations[language].projectText}</p>
             </div>
-            <div className=" flex flex-row justify-between w-full max-w-6xl mx-auto mt-0 md:max-h-150"
+            <div className="bg-gray-100/80 flex rounded-md flex-row justify-between w-full max-w-[85vw] mx-auto mt-0 md:max-h-150"
                  style={{marginLeft: '7vw', marginBottom: '10vh'}}>
-                <div className="bg-gray-100/70 p-6 rounded-lg shadow-md flex-1" style={{minWidth: '40vw'}}>
+                <div className="text-center p-6 rounded-lg shadow-md flex-1" style={{minWidth: '40vw',maxWidth:'40vw'}}>
                     <h1 className="text-5xl font-bold text-gray-800 mb-6">{translations[language].aboutTitle}</h1>
                     <p className="text-gray-800 text-xl mb-4 whitespace-pre-line">{translations[language].aboutText}</p>
                 </div>
-                <div className="">
+                <div className="p-7">
                     <img src="/2.jpg" alt="About Us Photo"
-                         className="w-full h-auto object-cover rounded-lg md:max-h-150"
-                         style={{marginTop: '0vh', marginLeft: '5vw'}}/>
+                         className="w-full h-auto object-cover rounded-lg md:max-h-140 md:w-130 md:mr-10"
+                         style={{marginTop: '0vh'}}/>
                 </div>
             </div>
-            <div className="flex  items-center justify-between w-full max-w-6xl mx-auto mt-0 md:max-h-150"
+            <div className="flex  items-center justify-between w-full max-w-[60vw] mx-auto mt-0 md:max-h-100"
                  style={{marginLeft: '7vw', marginBottom: '10vh'}}>
                 <div className="bg-gray-100/70 p-6 rounded-lg shadow-md flex-1 text-center"
-                     style={{minWidth: '80vw', minHeight: '60vh', maxWidth: '90vw'}}>
+                     style={{minWidth: '80vw', minHeight: '60vh'}}>
                     <h1 className="text-5xl font-bold text-gray-800 mb-6">{translations[language].goalsTitle}</h1>
                     <p className="text-gray-800 text-xl mb-4 whitespace-pre-line">{translations[language].goalsText}</p>
                 </div>
             </div>
-            <div className="flex flex-row items-center justify-between w-full max-w-6xl mx-auto mt-0 md:max-h-150"
+            <div className="bg-gray-100/80 rounded-md flex flex-row items-center justify-between w-full max-w-[85vw] mx-auto mt-0 md:max-h-150"
                  style={{marginLeft: '7vw', marginBottom: '10vh'}}>
-                <div className="bg-gray-100/70 p-6 rounded-lg shadow-md flex-1"
-                     style={{minWidth: '40vw', minHeight: '60vh'}}>
+                <div className=" p-6 rounded-lg shadow-md flex-1"
+                     style={{minWidth: '40vw', minHeight: '60vh',maxWidth:'40vw'}}>
                     <h1 className="text-5xl font-bold text-gray-800 mb-6">{translations[language].uniquenessTitle}</h1>
                     <p className="text-gray-800 text-xl mb-4 whitespace-pre-line">{translations[language].uniquenessText}</p>
                 </div>
-                <div className="">
+                <div className="p-7">
                     <img src="/photo_about.png" alt="About Us Photo"
-                         className="w-full h-auto object-cover rounded-lg md:min-h-150"
+                         className="w-full h-auto object-cover rounded-lg md:h-140 md:w-130 md:mr-10"
                          style={{marginTop: '0vh', marginLeft: '5vw'}}/>
                 </div>
             </div>
