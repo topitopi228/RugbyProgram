@@ -95,14 +95,14 @@ const AboutUs = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col justify-center gap-15"
+        <div className="min-h-screen flex flex-col justify-center gap-10"
              style={{marginTop: '90px', backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
             <div className="flex flex-col items-center mt-10 gap-5"
                  style={{color: 'white', marginTop: '15vh', textAlign: 'center', maxWidth: '60vw', marginLeft: '20vw'}}>
                 <h1 className="text-5xl font-bold mb-6">{translations[language].projectTitle}</h1>
                 <p className="text-xl mb-4 whitespace-pre-line">{translations[language].projectText}</p>
             </div>
-            <div className="flex flex-row justify-between w-full max-w-6xl mx-auto mt-6 md:max-h-150"
+            <div className=" flex flex-row justify-between w-full max-w-6xl mx-auto mt-0 md:max-h-150"
                  style={{marginLeft: '7vw', marginBottom: '10vh'}}>
                 <div className="bg-gray-100/70 p-6 rounded-lg shadow-md flex-1" style={{minWidth: '40vw'}}>
                     <h1 className="text-5xl font-bold text-gray-800 mb-6">{translations[language].aboutTitle}</h1>
@@ -114,20 +114,15 @@ const AboutUs = () => {
                          style={{marginTop: '0vh', marginLeft: '5vw'}}/>
                 </div>
             </div>
-            <div className="flex flex-row items-center justify-between w-full max-w-6xl mx-auto mt-6 md:max-h-150"
+            <div className="flex  items-center justify-between w-full max-w-6xl mx-auto mt-0 md:max-h-150"
                  style={{marginLeft: '7vw', marginBottom: '10vh'}}>
-                <div className="bg-gray-100/70 p-6 rounded-lg shadow-md flex-1"
-                     style={{minWidth: '40vw', minHeight: '60vh', maxWidth: '40vw'}}>
+                <div className="bg-gray-100/70 p-6 rounded-lg shadow-md flex-1 text-center"
+                     style={{minWidth: '80vw', minHeight: '60vh', maxWidth: '90vw'}}>
                     <h1 className="text-5xl font-bold text-gray-800 mb-6">{translations[language].goalsTitle}</h1>
                     <p className="text-gray-800 text-xl mb-4 whitespace-pre-line">{translations[language].goalsText}</p>
                 </div>
-                <div className="">
-                    <img src="/goals.jpg" alt="Goals Photo"
-                         className="w-full h-auto object-cover rounded-lg md:min-h-150"
-                         style={{marginTop: '0vh', marginLeft: '5vw'}}/>
-                </div>
             </div>
-            <div className="flex flex-row items-center justify-between w-full max-w-6xl mx-auto mt-6 md:max-h-150"
+            <div className="flex flex-row items-center justify-between w-full max-w-6xl mx-auto mt-0 md:max-h-150"
                  style={{marginLeft: '7vw', marginBottom: '10vh'}}>
                 <div className="bg-gray-100/70 p-6 rounded-lg shadow-md flex-1"
                      style={{minWidth: '40vw', minHeight: '60vh'}}>
