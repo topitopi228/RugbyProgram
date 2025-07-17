@@ -133,9 +133,9 @@ const SponsorProgram = () => {
         <>
             <div className="min-h-screen flex flex-col justify-between">
                 <div className="text-center py-10" style={{marginTop: '90px', backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
-                    <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">{translations[language].supportTitle}</h2>
-                    <p className="md:text-lg text-white mb-8">{translations[language].supportText}</p>
-                    <ul className="text-left max-w-2xl mx-auto md:text-lg text-white mb-8 list-disc pl-6">
+                    <h2 className="text-2xl md:text-4xl font-bold text-center text-white mb-6">{translations[language].supportTitle}</h2>
+                    <p className="md:text-lg text-white md:ml-5 mb-8">{translations[language].supportText}</p>
+                    <ul className="text-left max-w-2xl ml-[35vw] md:text-lg text-white mb-8 list-disc pl-6">
                         {translations[language].supportList.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
