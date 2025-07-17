@@ -1,12 +1,12 @@
-import  { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import {useState, useEffect} from 'react';
+import {Link, useLocation} from 'react-router-dom';
 import "./SponsorsProgram.css";
-import { useLanguage } from './LanguageUtils';
+import {useLanguage} from './LanguageUtils';
 
 const SponsorProgram = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 550);
     const location = useLocation();
-    const { language } = useLanguage(); // Отримуємо поточну мову з контексту
+    const {language} = useLanguage(); // Отримуємо поточну мову з контексту
 
     useEffect(() => {
         const handleResize = () => {
@@ -16,7 +16,7 @@ const SponsorProgram = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const handleImageClick = (src ) => {
+    const handleImageClick = (src) => {
         window.open(src, '_blank', 'noopener,noreferrer');
     };
 
@@ -24,7 +24,7 @@ const SponsorProgram = () => {
         if (location.pathname === '/contact') {
             const contactSection = document.getElementById('contacts');
             if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
+                contactSection.scrollIntoView({behavior: 'smooth'});
             }
         }
     }, [location]);
@@ -132,7 +132,7 @@ const SponsorProgram = () => {
     return (
         <>
             <div className="min-h-screen flex flex-col justify-between">
-                <div className="text-center py-10" style={{ marginTop: '90px', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+                <div className="text-center py-10" style={{marginTop: '90px', backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
                     <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">{translations[language].supportTitle}</h2>
                     <p className="md:text-lg text-white mb-8">{translations[language].supportText}</p>
                     <ul className="text-left max-w-2xl mx-auto md:text-lg text-white mb-8 list-disc pl-6">
@@ -142,50 +142,10 @@ const SponsorProgram = () => {
                     </ul>
                     <p className="md:text-lg text-white mb-8">{translations[language].readyText}</p>
                     <div className="flex flex-col gap-15">
-                        {/* РК Закарпатські Шаркани */}
-                        <div
-                            className="bg-gray-100/80 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center"
-                            style={{ maxWidth: '70vw', marginLeft: '15vw', marginTop: '5vh' }}
-                        >
-                            <div className="mb-4 md:mb-0 md:mr-6">
-                                <h3 className="text-2xl md:text-4xl font-semibold text-gray-800 mt-0 mb-2">{translations[language].zakarpattiaTitle}</h3>
-                                <div
-                                    className="border-t-2 border-gray-300 w-full my-4 md:min-h-3 mt-0 min-h-2"
-                                    style={{
-                                        borderRadius: '7px',
-                                        background: '#1e2838',
-                                    }}
-                                />
-                                <img
-                                    src="/sharkani1.JPG"
-                                    alt="Закарпатські Шаркани"
-                                    className="w-full md:w-130 md:h-100 md:mt-0 object-cover rounded-lg h-60"
-                                    onClick={() => handleImageClick('/sharkani1.JPG')}
-                                />
-                            </div>
-                            <div className="flex-1 mt-0">
-                                {isMobile ? (
-                                    <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaMobile}</p>
-                                ) : (
-                                    <>
-                                        <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaDesc1}</p>
-                                        <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaDesc2}</p>
-                                        <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaDesc3}</p>
-                                        <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaBenefits}</p>
-                                    </>
-                                )}
-                                <Link
-                                    to="/club"
-                                    className="mt-4 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
-                                >
-                                    {translations[language].learnMore}
-                                </Link>
-                            </div>
-                        </div>
                         {/* Збірна України U-16 */}
                         <div
                             className="bg-gray-100/80 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center"
-                            style={{ maxWidth: '70vw', marginLeft: '15vw' }}
+                            style={{maxWidth: '70vw', marginLeft: '15vw'}}
                         >
                             <div className="mb-4 md:mb-0 md:mr-6">
                                 <h3 className="text-4xl font-semibold text-gray-800 mb-2">{translations[language].u16Title}</h3>
@@ -222,10 +182,49 @@ const SponsorProgram = () => {
                                 </Link>
                             </div>
                         </div>
+                        <div
+                            className="bg-gray-100/80 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center"
+                            style={{maxWidth: '70vw', marginLeft: '15vw', marginTop: '5vh'}}
+                        >
+                            <div className="mb-4 md:mb-0 md:mr-6">
+                                <h3 className="text-2xl md:text-4xl font-semibold text-gray-800 mt-0 mb-2">{translations[language].zakarpattiaTitle}</h3>
+                                <div
+                                    className="border-t-2 border-gray-300 w-full my-4 md:min-h-3 mt-0 min-h-2"
+                                    style={{
+                                        borderRadius: '7px',
+                                        background: '#1e2838',
+                                    }}
+                                />
+                                <img
+                                    src="/sharkani1.JPG"
+                                    alt="Закарпатські Шаркани"
+                                    className="w-full md:w-130 md:h-100 md:mt-0 object-cover rounded-lg h-60"
+                                    onClick={() => handleImageClick('/sharkani1.JPG')}
+                                />
+                            </div>
+                            <div className="flex-1 mt-0">
+                                {isMobile ? (
+                                    <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaMobile}</p>
+                                ) : (
+                                    <>
+                                        <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaDesc1}</p>
+                                        <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaDesc2}</p>
+                                        <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaDesc3}</p>
+                                        <p className="text-black md:text-xl mb-4">{translations[language].zakarpattiaBenefits}</p>
+                                    </>
+                                )}
+                                <Link
+                                    to="/club"
+                                    className="mt-4 inline-block bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600"
+                                >
+                                    {translations[language].learnMore}
+                                </Link>
+                            </div>
+                        </div>
                         {/* Новий стадіон */}
                         <div
                             className="bg-gray-100/80 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center"
-                            style={{ maxWidth: '70vw', marginLeft: '15vw' }}
+                            style={{maxWidth: '70vw', marginLeft: '15vw'}}
                         >
                             <div className="mb-4 md:mb-0 md:mr-6">
                                 <h3 className="text-4xl font-semibold text-gray-800 mb-2">{translations[language].stadiumTitle}</h3>
@@ -241,7 +240,7 @@ const SponsorProgram = () => {
                                     alt="Gdynia"
                                     className="w-full md:w-130 md:h-100 object-cover rounded-lg"
                                     onClick={() => handleImageClick('/gdynia.png')}
-                                    style={{ marginTop: '2vh' }}
+                                    style={{marginTop: '2vh'}}
                                 />
                             </div>
                             <div className="flex-1">
@@ -273,10 +272,10 @@ const SponsorProgram = () => {
             }}>
                 <div
                     className="container mx-auto flex flex-row items-center max-w-full px-0 p-0"
-                    style={{ borderRadius: '10px' }}
+                    style={{borderRadius: '10px'}}
                 >
                     {/* Логотип */}
-                    <div className="text-center mt-7 min-w-18 md:ml-30 ml-5 " >
+                    <div className="text-center mt-7 min-w-18 md:ml-30 ml-5 ">
                         <img
                             src="/logo_rugby.png"
                             alt="Wins Trans Logo"
@@ -291,17 +290,18 @@ const SponsorProgram = () => {
                     {/* Форма */}
                     <div
                         className="flex flex-col items-center p-0 max-w-full px-0 mt-7"
-                        style={{ marginLeft: '5vw', maxHeight: '25vh' }}
+                        style={{marginLeft: '5vw', maxHeight: '25vh'}}
                     >
                         <h1
                             className={`text font-bold text-yellow-400 ${isMobile ? 'mb-1' : 'mb-2'}`}
-                            style={{ marginBottom: '1vh' }}
+                            style={{marginBottom: '1vh'}}
                         >
-                            <Link to="/" className="text-white md:text-lg text-xs" style={{ marginBottom: '1vh' }}>
+                            <Link to="/" className="text-white md:text-lg text-xs" style={{marginBottom: '1vh'}}>
                                 {translations[language].contactTitle}
                             </Link>
                         </h1>
-                        <div className="flex items-center gap-2  md:max-h-[6vh] animate-pulse" style={{ marginTop: '20px' }}>
+                        <div className="flex items-center gap-2  md:max-h-[6vh] animate-pulse"
+                             style={{marginTop: '20px'}}>
                             <div className="bg-white rounded-full p-2">
                                 <img
                                     src="/phone-call-white.png"
@@ -316,8 +316,8 @@ const SponsorProgram = () => {
                                 (050) 949 82 09
                             </a>
                         </div>
-                        <div className="flex items-center gap-2 max-h-[6vh] animate-pulse" style={{ marginTop: '20px' }}>
-                            <div className="bg-white rounded-full p-2" style={{ marginLeft: '60px' }}>
+                        <div className="flex items-center gap-2 max-h-[6vh] animate-pulse" style={{marginTop: '20px'}}>
+                            <div className="bg-white rounded-full p-2" style={{marginLeft: '60px'}}>
                                 <img
                                     src="/telegram.png"
                                     alt="Telegram"
@@ -327,12 +327,12 @@ const SponsorProgram = () => {
                             <a
                                 href="https://t.me/@ivanovich112"
                                 className="text-white text-[13px] font-bold ml-[0.5vw] hover:underline"
-                                style={{ marginRight: '105px' }}
+                                style={{marginRight: '105px'}}
                             >
                                 TELEGRAM
                             </a>
                         </div>
-                        <div className="flex items-center gap-2 max-h-[6vh] animate-pulse" style={{ marginTop: '20px' }}>
+                        <div className="flex items-center gap-2 max-h-[6vh] animate-pulse" style={{marginTop: '20px'}}>
                             <div className="bg-white rounded-full p-2 md:ml-25 ml-20 min-w-9">
                                 <img
                                     src="/gmail.png"
@@ -343,7 +343,7 @@ const SponsorProgram = () => {
                             <a
                                 href="viber://chat?number=%2B992671566"
                                 className="text-white text-[15px] font-bold ml-[1vw] hover:underline"
-                                style={{ marginRight: '1vw' }}
+                                style={{marginRight: '1vw'}}
                             >
                                 rugby.support@gmail.com
                             </a>

@@ -115,17 +115,17 @@ const AboutUs = () => {
                          style={{marginTop: '0vh'}}/>
                 </div>
             </div>
-            <div className="flex  items-center justify-between w-full max-w-[60vw] mx-auto mt-0 md:max-h-100"
-                 style={{marginLeft: '7vw', marginBottom: '10vh'}}>
+            <div className="flex  items-center justify-between w-full max-w-[65vw] mx-auto mt-0 md:max-h-100"
+                 style={{marginLeft: '17vw', marginBottom: '10vh'}}>
                 <div className="bg-gray-100/70 p-6 rounded-lg shadow-md flex-1 text-center"
-                     style={{minWidth: '80vw', minHeight: '60vh'}}>
+                     style={{minWidth: 'vw', minHeight: '60vh'}}>
                     <h1 className="text-5xl font-bold text-gray-800 mb-6">{translations[language].goalsTitle}</h1>
                     <p className="text-gray-800 text-xl mb-4 whitespace-pre-line">{translations[language].goalsText}</p>
                 </div>
             </div>
             <div className="bg-gray-100/80 rounded-md flex flex-row items-center justify-between w-full max-w-[85vw] mx-auto mt-0 md:max-h-150"
                  style={{marginLeft: '7vw', marginBottom: '10vh'}}>
-                <div className=" p-6 rounded-lg shadow-md flex-1"
+                <div className="text-center p-7 rounded-lg shadow-md flex-1"
                      style={{minWidth: '40vw', minHeight: '60vh',maxWidth:'40vw'}}>
                     <h1 className="text-5xl font-bold text-gray-800 mb-6">{translations[language].uniquenessTitle}</h1>
                     <p className="text-gray-800 text-xl mb-4 whitespace-pre-line">{translations[language].uniquenessText}</p>
