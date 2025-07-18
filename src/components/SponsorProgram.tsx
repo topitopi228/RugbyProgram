@@ -4,30 +4,50 @@ import "./SponsorsProgram.css";
 import {useLanguage} from './LanguageUtils';
 
 const SponsorProgram = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 550);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 450);
     const location = useLocation();
     const {language} = useLanguage(); // Отримуємо поточну мову з контексту
 
     useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 550);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    const mediaQuery = window.matchMedia('(max-width: 550px)');
 
-    const handleImageClick = (src) => {
-        window.open(src, '_blank', 'noopener,noreferrer');
+    // Функція для оновлення isMobile
+    const handleResize = () => {
+      setIsMobile(mediaQuery.matches);
     };
 
-    useEffect(() => {
-        if (location.pathname === '/contact') {
-            const contactSection = document.getElementById('contacts');
-            if (contactSection) {
-                contactSection.scrollIntoView({behavior: 'smooth'});
-            }
-        }
-    }, [location]);
+    // Викликати одразу при монтуванні
+    handleResize();
+
+    // Дебонсинг для події resize
+    let timeoutId;
+    const debouncedHandleResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        handleResize();
+      }, 100); // Затримка 100ms
+    };
+
+    // Додати слухачі для mediaQuery і resize
+    mediaQuery.addEventListener('change', handleResize);
+    window.addEventListener('resize', debouncedHandleResize);
+
+    // Очистка слухачів
+    return () => {
+      mediaQuery.removeEventListener('change', handleResize);
+      window.removeEventListener('resize', debouncedHandleResize);
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (location.pathname === '/contact') {
+      const contactSection = document.getElementById('contacts');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
     // Об'єкт перекладів
     const translations = {
