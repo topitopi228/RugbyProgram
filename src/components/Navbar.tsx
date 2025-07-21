@@ -81,8 +81,8 @@ const Navbar: React.FC = () => {
                     <Link to="/club" className="hover:text-yellow-400 text-s md:text-xl text-white">
                         {navLinks[language].club}
                     </Link>
-                    <Link to="/stadium" className="hover:text-yellow-400 text-s md:text-xl text-white">
-                        {navLinks[language].stadium}
+                    <Link to="/national-team" className="hover:text-yellow-400 text-s md:text-xl text-white">
+                        {navLinks[language].team}
                     </Link>
                     <Link to="/contact" className="hover:text-yellow-400 text-s md:text-xl text-white">
                         {navLinks[language].contact}

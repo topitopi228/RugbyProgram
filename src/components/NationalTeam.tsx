@@ -1,9 +1,9 @@
-import React from 'react';
-import { useLanguage } from './LanguageUtils';
-import { Link } from 'react-router-dom';
+
+import {useLanguage} from './LanguageUtils';
+import {Link} from 'react-router-dom';
 
 const NationalTeam = () => {
-    const { language } = useLanguage();
+    const {language} = useLanguage();
 
     const handleImageClick = (src) => {
         window.open(src, '_blank', 'noopener,noreferrer');
@@ -103,23 +103,24 @@ const NationalTeam = () => {
 
     // Дані для гравців (13 гравців)
     const players = [
-        { firstName: 'Микола', lastName: 'Денбновецький', image: '/player1.jpg' },
-        { firstName: 'Ерік', lastName: 'Тіппан', image: '/player2.jpg' },
-        { firstName: 'Володимир', lastName: 'Рец', image: '/player3.jpg' },
-        { firstName: 'Нікіта', lastName: 'Сачек', image: '/player4.jpg' },
-        { firstName: 'Даниіл', lastName: 'Казнін', image: '/player5.jpg' },
-        { firstName: 'Мирослав', lastName: 'Тарасюк', image: '/player6.jpg' },
-        { firstName: 'Юрій', lastName: 'Штець', image: '/player7.jpg' },
-        { firstName: 'Богдан', lastName: 'Пікульский', image: '/player8.jpg' },
-        { firstName: 'Владислав', lastName: 'Кошелюк', image: '/player9.jpg' },
-        { firstName: 'Артем', lastName: 'Кухарский', image: '/player10.jpg' },
-        { firstName: 'Даніїл', lastName: 'Плєшаков', image: '/player11.jpg' },
-        { firstName: 'Олександр', lastName: 'Бишук', image: '/player12.jpg' },
-        { firstName: 'Михайло', lastName: 'Четвертик', image: '/player13.jpg' },
+        {firstName: 'Микола', lastName: 'Денбновецький', image: '/player1.jpg'},
+        {firstName: 'Ерік', lastName: 'Тіппан', image: '/player2.jpg'},
+        {firstName: 'Володимир', lastName: 'Рец', image: '/player3.jpg'},
+        {firstName: 'Нікіта', lastName: 'Сачек', image: '/player4.jpg'},
+        {firstName: 'Даниіл', lastName: 'Казнін', image: '/player5.jpg'},
+        {firstName: 'Мирослав', lastName: 'Тарасюк', image: '/player6.jpg'},
+        {firstName: 'Юрій', lastName: 'Штець', image: '/player7.jpg'},
+        {firstName: 'Богдан', lastName: 'Пікульский', image: '/player8.jpg'},
+        {firstName: 'Владислав', lastName: 'Кошелюк', image: '/player9.jpg'},
+        {firstName: 'Артем', lastName: 'Кухарский', image: '/player10.jpg'},
+        {firstName: 'Даніїл', lastName: 'Плєшаков', image: '/player11.jpg'},
+        {firstName: 'Олександр', lastName: 'Бишук', image: '/player12.jpg'},
+        {firstName: 'Михайло', lastName: 'Четвертик', image: '/player13.jpg'},
     ];
 
     return (
-        <div className="min-h-screen bg-gray-100 py-10" style={{ marginTop: '90px', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+        <div className="min-h-screen bg-gray-100 py-10"
+             style={{marginTop: '90px', backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
             <div className="container mx-auto px-4">
                 <h1 className="text-4xl font-bold text-center text-yellow-400 mb-10">{translations[language].teamTitle}</h1>
                 <div className="text-white text-xl text-center mb-10 max-w-[60vw] mx-auto">
@@ -130,7 +131,8 @@ const NationalTeam = () => {
                     <p className="mb-4">{translations[language].intro5}</p>
                 </div>
                 {/* Секція "Наша команда" */}
-                <div className="border-t-2 w-full my-4 md:min-h-5 mt-0 min-h-2" style={{ borderRadius: '7px', background: '#1e2838' }} />
+                <div className="border-t-2 w-full my-4 md:min-h-5 mt-0 min-h-2"
+                     style={{borderRadius: '7px', background: '#1e2838'}}/>
                 <div className="md:mt-5">
                     <h2 className="text-4xl font-semibold text-center text-yellow-400 md:mb-10">{translations[language].ourTeamTitle}</h2>
                     <div className="flex flex-col md:flex-row gap-6">
@@ -151,12 +153,15 @@ const NationalTeam = () => {
                                         </div>
                                     </div>
                                 ))}
-                                <div className="border-t-2 w-full my-4 md:min-h-5 mt-0 min-h-2" style={{ borderRadius: '7px', background: '#1e2838' }} />
+                                <div className="border-t-2 w-full my-4 md:min-h-5 mt-0 min-h-2"
+                                     style={{borderRadius: '7px', background: '#1e2838'}}/>
                                 <div>
                                     <h3 className="text-4xl font-bold text-center text-black mb-6">{translations[language].supportTitle}</h3>
                                     {translations[language].supportText.map((text, index) => (
-                                        <p key={index} className={index === 0 ? 'text-gray-800 text-lg mb-4' : 'text-gray-800 text-lg mb-4'}>
-                                            {index === 0 ? text : <span className="text-2xl font-semibold block">{text.split(' — ')[0]}</span>}
+                                        <p key={index}
+                                           className={index === 0 ? 'text-gray-800 text-lg mb-4' : 'text-gray-800 text-lg mb-4'}>
+                                            {index === 0 ? text : <span
+                                                className="text-2xl font-semibold block">{text.split(' — ')[0]}</span>}
                                             {index > 0 && <span className="text-lg"> — {text.split(' — ')[1]}</span>}
                                         </p>
                                     ))}
