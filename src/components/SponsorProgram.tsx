@@ -12,6 +12,9 @@ type Translations = {
     benefitsList: string[];
     contactTitle: string;
     contactText: string;
+    olympicTitle: string;
+    olympicGoal: string;
+    europeanGoal: string;
     contactPhone: string;
     contactEmail: string;
     contactTelegram: string;
