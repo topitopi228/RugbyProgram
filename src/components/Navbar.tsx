@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { useLanguage } from './LanguageUtils';
-import type { Language } from './LanguageUtils';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, {useEffect, useState} from 'react';
+import {Link, useLocation} from 'react-router-dom';
+import {useLanguage} from './LanguageUtils';
+import type {Language} from './LanguageUtils';
+import {motion, AnimatePresence} from 'framer-motion';
 
 // Navigation links with translations
 const navLinks: Record<Language, { [key: string]: string }> = {
     UA: {
         home: 'Головна',
-        about: 'Про нас',
-        club: 'Клуб',
-        team: 'Збірна',
-        stadium: 'Стадіон',
-        contact: 'Контакти',
+        about: 'Команда',
+        club: 'Новини',
+        team: 'Майбутнє',
+        stadium: 'Спонсори',
+        contact: 'Медіа',
     },
     EN: {
         home: 'Home',
-        about: 'About Us',
+        about: 'About',
         club: 'Club',
         team: 'Team',
         stadium: 'Stadium',
@@ -34,15 +34,15 @@ const navLinks: Record<Language, { [key: string]: string }> = {
 
 // Language options with flags
 const languageOptions: { code: Language; label: string; flag: string }[] = [
-    { code: 'UA', label: 'УКР', flag: '🇺🇦' },
-    { code: 'EN', label: 'ENG', flag: '🇬🇧' },
-    { code: 'HUN', label: 'MAG', flag: '🇭🇺' },
+    {code: 'UA', label: 'УКР', flag: '🇺🇦'},
+    {code: 'EN', label: 'ENG', flag: '🇬🇧'},
+    {code: 'HUN', label: 'MAG', flag: '🇭🇺'},
 ];
 
 const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const { language, setLanguage } = useLanguage();
+    const {language, setLanguage} = useLanguage();
     const location = useLocation();
 
     // Handle scroll effect
@@ -61,9 +61,9 @@ const Navbar: React.FC = () => {
 
     return (
         <motion.nav
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{y: -100}}
+            animate={{y: 0}}
+            transition={{duration: 0.5}}
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
                 isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
             }`}
@@ -75,7 +75,8 @@ const Navbar: React.FC = () => {
                         to="/"
                         className="flex-shrink-0 flex items-center group"
                     >
-                        <span className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+                        <span
+                            className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
                             UKRAINE U16
                             RUGBY 7S
                         </span>
@@ -88,7 +89,7 @@ const Navbar: React.FC = () => {
                                 key={key}
                                 to={key === 'home' ? '/' : `/${key}`}
                                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                                    location.pathname === `/${key}` || 
+                                    location.pathname === `/${key}` ||
                                     (key === 'home' && location.pathname === '/')
                                         ? 'text-yellow-400'
                                         : 'text-white hover:text-yellow-400'
@@ -157,10 +158,10 @@ const Navbar: React.FC = () => {
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
+                        initial={{opacity: 0, height: 0}}
+                        animate={{opacity: 1, height: 'auto'}}
+                        exit={{opacity: 0, height: 0}}
+                        transition={{duration: 0.3}}
                         className="md:hidden bg-gray-800"
                     >
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -169,7 +170,7 @@ const Navbar: React.FC = () => {
                                     key={key}
                                     to={key === 'home' ? '/' : `/${key}`}
                                     className={`block px-3 py-2 rounded-md text-base font-medium ${
-                                        location.pathname === `/${key}` || 
+                                        location.pathname === `/${key}` ||
                                         (key === 'home' && location.pathname === '/')
                                             ? 'bg-gray-900 text-yellow-400'
                                             : 'text-white hover:bg-gray-700 hover:text-white'
