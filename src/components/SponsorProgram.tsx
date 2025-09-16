@@ -39,11 +39,12 @@ const translations: Record<string, Translations> = {
         ],
         contactTitle: 'ГОТОВІ ПІДТРИМАТИ РЕГБІ?',
         contactText: 'МОЖЕТЕ ЗВ\'ЯЗАТИСЬ БУДЬ-ЯКИМ ЗРУЧНИМ ДЛЯ ВАС СПОСОБОМ!',
-        contactPhone: '+380 50 949 82 09',
+        contactPhone: '+48 501 820 396',
         contactEmail: 'rugby.support@gmail.com',
         contactTelegram: 't.me/ivanovich112',
         olympicGoal: 'Ми прагнемо гідно представити Україну на міжнародній арені та прославити нашу країну у світі. Кожен матч — це крок до великої мети та доказ незламності українського духу. Вихід на Юнацькі Олімпійські ігри 2026 року стане символом сили, єдності та віри в перемогу.',
-        europeanGoal: 'Ми прагнемо в майбутньому виступати на чемпіонатах Європи на такому ж рівні, як сьогодні це роблять національна та юнацька збірні України. Наша мета — здобути пеемогу в дивізіоні Championship та гідно представляти Україну серед найсильніших команд на олімпійському рівні.'
+        europeanGoal: 'Ми прагнемо в майбутньому виступати на чемпіонатах Європи на такому ж рівні, як сьогодні це роблять національна та юнацька збірні України. Наша мета — здобути пеемогу в дивізіоні Championship та гідно представляти Україну серед найсильніших команд на олімпійському рівні.',
+        olympicTitle: 'Вихід на юнацькі олімпійські ігри 2026 року'
     },
     EN: {
         title: 'Welcome to the official website of the Ukrainian U-16 Rugby 7s National Team!',
@@ -70,7 +71,8 @@ const translations: Record<string, Translations> = {
         contactEmail: 'rugby.support@gmail.com',
         contactTelegram: 't.me/ivanovich112',
         olympicGoal: 'We strive to proudly represent Ukraine on the international stage and bring glory to our country worldwide. Every match is a step toward a great goal and proof of the unbreakable Ukrainian spirit. Qualifying for the Youth Olympic Games 2026 will become a symbol of strength, unity, and faith in victory.',
-        europeanGoal: 'We aim to compete at European Championships in the future at the same level as the national and youth teams of Ukraine do today. Our goal is to win the Championship division and proudly represent Ukraine among the strongest teams at the Olympic level.'
+        europeanGoal: 'We aim to compete at European Championships in the future at the same level as the national and youth teams of Ukraine do today. Our goal is to win the Championship division and proudly represent Ukraine among the strongest teams at the Olympic level.',
+        olympicTitle: 'Qualifying for the Youth Olympic Games 2026'
     },
     HUN: {
         title: 'Üdvözöljük az Ukrán U16-os Rögbi 7-es Válogatott hivatalos weboldalán!',
@@ -97,7 +99,8 @@ const translations: Record<string, Translations> = {
         contactEmail: 'rugby.support@gmail.com',
         contactTelegram: 't.me/ivanovich112',
         olympicGoal: 'Arra törekszünk, hogy méltósággal képviseljük Ukrajnát a nemzetközi színtereken, és dicsőséget hozzunk hazánknak a világban. Minden mérkőzés egy lépés a nagy cél felé, és bizonyítéka az ukrán szellem törhetetlen erejének. A 2026-os Ifjúsági Olimpiai Játékokra való kijutás az erő, az egység és a győzelembe vetett hit szimbólumává válik.',
-        europeanGoal: 'Célunk, hogy a jövőben a mai ukrán nemzeti és ifjúsági csapatok szintjén szerepeljünk az Európa-bajnokságokon. Célunk a Championship divízió megnyerése, és hogy méltósággal képviseljük Ukrajnát a legerősebb csapatok között az olimpiai szinten.'
+        europeanGoal: 'Célunk, hogy a jövőben a mai ukrán nemzeti és ifjúsági csapatok szintjén szerepeljünk az Európa-bajnokságokon. Célunk a Championship divízió megnyerése, és hogy méltósággal képviseljük Ukrajnát a legerősebb csapatok között az olimpiai szinten.',
+        olympicTitle: 'Kijutás a 2026-os Ifjúsági Olimpiai Játékokra'
     }
 };
 
@@ -152,7 +155,7 @@ const SponsorProgram = () => {
                             className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-snug sm:leading-tight"
                             style={{textShadow: '0 2px 10px rgba(0,0,0,0.3)'}}
                         >
-                            Вихід на юнацькі олімпійські ігри 2026 року
+                            {t.olympicTitle}
                         </motion.h1>
 
                         <motion.p
