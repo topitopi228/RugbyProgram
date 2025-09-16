@@ -125,8 +125,15 @@ const SponsorProgram = () => {
 
                 </div>
             </div>
-            <div className="relative h-screen flex items-center justify-center"
-                 style={{height: '50vh', marginTop: '10vh', borderRadius: '30px', width: '80vw', marginLeft: '10vw'}}>
+            <div className="relative w-full flex items-center justify-center py-12 px-4 sm:px-6"
+                 style={{
+                     minHeight: '50vh',
+                     marginTop: '7vh',
+                     borderRadius: '20px',
+                     maxWidth: '80vw',
+                     marginLeft: 'auto',
+                     marginRight: 'auto'
+                 }}>
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{backgroundImage: 'url(/olymp.png)', borderRadius: '7px'}}
@@ -134,22 +141,22 @@ const SponsorProgram = () => {
                     <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
                 </div>
 
-                <div className="relative z-10 container px-6 text-center text-white">
+                <div className="relative z-10 w-full px-4 text-center text-white">
                     <motion.div
                         initial={{opacity: 0, y: 20}}
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.6}}
-                        className="max-w-4xl mx-auto p-8"
+                        className="w-full max-w-4xl mx-auto p-4 sm:p-6 md:p-8"
                     >
                         <motion.h1
-                            className="text-4xl md:text-5xl lg:text-4   xl font-extrabold mb-6 leading-tight"
+                            className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-snug sm:leading-tight"
                             style={{textShadow: '0 2px 10px rgba(0,0,0,0.3)'}}
                         >
                             Вихід на юнацькі олімпійські ігри 2026 року
                         </motion.h1>
 
                         <motion.p
-                            className="text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed font-light tracking-wide"
+                            className="text-base sm:text-lg md:text-xl mb-6 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-light tracking-wide"
                             style={{textShadow: '0 1px 2px rgba(0,0,0,0.4)'}}
                         >
                             {t.olympicGoal}
@@ -167,7 +174,7 @@ const SponsorProgram = () => {
 
 
             {/* Main Content */}
-            <div className="container mx-auto">
+            <div className="container mx-auto mt-30">
                 <div className="max-w-4xl mx-auto mb-16">
 
                     <div className="grid md:grid-cols-2 gap-8 mb-16">
