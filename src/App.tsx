@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <div
           className="min-h-screen relative"
           style={{
-            backgroundImage: `url(/rugby_back.jpg)`, // Зображення для десктопів
+            background:'whitesmoke',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -23,13 +23,14 @@ const App: React.FC = () => {
         >
           <Navbar />
           <main
-            className="container mx-auto p-4"
+            className="container mx-auto"
             style={{
               minWidth: '100%',
               paddingRight: 0,
               paddingLeft: 0,
               overflowX: 'hidden',
               overflowY:'hidden',
+
             }}
           >
             <Routes>
@@ -41,18 +42,6 @@ const App: React.FC = () => {
               <Route path="/contact" element={<SponsorProgram />} />
             </Routes>
           </main>
-          {/* Медіа-запити для мобільних */}
-          <style>
-            {`
-              @media (max-width: 640px) {
-                .min-h-screen {
-                  background-image: url(/rugby_back_mob.jpg); /* Мобільна версія */
-                  background-size: cover;
-                  background-position: center;
-                }
-              }
-            `}
-          </style>
         </div>
       </Router>
     </LanguageProvider>
