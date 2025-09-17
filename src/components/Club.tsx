@@ -1,283 +1,407 @@
-import React, { useState } from 'react';
-import { useLanguage } from './LanguageUtils';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import {motion} from 'framer-motion';
+import {useLanguage} from './LanguageUtils';
 
 const Club: React.FC = () => {
-    const { language } = useLanguage();
+    const {language} = useLanguage();
 
-    const handleImageClick = (src: string) => {
-        window.open(src, '_blank', 'noopener,noreferrer');
+    const fadeInUp = {
+        hidden: {opacity: 0, y: 20},
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {duration: 0.6}
+        }
     };
 
-    // Об'єкт перекладів для клубу
     const translations = {
         UA: {
-            clubTitle: 'РК Закарпатські Шаркані',
-            intro1: 'Клуб об\'єднує молодь, студентів та школярів із Закарпаття, створюючи доступні умови для занять регбі, зосереджуючись на вразливих верствах населення - дітях-біженцях, дітях з малозабезпечених та багатодітних сімей, а також національних меншин.',
-            intro2: 'Ми формуємо не просто команду, а сильну спільноту, яка розвиває спорт, дисципліну та лідерство.',
-            intro3: 'Регулярно беремо участь у всеукраїнських змаганнях, зборах і турнірах, представляючи область на гідному рівні, а також організовуємо свої регіональні змагання та заходи.',
-            intro4: 'Наша мета — зробити регбі в Закарпатті масовим і впізнаваним видом спорту.',
-            intro5: 'Кожна вкладена гривня допомагає втримати дітей у спорті, а не на вулиці.',
-            adultTitle: 'Дорослі',
-            adultDesc: 'Доросла команда "Шаркані" — команда вищої ліги ,досвідчені гравці, які представляють Закарпаття на національному та міжнародному рівнях.',
-            u14Title: 'U-14',
-            u14Desc: 'Юнацька команда U-14 розвиває навички та дисципліну серед молодих гравців віком 12-14 років.',
-            u12Title: 'U-12',
-            u12Desc: 'Команда U-12 знайомить дітей віком 10-12 років із основами регбі та командної роботи.',
-            u10Title: 'U-10',
-            u10Desc: 'Наймолодша категорія U-10 зосереджена на базовій підготовці та любові до гри для дітей 8-10 років.',
-            supportBtn: 'Підтримати',
-            supportText: 'Допоможіть розвитку цієї категорії! Ваш внесок підтримає тренування, обладнання та поїздки.',
-            nextBtn: 'Наступна',
-            missionText: [
-                'Ми — це не просто спортивний клуб. Ми — команда людей, які повірили в дітей, про яких часто забуває світ.',
-                'Ми працюємо з хлопцями й дівчатами з багатодітних і малозабезпечених родин. У кожному з них ми бачимо не просто дитину — ми бачимо майбутнього чемпіона, сильну особистість, гідну людину.',
-                'Через спорт ми вчимо їх мріяти, боротися й перемагати — не лише на рингу, а й у житті.',
-                'Бо для нас не має значення, звідки ти, якої ти нації чи кольору шкіри — кожен має право на шанс. На життя. На гідність.',
-                'Але ми не зможемо дати їм цей шанс без підтримки.',
-                'У нас є бажання, праця, віра. А от на що завжди бракує — це ресурси.',
-                'Ми щиро потребуємо допомоги на:',
-                '• поїздки на змагання,',
-                '• екіпірування й тренувальний інвентар,',
-                '• оплату тренувальної бази,',
-                '• харчування, проживання, суддівські внески, транспорт.',
-                'Усе, що ми просимо — це не для нас. Це для них. Для дітей, які хочуть і можуть вирватись із замкнутого кола бідності через спорт.',
-                'Наша найбільша ціль — знайти фінансування, яке стане для них дверима у краще життя.',
-                'Кожна ваша гривня — це не просто підтримка. Це шанс. Це віра. Це крок до великої перемоги маленького серця.'
+            title: 'Новини',
+            news: [
+                {
+                    id: 1,
+                    date: '19 Серпня 2025',
+                    title: 'Завершення НТЗ на Драгобраті',
+                    description: 'Успішно завершилися навчально-тренувальні збори на гірському курорті Драгобрат. Команда провела інтенсивні тренування на висоті, що дозволило значно покращити фізичну підготовку гравців.'
+                },
+                {
+                    id: 2,
+                    date: '26 липня 2025',
+                    title: 'Збірники взяли участь у НТЗ в Закарпатті',
+                    description: 'Наші гравці взяли участь у спільних тренувальних зборах з командами Закарпаття. Було проведено низку товариських матчів та спільних тренувань.'
+                },
+                {
+                    id: 3,
+                    date: '10 Липня 2025',
+                    title: 'Друге міжнародне НТЗ',
+                    description: 'Команда відвідала міжнародний тренувальний табір, де мала можливість змагатися з командами з-за кордону та покращити свою майстерність.'
+                },
+                {
+                    id: 4,
+                    date: '16 Червня 2025',
+                    title: 'Відбір найкращих кандидатів',
+                    description: 'У м. Хмельницький пройшов відбірковий етап, де було відібрано найперспективніших гравців з усієї України для участі у збірній команді.'
+                },
+                {
+                    id: 5,
+                    date: '7 Квітня 2025',
+                    title: 'Перша перемога в Турнірі',
+                    description: 'Наша команда здобула першу перемогу на міжнародному турнірі в м. Гдиня, Польща. Це історична подія для нашого клубу!'
+                }
             ]
         },
         EN: {
-            clubTitle: 'RK Zakarpattia Sharks',
-            intro1: 'The club unites youth, students, and schoolchildren from Zakarpattia, creating accessible conditions for playing rugby, focusing on vulnerable groups—refugee children, children from low-income and large families, and national minorities.',
-            intro2: 'We are building not just a team, but a strong community that promotes sport, discipline, and leadership.',
-            intro3: 'We regularly participate in national competitions, camps, and tournaments, representing the region at a high level, and also organize our own regional events and activities.',
-            intro4: 'Our goal is to make rugby a widespread and recognizable sport in Zakarpattia.',
-            intro5: 'Every hryvnia invested helps keep children in sports and off the streets.',
-            adultTitle: 'Adults',
-            adultDesc: 'The adult "Sharks" team consists of experienced players representing Zakarpattia at national and international levels.',
-            u14Title: 'U-14',
-            u14Desc: 'The U-14 youth team develops skills and discipline among players aged 12-14.',
-            u12Title: 'U-12',
-            u12Desc: 'The U-12 team introduces children aged 10-12 to the basics of rugby and teamwork.',
-            u10Title: 'U-10',
-            u10Desc: 'The youngest U-10 category focuses on basic training and love for the game for children aged 8-10.',
-            supportBtn: 'Support',
-            supportText: 'Help develop this category! Your contribution will support training, equipment, and trips.',
-            nextBtn: 'Next',
-            missionText: [
-                'We are not just a sports club. We are a team of people who have believed in children the world often forgets.',
-                'We work with boys and girls from large and low-income families. In each of them, we see not just a child—we see a future champion, a strong individual, a worthy person.',
-                'Through sports, we teach them to dream, fight, and win—not only on the field, but in life.',
-                'Because for us, it doesn’t matter where you come from, your nationality, or skin color—everyone deserves a chance. A chance at life. At dignity.',
-                'But we cannot give them this chance without support.',
-                'We have the desire, the effort, the faith. What we always lack is resources.',
-                'We sincerely need help with:',
-                '• travel to competitions,',
-                '• equipment and training gear,',
-                '• payment for the training facility,',
-                '• food, accommodation, referee fees, and transportation.',
-                'Everything we ask for is not for us. It’s for them. For the children who want and can break the cycle of poverty through sports.',
-                'Our greatest goal is to find funding that will open doors to a better life for them.',
-                'Every hryvnia you give is not just support. It’s a chance. It’s faith. It’s a step toward a great victory for a small heart.'
+            title: 'News',
+            news: [
+                {
+                    id: 1,
+                    date: 'August 19, 2025',
+                    title: 'Completion of Training Camp in Drahobrat',
+                    description: 'Successfully completed training camp at the Drahobrat mountain resort. The team conducted intensive high-altitude training, significantly improving players\' physical condition.'
+                },
+                {
+                    id: 2,
+                    date: 'July 26, 2025',
+                    title: 'Team Participated in Training Camp in Zakarpattia',
+                    description: 'Our players participated in joint training sessions with Zakarpattia teams, including friendly matches and combined training.'
+                },
+                {
+                    id: 3,
+                    date: 'July 10, 2025',
+                    title: 'Second International Training Camp',
+                    description: 'The team attended an international training camp, competing with foreign teams and improving their skills.'
+                },
+                {
+                    id: 4,
+                    date: 'June 16, 2025',
+                    title: 'Selection of the Best Candidates',
+                    description: 'The selection stage in Khmelnytskyi identified the most promising players from across Ukraine for the national team.'
+                },
+                {
+                    id: 5,
+                    date: 'April 7, 2025',
+                    title: 'First Tournament Victory',
+                    description: 'Our team achieved its first victory at the international tournament in Gdynia, Poland. A historic event for our club!'
+                }
             ]
         },
         HUN: {
-            clubTitle: 'RK Zakarpátiai Cápa',
-            intro1: 'A klub Kárpátalja fiataljait, diákjait és iskolásait egyesíti, létrehozva a rögbihez való hozzáférhető feltételeket, különös figyelmet fordítva a kiszolgáltatott csoportokra – menekült gyerekekre, alacsony jövedelmű és nagycsaládos gyerekekre, valamint nemzeti kisebbségekre.',
-            intro2: 'Nem csupán egy csapatot építünk, hanem egy erős közösséget, amely elősegíti a sportot, a fegyelmet és a vezetői készségeket.',
-            intro3: 'Rendszeresen részt veszünk az országos versenyeken, táborokban és tornákon, méltó szinten képviselve a régiót, valamint saját regionális rendezvényeket és eseményeket szervezünk.',
-            intro4: 'Célunk, hogy a rögbi Kárpátalján elterjedt és felismerhető sporttá váljon.',
-            intro5: 'Minden befektetett hrivnya segít a gyerekeket a sportban tartani, és az utcáról távol tartani.',
-            adultTitle: 'Felnőttek',
-            adultDesc: 'A felnőtt "Cápa" csapat tapasztalt játékosokból áll, akik Kárpátalját képviselik nemzeti és nemzetközi szinten.',
-            u14Title: 'U-14',
-            u14Desc: 'Az U-14 ifjúsági csapat a 12-14 éves játékosok készségeit és fegyelmezettségét fejleszti.',
-            u12Title: 'U-12',
-            u12Desc: 'Az U-12 csapat a 10-12 éves gyermekeket ismerteti meg a rögbi alapjaival és a csapatszellemével.',
-            u10Title: 'U-10',
-            u10Desc: 'A legfiatalabb U-10 kategória a 8-10 éves gyerekek alapképzésére és a játék szeretetére fókuszál.',
-            supportBtn: 'Támogatás',
-            supportText: 'Segíts ennek a kategóriának a fejlődésében! Adományod támogatja az edzéseket, felszerelést és utakat.',
-            nextBtn: 'Következő',
-            missionText: [
-                'Nem csupán egy sportklub vagyunk. Egy olyan emberek csapata vagyunk, akik hittek azokban a gyerekekben, akiket a világ gyakran elfelejt.',
-                'Fiúkkal és lányokkal dolgozunk nagycsaládos és alacsony jövedelmű családokból. Mindenkiben nem csupán egy gyermeket látunk – látunk egy jövendő bajnokot, egy erős egyéniséget, egy méltó embert.',
-                'A sporton keresztül megtanítjuk őket álmodni, harcolni és győzni – nemcsak a pályán, hanem az életben is.',
-                'Mert számunkra nem számít, honnan jössz, milyen nemzetiségű vagy, milyen a bőröd színe – mindenki megérdemli a lehetőséget. Egy esélyt az életre. Az emberi méltóságra.',
-                'De ezt az esélyt nem tudjuk megadni nekik támogatás nélkül.',
-                'Van bennünk vágy, erőfeszítés, hit. Ami mindig hiányzik, az az erőforrások.',
-                'Őszintén szükségünk van segítségre:',
-                '• versenyekre utazásra,',
-                '• felszerelésre és edzőeszközökre,',
-                '• edzőbázis kifizetésére,',
-                '• étkezésre, szállásra, bírói díjakra és közlekedésre.',
-                'Amit kérünk, az nem nekünk szól. Hanem nekik. Azokért a gyerekekért, akik szeretnének és képesek a sporton keresztül kitörni a szegénység ördögi köréből.',
-                'Legfőbb célunk, hogy finanszírozást találjunk, amely ajtót nyit számukra egy jobb élethez.',
-                'Minden általad adott hrivnya nem csupán támogatás. Egy esély. Hit. Egy lépés egy kis szív nagy győzelme felé.'
+            title: 'Hírek',
+            news: [
+                {
+                    id: 1,
+                    date: '2025. augusztus 19.',
+                    title: 'Sikeres edzőtábor a Drahobrat hegyen',
+                    description: 'Sikeresen befejeződött a kiemelkedő edzőtábor a Drahobrat hegyi üdülőhelyen, ahol a csapat intenzív magassági edzéseket folytatott.'
+                },
+                {
+                    id: 2,
+                    date: '2025. július 26.',
+                    title: 'Edzőtábor részvétel Kárpátalján',
+                    description: 'Játékosaink részt vettek közös edzéseken a Kárpátaljai csapatokkal, barátságos mérkőzéseket és közös edzéseket tartva.'
+                },
+                {
+                    id: 3,
+                    date: '2025. július 10.',
+                    title: 'Második nemzetközi edzőtábor',
+                    description: 'A csapat nemzetközi edzőtáborban vett részt, ahol külföldi csapatok ellen versenyezhetett.'
+                },
+                {
+                    id: 4,
+                    date: '2025. június 16.',
+                    title: 'Legjobb játékosok kiválasztása',
+                    description: 'Kijevben lezajlott a válogató, ahol Ukrajna legígéretesebb játékosait válogatták be a válogatottba.'
+                },
+                {
+                    id: 5,
+                    date: '2025. április 7.',
+                    title: 'Első győzelem a versenyen',
+                    description: 'Csapatunk megszerezte első győzelmét a lengyelországi Gdyniában megrendezett nemzetközi versenyen. Történelmi pillanat a klubunk számára!'
+                }
             ]
-        },
+        }
     };
 
-    // Масив фотографій (замініть на свої)
-    const allImages = [
-        '/gallery1.jpg',
-        '/gallery3.png',
-        '/gallery4.png',
-        '/gallery5.png',
-        '/gallery6.png',
-        '/gallery7.jpg',
-        '/gallery8.jpg',
-        '/gallery10.png',
-        '/gallery11.jpg',
-    ];
-
-    // Стан для відображення двох зображень
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    // Функція для переходу до наступного зображення
-    const handleNext = () => {
-        setCurrentIndex((prev) => (prev + 1) % allImages.length);
-    };
-
-    // Функція для переходу до попереднього зображення
-    const handlePrev = () => {
-        setCurrentIndex((prev) => (prev - 1 + allImages.length) % allImages.length);
-    };
+    const t = translations[language];
 
     return (
-        <div className="min-h-screen bg-gray-100 py-10" style={{ marginTop: '90px', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-            <div className="container mx-auto px-4">
-                <h1 className="text-4xl font-bold text-center text-yellow-400 mb-10">{translations[language].clubTitle}</h1>
-                <div className="text-white text-xl text-center mb-10">
-                    <p className="mb-4">{translations[language].intro1}</p>
-                    <p className="mb-4">{translations[language].intro2}</p>
-                    <p className="mb-4">{translations[language].intro3}</p>
-                    <p className="mb-4">{translations[language].intro4}</p>
-                    <p className="mb-4">{translations[language].intro5}</p>
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+            {/* Enhanced Hero Section */}
+            <div className="relative h-screen w-full overflow-hidden">
+                {/* Animated Background */}
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-gradient-to-b from-blue-900/90 via-blue-800/70 to-blue-900/90 z-10"></div>
+                    
+                    {/* Floating Animated Elements */}
+                    <div className="absolute top-1/4 -left-20 w-40 h-40 bg-yellow-400/20 rounded-full filter blur-3xl animate-float"></div>
+                    <div className="absolute top-1/3 -right-10 w-60 h-60 bg-blue-400/20 rounded-full filter blur-3xl animate-float animation-delay-2000"></div>
+                    <div className="absolute bottom-1/4 left-1/4 w-32 h-32 bg-purple-400/20 rounded-full filter blur-3xl animate-float animation-delay-3000"></div>
+                    
+                    {/* Subtle Grid Pattern */}
+                    <div className="absolute inset-0 opacity-10" style={{
+                        backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)',
+                        backgroundSize: '40px 40px'
+                    }}></div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" style={{ marginTop: '10vh' }}>
-                    {/* Дорослі */}
-                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                        <img
-                            src="/adult_team.png"
-                            alt="Закарпатські Шаркани"
-                            className="w-full md:w-130 h-100 object-cover rounded-lg"
-                            onClick={() => handleImageClick('/adult-team.png')}
-                            style={{ marginTop: '2vh' }}
-                        />
-                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">{translations[language].adultTitle}</h2>
-                        <p className="text-gray-600 mt-2">{translations[language].adultDesc}</p>
-                        <Link
-                            to="/contact"
-                            className="mt-4 w-full bg-yellow-500 text-white py-2 rounded hover:bg-yellow-600 transition-colors block text-center"
+                
+                {/* Hero Content */}
+                <div className="relative z-20 h-full flex flex-col items-center justify-center px-4 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="max-w-4xl mx-auto"
+                    >
+                        {/* Badge */}
+                        <motion.div 
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                            className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-yellow-400 bg-yellow-400/10 rounded-full border border-yellow-400/20"
                         >
-                            {translations[language].supportBtn}
-                        </Link>
-                    </div>
-
-                    {/* U-14 */}
-                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                        <img
-                            src="/u-14.JPG"
-                            alt="Закарпатські Шаркани"
-                            className="w-full md:w-130 h-100 object-cover rounded-lg"
-                            onClick={() => handleImageClick('/u-14.JPG')}
-                            style={{ marginTop: '2vh' }}
-                        />
-                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">{translations[language].u14Title}</h2>
-                        <p className="text-gray-600 mt-2">{translations[language].u14Desc}</p>
-                        <Link
-                            to="/contact"
-                            className="mt-4 w-full bg-yellow-500 text-white py-2 rounded hover:bg-yellow-600 transition-colors block text-center"
-                            style={{ marginTop: '4vh' }}
+                            {language === 'UA' ? 'Останні новини' : language === 'EN' ? 'Latest Updates' : 'Legfrissebb hírek'}
+                        </motion.div>
+                        
+                        {/* Main Title */}
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
                         >
-                            {translations[language].supportBtn}
-                        </Link>
-                    </div>
-
-                    {/* U-12 */}
-                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                        <img
-                            src="/u-12-club.jpg"
-                            alt="Закарпатські Шаркани"
-                            className="w-full md:w-130 h-100 object-cover rounded-lg"
-                            onClick={() => handleImageClick('/u-12-club.jpg')}
-                            style={{ marginTop: '2vh' }}
-                        />
-                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">{translations[language].u12Title}</h2>
-                        <p className="text-gray-600 mt-2">{translations[language].u12Desc}</p>
-                        <Link
-                            to="/contact"
-                            className="mt-4 w-full bg-yellow-500 text-white py-2 rounded hover:bg-yellow-600 transition-colors block text-center"
-                            style={{ marginTop: '4vh' }}
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500">
+                                {t.title}
+                            </span>
+                        </motion.h1>
+                        
+                        {/* Subtitle */}
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8"
                         >
-                            {translations[language].supportBtn}
-                        </Link>
-                    </div>
-
-                    {/* U-10 */}
-                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                        <img
-                            src="/u-12.png"
-                            alt={translations[language].u10Title}
-                            className="w-full h-100 object-cover rounded-t-lg"
-                            onClick={() => handleImageClick('/u-12.png')}
-                            style={{ marginTop: '2vh' }}
-                        />
-                        <h2 className="text-2xl font-semibold text-gray-700 mt-4">{translations[language].u10Title}</h2>
-                        <p className="text-gray-600 mt-2">{translations[language].u10Desc}</p>
-                        <Link
-                            to="/contact"
-                            className="mt-4 w-full bg-yellow-500 text-white py-2 rounded hover:bg-yellow-600 transition-colors block text-center"
-                            style={{ marginTop: '4vh' }}
+                            {language === 'UA' 
+                                ? 'Дізнайтеся про останні події, досягнення та новини нашого клубу' 
+                                : language === 'EN' 
+                                    ? 'Stay updated with the latest events, achievements, and club news' 
+                                    : 'Maradjon naprakész a legfrissebb eseményekről, eredményekről és klubhírekről'}
+                        </motion.p>
+                        
+                        {/* CTA Button */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.5 }}
                         >
-                            {translations[language].supportBtn}
-                        </Link>
-                    </div>
+                            <a 
+                                href="#news"
+                                className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-white bg-yellow-500 hover:bg-yellow-600 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+                            >
+                                {language === 'UA' ? 'Читати новини' : language === 'EN' ? 'Read News' : 'Hírek olvasása'}
+                                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </a>
+                        </motion.div>
+                    </motion.div>
+                    
+                    {/* Scroll Indicator */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 1 }}
+                        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+                    >
+                        <span className="text-sm text-blue-200 mb-2">
+                            {language === 'UA' ? 'Прокрутіть вниз' : language === 'EN' ? 'Scroll down' : 'Görgessen le'}
+                        </span>
+                        <div className="w-6 h-10 border-2 border-blue-300 rounded-full flex justify-center p-1">
+                            <motion.div 
+                                animate={{ y: [0, 10, 0] }}
+                                transition={{ repeat: Infinity, duration: 1.5 }}
+                                className="w-1 h-2 bg-blue-300 rounded-full"
+                            ></motion.div>
+                        </div>
+                    </motion.div>
                 </div>
-                {/* Місія клубу */}
-                <div className="mt-10 text-center text-white text-lg leading-relaxed" style={{ marginTop: '10vh' }}>
-                    {translations[language].missionText.map((text, index) => (
-                        index < 7 ? (
-                            <p key={index} className="mb-4">{text}</p>
-                        ) : index === 7 ? (
-                            <p key={index} className="mb-4">Ми щиро потребуємо допомоги на:</p>
-                        ) : index === 8 || index === 9 || index === 10 || index === 11 ? (
-                            <ul key={index} className="list-disc pl-5 mb-4">
-                                <li className="text-white">{text}</li>
-                            </ul>
-                        ) : index === 12 ? (
-                            <p key={index} className="mb-4">{text}</p>
-                        ) : (
-                            <p key={index} className="mb-4">{text}</p>
-                        )
+            </div>
+
+            {/* News Section */}
+            <div id="news" className="container mx-auto px-4 py-16">
+                <div className="max-w-5xl mx-auto space-y-12">
+                    {t.news.map((item, index) => (
+                        <motion.div
+                            key={item.id}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{once: true, margin: "-100px"}}
+                            variants={fadeInUp}
+                            className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-400/30 transition-all duration-300"
+                        >
+                            <div className="md:flex">
+                                <div className="md:flex-shrink-0 md:w-1/3">
+                                    <div className="h-64 md:h-full overflow-hidden">
+                                        <img
+                                            src={`/news${index + 1}.png`}
+                                            alt={item.title}
+                                            onError={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                target.src = '/rugby_back.jpg';
+                                            }}
+                                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="p-6 md:p-8">
+                                    <div className="text-yellow-400 text-sm font-medium mb-2">
+                                        {item.date}
+                                    </div>
+                                    <h2 className="text-2xl font-bold text-white mb-3">
+                                        {item.title}
+                                    </h2>
+                                    <p className="text-gray-300">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </div>
+
+                        </motion.div>
                     ))}
                 </div>
-                {/* Галерея */}
-                <div className="mt-10 flex justify-center items-center" style={{ maxWidth: '85vw', marginTop: '10vh' }}>
-                    <div className="relative flex flex-row w-full max-w-4xl" style={{ minWidth: '100%', marginLeft: '20vw' }}>
-                        <button
-                            className="bg-gray-100/50 text-white p-4 hover:bg-gray-300 transition-colors"
-                            onClick={handlePrev}
-                            style={{ height: '5vh', borderRadius: '5px', marginTop: '30vh' }}
-                        >
-                            <img src="/back-button.png" alt="Back" className="w-full h-full object-cover" />
-                        </button>
-                        <img
-                            src={allImages[currentIndex]}
-                            alt={`Gallery ${currentIndex + 1}`}
-                            className="w-full object-cover rounded-lg mx-auto"
-                            style={{ minHeight: '35vh', maxHeight: '70vh', minWidth: '60vw', maxWidth: '60vw' }}
-                            onClick={() => handleImageClick(allImages[currentIndex])}
-                        />
-                        <button
-                            className="bg-gray-100/50 text-white p-4 hover:bg-gray-300 transition-colors"
-                            onClick={handleNext}
-                            style={{ height: '5vh', borderRadius: '5px', marginTop: '30vh', marginRight: '10vw' }}
-                        >
-                            <img src="/next-button.png" alt="Next" className="w-full h-full object-cover" />
-                        </button>
+            </div>
+
+            {/* Contact Section */}
+            <div className="w-full">
+                <div
+                    className="bg-gradient-to-br from-blue-900/90 to-purple-900/90 text-white py-12 px-4 sm:px-6 lg:px-8 relative w-full overflow-hidden">
+                    <div className="absolute inset-0 overflow-hidden opacity-20">
+                        <div
+                            className="absolute -top-1/2 -left-1/4 w-[200%] h-[200%] bg-gradient-to-r from-yellow-400 to-transparent rounded-full mix-blend-soft-light transform rotate-45"></div>
                     </div>
+
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        viewport={{once: true}}
+                        transition={{duration: 0.6}}
+                        className="max-w-7xl mx-auto relative z-10"
+                    >
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500">
+                                {language === 'UA' ? 'Залишились питання?' : language === 'EN' ? 'Have questions?' : 'Kérdése van?'}
+                            </h2>
+                            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                                {language === 'UA'
+                                    ? 'Зв\'яжіться з нами зручним для вас способом!'
+                                    : language === 'EN'
+                                        ? 'Contact us in any convenient way!'
+                                        : 'Lépjen velünk kapcsolatba bármilyen kényelmes módon!'}
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                            {/* Phone */}
+                            <motion.a
+                                whileHover={{y: -5}}
+                                href="tel:+48501820396"
+                                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-yellow-400/30 transition-all duration-300 flex flex-col items-center group"
+                            >
+                                <div
+                                    className="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-colors">
+                                    <svg className="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                </div>
+                                <span className="text-lg font-semibold text-yellow-300 mb-2">
+                                    {language === 'UA' ? 'Телефон' : language === 'EN' ? 'Phone' : 'Telefon'}
+                                </span>
+                                <span className="text-blue-100">+48 501 820 396</span>
+                            </motion.a>
+
+                            {/* Email */}
+                            <motion.a
+                                whileHover={{y: -5}}
+                                href="mailto:rugby.support@gmail.com"
+                                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-yellow-400/30 transition-all duration-300 flex flex-col items-center group"
+                            >
+                                <div
+                                    className="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-colors">
+                                    <svg className="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <span className="text-lg font-semibold text-yellow-300 mb-2">Email</span>
+                                <span className="text-blue-100 break-all text-sm">rugby.support@gmail.com</span>
+                            </motion.a>
+
+                            {/* Telegram */}
+                            <motion.a
+                                whileHover={{y: -5}}
+                                href="https://t.me/ivanovich112"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-yellow-400/30 transition-all duration-300 flex flex-col items-center group"
+                            >
+                                <div
+                                    className="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-colors">
+                                    <svg className="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.243-1.865-.44-.752-.245-1.35-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                    </svg>
+                                </div>
+                                <span className="text-lg font-semibold text-yellow-300 mb-2">Telegram</span>
+                                <span className="text-blue-100">@ivanovich112</span>
+                            </motion.a>
+                        </div>
+                        <div className="mt-16">
+                            <motion.h3
+                                initial={{opacity: 0, y: 20}}
+                                whileInView={{opacity: 1, y: 0}}
+                                viewport={{once: true}}
+                                transition={{duration: 0.6}}
+                                className="text-2xl md:text-4xl font-bold text-center mb-8 text-yellow-300"
+                            >
+                                {language === 'UA' ? 'Наші спонсори' : language === 'EN' ? 'Our Sponsors' : 'Szponzoraink'}
+                            </motion.h3>
+
+                            <div className="relative overflow-hidden">
+                                <div
+                                    className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-blue-900 to-transparent z-10"></div>
+                                <div
+                                    className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-blue-900 to-transparent z-10"></div>
+
+                                <div className="flex space-x-8 py-4 animate-marquee whitespace-nowrap">
+                                    {[1, 2, 3, 4].map((num) => (
+                                        <div key={num} className="inline-flex items-center justify-center px-6">
+                                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-24 flex items-center">
+                                                <img
+                                                    src={`/spin-${num}.png`}
+                                                    alt={`Sponsor ${num}`}
+                                                    className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
+                                    {[1, 2, 3, 4].map((num) => (
+                                        <div key={`dup-${num}`} className="inline-flex items-center justify-center px-6">
+                                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-24 flex items-center">
+                                                <img
+                                                    src={`/spin-${num}.png`}
+                                                    alt={`Sponsor ${num}`}
+                                                    className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
