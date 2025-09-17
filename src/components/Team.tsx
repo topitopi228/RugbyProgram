@@ -1,7 +1,7 @@
 import {useLanguage} from './LanguageUtils';
 import {Link} from 'react-router-dom';
 
-const NationalTeam = () => {
+const Team = () => {
     const {language} = useLanguage();
 
     const handleImageClick = (src) => {
@@ -199,4 +199,4 @@ const NationalTeam = () => {
     );
 };
 
-export default NationalTeam;
+export default Team;

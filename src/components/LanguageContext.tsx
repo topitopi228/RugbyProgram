@@ -4,7 +4,7 @@ import { LanguageContext } from './LanguageUtils';
 import type { Language } from './LanguageUtils.tsx';
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('EN');
+  const [language, setLanguage] = useState<Language>('UA');
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
