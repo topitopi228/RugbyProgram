@@ -1,159 +1,414 @@
-
+import { motion } from 'framer-motion';
 import { useLanguage } from './LanguageUtils';
-
 
 const AboutUs = () => {
     const { language } = useLanguage();
 
-    // Об'єкт перекладів
     const translations = {
         UA: {
-            aboutTitle: 'Хто ми: ',
-            aboutText: 'Ми — молоді українські регбісти, гравці національної збірної України з регбі-7 та регбі-15, діючі тренери збірної U-16, а також наставники юнацьких і дитячих команд в Україні та Польщі.\n' +
-                '🔹 Максим Дуля — гравець напівпрофесійного клубу РК «Поділля»\n' +
-                '🔹 Антон [Прізвище] — гравець професійного польського клубу РК «Гдиня»\n' +
-                'Ми створили цей проєкт, щоб стати провідниками для українських юних регбістів до Олімпійської арени.\n'+
-                'Ми мріємо і працюємо над тим, щоб Україна не лише боксувала — а перемагала і в командних ігрових видах спорту.',
-            uniquenessTitle: 'Наша унікальність: Інновації та натхнення',
-            uniquenessText: 'Ми — одні з перших, хто почав змінювати правила гри.\n' +
-                'Буквально. Ми започаткували в Україні новий формат: регбі 1 на 1.\n' +
-                'Також, регулярно проводимо регіональні чемпіонати та турніри - адаптивні ігри для дітей з інклюзією, снігове регбі, пляжні матчі. Це — справжні інновації в українському спорті.\n' +
-                'Усе, що ми створюємо — нашими руками, нашою ініціативою. Ми працюємо на ентузіазмі, бо знаємо: саме так народжуються зміни.\n' +
-                'Щороку ми беремо участь у Всеукраїнських та міжнародних змаганнях. Протягом минулих двох років - займаємо призові місця у Чемпіонаті України з регбі-15 серед чоловічих команд вищої ліги, жіноча команда Ю-14 посіла 3 місце на Чемпіонаті України з регбі-7 серед жіночих юнацьких команд 2024 року тощо.',
-            projectTitle: 'Проєкт “Майбутні чемпіони: Спорт. Майбутнє. Історія”',
-            projectText: 'Представляємо проєкт “Майбутні чемпіони” — унікальну ініціативу, що поєднує спортивні досягнення з соціальною відповідальністю.\n' +
-                'Наша мета — створити платформу для розвитку молодих чемпіонів, особливо серед вразливих категорій, й формувати нову історію українського спорту.\n' +
-                'Запрошуємо потенційних спонсорів підтримати цей амбіційний проєкт та знайти своє місце у спортивному майбутньому Закарпаття.',
-            primaryGoalsTitle: 'Наші першочергові цілі:',
-            primaryGoals: '1. Вихід на Олімпійські ігри 2026 U-18.\n' +
-                '2. Підтримання клубу "Закарпатські Шаркані".\n' +
-                '3. Побудова першого професійного стадіону для розвитку спорту в Закарпатті.',
-            goalsTitle: 'Суть та цінності організації:',
-            goalsText: 'У нас за плечима — участь у чемпіонатах Європи, численні перемоги з вихованцями на всеукраїнських та міжнародних змаганнях, понад 5 років тренерської діяльності. Але наш головний шлях — тільки починається.\n' +
-                '🎯 Наша мета проста і сильна:\n' +
-                '🔸 Потрапити з українськими хлопцями на юнацькі Олімпійські ігри\n' +
-                '🔸 А потім — разом з ними вийти на справжню Олімпійську арену\n' +
-                '🔸 Побудувати перший регбійний стадіон в Закарпатті\n' +
-                '🔸 Підтримати клуб "Закарпатські Шаркані"\n' +
-                'І ми не самі. Поруч із нами — сильні наставники світового рівня:\n' +
-                '• тренер олімпійських чемпіонів з регбі-7 Алан Баден (Жіноча збірна)\n' +
-                '• містер Генрі, який працював із найкращими світовими гравцями\n' +
-                '• провідний тренер із Грузії (ім’я додамо), один із лідерів європейської школи регбі\n' +
-                'Ці наставники — наша опора. А ми, у свою чергу, — опора для українських дітей, особливо тих, хто не має фінансових можливостей. Ми хочемо дати їм шанс. Шанс мріяти, тренуватися, змагатися — і перемагати.',
+            pageTitle: 'Майбутні заходи',
+            upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
+            event1: {
+                date: '10-15 Лютого 2026',
+                title: 'Турнір - Lisbon 7s',
+                location: 'м. Лісабон, Португалія',
+                funding: '24 000 €'
+            },
+            event2: {
+                date: '18-23 Березня 2026',
+                title: 'Найважливіше НТЗ',
+                description: 'за участю провідних іноземних тренерів',
+                location: 'м. Батумі, Грузія',
+                funding: '25 000+ €'
+            },
+            event3: {
+                date: '25-29 Червня 2026',
+                title: 'Міжнародний турнір',
+                description: 'з 30 національними командами з різних куточків світу',
+                location: 'м. Клагенфурт, Австрія',
+                funding: '20 000+ €'
+            },
+            contactTitle: "Зв'яжіться з нами",
+            contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
+            contactPhone: "+380 96 000 0000",
+            contactEmail: "info@ukr-rugby.com",
+            contactTelegram: "t.me/ukr_rugby",
+            ourSponsors: "Наші спонсори"
         },
         EN: {
-            aboutTitle: 'Who We Are: ',
-            aboutText: 'We are young Ukrainian rugby players, members of the Ukrainian national rugby-7 and rugby-15 teams, active coaches of the U-16 national team, and mentors of youth and children\'s teams in Ukraine and Poland.\n' +
-                '🔹 Maksym Dulya — player of the semi-professional club RC “Podillia”\n' +
-                '🔹 Anton [Last Name] — player of the professional Polish club RC “Gdynia”\n' +
-                'We created this project to guide young Ukrainian rugby players to the Olympic stage. We dream and work to ensure that Ukraine not only competes but excels in team sports.',
-            uniquenessTitle: 'Our Uniqueness: Innovation and Inspiration',
-            uniquenessText: 'We are among the first to start changing the rules of the game.\n' +
-                'Literally. We pioneered a new format in Ukraine: rugby 1 on 1.\n' +
-                'We also regularly host regional championships and tournaments—adaptive games for children with inclusion, snow rugby, and beach matches. These are true innovations in Ukrainian sports.\n' +
-                'Everything we create is done with our hands and our initiative. We work with enthusiasm because we know: this is how change is born.\n' +
-                'Every year, we participate in national and international competitions. Over the past two years, we have secured prize-winning positions in the Ukraine Championship for Rugby-15 among men’s top league teams, and our U-14 women’s team took 3rd place in the Ukraine Championship for Rugby-7 among youth women’s teams in 2024, among others.',
-            projectTitle: 'Project “Future Champions: Sport. Future. History”',
-            projectText: 'We present the project “Future Champions”—a unique initiative that combines sporting achievements with social responsibility.\n' +
-                'Our goal is to create a platform for developing young champions, especially among vulnerable groups, and to shape a new history of Ukrainian sports.\n' +
-                'We invite potential sponsors to support this ambitious project and find their place in the sporting future of Zakarpattia.',
-            primaryGoalsTitle: 'Our Primary Goals:',
-            primaryGoals: '1. Qualify for the 2026 U-18 Olympic Games.\n' +
-                '2. Support the "Zakarpattia Sharkani"',
-            goalsTitle: 'Essence and Values of the Organization:',
-            goalsText: 'We have participated in European championships, achieved numerous victories with our trainees in national and international competitions, and have over 5 years of coaching experience. But our main journey is just beginning.\n' +
-                '🎯 Our goal is simple and bold:\n' +
-                '🔸 To qualify Ukrainian boys for the Youth Olympic Games\n' +
-                '🔸 And then—take them to the true Olympic stage\n' +
-                '🔸 To build the first rugby stadium in Zakarpattia\n' +
-                '🔸 To support the "Zakarpattia Sharkani" club\n' +
-                'And we are not alone. We are supported by world-class mentors:\n' +
-                '• Alan Baden, coach of Olympic rugby-7 champions (Women\'s team)\n' +
-                '• Mr. Henry, who has worked with the world’s best players\n' +
-                '• A leading coach from Georgia (name to be added), one of the leaders of the European rugby school\n' +
-                'These mentors are our foundation. And we, in turn, are the foundation for Ukrainian children, especially those without financial means. We want to give them a chance. A chance to dream, train, compete—and win.',
+            pageTitle: 'Upcoming Events',
+            upcomingEvents: 'Upcoming Events of Ukraine U16 Rugby-7 Team',
+            event1: {
+                date: 'February 10-15, 2026',
+                title: 'Tournament - Lisbon 7s',
+                location: 'Lisbon, Portugal',
+                funding: '24,000 €'
+            },
+            event2: {
+                date: 'March 18-23, 2026',
+                title: 'Most Important Training Camp',
+                description: 'with leading foreign coaches',
+                location: 'Batumi, Georgia',
+                funding: '25,000+ €'
+            },
+            event3: {
+                date: 'June 25-29, 2026',
+                title: 'International Tournament',
+                description: 'with 30 national teams from around the world',
+                location: 'Klagenfurt, Austria',
+                funding: '20,000+ €'
+            },
+            contactTitle: "Contact Us",
+            contactText: "Have questions or want to support our team? Contact us using the information below.",
+            contactPhone: "+380 96 000 0000",
+            contactEmail: "info@ukr-rugby.com",
+            contactTelegram: "t.me/ukr_rugby",
+            ourSponsors: "Our Sponsors"
         },
         HUN: {
-            aboutTitle: 'Kik Vagyunk:',
-            aboutText: 'Fiatal ukrán rögbisek vagyunk, az ukrán nemzeti rögbi-7 és rögbi-15 válogatottak játékosai, az U-16-os válogatott aktív edzői, valamint Ukrajnában és Lengyelországban működő ifjúsági és gyermekcsapatok mentorai.\n' +
-                '🔹 Maksym Dulya — a félprofi RC „Podillia” klub játékosa\n' +
-                '🔹 Anton [Vezetéknév] — a professzionális lengyel RC „Gdynia” klub játékosa\n' +
-                'Ezt a projektet azért hoztuk létre, hogy az ukrán fiatal rögbiseket az olimpiai színtérre vezessük. Arról álmodunk és azon dolgozunk, hogy Ukrajna ne csak versenyezzen, hanem kiemelkedjen a csapatsportokban.',
-            uniquenessTitle: 'Egyediségünk: Innováció és Inspiráció',
-            uniquenessText: 'Mi vagyunk az elsők között, akik elkezdték megváltoztatni a játék szabályait.\n' +
-                'Szó szerint. Új formátumot indítottunk el Ukrajnában: rögbi 1 az 1-ben.\n' +
-                'Rendszeresen rendezünk regionális bajnokságokat és tornákat – inkluzív játékokat gyerekeknek, hó-rögbit és strandmérkőzéseket. Ezek valódi innovációk az ukrán sportban.\n' +
-                'Mindent, amit létrehozunk, saját kezünkkel és kezdeményezésünkkel tesszük. Enthuziazmussal dolgozunk, mert tudjuk: így születnek a változások.\n' +
-                'Évente részt veszünk nemzeti és nemzetközi versenyeken. Az elmúlt két évben díjnyertes helyezéseket értünk el az Ukrajna Bajnokságon a rögbi-15 férfi elit ligájában, a női U-14 csapatunk pedig a 3. helyet szerezte meg az Ukrajna Bajnokságon a rögbi-7 ifjúsági női csapatok között 2024-ben, többek között.',
-            projectTitle: 'Projekt „Jövő Bajnokai: Sport. Jövő. Történelem”',
-            projectText: 'Bemutatjuk a „Jövő Bajnokai” projektet – egy egyedi kezdeményezést, amely a sportteljesítményeket a társadalmi felelősségvállalással ötvözi.\n' +
-                'Célunk, hogy platformot teremtsünk fiatal bajnokok fejlesztésére, különösen a kiszolgáltatott csoportok körében, és új fejezetet írjunk az ukrán sport történetében.\n' +
-                'Potenciális szponzorokat invitálunk, hogy támogassák ezt az ambiciózus projektet, és találják meg helyüket Zakarpátia sportjövőjében.',
-            primaryGoalsTitle: 'Elsődleges Céljaink:',
-            primaryGoals: '1. Kvalifikáció a 2026-os U-18 Olimpiai Játékokra.\n' +
-                '2. A „Zakarpátiai Sharkani” klub támogatása.\n' +
-                '3. Az első professzionális rögbi stadion megépítése Kárpátalján a sport fejlesztéséért.',
-            goalsTitle: 'A Szervezet Lényege és Értékei:',
-            goalsText: 'Részt vettünk európai bajnokságokon, számos győzelmet arattunk tanítványainkkal nemzeti és nemzetközi versenyeken, és több mint 5 év edzői tapasztalattal rendelkezünk. De a fő utunk csak most kezdődik.\n' +
-                '🎯 Célunk egyszerű és merész:\n' +
-                '🔸 Ukrán fiúkkal kvalifikálni az ifjúsági olimpiai játékokra\n' +
-                '🔸 Majd velük együtt kilépni az igazi olimpiai színtérre\n' +
-                '🔸 Megépíteni az első rögbi stadiont Kárpátalján\n' +
-                '🔸 Támogatni a „Zakarpátiai Sharkani” klubot\n' +
-                'És nem vagyunk egyedül. Világszínvonalú mentorok támogatnak minket:\n' +
-                '• Alan Baden, a rögbi-7 olimpiai bajnokainak edzője (női válogatott)\n' +
-                '• Mr. Henry, aki a világ legjobb játékosaival dolgozott\n' +
-                '• Egy vezető grúz edző (nevét később adjuk meg), az európai rögbi iskola egyik vezetője\n' +
-                'Ezek a mentorok a mi alapunk. Mi pedig az ukrán gyerekek, különösen a nehéz anyagi helyzetben lévők alapja vagyunk. Esélyt szeretnénk adni nekik. Esélyt arra, hogy álmodjanak, edzenek, versenyezzenek – és győzzenek.',
-        },
+            pageTitle: 'Közelgő események',
+            upcomingEvents: 'Az Ukrán U16-os Rögbi-7 Válogatott közelgő eseményei',
+            event1: {
+                date: '2026. február 10-15.',
+                title: 'Lisbon 7s Bajnokság',
+                location: 'Lisszabon, Portugália',
+                funding: '24 000 €'
+            },
+            event2: {
+                date: '2026. március 18-23.',
+                title: 'Legfontosabb Edzőtábor',
+                description: 'vezető külföldi edzőkkel',
+                location: 'Batumi, Grúzia',
+                funding: '25 000+ €'
+            },
+            event3: {
+                date: '2026. június 25-29.',
+                title: 'Nemzetközi Torna',
+                description: '30 nemzeti csapattal a világ különböző részeiről',
+                location: 'Klagenfurt, Ausztria',
+                funding: '20 000+ €'
+            },
+            contactTitle: "Lépjen kapcsolatba velünk",
+            contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
+            contactPhone: "+380 96 000 0000",
+            contactEmail: "info@ukr-rugby.com",
+            contactTelegram: "t.me/ukr_rugby",
+            ourSponsors: "Szponzoraink"
+        }
     };
 
+    const t = translations[language];
+
+    const fadeIn = {
+        hidden: { opacity: 0, y: 20 },
+        visible: (i = 0) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.1 * i,
+                duration: 0.6
+            }
+        })
+    };
+
+    const events = [
+        {
+            id: 1,
+            image: '/maj1.png',
+            date: t.event1.date,
+            title: t.event1.title,
+            description: t.event1.description,
+            location: t.event1.location,
+            funding: t.event1.funding,
+            details: language === 'UA' ?
+                'Турнір з регбі-7 для юніорських команд у Лісабоні. Наші гравці отримають можливість змагатися з найсильнішими командами Європи, показати свій рівень підготовки та набратися досвіду міжнародних змагань.' :
+                language === 'EN' ?
+                'Rugby-7 tournament for junior teams in Lisbon. Our players will have the opportunity to compete with the strongest teams in Europe, demonstrate their skill level, and gain international competition experience.' :
+                'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban. Játékosaink lehetőséget kapnak arra, hogy versenyezzenek Euróga legerősebb csapataival, bemutassák szintjüket és nemzetközi versenytapasztalatot szerezzenek.'
+        },
+        {
+            id: 2,
+            image: '/maj2.png',
+            date: t.event2.date,
+            title: t.event2.title,
+            description: t.event2.description,
+            location: t.event2.location,
+            funding: t.event2.funding,
+            details: language === 'UA' ?
+                'Інтенсивний навчально-тренувальний збір за участі провідних європейських тренерів. Програма включає тренування з техніки, тактики, фізичної підготовки та психологічного тренінгу.' :
+                language === 'EN' ?
+                'Intensive training camp with leading European coaches. The program includes technical, tactical, physical training, and psychological preparation sessions.' :
+                'Intenzív edzőtábor vezető európai edzőkkel. A programba tartozik technikai, taktikai, fizikai edzés és pszichológiai felkészítés is.'
+        },
+        {
+            id: 3,
+            image: '/maj3.png',
+            date: t.event3.date,
+            title: t.event3.title,
+            description: t.event3.description,
+            location: t.event3.location,
+            funding: t.event3.funding,
+            details: language === 'UA' ?
+                'Великий міжнародний турнір за участі 30 національних команд з усього світу. Унікальна можливість для наших юних гравців виступити на міжнародній арені та показати свій потенціал.' :
+                language === 'EN' ?
+                'Major international tournament featuring 30 national teams from around the world. A unique opportunity for our young players to perform on the international stage and demonstrate their potential.' :
+                'Nagy nemzetközi torna, 30 ország csapataival. Kiváló lehetőség fiatal játékosaink számára, hogy nemzetközi színtéren mutathassák be tudásukat és potenciáljukat.'
+        }
+    ];
+
     return (
-        <div className="min-h-screen flex flex-col justify-center gap-10"
-             style={{marginTop: '90px', backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
-            <div className="flex flex-col items-center mt-10 gap-5"
-                 style={{color: 'white', marginTop: '15vh', textAlign: 'center', maxWidth: '60vw', marginLeft: '20vw'}}>
-                <h1 className="text-5xl font-bold mb-6">{translations[language].projectTitle}</h1>
-                <h2 className="text-3xl font-semibold mb-4">{translations[language].primaryGoalsTitle}</h2>
-                <p className="text-2xl  mb-4 whitespace-pre-line">{translations[language].primaryGoals}</p>
-                <p className="text-xl mb-4 whitespace-pre-line">{translations[language].projectText}</p>
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+            <div className="relative h-[60vh] w-full overflow-hidden">
+                <img
+                    src="/backmaj.png"
+                    alt="Rugby team"
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div className="relative z-10 h-full flex flex-col justify-end pb-16 px-4 sm:px-6 lg:px-8">
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.6}}
+                        className="max-w-7xl mx-auto w-full text-center"
+                    >
+                        <motion.h1
+                            variants={fadeIn}
+                            initial="hidden"
+                            animate="visible"
+                            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight"
+                        >
+                            <span
+                                className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500">
+                                {t.pageTitle}
+                            </span>
+                        </motion.h1>
+                        <motion.p
+                            variants={fadeIn}
+                            initial="hidden"
+                            animate="visible"
+                            custom={1}
+                            className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto"
+                        >
+                            {t.upcomingEvents}
+                        </motion.p>
+                    </motion.div>
+                </div>
             </div>
-            <div className="border-t-2 w-full my-4 md:min-h-5 mt-0 min-h-2"
-                 style={{borderRadius: '7px', background: '#1e2838'}}/>
-            <div
-                className="bg-gray-100/80 flex rounded-md flex-row justify-between w-full max-w-[85vw] mx-auto mt-0 md:max-h-150"
-                style={{marginLeft: '7vw', marginBottom: '10vh'}}>
-                <div className="text-center p-6 rounded-lg shadow-md flex-1"
-                     style={{minWidth: '40vw', maxWidth: '40vw'}}>
-                    <h1 className="text-5xl font-bold text-gray-800 mb-6">{translations[language].aboutTitle}</h1>
-                    <p className="text-gray-800 text-xl mb-4 whitespace-pre-line">{translations[language].aboutText}</p>
-                </div>
-                <div className="p-7">
-                    <img src="/2.jpg" alt="About Us Photo"
-                         className="w-full h-auto object-cover rounded-lg md:max-h-140 md:w-130 md:mr-10"
-                         style={{marginTop: '0vh'}}/>
-                </div>
+
+            <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-12">
+                {events.map((event, index) => (
+                    <motion.div
+                        key={event.id}
+                        custom={index}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{once: true, amount: 0.2}}
+                        variants={fadeIn}
+                        className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-400/30 transition-all duration-300"
+                    >
+                        <div className="flex flex-col md:flex-row">
+                            <div className="relative h-64 md:h-auto md:w-1/3">
+                                <img
+                                    src={event.image}
+                                    alt={`Event ${event.id}`}
+                                    className="w-full h-full object-cover"
+                                />
+                                <div
+                                    className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
+                                    <span className="text-yellow-400 font-medium text-lg">{event.date}</span>
+                                </div>
+                            </div>
+                            <div className="p-6 md:w-2/3">
+                                <div className="flex items-center mb-2">
+                                    <span className="text-yellow-400 font-bold text-2xl mr-3">0{index + 1}</span>
+                                    <h3 className="text-2xl font-bold">{event.title}</h3>
+                                </div>
+                                <div className="flex items-center text-blue-200 mb-4">
+                                    <svg
+                                        className="w-5 h-5 mr-2 text-yellow-400"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                        />
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                        />
+                                    </svg>
+                                    <span className="text-lg">{event.location}</span>
+                                </div>
+                                {event.description && (
+                                    <p className="text-blue-100 text-lg mb-4">{event.description}</p>
+                                )}
+                                <p className="text-gray-300 mt-4">{event.details}</p>
+
+                                {/* Funding Information */}
+                                <div
+                                    className="mt-6 p-4 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-lg border border-yellow-500/20">
+                                    <div className="flex items-center justify-between">
+                                        <div>
+                                            <h4 className="font-medium text-yellow-400">
+                                                {language === 'UA' ? 'Необхідна сума фінансування:' :
+                                                    language === 'EN' ? 'Required funding:' :
+                                                        'Szükséges támogatás:'}
+                                            </h4>
+                                            <p className="text-2xl font-bold text-yellow-400">{event.funding}</p>
+                                        </div>
+                                        <button
+                                            className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/20">
+                                            {language === 'UA' ? 'Підтримати' :
+                                                language === 'EN' ? 'Support' :
+                                                    'Támogatás'}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                ))}
             </div>
-            <div className="flex items-center justify-between w-full max-w-[65vw] mx-auto mt-0 md:max-h-100"
-                 style={{marginLeft: '17vw', marginBottom: '10vh'}}>
-                <div className="bg-gray-100/70 p-6 rounded-lg shadow-md flex-1 text-center"
-                     style={{minWidth: '40vw', minHeight: '60vh'}}>
-                    <h1 className="text-5xl font-bold text-gray-800 mb-6">{translations[language].goalsTitle}</h1>
-                    <p className="text-gray-800 text-xl mb-4 whitespace-pre-line">{translations[language].goalsText}</p>
-                </div>
-            </div>
-            <div
-                className="bg-gray-100/80 rounded-md flex flex-row items-center justify-between w-full max-w-[85vw] mx-auto mt-0 md:max-h-150"
-                style={{marginLeft: '7vw', marginBottom: '10vh'}}>
-                <div className="text-center p-7 rounded-lg shadow-md flex-1"
-                     style={{minWidth: '40vw', minHeight: '60vh', maxWidth: '40vw'}}>
-                    <h1 className="text-5xl font-bold text-gray-800 mb-6">{translations[language].uniquenessTitle}</h1>
-                    <p className="text-gray-800 text-xl mb-4 whitespace-pre-line">{translations[language].uniquenessText}</p>
-                </div>
-                <div className="p-7">
-                    <img src="/photo_about.png" alt="About Us Photo"
-                         className="w-full h-auto object-cover rounded-lg md:h-140 md:w-130 md:mr-10"
-                         style={{marginTop: '0vh', marginLeft: '5vw'}}/>
+            <div className="w-full">
+                <div
+                    className="bg-gradient-to-br from-blue-900/90 to-purple-900/90 text-white py-12 px-4 sm:px-6 lg:px-8 relative w-full rounded-2xl overflow-hidden">
+                    {/* Animated background elements */}
+                    <div className="absolute inset-0 overflow-hidden opacity-20">
+                        <div
+                            className="absolute -top-1/2 -left-1/4 w-[200%] h-[200%] bg-gradient-to-r from-yellow-400 to-transparent rounded-full mix-blend-soft-light transform rotate-45"></div>
+                    </div>
+
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        whileInView={{opacity: 1, y: 0}}
+                        viewport={{once: true}}
+                        transition={{duration: 0.6}}
+                        className="max-w-7xl mx-auto relative z-10"
+                    >
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500">
+                                {t.contactTitle}
+                            </h2>
+                            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                                {t.contactText}
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                            {/* Phone */}
+                            <motion.a
+                                whileHover={{y: -5}}
+                                href={`tel:${t.contactPhone.replace(/\s+/g, '')}`}
+                                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-yellow-400/30 transition-all duration-300 flex flex-col items-center group"
+                            >
+                                <div
+                                    className="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-colors">
+                                    <svg className="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                </div>
+                                <span className="text-lg font-semibold text-yellow-300 mb-2">
+                                        {language === 'UA' ? 'Телефон' : language === 'EN' ? 'Phone' : 'Telefon'}
+                                    </span>
+                                <span className="text-blue-100">{t.contactPhone}</span>
+                            </motion.a>
+
+                            {/* Email */}
+                            <motion.a
+                                whileHover={{y: -5}}
+                                href={`mailto:${t.contactEmail}`}
+                                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-yellow-400/30 transition-all duration-300 flex flex-col items-center group"
+                            >
+                                <div
+                                    className="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-colors">
+                                    <svg className="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <span className="text-lg font-semibold text-yellow-300 mb-2">Email</span>
+                                <span className="text-blue-100 break-all text-sm">{t.contactEmail}</span>
+                            </motion.a>
+
+                            {/* Telegram */}
+                            <motion.a
+                                whileHover={{y: -5}}
+                                href={`https://${t.contactTelegram}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-yellow-400/30 transition-all duration-300 flex flex-col items-center group"
+                            >
+                                <div
+                                    className="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-colors">
+                                    <svg className="h-6 w-6 text-yellow-400" fill="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path
+                                            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.243-1.865-.44-.752-.245-1.35-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                    </svg>
+                                </div>
+                                <span className="text-lg font-semibold text-yellow-300 mb-2">Telegram</span>
+                                <span className="text-blue-100">@{t.contactTelegram.split('/').pop()}</span>
+                            </motion.a>
+                        </div>
+
+                        {/* Sponsors Section */}
+                        <div className="mt-16">
+                            <motion.h3
+                                initial={{opacity: 0, y: 20}}
+                                whileInView={{opacity: 1, y: 0}}
+                                viewport={{once: true}}
+                                transition={{duration: 0.6}}
+                                className="text-2xl md:text-4xl font-bold text-center mb-8 text-yellow-300"
+                            >
+                                {language === 'UA' ? 'Наші спонсори' : language === 'EN' ? 'Our Sponsors' : 'Szponzoraink'}
+                            </motion.h3>
+
+                            <div className="relative overflow-hidden">
+                                <div
+                                    className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-blue-900 to-transparent z-10"></div>
+                                <div
+                                    className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-blue-900 to-transparent z-10"></div>
+
+                                <div className="flex space-x-8 py-4 animate-marquee whitespace-nowrap">
+                                    {[1, 2, 3, 4].map((num) => (
+                                        <div key={num} className="inline-flex items-center justify-center px-6">
+                                            <div
+                                                className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-24 flex items-center">
+                                                <img
+                                                    src={`/spin-${num}.png`}
+                                                    alt={`Sponsor ${num}`}
+                                                    className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
+                                    {[1, 2, 3, 4].map((num) => (
+                                        <div key={`dup-${num}`}
+                                             className="inline-flex items-center justify-center px-6">
+                                            <div
+                                                className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-24 flex items-center">
+                                                <img
+                                                    src={`/spin-${num}.png`}
+                                                    alt={`Sponsor ${num}`}
+                                                    className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
