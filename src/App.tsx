@@ -3,10 +3,10 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import SponsorProgram from './components/SponsorProgram';
 import Club from './components/Club';
 import Team from './components/Team.tsx';
-import Stadium from './components/Stadium';
 import {LanguageProvider} from './components/LanguageContext.tsx';
 import AboutUs from './components/AboutUs.tsx';
 import Navbar from './components/Navbar';
+import Sponsors from "./components/Sponsors.tsx";
 
 const App: React.FC = () => {
     return (
@@ -38,8 +38,8 @@ const App: React.FC = () => {
                             <Route path="/team" element={<Team/>}/>
                             <Route path="/about" element={<AboutUs/>}/>
                             <Route path="/club" element={<Club/>}/>
-                            <Route path="/stadium" element={<Stadium/>}/>
-                            <Route path="/contact" element={<SponsorProgram/>}/>
+                            <Route path="/stadium" element={<Sponsors/>}/>
+                            <Route path="/contact" element={<Sponsors/>}/>
                         </Routes>
                     </main>
                 </div>

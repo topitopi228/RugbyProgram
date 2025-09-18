@@ -1,8 +1,14 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from './LanguageUtils';
+import { useRef } from 'react';
 
 const AboutUs = () => {
     const { language } = useLanguage();
+    const contactRef = useRef<HTMLDivElement>(null);
+
+    const scrollToContact = () => {
+        contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
 
     const translations = {
         UA: {
@@ -178,8 +184,7 @@ const AboutUs = () => {
                             animate="visible"
                             className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight"
                         >
-                            <span
-                                className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500">
                                 {t.pageTitle}
                             </span>
                         </motion.h1>
@@ -214,8 +219,7 @@ const AboutUs = () => {
                                     alt={`Event ${event.id}`}
                                     className="w-full h-full object-cover"
                                 />
-                                <div
-                                    className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
+                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
                                     <span className="text-yellow-400 font-medium text-lg">{event.date}</span>
                                 </div>
                             </div>
@@ -252,22 +256,23 @@ const AboutUs = () => {
                                 <p className="text-gray-300 mt-4">{event.details}</p>
 
                                 {/* Funding Information */}
-                                <div
-                                    className="mt-6 p-4 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-lg border border-yellow-500/20">
+                                <div className="mt-6 p-4 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-lg border border-yellow-500/20">
                                     <div className="flex items-center justify-between">
                                         <div>
                                             <h4 className="font-medium text-yellow-400">
                                                 {language === 'UA' ? 'Необхідна сума фінансування:' :
-                                                    language === 'EN' ? 'Required funding:' :
-                                                        'Szükséges támogatás:'}
+                                                 language === 'EN' ? 'Required funding:' :
+                                                 'Szükséges támogatás:'}
                                             </h4>
                                             <p className="text-2xl font-bold text-yellow-400">{event.funding}</p>
                                         </div>
                                         <button
-                                            className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/20">
+                                            onClick={scrollToContact}
+                                            className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/20"
+                                        >
                                             {language === 'UA' ? 'Підтримати' :
-                                                language === 'EN' ? 'Support' :
-                                                    'Támogatás'}
+                                             language === 'EN' ? 'Support' :
+                                             'Támogatás'}
                                         </button>
                                     </div>
                                 </div>
@@ -276,7 +281,7 @@ const AboutUs = () => {
                     </motion.div>
                 ))}
             </div>
-            <div className="w-full">
+            <div ref={contactRef} id="contact" className="w-full">
                 <div
                     className="bg-gradient-to-br from-blue-900/90 to-purple-900/90 text-white py-12 px-4 sm:px-6 lg:px-8 relative w-full rounded-2xl overflow-hidden">
                     {/* Animated background elements */}
@@ -370,7 +375,7 @@ const AboutUs = () => {
                                 transition={{duration: 0.6}}
                                 className="text-2xl md:text-4xl font-bold text-center mb-8 text-yellow-300"
                             >
-                                {language === 'UA' ? 'Наші спонсори' : language === 'EN' ? 'Our Sponsors' : 'Szponzoraink'}
+                                {t.ourSponsors}
                             </motion.h3>
 
                             <div className="relative overflow-hidden">

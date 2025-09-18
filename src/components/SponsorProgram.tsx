@@ -1,5 +1,7 @@
 import {useLanguage} from './LanguageUtils';
 import {motion} from 'framer-motion';
+import {useLocation} from "react-router-dom";
+import { useEffect } from 'react';
 
 type Translations = {
     title: string;
@@ -108,7 +110,20 @@ const translations: Record<string, Translations> = {
 
 const SponsorProgram = () => {
     const {language} = useLanguage();
+    const location=useLocation();
     const t = translations[language];
+    useEffect(() => {
+        // Check if there's a hash in the URL
+        if (location.hash) {
+            const element = document.getElementById(location.hash.replace('#', ''));
+            if (element) {
+                // Small timeout to ensure the component is fully rendered
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    }, [location]);
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white">
@@ -254,7 +269,7 @@ const SponsorProgram = () => {
                 </div>
 
                 {/* Contact Section */}
-                <div className="w-full">
+                <div id="ggwp" className="w-full">
                     <div
                         className="bg-gradient-to-br from-blue-900/90 to-purple-900/90 text-white py-12 px-4 sm:px-6 lg:px-8 relative w-full rounded-2xl overflow-hidden">
                         {/* Animated background elements */}
