@@ -86,7 +86,6 @@ const Team = () => {
                             <div className="h-75 overflow-hidden">
                                 <img
                                     src={imagePath}
-                                    loading="lazy"
                                     alt={item.name}
                                     onError={(e) => {
                                         const target = e.target as HTMLImageElement;
