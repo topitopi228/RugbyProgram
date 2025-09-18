@@ -1,6 +1,6 @@
 import {useLanguage} from './LanguageUtils';
 import {motion} from 'framer-motion';
-import {Link} from 'react-router-dom';
+
 
 const Team = () => {
     const {language} = useLanguage();
@@ -86,6 +86,7 @@ const Team = () => {
                             <div className="h-75 overflow-hidden">
                                 <img
                                     src={imagePath}
+                                    loading="lazy"
                                     alt={item.name}
                                     onError={(e) => {
                                         const target = e.target as HTMLImageElement;
