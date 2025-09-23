@@ -254,7 +254,7 @@ const Club: React.FC = () => {
                                             alt={item.title}
                                             onError={(e) => {
                                                 const target = e.target as HTMLImageElement;
-                                                target.src = '/rugby_back.jpg';
+                                                target.src = '/backmaj.webp';
                                             }}
                                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                                         />

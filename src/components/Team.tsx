@@ -92,7 +92,7 @@ const Team = () => {
                                         if (target.src !== fallbackImagePath) {
                                             target.src = fallbackImagePath;
                                         } else {
-                                            target.src = '/rugby_back.jpg';
+                                            target.src = '/rugby_back.webp';
                                             target.onerror = null;
                                         }
                                     }}
