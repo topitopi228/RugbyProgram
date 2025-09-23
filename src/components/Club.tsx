@@ -1,9 +1,15 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import {useLanguage} from './LanguageUtils';
+import { useNavigate } from 'react-router-dom';
 
 const Club: React.FC = () => {
     const {language} = useLanguage();
+    const navigate = useNavigate();
+
+    const handleNewsClick = (id: number) => {
+        navigate(`/contact`);
+    };
 
     const fadeInUp = {
         hidden: {opacity: 0, y: 20},
@@ -237,7 +243,8 @@ const Club: React.FC = () => {
                             whileInView="visible"
                             viewport={{once: true, margin: "-100px"}}
                             variants={fadeInUp}
-                            className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-400/30 transition-all duration-300"
+                            className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-400/30 transition-all duration-300 cursor-pointer"
+                            onClick={() => handleNewsClick(item.id)}
                         >
                             <div className="md:flex">
                                 <div className="md:flex-shrink-0 md:w-1/3">
@@ -382,7 +389,7 @@ const Club: React.FC = () => {
                                                 <img
                                                     src={`/spin-${num}.png`}
                                                     alt={`Sponsor ${num}`}
-                                                    className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                    className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
                                                 />
                                             </div>
                                         </div>
@@ -393,7 +400,7 @@ const Club: React.FC = () => {
                                                 <img
                                                     src={`/spin-${num}.png`}
                                                     alt={`Sponsor ${num}`}
-                                                    className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                    className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
                                                 />
                                             </div>
                                         </div>

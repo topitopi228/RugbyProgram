@@ -1,13 +1,24 @@
-import { motion } from 'framer-motion';
-import { useLanguage } from './LanguageUtils';
-import { useRef } from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {useLanguage} from './LanguageUtils';
+import {useRef, useState} from 'react';
 
 const AboutUs = () => {
-    const { language } = useLanguage();
+    const {language} = useLanguage();
     const contactRef = useRef<HTMLDivElement>(null);
+    const [selectedEvent, setSelectedEvent] = useState(null);
 
     const scrollToContact = () => {
-        contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+        contactRef.current?.scrollIntoView({behavior: 'smooth'});
+    };
+
+    const openFundingModal = (event) => {
+        setSelectedEvent(event);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        setSelectedEvent(null);
+        document.body.style.overflow = 'auto';
     };
 
     const translations = {
@@ -106,7 +117,7 @@ const AboutUs = () => {
     const t = translations[language];
 
     const fadeIn = {
-        hidden: { opacity: 0, y: 20 },
+        hidden: {opacity: 0, y: 20},
         visible: (i = 0) => ({
             opacity: 1,
             y: 0,
@@ -129,8 +140,8 @@ const AboutUs = () => {
             details: language === 'UA' ?
                 'Турнір з регбі-7 для юніорських команд у Лісабоні. Наші гравці отримають можливість змагатися з найсильнішими командами Європи, показати свій рівень підготовки та набратися досвіду міжнародних змагань.' :
                 language === 'EN' ?
-                'Rugby-7 tournament for junior teams in Lisbon. Our players will have the opportunity to compete with the strongest teams in Europe, demonstrate their skill level, and gain international competition experience.' :
-                'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban. Játékosaink lehetőséget kapnak arra, hogy versenyezzenek Euróga legerősebb csapataival, bemutassák szintjüket és nemzetközi versenytapasztalatot szerezzenek.'
+                    'Rugby-7 tournament for junior teams in Lisbon. Our players will have the opportunity to compete with the strongest teams in Europe, demonstrate their skill level, and gain international competition experience.' :
+                    'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban. Játékosaink lehetőséget kapnak arra, hogy versenyezzenek Euróga legerősebb csapataival, bemutassák szintjüket és nemzetközi versenytapasztalatot szerezzenek.'
         },
         {
             id: 2,
@@ -143,8 +154,8 @@ const AboutUs = () => {
             details: language === 'UA' ?
                 'Інтенсивний навчально-тренувальний збір за участі провідних європейських тренерів. Програма включає тренування з техніки, тактики, фізичної підготовки та психологічного тренінгу.' :
                 language === 'EN' ?
-                'Intensive training camp with leading European coaches. The program includes technical, tactical, physical training, and psychological preparation sessions.' :
-                'Intenzív edzőtábor vezető európai edzőkkel. A programba tartozik technikai, taktikai, fizikai edzés és pszichológiai felkészítés is.'
+                    'Intensive training camp with leading European coaches. The program includes technical, tactical, physical training, and psychological preparation sessions.' :
+                    'Intenzív edzőtábor vezető európai edzőkkel. A programba tartozik technikai, taktikai, fizikai edzés és pszichológiai felkészítés is.'
         },
         {
             id: 3,
@@ -157,10 +168,155 @@ const AboutUs = () => {
             details: language === 'UA' ?
                 'Великий міжнародний турнір за участі 30 національних команд з усього світу. Унікальна можливість для наших юних гравців виступити на міжнародній арені та показати свій потенціал.' :
                 language === 'EN' ?
-                'Major international tournament featuring 30 national teams from around the world. A unique opportunity for our young players to perform on the international stage and demonstrate their potential.' :
-                'Nagy nemzetközi torna, 30 ország csapataival. Kiváló lehetőség fiatal játékosaink számára, hogy nemzetközi színtéren mutathassák be tudásukat és potenciáljukat.'
+                    'Major international tournament featuring 30 national teams from around the world. A unique opportunity for our young players to perform on the international stage and demonstrate their potential.' :
+                    'Nagy nemzetközi torna, 30 ország csapataival. Kiváló lehetőség fiatal játékosaink számára, hogy nemzetközi színtéren mutathassák be tudásukat és potenciáljukat.'
         }
     ];
+
+    const fundingBreakdowns = {
+        1: [
+            { 
+                category: 'Авіаквитки', 
+                amount: '12 000 €', 
+                description: 'Для 20 осіб (гравці, тренери, персонал)',
+                subItems: [
+                    'Київ - Лісабон - 300€/особа (економ клас)',
+                    '20 осіб × 600€ (туди-назад) = 12 000€'
+                ]
+            },
+            { 
+                category: 'Проживання', 
+                amount: '6 000 €', 
+                description: 'Готель 4* на 6 днів',
+                subItems: [
+                    '20 осіб × 6 ночей × 50€/ніч = 6 000€',
+                    'Двокімнатні номери зі зручностями'
+                ]
+            },
+            { 
+                category: 'Харчування', 
+                amount: '3 000 €', 
+                description: 'Повний пансіон на 6 днів',
+                subItems: [
+                    '20 осіб × 6 днів × 25€/день = 3 000€',
+                    'Сніданок, обід, вечеря (шведський стіл)'
+                ]
+            },
+            { 
+                category: 'Трансфери', 
+                amount: '1 500 €', 
+                description: 'Аеропорт-готель-аеропорт',
+                subItems: [
+                    'Групові трансфери на 20 осіб',
+                    'Включено всі переїзди за програмою'
+                ]
+            },
+            { 
+                category: 'Візи', 
+                amount: '1 500 €', 
+                description: 'Візова підтримка для всієї команди',
+                subItems: [
+                    'Консульський збір для 20 осіб',
+                    'Допомога у зборі документів',
+                    'Страхування на період поїздки'
+                ]
+            }
+        ],
+        2: [
+            { 
+                category: 'Проживання', 
+                amount: '8 000 €', 
+                description: 'Спортивна база на 6 днів',
+                subItems: [
+                    '20 осіб × 6 нічей × 66.67€/ніч = 8 000€',
+                    'Двокімнатні номери зі зручностями'
+                ]
+            },
+            { 
+                category: 'Харчування', 
+                amount: '4 500 €', 
+                description: 'Спортивне харчування',
+                subItems: [
+                    '20 осіб × 6 днів × 37.5€/день = 4 500€',
+                    'Сніданок, обід, вечеря (шведський стіл)'
+                ]
+            },
+            { 
+                category: 'Тренери', 
+                amount: '7 500 €', 
+                description: 'Гонорари провідних спеціалістів',
+                subItems: [
+                    'Гонорари провідних спеціалістів',
+                    'Включено всі тренування за програмою'
+                ]
+            },
+            { 
+                category: 'Транспорт', 
+                amount: '2 000 €', 
+                description: 'Внутрішні переїзди',
+                subItems: [
+                    'Групові трансфери на 20 осіб',
+                    'Включено всі переїзди за програмою'
+                ]
+            },
+            { 
+                category: 'Спортивне обладнання', 
+                amount: '3 000 €', 
+                description: 'Інвентар для тренувань',
+                subItems: [
+                    'Інвентар для тренувань',
+                    'Включено всі необхідні матеріали'
+                ]
+            }
+        ],
+        3: [
+            { 
+                category: 'Реєстраційний внесок', 
+                amount: '5 000 €', 
+                description: 'Участь у турнірі',
+                subItems: [
+                    'Реєстраційний внесок',
+                    'Включено участь у турнірі'
+                ]
+            },
+            { 
+                category: 'Проживання', 
+                amount: '7 000 €', 
+                description: 'Готель 3* на 5 днів',
+                subItems: [
+                    '20 осіб × 5 нічей × 70€/ніч = 7 000€',
+                    'Двокімнатні номери зі зручностями'
+                ]
+            },
+            { 
+                category: 'Харчування', 
+                amount: '3 500 €', 
+                description: 'Повний пансіон',
+                subItems: [
+                    '20 осіб × 5 днів × 35€/день = 3 500€',
+                    'Сніданок, обід, вечеря (шведський стіл)'
+                ]
+            },
+            { 
+                category: 'Трансфери', 
+                amount: '2 500 €', 
+                description: 'Міжміські переїзди',
+                subItems: [
+                    'Групові трансфери на 20 осіб',
+                    'Включено всі переїзди за програмою'
+                ]
+            },
+            { 
+                category: 'Спортивна форма', 
+                amount: '2 000 €', 
+                description: 'Комплект форми на гравця',
+                subItems: [
+                    'Комплект форми на гравця',
+                    'Включено всі необхідні матеріали'
+                ]
+            }
+        ]
+    };
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white">
@@ -185,7 +341,8 @@ const AboutUs = () => {
                             animate="visible"
                             className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight"
                         >
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500">
+                            <span
+                                className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500">
                                 {t.pageTitle}
                             </span>
                         </motion.h1>
@@ -220,7 +377,8 @@ const AboutUs = () => {
                                     alt={`Event ${event.id}`}
                                     className="w-full h-full object-cover"
                                 />
-                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
+                                <div
+                                    className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
                                     <span className="text-yellow-400 font-medium text-lg">{event.date}</span>
                                 </div>
                             </div>
@@ -257,23 +415,24 @@ const AboutUs = () => {
                                 <p className="text-gray-300 mt-4">{event.details}</p>
 
                                 {/* Funding Information */}
-                                <div className="mt-6 p-4 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-lg border border-yellow-500/20">
+                                <div
+                                    className="mt-6 p-4 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-lg border border-yellow-500/20">
                                     <div className="flex items-center justify-between">
                                         <div>
                                             <h4 className="font-medium text-yellow-400">
                                                 {language === 'UA' ? 'Необхідна сума фінансування:' :
-                                                 language === 'EN' ? 'Required funding:' :
-                                                 'Szükséges támogatás:'}
+                                                    language === 'EN' ? 'Required funding:' :
+                                                        'Szükséges támogatás:'}
                                             </h4>
                                             <p className="text-2xl font-bold text-yellow-400">{event.funding}</p>
                                         </div>
                                         <button
-                                            onClick={scrollToContact}
+                                            onClick={() => openFundingModal(event)}
                                             className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/20"
                                         >
-                                            {language === 'UA' ? 'Підтримати' :
-                                             language === 'EN' ? 'Support' :
-                                             'Támogatás'}
+                                            {language === 'UA' ? 'Детальніше' :
+                                                language === 'EN' ? 'Details' :
+                                                    'Részletek'}
                                         </button>
                                     </div>
                                 </div>
@@ -393,7 +552,7 @@ const AboutUs = () => {
                                                 <img
                                                     src={`/spin-${num}.png`}
                                                     alt={`Sponsor ${num}`}
-                                                    className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                    className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
                                                 />
                                             </div>
                                         </div>
@@ -406,7 +565,7 @@ const AboutUs = () => {
                                                 <img
                                                     src={`/spin-${num}.png`}
                                                     alt={`Sponsor ${num}`}
-                                                    className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                    className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
                                                 />
                                             </div>
                                         </div>
@@ -417,6 +576,98 @@ const AboutUs = () => {
                     </motion.div>
                 </div>
             </div>
+            <AnimatePresence>
+                {selectedEvent && (
+                    <motion.div 
+                        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={closeModal}
+                    >
+                        <motion.div 
+                            className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-2xl"
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            onClick={e => e.stopPropagation()}
+                        >
+                            <div className="flex justify-between items-start mb-6">
+                                <div>
+                                    <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+                                        {selectedEvent.title}
+                                    </h2>
+                                    <p className="text-yellow-400 text-lg mt-1">{selectedEvent.funding}</p>
+                                </div>
+                                <button 
+                                    onClick={closeModal}
+                                    className="text-gray-400 hover:text-white p-1 -m-1 transition-colors"
+                                    aria-label={language === 'UA' ? 'Закрити' : language === 'EN' ? 'Close' : 'Bezárás'}
+                                >
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div className="mb-6">
+                                <h3 className="text-xl font-semibold mb-4 text-yellow-400 border-b border-yellow-400/30 pb-2">
+                                    {language === 'UA' ? 'Детальний розподіл коштів' : 
+                                     language === 'EN' ? 'Funding Breakdown' : 'Pénzügyi felosztás'}
+                                </h3>
+                                <div className="space-y-4">
+                                    {fundingBreakdowns[selectedEvent.id]?.map((item, index) => (
+                                        <div key={index} className="bg-white/5 rounded-lg overflow-hidden border border-white/10">
+                                            <div className="p-4 bg-white/5 flex justify-between items-center">
+                                                <div>
+                                                    <h4 className="font-bold text-lg">{item.category}</h4>
+                                                    <p className="text-yellow-400">{item.amount}</p>
+                                                </div>
+                                                <span className="text-sm text-gray-300">{item.description}</span>
+                                            </div>
+                                            <div className="p-4 pt-2 bg-white/2.5">
+                                                <ul className="space-y-2 text-sm text-gray-300">
+                                                    {item.subItems?.map((subItem, subIndex) => (
+                                                        <li key={subIndex} className="flex items-start">
+                                                            <span className="text-yellow-400 mr-2">•</span>
+                                                            <span>{subItem}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                                
+                                <div className="mt-6 p-4 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-lg border border-yellow-500/20 flex justify-between items-center">
+                                    <span className="font-bold text-lg">
+                                        {language === 'UA' ? 'Загальна сума:' : 
+                                         language === 'EN' ? 'Total amount:' : 'Összesen:'}
+                                    </span>
+                                    <span className="text-2xl font-bold text-yellow-400">{selectedEvent.funding}</span>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row gap-4 justify-end mt-8">
+                                <button
+                                    onClick={closeModal}
+                                    className="px-6 py-2.5 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-full transition-all duration-300"
+                                >
+                                    {language === 'UA' ? 'Закрити' : 
+                                     language === 'EN' ? 'Close' : 'Bezárás'}
+                                </button>
+                                <button
+                                    onClick={scrollToContact}
+                                    className="px-6 py-2.5 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-gray-900 font-medium rounded-full transition-all duration-300"
+                                >
+                                    {language === 'UA' ? 'Підтримати' : 
+                                     language === 'EN' ? 'Support' : 'Támogatás'}
+                                </button>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };

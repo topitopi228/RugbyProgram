@@ -381,7 +381,7 @@ const SponsorProgram = () => {
                                                     <img
                                                         src={`/spin-${num}.png`}
                                                         alt={`Sponsor ${num}`}
-                                                        className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                        className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
                                                     />
                                                 </div>
                                             </div>
@@ -394,7 +394,7 @@ const SponsorProgram = () => {
                                                     <img
                                                         src={`/spin-${num}.png`}
                                                         alt={`Sponsor ${num}`}
-                                                        className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                        className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
                                                     />
                                                 </div>
                                             </div>

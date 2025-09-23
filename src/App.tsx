@@ -7,6 +7,7 @@ import {LanguageProvider} from './components/LanguageContext.tsx';
 import AboutUs from './components/AboutUs.tsx';
 import Navbar from './components/Navbar';
 import Sponsors from "./components/Sponsors.tsx";
+import Media from "./components/Media.tsx";
 
 const App: React.FC = () => {
     return (
@@ -30,7 +31,6 @@ const App: React.FC = () => {
                             paddingLeft: 0,
                             overflowX: 'hidden',
                             overflowY: 'hidden',
-
                         }}
                     >
                         <Routes>
@@ -39,7 +39,7 @@ const App: React.FC = () => {
                             <Route path="/about" element={<AboutUs/>}/>
                             <Route path="/club" element={<Club/>}/>
                             <Route path="/stadium" element={<Sponsors/>}/>
-                            <Route path="/contact" element={<Sponsors/>}/>
+                            <Route path="/contact" element={<Media/>}/>
                         </Routes>
                     </main>
                 </div>

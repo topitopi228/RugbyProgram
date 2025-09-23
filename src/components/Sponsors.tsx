@@ -22,18 +22,22 @@ const Sponsors = () => {
                 {
                     image: '/spin-4.png',
                     name: 'БФ "Міла" Олексія Юренка',
+                    url: 'https://www.facebook.com/p/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%B4%D1%96%D0%B9%D0%BD%D0%B8%D0%B9-%D0%A4%D0%BE%D0%BD%D0%B4-%D0%9C%D0%86%D0%9B%D0%90-%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D1%96%D1%8F-%D0%AE%D1%80%D0%B5%D0%BD%D0%BA%D0%B0-61572065630183/'
                 },
                 {
                     image: '/spin-3.png',
                     name: 'Федерація регбі України',
+                    url: 'https://rugby.org.ua/'
                 },
                 {
                     image: '/spin-2.png',
                     name: 'БФ "Nova Ukraine"',
+                    url: 'https://novaukraine.org/'
                 },
                 {
                     image: '/spin-1.png',
                     name: 'Готель-ресторан "Згарда"',
+                    url: 'https://www.instagram.com/zgardadragobrat/'
                 },
             ],
             personalSponsorsList: [
@@ -57,6 +61,32 @@ const Sponsors = () => {
                     name: 'ПОТАПЕНКО ОЛЕКСАНДР',
                     position: 'Президент Київської міської федерації регбі',
                 },
+                {
+                    image: '/spon5.webp',
+                    name: 'ЕТНАРОВИЧ ОЛЕГ ',
+                    position: 'Український підприємець, меценат',
+                },
+                {
+                    image: '/spon6.jpeg',
+                    name: 'ЮРЕНКО ОЛЕКСІЙ',
+                    position: 'Засновник БФ "Міла", підприємець',
+                },
+                {
+                    image: '/spon7.jpg',
+                    name: 'ПEТЬОВКА АНДРІЙ',
+                    position: 'Підприємець, меценат спорту',
+                },
+                {
+                    image: '/spon8.jpg',
+                    name: 'КОПІЛОВ АНТОН',
+                    position: 'Підприємець, інвестор',
+                },
+                {
+                    image: '/spon9.jpg',
+                    name: 'АДАМІК ПЕТРО',
+                    position: 'Бізнесмен, меценат',
+                },
+
             ],
         },
         EN: {
@@ -67,18 +97,22 @@ const Sponsors = () => {
                 {
                     image: '/spin-1.png',
                     name: 'Charity Fund "Mila" by Oleksiy Yurenko',
+                    url: 'https://mila.help/'
                 },
                 {
                     image: '/spin-2.png',
                     name: 'Ukraine Rugby Union',
+                    url: 'https://rugby.org.ua/'
                 },
                 {
                     image: '/spin-3.png',
                     name: 'Charity Fund "Nova Ukraine"',
+                    url: 'https://novaukraine.org/'
                 },
                 {
                     image: '/spin-4.png',
                     name: 'Restaurant-Hotel "Zharda"',
+                    url: 'https://www.instagram.com/zgardarestaurant/'
                 },
             ],
             personalSponsorsList: [
@@ -101,6 +135,36 @@ const Sponsors = () => {
                     image: '/spon4.png',
                     name: 'OLEKSANDR POTAPENKO',
                     position: 'President of the Kyiv City Rugby Federation',
+                },
+                {
+                    image: '/spon5.png',
+                    name: 'OLEH ETNAROVYCH',
+                    position: 'Ukrainian entrepreneur, philanthropist',
+                },
+                {
+                    image: '/spon6.png',
+                    name: 'OLEKSIY YURENKO',
+                    position: 'Founder of "Mila" Charity Fund, entrepreneur',
+                },
+                {
+                    image: '/spon7.png',
+                    name: 'ANDRII PITOVKA',
+                    position: 'Entrepreneur, sports patron',
+                },
+                {
+                    image: '/spon8.png',
+                    name: 'ANTON KOPILOV',
+                    position: 'Entrepreneur, investor',
+                },
+                {
+                    image: '/spon9.png',
+                    name: 'PETRO ADAMYK',
+                    position: 'Businessman, philanthropist',
+                },
+                {
+                    image: '/spon10.png',
+                    name: 'DAVID WILLIAMS',
+                    position: 'New Zealand entrepreneur, rugby enthusiast',
                 },
             ],
         },
@@ -130,16 +194,18 @@ const Sponsors = () => {
                             transition={{delay: index * 0.1, duration: 0.5}}
                             className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-yellow-400/30"
                         >
-                            <div className="h-40 flex items-center justify-center mb-4">
-                                <img
-                                    src={sponsor.image}
-                                    alt={sponsor.name}
-                                    className="max-h-full max-w-full object-contain"
-                                />
-                            </div>
-                            <h3 className="text-xl font-semibold text-center text-yellow-300">
-                                {sponsor.name}
-                            </h3>
+                            <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+                                <div className="h-40 flex items-center justify-center mb-4">
+                                    <img
+                                        src={sponsor.image}
+                                        alt={sponsor.name}
+                                        className="max-h-full max-w-full object-contain"
+                                    />
+                                </div>
+                                <h3 className="text-xl font-semibold text-center text-yellow-300">
+                                    {sponsor.name}
+                                </h3>
+                            </a>
                         </motion.div>
                     ))}
                 </div>

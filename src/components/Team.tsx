@@ -61,7 +61,7 @@ const Team = () => {
 
     const t = translations[language];
 
-    const renderTeamSection = (title: string, items: Array<{ id: string, name: string, role?: string }>) => (
+    const renderTeamSection = (title: string, items: Array<{ id: string, name: string, role?: string, gg?: string, description?: string }>) => (
         <motion.div
             initial="hidden"
             whileInView="visible"
@@ -102,6 +102,7 @@ const Team = () => {
                             <div className="p-4">
                                 <h3 className="text-xl font-semibold">{item.name}</h3>
                                 {item.role && <p className="text-gray-300 text-sm mt-1">{item.role}</p>}
+                                {item.description && <p className="text-gray-300 text-sm mt-1">{item.description}</p>}
                                 {item.gg && <p className="text-gray-300 text-sm mt-1">{item.gg}</p>}
                             </div>
                         </motion.div>
@@ -154,21 +155,48 @@ const Team = () => {
                         id: 'coach3',
                         name: 'Олександр Мігунов',
                         role: 'Тактичний аналітик',
-                        gg: 'Тренер збірної U-18, тактичний аналітик збірної U-16, понад 7 років досвіду роботи з юнацькими командами, спеціаліст із ігрових стратегій, більше 20 вихованців - майстри спорту України з регбі. Найкращий гравець Чемпіонату Європи 2007 року.'
+                        gg: 'Тренер збірної U-18, тактичний аналітик збірної U-16, понад 7 років досвіду роботи з юнацькими командами, спеціаліст із ігрових стратегій, більш як 10 років досвіду роботи з юнацькими командами, гравець РК "Олімп"'
                     },
                     {
                         id: 'trener4',
                         name: 'Марцел Цитряк',
-                        role: 'Менеджер',
-                        gg: 'Менеджер юнацької збірної України U-16 та збірної України з пляжного регбі. Відповідає за організацію навчально-тренувальних зборів, координацію логістики, комунікацію з федераціями та партнерами. Має досвід роботи з участю збірних у чемпіонатах Європи. '
+                        role: 'Менеджер команд',
+                        gg: 'Менеджер юнацької збірної України U-16 та збірної України з пляжного регбі. Відповідає за організацію навчально-тренувальних зборів, координацію логістики, комунікацію з федераціями та партнерами. Має досвід роботи з участю збірних у чемпіонатах Європи. Володіє 4 мовами, зокрема українською, угорською та англійською, що дозволяє йому ефективно виконувати функції перекладача.'
                     }
                 ])}
 
                 {/* Doctors Section */}
                 {renderTeamSection(t.doctors, [
-                    {id: 'doc1', name: 'Богдан Дідик', role: 'Головний лікар'},
-                    {id: 'doc2', name: 'Олександр Ткаченко', role: 'Лікар-реабілітолог'},
-                    {id: 'doc3', name: 'Валерія Павлюк', role: 'Масажист'}
+                    {
+                        id: 'doc1', 
+                        name: 'Богдан Дідик', 
+                        role: 'Головний лікар',
+                        gg: language === 'UA' 
+                            ? 'Лікар жіночої національної збірної з регбі-7 та чоловічої національної збірної України з регбі-15. Відповідає за медичне забезпечення та реабілітацію спортсменів національних команд. Має багаторічний досвід роботи з елітними спортсменами, учасник міжнародних змагань та тренувальних зборів.'
+                            : language === 'EN' 
+                                ? 'Doctor of the Ukrainian Women\'s National Rugby 7s Team and Men\'s National Rugby 15s Team. Responsible for medical support and rehabilitation of national team athletes. Has years of experience working with elite athletes, participant in international competitions and training camps.'
+                                : 'Az ukrán női rögbi 7-es és férfi rögbi 15-ös válogatott orvosa. Felelős a válogatott sportolók egészségügyi ellátásáért és rehabilitációjáért. Többéves tapasztalattal rendelkezik elit sportolókkal való munkában, résztvevője nemzetközi versenyeknek és edzőtáboroknak.'
+                    },
+                    {
+                        id: 'doc2', 
+                        name: 'Олександр Ткаченко', 
+                        role: 'Головний лікар ЗОЗ ігрових видів спорту',
+                        gg: language === 'UA'
+                            ? 'Головний лікар Західноукраїнської обласної лікарні з ігрових видів спорту (баскетбол, гандбол, регбі). Має багаторічний досвід роботи з професійними спортсменами, колишній гравець регбі.'
+                            : language === 'EN'
+                                ? 'Head Doctor of the Western Ukrainian Regional Hospital for Team Sports (basketball, handball, rugby). Has many years of experience working with professional athletes, former rugby player.'
+                                : 'A Nyugat-ukrajnai Regionális Kórház csapatsport osztályának főorvosa (kosárlabda, kézilabda, rögbi). Többéves tapasztalattal rendelkezik professzionális sportolókkal való munkában, korábbi rögbijátékos.'
+                    },
+                    {
+                        id: 'doc3', 
+                        name: 'Валерія Павлюк', 
+                        role: 'Реабілітолог',
+                        gg: language === 'UA'
+                            ? 'Досвідчений реабілітолог з понад 6-річним стажем роботи з дітьми. Колишня гравчиня регбі, що дозволяє їй краще розуміти потреби спортсменів. Спеціалізується на відновленні після спортивних травм.'
+                            : language === 'EN'
+                                ? 'Experienced rehabilitation specialist with over 6 years of experience working with children. Former rugby player, which allows her to better understand the needs of athletes. Specializes in sports injury recovery.'
+                                : 'Több mint 6 éves tapasztalattal rendelkező rehabilitációs szakember, aki gyerekekkel dolgozik. Korábbi rögbijátékos, ami segít neki jobban megérteni a sportolók igényeit. A sportolói sérülések utáni rehabilitáció szakértője.'
+                    }
                 ])}
 
                 {/* Players Section */}
@@ -177,17 +205,17 @@ const Team = () => {
                         {id: 'player1', name: 'Денбовецький Микола'},
                         {id: 'player2', name: 'Ерік Тіппан'},
                         {id: 'player3', name: 'Володимир Рец'},
-                        {id: 'player4', name: 'Данніл Казнін'},
+                        {id: 'player4', name: 'Сачек Микита'},
                         {id: 'player5', name: 'Данніл Казнін'},
                         {id: 'player6', name: 'Тарасюк Мирослав'},
-                        {id: 'player7', name: 'Богдан Пікульский'},
+                        {id: 'player7', name: 'Юрій Штець'},
                         {id: 'player8', name: 'Богдан Пікульський'},
-                        {id: 'player9', name: 'Богдан Дідик'},
+                        {id: 'player9', name: 'Владислав Садовський'},
                         {id: 'player10', name: 'Роман Присяжнюк'},
                         {id: 'player11', name: 'Владислав Кошелюк'},
-                        {id: 'player12', name: 'Данніл'},
-                        {id: 'player13', name: 'Данііл'},
-                        {id: 'player14', name: 'Богдан Дідик'},
+                        {id: 'player12', name: 'Артем Кухарський'},
+                        {id: 'player13', name: 'Данііл Плєшаков'},
+                        {id: 'player14', name: 'Олександр Бищук'},
                     ]
                 )}
 
@@ -196,12 +224,30 @@ const Team = () => {
                     {
                         id: 'trenout2',
                         name: 'Алан Бантінг',
-                        role: 'Головний тренер жіночої збірної Нової Зеландії, раніше очолював Black Ferns Sevens. Переможець міжнародних турнірів та Супер Регбі Аупікі з Chiefs Manawa. Відомий як лідер і новатор у розвитку жіночого регбі.'
+                        role: language === 'UA' 
+                            ? 'Головний тренер жіночої збірної Нової Зеландії' 
+                            : language === 'EN' 
+                                ? 'Head Coach of the New Zealand Women\'s National Team'
+                                : 'Új-Zéland női válogatottjának vezetőedzője',
+                        description: language === 'UA'
+                            ? 'Колишній тренер Black Ferns Sevens, який привів команду до перемоги у серії Світової серії регбі-7. Піонер у розвитку жіночого регбі, відомий своїм інноваційним підходом до підготовки спортсменок. Під його керівництвом команда досягла безпрецедентного рівня майстерності та професіоналізму.'
+                            : language === 'EN'
+                                ? 'Former coach of Black Ferns Sevens who led the team to victory in the World Rugby Sevens Series. A pioneer in the development of women\'s rugby, known for his innovative approach to athlete preparation. Under his leadership, the team achieved an unprecedented level of skill and professionalism.'
+                                : 'A Black Ferns Sevens korábbi edzője, aki a csapatot a World Rugby Seven Series győzelemhez vezette. A női rögbi fejlesztésének úttörője, ismert innovatív edzésmódszereiről. Vezetése alatt a csapat példátlan szakmai színvonalat ért el.'
                     },
                     {
                         id: 'trenout3',
                         name: 'Сер Грехем Генрі',
-                        role: 'Легендарний тренер збірної «All Blacks», з якою здобув Кубок світу-2011. Очолював команду з 2004 по 2011 рік, багаторазовий переможець Tri Nations та Кубка Бледіслоу. Кавалер ордена, член Зали слави World Rugby.'
+                        role: language === 'UA'
+                            ? 'Колишній головний тренер All Blacks'
+                            : language === 'EN'
+                                ? 'Former Head Coach of All Blacks'
+                                : 'Az All Blacks korábbi vezetőedzője',
+                        description: language === 'UA'
+                            ? 'Легендарний тренер, який привів All Blacks до перемоги на Кубку світу з регбі 2011 року. На чолі команди з 2004 по 2011 рік, встановив нові стандарти у світі регбі. Під його керівництвом All Blacks виграли Кубок Бледіслоу 7 разів поспіль та Кубок трьох націй 5 разів. Відзначений численними нагородами, включаючи орден Британської імперії та місце в Залі слави World Rugby.'
+                            : language === 'EN'
+                                ? 'Legendary coach who led the All Blacks to victory in the 2011 Rugby World Cup. At the helm from 2004 to 2011, he set new standards in world rugby. Under his leadership, the All Blacks won the Bledisloe Cup 7 times in a row and the Tri Nations 5 times. Honored with numerous awards, including the Order of the British Empire and induction into the World Rugby Hall of Fame.'
+                                : 'Legendás edző, aki az All Blackst a 2011-es rögbi-világbajnoki győzelemhez vezette. 2004-től 2011-ig állt a csapat élén, új szabványokat állítva fel a világrögbi számára. Vezetésével az All Blacks 7-szer nyerte meg egymás után a Bledisloe-kupát és 5-ször a Három Nemzet Kupáját. Számos kitüntetés birtokosa, köztük a Brit Birodalom Rendjével és a World Rugby Hírességek Csarnokának tagjaként.'
                     }
                 ])}
 
@@ -317,7 +363,7 @@ const Team = () => {
                                                     <img
                                                         src={`/spin-${num}.png`}
                                                         alt={`Sponsor ${num}`}
-                                                        className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                        className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
                                                     />
                                                 </div>
                                             </div>
@@ -330,7 +376,7 @@ const Team = () => {
                                                     <img
                                                         src={`/spin-${num}.png`}
                                                         alt={`Sponsor ${num}`}
-                                                        className="h-12 w-auto max-w-[150px] object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                                                        className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
                                                     />
                                                 </div>
                                             </div>
