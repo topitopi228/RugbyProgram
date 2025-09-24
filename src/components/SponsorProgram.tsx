@@ -1,7 +1,7 @@
 import {useLanguage} from './LanguageUtils';
 import {motion} from 'framer-motion';
 import {useLocation} from "react-router-dom";
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 
 type Translations = {
     title: string;
@@ -47,7 +47,7 @@ const translations: Record<string, Translations> = {
         contactEmail: 'shashero10@gmail.com',
         contactTelegram: 't.me/Shashero',
         olympicGoal: 'Ми прагнемо гідно представити Україну на міжнародній арені та прославити нашу країну у світі. Кожен матч — це крок до великої мети та доказ незламності українського духу. Вихід на Юнацькі Олімпійські ігри 2026 року стане символом сили, єдності та віри в перемогу.',
-        europeanGoal: 'Ми прагнемо в майбутньому виступати на чемпіонатах Європи на такому ж рівні, як сьогодні це роблять національна та юнацька збірні України. Наша мета — здобути пеемогу в дивізіоні Championship та гідно представляти Україну серед найсильніших команд на олімпійському рівні.',
+        europeanGoal: 'Ми прагнемо в майбутньому виступати на чемпіонатах Європи на такому ж рівні, як сьогодні це роблять національна та юнацька збірні України. Наша мета — здобути перемогу в дивізіоні Championship та гідно представляти Україну серед найсильніших команд на олімпійському рівні.',
         olympicTitle: 'Вихід на юнацькі олімпійські ігри 2026 року'
     },
     EN: {
@@ -110,7 +110,7 @@ const translations: Record<string, Translations> = {
 
 const SponsorProgram = () => {
     const {language} = useLanguage();
-    const location=useLocation();
+    const location = useLocation();
     const t = translations[language];
     useEffect(() => {
         // Check if there's a hash in the URL
@@ -119,7 +119,7 @@ const SponsorProgram = () => {
             if (element) {
                 // Small timeout to ensure the component is fully rendered
                 setTimeout(() => {
-                    element.scrollIntoView({ behavior: 'smooth' });
+                    element.scrollIntoView({behavior: 'smooth'});
                 }, 100);
             }
         }
@@ -136,92 +136,164 @@ const SponsorProgram = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
-                <div className="relative z-10 h-full flex flex-col justify-end pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 md:mt-10">
-                    <motion.div 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                <div
+                    className="relative z-10 h-full flex flex-col justify-end pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 md:mt-10">
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.6, delay: 0.2}}
                         className="max-w-4xl mx-auto w-full text-center"
                     >
-                        
+
                         <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 0.6, delay: 0.3}}
                             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold md:mt-5 mb-4 leading-tight  text-white drop-shadow-lg"
                         >
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 ">
-                                {language === 'UA' 
-                                    ? 'Юнацька Збірна України' 
-                                    : language === 'EN' 
-                                        ? 'Ukrainian Youth National Team' 
+                            <span
+                                className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 ">
+                                {language === 'UA'
+                                    ? 'Юнацька Збірна України'
+                                    : language === 'EN'
+                                        ? 'Ukrainian Youth National Team'
                                         : 'Ukrán Ifjúsági Válogatott'}
                             </span>
-                            <span className="block text-xl sm:text-2xl md:text-3xl font-medium text-blue-100 mt-2 md:mt-3">
-                                {language === 'UA' 
+                            <span
+                                className="block text-xl sm:text-2xl md:text-3xl font-medium text-blue-100 mt-2 md:mt-3">
+                                {language === 'UA'
                                     ? 'з регбі-7s U16'
-                                    : language === 'EN' 
+                                    : language === 'EN'
                                         ? 'Rugby 7s U16'
                                         : 'Rögbi 7s U16'}
                             </span>
                         </motion.h1>
-                        
-                        <motion.p 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
+
+                        <motion.p
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 0.6, delay: 0.4}}
                             className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mt-6 leading-relaxed"
                         >
-                            {language === 'UA' 
-                                ? 'Об\'єднуємо таланти, виховуємо чемпіонів, пишемо історію українського регбі разом' 
-                                : language === 'EN' 
-                                    ? 'Uniting talents, raising champions, writing the history of Ukrainian rugby together' 
+                            {language === 'UA'
+                                ? 'Об\'єднуємо таланти, виховуємо чемпіонів, пишемо історію українського регбі разом'
+                                : language === 'EN'
+                                    ? 'Uniting talents, raising champions, writing the history of Ukrainian rugby together'
                                     : 'Tehetségeket egyesítünk, bajnokokat nevelünk, közösen írjuk az ukrán rögbi történetét'}
                         </motion.p>
                     </motion.div>
                 </div>
             </div>
+            {/* Olympic Goal Section - Modern Redesign */}
+            <div className="relative w-full flex items-center justify-center py-16 sm:py-24 px-4 sm:px-6">
+                <div className="relative w-full max-w-6xl mx-auto">
+                    {/* Background with parallax effect */}
+                    <motion.div
+                        className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl"
+                        initial={{scale: 1.05}}
+                        whileInView={{scale: 1}}
+                        viewport={{once: true}}
+                        transition={{duration: 1.2, ease: [0.16, 1, 0.3, 1]}}
+                    >
+                        <div className="relative h-full w-full">
+                            <img
+                                src="/olymp.png"
+                                alt="Olympic goal"
+                                className="w-full h-full object-cover transform-gpu will-change-transform"
+                            />
+                            {/* Updated gradient overlay - removed pink/magenta */}
+                            <div
+                                className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-slate-900/80 to-teal-900/70"/>
+                            {/* Subtle noise texture */}
+                            <div
+                                className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBvcGFjaXR5PSIwLjA1Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAwMDAwIi8+PC9zdmc+')] opacity-10"/>
+                        </div>
+                    </motion.div>
 
-            {/* Olympic Goal Section */}
-            <div className="relative w-full flex items-center justify-center py-12 px-4 sm:px-6"
-                 style={{
-                     minHeight: '50vh',
-                     marginTop: '7vh',
-                     borderRadius: '20px',
-                     maxWidth: '80vw',
-                     marginLeft: 'auto',
-                     marginRight: 'auto'
-                 }}>
-                <div className="absolute inset-0 bg-cover bg-center rounded-2xl overflow-hidden">
-                    <img
-                        src="/olymp.png"
-                        alt="Olympic goal"
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+                    <div className="relative z-10 w-full max-w-4xl mx-auto">
+                        <motion.div
+                            initial={{opacity: 0, y: 40}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: true, margin: "-100px"}}
+                            transition={{
+                                duration: 0.8,
+                                delay: 0.2,
+                                ease: [0.16, 1, 0.3, 1]
+                            }}
+                            className="backdrop-blur-sm bg-slate-900/60 border border-slate-700/50 rounded-2xl p-6 sm:p-8 md:p-10 shadow-lg"
+                        >
+                            {/* Decorative elements */}
+                            <div
+                                className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-amber-400 rounded-tl-lg"/>
+                            <div
+                                className="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-teal-400 rounded-br-lg"/>
+
+                            <div className="relative">
+                                {/* Olympic rings icon */}
+                                <motion.div
+                                    className="flex justify-center mb-6"
+                                    initial={{scale: 0.8, opacity: 0}}
+                                    whileInView={{scale: 1, opacity: 1}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.3, duration: 0.6}}
+                                >
+                                    <div className="flex space-x-2 sm:space-x-3">
+                                        {['#0085C7', '#000000', '#DF0024', '#F4C300', '#009F3D'].map((color, i) => (
+                                            <div
+                                                key={i}
+                                                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 sm:border-[3px]"
+                                                style={{
+                                                    borderColor: color,
+                                                    boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
+                                                }}
+                                            />
+                                        ))}
+                                    </div>
+                                </motion.div>
+
+                                <motion.h2
+                                    className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500"
+                                    initial={{opacity: 0, y: 20}}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.4, duration: 0.6}}
+                                >
+                                    {t.olympicTitle}
+                                </motion.h2>
+
+                                <motion.div
+                                    className="w-20 h-1 bg-gradient-to-r from-amber-400 to-teal-400 mx-auto mb-6 sm:mb-8 rounded-full"
+                                    initial={{scaleX: 0}}
+                                    whileInView={{scaleX: 1}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.5, duration: 0.8, ease: [0.16, 1, 0.3, 1]}}
+                                />
+
+                                <motion.p
+                                    className="text-base sm:text-lg md:text-xl text-slate-100 leading-relaxed sm:leading-relaxed font-light tracking-wide"
+                                    initial={{opacity: 0, y: 20}}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.6, duration: 0.6}}
+                                >
+                                    {t.olympicGoal}
+                                </motion.p>
+
+                                {/* Animated scroll indicator */}
+                                <motion.div
+                                    className="mt-8 flex flex-col items-center"
+                                    initial={{opacity: 0, y: 10}}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 1, duration: 0.6}}
+                                >
+                                </motion.div>
+                            </div>
+                        </motion.div>
+                    </div>
                 </div>
-
-                <motion.div
-                    initial={{opacity: 0, y: 20}}
-                    whileInView={{opacity: 1, y: 0}}
-                    viewport={{once: true}}
-                    transition={{duration: 0.6}}
-                    className="relative z-10 w-full max-w-4xl mx-auto p-4 sm:p-6 md:p-8 text-center"
-                >
-                    <motion.h1
-                        className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-snug sm:leading-tight"
-                        style={{textShadow: '0 2px 10px rgba(0,0,0,0.3)'}}
-                    >
-                        {t.olympicTitle}
-                    </motion.h1>
-                    <motion.p
-                        className="text-base sm:text-lg md:text-xl mb-6 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-light tracking-wide"
-                        style={{textShadow: '0 1px 2px rgba(0,0,0,0.4)'}}
-                    >
-                        {t.olympicGoal}
-                    </motion.p>
-                </motion.div>
             </div>
+
 
             {/* Main Content */}
             <div className="container mx-auto mt-30">
