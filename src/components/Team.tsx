@@ -26,8 +26,8 @@ const Team = () => {
             contactTitle: 'ГОТОВІ ПІДТРИМАТИ РЕГБІ?',
             contactText: 'МОЖЕТЕ ЗВ\'ЯЗАТИСЬ БУДЬ-ЯКИМ ЗРУЧНИМ ДЛЯ ВАС СПОСОБОМ!',
             contactPhone: '+48 501 820 396',
-            contactEmail: 'rugby.support@gmail.com',
-            contactTelegram: 't.me/ivanovich112'
+            contactEmail: 'shashero10@gmail.com',
+            contactTelegram: 't.me/Shashero',
         },
         EN: {
             title: 'Team',
@@ -61,7 +61,13 @@ const Team = () => {
 
     const t = translations[language];
 
-    const renderTeamSection = (title: string, items: Array<{ id: string, name: string, role?: string, gg?: string, description?: string }>) => (
+    const renderTeamSection = (title: string, items: Array<{
+        id: string,
+        name: string,
+        role?: string,
+        gg?: string,
+        description?: string
+    }>) => (
         <motion.div
             initial="hidden"
             whileInView="visible"
@@ -168,18 +174,18 @@ const Team = () => {
                 {/* Doctors Section */}
                 {renderTeamSection(t.doctors, [
                     {
-                        id: 'doc1', 
-                        name: 'Богдан Дідик', 
+                        id: 'doc1',
+                        name: 'Богдан Дідик',
                         role: 'Головний лікар',
-                        gg: language === 'UA' 
+                        gg: language === 'UA'
                             ? 'Лікар жіночої національної збірної з регбі-7 та чоловічої національної збірної України з регбі-15. Відповідає за медичне забезпечення та реабілітацію спортсменів національних команд. Має багаторічний досвід роботи з елітними спортсменами, учасник міжнародних змагань та тренувальних зборів.'
-                            : language === 'EN' 
+                            : language === 'EN'
                                 ? 'Doctor of the Ukrainian Women\'s National Rugby 7s Team and Men\'s National Rugby 15s Team. Responsible for medical support and rehabilitation of national team athletes. Has years of experience working with elite athletes, participant in international competitions and training camps.'
                                 : 'Az ukrán női rögbi 7-es és férfi rögbi 15-ös válogatott orvosa. Felelős a válogatott sportolók egészségügyi ellátásáért és rehabilitációjáért. Többéves tapasztalattal rendelkezik elit sportolókkal való munkában, résztvevője nemzetközi versenyeknek és edzőtáboroknak.'
                     },
                     {
-                        id: 'doc2', 
-                        name: 'Олександр Ткаченко', 
+                        id: 'doc2',
+                        name: 'Олександр Ткаченко',
                         role: 'Головний лікар ЗОЗ ігрових видів спорту',
                         gg: language === 'UA'
                             ? 'Головний лікар Західноукраїнської обласної лікарні з ігрових видів спорту (баскетбол, гандбол, регбі). Має багаторічний досвід роботи з професійними спортсменами, колишній гравець регбі.'
@@ -188,8 +194,8 @@ const Team = () => {
                                 : 'A Nyugat-ukrajnai Regionális Kórház csapatsport osztályának főorvosa (kosárlabda, kézilabda, rögbi). Többéves tapasztalattal rendelkezik professzionális sportolókkal való munkában, korábbi rögbijátékos.'
                     },
                     {
-                        id: 'doc3', 
-                        name: 'Валерія Павлюк', 
+                        id: 'doc3',
+                        name: 'Валерія Павлюк',
                         role: 'Реабілітолог',
                         gg: language === 'UA'
                             ? 'Досвідчений реабілітолог з понад 6-річним стажем роботи з дітьми. Колишня гравчиня регбі, що дозволяє їй краще розуміти потреби спортсменів. Спеціалізується на відновленні після спортивних травм.'
@@ -222,11 +228,25 @@ const Team = () => {
                 {/* Foreign Coaches Section */}
                 {renderTeamSection(t.foreignCoaches, [
                     {
+                        id: 'trenout1',
+                        name: 'Паліко Джимшеладзе',
+                        role: language === 'UA'
+                            ? 'Колишній гравець збірної Грузії, рекордсмен за кількістю очок у національній команді'
+                            : language === 'EN'
+                                ? 'Former player of the Georgian national team, record holder for points scored in the national team'
+                                : 'A grúz válogatott korábbi játékosa, a válogatottban szerzett pontok rekordere',
+                        description: language === 'UA'
+                            ? 'Провів 57 матчів за збірну, учасник Кубків світу 2003 та 2007 років. Чемпіон Грузії, багато років виступав у французьких клубах як провідний півзахисник.'
+                            : language === 'EN'
+                                ? 'Played 57 matches for the national team, participated in the 2003 and 2007 World Cups. Champion of Georgia, played for many years in French clubs as a leading midfielder.'
+                                : '57 mérkőzést játszott a válogatottban, részt vett a 2003-as és 2007-es világbajnokságon. Grúzia bajnoka, sokáig francia klubokban játszott vezető középpárosként.'
+                    },
+                    {
                         id: 'trenout2',
                         name: 'Алан Бантінг',
-                        role: language === 'UA' 
-                            ? 'Головний тренер жіночої збірної Нової Зеландії' 
-                            : language === 'EN' 
+                        role: language === 'UA'
+                            ? 'Головний тренер жіночої збірної Нової Зеландії'
+                            : language === 'EN'
                                 ? 'Head Coach of the New Zealand Women\'s National Team'
                                 : 'Új-Zéland női válogatottjának vezetőedzője',
                         description: language === 'UA'
