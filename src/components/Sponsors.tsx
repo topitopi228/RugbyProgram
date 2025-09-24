@@ -63,7 +63,7 @@ const Sponsors = () => {
                 {
                     image: '/spon5.webp',
                     name: 'ЕТНАРОВИЧ ОЛЕГ ',
-                    position: 'Український підприємець, меценат',
+                    position: 'Український підприємець, меценат, президент федерації регбі Одещини',
                 },
                 {
                     image: '/spon6.jpeg',
@@ -82,8 +82,8 @@ const Sponsors = () => {
                 },
                 {
                     image: '/spon9.jpg',
-                    name: 'АДАМІК ПЕТРО',
-                    position: 'Бізнесмен, меценат',
+                    name: 'АДАМИК ПЕТРО',
+                    position: 'Бізнесмен, меценат,резидент федерації регбі Львівщини',
                 },
 
             ],
@@ -100,22 +100,22 @@ const Sponsors = () => {
             becomeSponsor: 'Become a Sponsor',
             companySponsorsList: [
                 {
-                    image: '/spin-1.png',
+                    image: '/spin-4.png',
                     name: 'Charity Fund "Mila" by Oleksiy Yurenko',
                     url: 'https://mila.help/'
                 },
                 {
-                    image: '/spin-2.png',
+                    image: '/spin-3.png',
                     name: 'Ukraine Rugby Union',
                     url: 'https://rugby.org.ua/'
                 },
                 {
-                    image: '/spin-3.png',
+                    image: '/spin-2.png',
                     name: 'Charity Fund "Nova Ukraine"',
                     url: 'https://novaukraine.org/'
                 },
                 {
-                    image: '/spin-4.png',
+                    image: '/spin-1.png',
                     name: 'Restaurant-Hotel "Zharda"',
                     url: 'https://www.instagram.com/zgardarestaurant/'
                 },
@@ -142,27 +142,27 @@ const Sponsors = () => {
                     position: 'President of the Kyiv City Rugby Federation',
                 },
                 {
-                    image: '/spon5.png',
+                    image: '/spon5.webp',
                     name: 'OLEH ETNAROVYCH',
-                    position: 'Ukrainian entrepreneur, philanthropist',
+                    position: 'Ukrainian entrepreneur, philanthropist, President of the Odesa Regional Rugby Federation',
                 },
                 {
-                    image: '/spon6.png',
+                    image: '/spon6.jpeg',
                     name: 'OLEKSIY YURENKO',
                     position: 'Founder of "Mila" Charity Fund, entrepreneur',
                 },
                 {
-                    image: '/spon7.png',
+                    image: '/spon7.jpg',
                     name: 'ANDRII PITOVKA',
                     position: 'Entrepreneur, sports patron',
                 },
                 {
-                    image: '/spon8.png',
+                    image: '/spon8.jpg',
                     name: 'ANTON KOPILOV',
                     position: 'Entrepreneur, investor',
                 },
                 {
-                    image: '/spon9.png',
+                    image: '/spon9.jpg',
                     name: 'PETRO ADAMYK',
                     position: 'Businessman, philanthropist',
                 },
@@ -177,6 +177,86 @@ const Sponsors = () => {
                 highlight: 'All sponsors who help us reach our goal will receive an invitation to the Olympic Games',
                 description: 'When our U-16 team makes it to the Olympics, we will invite everyone who supported us on this journey. Your support is a step towards Ukrainian rugby history!',
                 cta: 'Become Part of the Team'
+            },
+        },
+        HUN: {
+            companySponsors: 'Céges Szponzorok',
+            personalSponsors: 'Személyes Támogatók',
+            becomeSponsor: 'Legyél Te is Támogató',
+            companySponsorsList: [
+                {
+                    image: '/spin-4.png',
+                    name: 'Jótékonysági Alap "Mila" Olekszij Jurenko',
+                    url: 'https://mila.help/'
+                },
+                {
+                    image: '/spin-3.png',
+                    name: 'Ukrajnai Rögbi Szövetség',
+                    url: 'https://rugby.org.ua/'
+                },
+                {
+                    image: '/spin-2.png',
+                    name: 'Jótékonysági Alap "Nova Ukraine"',
+                    url: 'https://novaukraine.org/'
+                },
+                {
+                    image: '/spin-1.png',
+                    name: 'Étterem-Szálló "Zharda"',
+                    url: 'https://www.instagram.com/zgardarestaurant/'
+                },
+            ],
+            personalSponsorsList: [
+                {
+                    image: '/spon1.png',
+                    name: 'FEDIR SHANDOR',
+                    position: 'Ukrajna magyarországi nagykövete, a Kárpátaljai Területi Rögbi Szövetség elnöke',
+                },
+                {
+                    image: '/spon2.png',
+                    name: 'YEVHEN BAZHENKOV',
+                    position: 'Az Ukrán Rögbi Szövetség elnöke',
+                },
+                {
+                    image: '/spon3.png',
+                    name: 'ROMAN BIKHOV',
+                    position: 'A Harkovi Területi Rögbi Szövetség elnöke',
+                },
+                {
+                    image: '/spon4.png',
+                    name: 'OLEKSANDR POTAPENKO',
+                    position: 'A Kijevi Városi Rögbi Szövetség elnöke',
+                },
+                {
+                    image: '/spon5.webp',
+                    name: 'OLEH ETNAROVICS',
+                    position: 'Ukrán vállalkozó, mecénás, az Odeszai Területi Rögbi Szövetség elnöke',
+                },
+                {
+                    image: '/spon6.jpeg',
+                    name: 'OLEKSIY YURENKO',
+                    position: 'A "Mila" Alapítvány alapítója, vállalkozó',
+                },
+                {
+                    image: '/spon7.jpg',
+                    name: 'ANDRII PITOVKA',
+                    position: 'Vállalkozó, sporttámogató',
+                },
+                {
+                    image: '/spon8.jpg',
+                    name: 'ANTON KOPILOV',
+                    position: 'Vállalkozó, befektető',
+                },
+                {
+                    image: '/spon9.jpg',
+                    name: 'PETRO ADAMYK',
+                    position: 'Üzletember, mecénás',
+                },
+            ],
+            olympicInvitation: {
+                title: 'Közösen az Olimpiai Álomért',
+                highlight: 'Minden támogató, aki segít elérni a célunkat, meghívást kap az Olimpiai Játékokra',
+                description: 'Amikor U-16-os csapatunk kijut az olimpiára, mindenkit meghívunk, aki támogatott minket ezen az úton. Támogatásod lépés az ukrán rögbi történelem felé!',
+                cta: 'Légy Te is a Csapat Része!'
             },
         },
     };

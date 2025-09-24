@@ -52,7 +52,7 @@ const Club: React.FC = () => {
                     id: 5,
                     date: '7 Квітня 2025',
                     title: 'Перша перемога в Турнірі',
-                    description: 'Наша команда здобула першу перемогу на міжнародному турнірі в м. Гдиня, Польща. Це історична подія для нашого клубу!'
+                    description: 'Наша команда здобула першу перемогу на міжнародному турнірі в м. Гдиня, Польща. Це історична подія для нашої збірної!'
                 }
             ]
         },
@@ -87,7 +87,7 @@ const Club: React.FC = () => {
                     id: 5,
                     date: 'April 7, 2025',
                     title: 'First Tournament Victory',
-                    description: 'Our team achieved its first victory at the international tournament in Gdynia, Poland. A historic event for our club!'
+                    description: 'Our team achieved its first victory at the international tournament in Gdynia, Poland. This is a historic event for our national team!'
                 }
             ]
         },
@@ -122,7 +122,7 @@ const Club: React.FC = () => {
                     id: 5,
                     date: '2025. április 7.',
                     title: 'Első győzelem a versenyen',
-                    description: 'Csapatunk megszerezte első győzelmét a lengyelországi Gdyniában megrendezett nemzetközi versenyen. Történelmi pillanat a klubunk számára!'
+                    description: 'Csapatunk megszerezte első győzelmét a lengyelországi Gdyniában megrendezett nemzetközi versenyen. Történelmi pillanat a válogatottunk számára!'
                 }
             ]
         }
@@ -188,10 +188,10 @@ const Club: React.FC = () => {
                             className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8"
                         >
                             {language === 'UA' 
-                                ? 'Дізнайтеся про останні події, досягнення та новини нашого клубу' 
+                                ? 'Дізнайтеся про останні події, досягнення та новини нашої команди'
                                 : language === 'EN' 
-                                    ? 'Stay updated with the latest events, achievements, and club news' 
-                                    : 'Maradjon naprakész a legfrissebb eseményekről, eredményekről és klubhírekről'}
+                                    ? 'Stay updated with the latest events, achievements, and team news'
+                                    : 'Maradjon naprakész a legfrissebb eseményekről, eredményekről és csapathírekről'}
                         </motion.p>
                         
                         {/* CTA Button */}

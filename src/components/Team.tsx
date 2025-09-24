@@ -206,7 +206,7 @@ const Team = () => {
                         {id: 'player2', name: 'Ерік Тіппан'},
                         {id: 'player3', name: 'Володимир Рец'},
                         {id: 'player4', name: 'Сачек Микита'},
-                        {id: 'player5', name: 'Данніл Казнін'},
+                        {id: 'player5', name: 'Даниіл Казнін'},
                         {id: 'player6', name: 'Тарасюк Мирослав'},
                         {id: 'player7', name: 'Юрій Штець'},
                         {id: 'player8', name: 'Богдан Пікульський'},
@@ -214,8 +214,8 @@ const Team = () => {
                         {id: 'player10', name: 'Роман Присяжнюк'},
                         {id: 'player11', name: 'Владислав Кошелюк'},
                         {id: 'player12', name: 'Артем Кухарський'},
-                        {id: 'player13', name: 'Данііл Плєшаков'},
-                        {id: 'player14', name: 'Олександр Бищук'},
+                        {id: 'player13', name: 'Даниіл Плєшаков'},
+                        {id: 'player14', name: 'Олександр Бишук'},
                     ]
                 )}
 

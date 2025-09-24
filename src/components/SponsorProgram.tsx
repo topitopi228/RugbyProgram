@@ -24,7 +24,7 @@ type Translations = {
 const translations: Record<string, Translations> = {
     UA: {
         title: 'Ласкаво просимо на офіційний сайт юнацької Збірної України з регбі-7 Ю-16!',
-        subtitle: 'ПІДТРИМАТИ НАЦІОНАЛЬНУ ЗБІРНУ УКРАЇНИ З РЕГБІ-7',
+        subtitle: 'ПІДТРИМАТИ НАЦІОНАЛЬНУ ЗБІРНУ УКРАЇНИ З РЕГБІ-7s',
         description: 'Наш проєкт вже має соціальну цінність, результати, команду, систему тренувань та мотивацію — більше, ніж у 90% заявників на гранти. Ви можете розраховувати на підтримку в таких напрямках:',
         supportTitle: 'Напрямки підтримки:',
         supportAreas: [
@@ -44,15 +44,15 @@ const translations: Record<string, Translations> = {
         contactTitle: 'ГОТОВІ ПІДТРИМАТИ РЕГБІ?',
         contactText: 'МОЖЕТЕ ЗВ\'ЯЗАТИСЬ БУДЬ-ЯКИМ ЗРУЧНИМ ДЛЯ ВАС СПОСОБОМ!',
         contactPhone: '+48 501 820 396',
-        contactEmail: 'rugby.support@gmail.com',
-        contactTelegram: 't.me/ivanovich112',
+        contactEmail: 'shashero10@gmail.com',
+        contactTelegram: 't.me/Shashero',
         olympicGoal: 'Ми прагнемо гідно представити Україну на міжнародній арені та прославити нашу країну у світі. Кожен матч — це крок до великої мети та доказ незламності українського духу. Вихід на Юнацькі Олімпійські ігри 2026 року стане символом сили, єдності та віри в перемогу.',
         europeanGoal: 'Ми прагнемо в майбутньому виступати на чемпіонатах Європи на такому ж рівні, як сьогодні це роблять національна та юнацька збірні України. Наша мета — здобути пеемогу в дивізіоні Championship та гідно представляти Україну серед найсильніших команд на олімпійському рівні.',
         olympicTitle: 'Вихід на юнацькі олімпійські ігри 2026 року'
     },
     EN: {
         title: 'Welcome to the official website of the Ukrainian U-16 Rugby 7s National Team!',
-        subtitle: 'SUPPORT THE UKRAINIAN NATIONAL RUGBY-7 TEAM',
+        subtitle: 'SUPPORT THE UKRAINIAN NATIONAL RUGBY-7s TEAM',
         description: 'Our project already has social value, results, a team, a training system, and motivation—more than 90% of grant applicants. You can count on support in the following areas:',
         supportTitle: 'Areas of support:',
         supportAreas: [
@@ -71,9 +71,9 @@ const translations: Record<string, Translations> = {
         ],
         contactTitle: 'READY TO SUPPORT RUGBY?',
         contactText: 'YOU CAN GET IN TOUCH ANY CONVENIENT WAY!',
-        contactPhone: '+380 50 949 82 09',
-        contactEmail: 'rugby.support@gmail.com',
-        contactTelegram: 't.me/ivanovich112',
+        contactPhone: '+48 501 820 396',
+        contactEmail: 'shashero10@gmail.com',
+        contactTelegram: 't.me/Shashero',
         olympicGoal: 'We strive to proudly represent Ukraine on the international stage and bring glory to our country worldwide. Every match is a step toward a great goal and proof of the unbreakable Ukrainian spirit. Qualifying for the Youth Olympic Games 2026 will become a symbol of strength, unity, and faith in victory.',
         europeanGoal: 'We aim to compete at European Championships in the future at the same level as the national and youth teams of Ukraine do today. Our goal is to win the Championship division and proudly represent Ukraine among the strongest teams at the Olympic level.',
         olympicTitle: 'Qualifying for the Youth Olympic Games 2026'
@@ -99,9 +99,9 @@ const translations: Record<string, Translations> = {
         ],
         contactTitle: 'KÉSZ VAGY TÁMOGATNI A RÖGBIT?',
         contactText: 'BÁRMILYEN KÉNYELMES MÓDON FELVEHETED VELÜNK A KAPCSOLATOT!',
-        contactPhone: '+380 50 949 82 09',
-        contactEmail: 'rugby.support@gmail.com',
-        contactTelegram: 't.me/ivanovich112',
+        contactPhone: '+48 501 820 396',
+        contactEmail: 'shashero10@gmail.com',
+        contactTelegram: 't.me/Shasher',
         olympicGoal: 'Arra törekszünk, hogy méltósággal képviseljük Ukrajnát a nemzetközi színtereken, és dicsőséget hozzunk hazánknak a világban. Minden mérkőzés egy lépés a nagy cél felé, és bizonyítéka az ukrán szellem törhetetlen erejének. A 2026-os Ifjúsági Olimpiai Játékokra való kijutás az erő, az egység és a győzelembe vetett hit szimbólumává válik.',
         europeanGoal: 'Célunk, hogy a jövőben a mai ukrán nemzeti és ifjúsági csapatok szintjén szerepeljünk az Európa-bajnokságokon. Célunk a Championship divízió megnyerése, és hogy méltósággal képviseljük Ukrajnát a legerősebb csapatok között az olimpiai szinten.',
         olympicTitle: 'Kijutás a 2026-os Ifjúsági Olimpiai Játékokra'
@@ -159,10 +159,10 @@ const SponsorProgram = () => {
                             </span>
                             <span className="block text-xl sm:text-2xl md:text-3xl font-medium text-blue-100 mt-2 md:mt-3">
                                 {language === 'UA' 
-                                    ? 'з регбі-7 U16' 
+                                    ? 'з регбі-7s U16'
                                     : language === 'EN' 
-                                        ? 'Rugby 7 U16' 
-                                        : 'Rögbi 7 U16'}
+                                        ? 'Rugby 7s U16'
+                                        : 'Rögbi 7s U16'}
                             </span>
                         </motion.h1>
                         
