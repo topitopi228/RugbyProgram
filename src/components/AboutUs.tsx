@@ -22,97 +22,104 @@ const AboutUs = () => {
     };
 
     const translations = {
-        UA: {
-            pageTitle: 'Майбутні заходи',
-            upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
-            event1: {
-                date: '10-15 Лютого 2026',
-                title: 'Турнір - Lisbon 7s',
-                location: 'м. Лісабон, Португалія',
-                funding: '24 000 €'
+            UA: {
+                pageTitle: 'Майбутні заходи',
+                upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
+                event1: {
+                    date: '10-15 Лютого 2026',
+                    title: 'Турнір - Lisbon 7s',
+                    location: 'м. Лісабон, Португалія',
+                    funding: '12,000- 14,000 €'
+                },
+                event2: {
+                    date: '18-23 Березня 2026',
+                    title: 'Найважливіше НТЗ',
+                    description: 'за участю провідних іноземних тренерів',
+                    location: 'м. Батумі, Грузія',
+                    funding: '12,000- 14,000 €'
+                },
+                event3: {
+                    date: '25-29 Червня 2026',
+                    title: 'Міжнародний турнір',
+                    description: 'з 30 національними командами з різних куточків світу',
+                    location: 'м. Клагенфурт, Австрія',
+                    funding: '20 000+ €'
+                },
+                contactTitle: "Зв'яжіться з нами",
+                contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
+
+                contactPhone: '+48 501 820 396',
+                contactEmail: 'shashero10@gmail.com',
+                contactTelegram: 't.me/Shashero',
+
+                ourSponsors: "Наші спонсори"
             },
-            event2: {
-                date: '18-23 Березня 2026',
-                title: 'Найважливіше НТЗ',
-                description: 'за участю провідних іноземних тренерів',
-                location: 'м. Батумі, Грузія',
-                funding: '25 000+ €'
+            EN: {
+                pageTitle: 'Upcoming Events',
+                upcomingEvents: 'Upcoming Events of Ukraine U16 Rugby-7 Team',
+                event1: {
+                    date: 'February 10-15, 2026',
+                    title: 'Tournament - Lisbon 7s',
+                    location: 'Lisbon, Portugal',
+                    funding: '12,000- 14,000 €'
+                },
+                event2: {
+                    date: 'March 18-23, 2026',
+                    title: 'Most Important Training Camp',
+                    description: 'with leading foreign coaches',
+                    location: 'Batumi, Georgia',
+                    funding: '12,000- 14,000 €'
+                },
+                event3: {
+                    date: 'June 25-29, 2026',
+                    title: 'International Tournament',
+                    description: 'with 30 national teams from around the world',
+                    location: 'Klagenfurt, Austria',
+                    funding: '20,000+ €'
+                },
+                contactTitle: "Contact Us",
+                contactText: "Have questions or want to support our team? Contact us using the information below.",
+
+                contactPhone: '+48 501 820 396',
+                contactEmail: 'shashero10@gmail.com',
+                contactTelegram: 't.me/Shashero',
+
+                ourSponsors: "Our Sponsors"
             },
-            event3: {
-                date: '25-29 Червня 2026',
-                title: 'Міжнародний турнір',
-                description: 'з 30 національними командами з різних куточків світу',
-                location: 'м. Клагенфурт, Австрія',
-                funding: '20 000+ €'
-            },
-            contactTitle: "Зв'яжіться з нами",
-            contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
-            contactPhone: "+380 96 000 0000",
-            contactEmail: "info@ukr-rugby.com",
-            contactTelegram: "t.me/ukr_rugby",
-            ourSponsors: "Наші спонсори"
-        },
-        EN: {
-            pageTitle: 'Upcoming Events',
-            upcomingEvents: 'Upcoming Events of Ukraine U16 Rugby-7 Team',
-            event1: {
-                date: 'February 10-15, 2026',
-                title: 'Tournament - Lisbon 7s',
-                location: 'Lisbon, Portugal',
-                funding: '24,000 €'
-            },
-            event2: {
-                date: 'March 18-23, 2026',
-                title: 'Most Important Training Camp',
-                description: 'with leading foreign coaches',
-                location: 'Batumi, Georgia',
-                funding: '25,000+ €'
-            },
-            event3: {
-                date: 'June 25-29, 2026',
-                title: 'International Tournament',
-                description: 'with 30 national teams from around the world',
-                location: 'Klagenfurt, Austria',
-                funding: '20,000+ €'
-            },
-            contactTitle: "Contact Us",
-            contactText: "Have questions or want to support our team? Contact us using the information below.",
-            contactPhone: "+380 96 000 0000",
-            contactEmail: "info@ukr-rugby.com",
-            contactTelegram: "t.me/ukr_rugby",
-            ourSponsors: "Our Sponsors"
-        },
-        HUN: {
-            pageTitle: 'Közelgő események',
-            upcomingEvents: 'Az Ukrán U16-os Rögbi-7 Válogatott közelgő eseményei',
-            event1: {
-                date: '2026. február 10-15.',
-                title: 'Lisbon 7s Bajnokság',
-                location: 'Lisszabon, Portugália',
-                funding: '24 000 €'
-            },
-            event2: {
-                date: '2026. március 18-23.',
-                title: 'Legfontosabb Edzőtábor',
-                description: 'vezető külföldi edzőkkel',
-                location: 'Batumi, Grúzia',
-                funding: '25 000+ €'
-            },
-            event3: {
-                date: '2026. június 25-29.',
-                title: 'Nemzetközi Torna',
-                description: '30 nemzeti csapattal a világ különböző részeiről',
-                location: 'Klagenfurt, Ausztria',
-                funding: '20 000+ €'
-            },
-            contactTitle: "Lépjen kapcsolatba velünk",
-            contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
-            contactPhone: "+380 96 000 0000",
-            contactEmail: "info@ukr-rugby.com",
-            contactTelegram: "t.me/ukr_rugby",
-            ourSponsors: "Szponzoraink"
+            HUN: {
+                pageTitle: 'Közelgő események',
+                upcomingEvents: 'Az Ukrán U16-os Rögbi-7 Válogatott közelgő eseményei',
+                event1: {
+                    date: '2026. február 10-15.',
+                    title: 'Lisbon 7s Bajnokság',
+                    location: 'Lisszabon, Portugália',
+                    funding: '12,000- 14,000 €'
+                },
+                event2: {
+                    date: '2026. március 18-23.',
+                    title: 'Legfontosabb Edzőtábor',
+                    description: 'vezető külföldi edzőkkel',
+                    location: 'Batumi, Grúzia',
+                    funding: '12,000- 14,000 €'
+                },
+                event3: {
+                    date: '2026. június 25-29.',
+                    title: 'Nemzetközi Torna',
+                    description: '30 nemzeti csapattal a világ különböző részeiről',
+                    location: 'Klagenfurt, Ausztria',
+                    funding: '20 000+ €'
+                },
+                contactTitle: "Lépjen kapcsolatba velünk",
+                contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
+
+                contactPhone: '+48 501 820 396',
+                contactEmail: 'shashero10@gmail.com',
+                contactTelegram: 't.me/Shashero',
+
+                ourSponsors: "Szponzoraink"
+            }
         }
-    };
+    ;
 
     const t = translations[language];
 
@@ -130,20 +137,6 @@ const AboutUs = () => {
 
     const events = [
         {
-            id: 1,
-            image: '/maj1.png',
-            date: t.event1.date,
-            title: t.event1.title,
-            description: t.event1.description,
-            location: t.event1.location,
-            funding: t.event1.funding,
-            details: language === 'UA' ?
-                'Турнір з регбі-7 для юніорських команд у Лісабоні. Наші гравці отримають можливість змагатися з найсильнішими командами Європи, показати свій рівень підготовки та набратися досвіду міжнародних змагань.' :
-                language === 'EN' ?
-                    'Rugby-7 tournament for junior teams in Lisbon. Our players will have the opportunity to compete with the strongest teams in Europe, demonstrate their skill level, and gain international competition experience.' :
-                    'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban. Játékosaink lehetőséget kapnak arra, hogy versenyezzenek Euróga legerősebb csapataival, bemutassák szintjüket és nemzetközi versenytapasztalatot szerezzenek.'
-        },
-        {
             id: 2,
             image: '/maj2.png',
             date: t.event2.date,
@@ -156,6 +149,20 @@ const AboutUs = () => {
                 language === 'EN' ?
                     'Intensive training camp with leading European coaches. The program includes technical, tactical, physical training, and psychological preparation sessions.' :
                     'Intenzív edzőtábor vezető európai edzőkkel. A programba tartozik technikai, taktikai, fizikai edzés és pszichológiai felkészítés is.'
+        },
+        {
+            id: 1,
+            image: '/maj1.png',
+            date: t.event1.date,
+            title: t.event1.title,
+            description: t.event1.description,
+            location: t.event1.location,
+            funding: t.event1.funding,
+            details: language === 'UA' ?
+                'Турнір з регбі-7 для юніорських команд у Лісабоні. Наші гравці отримають можливість змагатися з найсильнішими командами Європи, показати свій рівень підготовки та набратися досвіду міжнародних змагань.' :
+                language === 'EN' ?
+                    'Rugby-7 tournament for junior teams in Lisbon. Our players will have the opportunity to compete with the strongest teams in Europe, demonstrate their skill level, and gain international competition experience.' :
+                    'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban. Játékosaink lehetőséget kapnak arra, hogy versenyezzenek Euróga legerősebb csapataival, bemutassák szintjüket és nemzetközi versenytapasztalatot szerezzenek.'
         },
         {
             id: 3,
@@ -175,45 +182,45 @@ const AboutUs = () => {
 
     const fundingBreakdowns = {
         1: [
-            { 
-                category: 'Авіаквитки', 
-                amount: '12 000 €', 
+            {
+                category: 'Авіаквитки',
+                amount: '12 000 €',
                 description: 'Для 20 осіб (гравці, тренери, персонал)',
                 subItems: [
                     'Київ - Лісабон - 300€/особа (економ клас)',
                     '20 осіб × 600€ (туди-назад) = 12 000€'
                 ]
             },
-            { 
-                category: 'Проживання', 
-                amount: '6 000 €', 
+            {
+                category: 'Проживання',
+                amount: '6 000 €',
                 description: 'Готель 4* на 6 днів',
                 subItems: [
                     '20 осіб × 6 ночей × 50€/ніч = 6 000€',
                     'Двокімнатні номери зі зручностями'
                 ]
             },
-            { 
-                category: 'Харчування', 
-                amount: '3 000 €', 
+            {
+                category: 'Харчування',
+                amount: '3 000 €',
                 description: 'Повний пансіон на 6 днів',
                 subItems: [
                     '20 осіб × 6 днів × 25€/день = 3 000€',
                     'Сніданок, обід, вечеря (шведський стіл)'
                 ]
             },
-            { 
-                category: 'Трансфери', 
-                amount: '1 500 €', 
+            {
+                category: 'Трансфери',
+                amount: '1 500 €',
                 description: 'Аеропорт-готель-аеропорт',
                 subItems: [
                     'Групові трансфери на 20 осіб',
                     'Включено всі переїзди за програмою'
                 ]
             },
-            { 
-                category: 'Візи', 
-                amount: '1 500 €', 
+            {
+                category: 'Візи',
+                amount: '1 500 €',
                 description: 'Візова підтримка для всієї команди',
                 subItems: [
                     'Консульський збір для 20 осіб',
@@ -223,45 +230,45 @@ const AboutUs = () => {
             }
         ],
         2: [
-            { 
-                category: 'Проживання', 
-                amount: '8 000 €', 
+            {
+                category: 'Проживання',
+                amount: '8 000 €',
                 description: 'Спортивна база на 6 днів',
                 subItems: [
                     '20 осіб × 6 нічей × 66.67€/ніч = 8 000€',
                     'Двокімнатні номери зі зручностями'
                 ]
             },
-            { 
-                category: 'Харчування', 
-                amount: '4 500 €', 
+            {
+                category: 'Харчування',
+                amount: '4 500 €',
                 description: 'Спортивне харчування',
                 subItems: [
                     '20 осіб × 6 днів × 37.5€/день = 4 500€',
                     'Сніданок, обід, вечеря (шведський стіл)'
                 ]
             },
-            { 
-                category: 'Тренери', 
-                amount: '7 500 €', 
+            {
+                category: 'Тренери',
+                amount: '7 500 €',
                 description: 'Гонорари провідних спеціалістів',
                 subItems: [
                     'Гонорари провідних спеціалістів',
                     'Включено всі тренування за програмою'
                 ]
             },
-            { 
-                category: 'Транспорт', 
-                amount: '2 000 €', 
+            {
+                category: 'Транспорт',
+                amount: '2 000 €',
                 description: 'Внутрішні переїзди',
                 subItems: [
                     'Групові трансфери на 20 осіб',
                     'Включено всі переїзди за програмою'
                 ]
             },
-            { 
-                category: 'Спортивне обладнання', 
-                amount: '3 000 €', 
+            {
+                category: 'Спортивне обладнання',
+                amount: '3 000 €',
                 description: 'Інвентар для тренувань',
                 subItems: [
                     'Інвентар для тренувань',
@@ -270,45 +277,45 @@ const AboutUs = () => {
             }
         ],
         3: [
-            { 
-                category: 'Реєстраційний внесок', 
-                amount: '5 000 €', 
+            {
+                category: 'Реєстраційний внесок',
+                amount: '5 000 €',
                 description: 'Участь у турнірі',
                 subItems: [
                     'Реєстраційний внесок',
                     'Включено участь у турнірі'
                 ]
             },
-            { 
-                category: 'Проживання', 
-                amount: '7 000 €', 
+            {
+                category: 'Проживання',
+                amount: '7 000 €',
                 description: 'Готель 3* на 5 днів',
                 subItems: [
                     '20 осіб × 5 нічей × 70€/ніч = 7 000€',
                     'Двокімнатні номери зі зручностями'
                 ]
             },
-            { 
-                category: 'Харчування', 
-                amount: '3 500 €', 
+            {
+                category: 'Харчування',
+                amount: '3 500 €',
                 description: 'Повний пансіон',
                 subItems: [
                     '20 осіб × 5 днів × 35€/день = 3 500€',
                     'Сніданок, обід, вечеря (шведський стіл)'
                 ]
             },
-            { 
-                category: 'Трансфери', 
-                amount: '2 500 €', 
+            {
+                category: 'Трансфери',
+                amount: '2 500 €',
                 description: 'Міжміські переїзди',
                 subItems: [
                     'Групові трансфери на 20 осіб',
                     'Включено всі переїзди за програмою'
                 ]
             },
-            { 
-                category: 'Спортивна форма', 
-                amount: '2 000 €', 
+            {
+                category: 'Спортивна форма',
+                amount: '2 000 €',
                 description: 'Комплект форми на гравця',
                 subItems: [
                     'Комплект форми на гравця',
@@ -578,18 +585,18 @@ const AboutUs = () => {
             </div>
             <AnimatePresence>
                 {selectedEvent && (
-                    <motion.div 
+                    <motion.div
                         className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        exit={{opacity: 0}}
                         onClick={closeModal}
                     >
-                        <motion.div 
+                        <motion.div
                             className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-2xl"
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
+                            initial={{scale: 0.9, opacity: 0}}
+                            animate={{scale: 1, opacity: 1}}
+                            exit={{scale: 0.9, opacity: 0}}
                             onClick={e => e.stopPropagation()}
                         >
                             <div className="flex justify-between items-start mb-6">
@@ -599,25 +606,27 @@ const AboutUs = () => {
                                     </h2>
                                     <p className="text-yellow-400 text-lg mt-1">{selectedEvent.funding}</p>
                                 </div>
-                                <button 
+                                <button
                                     onClick={closeModal}
                                     className="text-gray-400 hover:text-white p-1 -m-1 transition-colors"
                                     aria-label={language === 'UA' ? 'Закрити' : language === 'EN' ? 'Close' : 'Bezárás'}
                                 >
                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                              d="M6 18L18 6M6 6l12 12"/>
                                     </svg>
                                 </button>
                             </div>
 
                             <div className="mb-6">
                                 <h3 className="text-xl font-semibold mb-4 text-yellow-400 border-b border-yellow-400/30 pb-2">
-                                    {language === 'UA' ? 'Детальний розподіл коштів' : 
-                                     language === 'EN' ? 'Funding Breakdown' : 'Pénzügyi felosztás'}
+                                    {language === 'UA' ? 'Детальний розподіл коштів' :
+                                        language === 'EN' ? 'Funding Breakdown' : 'Pénzügyi felosztás'}
                                 </h3>
                                 <div className="space-y-4">
                                     {fundingBreakdowns[selectedEvent.id]?.map((item, index) => (
-                                        <div key={index} className="bg-white/5 rounded-lg overflow-hidden border border-white/10">
+                                        <div key={index}
+                                             className="bg-white/5 rounded-lg overflow-hidden border border-white/10">
                                             <div className="p-4 bg-white/5 flex justify-between items-center">
                                                 <div>
                                                     <h4 className="font-bold text-lg">{item.category}</h4>
@@ -638,11 +647,12 @@ const AboutUs = () => {
                                         </div>
                                     ))}
                                 </div>
-                                
-                                <div className="mt-6 p-4 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-lg border border-yellow-500/20 flex justify-between items-center">
+
+                                <div
+                                    className="mt-6 p-4 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-lg border border-yellow-500/20 flex justify-between items-center">
                                     <span className="font-bold text-lg">
-                                        {language === 'UA' ? 'Загальна сума:' : 
-                                         language === 'EN' ? 'Total amount:' : 'Összesen:'}
+                                        {language === 'UA' ? 'Загальна сума:' :
+                                            language === 'EN' ? 'Total amount:' : 'Összesen:'}
                                     </span>
                                     <span className="text-2xl font-bold text-yellow-400">{selectedEvent.funding}</span>
                                 </div>
@@ -653,15 +663,15 @@ const AboutUs = () => {
                                     onClick={closeModal}
                                     className="px-6 py-2.5 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-full transition-all duration-300"
                                 >
-                                    {language === 'UA' ? 'Закрити' : 
-                                     language === 'EN' ? 'Close' : 'Bezárás'}
+                                    {language === 'UA' ? 'Закрити' :
+                                        language === 'EN' ? 'Close' : 'Bezárás'}
                                 </button>
                                 <button
                                     onClick={scrollToContact}
                                     className="px-6 py-2.5 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-gray-900 font-medium rounded-full transition-all duration-300"
                                 >
-                                    {language === 'UA' ? 'Підтримати' : 
-                                     language === 'EN' ? 'Support' : 'Támogatás'}
+                                    {language === 'UA' ? 'Підтримати' :
+                                        language === 'EN' ? 'Support' : 'Támogatás'}
                                 </button>
                             </div>
                         </motion.div>
