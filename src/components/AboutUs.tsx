@@ -22,104 +22,106 @@ const AboutUs = () => {
     };
 
     const translations = {
-            UA: {
-                pageTitle: 'Майбутні заходи',
-                upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
-                event1: {
-                    date: '10-15 Лютого 2026',
-                    title: 'Турнір - Lisbon 7s',
-                    location: 'м. Лісабон, Португалія',
-                    funding: '12,000 - 14,000 €'
-                },
-                event2: {
-                    date: '18-23 Березня 2026',
-                    title: 'Найважливіше НТЗ',
-                    description: 'за участю провідних іноземних тренерів',
-                    location: 'м. Батумі, Грузія',
-                    funding: '12,000 - 14,000 €'
-                },
-                event3: {
-                    date: '25-29 Червня 2026',
-                    title: 'Міжнародний турнір',
-                    description: 'з 30 національними командами з різних куточків світу',
-                    location: 'м. Клагенфурт, Австрія',
-                    funding: '15,000 - 17,000 €'
-                },
-                contactTitle: "Зв'яжіться з нами",
-                contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
-
-                contactPhone: '+48 501 820 396',
-                contactEmail: 'shashero10@gmail.com',
-                contactTelegram: 't.me/Shashero',
-
-                ourSponsors: "Наші спонсори"
+        UA: {
+            pageTitle: 'Майбутні заходи',
+            upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
+            event1: {
+                date: '10-15 Лютого 2026',
+                title: 'Турнір - Lisbon 7s',
+                location: 'м. Лісабон, Португалія',
+                funding: '12,000 - 14,000 €'
             },
-            EN: {
-                pageTitle: 'Upcoming Events',
-                upcomingEvents: 'Upcoming Events of Ukraine U16 Rugby-7 Team',
-                event1: {
-                    date: 'February 10-15, 2026',
-                    title: 'Tournament - Lisbon 7s',
-                    location: 'Lisbon, Portugal',
-                    funding: '12,000- 14,000 €'
-                },
-                event2: {
-                    date: 'March 18-23, 2026',
-                    title: 'Most Important Training Camp',
-                    description: 'with leading foreign coaches',
-                    location: 'Batumi, Georgia',
-                    funding: '12,000- 14,000 €'
-                },
-                event3: {
-                    date: 'June 25-29, 2026',
-                    title: 'International Tournament',
-                    description: 'with 30 national teams from around the world',
-                    location: 'Klagenfurt, Austria',
-                    funding: '20,000+ €'
-                },
-                contactTitle: "Contact Us",
-                contactText: "Have questions or want to support our team? Contact us using the information below.",
-
-                contactPhone: '+48 501 820 396',
-                contactEmail: 'shashero10@gmail.com',
-                contactTelegram: 't.me/Shashero',
-
-                ourSponsors: "Our Sponsors"
+            event2: {
+                date: '18-23 Березня 2026',
+                title: 'Найважливіше НТЗ',
+                description: 'за участю провідних іноземних тренерів',
+                location: 'м. Батумі, Грузія',
+                funding: '12,000 - 14,000 €'
             },
-            HUN: {
-                pageTitle: 'Közelgő események',
-                upcomingEvents: 'Az Ukrán U16-os Rögbi-7 Válogatott közelgő eseményei',
-                event1: {
-                    date: '2026. február 10-15.',
-                    title: 'Lisbon 7s Bajnokság',
-                    location: 'Lisszabon, Portugália',
-                    funding: '12,000- 14,000 €'
-                },
-                event2: {
-                    date: '2026. március 18-23.',
-                    title: 'Legfontosabb Edzőtábor',
-                    description: 'vezető külföldi edzőkkel',
-                    location: 'Batumi, Grúzia',
-                    funding: '12,000- 14,000 €'
-                },
-                event3: {
-                    date: '2026. június 25-29.',
-                    title: 'Nemzetközi Torna',
-                    description: '30 nemzeti csapattal a világ különböző részeiről',
-                    location: 'Klagenfurt, Ausztria',
-                    funding: '20 000+ €'
-                },
-                contactTitle: "Lépjen kapcsolatba velünk",
-                contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
-
-                contactPhone: '+48 501 820 396',
-                contactEmail: 'shashero10@gmail.com',
-                contactTelegram: 't.me/Shashero',
-
-                ourSponsors: "Szponzoraink"
-            }
+            event3: {
+                date: '25-29 Червня 2026',
+                title: 'Міжнародний турнір',
+                description: 'з 30 національними командами з різних куточків світу',
+                location: 'м. Клагенфурт, Австрія',
+                funding: '15,000 - 17,000 €'
+            },
+            contactTitle: "Зв'яжіться з нами",
+            contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
+            contactPhone: '+48 501 820 396',
+            contactEmail: 'shashero10@gmail.com',
+            contactTelegram: 't.me/Shashero',
+            ourSponsors: "Наші спонсори",
+            supportButton: 'Підтримати команду',
+            viewFunding: 'Детальний кошторис',
+            close: 'Закрити'
+        },
+        EN: {
+            pageTitle: 'Upcoming Events',
+            upcomingEvents: 'Upcoming Events of Ukraine U16 Rugby-7 Team',
+            event1: {
+                date: '10-15 February 2026',
+                title: 'Tournament - Lisbon 7s',
+                location: 'Lisbon, Portugal',
+                funding: '12,000 - 14,000 €'
+            },
+            event2: {
+                date: '18-23 March 2026',
+                title: 'Key Training Camp',
+                description: 'with leading foreign coaches',
+                location: 'Batumi, Georgia',
+                funding: '12,000 - 14,000 €'
+            },
+            event3: {
+                date: '25-29 June 2026',
+                title: 'International Tournament',
+                description: 'with 30 national teams from around the world',
+                location: 'Klagenfurt, Austria',
+                funding: '15,000 - 17,000 €'
+            },
+            contactTitle: "Contact Us",
+            contactText: "Have questions or want to support our team? Contact us using the information below.",
+            contactPhone: '+48 501 820 396',
+            contactEmail: 'shashero10@gmail.com',
+            contactTelegram: 't.me/Shashero',
+            ourSponsors: "Our Sponsors",
+            supportButton: 'Support the Team',
+            viewFunding: 'Detailed Budget',
+            close: 'Close'
+        },
+        HUN: {
+            pageTitle: 'Közelgő események',
+            upcomingEvents: 'Az Ukrán U16-os Rögbi-7 Válogatott közelgő eseményei',
+            event1: {
+                date: '2026. február 10-15.',
+                title: 'Lisbon 7s Bajnokság',
+                location: 'Lisszabon, Portugália',
+                funding: '12 000 - 14 000 €'
+            },
+            event2: {
+                date: '2026. március 18-23.',
+                title: 'Legfontosabb Edzőtábor',
+                description: 'vezető külföldi edzőkkel',
+                location: 'Batumi, Grúzia',
+                funding: '12 000 - 14 000 €'
+            },
+            event3: {
+                date: '2026. június 25-29.',
+                title: 'Nemzetközi Torna',
+                description: '30 nemzeti csapattal a világ különböző részeiről',
+                location: 'Klagenfurt, Ausztria',
+                funding: '15 000 - 17 000 €'
+            },
+            contactTitle: "Lépjen kapcsolatba velünk",
+            contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
+            contactPhone: '+48 501 820 396',
+            contactEmail: 'shashero10@gmail.com',
+            contactTelegram: 't.me/Shashero',
+            ourSponsors: "Szponzoraink",
+            supportButton: 'Csapat támogatása',
+            viewFunding: 'Részletes költségvetés',
+            close: 'Bezárás'
         }
-    ;
+    };
 
     const t = translations[language];
 
@@ -210,6 +212,14 @@ const AboutUs = () => {
                 ]
             },
             {
+                category: 'Спортивне харчування',
+                amount: '2 000 €',
+                description: 'Спортивне харчування',
+                subItems: [
+                    'амінокислоти, протеїн, креатин'
+                ]
+            },
+            {
                 category: 'Трансфери',
                 amount: '1 500 €',
                 description: 'Аеропорт-готель-аеропорт',
@@ -225,7 +235,8 @@ const AboutUs = () => {
                 amount: '2 000 €',
                 description: 'Гонорари провідних спеціалістів',
                 subItems: [
-                    'Добові тренерському штабу в розміри 45 євро, лікарям , менеджерам (6 чол)'
+                    'Добові тренерському штабу в розміри 45 євро, лікарям , менеджерам (6 чол)',
+                    'Страхування'
                 ]
             }
         ],
@@ -253,7 +264,8 @@ const AboutUs = () => {
                 amount: '2 000 €',
                 description: 'Гонорари провідних спеціалістів',
                 subItems: [
-                    'Добові тренерському штабу в розміри 45 євро, лікарям , менеджерам (6 чол)'
+                    'Добові тренерському штабу в розміри 45 євро, лікарям , менеджерам (6 чол)',
+                    'Страхування'
                 ]
             },
             {
@@ -270,11 +282,20 @@ const AboutUs = () => {
             },
             {
                 category: 'Спортивне обладнання',
-                amount: '3 000 €',
-                description: 'Інвентар для тренувань',
+                amount: '2 000 €',
+                description: 'Амуніція для команди',
                 subItems: [
-                    'Інвентар для тренувань',
-                    'Включено всі необхідні матеріали'
+                    'екіпування(костюм спортивний , штани кофта , шорти футболка поло та ще 1 футболка, кросівки, тапочки)',
+                    'форма (регбійка, регбійні шорти гетри )',
+                    'аптечка(знеболючі , від голови , тейпи , лкарнітик, бади , пластирі)'
+                ]
+            },
+            {
+                category: 'Спортивне харчування',
+                amount: '2 000 €',
+                description: 'Спортивне харчування',
+                subItems: [
+                    'амінокислоти, протеїн, креатин'
                 ]
             }
         ],
@@ -288,6 +309,7 @@ const AboutUs = () => {
                     'Включено участь у турнірі'
                 ]
             },
+
             {
                 category: 'Проживання',
                 amount: '7 000 €',
@@ -307,12 +329,29 @@ const AboutUs = () => {
                 ]
             },
             {
+                category: 'Спортивне харчування',
+                amount: '2 000 €',
+                description: 'Спортивне харчування',
+                subItems: [
+                    'амінокислоти, протеїн, креатин'
+                ]
+            },
+            {
                 category: 'Трансфери',
                 amount: '2 500 €',
                 description: 'Міжміські переїзди',
                 subItems: [
                     'Групові трансфери на 20 осіб',
                     'Включено всі переїзди за програмою'
+                ]
+            },
+            {
+                category: 'Тренери',
+                amount: '2 000 €',
+                description: 'Гонорари провідних спеціалістів',
+                subItems: [
+                    'Добові тренерському штабу в розміри 45 євро, лікарям , менеджерам (6 чол)',
+                    'Страхування'
                 ]
             },
             {
