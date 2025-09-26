@@ -32,7 +32,7 @@ const AboutUs = () => {
                 funding: '12,000 - 14,000 €'
             },
             event2: {
-                date: '18-23 Березня 2026',
+                date: '18-23 Листопада 2025',
                 title: 'Найважливіше НТЗ',
                 description: 'за участю провідних іноземних тренерів',
                 location: 'м. Батумі, Грузія',
@@ -57,14 +57,13 @@ const AboutUs = () => {
             equipmentSupport: {
                 title: 'Підтримка спорядження',
                 description: 'Допоможіть нам забезпечити команду необхідним інвентарем для тренувань та ігор',
-                amount: '2 500 €',
+                amount: '1,500€',
                 items: [
                     '14 регбійних м\'ячів для тренувань',
                     '4 захисних щити',
-                    '2 набір конусів для розмітки',
+                    '2 набори конусів для розминки',
                     '16 манішок для тренувань',
                     '8 тренувальних резинок',
-                    'Тренувальні майки та шорти'
                 ],
                 cta: 'Підтримати'
             }
@@ -79,7 +78,7 @@ const AboutUs = () => {
                 funding: '12,000 - 14,000 €'
             },
             event2: {
-                date: '18-23 March 2026',
+                date: '18-23 November 2025',
                 title: 'Key Training Camp',
                 description: 'with leading foreign coaches',
                 location: 'Batumi, Georgia',
@@ -104,14 +103,13 @@ const AboutUs = () => {
             equipmentSupport: {
                 title: 'Equipment Support',
                 description: 'Help us provide the team with necessary training and game equipment',
-                amount: '2,500 €',
+                amount: '1,500 €',
                 items: [
                     '14 rugby training balls',
                     '4 tackle shields',
-                    '2 sets of marker cones',
+                    '2 sets of warm-up cones',
                     '16 training bibs',
                     '8 resistance bands',
-                    'Training jerseys and shorts'
                 ],
                 cta: 'Support with Equipment'
             }
@@ -126,7 +124,7 @@ const AboutUs = () => {
                 funding: '12 000 - 14 000 €'
             },
             event2: {
-                date: '2026. március 18-23.',
+                date: '2026. november 18-23.',
                 title: 'Legfontosabb Edzőtábor',
                 description: 'vezető külföldi edzőkkel',
                 location: 'Batumi, Grúzia',
@@ -151,14 +149,13 @@ const AboutUs = () => {
             equipmentSupport: {
                 title: 'Felszerelés támogatása',
                 description: 'Segítsen nekünk biztosítani a csapat számára a szükséges edzés- és játékfelszerelést',
-                amount: '2 500 €',
+                amount: '1,500 €',
                 items: [
                     '14 rögbi edzőlabda',
                     '4 védőpajzs',
-                    '2 készlet kúp a kijelöléshez',
+                    '2 szett bemelegítő bója',
                     '16 edzőmellény',
                     '8 edzőrugó',
-                    'Edzőmezek és nadrágok'
                 ],
                 cta: 'Támogatás felszereléssel'
             }
@@ -522,7 +519,7 @@ const AboutUs = () => {
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        viewport={{once: true}}
                         variants={fadeIn}
                         className="max-w-5xl mx-auto text-center mb-12"
                     >
@@ -535,16 +532,17 @@ const AboutUs = () => {
                     </motion.div>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-                        <motion.div 
+                        <motion.div
                             className="w-full md:w-1/2 lg:w-1/3"
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true }}
+                            viewport={{once: true}}
                             variants={fadeIn}
                         >
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-full">
-                                <img 
-                                    src="/inven.jpg" 
+                            <div
+                                className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-full">
+                                <img
+                                    src="/inven.jpg"
                                     alt={t.equipmentSupport.title}
                                     className="w-full h-64 object-cover"
                                 />
@@ -558,7 +556,7 @@ const AboutUs = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <button 
+                                    <button
                                         onClick={scrollToContact}
                                         className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-lg transition-colors duration-300"
                                     >

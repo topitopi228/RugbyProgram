@@ -15,8 +15,8 @@ const Sponsors = () => {
     const translations = {
         UA: {
             companySponsors: 'Компанії-партнери',
-            personalSponsors: 'Особисті спонсори',
-            becomeSponsor: 'Стати спонсором',
+            personalSponsors: 'Наші меценати які в минулому підтримали розвиток українського регбі',
+            becomeSponsor: 'Підтримати',
             companySponsorsList: [
                 {
                     image: '/spin-4.png',
@@ -96,8 +96,8 @@ const Sponsors = () => {
         },
         EN: {
             companySponsors: 'Company Sponsors',
-            personalSponsors: 'Personal Sponsors',
-            becomeSponsor: 'Become a Sponsor',
+            personalSponsors: 'Our patrons who have previously supported the development of Ukrainian rugby',
+            becomeSponsor: 'Support',
             companySponsorsList: [
                 {
                     image: '/spin-4.png',
@@ -176,8 +176,8 @@ const Sponsors = () => {
         },
         HUN: {
             companySponsors: 'Céges Szponzorok',
-            personalSponsors: 'Személyes Támogatók',
-            becomeSponsor: 'Legyél Te is Támogató',
+            personalSponsors: 'Mecénásaink, akik korábban támogatták az ukrán rögbi fejlődését',
+            becomeSponsor: 'Támogatás',
             companySponsorsList: [
                 {
                     image: '/spin-4.png',
@@ -262,93 +262,102 @@ const Sponsors = () => {
         <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 {/* Olympic Invitation Section */}
-                <motion.div 
+                <motion.div
                     className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 rounded-2xl p-8 md:p-12 mb-20 shadow-2xl border border-blue-700/50"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    initial={{opacity: 0, y: 20}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: true}}
+                    transition={{duration: 0.8}}
                 >
                     {/* Animated Background Elements */}
                     <div className="absolute inset-0 overflow-hidden opacity-30">
-                        <div className="absolute -top-20 -left-20 w-64 h-64 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-                        <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-float animation-delay-2000"></div>
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-yellow-400 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+                        <div
+                            className="absolute -top-20 -left-20 w-64 h-64 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+                        <div
+                            className="absolute -bottom-20 -right-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-float animation-delay-2000"></div>
+                        <div
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-yellow-400 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
                     </div>
-                    
+
                     <div className="relative z-10">
                         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                             {/* Text Content */}
                             <div className="lg:w-2/3">
-                                <motion.h2 
+                                <motion.h2
                                     className="text-3xl md:text-4xl font-bold mb-4 text-yellow-300"
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.5 }}
+                                    initial={{opacity: 0, x: -20}}
+                                    whileInView={{opacity: 1, x: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.2, duration: 0.5}}
                                 >
                                     {t.olympicInvitation.title}
                                 </motion.h2>
-                                <motion.p 
+                                <motion.p
                                     className="text-xl md:text-2xl font-semibold mb-4 leading-relaxed text-white"
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.3, duration: 0.5 }}
+                                    initial={{opacity: 0, x: -20}}
+                                    whileInView={{opacity: 1, x: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.3, duration: 0.5}}
                                 >
                                     {t.olympicInvitation.highlight}
                                 </motion.p>
-                                <motion.p 
+                                <motion.p
                                     className="text-blue-100 mb-8 text-lg max-w-3xl"
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.4, duration: 0.5 }}
+                                    initial={{opacity: 0, x: -20}}
+                                    whileInView={{opacity: 1, x: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.4, duration: 0.5}}
                                 >
                                     {t.olympicInvitation.description}
                                 </motion.p>
                                 <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.5, duration: 0.5 }}
+                                    initial={{opacity: 0, y: 20}}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.5, duration: 0.5}}
                                 >
-                                    <button 
+                                    <button
                                         onClick={scrollToContact}
                                         className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900 font-bold rounded-full overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/30"
                                     >
                                         <span className="relative z-10 flex items-center">
                                             {t.olympicInvitation.cta}
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1"
+                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                                      d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                             </svg>
                                         </span>
-                                        <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                                        <span
+                                            className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                     </button>
                                 </motion.div>
                             </div>
 
                             {/* Olympic Rings & U-16 Badge */}
-                            <motion.div 
+                            <motion.div
                                 className="relative w-full max-w-xs h-auto lg:w-96 lg:h-[500px] flex-shrink-0 flex flex-col items-center"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
+                                initial={{opacity: 0, scale: 0.9}}
+                                whileInView={{opacity: 1, scale: 1}}
+                                viewport={{once: true}}
+                                transition={{duration: 0.6, delay: 0.2}}
                             >
                                 {/* Olympic Rings */}
                                 <div className="relative w-full flex items-center justify-center">
                                     {/* Main Container for Rings */}
-                                    <div className="relative w-48 h-32 md:w-72 md:h-48 flex items-center justify-center">
+                                    <div
+                                        className="relative w-48 h-32 md:w-72 md:h-48 flex items-center justify-center">
                                         {/* Row 1 - Top Rings (Blue, Black, Red) */}
-                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 flex items-center justify-center space-x-4 md:space-x-9">
+                                        <div
+                                            className="absolute top-0 left-1/2 -translate-x-1/2 flex items-center justify-center space-x-4 md:space-x-9">
                                             {/* Blue Ring */}
                                             <motion.div
                                                 className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-blue-500 shadow-lg bg-transparent cursor-pointer"
-                                                initial={{ scale: 0, opacity: 0, y: -50, rotate: -180 }}
-                                                animate={{ 
-                                                    scale: 1, 
-                                                    opacity: 1, 
+                                                initial={{scale: 0, opacity: 0, y: -50, rotate: -180}}
+                                                animate={{
+                                                    scale: 1,
+                                                    opacity: 1,
                                                     y: 0,
                                                     rotate: 0,
                                                     boxShadow: [
@@ -358,10 +367,18 @@ const Sponsors = () => {
                                                     ]
                                                 }}
                                                 transition={{
-                                                    rotate: { delay: 0.2, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.275] },
-                                                    scale: { delay: 0.2, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] },
-                                                    y: { delay: 0.2, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.1] },
-                                                    opacity: { delay: 0.2, duration: 0.6 },
+                                                    rotate: {
+                                                        delay: 0.2,
+                                                        duration: 0.8,
+                                                        ease: [0.175, 0.885, 0.32, 1.275]
+                                                    },
+                                                    scale: {
+                                                        delay: 0.2,
+                                                        duration: 0.6,
+                                                        ease: [0.175, 0.885, 0.32, 1.275]
+                                                    },
+                                                    y: {delay: 0.2, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.1]},
+                                                    opacity: {delay: 0.2, duration: 0.6},
                                                     boxShadow: {
                                                         duration: 3,
                                                         repeat: Infinity,
@@ -372,17 +389,17 @@ const Sponsors = () => {
                                                 whileHover={{
                                                     scale: 1.1,
                                                     y: -5,
-                                                    transition: { duration: 0.2 }
+                                                    transition: {duration: 0.2}
                                                 }}
                                             />
-                                            
+
                                             {/* Black Ring */}
                                             <motion.div
                                                 className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-black shadow-lg bg-transparent cursor-pointer"
-                                                initial={{ scale: 0, opacity: 0, y: -50, rotate: -180 }}
-                                                animate={{ 
-                                                    scale: 1, 
-                                                    opacity: 1, 
+                                                initial={{scale: 0, opacity: 0, y: -50, rotate: -180}}
+                                                animate={{
+                                                    scale: 1,
+                                                    opacity: 1,
                                                     y: 0,
                                                     rotate: 0,
                                                     boxShadow: [
@@ -392,10 +409,18 @@ const Sponsors = () => {
                                                     ]
                                                 }}
                                                 transition={{
-                                                    rotate: { delay: 0.4, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.275] },
-                                                    scale: { delay: 0.4, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] },
-                                                    y: { delay: 0.4, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.1] },
-                                                    opacity: { delay: 0.4, duration: 0.6 },
+                                                    rotate: {
+                                                        delay: 0.4,
+                                                        duration: 0.8,
+                                                        ease: [0.175, 0.885, 0.32, 1.275]
+                                                    },
+                                                    scale: {
+                                                        delay: 0.4,
+                                                        duration: 0.6,
+                                                        ease: [0.175, 0.885, 0.32, 1.275]
+                                                    },
+                                                    y: {delay: 0.4, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.1]},
+                                                    opacity: {delay: 0.4, duration: 0.6},
                                                     boxShadow: {
                                                         duration: 3,
                                                         repeat: Infinity,
@@ -406,17 +431,17 @@ const Sponsors = () => {
                                                 whileHover={{
                                                     scale: 1.1,
                                                     y: -5,
-                                                    transition: { duration: 0.2 }
+                                                    transition: {duration: 0.2}
                                                 }}
                                             />
-                                            
+
                                             {/* Red Ring */}
                                             <motion.div
                                                 className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-red-500 shadow-lg bg-transparent cursor-pointer"
-                                                initial={{ scale: 0, opacity: 0, y: -50, rotate: -180 }}
-                                                animate={{ 
-                                                    scale: 1, 
-                                                    opacity: 1, 
+                                                initial={{scale: 0, opacity: 0, y: -50, rotate: -180}}
+                                                animate={{
+                                                    scale: 1,
+                                                    opacity: 1,
                                                     y: 0,
                                                     rotate: 0,
                                                     boxShadow: [
@@ -426,10 +451,18 @@ const Sponsors = () => {
                                                     ]
                                                 }}
                                                 transition={{
-                                                    rotate: { delay: 0.6, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.275] },
-                                                    scale: { delay: 0.6, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] },
-                                                    y: { delay: 0.6, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.1] },
-                                                    opacity: { delay: 0.6, duration: 0.6 },
+                                                    rotate: {
+                                                        delay: 0.6,
+                                                        duration: 0.8,
+                                                        ease: [0.175, 0.885, 0.32, 1.275]
+                                                    },
+                                                    scale: {
+                                                        delay: 0.6,
+                                                        duration: 0.6,
+                                                        ease: [0.175, 0.885, 0.32, 1.275]
+                                                    },
+                                                    y: {delay: 0.6, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.1]},
+                                                    opacity: {delay: 0.6, duration: 0.6},
                                                     boxShadow: {
                                                         duration: 3,
                                                         repeat: Infinity,
@@ -440,20 +473,21 @@ const Sponsors = () => {
                                                 whileHover={{
                                                     scale: 1.1,
                                                     y: -5,
-                                                    transition: { duration: 0.2 }
+                                                    transition: {duration: 0.2}
                                                 }}
                                             />
                                         </div>
 
                                         {/* Row 2 - Bottom Rings (Yellow, Green) */}
-                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center space-x-4 md:space-x-9 mt-3 md:mt-5">
+                                        <div
+                                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center space-x-4 md:space-x-9 mt-3 md:mt-5">
                                             {/* Yellow Ring */}
                                             <motion.div
                                                 className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-yellow-400 shadow-lg bg-transparent cursor-pointer"
-                                                initial={{ scale: 0, opacity: 0, y: 50, rotate: 180 }}
-                                                animate={{ 
-                                                    scale: 1, 
-                                                    opacity: 1, 
+                                                initial={{scale: 0, opacity: 0, y: 50, rotate: 180}}
+                                                animate={{
+                                                    scale: 1,
+                                                    opacity: 1,
                                                     y: 0,
                                                     rotate: 0,
                                                     boxShadow: [
@@ -463,10 +497,18 @@ const Sponsors = () => {
                                                     ]
                                                 }}
                                                 transition={{
-                                                    rotate: { delay: 0.3, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.275] },
-                                                    scale: { delay: 0.3, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] },
-                                                    y: { delay: 0.3, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.1] },
-                                                    opacity: { delay: 0.3, duration: 0.6 },
+                                                    rotate: {
+                                                        delay: 0.3,
+                                                        duration: 0.8,
+                                                        ease: [0.175, 0.885, 0.32, 1.275]
+                                                    },
+                                                    scale: {
+                                                        delay: 0.3,
+                                                        duration: 0.6,
+                                                        ease: [0.175, 0.885, 0.32, 1.275]
+                                                    },
+                                                    y: {delay: 0.3, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.1]},
+                                                    opacity: {delay: 0.3, duration: 0.6},
                                                     boxShadow: {
                                                         duration: 3,
                                                         repeat: Infinity,
@@ -477,17 +519,17 @@ const Sponsors = () => {
                                                 whileHover={{
                                                     scale: 1.1,
                                                     y: 5,
-                                                    transition: { duration: 0.2 }
+                                                    transition: {duration: 0.2}
                                                 }}
                                             />
-                                            
+
                                             {/* Green Ring */}
                                             <motion.div
                                                 className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-green-500 shadow-lg bg-transparent cursor-pointer"
-                                                initial={{ scale: 0, opacity: 0, y: 50, rotate: 180 }}
-                                                animate={{ 
-                                                    scale: 1, 
-                                                    opacity: 1, 
+                                                initial={{scale: 0, opacity: 0, y: 50, rotate: 180}}
+                                                animate={{
+                                                    scale: 1,
+                                                    opacity: 1,
                                                     y: 0,
                                                     rotate: 0,
                                                     boxShadow: [
@@ -497,10 +539,18 @@ const Sponsors = () => {
                                                     ]
                                                 }}
                                                 transition={{
-                                                    rotate: { delay: 0.5, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.275] },
-                                                    scale: { delay: 0.5, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] },
-                                                    y: { delay: 0.5, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.1] },
-                                                    opacity: { delay: 0.5, duration: 0.6 },
+                                                    rotate: {
+                                                        delay: 0.5,
+                                                        duration: 0.8,
+                                                        ease: [0.175, 0.885, 0.32, 1.275]
+                                                    },
+                                                    scale: {
+                                                        delay: 0.5,
+                                                        duration: 0.6,
+                                                        ease: [0.175, 0.885, 0.32, 1.275]
+                                                    },
+                                                    y: {delay: 0.5, duration: 0.8, ease: [0.175, 0.885, 0.32, 1.1]},
+                                                    opacity: {delay: 0.5, duration: 0.6},
                                                     boxShadow: {
                                                         duration: 3,
                                                         repeat: Infinity,
@@ -511,24 +561,24 @@ const Sponsors = () => {
                                                 whileHover={{
                                                     scale: 1.1,
                                                     y: 5,
-                                                    transition: { duration: 0.2 }
+                                                    transition: {duration: 0.2}
                                                 }}
                                             />
                                         </div>
 
                                         {/* Connecting Animation */}
-                                        <motion.div 
+                                        <motion.div
                                             className="absolute inset-0"
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            transition={{ delay: 1.8, duration: 0.5 }}
+                                            initial={{opacity: 0}}
+                                            animate={{opacity: 1}}
+                                            transition={{delay: 1.8, duration: 0.5}}
                                         >
                                             {[1, 2, 3, 4].map((i) => (
                                                 <motion.div
                                                     key={i}
                                                     className="absolute bg-yellow-400 rounded-full"
-                                                    initial={{ scale: 0 }}
-                                                    animate={{ 
+                                                    initial={{scale: 0}}
+                                                    animate={{
                                                         scale: [0, 1, 0],
                                                         opacity: [0, 0.8, 0]
                                                     }}
@@ -556,9 +606,9 @@ const Sponsors = () => {
                                 {/* U-16 Badge */}
                                 <motion.div
                                     className="relative w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full border-4 border-yellow-400 bg-blue-900/95 backdrop-blur-sm flex items-center justify-center z-20 shadow-xl mt-6 md:mt-8"
-                                    initial={{ scale: 0, opacity: 0 }}
-                                    animate={{ 
-                                        scale: 1, 
+                                    initial={{scale: 0, opacity: 0}}
+                                    animate={{
+                                        scale: 1,
                                         opacity: 1,
                                         boxShadow: [
                                             '0 0 0 0 rgba(234, 179, 8, 0.4)',
@@ -567,15 +617,15 @@ const Sponsors = () => {
                                         ]
                                     }}
                                     transition={{
-                                        scale: { 
-                                            delay: 1.2, 
-                                            type: 'spring', 
-                                            stiffness: 150, 
-                                            damping: 12 
+                                        scale: {
+                                            delay: 1.2,
+                                            type: 'spring',
+                                            stiffness: 150,
+                                            damping: 12
                                         },
-                                        opacity: { 
-                                            delay: 1.2, 
-                                            duration: 0.5 
+                                        opacity: {
+                                            delay: 1.2,
+                                            duration: 0.5
                                         },
                                         boxShadow: {
                                             delay: 1.5,
@@ -586,9 +636,9 @@ const Sponsors = () => {
                                         }
                                     }}
                                 >
-                                    <motion.div 
+                                    <motion.div
                                         className="absolute inset-0 rounded-full bg-yellow-400 opacity-0"
-                                        initial={{ scale: 0.8 }}
+                                        initial={{scale: 0.8}}
                                         animate={{
                                             scale: 1.2,
                                             opacity: [0, 0.1, 0]
@@ -601,9 +651,11 @@ const Sponsors = () => {
                                             delay: 1.5
                                         }}
                                     />
-                                    
+
                                     <div className="relative z-10 text-center">
-                                        <div className="text-yellow-400 text-2xl md:text-3xl lg:text-4xl font-bold">U-16</div>
+                                        <div
+                                            className="text-yellow-400 text-2xl md:text-3xl lg:text-4xl font-bold">U-16
+                                        </div>
                                         <div className="text-white text-xs md:text-sm font-medium mt-1">
                                             {language === 'UA' ? 'Команда' : language === 'EN' ? 'Team' : 'Csapat'}
                                         </div>
@@ -669,7 +721,8 @@ const Sponsors = () => {
                                 transition={{delay: index * 0.1, duration: 0.5}}
                                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-yellow-400/30 flex flex-col items-center text-center"
                             >
-                                <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-yellow-400/50">
+                                <div
+                                    className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-yellow-400/50">
                                     <img
                                         src={sponsor.image}
                                         alt={sponsor.name}
@@ -698,7 +751,8 @@ const Sponsors = () => {
                             className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-500 text-gray-900 font-bold rounded-full text-lg md:text-xl hover:from-yellow-400 hover:to-amber-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/30 flex items-center"
                         >
                             {t.becomeSponsor}
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24"
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" fill="none"
+                                 viewBox="0 0 24 24"
                                  stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                                       d="M17 8l4 4m0 0l-4 4m4-4H3"/>
