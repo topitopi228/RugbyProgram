@@ -15,7 +15,12 @@ const Sponsors = () => {
     const translations = {
         UA: {
             companySponsors: 'Компанії-партнери',
-            personalSponsors: 'Наші меценати які в минулому підтримали розвиток українського регбі',
+            personalSponsors: (
+                <>
+                    <span className="block text-2xl md:text-3xl font-bold text-white mb-2">Наші меценати</span>
+                    <span className="text-base text-gray-300 font-medium">які в минулому підтримали розвиток українського регбі</span>
+                </>
+            ),
             becomeSponsor: 'Підтримати',
             companySponsorsList: [
                 {
@@ -96,7 +101,12 @@ const Sponsors = () => {
         },
         EN: {
             companySponsors: 'Company Sponsors',
-            personalSponsors: 'Our patrons who have previously supported the development of Ukrainian rugby',
+            personalSponsors: (
+                <>
+                    <span className="block text-2xl md:text-3xl font-bold text-white mb-2">Our patrons</span>
+                    <span className="text-base text-gray-300 font-medium">who have previously supported the development of Ukrainian rugby</span>
+                </>
+            ),
             becomeSponsor: 'Support',
             companySponsorsList: [
                 {
@@ -176,7 +186,12 @@ const Sponsors = () => {
         },
         HUN: {
             companySponsors: 'Céges Szponzorok',
-            personalSponsors: 'Mecénásaink, akik korábban támogatták az ukrán rögbi fejlődését',
+            personalSponsors: (
+                <>
+                    <span className="block text-2xl md:text-3xl font-bold text-white mb-2">Mecénásaink</span>
+                    <span className="text-base text-gray-300 font-medium">akik korábban támogatták az ukrán rögbi fejlődését</span>
+                </>
+            ),
             becomeSponsor: 'Támogatás',
             companySponsorsList: [
                 {
@@ -250,7 +265,7 @@ const Sponsors = () => {
             olympicInvitation: {
                 title: 'Közösen az Olimpiai Álomért',
                 highlight: 'Minden támogató, aki segít elérni a célunkat, meghívást kap az Olimpiai Játékokra',
-                description: 'Amikor U-16-os csapatunk kijut az olimpiára, mindenkit meghívunk, aki támogatott minket ezen az úton. Támogatásod lépés az ukrán rögbi történelem felé!',
+                description: 'Amikor U-16-os csapatunk kijut az olimpiára, mi mindenkit meghívunk, aki támogatott minket ezen az úton. Támogatásod lépés az ukrán rögbi történelem felé!',
                 cta: 'Légy Te is a Csapat Része!'
             },
         },
@@ -663,6 +678,172 @@ const Sponsors = () => {
                                 </motion.div>
                             </motion.div>
                         </div>
+                    </div>
+                </motion.div>
+
+                {/* Become a Sponsor Benefits Section */}
+                <motion.div 
+                    className="relative py-20 overflow-hidden"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
+                    {/* Animated background elements */}
+                    <div className="absolute inset-0 -z-10">
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/30 via-transparent to-amber-900/20"></div>
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                    </div>
+
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <motion.div 
+                            className="text-center mb-16"
+                            initial={{ y: 30, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
+                                {language === 'UA' ? 'Переваги нам допомагати' :
+                                 language === 'EN' ? 'Why Become Our Sponsor?' : 
+                                 'Miért legyen szponzorunk?'}
+                            </h2>
+                            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                                {language === 'UA' ? 'Приєднуйтесь до нашої місії та отримайте унікальні можливості для вашого бренду' :
+                                 language === 'EN' ? 'Join our mission and get unique opportunities for your brand' :
+                                 'Csatlakozzon küldetésünkhöz, és kapjon egyedi lehetőségeket márkájának'}
+                            </p>
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {[
+                                {
+                                    icon: (
+                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    ),
+                                    title: language === 'UA' ? 'Глобальне висвітлення' : 
+                                           language === 'EN' ? 'Global Exposure' : 'Globális láthatóság',
+                                    description: language === 'UA' ? 'Ваш бренд побачать по всьому світу через наші міжнародні змагання та медіа-покриття' :
+                                                language === 'EN' ? 'Your brand will be seen worldwide through our international competitions and media coverage' :
+                                                'Márkádat a világ minden táján látni fogják nemzetközi versenyeinken és médialefedettségünkön keresztül'
+                                },
+                                {
+                                    icon: (
+                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                        </svg>
+                                    ),
+                                    title: language === 'UA' ? 'Реклама на екіпіруванні' :
+                                           language === 'EN' ? 'Kit Branding' : 'Felszerelésre nyomtatott reklám',
+                                    description: language === 'UA' ? 'Логотип вашого бренду буде розміщено на екіпіруванні команди під час всіх матчів та заходів' :
+                                                language === 'EN' ? 'Your brand logo will be featured on team kits during all matches and events' :
+                                                'Márkajelzésed a csapat mezein lesz látható minden mérkőzésen és eseményen'
+                                },
+                                {
+                                    icon: (
+                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                        </svg>
+                                    ),
+                                    title: language === 'UA' ? 'Онлайн-присутність' :
+                                           language === 'EN' ? 'Online Presence' : 'Online jelenlét',
+                                    description: language === 'UA' ? 'Згадки та логотипи на наших соціальних мережах, вебсайті та цифрових матеріалах' :
+                                                language === 'EN' ? 'Mentions and logos on our social media, website, and digital materials' :
+                                                'Megemlítések és logók közösségi média felületeinken, weboldalunkon és digitális anyagainkon'
+                                },
+                                {
+                                    icon: (
+                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                        </svg>
+                                    ),
+                                    title: language === 'UA' ? 'Мережування' :
+                                           language === 'EN' ? 'Networking' : 'Hálózatépítés',
+                                    description: language === 'UA' ? 'Доступ до ексклюзивних заходів та можливість знайомства з іншими спонсорами та партнерами' :
+                                                language === 'EN' ? 'Access to exclusive events and opportunities to connect with other sponsors and partners' :
+                                                'Kizárólagos eseményekhez való hozzáférés és lehetőségek más szponzorokkal és partnerekkel való kapcsolatfelvételre'
+                                },
+                                {
+                                    icon: (
+                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    ),
+                                    title: language === 'UA' ? 'Підтримка молодіжного спорту' :
+                                           language === 'EN' ? 'Youth Sports Support' : 'Ifjúsági sport támogatása',
+                                    description: language === 'UA' ? 'Допоможіть нам надихати та підтримувати молодих спортсменів у здобутті їхніх мрій' :
+                                                language === 'EN' ? 'Help us inspire and support young athletes in achieving their dreams' :
+                                                'Segítsen nekünk megihletni és támogatni a fiatal sportolókat álmaik megvalósításában'
+                                },
+                                {
+                                    icon: (
+                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                        </svg>
+                                    ),
+                                    title: language === 'UA' ? 'Підтримка України' :
+                                           language === 'EN' ? 'Supporting Ukraine' : 'Ukrajna támogatása',
+                                    description: language === 'UA' ? 'Допоможіть нам представляти Україну на міжнародній арені та підтримувати позитивний імідж нашої країни' :
+                                                language === 'EN' ? 'Help us represent Ukraine internationally and support the positive image of our country' :
+                                                'Segítsen nekünk Ukrajnát nemzetközileg képviselni és országunk pozitív imázsát támogatni'
+                                }
+                            ].map((benefit, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/10"
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    whileHover={{ 
+                                        scale: 1.02,
+                                        boxShadow: '0 10px 25px -5px rgba(234, 179, 8, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+                                    }}
+                                >
+                                    <div className="w-16 h-16 bg-yellow-400/10 rounded-xl flex items-center justify-center mb-6">
+                                        {benefit.icon}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                                    <p className="text-gray-300">{benefit.description}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        <motion.div 
+                            className="mt-16 text-center"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3, duration: 0.6 }}
+                        >
+                            <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                                {language === 'UA' ? 'Готові долучитися до нашої команди?' :
+                                 language === 'EN' ? 'Ready to join our team?' :
+                                 'Készen áll csatlakozni csapatunkhoz?'}
+                            </h3>
+                            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                                {language === 'UA' ? 'Зв\'яжіться з нами для обговорення співпраці та отримайте спеціальні умови для наших партнерів' :
+                                 language === 'EN' ? 'Contact us to discuss partnership and get special conditions for our partners' :
+                                 'Vegye fel velünk a kapcsolatot együttműködés megbeszéléséhez, és kapjon különleges feltételeket partnereink számára'}
+                            </p>
+                            <button 
+                                onClick={scrollToContact}
+                                className="relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900 font-bold rounded-full overflow-hidden group"
+                            >
+                                <span className="relative z-10 flex items-center">
+                                    {language === 'UA' ? 'Зв\'язатися з нами' :
+                                     language === 'EN' ? 'Contact Us' :
+                                     'Lépjen kapcsolatba velünk'}
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </span>
+                                <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            </button>
+                        </motion.div>
                     </div>
                 </motion.div>
 
