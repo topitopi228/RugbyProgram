@@ -53,7 +53,21 @@ const AboutUs = () => {
             ourSponsors: "Наші спонсори",
             supportButton: 'Підтримати команду',
             viewFunding: 'Детальний кошторис',
-            close: 'Закрити'
+            close: 'Закрити',
+            equipmentSupport: {
+                title: 'Підтримка спорядження',
+                description: 'Допоможіть нам забезпечити команду необхідним інвентарем для тренувань та ігор',
+                amount: '2 500 €',
+                items: [
+                    '14 регбійних м\'ячів для тренувань',
+                    '4 захисних щити',
+                    '2 набір конусів для розмітки',
+                    '16 манішок для тренувань',
+                    '8 тренувальних резинок',
+                    'Тренувальні майки та шорти'
+                ],
+                cta: 'Підтримати'
+            }
         },
         EN: {
             pageTitle: 'Upcoming Events',
@@ -86,7 +100,21 @@ const AboutUs = () => {
             ourSponsors: "Our Sponsors",
             supportButton: 'Support the Team',
             viewFunding: 'Detailed Budget',
-            close: 'Close'
+            close: 'Close',
+            equipmentSupport: {
+                title: 'Equipment Support',
+                description: 'Help us provide the team with necessary training and game equipment',
+                amount: '2,500 €',
+                items: [
+                    '14 rugby training balls',
+                    '4 tackle shields',
+                    '2 sets of marker cones',
+                    '16 training bibs',
+                    '8 resistance bands',
+                    'Training jerseys and shorts'
+                ],
+                cta: 'Support with Equipment'
+            }
         },
         HUN: {
             pageTitle: 'Közelgő események',
@@ -119,7 +147,21 @@ const AboutUs = () => {
             ourSponsors: "Szponzoraink",
             supportButton: 'Csapat támogatása',
             viewFunding: 'Részletes költségvetés',
-            close: 'Bezárás'
+            close: 'Bezárás',
+            equipmentSupport: {
+                title: 'Felszerelés támogatása',
+                description: 'Segítsen nekünk biztosítani a csapat számára a szükséges edzés- és játékfelszerelést',
+                amount: '2 500 €',
+                items: [
+                    '14 rögbi edzőlabda',
+                    '4 védőpajzs',
+                    '2 készlet kúp a kijelöléshez',
+                    '16 edzőmellény',
+                    '8 edzőrugó',
+                    'Edzőmezek és nadrágok'
+                ],
+                cta: 'Támogatás felszereléssel'
+            }
         }
     };
 
@@ -185,22 +227,22 @@ const AboutUs = () => {
     const fundingBreakdowns = {
         1: [
             {
-                category: 'Проживання',
-                amount: '0 €',
-                description: 'Оплачується організатором',
-            },
-            {
-                category: 'Харчування',
-                amount: '0 €',
-                description: 'Оплачується організатором',
-
+                category: 'Внесок за турнір',
+                amount: '5 200 €',
+                description: 'Внесок',
+                subItems: [
+                    'проживання',
+                    'харчування',
+                    'турнірний внесок'
+                ]
             },
             {
                 category: 'Спортивне харчування',
                 amount: '2 000 €',
                 description: 'Спортивне харчування',
                 subItems: [
-                    'амінокислоти, протеїн, креатин'
+                    'амінокислоти, протеїн, креатин',
+                    'аптечка'
                 ]
             },
             {
@@ -276,10 +318,11 @@ const AboutUs = () => {
             },
             {
                 category: 'Спортивне харчування',
-                amount: '2 000 €',
+                amount: '900 €',
                 description: 'Спортивне харчування',
                 subItems: [
-                    'амінокислоти, протеїн, креатин'
+                    'амінокислоти, протеїн, креатин',
+                    'аптечка'
                 ]
             }
         ],
@@ -314,10 +357,11 @@ const AboutUs = () => {
             },
             {
                 category: 'Спортивне харчування',
-                amount: '2 000 €',
+                amount: '900 €',
                 description: 'Спортивне харчування',
                 subItems: [
-                    'амінокислоти, протеїн, креатин'
+                    'амінокислоти, протеїн, креатин',
+                    'аптечка'
                 ]
             },
             {
@@ -340,7 +384,7 @@ const AboutUs = () => {
             },
             {
                 category: 'Спортивна форма',
-                amount: '2 000 €',
+                amount: '900 €',
                 description: 'Комплект форми на гравця',
                 subItems: [
                     'Комплект форми на гравця',
@@ -473,6 +517,60 @@ const AboutUs = () => {
                     </motion.div>
                 ))}
             </div>
+            <section className="py-16 bg-gradient-to-br from-gray-900 to-blue-900">
+                <div className="container mx-auto px-4">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={fadeIn}
+                        className="max-w-5xl mx-auto text-center mb-12"
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-4">
+                            {t.equipmentSupport.title}
+                        </h2>
+                        <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+                            {t.equipmentSupport.description}
+                        </p>
+                    </motion.div>
+
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                        <motion.div 
+                            className="w-full md:w-1/2 lg:w-1/3"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={fadeIn}
+                        >
+                            <div className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-full">
+                                <img 
+                                    src="/inven.jpg" 
+                                    alt={t.equipmentSupport.title}
+                                    className="w-full h-64 object-cover"
+                                />
+                                <div className="p-6">
+                                    <h3 className="text-2xl font-bold text-yellow-400 mb-4">{t.equipmentSupport.amount}</h3>
+                                    <ul className="space-y-2 text-left mb-6">
+                                        {t.equipmentSupport.items.map((item, index) => (
+                                            <li key={index} className="flex items-start">
+                                                <span className="text-yellow-400 mr-2">•</span>
+                                                <span className="text-gray-300">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <button 
+                                        onClick={scrollToContact}
+                                        className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-lg transition-colors duration-300"
+                                    >
+                                        {t.equipmentSupport.cta}
+                                    </button>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
             <div ref={contactRef} id="contact" className="w-full">
                 <div
                     className="bg-gradient-to-br from-blue-900/90 to-purple-900/90 text-white py-12 px-4 sm:px-6 lg:px-8 relative w-full rounded-2xl overflow-hidden">

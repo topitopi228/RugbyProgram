@@ -91,7 +91,7 @@ const Sponsors = () => {
                 title: 'Досягнення Олімпійської Мрії Разом',
                 highlight: 'Усі спонсори, які допоможуть нам досягти нашої мети, отримають запрошення на Олімпійські ігри',
                 description: 'Коли наша збірна U-16 вийде на Олімпіаду, ми запросимо кожного, хто підтримав нас у цій подорожі. Ваша підтримка - це крок до історії українського регбі!',
-                cta: 'Стати частиною команди'
+                cta: 'допомогти збірній'
             },
         },
         EN: {
@@ -166,17 +166,12 @@ const Sponsors = () => {
                     name: 'PETRO ADAMYK',
                     position: 'Businessman, philanthropist',
                 },
-                {
-                    image: '/spon10.png',
-                    name: 'DAVID WILLIAMS',
-                    position: 'New Zealand entrepreneur, rugby enthusiast',
-                },
             ],
             olympicInvitation: {
                 title: 'Achieving the Olympic Dream Together',
                 highlight: 'All sponsors who help us reach our goal will receive an invitation to the Olympic Games',
                 description: 'When our U-16 team makes it to the Olympics, we will invite everyone who supported us on this journey. Your support is a step towards Ukrainian rugby history!',
-                cta: 'Become Part of the Team'
+                cta: 'Help the Team'
             },
         },
         HUN: {

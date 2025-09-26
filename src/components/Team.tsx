@@ -41,13 +41,15 @@ const Team = () => {
             doctor1: 'Богдан Дідик',
             doctor2: 'Олександр Ткаченко',
             doctor3: 'Валерія Павлюк',
-            coach1Desc: 'Тренер збірної U-16, 10 років тренерського досвіду, учасник чемпіонатів Європи. Дитячий тренер різних вікових категорій та гравець РК "Арка Гдиня", основний гравець збірної України, чемпіон Європи та України, віцечемпіон Грузії, чемпіон Польщі.',
+            coach1Desc: 'Тренер збірної U-16, 10 років тренерського досвіду, учасник чемпіонатів Європи. Дитячий тренер різних вікових категорій та гравець РК "Арка Гдиня", основний гравець збірної України, чемпіон  України, віцечемпіон Грузії, бронзовий призер Польщі.',
             coach2Desc: 'Тренер збірної U-16, спеціаліст із фізичної підготовки, працює з юнацькими командами 5 років. Гравець РК "Поділля". Тренер дитячої та чоловічої команд РК "Закарпатські Шаркані", основний гравець збірної України, чемпіон Європи та України, тренер національної збірної України з пляжного регбі',
-            coach3Desc: 'Тренер збірної U-18, тактичний аналітик збірної U-16, понад 7 років досвіду роботи з юнацькими командами, спеціаліст із ігрових стратегій, більш як 10 років досвіду роботи з юнацькими командами, гравець РК "Олімп"',
+            coach3Desc: 'Тренер збірної U-18, тактичний аналітик збірної U-16, понад 17 років досвіду роботи з юнацькими командами, спеціаліст із ігрових стратегій, більш як 17 років досвіду роботи з юнацькими командами, екс гравець збірної України та РК "Поділля"',
             coach4Desc: 'Менеджер юнацької збірної України U-16 та збірної України з пляжного регбі. Відповідає за організацію навчально-тренувальних зборів, координацію логістики, комунікацію з федераціями та партнерами. Має досвід роботи з участю збірних у чемпіонатах Європи. Володіє 4 мовами, зокрема українською, угорською та англійською, що дозволяє йому ефективно виконувати функції перекладача.',
             doctor1Desc: 'Лікар жіночої національної збірної з регбі-7 та чоловічої національної збірної України з регбі-15. Відповідає за медичне забезпечення та реабілітацію спортсменів національних команд. Має багаторічний досвід роботи з елітними спортсменами, учасник міжнародних змагань та тренувальних зборів.',
             doctor2Desc: 'Головний лікар Західноукраїнської обласної лікарні з ігрових видів спорту (баскетбол, гандбол, регбі). Має багаторічний досвід роботи з професійними спортсменами, колишній гравець регбі.',
-            doctor3Desc: 'Досвідчений реабілітолог з понад 6-річним стажем роботи з дітьми. Колишня гравчиня регбі, що дозволяє їй краще розуміти потреби спортсменів. Спеціалізується на відновленні після спортивних травм.'
+            doctor3Desc: 'Досвідчений реабілітолог з понад 6-річним стажем роботи з дітьми. Колишня гравчиня регбі, що дозволяє їй краще розуміти потреби спортсменів. Спеціалізується на відновленні після спортивних травм.',
+            captain: 'Капітан команди',
+            viceCaptain: 'Віце-капітан'
         },
         EN: {
             title: 'Team',
@@ -76,13 +78,15 @@ const Team = () => {
             doctor1: 'Bohdan Didyk',
             doctor2: 'Oleksandr Tkachenko',
             doctor3: 'Valeriia Pavliuk',
-            coach1Desc: 'U-16 National Team Coach, 10 years of coaching experience, participant in European Championships. Youth coach for various age categories and player of RC "Arka Gdynia", main player of the Ukrainian National Team, European and Ukrainian Champion, Vice-Champion of Georgia, Champion of Poland.',
+            coach1Desc: 'U-16 National Team Coach, 10 years of coaching experience, participant in European Championships. Youth coach for various age categories and player of RC "Arka Gdynia", main player of the Ukrainian National Team, Champion of Ukraine, Vice-Champion of Georgia, bronze medalist of Poland.',
             coach2Desc: 'U-16 National Team Coach, fitness specialist, working with youth teams for 5 years. Player of RC "Podillya". Coach of youth and men\'s teams of RC "Zakarpattia Sharkany", main player of the Ukrainian National Team, European and Ukrainian Champion, coach of the Ukrainian National Beach Rugby Team.',
-            coach3Desc: 'U-18 National Team Coach, tactical analyst for U-16 National Team, over 7 years of experience working with youth teams, specialist in game strategies, more than 10 years of experience working with youth teams, player of RC "Olimp".',
+            coach3Desc: 'U-18 National Team Coach, tactical analyst for U-16 National Team, over 17 years of experience working with youth teams, specialist in game strategies, former player of the Ukrainian National Team and RC "Podillya".',
             coach4Desc: 'Manager of the Ukrainian U-16 Youth National Team and the Ukrainian Beach Rugby National Team. Responsible for organizing training camps, logistics coordination, communication with federations and partners. Has experience working with national teams in European Championships. Speaks 4 languages, including Ukrainian, Hungarian, and English, which allows him to effectively perform translation functions.',
             doctor1Desc: 'Doctor of the Ukrainian Women\'s National Rugby 7s Team and Men\'s National Rugby 15s Team. Responsible for medical support and rehabilitation of national team athletes. Has years of experience working with elite athletes, participant in international competitions and training camps.',
             doctor2Desc: 'Head Doctor of the Western Ukrainian Regional Hospital for Team Sports (basketball, handball, rugby). Has many years of experience working with professional athletes, former rugby player.',
-            doctor3Desc: 'Experienced rehabilitation specialist with over 6 years of experience working with children. Former rugby player, which allows her to better understand the needs of athletes. Specializes in sports injury recovery.'
+            doctor3Desc: 'Experienced rehabilitation specialist with over 6 years of experience working with children. Former rugby player, which allows her to better understand the needs of athletes. Specializes in sports injury recovery.',
+            captain: 'Team Captain',
+            viceCaptain: 'Vice-Captain'
         },
         HUN: {
             title: 'Csapat',
@@ -111,13 +115,15 @@ const Team = () => {
             doctor1: 'Bohdan Didik',
             doctor2: 'Olekszandr Tkacsenko',
             doctor3: 'Valerija Pavljuk',
-            coach1Desc: 'U16-os válogatott edző, 10 év edzői tapasztalattal, résztvevője európai bajnokságoknak. Ifjúsági edző különböző korosztályokban, valamint játékos az RC "Arka Gdynia" csapatában, az ukrán válogatott alapembere, Európa- és ukrán bajnok, Grúzia második helyezettje, Lengyelország bajnoka.',
+            coach1Desc: 'U16-os válogatott edző, 10 év edzői tapasztalattal, résztvevője európai bajnokságoknak. Ifjúsági edző különböző korosztályokban, valamint játékos az RC "Arka Gdynia" csapatában, az ukrán válogatott alapembere, Ukrajna bajnoka, Grúzia második helyezettje, Lengyelország bronzérmese.',
             coach2Desc: 'U16-os válogatott edző, erőnléti szakember, 5 éve dolgozik ifjúsági csapatokkal. Az RC "Podillya" játékosa. Az RC "Zakarpattia Sharkany" ifjúsági és felnőtt csapatainak edzője, az ukrán válogatott alapembere, Európa- és ukrán bajnok, az ukrán strandrögbiválogatott edzője.',
-            coach3Desc: 'U18-as válogatott edző, az U16-os válogatott taktikai elemzője, több mint 7 év tapasztalattal ifjúsági csapatoknál, játékstratégiák specialistája, több mint 10 éves tapasztalattal ifjúsági csapatoknál, az RC "Olimp" játékosa.',
+            coach3Desc: 'U18-as válogatott edző, az U16-os válogatott taktikai elemzője, több mint 17 év tapasztalattal ifjúsági csapatoknál, játékstratégiák specialistája, az ukrán válogatott és az RC "Podillya" korábbi játékosa.',
             coach4Desc: 'Az ukrán U16-os ifjúsági válogatott és az ukrán strandrögbiválogatott menedzsere. Felelős az edzőtáborok szervezéséért, a logisztikai koordinációért, a kommunikációért a szövetségekkel és partnerekkel. Tapasztalattal rendelkezik a válogatottak európai bajnokságokon való részvételében. Négy nyelven beszél, köztük ukránul, magyarul és angolul, ami lehetővé teszi számára a fordítói feladatok hatékony ellátását.',
             doctor1Desc: 'Az ukrán női rögbi 7-es és férfi rögbi 15-ös válogatott orvosa. Felelős a válogatott sportolók egészségügyi ellátásáért és rehabilitációjáért. Többéves tapasztalattal rendelkezik elit sportolókkal való munkában, résztvevője nemzetközi versenyeknek és edzőtáboroknak.',
             doctor2Desc: 'A Nyugat-ukrajnai Regionális Kórház csapatsport osztályának főorvosa (kosárlabda, kézilabda, rögbi). Többéves tapasztalattal rendelkezik professzionális sportolókkal való munkában, korábbi rögbijátékos.',
-            doctor3Desc: 'Több mint 6 éves tapasztalattal rendelkező rehabilitációs szakember, aki gyerekekkel dolgozik. Korábbi rögbijátékos, ami segít neki jobban megérteni a sportolók igényeit. A sportolói sérülések utáni rehabilitáció szakértője.'
+            doctor3Desc: 'Több mint 6 éves tapasztalattal rendelkező rehabilitációs szakember, aki gyerekekkel dolgozik. Korábbi rögbijátékos, ami segít neki jobban megérteni a sportolók igényeit. A sportolói sérülések utáni rehabilitáció szakértője.',
+            captain: 'Csapatkapitány',
+            viceCaptain: 'Alkapitány'
         }
     };
 
@@ -128,7 +134,9 @@ const Team = () => {
         name: string,
         role?: string,
         gg?: string,
-        description?: string
+        description?: string,
+        isCaptain?: boolean,
+        isViceCaptain?: boolean
     }>) => (
         <motion.div
             initial="hidden"
@@ -151,7 +159,7 @@ const Team = () => {
                             whileHover={{y: -5}}
                             className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/30 transition-all duration-300"
                         >
-                            <div className="h-75 overflow-hidden">
+                            <div className="relative h-75 overflow-hidden">
                                 <img
                                     src={imagePath}
                                     alt={item.name}
@@ -166,6 +174,16 @@ const Team = () => {
                                     }}
                                     className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                                 />
+                                {item.isCaptain && (
+                                    <div className="absolute top-2 right-2 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">
+                                        {t.captain}
+                                    </div>
+                                )}
+                                {item.isViceCaptain && (
+                                    <div className="absolute top-2 right-2 bg-gray-300 text-black text-xs font-bold px-2 py-1 rounded">
+                                        {t.viceCaptain}
+                                    </div>
+                                )}
                             </div>
                             <div className="p-4">
                                 <h3 className="text-xl font-semibold">{item.name}</h3>
@@ -258,6 +276,8 @@ const Team = () => {
                 {/* Players Section */}
                 {renderTeamSection(t.players,
                     [
+                        {id: 'player11', name: 'Владислав Кошелюк', isCaptain: true},
+                        {id: 'player14', name: 'Олександр Бишук', isViceCaptain: true},
                         {id: 'player1', name: 'Денбовецький Микола'},
                         {id: 'player2', name: 'Ерік Тіппан'},
                         {id: 'player3', name: 'Володимир Рец'},
@@ -268,10 +288,8 @@ const Team = () => {
                         {id: 'player8', name: 'Богдан Пікульський'},
                         {id: 'player9', name: 'Владислав Садовський'},
                         {id: 'player10', name: 'Роман Присяжнюк'},
-                        {id: 'player11', name: 'Владислав Кошелюк'},
                         {id: 'player12', name: 'Артем Кухарський'},
                         {id: 'player13', name: 'Даниіл Плєшаков'},
-                        {id: 'player14', name: 'Олександр Бишук'},
                     ]
                 )}
 
@@ -300,9 +318,9 @@ const Team = () => {
                                 ? 'Head Coach of the New Zealand Women\'s National Team'
                                 : 'Új-Zéland női válogatottjának vezetőedzője',
                         description: language === 'UA'
-                            ? 'Колишній тренер Black Ferns Sevens, який привів команду до перемоги у серії Світової серії регбі-7. Піонер у розвитку жіночого регбі, відомий своїм інноваційним підходом до підготовки спортсменок. Під його керівництвом команда досягла безпрецедентного рівня майстерності та професіоналізму.'
+                            ? 'Колишній тренер Black Ferns Sevens, який привів команду до перемоги у Світової серії регбі-7. Тренер  у розвитку жіночого регбі, відомий своїм інноваційним підходом до підготовки спортсменок. Під його керівництвом команда досягла безпрецедентного рівня майстерності та професіоналізму.'
                             : language === 'EN'
-                                ? 'Former coach of Black Ferns Sevens who led the team to victory in the World Rugby Sevens Series. A pioneer in the development of women\'s rugby, known for his innovative approach to athlete preparation. Under his leadership, the team achieved an unprecedented level of skill and professionalism.'
+                                ? 'Former coach of Black Ferns Sevens who led the team to victory in the World Rugby Sevens Series. A manager in the development of women\'s rugby, known for his innovative approach to athlete preparation. Under his leadership, the team achieved an unprecedented level of skill and professionalism.'
                                 : 'A Black Ferns Sevens korábbi edzője, aki a csapatot a World Rugby Seven Series győzelemhez vezette. A női rögbi fejlesztésének úttörője, ismert innovatív edzésmódszereiről. Vezetése alatt a csapat példátlan szakmai színvonalat ért el.'
                     },
                     {
