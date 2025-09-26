@@ -278,18 +278,19 @@ const Team = () => {
                     [
                         {id: 'player11', name: 'Владислав Кошелюк', isCaptain: true},
                         {id: 'player14', name: 'Олександр Бишук', isViceCaptain: true},
-                        {id: 'player1', name: 'Денбовецький Микола'},
+                        {id: 'player1', name: 'Микола Денбовецький '},
                         {id: 'player2', name: 'Ерік Тіппан'},
                         {id: 'player3', name: 'Володимир Рец'},
-                        {id: 'player4', name: 'Сачек Микита'},
+                        {id: 'player4', name: 'Нікіта Сачек '},
                         {id: 'player5', name: 'Даниіл Казнін'},
-                        {id: 'player6', name: 'Тарасюк Мирослав'},
+                        {id: 'player6', name: 'Мирослав Тарасюк'},
                         {id: 'player7', name: 'Юрій Штець'},
                         {id: 'player8', name: 'Богдан Пікульський'},
                         {id: 'player9', name: 'Владислав Садовський'},
                         {id: 'player10', name: 'Роман Присяжнюк'},
                         {id: 'player12', name: 'Артем Кухарський'},
                         {id: 'player13', name: 'Даниіл Плєшаков'},
+                        {id: 'player15', name: 'Михайло Четверик'}
                     ]
                 )}
 
