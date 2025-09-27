@@ -29,14 +29,14 @@ const AboutUs = () => {
                 date: '10-15 Лютого 2026',
                 title: 'Турнір - Lisbon 7s',
                 location: 'м. Лісабон, Португалія',
-                funding: '12,000 - 14,000 €'
+                funding: '10,000-13,000 €'
             },
             event2: {
                 date: '18-23 Листопада 2025',
                 title: 'Найважливіше НТЗ',
                 description: 'за участю провідних іноземних тренерів',
                 location: 'м. Батумі, Грузія',
-                funding: '12,000 - 14,000 €'
+                funding: '20,500 - 22,500 €'
             },
             event3: {
                 date: '25-29 Червня 2026',
@@ -82,7 +82,7 @@ const AboutUs = () => {
                 title: 'Key Training Camp',
                 description: 'with leading foreign coaches',
                 location: 'Batumi, Georgia',
-                funding: '12,000 - 14,000 €'
+                funding: '20,500 - 22,500 €'
             },
             event3: {
                 date: '25-29 June 2026',
@@ -128,7 +128,7 @@ const AboutUs = () => {
                 title: 'Legfontosabb Edzőtábor',
                 description: 'vezető külföldi edzőkkel',
                 location: 'Batumi, Grúzia',
-                funding: '12 000 - 14 000 €'
+                funding: '20,500 - 22,500 €'
             },
             event3: {
                 date: '2026. június 25-29.',
@@ -266,25 +266,25 @@ const AboutUs = () => {
         2: [
             {
                 category: 'Проживання',
-                amount: '8 000 €',
-                description: 'Спортивна база на 6 днів',
+                amount: '3,200 €',
+                description: 'Спортивна база на 5 днів',
                 subItems: [
-                    '20 осіб × 6 нічей × 66.67€/ніч = 8 000€',
+                    '20 осіб × 5 ночей × 32€/ніч = 3,200 €',
                     'Двокімнатні номери зі зручностями'
                 ]
             },
             {
                 category: 'Харчування',
-                amount: '4 500 €',
+                amount: '4,200 €',
                 description: 'Спортивне харчування',
                 subItems: [
-                    '20 осіб × 6 днів × 37.5€/день = 4 500€',
+                    '20 осіб × 6 днів × 35€/день = 4,200€',
                     'Сніданок, обід, вечеря (шведський стіл)'
                 ]
             },
             {
                 category: 'Тренери',
-                amount: '2 000 €',
+                amount: '2,240 €',
                 description: 'Гонорари провідних спеціалістів',
                 subItems: [
                     'Добові тренерському штабу в розміри 45 євро, лікарям , менеджерам (6 чол)',
@@ -293,7 +293,7 @@ const AboutUs = () => {
             },
             {
                 category: 'Транспорт',
-                amount: '2 000 €',
+                amount: '10,000 €',
                 description: 'Внутрішні переїзди',
                 subItems: [
                     'трансфер по Україні (зібрати всіх гравців у Ужгороді)',
@@ -305,7 +305,7 @@ const AboutUs = () => {
             },
             {
                 category: 'Спортивне обладнання',
-                amount: '2 000 €',
+                amount: '1,600 €',
                 description: 'Амуніція для команди',
                 subItems: [
                     'екіпування(костюм спортивний , штани кофта , шорти футболка поло та ще 1 футболка, кросівки, тапочки)',
@@ -315,7 +315,7 @@ const AboutUs = () => {
             },
             {
                 category: 'Спортивне харчування',
-                amount: '900 €',
+                amount: '1,200 €',
                 description: 'Спортивне харчування',
                 subItems: [
                     'амінокислоти, протеїн, креатин',
