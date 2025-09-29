@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {useLanguage} from './LanguageUtils';
-import { FaInstagram, FaYoutube, FaNewspaper, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaNewspaper, FaExternalLinkAlt, FaFacebook } from 'react-icons/fa';
 
 interface MediaItem {
     id: number;
@@ -17,7 +17,7 @@ interface MediaItem {
 
 interface ExternalLink {
     id: number;
-    type: 'instagram' | 'youtube' | 'news';
+    type: 'instagram' | 'youtube' | 'news' | 'facebook';
     url: string;
     title: {
         UA: string;
@@ -29,6 +29,7 @@ interface ExternalLink {
         EN: string;
         HUN: string;
     };
+    image?: string;
 }
 
 const Media = () => {
@@ -37,34 +38,115 @@ const Media = () => {
     const [externalLinks] = useState<ExternalLink[]>([
         {
             id: 1,
-            type: 'instagram',
-            url: 'https://www.instagram.com/ukraine_u16_rugby7s',
+            type: 'facebook',
+            url: 'https://www.facebook.com/share/v/1anno2TNGQ/',
             title: {
-                UA: 'Наш Instagram',
-                EN: 'Our Instagram',
-                HUN: 'Instagram oldalunk'
+                UA: 'Facebook Пост',
+                EN: 'Facebook Post',
+                HUN: 'Facebook bejegyzés'
             },
             description: {
-                UA: 'Останні оновлення та новини',
-                EN: 'Latest updates and news',
-                HUN: 'Legfrissebb hírek és frissítések'
-            }
+                UA: 'Оновлення з тренувального збору',
+                EN: 'Training camp update',
+                HUN: 'Edzőtábori frissítés'
+            },
+            image: '/face_post.png'
         },
-
+        {
+            id: 2,
+            type: 'news',
+            url: 'https://www.rupor.info/news/196710/bf-mila-ta-oleksiy-yurenko-dopomogli-yunim-regbistam-u-16-uspishno-proyti-zbori-u-polshchi/',
+            title: {
+                UA: 'Новини Rupor',
+                EN: 'Rupor News',
+                HUN: 'Rupor Hírek'
+            },
+            description: {
+                UA: 'БФ "Міла" та Олексій Юренко допомогли юним регбістам U16',
+                EN: 'BF "Mila" and Oleksiy Yurenko helped young U16 rugby players',
+                HUN: 'A "Mila" Alapítvány és Olekszij Jurenko segítette a fiatal U16-os rögbistákat'
+            },
+            image: '/post2.png'
+        },
         {
             id: 3,
             type: 'news',
-            url: 'https://rugby.org.ua',
+            url: 'https://kievtime.com/kiev/zavdyaky-pidtrymtsi-bf-mila-ta-oleksiya-yurenko-yuni-ukrayinski-regbisty-u-16-zrobyly-krok-do-olimpijskyh-igor/amp/',
             title: {
-                UA: 'Українська Федерація Регбі',
-                EN: 'Ukrainian Rugby Federation',
-                HUN: 'Ukán Rögbiszövetség'
+                UA: 'Kyiv Time',
+                EN: 'Kyiv Time',
+                HUN: 'Kijevi Idő'
             },
             description: {
-                UA: 'Офіційний сайт Федерації',
-                EN: 'Official Federation Website',
-                HUN: 'Hivatalos szövetségi weboldal'
-            }
+                UA: 'Завдяки підтримці БФ "Міла" та Олексія Юренка',
+                EN: 'Thanks to the support of BF "Mila" and Oleksiy Yurenko',
+                HUN: 'A "Mila" Alapítvány és Olekszij Jurenko támogatásának köszönhetően'
+            },
+            image: '/post3.png'
+        },
+        {
+            id: 4,
+            type: 'news',
+            url: 'https://gerasport.com/blogs/news/%D0%B7%D0%B1%D0%BE%D1%80%D0%B8-%D0%B7%D0%B1%D1%96%D1%80%D0%BD%D0%BE%D1%97-%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8-%D0%B7-%D1%80%D0%B5%D0%B3%D0%B1%D1%96-u-16',
+            title: {
+                UA: 'Gera Sport',
+                EN: 'Gera Sport',
+                HUN: 'Gera Sport'
+            },
+            description: {
+                UA: 'Збори збірної України з регбі U16',
+                EN: 'Training camp of Ukraine U16 rugby team',
+                HUN: 'Az ukrán U16-os rögbi válogatott edzőtábora'
+            },
+            image: '/post4.png'
+        },
+        {
+            id: 5,
+            type: 'news',
+            url: 'https://svoboda.ua/38885/2025/bf-mila-ta-oleksij-yurenko-dopomogli-yunim-regbistam-u-16-uspishno-projti-zbori-u-polshhi/',
+            title: {
+                UA: 'Свобода',
+                EN: 'Svoboda',
+                HUN: 'Szabadság'
+            },
+            description: {
+                UA: 'БФ "Міла" та Олексій Юренко допомогли юним регбістам U16',
+                EN: 'BF "Mila" and Oleksiy Yurenko helped young U16 rugby players',
+                HUN: 'A "Mila" Alapítvány és Olekszij Jurenko segítette a fiatal U16-os rögbistákat'
+            },
+            image: '/post5.png'
+        },
+        {
+            id: 6,
+            type: 'news',
+            url: 'https://for-ua.com/article/1242206',
+            title: {
+                UA: 'For-Ua',
+                EN: 'For-Ua',
+                HUN: 'For-Ua'
+            },
+            description: {
+                UA: 'Новини про підготовку збірної U16',
+                EN: 'News about U16 team preparation',
+                HUN: 'Hírek az U16-os válogatott felkészüléséről'
+            },
+            image: '/post6.png'
+        },
+        {
+            id: 7,
+            type: 'youtube',
+            url: 'https://youtu.be/gl_hsrpof3c',
+            title: {
+                UA: 'Відео з тренувань',
+                EN: 'Training Video',
+                HUN: 'Edzés videó'
+            },
+            description: {
+                UA: 'Огляд тренувального процесу',
+                EN: 'Training process overview',
+                HUN: 'Az edzésfolyamat áttekintése'
+            },
+            image: 'https://img.youtube.com/vi/gl_hsrpof3c/maxresdefault.jpg'
         }
     ]);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -329,10 +411,12 @@ const Media = () => {
                         <div className={`p-3 rounded-lg ${
                             link.type === 'instagram' ? 'bg-pink-600/20 text-pink-400' :
                             link.type === 'youtube' ? 'bg-red-600/20 text-red-400' :
+                            link.type === 'facebook' ? 'bg-blue-600/20 text-blue-400' :
                             'bg-blue-600/20 text-blue-400'
                         }`}>
                             {link.type === 'instagram' && <FaInstagram className="w-6 h-6" />}
                             {link.type === 'youtube' && <FaYoutube className="w-6 h-6" />}
+                            {link.type === 'facebook' && <FaFacebook className="w-6 h-6" />}
                             {link.type === 'news' && <FaNewspaper className="w-6 h-6" />}
                         </div>
                         <h3 className="ml-4 text-lg font-semibold text-white group-hover:text-yellow-400 transition-colors">
@@ -343,6 +427,9 @@ const Media = () => {
                         <p className="text-gray-300 text-sm mt-2 flex-grow">
                             {link.description[language]}
                         </p>
+                    )}
+                    {link.image && (
+                        <img src={link.image} alt={link.title[language]} className="w-full h-40 object-cover mb-4" />
                     )}
                     <div className="mt-4 flex items-center text-yellow-400 text-sm font-medium">
                         {language === 'UA' ? 'Відкрити' : language === 'EN' ? 'Open' : 'Megnyitás'}
