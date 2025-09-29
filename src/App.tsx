@@ -1,13 +1,24 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import SponsorProgram from './components/SponsorProgram';
 import Club from './components/Club';
 import Team from './components/Team.tsx';
-import {LanguageProvider} from './components/LanguageContext.tsx';
+import { LanguageProvider } from './components/LanguageContext.tsx';
 import AboutUs from './components/AboutUs.tsx';
 import Navbar from './components/Navbar';
 import Sponsors from "./components/Sponsors.tsx";
 import Media from "./components/Media.tsx";
+
+// Scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const App: React.FC = () => {
     return (
@@ -23,6 +34,7 @@ const App: React.FC = () => {
                     }}
                 >
                     <Navbar/>
+                    <ScrollToTop />
                     <main
                         className="container mx-auto"
                         style={{

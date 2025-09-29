@@ -18,7 +18,7 @@ const Sponsors = () => {
             personalSponsors: (
                 <>
                     <span className="block text-2xl md:text-3xl font-bold text-white mb-2">Наші меценати</span>
-                    <span className="text-base text-gray-300 font-medium">які в минулому підтримали розвиток українського регбі</span>
+                    <span className="text-base text-gray-300 font-medium">хто вже нас підтримав</span>
                 </>
             ),
             becomeSponsor: 'Підтримати',
@@ -89,6 +89,11 @@ const Sponsors = () => {
                     image: '/spon9.jpg',
                     name: 'АДАМИК ПЕТРО',
                     position: 'Бізнесмен, меценат,резидент федерації регбі Львівщини',
+                },
+                {
+                    image: '/spon10.jpg',
+                    name: 'Brent Impey',
+                    position: 'Бізнесмен, меценат',
                 },
 
             ],

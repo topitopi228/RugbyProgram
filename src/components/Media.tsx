@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {useLanguage} from './LanguageUtils';
+import { FaInstagram, FaYoutube, FaNewspaper, FaExternalLinkAlt } from 'react-icons/fa';
 
 interface MediaItem {
     id: number;
@@ -14,9 +15,58 @@ interface MediaItem {
     category?: string;
 }
 
+interface ExternalLink {
+    id: number;
+    type: 'instagram' | 'youtube' | 'news';
+    url: string;
+    title: {
+        UA: string;
+        EN: string;
+        HUN: string;
+    };
+    description?: {
+        UA: string;
+        EN: string;
+        HUN: string;
+    };
+}
+
 const Media = () => {
     const {language} = useLanguage();
     const [mediaItems, setMediaItems] = useState<MediaItem[]>([]);
+    const [externalLinks] = useState<ExternalLink[]>([
+        {
+            id: 1,
+            type: 'instagram',
+            url: 'https://www.instagram.com/ukraine_u16_rugby7s',
+            title: {
+                UA: 'Наш Instagram',
+                EN: 'Our Instagram',
+                HUN: 'Instagram oldalunk'
+            },
+            description: {
+                UA: 'Останні оновлення та новини',
+                EN: 'Latest updates and news',
+                HUN: 'Legfrissebb hírek és frissítések'
+            }
+        },
+
+        {
+            id: 3,
+            type: 'news',
+            url: 'https://rugby.org.ua',
+            title: {
+                UA: 'Українська Федерація Регбі',
+                EN: 'Ukrainian Rugby Federation',
+                HUN: 'Ukán Rögbiszövetség'
+            },
+            description: {
+                UA: 'Офіційний сайт Федерації',
+                EN: 'Official Federation Website',
+                HUN: 'Hivatalos szövetségi weboldal'
+            }
+        }
+    ]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
@@ -261,7 +311,47 @@ const Media = () => {
         {id: 'all', name: {UA: 'Усі', EN: 'All', HUN: 'Összes'}},
         {id: 'matches', name: {UA: 'Матчі', EN: 'Matches', HUN: 'Mérkőzések'}},
         {id: 'training', name: {UA: 'Тренування', EN: 'Training', HUN: 'Edzések'}},
+        {id: 'other', name: {UA: 'Інше', EN: 'Other', HUN: 'Egyéb'}}
     ];
+
+    const renderExternalLinks = () => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            {externalLinks.map((link) => (
+                <motion.a
+                    key={link.id}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700 hover:border-yellow-500/50 flex flex-col h-full"
+                    whileHover={{ scale: 1.02 }}
+                >
+                    <div className="flex items-center mb-4">
+                        <div className={`p-3 rounded-lg ${
+                            link.type === 'instagram' ? 'bg-pink-600/20 text-pink-400' :
+                            link.type === 'youtube' ? 'bg-red-600/20 text-red-400' :
+                            'bg-blue-600/20 text-blue-400'
+                        }`}>
+                            {link.type === 'instagram' && <FaInstagram className="w-6 h-6" />}
+                            {link.type === 'youtube' && <FaYoutube className="w-6 h-6" />}
+                            {link.type === 'news' && <FaNewspaper className="w-6 h-6" />}
+                        </div>
+                        <h3 className="ml-4 text-lg font-semibold text-white group-hover:text-yellow-400 transition-colors">
+                            {link.title[language]}
+                        </h3>
+                    </div>
+                    {link.description && (
+                        <p className="text-gray-300 text-sm mt-2 flex-grow">
+                            {link.description[language]}
+                        </p>
+                    )}
+                    <div className="mt-4 flex items-center text-yellow-400 text-sm font-medium">
+                        {language === 'UA' ? 'Відкрити' : language === 'EN' ? 'Open' : 'Megnyitás'}
+                        <FaExternalLinkAlt className="w-3 h-3 ml-2" />
+                    </div>
+                </motion.a>
+            ))}
+        </div>
+    );
 
     if (isLoading) {
         return (
@@ -481,75 +571,79 @@ const Media = () => {
                 </motion.div>
 
                 {/* Media Grid */}
-                <motion.div
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-                    variants={container}
-                    initial="hidden"
-                    animate="show"
-                >
-                    {filteredItems.map((item, index) => (
-                        <motion.div
-                            key={item.id}
-                            variants={item}
-                            initial="hidden"
-                            animate="show"
-                            whileHover={{
-                                y: -5,
-                                boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
-                            }}
-                            transition={{type: 'spring', stiffness: 300, damping: 20}}
-                            onClick={() => selectMedia(index)}
-                            className={`group cursor-pointer rounded-xl overflow-hidden bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 transition-all duration-300 ${
-                                currentItem?.id === item.id ? 'ring-2 ring-amber-500' : 'hover:border-amber-500/50'
-                            }`}
-                        >
-                            <div className="relative pt-[56.25%] bg-gray-900">
-                                {item.type === 'video' ? (
-                                    <>
-                                        <video
-                                            src={item.url}
-                                            className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-                                            muted
-                                            playsInline
-                                        />
-                                        <div
-                                            className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                {activeCategory === 'other' ? (
+                    renderExternalLinks()
+                ) : (
+                    <motion.div
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                        variants={container}
+                        initial="hidden"
+                        animate="show"
+                    >
+                        {filteredItems.map((item, index) => (
+                            <motion.div
+                                key={item.id}
+                                variants={item}
+                                initial="hidden"
+                                animate="show"
+                                whileHover={{
+                                    y: -5,
+                                    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+                                }}
+                                transition={{type: 'spring', stiffness: 300, damping: 20}}
+                                onClick={() => selectMedia(index)}
+                                className={`group cursor-pointer rounded-xl overflow-hidden bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 transition-all duration-300 ${
+                                    currentItem?.id === item.id ? 'ring-2 ring-amber-500' : 'hover:border-amber-500/50'
+                                }`}
+                            >
+                                <div className="relative pt-[56.25%] bg-gray-900">
+                                    {item.type === 'video' ? (
+                                        <>
+                                            <video
+                                                src={item.url}
+                                                className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                                                muted
+                                                playsInline
+                                            />
                                             <div
-                                                className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                                <svg className="w-5 h-5 text-white" fill="currentColor"
-                                                     viewBox="0 0 24 24">
-                                                    <path d="M8 5v14l11-7z"/>
-                                                </svg>
+                                                className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                                                <div
+                                                    className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                                    <svg className="w-5 h-5 text-white" fill="currentColor"
+                                                         viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <img
-                                        src={item.url}
-                                        alt={item.title[language]}
-                                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                    />
-                                )}
-                                <div
-                                    className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
-                                    <div className="flex items-center gap-2">
+                                        </>
+                                    ) : (
+                                        <img
+                                            src={item.url}
+                                            alt={item.title[language]}
+                                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    )}
+                                    <div
+                                        className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+                                        <div className="flex items-center gap-2">
                     <span className="text-xs font-medium px-2 py-1 rounded bg-amber-500/90 text-gray-900">
                       {item.category === 'matches'
                           ? language === 'UA' ? 'Матч' : language === 'EN' ? 'Match' : 'Mérkőzés'
                           : language === 'UA' ? 'Тренування' : language === 'EN' ? 'Training' : 'Edzés'}
                     </span>
-                                        <span className="text-xs text-gray-400">
+                                            <span className="text-xs text-gray-400">
                       {index + 1} / {filteredItems.length}
                     </span>
+                                        </div>
+                                        <h3 className="text-white font-medium mt-1 line-clamp-1">
+                                            {item.title[language]}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-white font-medium mt-1 line-clamp-1">
-                                        {item.title[language]}
-                                    </h3>
                                 </div>
-                            </div>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                )}
             </div>
         </div>
     );
