@@ -50,7 +50,7 @@ const Media = () => {
                 EN: 'Training camp update',
                 HUN: 'Edzőtábori frissítés'
             },
-            image: '/face_post.png'
+            image: '/face_post.webp'
         },
         {
             id: 2,
@@ -66,7 +66,7 @@ const Media = () => {
                 EN: 'BF "Mila" and Oleksiy Yurenko helped young U16 rugby players',
                 HUN: 'A "Mila" Alapítvány és Olekszij Jurenko segítette a fiatal U16-os rögbistákat'
             },
-            image: '/post2.png'
+            image: '/post2.webp'
         },
         {
             id: 3,
@@ -82,7 +82,7 @@ const Media = () => {
                 EN: 'Thanks to the support of BF "Mila" and Oleksiy Yurenko',
                 HUN: 'A "Mila" Alapítvány és Olekszij Jurenko támogatásának köszönhetően'
             },
-            image: '/post3.png'
+            image: '/post3.webp'
         },
         {
             id: 4,
@@ -98,7 +98,7 @@ const Media = () => {
                 EN: 'Training camp of Ukraine U16 rugby team',
                 HUN: 'Az ukrán U16-os rögbi válogatott edzőtábora'
             },
-            image: '/post4.png'
+            image: '/post4.webp'
         },
         {
             id: 5,
@@ -114,7 +114,7 @@ const Media = () => {
                 EN: 'BF "Mila" and Oleksiy Yurenko helped young U16 rugby players',
                 HUN: 'A "Mila" Alapítvány és Olekszij Jurenko segítette a fiatal U16-os rögbistákat'
             },
-            image: '/post5.png'
+            image: '/post5.webp'
         },
         {
             id: 6,
@@ -130,7 +130,7 @@ const Media = () => {
                 EN: 'News about U16 team preparation',
                 HUN: 'Hírek az U16-os válogatott felkészüléséről'
             },
-            image: '/post6.png'
+            image: '/post6.webp'
         },
         {
             id: 7,
