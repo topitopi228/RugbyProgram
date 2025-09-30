@@ -36,7 +36,7 @@ const AboutUs = () => {
                 title: 'Найважливіше НТЗ',
                 description: 'за участю провідних іноземних тренерів',
                 location: 'м. Батумі, Грузія',
-                funding: '17,500 - 19,500 €'
+                funding: '≈15,700 €'
             },
             event3: {
                 date: '25-29 Червня 2026',
@@ -82,14 +82,14 @@ const AboutUs = () => {
                 title: 'Key Training Camp',
                 description: 'with leading foreign coaches',
                 location: 'Batumi, Georgia',
-                funding: '20,500 - 22,500 €'
+                funding: '≈15,700 €'
             },
             event3: {
                 date: '25-29 June 2026',
                 title: 'International Tournament',
                 description: 'with 30 national teams from around the world',
                 location: 'Klagenfurt, Austria',
-                funding: '15,000 - 17,000 €'
+                funding: '17,000-19,000 €'
             },
             contactTitle: "Contact Us",
             contactText: "Have questions or want to support our team? Contact us using the information below.",
@@ -128,7 +128,7 @@ const AboutUs = () => {
                 title: 'Legfontosabb Edzőtábor',
                 description: 'vezető külföldi edzőkkel',
                 location: 'Batumi, Grúzia',
-                funding: '20,500 - 22,500 €'
+                funding: '≈15,700 €'
             },
             event3: {
                 date: '2026. június 25-29.',
@@ -224,168 +224,463 @@ const AboutUs = () => {
     const fundingBreakdowns = {
         1: [
             {
-                category: 'Внесок за турнір',
+                category: {
+                    UA: 'Внесок за турнір',
+                    EN: 'Tournament Fee',
+                    HUN: 'Torna díj'
+                },
                 amount: '5 200 €',
-                description: 'Внесок',
+                description: {
+                    UA: 'Внесок',
+                    EN: 'Entry Fee',
+                    HUN: 'Nevezési díj'
+                },
                 subItems: [
-                    'проживання',
-                    'харчування',
-                    'турнірний внесок'
+                    {
+                        UA: 'проживання',
+                        EN: 'Accommodation',
+                        HUN: 'Szállás'
+                    },
+                    {
+                        UA: 'харчування',
+                        EN: 'Meals',
+                        HUN: 'Étkeztetés'
+                    },
+                    {
+                        UA: 'турнірний внесок',
+                        EN: 'Tournament Fee',
+                        HUN: 'Torna díj'
+                    }
                 ]
             },
             {
-                category: 'Спортивне харчування',
+                category: {
+                    UA: 'Спортивне харчування',
+                    EN: 'Sports Nutrition',
+                    HUN: 'Sporttáplálék'
+                },
                 amount: '2 000 €',
-                description: 'Спортивне харчування',
+                description: {
+                    UA: 'Спортивне харчування',
+                    EN: 'Athlete Nutrition',
+                    HUN: 'Sportolói táplálkozás'
+                },
                 subItems: [
-                    'амінокислоти, протеїн, креатин',
-                    'аптечка'
+                    {
+                        UA: 'амінокислоти, протеїн, креатин',
+                        EN: 'Amino Acids, Protein, Creatine',
+                        HUN: 'Aminosavak, fehérje, kreatin'
+                    },
+                    {
+                        UA: 'аптечка',
+                        EN: 'First Aid Kit',
+                        HUN: 'Elsősegély doboz'
+                    }
                 ]
             },
             {
-                category: 'Трансфери',
+                category: {
+                    UA: 'Трансфери',
+                    EN: 'Transfers',
+                    HUN: 'Transzfer'
+                },
                 amount: '1 500 €',
-                description: 'Аеропорт-готель-аеропорт',
+                description: {
+                    UA: 'Аеропорт-готель-аеропорт',
+                    EN: 'Airport-Hotel-Airport',
+                    HUN: 'Repülőtér-szálloda-repülőtér'
+                },
                 subItems: [
-                    'трансфер по Україні (зібрати всіх гравців у Ужгороді)',
-                    'трансфер з України в Аеоропорт Будапешта',
-                    'трнасфер аеропрт готель у Лісабоні ',
-                    'трансфер по самому Лісобону'
+                    {
+                        UA: 'трансфер по Україні (зібрати всіх гравців у Ужгороді)',
+                        EN: 'Transfer within Ukraine (gathering all players in Uzhhorod)',
+                        HUN: 'Transzfer Ukrajnán belül (játékosok összegyűjtése Ungváron)'
+                    },
+                    {
+                        UA: 'трансфер з України в Аеоропорт Будапешта',
+                        EN: 'Transfer from Ukraine to Budapest Airport',
+                        HUN: 'Transzfer Ukrajnából a budapesti repülőtérre'
+                    },
+                    {
+                        UA: 'трнасфер аеропрт готель у Лісабоні ',
+                        EN: 'Transfer from airport to hotel in Lisbon',
+                        HUN: 'Transzfer a repülőtérről a szállodába Lisszabonban'
+                    },
+                    {
+                        UA: 'трансфер по самому Лісобону',
+                        EN: 'Local transfers in Lisbon',
+                        HUN: 'Helyi közlekedés Lisszabonban'
+                    }
                 ]
             },
             {
-                category: 'Тренери',
+                category: {
+                    UA: 'Тренери',
+                    EN: 'Coaches',
+                    HUN: 'Edzők'
+                },
                 amount: '2 000 €',
-                description: 'Гонорари провідних спеціалістів',
+                description: {
+                    UA: 'Гонорари провідних спеціалістів',
+                    EN: 'Fees for leading specialists',
+                    HUN: 'Vezető szakemberek díjazása'
+                },
                 subItems: [
-                    'Добові тренерському штабу в розміри 45 євро, лікарям , менеджерам (6 чол)',
-                    'Страхування'
+                    {
+                        UA: 'Добові тренерському штабу в розмірі 45 євро, лікарям , менеджерам (6 чол)',
+                        EN: 'Daily allowance of €45 for coaching staff, doctors, managers (6 people)',
+                        HUN: 'Napi 45 eurós juttatás az edzői stábnak, orvosoknak, menedzsereknek (6 fő)'
+                    },
+                    {
+                        UA: 'Страхування',
+                        EN: 'Insurance',
+                        HUN: 'Biztosítás'
+                    }
                 ]
             }
         ],
         2: [
             {
-                category: 'Проживання',
+                category: {
+                    UA: 'Проживання',
+                    EN: 'Accommodation',
+                    HUN: 'Szállás'
+                },
                 amount: '3,200 €',
-                description: 'Спортивна база на 5 днів',
+                description: {
+                    UA: 'Спортивна база на 5 днів',
+                    EN: 'Sports base for 5 days',
+                    HUN: 'Sporthal 5 napra'
+                },
                 subItems: [
-                    '20 осіб × 5 ночей × 32€/ніч = 3,200 €',
-                    'Двокімнатні номери зі зручностями'
+                    {
+                        UA: '20 осіб × 5 нічей × 32€/ніч = 3,200 €',
+                        EN: '20 people × 5 nights × €32/night = €3,200',
+                        HUN: '20 fő × 5 éjszaka × 32€/éj = 3 200 €'
+                    },
+                    {
+                        UA: 'Двокімнатні номери зі зручностями',
+                        EN: 'Twin rooms with amenities',
+                        HUN: 'Kétágyas szobák kényelemmel'
+                    }
                 ]
             },
             {
-                category: 'Харчування',
+                category: {
+                    UA: 'Харчування',
+                    EN: 'Meals',
+                    HUN: 'Étkeztetés'
+                },
                 amount: '4,200 €',
-                description: 'Спортивне харчування',
+                description: {
+                    UA: 'Спортивне харчування',
+                    EN: 'Athlete nutrition',
+                    HUN: 'Sportolói táplálkozás'
+                },
                 subItems: [
-                    '20 осіб × 6 днів × 35€/день = 4,200€',
-                    'Сніданок, обід, вечеря (шведський стіл)'
+                    {
+                        UA: '20 осіб × 6 днів × 35€/день = 4,200€',
+                        EN: '20 people × 6 days × €35/day = €4,200',
+                        HUN: '20 fő × 6 nap × 35€/nap = 4 200 €'
+                    },
+                    {
+                        UA: 'Сніданок, обід, вечеря (шведський стіл)',
+                        EN: 'Breakfast, lunch, dinner (buffet)',
+                        HUN: 'Reggeli, ebéd, vacsora (büfé)'
+                    }
                 ]
             },
             {
-                category: 'Тренери',
-                amount: '2,240 €',
-                description: 'Гонорари провідних спеціалістів',
+                category: {
+                    UA: 'Тренери',
+                    EN: 'Coaches',
+                    HUN: 'Edzők'
+                },
+                amount: '1,850 €',
+                description: {
+                    UA: 'Гонорари провідних спеціалістів',
+                    EN: 'Fees for leading specialists',
+                    HUN: 'Vezető szakemberek díjazása'
+                },
                 subItems: [
-                    'Добові тренерському штабу в розміри 45 євро, лікарям , менеджерам (6 чол)',
-                    'Страхування'
+                    {
+                        UA: 'Добові тренерському штабу в розмірі 45 євро, лікарям , менеджерам (6 чол)',
+                        EN: 'Daily allowance of €45 for coaching staff, doctors, managers (6 people)',
+                        HUN: 'Napi 45 eurós juttatás az edzői stábnak, orvosoknak, menedzsereknek (6 fő)'
+                    },
+                    {
+                        UA: 'Страхування всієї команди',
+                        EN: 'Insurance for the entire team',
+                        HUN: 'A teljes csapat biztosítása'
+                    }
                 ]
             },
             {
-                category: 'Транспорт',
-                amount: '6,500 €',
-                description: 'Внутрішні переїзди',
+                category: {
+                    UA: 'Транспорт',
+                    EN: 'Transportation',
+                    HUN: 'Szállítás'
+                },
+                amount: '4,500 €',
+                description: {
+                    UA: 'Внутрішні переїзди',
+                    EN: 'Local transportation',
+                    HUN: 'Helyi közlekedés'
+                },
                 subItems: [
-                    'трансфер по Україні (зібрати всіх гравців у Ужгороді)',
-                    'трансфер з України в Аеоропорт Кішиньова',
-                    'трнасфер аеропрт готель у Батумі ',
-                    'трансфер в Батумі'
-
+                    {
+                        UA: 'Трансфер по Україні (зібрати всіх гравців у Львові)',
+                        EN: 'Transfer within Ukraine (gathering all players in Lviv)',
+                        HUN: 'Transzfer Ukrajnán belül (játékosok összegyűjtése Lvivben)'
+                    },
+                    {
+                        UA: 'Трансфер з України в Аеропорт "Познань" Польща',
+                        EN: 'Transfer from Ukraine to Poznań Airport, Poland',
+                        HUN: 'Átszállítás Ukrajnából a lengyelországi Poznań repülőtérre'
+                    },
+                    {
+                        UA: 'Переліт Познань-Кутаїсі',
+                        EN: 'Flight from Poznań to Kutaisi',
+                        HUN: 'Repülés Poznańból Kutaisiba'
+                    },
+                    {
+                        UA: 'Трансфер з Кутаїсі в Батумі',
+                        EN: 'Transfer from Kutaisi to Batumi',
+                        HUN: 'Átszállás Kutaisiból Batumiba'
+                    },
+                    {
+                        UA: 'Трансфер по Батумі',
+                        EN: 'Local transfers in Batumi',
+                        HUN: 'Helyi közlekedés Batumiban'
+                    }
                 ]
             },
             {
-                category: 'Спортивне обладнання',
+                category: {
+                    UA: 'Спортивне обладнання',
+                    EN: 'Sports Equipment',
+                    HUN: 'Sportfelszerelés'
+                },
                 amount: '1,600 €',
-                description: 'Амуніція для команди',
+                description: {
+                    UA: 'Амуніція для команди',
+                    EN: 'Team equipment',
+                    HUN: 'Csapatfelszerelés'
+                },
                 subItems: [
-                    'екіпування(костюм спортивний , штани кофта , шорти футболка поло та ще 1 футболка, кросівки, тапочки)',
-                    'форма (регбійка, регбійні шорти гетри )',
-                    'аптечка(знеболючі , від голови , тейпи , лкарнітик, бади , пластирі)'
+                    {
+                        UA: 'Екіпування (костюм спортивний, штани, кофта, шорти, футболка поло та ще 1 футболка, кросівки, тапочки)',
+                        EN: 'Equipment (tracksuit, pants, hoodie, shorts, polo shirt + 1 t-shirt, sneakers, slippers)',
+                        HUN: 'Felszerelés (melegítő, nadrág, pulóver, rövidnadrág, póló + 1 póló, tornacipő, papucs)'
+                    },
+                    {
+                        UA: 'Форма (регбійка, регбійки, шорти, гетри)',
+                        EN: 'Uniform (rugby jersey, rugby shirts, shorts, socks)',
+                        HUN: 'Mez (rögbi mezek, pólók, rövidnadrágok, sportszárvédők)'
+                    },
+                    {
+                        UA: 'Аптечка',
+                        EN: 'First aid kit',
+                        HUN: 'Elsősegély doboz'
+                    }
                 ]
             },
             {
-                category: 'Спортивне харчування',
-                amount: '1,200 €',
-                description: 'Спортивне харчування',
+                category: {
+                    UA: 'Спортивне харчування',
+                    EN: 'Sports Nutrition',
+                    HUN: 'Sporttáplálék'
+                },
+                amount: '350 €',
+                description: {
+                    UA: 'Спортивні добавки',
+                    EN: 'Sports supplements',
+                    HUN: 'Sportkiegészítők'
+                },
                 subItems: [
-                    'амінокислоти, протеїн, креатин',
-                    'аптечка'
+                    {
+                        UA: 'амінокислоти, протеїн, креатин',
+                        EN: 'Amino acids, protein, creatine',
+                        HUN: 'Aminosavak, fehérje, kreatin'
+                    }
                 ]
             }
         ],
         3: [
             {
-                category: 'Реєстраційний внесок',
+                category: {
+                    UA: 'Реєстраційний внесок',
+                    EN: 'Registration Fee',
+                    HUN: 'Nevezési díj'
+                },
                 amount: '5 000 €',
-                description: 'Участь у турнірі',
+                description: {
+                    UA: 'Участь у турнірі',
+                    EN: 'Participation in the tournament',
+                    HUN: 'Részvétel a tornán'
+                },
                 subItems: [
-                    'Реєстраційний внесок',
-                    'Включено участь у турнірі'
+                    {
+                        UA: 'Реєстраційний внесок',
+                        EN: 'Registration Fee',
+                        HUN: 'Nevezési díj'
+                    },
+                    {
+                        UA: 'Включено участь у турнірі',
+                        EN: 'Includes participation in the tournament',
+                        HUN: 'Tartalmazza a részvételt a tornán'
+                    }
                 ]
             },
 
             {
-                category: 'Проживання',
+                category: {
+                    UA: 'Проживання',
+                    EN: 'Accommodation',
+                    HUN: 'Szállás'
+                },
                 amount: '7 000 €',
-                description: 'Готель 3* на 5 днів',
+                description: {
+                    UA: 'Готель 3* на 5 днів',
+                    EN: '3* hotel for 5 days',
+                    HUN: '3*-os szálloda 5 napra'
+                },
                 subItems: [
-                    '20 осіб × 5 нічей × 70€/ніч = 7 000€',
-                    'Двокімнатні номери зі зручностями'
+                    {
+                        UA: '20 осіб × 5 нічей × 70€/ніч = 7 000€',
+                        EN: '20 people × 5 nights × €70/night = €7,000',
+                        HUN: '20 fő × 5 éjszaka × 70€/éj = 7 000 €'
+                    },
+                    {
+                        UA: 'Двокімнатні номери зі зручностями',
+                        EN: 'Twin rooms with amenities',
+                        HUN: 'Kétágyas szobák kényelemmel'
+                    }
                 ]
             },
             {
-                category: 'Харчування',
+                category: {
+                    UA: 'Харчування',
+                    EN: 'Meals',
+                    HUN: 'Étkeztetés'
+                },
                 amount: '3 500 €',
-                description: 'Повний пансіон',
+                description: {
+                    UA: 'Повний пансіон',
+                    EN: 'Full board',
+                    HUN: 'Teljes ellátás'
+                },
                 subItems: [
-                    '20 осіб × 5 днів × 35€/день = 3 500€',
-                    'Сніданок, обід, вечеря (шведський стіл)'
+                    {
+                        UA: '20 осіб × 5 днів × 35€/день = 3 500€',
+                        EN: '20 people × 5 days × €35/day = €3,500',
+                        HUN: '20 fő × 5 nap × 35€/nap = 3 500 €'
+                    },
+                    {
+                        UA: 'Сніданок, обід, вечеря (шведський стіл)',
+                        EN: 'Breakfast, lunch, dinner (buffet)',
+                        HUN: 'Reggeli, ebéd, vacsora (büfé)'
+                    }
                 ]
             },
             {
-                category: 'Спортивне харчування',
+                category: {
+                    UA: 'Спортивне харчування',
+                    EN: 'Sports Nutrition',
+                    HUN: 'Sporttáplálék'
+                },
                 amount: '900 €',
-                description: 'Спортивне харчування',
+                description: {
+                    UA: 'Спортивні добавки',
+                    EN: 'Sports supplements',
+                    HUN: 'Sportkiegészítők'
+                },
                 subItems: [
-                    'амінокислоти, протеїн, креатин',
-                    'аптечка'
+                    {
+                        UA: 'амінокислоти, протеїн, креатин',
+                        EN: 'Amino acids, protein, creatine',
+                        HUN: 'Aminosavak, fehérje, kreatin'
+                    },
+                    {
+                        UA: 'аптечка',
+                        EN: 'First aid kit',
+                        HUN: 'Elsősegély doboz'
+                    }
                 ]
             },
             {
-                category: 'Трансфери',
+                category: {
+                    UA: 'Трансфери',
+                    EN: 'Transfers',
+                    HUN: 'Transzfer'
+                },
                 amount: '2 500 €',
-                description: 'Міжміські переїзди',
+                description: {
+                    UA: 'Міжміські переїзди',
+                    EN: 'Inter-city transfers',
+                    HUN: 'Városközi közlekedés'
+                },
                 subItems: [
-                    'Групові трансфери на 20 осіб',
-                    'Включено всі переїзди за програмою'
+                    {
+                        UA: 'Групові трансфери на 20 осіб',
+                        EN: 'Group transfers for 20 people',
+                        HUN: 'Csoportos transzfer 20 főre'
+                    },
+                    {
+                        UA: 'Включено всі переїзди за програмою',
+                        EN: 'Includes all transfers according to the program',
+                        HUN: 'Tartalmazza a program szerinti összes transzfert'
+                    }
                 ]
             },
             {
-                category: 'Тренери',
+                category: {
+                    UA: 'Тренери',
+                    EN: 'Coaches',
+                    HUN: 'Edzők'
+                },
                 amount: '2 000 €',
-                description: 'Гонорари провідних спеціалістів',
+                description: {
+                    UA: 'Гонорари провідних спеціалістів',
+                    EN: 'Fees for leading specialists',
+                    HUN: 'Vezető szakemberek díjazása'
+                },
                 subItems: [
-                    'Добові тренерському штабу в розміри 45 євро, лікарям , менеджерам (6 чол)',
-                    'Страхування'
+                    {
+                        UA: 'Добові тренерському штабу в розмірі 45 євро, лікарям , менеджерам (6 чол)',
+                        EN: 'Daily allowance of €45 for coaching staff, doctors, managers (6 people)',
+                        HUN: 'Napi 45 eurós juttatás az edzői stábnak, orvosoknak, menedzsereknek (6 fő)'
+                    },
+                    {
+                        UA: 'Страхування',
+                        EN: 'Insurance',
+                        HUN: 'Biztosítás'
+                    }
                 ]
             },
             {
-                category: 'Спортивна форма',
+                category: {
+                    UA: 'Спортивна форма',
+                    EN: 'Sports Uniform',
+                    HUN: 'Sportmez'
+                },
                 amount: '900 €',
-                description: 'Комплект форми на гравця',
+                description: {
+                    UA: 'Комплект форми на гравця',
+                    EN: 'Uniform set for each player',
+                    HUN: 'Játékosonkénti mez készlet'
+                },
                 subItems: [
-                    'Комплект форми на гравця',
-                    'Включено всі необхідні матеріали'
+                    {
+                        UA: 'Комплект форми на гравця',
+                        EN: 'Uniform set for each player',
+                        HUN: 'Játékosonkénti mez készlet'
+                    },
+                    {
+                        UA: 'Включено всі необхідні матеріали',
+                        EN: 'Includes all necessary materials',
+                        HUN: 'Tartalmazza az összes szükséges anyagot'
+                    }
                 ]
             }
         ]
@@ -501,7 +796,7 @@ const AboutUs = () => {
                                         </div>
                                         <button
                                             onClick={() => openFundingModal(event)}
-                                            className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/20"
+                                            className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-medium rounded-full transition-all duration-300"
                                         >
                                             {language === 'UA' ? 'Детальніше' :
                                                 language === 'EN' ? 'Details' :
@@ -750,17 +1045,17 @@ const AboutUs = () => {
                                              className="bg-white/5 rounded-lg overflow-hidden border border-white/10">
                                             <div className="p-4 bg-white/5 flex justify-between items-center">
                                                 <div>
-                                                    <h4 className="font-bold text-lg">{item.category}</h4>
+                                                    <h4 className="font-bold text-lg">{item.category[language]}</h4>
                                                     <p className="text-yellow-400">{item.amount}</p>
                                                 </div>
-                                                <span className="text-sm text-gray-300">{item.description}</span>
+                                                <span className="text-sm text-gray-300">{item.description[language]}</span>
                                             </div>
                                             <div className="p-4 pt-2 bg-white/2.5">
                                                 <ul className="space-y-2 text-sm text-gray-300">
                                                     {item.subItems?.map((subItem, subIndex) => (
                                                         <li key={subIndex} className="flex items-start">
                                                             <span className="text-yellow-400 mr-2">•</span>
-                                                            <span>{subItem}</span>
+                                                            <span>{subItem[language]}</span>
                                                         </li>
                                                     ))}
                                                 </ul>
