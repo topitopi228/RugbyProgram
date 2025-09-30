@@ -354,7 +354,7 @@ const AboutUs = () => {
                 },
                 subItems: [
                     {
-                        UA: '20 осіб × 5 нічей × 32€/ніч = 3,200 €',
+                        UA: '20 осіб × 5 ночей × 32€/ніч = 3,200 €',
                         EN: '20 people × 5 nights × €32/night = €3,200',
                         HUN: '20 fő × 5 éjszaka × 32€/éj = 3 200 €'
                     },
@@ -398,13 +398,13 @@ const AboutUs = () => {
                 },
                 amount: '1,850 €',
                 description: {
-                    UA: 'Гонорари провідних спеціалістів',
+                    UA: 'Добові провідних спеціалістів',
                     EN: 'Fees for leading specialists',
                     HUN: 'Vezető szakemberek díjazása'
                 },
                 subItems: [
                     {
-                        UA: 'Добові тренерському штабу в розмірі 45 євро, лікарям , менеджерам (6 чол)',
+                        UA: 'Добові тренерському штабу в розмірі 45 євро, лікарям , менеджерам (6 чоловік)',
                         EN: 'Daily allowance of €45 for coaching staff, doctors, managers (6 people)',
                         HUN: 'Napi 45 eurós juttatás az edzői stábnak, orvosoknak, menedzsereknek (6 fő)'
                     },
