@@ -178,7 +178,7 @@ const Media = () => {
                     {
                         id: 1,
                         type: 'video',
-                        url: '/media12.mp4',
+                        url: '/media12.webm',
                         title: {
                             UA: 'Тренування U16',
                             EN: 'U16 Training',
@@ -189,7 +189,7 @@ const Media = () => {
                     {
                         id: 2,
                         type: 'video',
-                        url: '/media13.mp4',
+                        url: '/media13.webm',
                         title: {
                             UA: 'Ігрове тренування',
                             EN: 'Game training',
@@ -200,7 +200,7 @@ const Media = () => {
                     {
                         id: 3,
                         type: 'video',
-                        url: '/media15.mp4',
+                        url: '/media15.webm',
                         title: {
                             UA: 'Командні тренування',
                             EN: 'Team Training',
@@ -211,7 +211,7 @@ const Media = () => {
                     {
                         id: 4,
                         type: 'video',
-                        url: '/media16.mp4',
+                        url: '/media16.webm',
                         title: {
                             UA: 'Турнірні ігри',
                             EN: 'Tournament Games',
@@ -222,7 +222,7 @@ const Media = () => {
                     {
                         id: 5,
                         type: 'video',
-                        url: '/media17.mp4',
+                        url: '/media17.webm',
                         title: {
                             UA: 'Майстер-клас з гри в захисті',
                             EN: 'Defense Masterclass',
@@ -233,7 +233,7 @@ const Media = () => {
                     {
                         id: 6,
                         type: 'video',
-                        url: '/media18.mp4',
+                        url: '/media18.webm',
                         title: {
                             UA: 'Атакувальні комбінації',
                             EN: 'Attacking Combinations',
@@ -244,7 +244,7 @@ const Media = () => {
                     {
                         id: 7,
                         type: 'video',
-                        url: '/media19.mp4',
+                        url: '/media19.webm',
                         title: {
                             UA: 'Перемога в турнірі',
                             EN: 'Win in the tournament',
@@ -255,7 +255,7 @@ const Media = () => {
                     {
                         id: 8,
                         type: 'video',
-                        url: '/media20.mp4',
+                        url: '/media20.webm',
                         title: {
                             UA: 'Швидкісні тренування',
                             EN: 'Speed Training',
@@ -266,7 +266,7 @@ const Media = () => {
                     {
                         id: 9,
                         type: 'video',
-                        url: '/media21.mp4',
+                        url: '/media21.webm',
                         title: {
                             UA: 'Тренувальний збір',
                             EN: 'Training Camp',
@@ -277,7 +277,7 @@ const Media = () => {
                     {
                         id: 10,
                         type: 'video',
-                        url: '/media23.mp4',
+                        url: '/media23.webm',
                         title: {
                             UA: 'Розминка перед матчем',
                             EN: 'Warm-up before the match',
@@ -288,7 +288,7 @@ const Media = () => {
                     {
                         id: 11,
                         type: 'video',
-                        url: '/media2.mp4',
+                        url: '/media2.webm',
                         title: {
                             UA: 'Фінальний матч',
                             EN: 'Final Match',
@@ -299,7 +299,7 @@ const Media = () => {
                     {
                         id: 12,
                         type: 'video',
-                        url: '/media3.mp4',
+                        url: '/media3.webm',
                         title: {
                             UA: 'Розминка',
                             EN: 'Final Match',
@@ -310,7 +310,7 @@ const Media = () => {
                     {
                         id: 13,
                         type: 'video',
-                        url: '/media6.mp4',
+                        url: '/media6.webm',
                         title: {
                             UA: 'Тренувальний матч',
                             EN: 'Training Match',
@@ -321,7 +321,7 @@ const Media = () => {
                     {
                         id: 14,
                         type: 'video',
-                        url: '/media7.mp4',
+                        url: '/media7.webm',
                         title: {
                             UA: 'Тренування',
                             EN: 'Training',

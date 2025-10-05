@@ -1,6 +1,7 @@
 import {motion, AnimatePresence} from 'framer-motion';
 import {useLanguage} from './LanguageUtils';
 import {useRef, useState} from 'react';
+import DonationProgress from './DonationProgress';
 
 const AboutUs = () => {
     const {language} = useLanguage();
@@ -726,6 +727,7 @@ const AboutUs = () => {
                     </motion.div>
                 </div>
             </div>
+            <DonationProgress />
 
             <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-12">
                 {events.map((event, index) => (
