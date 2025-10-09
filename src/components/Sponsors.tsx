@@ -82,7 +82,7 @@ const Sponsors = () => {
                 },
                 {
                     image: '/spon8.webp',
-                    name: 'КОПІЛОВ АНТОН',
+                    name: 'КОПИЛОВ АНТОН',
                     position: 'Підприємець, інвестор',
                 },
                 {
