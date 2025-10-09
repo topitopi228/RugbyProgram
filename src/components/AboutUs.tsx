@@ -691,7 +691,7 @@ const AboutUs = () => {
         <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white">
             <div className="relative h-[60vh] w-full overflow-hidden">
                 <img
-                    src="/backmaj.png"
+                    src="/backmaj.webp"
                     alt="Rugby team"
                     fetchPriority="high"
                     className="absolute inset-0 w-full h-full object-cover"

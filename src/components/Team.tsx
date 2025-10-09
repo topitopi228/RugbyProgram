@@ -203,7 +203,7 @@ const Team = () => {
             {/* Hero Section with Background Image */}
             <div className="relative h-[500px] md:h-[80vh] w-full overflow-hidden">
                 <img
-                    src="/backteam.png"
+                    src="/backteam.webp"
                     alt="Rugby team"
                     fetchPriority="high"
                     className="absolute inset-0 w-full h-full object-cover"
