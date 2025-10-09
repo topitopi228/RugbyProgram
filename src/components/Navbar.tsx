@@ -36,7 +36,7 @@ const navLinks: Record<Language, { [key: string]: string }> = {
 const languageOptions: { code: Language; label: string; flag: string }[] = [
     {code: 'UA', label: 'УКР', flag: '🇺🇦'},
     {code: 'EN', label: 'ENG', flag: '🇬🇧'},
-    {code: 'HUN', label: 'MAG', flag: '🇭🇺'},
+    {code: 'HUN', label: 'HUN', flag: '🇭🇺'},
 ];
 
 const Navbar: React.FC = () => {
