@@ -28,31 +28,36 @@ const Club: React.FC = () => {
                     id: 1,
                     date: '19 Серпня 2025',
                     title: 'Завершення НТЗ на Драгобраті',
-                    description: 'Успішно завершилися навчально-тренувальні збори на гірському курорті Драгобрат. Команда провела інтенсивні тренування на висоті, що дозволило значно покращити фізичну підготовку гравців.'
+                    description: 'Успішно завершилися навчально-тренувальні збори на гірському курорті Драгобрат. Команда провела інтенсивні тренування на висоті, що дозволило значно покращити фізичну підготовку гравців.',
+                    expense: '5800'
                 },
                 {
                     id: 2,
                     date: '26 липня 2025',
                     title: 'Збірники взяли участь у НТЗ в Закарпатті',
-                    description: 'Наші гравці взяли участь у спільних тренувальних зборах з командами Закарпаття. Було проведено низку товариських матчів та спільних тренувань.'
+                    description: 'Наші гравці взяли участь у спільних тренувальних зборах з командами Закарпаття. Було проведено низку товариських матчів та спільних тренувань.',
+                    expense: '1500'
                 },
                 {
                     id: 3,
                     date: '10 Липня 2025',
                     title: 'Друге міжнародне НТЗ',
-                    description: 'Команда відвідала міжнародний тренувальний табір, де мала можливість змагатися з командами з-за кордону та покращити свою майстерність.'
+                    description: 'Команда відвідала міжнародний тренувальний табір, де мала можливість змагатися з командами з-за кордону та покращити свою майстерність.',
+                    expense: '8000'
                 },
                 {
                     id: 4,
                     date: '16 Червня 2025',
                     title: 'Відбір найкращих кандидатів',
-                    description: 'У м. Хмельницький пройшов відбірковий етап, де було відібрано найперспективніших гравців з усієї України для участі у збірній команді.'
+                    description: 'У м. Хмельницький пройшов відбірковий етап, де було відібрано найперспективніших гравців з усієї України для участі у збірній команді.',
+                    expense: '300'
                 },
                 {
                     id: 5,
                     date: '7 Квітня 2025',
                     title: 'Перша перемога в Турнірі',
-                    description: 'Наша команда здобула першу перемогу на міжнародному турнірі в м. Гдиня, Польща. Це історична подія для нашої збірної!'
+                    description: 'Наша команда здобула першу перемогу на міжнародному турнірі в м. Гдиня, Польща. Це історична подія для нашої збірної!',
+                    expense: '10500'
                 }
             ]
         },
@@ -63,31 +68,36 @@ const Club: React.FC = () => {
                     id: 1,
                     date: 'August 19, 2025',
                     title: 'Completion of Training Camp in Drahobrat',
-                    description: 'Successfully completed training camp at the Drahobrat mountain resort. The team conducted intensive high-altitude training, significantly improving players\' physical condition.'
+                    description: 'Successfully completed training camp at the Drahobrat mountain resort. The team conducted intensive high-altitude training, significantly improving players\' physical condition.',
+                    expense: '5800'
                 },
                 {
                     id: 2,
                     date: 'July 26, 2025',
                     title: 'Team Participated in Training Camp in Zakarpattia',
-                    description: 'Our players participated in joint training sessions with Zakarpattia teams, including friendly matches and combined training.'
+                    description: 'Our players participated in joint training sessions with Zakarpattia teams, including friendly matches and combined training.',
+                    expense: '1500'
                 },
                 {
                     id: 3,
                     date: 'July 10, 2025',
                     title: 'Second International Training Camp',
-                    description: 'The team attended an international training camp, competing with foreign teams and improving their skills.'
+                    description: 'The team attended an international training camp, competing with foreign teams and improving their skills.',
+                    expense: '8000'
                 },
                 {
                     id: 4,
                     date: 'June 16, 2025',
                     title: 'Selection of the Best Candidates',
-                    description: 'The selection stage in Khmelnytskyi identified the most promising players from across Ukraine for the national team.'
+                    description: 'The selection stage in Khmelnytskyi identified the most promising players from across Ukraine for the national team.',
+                    expense: '300'
                 },
                 {
                     id: 5,
                     date: 'April 7, 2025',
                     title: 'First Tournament Victory',
-                    description: 'Our team achieved its first victory at the international tournament in Gdynia, Poland. This is a historic event for our national team!'
+                    description: 'Our team achieved its first victory at the international tournament in Gdynia, Poland. This is a historic event for our national team!',
+                    expense: '10500'
                 }
             ]
         },
@@ -98,31 +108,36 @@ const Club: React.FC = () => {
                     id: 1,
                     date: '2025. augusztus 19.',
                     title: 'Sikeres edzőtábor a Drahobrat hegyen',
-                    description: 'Sikeresen befejeződött a kiemelkedő edzőtábor a Drahobrat hegyi üdülőhelyen, ahol a csapat intenzív magassági edzéseket folytatott.'
+                    description: 'Sikeresen befejeződött a kiemelkedő edzőtábor a Drahobrat hegyi üdülőhelyen, ahol a csapat intenzív magassági edzéseket folytatott.',
+                    expense: '5800'
                 },
                 {
                     id: 2,
                     date: '2025. július 26.',
                     title: 'Edzőtábor részvétel Kárpátalján',
-                    description: 'Játékosaink részt vettek közös edzéseken a Kárpátaljai csapatokkal, barátságos mérkőzéseket és közös edzéseket tartva.'
+                    description: 'Játékosaink részt vettek közös edzéseken a Kárpátaljai csapatokkal, barátságos mérkőzéseket és közös edzéseket tartva.',
+                    expense: '1500'
                 },
                 {
                     id: 3,
                     date: '2025. július 10.',
                     title: 'Második nemzetközi edzőtábor',
-                    description: 'A csapat nemzetközi edzőtáborban vett részt, ahol külföldi csapatok ellen versenyezhetett.'
+                    description: 'A csapat nemzetközi edzőtáborban vett részt, ahol külföldi csapatok ellen versenyezhetett.',
+                    expense: '8000'
                 },
                 {
                     id: 4,
                     date: '2025. június 16.',
                     title: 'Legjobb játékosok kiválasztása',
-                    description: 'Kijevben lezajlott a válogató, ahol Ukrajna legígéretesebb játékosait válogatták be a válogatottba.'
+                    description: 'Kijevben lezajlott a válogató, ahol Ukrajna legígéretesebb játékosait válogatták be a válogatottba.',
+                    expense: '300'
                 },
                 {
                     id: 5,
                     date: '2025. április 7.',
                     title: 'Első győzelem a versenyen',
-                    description: 'Csapatunk megszerezte első győzelmét a lengyelországi Gdyniában megrendezett nemzetközi versenyen. Történelmi pillanat a válogatottunk számára!'
+                    description: 'Csapatunk megszerezte első győzelmét a lengyelországi Gdyniában megrendezett nemzetközi versenyen. Történelmi pillanat a válogatottunk számára!',
+                    expense: '10500'
                 }
             ]
         }
@@ -375,15 +390,44 @@ const Club: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="p-6 md:p-8">
-                                    <div className="text-yellow-400 text-sm font-medium mb-2">
-                                        {item.date}
+                                    <div className="flex items-start justify-between mb-4">
+                                        <div className="flex-1">
+                                            <div className="text-yellow-400 text-sm font-medium mb-2">
+                                                {item.date}
+                                            </div>
+                                            <h2 className="text-2xl font-bold text-white mb-3">
+                                                {item.title}
+                                            </h2>
+                                            <p className="text-gray-300 leading-relaxed">
+                                                {item.description}
+                                            </p>
+                                        </div>
+
+                                        {/* Modern Expense Badge */}
+                                        <div className="ml-4 flex-shrink-0">
+                                            <motion.div
+                                                initial={{opacity: 0, scale: 0.8}}
+                                                whileInView={{opacity: 1, scale: 1}}
+                                                viewport={{once: true}}
+                                                transition={{duration: 0.5, delay: 0.2}}
+                                                className="relative group"
+                                            >
+                                                <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-400/20 to-green-400/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                                <div className="relative bg-gradient-to-br from-emerald-500/10 to-green-500/10 backdrop-blur-sm border border-emerald-400/20 rounded-xl px-3 py-2 hover:border-emerald-400/40 transition-all duration-300">
+                                                    <div className="flex items-center space-x-2">
+                                                        <div className="text-center">
+                                                            <div className="text-xs text-emerald-300 font-medium leading-tight">
+                                                                {language === 'UA' ? 'БУЛО ВИТРАЧЕНО' : language === 'EN' ? 'WAS SPENT' : 'ELKÖLTÖTTEK'}
+                                                            </div>
+                                                            <div className="text-lg font-bold text-emerald-400 leading-tight">
+                                                                {item.expense}€
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        </div>
                                     </div>
-                                    <h2 className="text-2xl font-bold text-white mb-3">
-                                        {item.title}
-                                    </h2>
-                                    <p className="text-gray-300">
-                                        {item.description}
-                                    </p>
                                 </div>
                             </div>
 

@@ -81,7 +81,7 @@ const Sponsors = () => {
                     position: 'Підприємець, меценат спорту',
                 },
                 {
-                    image: '/spon8.jpg',
+                    image: '/spon8.webp',
                     name: 'КОПІЛОВ АНТОН',
                     position: 'Підприємець, інвестор',
                 },
@@ -172,7 +172,7 @@ const Sponsors = () => {
                     position: 'Entrepreneur, sports patron',
                 },
                 {
-                    image: '/spon8.jpg',
+                    image: '/spon8.webp',
                     name: 'ANTON KOPILOV',
                     position: 'Entrepreneur, investor',
                 },
@@ -257,7 +257,7 @@ const Sponsors = () => {
                     position: 'Vállalkozó, sporttámogató',
                 },
                 {
-                    image: '/spon8.jpg',
+                    image: '/spon8.webp',
                     name: 'ANTON KOPILOV',
                     position: 'Vállalkozó, befektető',
                 },
