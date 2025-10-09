@@ -180,7 +180,7 @@ const AboutUs = () => {
     const events = [
         {
             id: 2,
-            image: '/maj2.png',
+            image: '/maj2.webp',
             date: t.event2.date,
             title: t.event2.title,
             description: t.event2.description,
@@ -194,7 +194,7 @@ const AboutUs = () => {
         },
         {
             id: 1,
-            image: '/maj1.png',
+            image: '/maj1.webp',
             date: t.event1.date,
             title: t.event1.title,
             description: t.event1.description,
@@ -208,7 +208,7 @@ const AboutUs = () => {
         },
         {
             id: 3,
-            image: '/maj3.png',
+            image: '/maj3.webp',
             date: t.event3.date,
             title: t.event3.title,
             description: t.event3.description,
