@@ -379,7 +379,7 @@ const Club: React.FC = () => {
                                 <div className="md:flex-shrink-0 md:w-1/3">
                                     <div className="h-64 md:h-full overflow-hidden">
                                         <img
-                                            src={`/news${index + 1}.png`}
+                                            src={`/news${index + 1}.webp`}
                                             alt={item.title}
                                             onError={(e) => {
                                                 const target = e.target as HTMLImageElement;
