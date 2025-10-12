@@ -200,7 +200,7 @@ const AboutUs = () => {
 
     const events = [
         {
-            id: 1,
+            id: 4,
             image: '/maj4.webp',
             date: t.event4.date,
             title: t.event4.title,
@@ -214,7 +214,7 @@ const AboutUs = () => {
                     'Az ukrán U16-os rögbi-7 válogatott kiválasztási szakasza. A cél a legeredményesebb 2010-2011-ben született játékosok azonosítása Ukrajna minden régiójából, akik részt vehetnek a grúzországi edzőtáborban.'
         },
         {
-            id: 3,
+            id: 2,
             image: '/maj2.webp',
             date: t.event2.date,
             title: t.event2.title,
@@ -228,7 +228,7 @@ const AboutUs = () => {
                     'Intenzív edzőtábor vezető európai edzőkkel. A programba tartozik technikai, taktikai, fizikai edzés és pszichológiai felkészítés is.'
         },
         {
-            id: 2,
+            id: 1,
             image: '/maj1.webp',
             date: t.event1.date,
             title: t.event1.title,
@@ -242,7 +242,7 @@ const AboutUs = () => {
                     'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban. Játékosaink lehetőséget kapnak arra, hogy versenyezzenek Euróga legerősebb csapataival, bemutassák szintjüket és nemzetközi versenytapasztalatot szerezzenek.'
         },
         {
-            id: 4,
+            id: 3,
             image: '/maj3.webp',
             date: t.event3.date,
             title: t.event3.title,
