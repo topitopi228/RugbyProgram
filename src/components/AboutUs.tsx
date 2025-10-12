@@ -46,6 +46,13 @@ const AboutUs = () => {
                 location: 'м. Клагенфурт, Австрія',
                 funding: '15,000 - 17,000 €'
             },
+            event4: {
+                date: '13-20 Жовтня 2025',
+                title: 'Відбір кандидатів на НТЗ у Грузії',
+                description: ' ',
+                location: 'м. Хмельницький, Україна',
+                funding: '100 €'
+            },
             contactTitle: "Зв'яжіться з нами",
             contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
             contactPhone: '+48 501 820 396',
@@ -91,6 +98,13 @@ const AboutUs = () => {
                 description: 'with 30 national teams from around the world',
                 location: 'Klagenfurt, Austria',
                 funding: '17,000-19,000 €'
+            },
+            event4: {
+                date: '13 October 2025',
+                title: 'Selection for Training Camp in Georgia',
+                description: '',
+                location: 'Khmelnytskyi, Ukraine',
+                funding: '100 €'
             },
             contactTitle: "Contact Us",
             contactText: "Have questions or want to support our team? Contact us using the information below.",
@@ -138,6 +152,13 @@ const AboutUs = () => {
                 location: 'Klagenfurt, Ausztria',
                 funding: '15 000 - 17 000 €'
             },
+            event4: {
+                date: '2025. október 13.',
+                title: 'Játékosválogatás a Grúziában tartandó edzőtáborra',
+                description: '',
+                location: 'Hmelnickij, Ukrajna',
+                funding: '100 €'
+            },
             contactTitle: "Lépjen kapcsolatba velünk",
             contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
             contactPhone: '+48 501 820 396',
@@ -179,7 +200,21 @@ const AboutUs = () => {
 
     const events = [
         {
-            id: 2,
+            id: 1,
+            image: '/maj4.webp',
+            date: t.event4.date,
+            title: t.event4.title,
+            description: t.event4.description,
+            location: t.event4.location,
+            funding: t.event4.funding,
+            details: language === 'UA' ?
+                'Відбірковий етап для формування юнацької збірної України з регбі-7. Мета заходу - виявити найталановитіших гравців 2010-2011 р.н. з усіх регіонів України для участі у навчально-тренувальному зборі в Грузії.' :
+                language === 'EN' ?
+                    'Selection stage for forming the Ukrainian U16 rugby-7 national team. The goal is to identify the most talented players born in 2010-2011 from all regions of Ukraine to participate in the training camp in Georgia.' :
+                    'Az ukrán U16-os rögbi-7 válogatott kiválasztási szakasza. A cél a legeredményesebb 2010-2011-ben született játékosok azonosítása Ukrajna minden régiójából, akik részt vehetnek a grúzországi edzőtáborban.'
+        },
+        {
+            id: 3,
             image: '/maj2.webp',
             date: t.event2.date,
             title: t.event2.title,
@@ -193,7 +228,7 @@ const AboutUs = () => {
                     'Intenzív edzőtábor vezető európai edzőkkel. A programba tartozik technikai, taktikai, fizikai edzés és pszichológiai felkészítés is.'
         },
         {
-            id: 1,
+            id: 2,
             image: '/maj1.webp',
             date: t.event1.date,
             title: t.event1.title,
@@ -207,7 +242,7 @@ const AboutUs = () => {
                     'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban. Játékosaink lehetőséget kapnak arra, hogy versenyezzenek Euróga legerősebb csapataival, bemutassák szintjüket és nemzetközi versenytapasztalatot szerezzenek.'
         },
         {
-            id: 3,
+            id: 4,
             image: '/maj3.webp',
             date: t.event3.date,
             title: t.event3.title,
@@ -727,7 +762,7 @@ const AboutUs = () => {
                     </motion.div>
                 </div>
             </div>
-            <DonationProgress />
+            <DonationProgress/>
 
             <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-12">
                 {events.map((event, index) => (
@@ -1050,7 +1085,8 @@ const AboutUs = () => {
                                                     <h4 className="font-bold text-lg">{item.category[language]}</h4>
                                                     <p className="text-yellow-400">{item.amount}</p>
                                                 </div>
-                                                <span className="text-sm text-gray-300">{item.description[language]}</span>
+                                                <span
+                                                    className="text-sm text-gray-300">{item.description[language]}</span>
                                             </div>
                                             <div className="p-4 pt-2 bg-white/2.5">
                                                 <ul className="space-y-2 text-sm text-gray-300">
