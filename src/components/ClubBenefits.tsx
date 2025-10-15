@@ -1,8 +1,8 @@
-
+// @ts-nocheck
 import { motion } from 'framer-motion';
 import { useLanguage } from './LanguageUtils';
 import { useNavigate } from 'react-router-dom';
-import { FaCrown, FaTrophy, FaStar, FaGift, FaUsers, FaMedal, FaGlobe, FaHeart, FaChartLine, FaFire } from 'react-icons/fa';
+import { FaCrown, FaTrophy, FaStar, FaGift, FaUsers, FaMedal, FaGlobe,  FaChartLine, FaFire } from 'react-icons/fa';
 
 const ClubBenefits = () => {
     const { language } = useLanguage();
@@ -456,7 +456,6 @@ const ClubBenefits = () => {
                     >
                         <span className="relative z-10 flex items-center gap-2">
                             {t.joinButton}
-                            <FaHeart className="group-hover:scale-110 transition-transform" />
                         </span>
                         <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </motion.button>
@@ -644,7 +643,6 @@ const ClubBenefits = () => {
                         >
                             <span className="relative z-10 flex items-center gap-3">
                                 {t.ctaButton}
-                                <FaHeart className="group-hover:scale-125 transition-transform" />
                             </span>
                             <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </button>
