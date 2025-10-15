@@ -8,6 +8,7 @@ import AboutUs from './components/AboutUs.tsx';
 import Navbar from './components/Navbar';
 import Sponsors from "./components/Sponsors.tsx";
 import Media from "./components/Media.tsx";
+import ClubBenefits from "./components/ClubBenefits.tsx";
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -52,6 +53,7 @@ const App: React.FC = () => {
                             <Route path="/club" element={<Club/>}/>
                             <Route path="/stadium" element={<Sponsors/>}/>
                             <Route path="/contact" element={<Media/>}/>
+                            <Route path="/benefits" element={<ClubBenefits/>}/>
                         </Routes>
                     </main>
                 </div>
