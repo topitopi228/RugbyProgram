@@ -857,9 +857,9 @@ const Sponsors = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent"
         >
-            {language === 'UA' ? '🏆 Просто Клуб "100"' :
-             language === 'EN' ? '🏆 Simply Club "100"' :
-             '🏆 Egyszerűen Klub "100"'}
+            {language === 'UA' ? '🏆 Клуб "Олімпійська Надія"' :
+             language === 'EN' ? '🏆 Club "Olympic Hope"' :
+             '🏆  Klub "Olimpiai Remény"'}
         </motion.h2>
 
         {/* Subtitle */}
