@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {motion} from 'framer-motion';
 import {useLanguage} from './LanguageUtils';
 import { useNavigate } from 'react-router-dom';
@@ -26,34 +26,38 @@ const Club: React.FC = () => {
             news: [
                 {
                     id: 1,
+                    date: '13 Жовтня 2025',
+                    title: 'Відбірковий етап у Хмельницькому',
+                    description: 'У Хмельницькому відбувся відбірковий етап для формування юнацької збірної України з регбі-7 серед гравців 2010-2011 р.н. Під час одноденного турніру було виявлено найперспективніших гравців з різних регіонів України через серію ігрових тестів та оцінювання технічних показників.',
+                    expense: '300',
+                    image: '/news1.webp'
+                },
+                {
+                    id: 2,
                     date: '19 Серпня 2025',
                     title: 'Завершення НТЗ на Драгобраті',
                     description: 'Успішно завершилися навчально-тренувальні збори на гірському курорті Драгобрат. Команда провела інтенсивні тренування на висоті, що дозволило значно покращити фізичну підготовку гравців.',
                     expense: '5800'
                 },
-                {
-                    id: 2,
+                {                    id: 3,
                     date: '26 липня 2025',
                     title: 'Збірники взяли участь у НТЗ в Закарпатті',
                     description: 'Наші гравці взяли участь у спільних тренувальних зборах з командами Закарпаття. Було проведено низку товариських матчів та спільних тренувань.',
                     expense: '1500'
                 },
-                {
-                    id: 3,
+                {                    id: 4,
                     date: '10 Липня 2025',
                     title: 'Друге міжнародне НТЗ',
                     description: 'Команда відвідала міжнародний тренувальний табір, де мала можливість змагатися з командами з-за кордону та покращити свою майстерність.',
                     expense: '8000'
                 },
-                {
-                    id: 4,
+                {                    id: 5,
                     date: '16 Червня 2025',
                     title: 'Відбір найкращих кандидатів',
                     description: 'У м. Хмельницький пройшов відбірковий етап, де було відібрано найперспективніших гравців з усієї України для участі у збірній команді.',
                     expense: '300'
                 },
-                {
-                    id: 5,
+                {                    id: 6,
                     date: '7 Квітня 2025',
                     title: 'Перша перемога в Турнірі',
                     description: 'Наша команда здобула першу перемогу на міжнародному турнірі в м. Гдиня, Польща. Це історична подія для нашої збірної!',
@@ -66,34 +70,37 @@ const Club: React.FC = () => {
             news: [
                 {
                     id: 1,
+                    date: 'October 13, 2025',
+                    title: 'Selection Stage in Khmelnytskyi',
+                    description: 'A selection stage was held in Khmelnytskyi to form the Ukrainian U16 rugby-7 national team for players born in 2010-2011. During the one-day tournament, the most promising players from different regions of Ukraine were identified through a series of game tests and technical assessments.',
+                    expense: '300',
+                    image: '/news1.webp'
+                },
+                {                    id: 2,
                     date: 'August 19, 2025',
                     title: 'Completion of Training Camp in Drahobrat',
                     description: 'Successfully completed training camp at the Drahobrat mountain resort. The team conducted intensive high-altitude training, significantly improving players\' physical condition.',
                     expense: '5800'
                 },
-                {
-                    id: 2,
+                {                    id: 3,
                     date: 'July 26, 2025',
                     title: 'Team Participated in Training Camp in Zakarpattia',
                     description: 'Our players participated in joint training sessions with Zakarpattia teams, including friendly matches and combined training.',
                     expense: '1500'
                 },
-                {
-                    id: 3,
+                {                    id: 4,
                     date: 'July 10, 2025',
                     title: 'Second International Training Camp',
                     description: 'The team attended an international training camp, competing with foreign teams and improving their skills.',
                     expense: '8000'
                 },
-                {
-                    id: 4,
+                {                    id: 5,
                     date: 'June 16, 2025',
                     title: 'Selection of the Best Candidates',
                     description: 'The selection stage in Khmelnytskyi identified the most promising players from across Ukraine for the national team.',
                     expense: '300'
                 },
-                {
-                    id: 5,
+                {                    id: 6,
                     date: 'April 7, 2025',
                     title: 'First Tournament Victory',
                     description: 'Our team achieved its first victory at the international tournament in Gdynia, Poland. This is a historic event for our national team!',
@@ -106,34 +113,37 @@ const Club: React.FC = () => {
             news: [
                 {
                     id: 1,
+                    date: '2025. október 13.',
+                    title: 'Válogatás Hmelnickijben',
+                    description: 'Hmelnickijben megtartották a válogatási szakaszt az ukrán U16-os rögbi-7 válogatott összeállítására a 2010-2011-ben született játékosok számára. Az egynapos torna során azonosították Ukrajna különböző régióiból a legtehetségesebb játékosokat játéktesztek és technikai értékelések révén.',
+                    expense: '300',
+                    image: '/news1.webp'
+                },
+                {                    id: 2,
                     date: '2025. augusztus 19.',
                     title: 'Sikeres edzőtábor a Drahobrat hegyen',
                     description: 'Sikeresen befejeződött a kiemelkedő edzőtábor a Drahobrat hegyi üdülőhelyen, ahol a csapat intenzív magassági edzéseket folytatott.',
                     expense: '5800'
                 },
-                {
-                    id: 2,
+                {                    id: 3,
                     date: '2025. július 26.',
                     title: 'Edzőtábor részvétel Kárpátalján',
                     description: 'Játékosaink részt vettek közös edzéseken a Kárpátaljai csapatokkal, barátságos mérkőzéseket és közös edzéseket tartva.',
                     expense: '1500'
                 },
-                {
-                    id: 3,
+                {                    id: 4,
                     date: '2025. július 10.',
                     title: 'Második nemzetközi edzőtábor',
                     description: 'A csapat nemzetközi edzőtáborban vett részt, ahol külföldi csapatok ellen versenyezhetett.',
                     expense: '8000'
                 },
-                {
-                    id: 4,
+                {                    id: 5,
                     date: '2025. június 16.',
                     title: 'Legjobb játékosok kiválasztása',
                     description: 'Kijevben lezajlott a válogató, ahol Ukrajna legígéretesebb játékosait válogatták be a válogatottba.',
                     expense: '300'
                 },
-                {
-                    id: 5,
+                {                    id: 6,
                     date: '2025. április 7.',
                     title: 'Első győzelem a versenyen',
                     description: 'Csapatunk megszerezte első győzelmét a lengyelországi Gdyniában megrendezett nemzetközi versenyen. Történelmi pillanat a válogatottunk számára!',
