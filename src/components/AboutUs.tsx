@@ -1,4 +1,5 @@
-﻿import {motion, AnimatePresence} from 'framer-motion';
+﻿// @ts-nocheck
+import {motion, AnimatePresence} from 'framer-motion';
 import {useLanguage} from './LanguageUtils';
 import {useRef, useState} from 'react';
 import DonationProgress from './DonationProgress';

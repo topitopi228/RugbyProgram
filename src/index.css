@@ -1,5 +1,37 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Lazy loading optimization */
+img[loading="lazy"] {
+    background: linear-gradient(110deg, #1f2937 8%, #374151 18%, #1f2937 33%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+img[loading="lazy"].loaded {
+    animation: none;
+    background: none;
+}
+
+/* Video optimization */
+video {
+    will-change: transform;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    img[loading="lazy"] {
+        animation: none;
+    }
+}

@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from 'react';
+﻿import {useState, useEffect, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {useLanguage} from './LanguageUtils';
 import {FaInstagram, FaYoutube, FaNewspaper, FaExternalLinkAlt, FaFacebook} from 'react-icons/fa';
@@ -605,7 +605,6 @@ const Media = () => {
                         {filteredItems.map((item, index) => (
                             <motion.div
                                 key={item.id}
-                                variants={item}
                                 initial="hidden"
                                 animate="show"
                                 whileHover={{
