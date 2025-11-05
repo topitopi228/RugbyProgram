@@ -34,7 +34,7 @@ const AboutUs = () => {
                 funding: '10,000-13,000 €'
             },
             event2: {
-                date: '18-23 Листопада 2025',
+                date: '19-25 Листопада 2025',
                 title: 'Найважливіше НТЗ',
                 description: 'за участю провідних іноземних тренерів',
                 location: 'м. Батумі, Грузія',
@@ -94,7 +94,7 @@ const AboutUs = () => {
                 funding: '12,000 - 14,000 €'
             },
             event2: {
-                date: '18-23 November 2025',
+                date: '19-25 November 2025',
                 title: 'Key Training Camp',
                 description: 'with leading foreign coaches',
                 location: 'Batumi, Georgia',
@@ -154,7 +154,7 @@ const AboutUs = () => {
                 funding: '12 000 - 14 000 €'
             },
             event2: {
-                date: '2026. november 18-23.',
+                date: '2026. november 19-25.',
                 title: 'Legfontosabb Edzőtábor',
                 description: 'vezető külföldi edzőkkel',
                 location: 'Batumi, Grúzia',
