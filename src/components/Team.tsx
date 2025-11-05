@@ -276,8 +276,8 @@ const Team = () => {
                 {/* Players Section */}
                 {renderTeamSection(t.players,
                     [
-                        {id: 'player11', name: 'Владислав Кошелюк', isCaptain: true},
-                        {id: 'player14', name: 'Олександр Бишук', isViceCaptain: true},
+                        {id: 'player14', name: 'Олександр Бишук', isCaptain: true},
+                        {id: 'player11', name: 'Владислав Кошелюк', isViceCaptain: true},
                         {id: 'player1', name: 'Микола Денбновецький '},
                         {id: 'player2', name: 'Ерік Тіппан'},
                         {id: 'player3', name: 'Володимир Рец'},
