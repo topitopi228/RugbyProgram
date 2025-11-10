@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import SponsorProgram from './components/SponsorProgram';
-import Club from './components/Club';
+import News from './components/News.tsx';
 import Team from './components/Team.tsx';
 import { LanguageProvider } from './components/LanguageContext.tsx';
 import AboutUs from './components/AboutUs.tsx';
@@ -50,7 +50,7 @@ const App: React.FC = () => {
                             <Route path="/" element={<SponsorProgram/>}/>
                             <Route path="/team" element={<Team/>}/>
                             <Route path="/about" element={<AboutUs/>}/>
-                            <Route path="/club" element={<Club/>}/>
+                            <Route path="/club" element={<News/>}/>
                             <Route path="/stadium" element={<Sponsors/>}/>
                             <Route path="/contact" element={<Media/>}/>
                             <Route path="/benefits" element={<ClubBenefits/>}/>

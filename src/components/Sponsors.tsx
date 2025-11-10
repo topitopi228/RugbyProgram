@@ -24,44 +24,44 @@ const Sponsors = () => {
             becomeSponsor: 'Підтримати',
             companySponsorsList: [
                 {
-                    image: '/spin-4.png',
+                    image: '/spin-4.webp',
                     name: 'БФ "Міла" Олексія Юренка',
                     url: 'https://www.facebook.com/p/%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%B4%D1%96%D0%B9%D0%BD%D0%B8%D0%B9-%D0%A4%D0%BE%D0%BD%D0%B4-%D0%9C%D0%86%D0%9B%D0%90-%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D1%96%D1%8F-%D0%AE%D1%80%D0%B5%D0%BD%D0%BA%D0%B0-61572065630183/'
                 },
                 {
-                    image: '/spin-3.png',
+                    image: '/spin-3.webp',
                     name: 'Федерація регбі України',
                     url: 'https://rugby.org.ua/'
                 },
                 {
-                    image: '/spin-2.png',
+                    image: '/spin-2.webp',
                     name: 'БФ "Nova Ukraine"',
                     url: 'https://novaukraine.org/'
                 },
                 {
-                    image: '/spin-1.png',
+                    image: '/spin-1.webp',
                     name: 'Готель-ресторан "Згарда"',
                     url: 'https://www.instagram.com/zgardadragobrat/'
                 },
             ],
             personalSponsorsList: [
                 {
-                    image: '/spon1.png',
+                    image: '/spon1.webp',
                     name: 'ШАНДОР ФЕДІР',
                     position: 'Посол України в Угорщині, президент федерації регбі Закарпатської області',
                 },
                 {
-                    image: '/spon2.png',
+                    image: '/spon2.webp',
                     name: 'БАЖЕНКОВ ЄВГЕН',
                     position: 'Президент федерації регбі України',
                 },
                 {
-                    image: '/spon3.png',
+                    image: '/spon3.webp',
                     name: 'БИХОВ РОМАН',
                     position: 'Президент федерації регбі Харківської області',
                 },
                 {
-                    image: '/spon4.png',
+                    image: '/spon4.webp',
                     name: 'ПОТАПЕНКО ОЛЕКСАНДР',
                     position: 'Президент Київської міської федерації регбі',
                 },
@@ -71,12 +71,12 @@ const Sponsors = () => {
                     position: 'Український підприємець, меценат, президент федерації регбі Одещини',
                 },
                 {
-                    image: '/spon6.jpeg',
+                    image: '/spon6.webp',
                     name: 'ЮРЕНКО ОЛЕКСІЙ',
                     position: 'Засновник БФ "Міла", підприємець',
                 },
                 {
-                    image: '/spon7.jpg',
+                    image: '/spon7.webp',
                     name: 'ПEТЬОВКА АНДРІЙ',
                     position: 'Підприємець, меценат спорту',
                 },
@@ -86,12 +86,12 @@ const Sponsors = () => {
                     position: 'Підприємець, інвестор',
                 },
                 {
-                    image: '/spon9.jpg',
+                    image: '/spon9.webp',
                     name: 'АДАМИК ПЕТРО',
                     position: 'Бізнесмен, меценат,резидент федерації регбі Львівщини',
                 },
                 {
-                    image: '/spon10.jpg',
+                    image: '/spon10.webp',
                     name: 'Brent Impey',
                     position: 'Бізнесмен, меценат',
                 },
@@ -115,44 +115,44 @@ const Sponsors = () => {
             becomeSponsor: 'Support',
             companySponsorsList: [
                 {
-                    image: '/spin-4.png',
+                    image: '/spin-4.webp',
                     name: 'Charity Fund "Mila" by Oleksiy Yurenko',
                     url: 'https://mila.help/'
                 },
                 {
-                    image: '/spin-3.png',
+                    image: '/spin-3.webp',
                     name: 'Ukraine Rugby Union',
                     url: 'https://rugby.org.ua/'
                 },
                 {
-                    image: '/spin-2.png',
+                    image: '/spin-2.webp',
                     name: 'Charity Fund "Nova Ukraine"',
                     url: 'https://novaukraine.org/'
                 },
                 {
-                    image: '/spin-1.png',
+                    image: '/spin-1.webp',
                     name: 'Restaurant-Hotel "Zharda"',
                     url: 'https://www.instagram.com/zgardarestaurant/'
                 },
             ],
             personalSponsorsList: [
                 {
-                    image: '/spon1.png',
+                    image: '/spon1.webp',
                     name: 'FEDIR SHANDOR',
                     position: 'Ambassador of Ukraine to Hungary, President of the Zakarpattia Regional Rugby Federation',
                 },
                 {
-                    image: '/spon2.png',
+                    image: '/spon2.webp',
                     name: 'YEVHEN BAZHENKOV',
                     position: 'President of the Ukraine Rugby Union',
                 },
                 {
-                    image: '/spon3.png',
+                    image: '/spon3.webp',
                     name: 'ROMAN BIKHOV',
                     position: 'President of the Kharkiv Regional Rugby Federation',
                 },
                 {
-                    image: '/spon4.png',
+                    image: '/spon4.webp',
                     name: 'OLEKSANDR POTAPENKO',
                     position: 'President of the Kyiv City Rugby Federation',
                 },
@@ -162,12 +162,12 @@ const Sponsors = () => {
                     position: 'Ukrainian entrepreneur, philanthropist, President of the Odesa Regional Rugby Federation',
                 },
                 {
-                    image: '/spon6.jpeg',
+                    image: '/spon6.webp',
                     name: 'OLEKSIY YURENKO',
                     position: 'Founder of "Mila" Charity Fund, entrepreneur',
                 },
                 {
-                    image: '/spon7.jpg',
+                    image: '/spon7.webp',
                     name: 'ANDRII PITOVKA',
                     position: 'Entrepreneur, sports patron',
                 },
@@ -177,7 +177,7 @@ const Sponsors = () => {
                     position: 'Entrepreneur, investor',
                 },
                 {
-                    image: '/spon9.jpg',
+                    image: '/spon9.webp',
                     name: 'PETRO ADAMYK',
                     position: 'Businessman, philanthropist',
                 },
@@ -200,44 +200,44 @@ const Sponsors = () => {
             becomeSponsor: 'Támogatás',
             companySponsorsList: [
                 {
-                    image: '/spin-4.png',
+                    image: '/spin-4.webp',
                     name: 'Jótékonysági Alap "Mila" Olekszij Jurenko',
                     url: 'https://mila.help/'
                 },
                 {
-                    image: '/spin-3.png',
+                    image: '/spin-3.webp',
                     name: 'Ukrajnai Rögbi Szövetség',
                     url: 'https://rugby.org.ua/'
                 },
                 {
-                    image: '/spin-2.png',
+                    image: '/spin-2.webp',
                     name: 'Jótékonysági Alap "Nova Ukraine"',
                     url: 'https://novaukraine.org/'
                 },
                 {
-                    image: '/spin-1.png',
+                    image: '/spin-1.webp',
                     name: 'Étterem-Szálló "Zharda"',
                     url: 'https://www.instagram.com/zgardarestaurant/'
                 },
             ],
             personalSponsorsList: [
                 {
-                    image: '/spon1.png',
+                    image: '/spon1.webp',
                     name: 'FEDIR SHANDOR',
                     position: 'Ukrajna magyarországi nagykövete, a Kárpátaljai Területi Rögbi Szövetség elnöke',
                 },
                 {
-                    image: '/spon2.png',
+                    image: '/spon2.webp',
                     name: 'YEVHEN BAZHENKOV',
                     position: 'Az Ukrán Rögbi Szövetség elnöke',
                 },
                 {
-                    image: '/spon3.png',
+                    image: '/spon3.webp',
                     name: 'ROMAN BIKHOV',
                     position: 'A Harkovi Területi Rögbi Szövetség elnöke',
                 },
                 {
-                    image: '/spon4.png',
+                    image: '/spon4.webp',
                     name: 'OLEKSANDR POTAPENKO',
                     position: 'A Kijevi Városi Rögbi Szövetség elnöke',
                 },
@@ -247,12 +247,12 @@ const Sponsors = () => {
                     position: 'Ukrán vállalkozó, mecénás, az Odeszai Területi Rögbi Szövetség elnöke',
                 },
                 {
-                    image: '/spon6.jpeg',
+                    image: '/spon6.webp',
                     name: 'OLEKSIY YURENKO',
                     position: 'A "Mila" Alapítvány alapítója, vállalkozó',
                 },
                 {
-                    image: '/spon7.jpg',
+                    image: '/spon7.webp',
                     name: 'ANDRII PITOVKA',
                     position: 'Vállalkozó, sporttámogató',
                 },
@@ -262,7 +262,7 @@ const Sponsors = () => {
                     position: 'Vállalkozó, befektető',
                 },
                 {
-                    image: '/spon9.jpg',
+                    image: '/spon9.webp',
                     name: 'PETRO ADAMYK',
                     position: 'Üzletember, mecénás',
                 },
@@ -687,267 +687,302 @@ const Sponsors = () => {
                 </motion.div>
 
                 {/* Become a Sponsor Benefits Section */}
-                <motion.div 
+                <motion.div
                     className="relative py-20 overflow-hidden"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1}}
+                    viewport={{once: true}}
+                    transition={{duration: 0.8}}
                 >
                     {/* Animated background elements */}
                     <div className="absolute inset-0 -z-10">
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/30 via-transparent to-amber-900/20"></div>
-                        <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                        <div
+                            className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/30 via-transparent to-amber-900/20"></div>
+                        <div
+                            className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <div
+                            className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
                     </div>
 
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <motion.div 
-                            className="text-center mb-16"
-                            initial={{ y: 30, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6 }}
+                        {/* News Benefits Promo Section */}
+                        <motion.div
+                            className="mt-20 mb-20 relative overflow-hidden"
+                            initial={{opacity: 0, y: 40}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: true}}
+                            transition={{duration: 0.8}}
                         >
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
-                                {language === 'UA' ? 'Переваги нам допомагати' :
-                                 language === 'EN' ? 'Why Become Our Sponsor?' : 
-                                 'Miért legyen szponzorunk?'}
-                            </h2>
-                            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                                {language === 'UA' ? 'Приєднуйтесь до нашої місії та отримайте унікальні можливості для вашого бренду' :
-                                 language === 'EN' ? 'Join our mission and get unique opportunities for your brand' :
-                                 'Csatlakozzon küldetésünkhöz, és kapjon egyedi lehetőségeket márkájának'}
-                            </p>
-                        </motion.div>
+                            <div
+                                className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 via-amber-500/10 to-yellow-500/10 backdrop-blur-sm rounded-3xl"/>
+                            <div className="absolute inset-0 overflow-hidden opacity-20">
+                                <div
+                                    className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"/>
+                                <div
+                                    className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"/>
+                            </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {[
-                                {
-                                    icon: (
-                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                    ),
-                                    title: language === 'UA' ? 'Глобальне висвітлення' : 
-                                           language === 'EN' ? 'Global Exposure' : 'Globális láthatóság',
-                                    description: language === 'UA' ? 'Ваш бренд побачать по всьому світу через наші міжнародні змагання та медіа-покриття' :
-                                                language === 'EN' ? 'Your brand will be seen worldwide through our international competitions and media coverage' :
-                                                'Márkádat a világ minden táján látni fogják nemzetközi versenyeinken és médialefedettségünkön keresztül'
-                                },
-                                {
-                                    icon: (
-                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                                        </svg>
-                                    ),
-                                    title: language === 'UA' ? 'Реклама на екіпіруванні' :
-                                           language === 'EN' ? 'Kit Branding' : 'Felszerelésre nyomtatott reklám',
-                                    description: language === 'UA' ? 'Логотип вашого бренду буде розміщено на екіпіруванні команди під час всіх матчів та заходів' :
-                                                language === 'EN' ? 'Your brand logo will be featured on team kits during all matches and events' :
-                                                'Márkajelzésed a csapat mezein lesz látható minden mérkőzésen és eseményen'
-                                },
-                                {
-                                    icon: (
-                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                                        </svg>
-                                    ),
-                                    title: language === 'UA' ? 'Онлайн-присутність' :
-                                           language === 'EN' ? 'Online Presence' : 'Online jelenlét',
-                                    description: language === 'UA' ? 'Згадки та логотипи на наших соціальних мережах, вебсайті та цифрових матеріалах' :
-                                                language === 'EN' ? 'Mentions and logos on our social media, website, and digital materials' :
-                                                'Megemlítések és logók közösségi média felületeinken, weboldalunkon és digitális anyagainkon'
-                                },
-                                {
-                                    icon: (
-                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                                        </svg>
-                                    ),
-                                    title: language === 'UA' ? 'Мережування' :
-                                           language === 'EN' ? 'Networking' : 'Hálózatépítés',
-                                    description: language === 'UA' ? 'Доступ до ексклюзивних заходів та можливість знайомства з іншими спонсорами та партнерами' :
-                                                language === 'EN' ? 'Access to exclusive events and opportunities to connect with other sponsors and partners' :
-                                                'Kizárólagos eseményekhez való hozzáférés és lehetőségek más szponzorokkal és partnerekkel való kapcsolatfelvételre'
-                                },
-                                {
-                                    icon: (
-                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                    ),
-                                    title: language === 'UA' ? 'Підтримка молодіжного спорту' :
-                                           language === 'EN' ? 'Youth Sports Support' : 'Ifjúsági sport támogatása',
-                                    description: language === 'UA' ? 'Допоможіть нам надихати та підтримувати молодих спортсменів у здобутті їхніх мрій' :
-                                                language === 'EN' ? 'Help us inspire and support young athletes in achieving their dreams' :
-                                                'Segítsen nekünk megihletni és támogatni a fiatal sportolókat álmaik megvalósításában'
-                                },
-                                {
-                                    icon: (
-                                        <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                        </svg>
-                                    ),
-                                    title: language === 'UA' ? 'Підтримка України' :
-                                           language === 'EN' ? 'Supporting Ukraine' : 'Ukrajna támogatása',
-                                    description: language === 'UA' ? 'Допоможіть нам представляти Україну на міжнародній арені та підтримувати позитивний імідж нашої країни' :
-                                                language === 'EN' ? 'Help us represent Ukraine internationally and support the positive image of our country' :
-                                                'Segítsen nekünk Ukrajnát nemzetközileg képviselni és országunk pozitív imázsát támogatni'
-                                }
-                            ].map((benefit, index) => (
+                            <div className="relative z-10 text-center px-6 py-16 md:py-20">
+                                {/* Badge */}
                                 <motion.div
-                                    key={index}
-                                    className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/10"
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    whileHover={{ 
-                                        scale: 1.02,
-                                        boxShadow: '0 10px 25px -5px rgba(234, 179, 8, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
-                                    }}
+                                    initial={{scale: 0, opacity: 0}}
+                                    whileInView={{scale: 1, opacity: 1}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.2, type: "spring", stiffness: 200}}
+                                    className="inline-flex items-center gap-2 bg-yellow-500/20 border border-yellow-400/50 rounded-full px-6 py-2 mb-6"
                                 >
-                                    <div className="w-16 h-16 bg-yellow-400/10 rounded-xl flex items-center justify-center mb-6">
-                                        {benefit.icon}
-                                    </div>
-                                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                                    <p className="text-gray-300">{benefit.description}</p>
-                                </motion.div>
-                            ))}
-                        </div>
-                        {/* Club Benefits Promo Section */}
-<motion.div
-    className="mt-20 mb-20 relative overflow-hidden"
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8 }}
->
-    <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 via-amber-500/10 to-yellow-500/10 backdrop-blur-sm rounded-3xl" />
-    <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000" />
-    </div>
-
-    <div className="relative z-10 text-center px-6 py-16 md:py-20">
-        {/* Badge */}
-        <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="inline-flex items-center gap-2 bg-yellow-500/20 border border-yellow-400/50 rounded-full px-6 py-2 mb-6"
-        >
-            <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <span className="text-yellow-300 font-bold text-sm uppercase">
+                                    <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                    <span className="text-yellow-300 font-bold text-sm uppercase">
                 {language === 'UA' ? 'Спеціальна пропозиція' :
-                 language === 'EN' ? 'Special Offer' :
-                 'Különleges Ajánlat'}
+                    language === 'EN' ? 'Special Offer' :
+                        'Különleges Ajánlat'}
             </span>
-        </motion.div>
+                                </motion.div>
 
-        {/* Main Title */}
-        <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent"
-        >
-            {language === 'UA' ? '🏆 Клуб "Олімпійська Надія"' :
-             language === 'EN' ? '🏆 Club "Olympic Hope"' :
-             '🏆  Klub "Olimpiai Remény"'}
-        </motion.h2>
+                                {/* Main Title */}
+                                <motion.h2
+                                    initial={{opacity: 0, y: 20}}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.3, duration: 0.6}}
+                                    className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent"
+                                >
+                                    {language === 'UA' ? '🏆 Клуб "Олімпійська Надія"' :
+                                        language === 'EN' ? '🏆 News "Olympic Hope"' :
+                                            '🏆  Klub "Olimpiai Remény"'}
+                                </motion.h2>
 
-        {/* Subtitle */}
-        <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl md:text-2xl text-white font-semibold mb-4 max-w-4xl mx-auto"
-        >
-            {language === 'UA' ? 'Станьте частиною елітного клубу з ексклюзивними привілеями!' :
-             language === 'EN' ? 'Become part of an elite club with exclusive privileges!' :
-             'Legyen része egy elit klubnak exkluzív előnyökkel!'}
-        </motion.p>
+                                {/* Subtitle */}
+                                <motion.p
+                                    initial={{opacity: 0, y: 20}}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.4, duration: 0.6}}
+                                    className="text-xl md:text-2xl text-white font-semibold mb-4 max-w-4xl mx-auto"
+                                >
+                                    {language === 'UA' ? 'Станьте частиною елітного клубу з ексклюзивними привілеями!' :
+                                        language === 'EN' ? 'Become part of an elite club with exclusive privileges!' :
+                                            'Legyen része egy elit klubnak exkluzív előnyökkel!'}
+                                </motion.p>
 
-        {/* Description */}
-        <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
-        >
-            {language === 'UA' ?
-                'VIP-доступ на матчі • Персональна форма • Ваше ім\'я в історії • Білети на Олімпіаду • і ще багато іншого!' :
-             language === 'EN' ?
-                'VIP match access • Personal uniform • Your name in history • Olympic tickets • and much more!' :
-             'VIP meccs hozzáférés • Személyes egyenruha • Neved a történelemben • Olimpiai jegyek • és még sok más!'}
-        </motion.p>
+                                {/* Description */}
+                                <motion.p
+                                    initial={{opacity: 0, y: 20}}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.5, duration: 0.6}}
+                                    className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+                                >
+                                    {language === 'UA' ?
+                                        'VIP-доступ на матчі • Персональна форма • Ваше ім\'я в історії • Білети на Олімпіаду • і ще багато іншого!' :
+                                        language === 'EN' ?
+                                            'VIP match access • Personal uniform • Your name in history • Olympic tickets • and much more!' :
+                                            'VIP meccs hozzáférés • Személyes egyenruha • Neved a történelemben • Olimpiai jegyek • és még sok más!'}
+                                </motion.p>
 
-        {/* Benefits Icons */}
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-4 mb-10 max-w-2xl mx-auto"
-        >
-            {[
-                { icon: '🎖️', text: language === 'UA' ? 'Ексклюзивний статус' : language === 'EN' ? 'Exclusive status' : 'Exkluzív státusz' },
-                { icon: '🏅', text: language === 'UA' ? 'Персональний мерч' : language === 'EN' ? 'Personal merch' : 'Személyes merchandising' },
-                { icon: '🎯', text: language === 'UA' ? 'VIP-привілеї' : language === 'EN' ? 'VIP privileges' : 'VIP előnyök' },
-                { icon: '✨', text: language === 'UA' ? 'Унікальні можливості' : language === 'EN' ? 'Unique opportunities' : 'Egyedi lehetőségek' }
-            ].map((item, idx) => (
-                <div key={idx} className="flex items-center gap-2 bg-white/5 backdrop-blur-sm rounded-full px-4 py-2 border border-yellow-500/30">
-                    <span className="text-2xl">{item.icon}</span>
-                    <span className="text-gray-300 text-sm font-medium">{item.text}</span>
-                </div>
-            ))}
-        </motion.div>
+                                {/* Benefits Icons */}
+                                <motion.div
+                                    initial={{opacity: 0, y: 20}}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.6, duration: 0.6}}
+                                    className="flex flex-wrap justify-center gap-4 mb-10 max-w-2xl mx-auto"
+                                >
+                                    {[
+                                        {
+                                            icon: '🎖️',
+                                            text: language === 'UA' ? 'Ексклюзивний статус' : language === 'EN' ? 'Exclusive status' : 'Exkluzív státusz'
+                                        },
+                                        {
+                                            icon: '🏅',
+                                            text: language === 'UA' ? 'Персональний мерч' : language === 'EN' ? 'Personal merch' : 'Személyes merchandising'
+                                        },
+                                        {
+                                            icon: '🎯',
+                                            text: language === 'UA' ? 'VIP-привілеї' : language === 'EN' ? 'VIP privileges' : 'VIP előnyök'
+                                        },
+                                        {
+                                            icon: '✨',
+                                            text: language === 'UA' ? 'Унікальні можливості' : language === 'EN' ? 'Unique opportunities' : 'Egyedi lehetőségek'
+                                        }
+                                    ].map((item, idx) => (
+                                        <div key={idx}
+                                             className="flex items-center gap-2 bg-white/5 backdrop-blur-sm rounded-full px-4 py-2 border border-yellow-500/30">
+                                            <span className="text-2xl">{item.icon}</span>
+                                            <span className="text-gray-300 text-sm font-medium">{item.text}</span>
+                                        </div>
+                                    ))}
+                                </motion.div>
 
-        {/* CTA Button */}
-        <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.7, type: "spring", stiffness: 200 }}
-            onClick={() => navigate('/benefits')}
-            className="group relative px-10 py-5 bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900 font-bold text-lg rounded-full overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/50"
-        >
+                                {/* CTA Button */}
+                                <motion.button
+                                    initial={{opacity: 0, scale: 0.9}}
+                                    whileInView={{opacity: 1, scale: 1}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.7, type: "spring", stiffness: 200}}
+                                    onClick={() => navigate('/benefits')}
+                                    className="group relative px-10 py-5 bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900 font-bold text-lg rounded-full overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/50"
+                                >
             <span className="relative z-10 flex items-center gap-2">
                 {language === 'UA' ? 'Дізнатися більше про переваги' :
-                 language === 'EN' ? 'Discover the Benefits' :
-                 'Fedezze fel az előnyöket'}
-                <svg className="w-6 h-6 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    language === 'EN' ? 'Discover the Benefits' :
+                        'Fedezze fel az előnyöket'}
+                <svg className="w-6 h-6 transition-transform group-hover:translate-x-1" fill="none"
+                     stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
             </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </motion.button>
+                                    <span
+                                        className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+                                </motion.button>
 
-        {/* Additional Info */}
-        <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="mt-6 text-sm text-gray-400"
-        >
-            {language === 'UA' ? '⚡ Обмежена кількість місць - тільки 100 членів!' :
-             language === 'EN' ? '⚡ Limited slots - only 100 members!' :
-             '⚡ Korlátozott helyek - csak 100 tag!'}
-        </motion.p>
-    </div>
-</motion.div>
+                                {/* Additional Info */}
+                                <motion.p
+                                    initial={{opacity: 0}}
+                                    whileInView={{opacity: 1}}
+                                    viewport={{once: true}}
+                                    transition={{delay: 0.8, duration: 0.6}}
+                                    className="mt-6 text-sm text-gray-400"
+                                >
+                                    {language === 'UA' ? '⚡ Обмежена кількість місць - тільки 100 членів!' :
+                                        language === 'EN' ? '⚡ Limited slots - only 100 members!' :
+                                            '⚡ Korlátozott helyek - csak 100 tag!'}
+                                </motion.p>
+                            </div>
+                        </motion.div>
 
                     </div>
                 </motion.div>
+                <motion.div
+                    className="text-center mb-16"
+                    initial={{y: 30, opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    viewport={{once: true}}
+                    transition={{duration: 0.6}}
+                >
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
+                        {language === 'UA' ? 'Переваги нам допомагати' :
+                            language === 'EN' ? 'Why Become Our Sponsor?' :
+                                'Miért legyen szponzorunk?'}
+                    </h2>
+                    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                        {language === 'UA' ? 'Приєднуйтесь до нашої місії та отримайте унікальні можливості для вашого бренду' :
+                            language === 'EN' ? 'Join our mission and get unique opportunities for your brand' :
+                                'Csatlakozzon küldetésünkhöz, és kapjon egyedi lehetőségeket márkájának'}
+                    </p>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {[
+                        {
+                            icon: (
+                                <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            ),
+                            title: language === 'UA' ? 'Глобальне висвітлення' :
+                                language === 'EN' ? 'Global Exposure' : 'Globális láthatóság',
+                            description: language === 'UA' ? 'Ваш бренд побачать по всьому світу через наші міжнародні змагання та медіа-покриття' :
+                                language === 'EN' ? 'Your brand will be seen worldwide through our international competitions and media coverage' :
+                                    'Márkádat a világ minden táján látni fogják nemzetközi versenyeinken és médialefedettségünkön keresztül'
+                        },
+                        {
+                            icon: (
+                                <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                                </svg>
+                            ),
+                            title: language === 'UA' ? 'Реклама на екіпіруванні' :
+                                language === 'EN' ? 'Kit Branding' : 'Felszerelésre nyomtatott reklám',
+                            description: language === 'UA' ? 'Логотип вашого бренду буде розміщено на екіпіруванні команди під час всіх матчів та заходів' :
+                                language === 'EN' ? 'Your brand logo will be featured on team kits during all matches and events' :
+                                    'Márkajelzésed a csapat mezein lesz látható minden mérkőzésen és eseményen'
+                        },
+                        {
+                            icon: (
+                                <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                          d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                </svg>
+                            ),
+                            title: language === 'UA' ? 'Онлайн-присутність' :
+                                language === 'EN' ? 'Online Presence' : 'Online jelenlét',
+                            description: language === 'UA' ? 'Згадки та логотипи на наших соціальних мережах, вебсайті та цифрових матеріалах' :
+                                language === 'EN' ? 'Mentions and logos on our social media, website, and digital materials' :
+                                    'Megemlítések és logók közösségi média felületeinken, weboldalunkon és digitális anyagainkon'
+                        },
+                        {
+                            icon: (
+                                <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                </svg>
+                            ),
+                            title: language === 'UA' ? 'Мережування' :
+                                language === 'EN' ? 'Networking' : 'Hálózatépítés',
+                            description: language === 'UA' ? 'Доступ до ексклюзивних заходів та можливість знайомства з іншими спонсорами та партнерами' :
+                                language === 'EN' ? 'Access to exclusive events and opportunities to connect with other sponsors and partners' :
+                                    'Kizárólagos eseményekhez való hozzáférés és lehetőségek más szponzorokkal és partnerekkel való kapcsolatfelvételre'
+                        },
+                        {
+                            icon: (
+                                <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                          d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            ),
+                            title: language === 'UA' ? 'Підтримка молодіжного спорту' :
+                                language === 'EN' ? 'Youth Sports Support' : 'Ifjúsági sport támogatása',
+                            description: language === 'UA' ? 'Допоможіть нам надихати та підтримувати молодих спортсменів у здобутті їхніх мрій' :
+                                language === 'EN' ? 'Help us inspire and support young athletes in achieving their dreams' :
+                                    'Segítsen nekünk megihletni és támogatni a fiatal sportolókat álmaik megvalósításában'
+                        },
+                        {
+                            icon: (
+                                <svg className="w-12 h-12 text-yellow-400" fill="none" stroke="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                </svg>
+                            ),
+                            title: language === 'UA' ? 'Підтримка України' :
+                                language === 'EN' ? 'Supporting Ukraine' : 'Ukrajna támogatása',
+                            description: language === 'UA' ? 'Допоможіть нам представляти Україну на міжнародній арені та підтримувати позитивний імідж нашої країни' :
+                                language === 'EN' ? 'Help us represent Ukraine internationally and support the positive image of our country' :
+                                    'Segítsen nekünk Ukrajnát nemzetközileg képviselni és országunk pozitív imázsát támogatni'
+                        }
+                    ].map((benefit, index) => (
+                        <motion.div
+                            key={index}
+                            className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-yellow-400/10"
+                            initial={{opacity: 0, y: 30}}
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: true}}
+                            transition={{duration: 0.5, delay: index * 0.1}}
+                            whileHover={{
+                                scale: 1.02,
+                                boxShadow: '0 10px 25px -5px rgba(234, 179, 8, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+                            }}
+                        >
+                            <div
+                                className="w-16 h-16 bg-yellow-400/10 rounded-xl flex items-center justify-center mb-6">
+                                {benefit.icon}
+                            </div>
+                            <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                            <p className="text-gray-300">{benefit.description}</p>
+                        </motion.div>
+                    ))}
+                </div>
 
                 {/* Company Sponsors Section */}
                 <div className="max-w-7xl mx-auto mt-10">

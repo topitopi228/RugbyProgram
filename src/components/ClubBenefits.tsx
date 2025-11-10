@@ -135,10 +135,10 @@ const ClubBenefits = () => {
             heroTitle: 'Olympic Hope',
             heroSubtitle: 'Exclusive benefits for Ukraine U16 Rugby-7 national team sponsors',
             heroDescription: 'Join the elite club supporting Ukrainian sports and gain unique opportunities',
-            joinButton: 'Join the Club',
+            joinButton: 'Join the News',
 
-            aboutTitle: 'About Club "Olympic Hope"',
-            aboutDescription: 'Club "Olympic Hope" is a unique opportunity to become part of Ukrainian rugby history. We unite the 100 most dedicated sponsors who support Ukraine\'s U16 youth team and believe in the future of Ukrainian sports - it\'s an investment in young Ukrainians, sports, and the country\'s progress.',
+            aboutTitle: 'About News "Olympic Hope"',
+            aboutDescription: 'News "Olympic Hope" is a unique opportunity to become part of Ukrainian rugby history. We unite the 100 most dedicated sponsors who support Ukraine\'s U16 youth team and believe in the future of Ukrainian sports - it\'s an investment in young Ukrainians, sports, and the country\'s progress.',
 
             membershipTitle: 'Membership starts from monthly contribution',
             membershipAmount: '5 000 ₴',
@@ -180,7 +180,7 @@ const ClubBenefits = () => {
                 {
                     icon: 'olympic',
                     title: 'Official Status',
-                    description: 'Named Club "100" membership certificate, recognition in the official community, and sponsor resource marking'
+                    description: 'Named News "100" membership certificate, recognition in the official community, and sponsor resource marking'
                 },
                 {
                     icon: 'activity',
@@ -189,17 +189,17 @@ const ClubBenefits = () => {
                 },
             ],
 
-            levelsTitle: 'Club "100" Membership Levels',
+            levelsTitle: 'News "100" Membership Levels',
             levels: [
                 {
                     name: 'Starter',
                     amount: '5 000 ₴',
                     color: 'from-gray-600 to-gray-800',
                     benefits: [
-                        'Official Club membership certificate',
+                        'Official News membership certificate',
                         'Logo on website among sponsors',
                         'Monthly team updates',
-                        'Exclusive Club "100" merchandise'
+                        'Exclusive News "100" merchandise'
                     ]
                 },
                 {
@@ -243,13 +243,13 @@ const ClubBenefits = () => {
             attributesTitle: 'Attributes and Uniform',
             attributesDescription: 'Each sponsor receives exclusive attributes demonstrating your support and status',
 
-            firstMembersTitle: 'First Club Members',
+            firstMembersTitle: 'First News Members',
             firstMembersSubtitle: 'Become one of the first 100 members of the elite club',
             slotsAvailable: 'Slots Available',
 
             ctaTitle: 'Ready to Become Part of History?',
-            ctaDescription: 'Join Club "100" and help young athletes reach Olympic heights',
-            ctaButton: 'Join Club "100"',
+            ctaDescription: 'Join News "100" and help young athletes reach Olympic heights',
+            ctaButton: 'Join News "100"',
 
             backButton: 'Back to Sponsors'
         },
