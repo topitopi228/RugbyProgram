@@ -311,7 +311,7 @@ const SponsorProgram = () => {
                                 whileInView={{scale: 1}}
                                 viewport={{once: true}}
                                 transition={{duration: 1}}
-                                src="/spon_1.jpg"
+                                src="/iq1.webp"
                                 alt="Rugby team training"
                                 className="w-full h-full object-cover"
                             />
@@ -330,7 +330,7 @@ const SponsorProgram = () => {
                             whileInView={{scale: 1}}
                             viewport={{once: true}}
                             transition={{duration: 1}}
-                            src="/spon_2.png"
+                            src="/iq2.webp"
                             alt="Rugby team in action"
                             className="w-full h-full object-cover"
                         />
