@@ -450,7 +450,7 @@ const Team = () => {
                                                 <div
                                                     className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-24 flex items-center">
                                                     <img
-                                                        src={`/spin-${num}.png`}
+                                                        src={`/spin-${num}.webp`}
                                                         alt={`Sponsor ${num}`}
                                                         className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
                                                     />
@@ -463,7 +463,7 @@ const Team = () => {
                                                 <div
                                                     className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-24 flex items-center">
                                                     <img
-                                                        src={`/spin-${num}.png`}
+                                                        src={`/spin-${num}.webp`}
                                                         alt={`Sponsor ${num}`}
                                                         className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
                                                     />
