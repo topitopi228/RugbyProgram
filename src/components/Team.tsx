@@ -150,8 +150,8 @@ const Team = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {items.map((item) => {
-                    const imagePath = `/${item.id}.jpg`;
-                    const fallbackImagePath = `/${item.id}.png`;
+                    const imagePath = `/${item.id}.webp`;
+                    const fallbackImagePath = `/${item.id}.webp`;
 
                     return (
                         <motion.div
