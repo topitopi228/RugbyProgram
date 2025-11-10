@@ -143,107 +143,6 @@ const Media = () => {
             try {
                 const items: MediaItem[] = [
                     {
-                        id: 1,
-                        type: 'video',
-                        url: '/media12.webm',
-                        poster: '/media12_poster.jpg',
-                        title: {UA: 'Тренування U16', EN: 'U16 Training', HUN: 'U16 Mérkőzés'},
-                        category: 'matches'
-                    },
-                    {
-                        id: 3,
-                        type: 'video',
-                        url: '/media15.webm',
-                        poster: '/media15_poster.jpg',
-                        title: {UA: 'Командні тренування', EN: 'Team Training', HUN: 'Csapat edzés'},
-                        category: 'training'
-                    },
-                    {
-                        id: 4,
-                        type: 'video',
-                        url: '/media16.webm',
-                        poster: '/media16_poster.jpg',
-                        title: {UA: 'Турнірні ігри', EN: 'Tournament Games', HUN: 'Torna mérkőzések'},
-                        category: 'matches'
-                    },
-                    {
-                        id: 5,
-                        type: 'video',
-                        url: '/media17.webm',
-                        poster: '/media17_poster.jpg',
-                        title: {
-                            UA: 'Майстер-клас з гри в захисті',
-                            EN: 'Defense Masterclass',
-                            HUN: 'Védekezési mesterfokon'
-                        },
-                        category: 'training'
-                    },
-                    {
-                        id: 6,
-                        type: 'video',
-                        url: '/media18.webm',
-                        poster: '/media18_poster.jpg',
-                        title: {UA: 'Атакувальні комбінації', EN: 'Attacking Combinations', HUN: 'Támadó kombinációk'},
-                        category: 'training'
-                    },
-                    {
-                        id: 7,
-                        type: 'video',
-                        url: '/media19.webm',
-                        poster: '/media19_poster.jpg',
-                        title: {UA: 'Перемога в турнірі', EN: 'Win in the tournament', HUN: 'Bedobások és rúgások'},
-                        category: 'matches'
-                    },
-                    {
-                        id: 8,
-                        type: 'video',
-                        url: '/media20.webm',
-                        poster: '/media20_poster.jpg',
-                        title: {UA: 'Швидкісні тренування', EN: 'Speed Training', HUN: 'Gyorsasági edzés'},
-                        category: 'training'
-                    },
-                    {
-                        id: 9,
-                        type: 'video',
-                        url: '/media21.webm',
-                        poster: '/media21_poster.jpg',
-                        title: {UA: 'Тренувальний збір', EN: 'Training Camp', HUN: 'Edzőtábor'},
-                        category: 'training'
-                    },
-                    {
-                        id: 11,
-                        type: 'video',
-                        url: '/media2.webm',
-                        poster: '/media2_poster.jpg',
-                        title: {UA: 'Фінальний матч', EN: 'Final Match', HUN: 'Döntő mérkőzés'},
-                        category: 'matches'
-                    },
-                    {
-                        id: 12,
-                        type: 'video',
-                        url: '/media3.webm',
-                        poster: '/media3_poster.jpg',
-                        title: {UA: 'Розминка', EN: 'Final Match', HUN: 'Döntő mérkőzés'},
-                        category: 'training'
-                    },
-                    {
-                        id: 13,
-                        type: 'video',
-                        url: '/media6.webm',
-                        poster: '/media6_poster.jpg',
-                        title: {UA: 'Тренувальний матч', EN: 'Training Match', HUN: 'Döntő mérkőzés'},
-                        category: 'matches'
-                    },
-                    {
-                        id: 14,
-                        type: 'video',
-                        url: '/media7.webm',
-                        poster: '/media7_poster.jpg',
-                        title: {UA: 'Тренування', EN: 'Training', HUN: 'Döntő mérkőzés'},
-                        category: 'matches'
-                    },
-                    // Photo items (drag1.webp to drag10.webp)
-                    {
                         id: 15,
                         type: 'image',
                         url: '/drag1.webp',
@@ -351,9 +250,9 @@ const Media = () => {
 
     const currentItem = mediaItems[currentIndex] || null;
     const filteredItems = activeCategory === 'all' ? mediaItems :
-                     activeCategory === 'videos' ? mediaItems.filter(item => item.category === 'matches' || item.category === 'training') :
-                     activeCategory === 'photos' ? mediaItems.filter(item => item.category === 'photos') :
-                     mediaItems.filter(item => item.category === 'other');
+        activeCategory === 'videos' ? mediaItems.filter(item => item.category === 'matches' || item.category === 'training') :
+            activeCategory === 'photos' ? mediaItems.filter(item => item.category === 'photos') :
+                mediaItems.filter(item => item.category === 'other');
 
     const goToNext = () => {
         const nextIndex = (currentIndex + 1) % filteredItems.length;
@@ -384,7 +283,6 @@ const Media = () => {
 
     const categories = [
         {id: 'all', name: {UA: 'Усі', EN: 'All', HUN: 'Mind'}},
-        {id: 'videos', name: {UA: 'Відео', EN: 'Video', HUN: 'Videó'}},
         {id: 'photos', name: {UA: 'Фото', EN: 'Photos', HUN: 'Fényképek'}},
         {id: 'other', name: {UA: 'Інше', EN: 'Other', HUN: 'Egyéb'}},
     ];
