@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import SponsorProgram from './components/SponsorProgram';
-import News from './components/News.tsx';
-import Team from './components/Team.tsx';
+
+// New refactored pages
+import SponsorProgramPage from './pages/SponsorProgramPage';
+import AboutUsPage from './pages/AboutUsPage';
+import SponsorsPage from './pages/SponsorsPage';
+import TeamPage from './pages/TeamPage';
+import NewsPage from './pages/NewsPage';
+import ClubBenefitsPage from './pages/ClubBenefitsPage';
+import MediaPage from './pages/MediaPage';
+
+// Shared components
 import { LanguageProvider } from './components/LanguageContext.tsx';
-import AboutUs from './components/AboutUs.tsx';
 import Navbar from './components/Navbar';
-import Sponsors from "./components/Sponsors.tsx";
-import Media from "./components/Media.tsx";
-import ClubBenefits from "./components/ClubBenefits.tsx";
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -47,13 +51,13 @@ const App: React.FC = () => {
                         }}
                     >
                         <Routes>
-                            <Route path="/" element={<SponsorProgram/>}/>
-                            <Route path="/team" element={<Team/>}/>
-                            <Route path="/about" element={<AboutUs/>}/>
-                            <Route path="/club" element={<News/>}/>
-                            <Route path="/stadium" element={<Sponsors/>}/>
-                            <Route path="/contact" element={<Media/>}/>
-                            <Route path="/benefits" element={<ClubBenefits/>}/>
+                            <Route path="/" element={<SponsorProgramPage/>}/>
+                            <Route path="/team" element={<TeamPage/>}/>
+                            <Route path="/about" element={<AboutUsPage/>}/>
+                            <Route path="/club" element={<NewsPage/>}/>
+                            <Route path="/stadium" element={<SponsorsPage/>}/>
+                            <Route path="/contact" element={<MediaPage/>}/>
+                            <Route path="/benefits" element={<ClubBenefitsPage/>}/>
                         </Routes>
                     </main>
                 </div>
