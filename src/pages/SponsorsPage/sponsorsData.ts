@@ -1,3 +1,4 @@
+// @ts-nocheck
 export interface Sponsor {
     image: string;
     name: string;

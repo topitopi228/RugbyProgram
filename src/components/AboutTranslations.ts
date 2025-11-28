@@ -8,13 +8,6 @@ export const translations = {
             location: 'м. Лісабон, Португалія',
             funding: '10,000-13,000 €'
         },
-        event2: {
-            date: '19-25 Листопада 2025',
-            title: 'Найважливіше НТЗ',
-            description: 'за участю провідних іноземних тренерів',
-            location: 'м. Батумі, Грузія',
-            funding: '≈15,700 €'
-        },
         event3: {
             date: '25-29 Червня 2026',
             title: 'Міжнародний турнір',
@@ -74,13 +67,6 @@ export const translations = {
             title: 'Tournament - Lisbon 7s',
             location: 'Lisbon, Portugal',
             funding: '12,000 - 14,000 €'
-        },
-        event2: {
-            date: '19-25 November 2025',
-            title: 'Key Training Camp',
-            description: 'with leading foreign coaches',
-            location: 'Batumi, Georgia',
-            funding: '≈15,700 €'
         },
         event3: {
             date: '25-29 June 2026',
@@ -142,13 +128,6 @@ export const translations = {
             location: 'Lisszabon, Portugália',
             funding: '12 000 - 14 000 €'
         },
-        event2: {
-            date: '2026. november 19-25.',
-            title: 'Legfontosabb Edzőtábor',
-            description: 'vezető külföldi edzőkkel',
-            location: 'Batumi, Grúzia',
-            funding: '≈15,700 €'
-        },
         event3: {
             date: '2026. június 25-29.',
             title: 'Nemzetközi Torna',
@@ -204,20 +183,6 @@ export const translations = {
 
 
 export const getEvents = (language: string, t: any) => [
-    {
-        id: 2,
-        image: '/maj2.webp',
-        date: t.event2.date,
-        title: t.event2.title,
-        description: t.event2.description,
-        location: t.event2.location,
-        funding: t.event2.funding,
-        details: language === 'UA' ?
-            'Інтенсивний навчально-тренувальний збір за участі провідних європейських тренерів. Програма включає тренування з техніки, тактики, фізичної підготовки та психологічного тренінгу.' :
-            language === 'EN' ?
-                'Intensive training camp with leading European coaches. The program includes technical, tactical, physical training, and psychological preparation sessions.' :
-                'Intenzív edzőtábor vezető európai edzőkkel. A programba tartozik technikai, taktikai, fizikai edzés és pszichológiai felkészítés is.'
-    },
     {
     id: 6,
     image: '/maj7.webp',

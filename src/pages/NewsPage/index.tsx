@@ -63,6 +63,14 @@ const NewsPage = () => {
                     description: 'Команда Хмельницького посіла 1 місце на чемпіонаті України з регбі-15 серед юнацьких команд. Збірна Київської області виборола срібні нагороди, а команда зі Львова замкнула трійку призерів. Цей турнір став важливим етапом у підготовці до міжнародних змагань.',
                     expense: '0',
                     image: '/news7.webp'
+                },
+                {
+                    id: 8,
+                    date: '19-25 Листопада 2025',
+                    title: 'Найважливіше НТЗ у Грузії',
+                    description: 'Збірна України U16 з регбі-7 успішно завершила інтенсивний навчально-тренувальний збір у м. Батумі, Грузія. За участю провідних іноземних тренерів команда провела тренування з техніки, тактики, фізичної підготовки та психологічного тренінгу.',
+                    expense: '15700',
+                    image: '/news8.webp'
                 }
 
             ]
@@ -120,6 +128,14 @@ const NewsPage = () => {
         description: 'The Khmelnytskyi team took 1st place at the Ukrainian Rugby-15 Championship among youth teams. The Kyiv region team won silver medals, and the Lviv team finished third. This tournament was an important stage in preparation for international competitions.',
         expense: '300',
         image: '/news7.webp'
+    },
+    {
+        id: 8,
+        date: 'November 19-25, 2025',
+        title: 'Key Training Camp in Georgia',
+        description: 'The Ukrainian U16 rugby-7 national team successfully completed an intensive training camp in Batumi, Georgia. With leading foreign coaches, the team conducted training sessions on technique, tactics, physical conditioning, and psychological preparation.',
+        expense: '15700',
+        image: '/news8.webp'
     }
 ]
         },
@@ -176,6 +192,14 @@ const NewsPage = () => {
         description: 'A Hmelnickij csapat az első helyen végzett az ukrán U16-os rögbi-15 bajnokságon. A Kijevi terület csapata ezüstérmet szerzett, a Lvivi csapat pedig a harmadik helyen végzett. Ez a verseny fontos lépés volt a nemzetközi versenyekre való felkészülésben.',
         expense: '300',
         image: '/news7.webp'
+    },
+    {
+        id: 8,
+        date: '2025. november 19-25.',
+        title: 'Legfontosabb edzőtábor Grúziában',
+        description: 'Az ukrán U16-os rögbi-7 válogatott sikeresen befejezte az intenzív edzőtábort Batumiban, Grúziában. Vezető külföldi edzők irányításával a csapat technikai, taktikai, fizikai felkészítési és pszichológiai edzéseket tartott.',
+        expense: '15700',
+        image: '/news8.webp'
     }
 ]
         }
