@@ -29,7 +29,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({
     return (
         <motion.div
             initial="hidden"
-            whileInView="visible"
+            animate="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
             className="mb-16"

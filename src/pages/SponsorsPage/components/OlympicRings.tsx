@@ -10,7 +10,7 @@ const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
         <motion.div
             className="relative w-full max-w-xs h-auto lg:w-96 lg:h-[500px] flex-shrink-0 flex flex-col items-center"
             initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
         >

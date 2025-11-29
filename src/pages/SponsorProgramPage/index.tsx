@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from 'react';
 import HeroSection from './components/HeroSection';
 import OlympicGoalSection from './components/OlympicGoalSection';
+import ClubSection from './components/ClubSection';
 import GoalsContent from './components/GoalsContent';
 import ContactSection from './components/ContactSection';
 import { translations } from './translations';
@@ -32,6 +33,7 @@ const SponsorProgram = () => {
                 olympicTitle={t.olympicTitle} 
                 olympicGoal={t.olympicGoal} 
             />
+            <ClubSection language={language} />
             <GoalsContent europeanGoal={t.europeanGoal} />
             <ContactSection
                 language={language}

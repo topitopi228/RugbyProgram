@@ -98,7 +98,7 @@ const ClubBenefitsPage = () => {
             <div className="max-w-7xl mx-auto px-4 py-20">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                     className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-500/20"
@@ -127,7 +127,7 @@ const ClubBenefitsPage = () => {
             <div className="max-w-7xl mx-auto px-4 py-20">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-4xl md:text-5xl font-bold text-center mb-16 text-yellow-300"
                 >
@@ -139,7 +139,7 @@ const ClubBenefitsPage = () => {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                             className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-500/20"
@@ -163,7 +163,7 @@ const ClubBenefitsPage = () => {
             <div className="max-w-7xl mx-auto px-4 py-20">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-4xl md:text-5xl font-bold text-center mb-16 text-yellow-300"
                 >
@@ -175,7 +175,7 @@ const ClubBenefitsPage = () => {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                             className={`relative ${level.popular ? 'scale-105' : ''}`}
@@ -216,7 +216,7 @@ const ClubBenefitsPage = () => {
             <div className="max-w-7xl mx-auto px-4 py-20">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
@@ -234,7 +234,7 @@ const ClubBenefitsPage = () => {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, scale: 0 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            animate={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: (index % 20) * 0.02, duration: 0.3 }}
                             className={`aspect-square rounded-lg flex items-center justify-center font-bold text-lg ${
@@ -253,7 +253,7 @@ const ClubBenefitsPage = () => {
             <div className="max-w-7xl mx-auto px-4 py-20">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                     className="relative overflow-hidden bg-gradient-to-r from-yellow-500/10 via-amber-500/10 to-yellow-500/10 backdrop-blur-sm rounded-3xl p-12 border border-yellow-500/30 text-center"
@@ -286,7 +286,7 @@ const ClubBenefitsPage = () => {
             <div className="max-w-7xl mx-auto px-4 pb-20">
                 <motion.div
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    animate={{ opacity: 1 }}
                     viewport={{ once: true }}
                     className="text-center"
                 >

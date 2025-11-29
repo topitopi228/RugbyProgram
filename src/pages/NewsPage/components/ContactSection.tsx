@@ -33,7 +33,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
             <div className="relative text-white py-12 px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                     className="max-w-6xl mx-auto relative z-10"
@@ -41,7 +41,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                     <div className="text-center mb-10">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="inline-flex items-center px-3 py-1.5 mb-4 text-xs font-semibold tracking-wide text-yellow-400 uppercase bg-yellow-400/10 rounded-full border border-yellow-400/20 backdrop-blur-sm"
                         >
@@ -64,7 +64,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                         {/* Phone */}
                         <motion.a
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                             whileHover={{ y: -8 }}
@@ -88,7 +88,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                         {/* Email */}
                         <motion.a
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             whileHover={{ y: -8 }}
@@ -110,7 +110,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                         {/* Telegram */}
                         <motion.a
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.3 }}
                             whileHover={{ y: -8 }}
@@ -135,14 +135,14 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                     <div className="mt-16">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                             className="text-center mb-8"
                         >
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 className="inline-flex items-center px-3 py-1.5 mb-3 text-xs font-semibold tracking-wide text-yellow-400 uppercase bg-yellow-400/10 rounded-full border border-yellow-400/20 backdrop-blur-sm"
                             >

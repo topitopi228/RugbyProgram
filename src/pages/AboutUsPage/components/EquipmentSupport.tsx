@@ -20,15 +20,13 @@ const EquipmentSupport: React.FC<EquipmentSupportProps> = ({ equipmentSupport, f
                 {/* Section Header */}
                 <motion.div
                     initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
+                    animate="visible"
                     variants={fadeIn}
                     className="text-center mb-16"
                 >
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, scale: 1 }}
                         className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-purple-500/10 border border-purple-400/30 rounded-full backdrop-blur-sm"
                     >
                         <svg className="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
@@ -51,8 +49,7 @@ const EquipmentSupport: React.FC<EquipmentSupportProps> = ({ equipmentSupport, f
                     <motion.div
                         className="w-full max-w-2xl"
                         initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
+                        animate="visible"
                         variants={fadeIn}
                     >
                         <div className="group relative">
@@ -65,7 +62,7 @@ const EquipmentSupport: React.FC<EquipmentSupportProps> = ({ equipmentSupport, f
                                     <img
                                         src="/inven.webp"
                                         alt={equipmentSupport.title}
-                                        loading="lazy"
+                                        loading="eager"
                                         decoding="async"
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
@@ -92,8 +89,7 @@ const EquipmentSupport: React.FC<EquipmentSupportProps> = ({ equipmentSupport, f
                                             <motion.li
                                                 key={index}
                                                 initial={{ opacity: 0, x: -20 }}
-                                                whileInView={{ opacity: 1, x: 0 }}
-                                                viewport={{ once: true }}
+                                                animate={{ opacity: 1, x: 0 }}
                                                 transition={{ delay: index * 0.1 }}
                                                 className="flex items-start gap-3"
                                             >

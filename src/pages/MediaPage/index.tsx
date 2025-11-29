@@ -115,7 +115,7 @@ const MediaPage = () => {
                     {link.description &&
                         <p className="text-gray-300 text-sm mt-2 flex-grow">{link.description[language]}</p>}
                     {link.image &&
-                        <img src={link.image} alt={link.title[language]} loading="lazy" decoding="async" className="w-full h-40 object-cover mb-4" />}
+                        <img src={link.image} alt={link.title[language]} loading="eager" decoding="async" className="w-full h-40 object-cover mb-4" />}
                     <div className="mt-4 flex items-center text-yellow-400 text-sm font-medium">
                         {language === 'UA' ? 'Відкрити' : language === 'EN' ? 'Open' : 'Megnyitás'} <FaExternalLinkAlt
                         className="w-3 h-3 ml-2" />

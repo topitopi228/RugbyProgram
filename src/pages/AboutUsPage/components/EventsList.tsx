@@ -25,15 +25,13 @@ const EventsList: React.FC<EventsListProps> = ({ events, language, fadeIn, onOpe
             {/* Section Header */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
             >
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, scale: 1 }}
                     className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-blue-500/10 border border-blue-400/30 rounded-full backdrop-blur-sm"
                 >
                     <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
@@ -55,8 +53,7 @@ const EventsList: React.FC<EventsListProps> = ({ events, language, fadeIn, onOpe
                         key={event.id}
                         custom={index}
                         initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
+                        animate="visible"
                         variants={fadeIn}
                         className="group relative"
                     >
@@ -70,7 +67,7 @@ const EventsList: React.FC<EventsListProps> = ({ events, language, fadeIn, onOpe
                                     <img
                                         src={event.image}
                                         alt={`Event ${event.id}`}
-                                        loading={index < 2 ? "eager" : "lazy"}
+                                        loading="eager"
                                         decoding="async"
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     />

@@ -98,8 +98,8 @@ const DonationProgress = () => {
               <div className="space-y-2">
                 <motion.div
                   initial={{opacity: 0, y: 20}}
-                  whileInView={{opacity: 1, y: 0}}
-                  viewport={{once: true}}
+                  animate={{opacity: 1, y: 0}}
+                  
                   transition={{duration: 0.6}}
                   className="flex items-center space-x-2 mb-2"
                 >
@@ -111,8 +111,8 @@ const DonationProgress = () => {
 
                 <motion.h2
                   initial={{opacity: 0, y: 20}}
-                  whileInView={{opacity: 1, y: 0}}
-                  viewport={{once: true}}
+                  animate={{opacity: 1, y: 0}}
+                  
                   transition={{duration: 0.6, delay: 0.1}}
                   className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-400 bg-clip-text text-transparent leading-tight"
                 >
@@ -121,8 +121,8 @@ const DonationProgress = () => {
 
                 <motion.p
                   initial={{opacity: 0, y: 20}}
-                  whileInView={{opacity: 1, y: 0}}
-                  viewport={{once: true}}
+                  animate={{opacity: 1, y: 0}}
+                  
                   transition={{duration: 0.6, delay: 0.2}}
                   className="text-base text-gray-300 leading-relaxed"
                 >
@@ -132,8 +132,8 @@ const DonationProgress = () => {
 
               <motion.div
                 initial={{opacity: 0, scale: 0.95}}
-                whileInView={{opacity: 1, scale: 1}}
-                viewport={{once: true}}
+                animate={{opacity: 1, scale: 1}}
+                
                 transition={{duration: 0.6, delay: 0.3}}
                 className="relative group/amount"
               >
@@ -158,8 +158,8 @@ const DonationProgress = () => {
 
               <motion.div
                 initial={{opacity: 0, y: 20}}
-                whileInView={{opacity: 1, y: 0}}
-                viewport={{once: true}}
+                animate={{opacity: 1, y: 0}}
+                
                 transition={{duration: 0.6, delay: 0.4}}
                 className="space-y-3"
               >
@@ -281,8 +281,8 @@ const DonationProgress = () => {
 
             <motion.div
               initial={{opacity: 0, x: 20}}
-              whileInView={{opacity: 1, x: 0}}
-              viewport={{once: true}}
+              animate={{opacity: 1, x: 0}}
+              
               transition={{duration: 0.8, delay: 0.3}}
               className="hidden lg:flex items-center justify-center p-5 relative"
             >

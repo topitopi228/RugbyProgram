@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title }) => {
             <div className="relative z-10 h-full flex flex-col justify-end pb-8 text-center">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                     className="text-4xl md:text-6xl font-bold mb-4 px-4 text-yellow-400"

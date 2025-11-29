@@ -65,7 +65,7 @@ const NewsSection: React.FC<NewsSectionProps> = ({ news, language }) => {
                             <motion.article
                                 key={item.id}
                                 initial="hidden"
-                                whileInView="visible"
+                                animate="visible"
                                 viewport={{ once: true, margin: "-50px" }}
                                 variants={fadeInUp}
                                 whileHover={{ y: -8 }}
@@ -104,7 +104,7 @@ const NewsSection: React.FC<NewsSectionProps> = ({ news, language }) => {
                                             <div className="absolute top-4 right-4 z-20">
                                                 <motion.div
                                                     initial={{ opacity: 0, scale: 0.8 }}
-                                                    whileInView={{ opacity: 1, scale: 1 }}
+                                                    animate={{ opacity: 1, scale: 1 }}
                                                     viewport={{ once: true }}
                                                     transition={{ duration: 0.5, delay: 0.2 }}
                                                     className="bg-emerald-500/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg"
