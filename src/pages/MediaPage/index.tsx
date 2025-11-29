@@ -115,7 +115,7 @@ const MediaPage = () => {
                     {link.description &&
                         <p className="text-gray-300 text-sm mt-2 flex-grow">{link.description[language]}</p>}
                     {link.image &&
-                        <img src={link.image} alt={link.title[language]} className="w-full h-40 object-cover mb-4" />}
+                        <img src={link.image} alt={link.title[language]} loading="lazy" decoding="async" className="w-full h-40 object-cover mb-4" />}
                     <div className="mt-4 flex items-center text-yellow-400 text-sm font-medium">
                         {language === 'UA' ? 'Відкрити' : language === 'EN' ? 'Open' : 'Megnyitás'} <FaExternalLinkAlt
                         className="w-3 h-3 ml-2" />
@@ -212,6 +212,8 @@ const MediaPage = () => {
                                     ) : (
                                         <div className="absolute inset-0 flex items-center justify-center">
                                             <img src={currentItem.url} alt={currentItem.title[language]}
+                                                 loading="eager"
+                                                 decoding="async"
                                                  className="max-h-full max-w-full object-contain" />
                                         </div>
                                     )}
@@ -299,6 +301,8 @@ const MediaPage = () => {
                                             <img
                                                 src={item.poster}
                                                 alt={item.title[language]}
+                                                loading={index < 4 ? "eager" : "lazy"}
+                                                decoding="async"
                                                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                             />
                                             <div
@@ -314,6 +318,8 @@ const MediaPage = () => {
                                         </>
                                     ) : (
                                         <img src={item.url} alt={item.title[language]}
+                                             loading={index < 4 ? "eager" : "lazy"}
+                                             decoding="async"
                                              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                     )}
                                     <div

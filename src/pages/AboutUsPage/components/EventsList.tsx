@@ -33,10 +33,12 @@ const EventsList: React.FC<EventsListProps> = ({ events, language, fadeIn, onOpe
                     className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-400/30 transition-all duration-300"
                 >
                     <div className="flex flex-col md:flex-row h-full">
-                        <div className="relative h-64 md:h-auto md:max-h-85 md:w-1/3">
+                        <div className="relative h-64 md:h-auto md:max-h-85 md:w-1/3 bg-gray-800/50">
                             <img
                                 src={event.image}
                                 alt={`Event ${event.id}`}
+                                loading={index < 2 ? "eager" : "lazy"}
+                                decoding="async"
                                 className="w-full h-full object-cover"
                             />
                             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">

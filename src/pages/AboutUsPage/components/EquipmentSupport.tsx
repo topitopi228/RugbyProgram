@@ -44,6 +44,8 @@ const EquipmentSupport: React.FC<EquipmentSupportProps> = ({ equipmentSupport, f
                             <img
                                 src="/inven.webp"
                                 alt={equipmentSupport.title}
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-64 object-cover"
                             />
                             <div className="p-6">

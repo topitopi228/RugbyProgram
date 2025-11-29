@@ -23,7 +23,7 @@ interface Translations {
 const translations: Record<string, Translations[keyof Translations]> = {
   EN: {
     title: 'Support Our Team',
-    description: 'Help us reach our goal for the tournament in Georgia!',
+    description: 'Help us reach our goal for the tournament in Lisbon!',
     targetAmount: 'Our Goal',
     donateButton: 'Donate Now',
     copyButton: 'Copy',
@@ -36,7 +36,7 @@ const translations: Record<string, Translations[keyof Translations]> = {
   },
   UA: {
     title: 'Підтримайте нашу команду',
-    description: 'Допоможіть нам досягти мети для участі в турнірі у Грузії!',
+    description: 'Допоможіть нам досягти мети для участі в турнірі у Португалії!',
     targetAmount: 'Наша мета',
     donateButton: 'Підтримати',
     copyButton: 'Копіювати',
@@ -49,7 +49,7 @@ const translations: Record<string, Translations[keyof Translations]> = {
   },
   HUN: {
     title: 'Támogasd csapatunkat',
-    description: 'Segíts nekünk elérni a célunkat a grúziai versenyre!',
+    description: 'Segíts nekünk elérni a célunkat a lisbon versenyre!',
     targetAmount: 'Célunk',
     donateButton: 'Támogatás',
     copyButton: 'Másolás',
@@ -68,7 +68,7 @@ const DonationProgress = () => {
   const [showQr, setShowQr] = useState(false);
   const t = translations[language] || translations.EN;
 
-  const targetAmount = 15700;
+  const targetAmount = 13000;
   const monobankUrl = 'https://send.monobank.ua/jar/UJgAkkC1Q';
   const cardNumber = '4874 1000 2960 8406';
 

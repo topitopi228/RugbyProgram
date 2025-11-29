@@ -97,45 +97,84 @@ const ContactSection = forwardRef<HTMLDivElement, ContactSectionProps>(({
                     </div>
 
                     {/* Sponsors Section */}
-                    <div className="mt-16">
-                        <motion.h3
+                    <div className="mt-20">
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="text-2xl md:text-4xl font-bold text-center mb-8 text-yellow-300"
+                            className="text-center mb-16"
                         >
-                            {ourSponsors}
-                        </motion.h3>
+                            <h3 className="text-4xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500">
+                                {ourSponsors}
+                            </h3>
+                            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mx-auto rounded-full"></div>
+                        </motion.div>
 
-                        <div className="relative overflow-hidden">
-                            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-blue-900 to-transparent z-10"></div>
-                            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-blue-900 to-transparent z-10"></div>
+                        <div className="relative py-8 overflow-hidden">
+                            {/* Gradient overlays for smooth fade effect */}
+                            <div className="absolute inset-y-0 left-0 w-20 md:w-32 bg-gradient-to-r from-blue-900 via-blue-900/80 to-transparent z-10 pointer-events-none"></div>
+                            <div className="absolute inset-y-0 right-0 w-20 md:w-32 bg-gradient-to-l from-blue-900 via-blue-900/80 to-transparent z-10 pointer-events-none"></div>
 
-                            <div className="flex space-x-8 py-4 animate-marquee whitespace-nowrap">
-                                {[1, 2, 3, 4].map((num) => (
-                                    <div key={num} className="inline-flex items-center justify-center px-6">
-                                        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-24 flex items-center">
-                                            <img
-                                                src={`/spin-${num}.webp`}
-                                                alt={`Sponsor ${num}`}
-                                                className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
-                                            />
+                            {/* Infinite scrolling marquee */}
+                            <div className="flex">
+                                <div className="flex animate-marquee">
+                                    {[1, 2, 3, 4].map((num) => (
+                                        <div
+                                            key={`set1-${num}`}
+                                            className="mx-6 md:mx-8 flex-shrink-0 group cursor-pointer"
+                                        >
+                                            <div className="relative">
+                                                {/* Glow effect on hover */}
+                                                <div className="absolute -inset-3 bg-gradient-to-r from-yellow-400/0 via-yellow-400/20 to-yellow-400/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+                                                
+                                                {/* Logo container */}
+                                                <div className="relative bg-white/5 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/10 group-hover:border-yellow-400/50 transition-all duration-300 shadow-lg group-hover:shadow-yellow-400/20">
+                                                    <img
+                                                        src={`/spin-${num}.webp`}
+                                                        alt={`Sponsor ${num}`}
+                                                        className="h-16 md:h-20 w-auto max-w-[150px] md:max-w-[200px] object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                                                    />
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
-                                {[1, 2, 3, 4].map((num) => (
-                                    <div key={`dup-${num}`} className="inline-flex items-center justify-center px-6">
-                                        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-yellow-400/30 transition-all duration-300 h-24 flex items-center">
-                                            <img
-                                                src={`/spin-${num}.webp`}
-                                                alt={`Sponsor ${num}`}
-                                                className="h-12 w-auto max-w-[150px] object-contain  hover:grayscale-0 transition-all duration-500"
-                                            />
+                                    ))}
+                                </div>
+                                {/* Duplicate for seamless loop */}
+                                <div className="flex animate-marquee" aria-hidden="true">
+                                    {[1, 2, 3, 4].map((num) => (
+                                        <div
+                                            key={`set2-${num}`}
+                                            className="mx-6 md:mx-8 flex-shrink-0 group cursor-pointer"
+                                        >
+                                            <div className="relative">
+                                                <div className="absolute -inset-3 bg-gradient-to-r from-yellow-400/0 via-yellow-400/20 to-yellow-400/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+                                                <div className="relative bg-white/5 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/10 group-hover:border-yellow-400/50 transition-all duration-300 shadow-lg group-hover:shadow-yellow-400/20">
+                                                    <img
+                                                        src={`/spin-${num}.webp`}
+                                                        alt={`Sponsor ${num}`}
+                                                        className="h-16 md:h-20 w-auto max-w-[150px] md:max-w-[200px] object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                                                    />
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
+                        </div>
+
+                        {/* Decorative elements */}
+                        <div className="flex justify-center gap-2 mt-8">
+                            {[...Array(4)].map((_, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ scale: 0 }}
+                                    whileInView={{ scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.3, delay: i * 0.1 }}
+                                    className="w-2 h-2 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500"
+                                />
+                            ))}
                         </div>
                     </div>
                 </motion.div>

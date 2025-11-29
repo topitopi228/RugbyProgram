@@ -208,7 +208,7 @@ const NewsPage = () => {
     const t = translations[language];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white">
             <HeroSection language={language} title={t.title} />
             <NewsSection news={t.news} language={language} />
             <ContactSection language={language} />

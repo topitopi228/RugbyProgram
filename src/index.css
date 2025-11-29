@@ -1,10 +1,10 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 /* Lazy loading optimization */
-img[loading="lazy"] {
+img[loading="lazy"]:not(.no-shimmer) {
     background: linear-gradient(110deg, #1f2937 8%, #374151 18%, #1f2937 33%);
     background-size: 200% 100%;
     animation: shimmer 1.5s linear infinite;
@@ -24,6 +24,12 @@ img[loading="lazy"].loaded {
     background: none;
 }
 
+/* Disable shimmer for sponsor logos */
+img[loading="lazy"].no-shimmer {
+    background: none;
+    animation: none;
+}
+
 /* Video optimization */
 video {
     will-change: transform;
@@ -34,4 +40,18 @@ video {
     img[loading="lazy"] {
         animation: none;
     }
+}
+
+/* Infinite scrolling marquee animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 25s linear infinite;
 }
