@@ -139,8 +139,30 @@ const MediaPage = () => {
 
     if (mediaItems.length === 0) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
-                <div className="text-center">
+            <div className="min-h-screen relative overflow-hidden flex items-center justify-center">
+                {/* Modern Background with Gradient Mesh */}
+                <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900"></div>
+                
+                {/* Animated Background Blobs */}
+                <div className="absolute inset-0 overflow-hidden opacity-30">
+                    <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-3xl"></div>
+                </div>
+
+                {/* Subtle Grid Pattern */}
+                <div 
+                    className="absolute inset-0 opacity-[0.02]"
+                    style={{
+                        backgroundImage: `
+                            linear-gradient(to right, #ffffff 1px, transparent 1px),
+                            linear-gradient(to bottom, #ffffff 1px, transparent 1px)
+                        `,
+                        backgroundSize: '60px 60px'
+                    }}
+                ></div>
+
+                <div className="relative text-center">
                     <div className="text-6xl mb-4">😕</div>
                     <h2 className="text-2xl font-bold text-white mb-2">{language === 'UA' ? 'Медіа не знайдено' : language === 'EN' ? 'No media found' : 'Nincs megjeleníthető média'}</h2>
                     <p className="text-gray-400">{language === 'UA' ? 'На жаль, не вдалося завантажити медіафайли.' : language === 'EN' ? 'Could not load media files.' : 'Nem sikerült betölteni a médiafájlokat.'}</p>
@@ -150,8 +172,31 @@ const MediaPage = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        <div className="min-h-screen relative overflow-hidden text-white">
+            {/* Modern Background with Gradient Mesh */}
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900"></div>
+            
+            {/* Animated Background Blobs */}
+            <div className="absolute inset-0 overflow-hidden opacity-30">
+                <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-3xl"></div>
+            </div>
+
+            {/* Subtle Grid Pattern */}
+            <div 
+                className="absolute inset-0 opacity-[0.02]"
+                style={{
+                    backgroundImage: `
+                        linear-gradient(to right, #ffffff 1px, transparent 1px),
+                        linear-gradient(to bottom, #ffffff 1px, transparent 1px)
+                    `,
+                    backgroundSize: '60px 60px'
+                }}
+            ></div>
+
+            <div className="relative py-12 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto">
                 <HeroSection language={language} />
                 <CategoryFilter
                     categories={categories}
@@ -339,6 +384,7 @@ const MediaPage = () => {
                         ))}
                     </motion.div>
                 )}
+                </div>
             </div>
         </div>
     );

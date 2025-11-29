@@ -30,8 +30,31 @@ const SponsorsPage = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white py-20 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        <div className="min-h-screen relative overflow-hidden text-white">
+            {/* Modern Background with Gradient Mesh */}
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900"></div>
+            
+            {/* Animated Background Blobs */}
+            <div className="absolute inset-0 overflow-hidden opacity-30">
+                <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-3xl"></div>
+            </div>
+
+            {/* Subtle Grid Pattern */}
+            <div 
+                className="absolute inset-0 opacity-[0.02]"
+                style={{
+                    backgroundImage: `
+                        linear-gradient(to right, #ffffff 1px, transparent 1px),
+                        linear-gradient(to bottom, #ffffff 1px, transparent 1px)
+                    `,
+                    backgroundSize: '60px 60px'
+                }}
+            ></div>
+
+            <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto">
                 {/* Olympic Invitation Section */}
                 <motion.div
                     className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 rounded-2xl p-8 md:p-12 mb-20 shadow-2xl border border-blue-700/50"
@@ -342,6 +365,7 @@ const SponsorsPage = () => {
                 </div>
 
                 <div ref={contactRef} id="contact" className="h-1"></div>
+                </div>
             </div>
         </div>
     );
