@@ -44,41 +44,59 @@ const AboutUsPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white">
-            <HeroSection 
-                title={t.pageTitle} 
-                subtitle={t.upcomingEvents} 
-                fadeIn={fadeIn} 
-            />
-            <DonationProgress />
-            <EventsList 
-                events={events} 
-                language={language} 
-                fadeIn={fadeIn} 
-                onOpenFundingModal={openFundingModal} 
-            />
-            <EquipmentSupport 
-                equipmentSupport={t.equipmentSupport} 
-                fadeIn={fadeIn} 
-                onScrollToContact={scrollToContact} 
-            />
-            <ContactSection 
-                ref={contactRef}
-                language={language}
-                contactTitle={t.contactTitle}
-                contactText={t.contactText}
-                contactPhone={t.contactPhone}
-                contactEmail={t.contactEmail}
-                contactTelegram={t.contactTelegram}
-                ourSponsors={t.ourSponsors}
-            />
-            <FundingModal 
-                selectedEvent={selectedEvent}
-                language={language}
-                fundingBreakdowns={fundingBreakdowns}
-                onClose={closeModal}
-                onScrollToContact={scrollToContact}
-            />
+        <div className="min-h-screen relative overflow-hidden text-white">
+            {/* Modern Background with Gradient Mesh */}
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900"></div>
+            
+            {/* Animated Background Blobs */}
+            <div className="absolute inset-0 overflow-hidden opacity-30">
+                <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-3xl"></div>
+            </div>
+
+            {/* Subtle Grid Pattern */}
+            <div 
+                className="absolute inset-0 opacity-[0.02]"
+                style={{
+                    backgroundImage: `
+                        linear-gradient(to right, #ffffff 1px, transparent 1px),
+                        linear-gradient(to bottom, #ffffff 1px, transparent 1px)
+                    `,
+                    backgroundSize: '60px 60px'
+                }}
+            ></div>
+
+            <div className="relative">
+                <HeroSection 
+                    title={t.pageTitle} 
+                    subtitle={t.upcomingEvents} 
+                    fadeIn={fadeIn} 
+                />
+                <DonationProgress />
+                <EventsList 
+                    events={events} 
+                    language={language} 
+                    fadeIn={fadeIn} 
+                    onOpenFundingModal={openFundingModal} 
+                />
+                <EquipmentSupport 
+                    equipmentSupport={t.equipmentSupport} 
+                    fadeIn={fadeIn} 
+                    onScrollToContact={scrollToContact} 
+                />
+                <ContactSection 
+                    ref={contactRef}
+                    language={language}
+                />
+                <FundingModal 
+                    selectedEvent={selectedEvent}
+                    language={language}
+                    fundingBreakdowns={fundingBreakdowns}
+                    onClose={closeModal}
+                    onScrollToContact={scrollToContact}
+                />
+            </div>
         </div>
     );
 };
