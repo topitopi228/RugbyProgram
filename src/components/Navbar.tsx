@@ -11,7 +11,7 @@ const navLinks: Record<Language, { [key: string]: string }> = {
         team: 'Команда',
         club: 'Новини',
         about: 'Майбутнє',
-        stadium: 'Спонсори',
+        stadium: 'Партнери',
         contact: 'Медіа',
     },
     EN: {
@@ -19,7 +19,7 @@ const navLinks: Record<Language, { [key: string]: string }> = {
         team: 'Team',
         club: 'News',
         about: 'Future',
-        stadium: 'Sponsors',
+        stadium: 'Partners',
         contact: 'Media',
     },
     HUN: {
@@ -27,7 +27,7 @@ const navLinks: Record<Language, { [key: string]: string }> = {
         team: 'Csapat',
         club: 'Hírek',
         about: 'Jövő',
-        stadium: 'Szponzorok',
+        stadium: 'Partnerek',
         contact: 'Média',
     },
 };
