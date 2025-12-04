@@ -148,12 +148,12 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 position: 'Entrepreneur, sports patron',
             },
             {
-                image: '/spon8.webp',
+                image: '/spon9.webp',
                 name: 'ANTON KOPILOV',
                 position: 'Entrepreneur, investor',
             },
             {
-                image: '/spon9.webp',
+                image: '/spon8.webp',
                 name: 'PETRO ADAMYK',
                 position: 'Businessman, philanthropist',
             },
@@ -201,12 +201,12 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 position: 'Vállalkozó, sporttámogató',
             },
             {
-                image: '/spon8.webp',
+                image: '/spon9.webp',
                 name: 'ANTON KOPILOV',
                 position: 'Vállalkozó, befektető',
             },
             {
-                image: '/spon9.webp',
+                image: '/spon8.webp',
                 name: 'PETRO ADAMYK',
                 position: 'Üzletember, mecénás',
             },
