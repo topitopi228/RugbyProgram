@@ -30,68 +30,126 @@ export interface ExternalLink {
 
 export const getMediaItems = (): MediaItem[] => {
     return [
+        // Videos
+        {
+            id: 1,
+            type: 'video',
+            url: '/media1.webm',
+            poster: '/news1.webp',
+            title: { 
+                UA: 'Перемога на турнірі в Польщі', 
+                EN: 'Victory at tournament in Poland', 
+                HUN: 'Győzelem a lengyelországi tornán' 
+            },
+            category: 'matches'
+        },
+        {
+            id: 2,
+            type: 'video',
+            url: '/media2.webm',
+            poster: '/team1.webp',
+            title: { 
+                UA: 'Товариський матч зі збірною України U17', 
+                EN: 'Friendly match with Ukraine U17 team', 
+                HUN: 'Barátságos mérkőzés az U17-es ukrán csapattal' 
+            },
+            category: 'matches'
+        },
+        // Photos
         {
             id: 15,
             type: 'image',
             url: '/drag1.webp',
-            poster: '',
-            title: { UA: 'Фото 1', EN: 'Photo 1', HUN: 'Fénykép 1' },
+            poster: '/drag1.webp',
+            title: { 
+                UA: 'НТЗ на Драгобраті - Командне фото', 
+                EN: 'Training camp at Dragobrat - Team photo', 
+                HUN: 'Edzőtábor Dragobratban - Csapatfotó' 
+            },
             category: 'photos'
         },
         {
             id: 16,
             type: 'image',
             url: '/drag2.webp',
-            poster: '',
-            title: { UA: 'Фото 2', EN: 'Photo 2', HUN: 'Fénykép 2' },
+            poster: '/drag2.webp',
+            title: { 
+                UA: 'НТЗ на Драгобраті - Тренування', 
+                EN: 'Training camp at Dragobrat - Training', 
+                HUN: 'Edzőtábor Dragobratban - Edzés' 
+            },
             category: 'photos'
         },
         {
             id: 17,
             type: 'image',
             url: '/drag3.webp',
-            poster: '',
-            title: { UA: 'Фото 3', EN: 'Photo 3', HUN: 'Fénykép 3' },
+            poster: '/drag3.webp',
+            title: { 
+                UA: 'Гірські тренування', 
+                EN: 'Mountain training', 
+                HUN: 'Hegyi edzés' 
+            },
             category: 'photos'
         },
         {
             id: 18,
             type: 'image',
             url: '/drag4.webp',
-            poster: '',
-            title: { UA: 'Фото 4', EN: 'Photo 4', HUN: 'Fénykép 4' },
+            poster: '/drag4.webp',
+            title: { 
+                UA: 'Фізична підготовка', 
+                EN: 'Physical training', 
+                HUN: 'Fizikai felkészítés' 
+            },
             category: 'photos'
         },
         {
             id: 19,
             type: 'image',
             url: '/drag5.webp',
-            poster: '',
-            title: { UA: 'Фото 5', EN: 'Photo 5', HUN: 'Fénykép 5' },
+            poster: '/drag5.webp',
+            title: { 
+                UA: 'Командний дух', 
+                EN: 'Team spirit', 
+                HUN: 'Csapatszellem' 
+            },
             category: 'photos'
         },
         {
             id: 20,
             type: 'image',
             url: '/drag6.webp',
-            poster: '',
-            title: { UA: 'Фото 6', EN: 'Photo 6', HUN: 'Fénykép 6' },
+            poster: '/drag6.webp',
+            title: { 
+                UA: 'Ранкова розминка', 
+                EN: 'Morning warm-up', 
+                HUN: 'Reggeli bemelegítés' 
+            },
             category: 'photos'
         },
         {
             id: 21,
             type: 'image',
             url: '/drag7.webp',
-            poster: '',
-            title: { UA: 'Фото 7', EN: 'Photo 7', HUN: 'Fénykép 7' },
+            poster: '/drag7.webp',
+            title: { 
+                UA: 'Тактична підготовка', 
+                EN: 'Tactical preparation', 
+                HUN: 'Taktikai felkészülés' 
+            },
             category: 'photos'
         },
         {
             id: 22,
             type: 'image',
             url: '/drag8.webp',
-            poster: '',
-            title: { UA: 'Фото 8', EN: 'Photo 8', HUN: 'Fénykép 8' },
+            poster: '/drag8.webp',
+            title: { 
+                UA: 'Силові вправи', 
+                EN: 'Strength exercises', 
+                HUN: 'Erőnléti gyakorlatok' 
+            },
             category: 'photos'
         },
         {

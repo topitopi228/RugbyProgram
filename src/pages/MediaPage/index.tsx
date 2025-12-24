@@ -1,390 +1,348 @@
 // @ts-nocheck
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '../../components/LanguageUtils';
-import HeroSection from './components/HeroSection';
-import CategoryFilter from './components/CategoryFilter';
-import { getMediaItems, getExternalLinks, categories } from './mediaData';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaInstagram, FaYoutube, FaNewspaper, FaExternalLinkAlt, FaFacebook } from 'react-icons/fa';
+import HeroSection from './components/HeroSection';
+import MediaPlayer from './components/MediaPlayer';
+import MediaGallery from './components/MediaGallery';
+import { getMediaItems, getExternalLinks } from './mediaData';
+import { FaInstagram, FaYoutube, FaNewspaper, FaFacebook, FaExternalLinkAlt, FaFilter, FaPlay, FaImage, FaTh } from 'react-icons/fa';
 
 const MediaPage = () => {
     const { language } = useLanguage();
     const [mediaItems, setMediaItems] = useState([]);
+    const [filteredItems, setFilteredItems] = useState([]);
     const [externalLinks] = useState(getExternalLinks());
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
     const [activeCategory, setActiveCategory] = useState('all');
-    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isLoading, setIsLoading] = useState(true);
 
-    const container = {
-        hidden: { opacity: 0 },
-        show: { opacity: 1, transition: { staggerChildren: 0.1 } },
+    const translations = {
+        UA: {
+            title: 'Медіа',
+            subtitle: 'Фото та відео нашої команди',
+            allMedia: 'Всі медіа',
+            videos: 'Відео',
+            photos: 'Фото',
+            matches: 'Матчі',
+            training: 'Тренування',
+            gallery: 'Галерея',
+            externalLinks: 'Корисні посилання',
+            loading: 'Завантаження...',
+            noMedia: 'Медіа не знайдено',
+            type: 'Тип:',
+            date: 'Дата:',
+            duration: 'Тривалість:',
+            statistics: 'Статистика'
+        },
+        EN: {
+            title: 'Media',
+            subtitle: 'Photos and videos of our team',
+            allMedia: 'All Media',
+            videos: 'Videos',
+            photos: 'Photos',
+            matches: 'Matches',
+            training: 'Training',
+            gallery: 'Gallery',
+            externalLinks: 'Useful Links',
+            loading: 'Loading...',
+            noMedia: 'No media found',
+            type: 'Type:',
+            date: 'Date:',
+            duration: 'Duration:',
+            statistics: 'Statistics'
+        },
+        HUN: {
+            title: 'Média',
+            subtitle: 'Csapatunk fotói és videói',
+            allMedia: 'Összes média',
+            videos: 'Videók',
+            photos: 'Fotók',
+            matches: 'Mérkőzések',
+            training: 'Edzés',
+            gallery: 'Galéria',
+            externalLinks: 'Hasznos linkek',
+            loading: 'Betöltés...',
+            noMedia: 'Nem található média',
+            type: 'Típus:',
+            date: 'Dátum:',
+            duration: 'Időtartam:',
+            statistics: 'Statisztika'
+        }
     };
 
-    const item = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    };
+    const t = translations[language];
 
     useEffect(() => {
         const loadMedia = async () => {
             try {
                 const items = getMediaItems();
-                setMediaItems(items);
+                const formattedItems = items.map(item => ({
+                    id: item.id.toString(),
+                    type: item.type === 'video' ? 'video' : 'photo',
+                    src: item.url,
+                    thumbnail: item.poster || item.url,
+                    title: item.title[language],
+                    category: item.category,
+                    duration: item.type === 'video' ? '2:34' : undefined,
+                    date: '2025'
+                }));
+                setMediaItems(formattedItems);
+                setFilteredItems(formattedItems);
             } catch (error) {
-                console.error('Помилка завантаження медіа:', error);
+                console.error('Error loading media:', error);
             } finally {
                 setIsLoading(false);
             }
         };
         loadMedia();
-    }, []);
+    }, [language]);
 
     useEffect(() => {
-        if (videoRef.current) {
-            if (isPlaying) {
-                videoRef.current.play().catch(e => console.error('Помилка відтворення відео:', e));
-            } else {
-                videoRef.current.pause();
-            }
+        let filtered = mediaItems;
+        
+        if (activeCategory === 'videos') {
+            filtered = mediaItems.filter(item => item.type === 'video');
+        } else if (activeCategory === 'photos') {
+            filtered = mediaItems.filter(item => item.type === 'photo');
+        } else if (activeCategory === 'matches') {
+            filtered = mediaItems.filter(item => item.category === 'matches');
+        } else if (activeCategory === 'training') {
+            filtered = mediaItems.filter(item => item.category === 'training');
         }
-    }, [currentIndex, isPlaying]);
-
-    useEffect(() => {
+        
+        setFilteredItems(filtered);
         setCurrentIndex(0);
-        setIsPlaying(false);
-    }, [activeCategory]);
+    }, [activeCategory, mediaItems]);
 
-    const currentItem = mediaItems[currentIndex] || null;
-    const filteredItems = activeCategory === 'all' ? mediaItems :
-        activeCategory === 'videos' ? mediaItems.filter(item => item.category === 'matches' || item.category === 'training') :
-            activeCategory === 'photos' ? mediaItems.filter(item => item.category === 'photos') :
-                mediaItems.filter(item => item.category === 'other');
-
-    const goToNext = () => {
-        const nextIndex = (currentIndex + 1) % filteredItems.length;
-        setCurrentIndex(nextIndex);
-        setIsPlaying(true);
+    const handleNext = () => {
+        setCurrentIndex((prev) => (prev + 1) % filteredItems.length);
     };
 
-    const goToPrevious = () => {
-        const prevIndex = (currentIndex - 1 + filteredItems.length) % filteredItems.length;
-        setCurrentIndex(prevIndex);
-        setIsPlaying(true);
+    const handlePrevious = () => {
+        setCurrentIndex((prev) => (prev - 1 + filteredItems.length) % filteredItems.length);
     };
 
-    const togglePlay = () => {
-        if (videoRef.current) {
-            if (videoRef.current.paused) {
-                videoRef.current.play().catch(e => console.error('Помилка відтворення:', e));
-            } else {
-                videoRef.current.pause();
-            }
+    const handleMediaSelect = (index) => {
+        setCurrentIndex(index);
+    };
+
+    const getIconForLink = (type) => {
+        switch (type) {
+            case 'instagram': return <FaInstagram className="w-5 h-5" />;
+            case 'youtube': return <FaYoutube className="w-5 h-5" />;
+            case 'facebook': return <FaFacebook className="w-5 h-5" />;
+            case 'news': return <FaNewspaper className="w-5 h-5" />;
+            default: return <FaExternalLinkAlt className="w-5 h-5" />;
         }
     };
 
-    const selectMedia = (index: number) => {
-        setCurrentIndex(index);
-        setIsPlaying(true);
-    };
-
-    const renderExternalLinks = () => (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {externalLinks.map((link) => (
-                <motion.a
-                    key={link.id}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700 hover:border-yellow-500/50 flex flex-col h-full"
-                    whileHover={{ scale: 1.02 }}
-                >
-                    <div className="flex items-center mb-4">
-                        <div
-                            className={`p-3 rounded-lg ${link.type === 'instagram' ? 'bg-pink-600/20 text-pink-400' : link.type === 'youtube' ? 'bg-red-600/20 text-red-400' : link.type === 'facebook' ? 'bg-blue-600/20 text-blue-400' : 'bg-blue-600/20 text-blue-400'}`}>
-                            {link.type === 'instagram' && <FaInstagram className="w-6 h-6" />}
-                            {link.type === 'youtube' && <FaYoutube className="w-6 h-6" />}
-                            {link.type === 'facebook' && <FaFacebook className="w-6 h-6" />}
-                            {link.type === 'news' && <FaNewspaper className="w-6 h-6" />}
-                        </div>
-                        <h3 className="ml-4 text-lg font-semibold text-white group-hover:text-yellow-400 transition-colors">
-                            {link.title[language]}
-                        </h3>
-                    </div>
-                    {link.description &&
-                        <p className="text-gray-300 text-sm mt-2 flex-grow">{link.description[language]}</p>}
-                    {link.image &&
-                        <img src={link.image} alt={link.title[language]} loading="eager" decoding="async" className="w-full h-40 object-cover mb-4" />}
-                    <div className="mt-4 flex items-center text-yellow-400 text-sm font-medium">
-                        {language === 'UA' ? 'Відкрити' : language === 'EN' ? 'Open' : 'Megnyitás'} <FaExternalLinkAlt
-                        className="w-3 h-3 ml-2" />
-                    </div>
-                </motion.a>
-            ))}
-        </div>
-    );
-
-    if (isLoading) {
-        return (
-            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
-                <div className="flex flex-col items-center">
-                    <div
-                        className="w-16 h-16 border-4 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
-                    <p className="mt-4 text-lg text-gray-300">{language === 'UA' ? 'Завантаження медіа...' : language === 'EN' ? 'Loading media...' : 'Média betöltése...'}</p>
-                </div>
-            </div>
-        );
-    }
-
-    if (mediaItems.length === 0) {
-        return (
-            <div className="min-h-screen relative overflow-hidden flex items-center justify-center">
-                {/* Modern Background with Gradient Mesh */}
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900"></div>
-                
-                {/* Animated Background Blobs */}
-                <div className="absolute inset-0 overflow-hidden opacity-30">
-                    <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-3xl"></div>
-                </div>
-
-                {/* Subtle Grid Pattern */}
-                <div 
-                    className="absolute inset-0 opacity-[0.02]"
-                    style={{
-                        backgroundImage: `
-                            linear-gradient(to right, #ffffff 1px, transparent 1px),
-                            linear-gradient(to bottom, #ffffff 1px, transparent 1px)
-                        `,
-                        backgroundSize: '60px 60px'
-                    }}
-                ></div>
-
-                <div className="relative text-center">
-                    <div className="text-6xl mb-4">😕</div>
-                    <h2 className="text-2xl font-bold text-white mb-2">{language === 'UA' ? 'Медіа не знайдено' : language === 'EN' ? 'No media found' : 'Nincs megjeleníthető média'}</h2>
-                    <p className="text-gray-400">{language === 'UA' ? 'На жаль, не вдалося завантажити медіафайли.' : language === 'EN' ? 'Could not load media files.' : 'Nem sikerült betölteni a médiafájlokat.'}</p>
-                </div>
-            </div>
-        );
-    }
+    const categoryButtons = [
+        { id: 'all', label: t.allMedia, icon: <FaTh className="w-4 h-4" /> },
+        { id: 'videos', label: t.videos, icon: <FaPlay className="w-4 h-4" /> },
+        { id: 'photos', label: t.photos, icon: <FaImage className="w-4 h-4" /> },
+        { id: 'matches', label: t.matches, icon: <FaFilter className="w-4 h-4" /> },
+        { id: 'training', label: t.training, icon: <FaFilter className="w-4 h-4" /> }
+    ];
 
     return (
-        <div className="min-h-screen relative overflow-hidden text-white">
-            {/* Modern Background with Gradient Mesh */}
-            <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900"></div>
-            
-            {/* Animated Background Blobs */}
-            <div className="absolute inset-0 overflow-hidden opacity-30">
-                <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-3xl"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 text-white">
+            {/* Animated Background */}
+            <div className="fixed inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-20 -left-20 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute bottom-20 -right-20 w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/5 rounded-full blur-3xl" />
             </div>
 
-            {/* Subtle Grid Pattern */}
+            {/* Grid Pattern */}
             <div 
-                className="absolute inset-0 opacity-[0.02]"
+                className="fixed inset-0 opacity-[0.02] pointer-events-none"
                 style={{
-                    backgroundImage: `
-                        linear-gradient(to right, #ffffff 1px, transparent 1px),
-                        linear-gradient(to bottom, #ffffff 1px, transparent 1px)
-                    `,
+                    backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
                     backgroundSize: '60px 60px'
                 }}
-            ></div>
+            />
 
-            <div className="relative py-12 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                <HeroSection language={language} />
-                <CategoryFilter
-                    categories={categories}
-                    activeCategory={activeCategory}
-                    onCategoryChange={setActiveCategory}
-                    language={language}
-                />
+            {/* Hero Section */}
+            <HeroSection title={t.title} subtitle={t.subtitle} />
 
-                <motion.div
-                    className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl max-w-6xl mx-auto mb-12 border border-gray-700/50"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                >
-                    <div className="relative pt-[56.25%] bg-black">
-                        {currentItem && (
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={currentItem.id}
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="absolute inset-0"
-                                >
-                                    {currentItem.type === 'video' ? (
-                                        <div className="absolute inset-0 group">
-                                            <video
-                                                ref={videoRef}
-                                                src={currentItem.url}
-                                                poster={currentItem.poster}
-                                                className="w-full h-full object-cover"
-                                                controls={isPlaying}
-                                                playsInline
-                                                preload="metadata"
-                                                onPlay={() => setIsPlaying(true)}
-                                                onPause={() => setIsPlaying(false)}
-                                                onEnded={goToNext}
-                                                onClick={togglePlay}
-                                            />
-                                            {!isPlaying && (
-                                                <div
-                                                    className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/30"
-                                                    onClick={togglePlay}
-                                                >
-                                                    <motion.div
-                                                        className="w-20 h-20 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform"
-                                                        whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
-                                                    >
-                                                        <svg className="w-10 h-10 text-white" fill="currentColor"
-                                                             viewBox="0 0 24 24">
-                                                            <path d="M8 5v14l11-7z" />
-                                                        </svg>
-                                                    </motion.div>
-                                                </div>
-                                            )}
-                                        </div>
-                                    ) : (
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <img src={currentItem.url} alt={currentItem.title[language]}
-                                                 loading="eager"
-                                                 decoding="async"
-                                                 className="max-h-full max-w-full object-contain" />
+            <div className="relative z-10 container mx-auto px-4 py-12">
+                {/* Category Filter */}
+                <div className="flex flex-wrap justify-center gap-3 mb-12">
+                    {categoryButtons.map((button) => (
+                        <motion.button
+                            key={button.id}
+                            onClick={() => setActiveCategory(button.id)}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className={`
+                                flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300
+                                ${activeCategory === button.id 
+                                    ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-900 shadow-lg shadow-amber-500/30' 
+                                    : 'bg-slate-800/50 backdrop-blur-sm text-gray-300 hover:bg-slate-700/50 border border-slate-700/50'
+                                }
+                            `}
+                        >
+                            {button.icon}
+                            <span>{button.label}</span>
+                        </motion.button>
+                    ))}
+                </div>
+
+                {/* Main Content Area */}
+                {isLoading ? (
+                    <div className="flex items-center justify-center h-96">
+                        <div className="flex flex-col items-center gap-4">
+                            <div className="w-16 h-16 border-4 border-amber-500 border-t-transparent rounded-full animate-spin" />
+                            <p className="text-gray-400">{t.loading}</p>
+                        </div>
+                    </div>
+                ) : filteredItems.length > 0 ? (
+                    <div className="grid lg:grid-cols-12 gap-8">
+                        {/* Media Player - Left Side */}
+                        <motion.div 
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="lg:col-span-8"
+                        >
+                            <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-2xl p-4 border border-slate-700/50 shadow-2xl">
+                                <MediaPlayer
+                                    currentMedia={filteredItems[currentIndex]}
+                                    onNext={handleNext}
+                                    onPrevious={handlePrevious}
+                                    language={language}
+                                />
+                            </div>
+                        </motion.div>
+
+                        {/* Info & Stats - Right Side */}
+                        <motion.div 
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            className="lg:col-span-4 space-y-6"
+                        >
+                            {/* Current Media Info */}
+                            <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50">
+                                <h3 className="text-xl font-bold text-amber-400 mb-4">
+                                    {filteredItems[currentIndex]?.title}
+                                </h3>
+                                <div className="space-y-3">
+                                    <div className="flex items-center gap-3">
+                                        <span className="text-gray-400 text-sm">{t.type}</span>
+                                        <span className="text-white">
+                                            {filteredItems[currentIndex]?.type === 'video' ? t.videos : t.photos}
+                                        </span>
+                                    </div>
+                                    {filteredItems[currentIndex]?.date && (
+                                        <div className="flex items-center gap-3">
+                                            <span className="text-gray-400 text-sm">{t.date}</span>
+                                            <span className="text-white">{filteredItems[currentIndex].date}</span>
                                         </div>
                                     )}
-                                </motion.div>
-                            </AnimatePresence>
-                        )}
-
-                        {filteredItems.length > 1 && (
-                            <>
-                                <button onClick={goToPrevious}
-                                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all z-10 backdrop-blur-sm"
-                                        aria-label={language === 'UA' ? 'Попереднє' : language === 'EN' ? 'Previous' : 'Előző'}>
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                              d="M15 19l-7-7 7-7" />
-                                    </svg>
-                                </button>
-                                <button onClick={goToNext}
-                                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all z-10 backdrop-blur-sm"
-                                        aria-label={language === 'UA' ? 'Наступне' : language === 'EN' ? 'Next' : 'Következő'}>
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                              d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </button>
-                            </>
-                        )}
-                    </div>
-
-                    {currentItem && (
-                        <div className="p-6">
-                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                                <div>
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <span className="text-amber-400 text-sm font-medium">
-                                            {currentItem.category === 'matches' ? (language === 'UA' ? 'Матч' : language === 'EN' ? 'Match' : 'Mérkőzés') : (language === 'UA' ? 'Тренування' : language === 'EN' ? 'Training' : 'Edzés')}
-                                        </span>
-                                        <span className="text-gray-500">•</span>
-                                        <span
-                                            className="text-sm text-gray-400">{currentIndex + 1} / {filteredItems.length}</span>
-                                    </div>
-                                    <h2 className="text-xl font-bold text-white">{currentItem.title[language]}</h2>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <button onClick={togglePlay}
-                                            className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors"
-                                            aria-label={isPlaying ? 'Pause' : 'Play'}>
-                                        {isPlaying ? (
-                                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                                            </svg>
-                                        ) : (
-                                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M8 5v14l11-7z" />
-                                            </svg>
-                                        )}
-                                    </button>
+                                    {filteredItems[currentIndex]?.duration && (
+                                        <div className="flex items-center gap-3">
+                                            <span className="text-gray-400 text-sm">{t.duration}</span>
+                                            <span className="text-white">{filteredItems[currentIndex].duration}</span>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
-                        </div>
-                    )}
-                </motion.div>
 
-                {activeCategory === 'other' ? (
-                    renderExternalLinks()
-                ) : (
-                    <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-                                variants={container} initial="hidden" animate="show">
-                        {filteredItems.map((item, index) => (
-                            <motion.div
-                                key={item.id}
-                                initial="hidden"
-                                animate="show"
-                                whileHover={{
-                                    y: -5,
-                                    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
-                                }}
-                                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                                onClick={() => selectMedia(index)}
-                                className={`group cursor-pointer rounded-xl overflow-hidden bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 transition-all duration-300 ${currentItem?.id === item.id ? 'ring-2 ring-amber-500' : 'hover:border-amber-500/50'}`}
-                            >
-                                <div className="relative pt-[56.25%] bg-gray-900">
-                                    {item.type === 'video' ? (
-                                        <>
-                                            <img
-                                                src={item.poster}
-                                                alt={item.title[language]}
-                                                loading={index < 4 ? "eager" : "lazy"}
-                                                decoding="async"
-                                                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                            />
-                                            <div
-                                                className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
-                                                <div
-                                                    className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                                    <svg className="w-5 h-5 text-white" fill="currentColor"
-                                                         viewBox="0 0 24 24">
-                                                        <path d="M8 5v14l11-7z" />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </>
-                                    ) : (
-                                        <img src={item.url} alt={item.title[language]}
-                                             loading={index < 4 ? "eager" : "lazy"}
-                                             decoding="async"
-                                             className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                    )}
-                                    <div
-                                        className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
-                                        <div className="flex items-center gap-2">
-                                            <span
-                                                className="text-xs font-medium px-2 py-1 rounded bg-amber-500/90 text-gray-900">
-                                                {item.category === 'matches' ? (language === 'UA' ? 'Матч' : language === 'EN' ? 'Match' : 'Mérkőzés') : (language === 'UA' ? 'Тренування' : language === 'EN' ? 'Training' : 'Edzés')}
-                                            </span>
-                                            <span
-                                                className="text-xs text-gray-400">{index + 1} / {filteredItems.length}</span>
-                                        </div>
-                                        <h3 className="text-white font-medium mt-1 line-clamp-1">{item.title[language]}</h3>
+                            {/* Statistics */}
+                            <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50">
+                                <h3 className="text-lg font-semibold text-white mb-4">{t.statistics}</h3>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="text-center p-3 bg-slate-800/50 rounded-xl">
+                                        <p className="text-2xl font-bold text-amber-400">
+                                            {mediaItems.filter(i => i.type === 'video').length}
+                                        </p>
+                                        <p className="text-xs text-gray-400 mt-1">{t.videos}</p>
+                                    </div>
+                                    <div className="text-center p-3 bg-slate-800/50 rounded-xl">
+                                        <p className="text-2xl font-bold text-amber-400">
+                                            {mediaItems.filter(i => i.type === 'photo').length}
+                                        </p>
+                                        <p className="text-xs text-gray-400 mt-1">{t.photos}</p>
                                     </div>
                                 </div>
-                            </motion.div>
-                        ))}
+                            </div>
+                        </motion.div>
+                    </div>
+                ) : (
+                    <div className="flex items-center justify-center h-96">
+                        <p className="text-gray-400 text-lg">{t.noMedia}</p>
+                    </div>
+                )}
+
+                {/* Media Gallery */}
+                {filteredItems.length > 0 && (
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="mt-12"
+                    >
+                        <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                            <FaTh className="w-6 h-6 text-amber-400" />
+                            <span>{t.gallery}</span>
+                        </h2>
+                        <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50">
+                            <MediaGallery
+                                items={filteredItems}
+                                currentIndex={currentIndex}
+                                onSelect={handleMediaSelect}
+                                language={language}
+                            />
+                        </div>
                     </motion.div>
                 )}
-                </div>
+
+                {/* External Links */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="mt-16"
+                >
+                    <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <FaExternalLinkAlt className="w-6 h-6 text-amber-400" />
+                        <span>{t.externalLinks}</span>
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {externalLinks.map((link) => (
+                            <motion.a
+                                key={link.id}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ y: -5, scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="group relative bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-amber-500/50 transition-all duration-300 shadow-xl hover:shadow-amber-500/20"
+                            >
+                                <div className="flex items-start gap-4">
+                                    <div className="p-3 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-xl group-hover:from-amber-500/30 group-hover:to-yellow-500/30 transition-all duration-300">
+                                        {getIconForLink(link.type)}
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
+                                            {link.title[language]}
+                                        </h3>
+                                        {link.description && (
+                                            <p className="text-sm text-gray-400 mt-1">
+                                                {link.description[language]}
+                                            </p>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <FaExternalLinkAlt className="w-4 h-4 text-amber-400" />
+                                </div>
+                            </motion.a>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </div>
     );
