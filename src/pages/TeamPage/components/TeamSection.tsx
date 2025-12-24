@@ -111,22 +111,6 @@ const TeamSection: React.FC<TeamSectionProps> = ({
                                             
                                             {/* Gradient Overlay */}
                                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-60 z-20"></div>
-
-                                            {/* Captain/Vice-Captain Badge */}
-                                            {(item.isCaptain || item.isViceCaptain) && (
-                                                <div className="absolute top-3 right-3 z-30">
-                                                    <div className={`relative px-4 py-2 rounded-lg backdrop-blur-md shadow-2xl ${
-                                                        item.isCaptain
-                                                            ? 'bg-gradient-to-r from-yellow-500/90 to-amber-600/90 text-black'
-                                                            : 'bg-gradient-to-r from-slate-600/90 to-slate-700/90 text-white'
-                                                    }`}>
-                                                        <div className="absolute inset-0 bg-white/20 rounded-lg blur-xl"></div>
-                                                        <span className="relative text-xs font-bold tracking-wider uppercase">
-                                                            {item.isCaptain ? captainLabel : viceCaptainLabel}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            )}
                                         </div>
 
                                         {/* Content Section */}
