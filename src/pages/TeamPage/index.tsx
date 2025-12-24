@@ -143,11 +143,6 @@ const TeamPage = () => {
 
                 <ContactSection
                     language={language}
-                    contactTitle={t.contactTitle}
-                    contactText={t.contactText}
-                    contactPhone={t.contactPhone}
-                    contactEmail={t.contactEmail}
-                    contactTelegram={t.contactTelegram}
                 />
             </div>
         </div>

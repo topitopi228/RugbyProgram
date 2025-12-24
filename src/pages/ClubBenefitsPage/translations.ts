@@ -111,7 +111,7 @@ export const translations: Record<string, Translations> = {
             },
             {
                 name: 'Silver',
-                amount: '15 000 ₴',
+                amount: '7 000 ₴',
                 color: 'from-gray-400 to-gray-600',
                 benefits: [
                     'Всі переваги рівня Starter',
@@ -122,7 +122,7 @@ export const translations: Record<string, Translations> = {
             },
             {
                 name: 'Gold',
-                amount: '50 000 ₴',
+                amount: '10 000 ₴',
                 color: 'from-yellow-400 to-yellow-600',
                 popular: true,
                 benefits: [
@@ -135,7 +135,7 @@ export const translations: Record<string, Translations> = {
             },
             {
                 name: 'Platinum',
-                amount: '100 000 ₴',
+                amount: '50 000 ₴',
                 color: 'from-blue-400 to-purple-600',
                 benefits: [
                     'Всі переваги рівня Gold',

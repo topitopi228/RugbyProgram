@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import { FaCrown, FaTrophy, FaStar, FaGift, FaUsers, FaMedal, FaGlobe, FaChartLine, FaFire, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import { translations } from './translations';
 import ContactSection from '../TeamPage/components/ContactSection';
+import MembersGrid from './components/MembersGrid';
 
 const ClubBenefitsPage = () => {
     const { language } = useLanguage();
@@ -280,7 +281,7 @@ const ClubBenefitsPage = () => {
             </div>
 
             {/* First Members Grid */}
-            <div className="max-w-6xl mx-auto px-4 py-16">
+            <div className="max-w-7xl mx-auto px-4 py-16">
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -289,86 +290,10 @@ const ClubBenefitsPage = () => {
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-200 to-amber-400 bg-clip-text text-transparent">{t.firstMembersTitle}</h2>
                     <p className="text-base text-gray-400 mb-8">{t.firstMembersSubtitle}</p>
-                    
-                    <motion.div 
-                        initial={{ scale: 0.95, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="inline-flex flex-col md:flex-row items-center gap-4 bg-slate-800/70 backdrop-blur-xl border border-yellow-400/20 rounded-xl px-6 py-5 shadow-lg"
-                    >
-                        <div className="flex items-center gap-3">
-                            <div className="p-3 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-lg">
-                                <FaUsers className="text-gray-900 text-xl" />
-                            </div>
-                            <div className="text-left">
-                                <p className="text-xs text-gray-400 font-medium uppercase tracking-wide">{t.slotsAvailable}</p>
-                                <p className="text-3xl font-bold bg-gradient-to-r from-yellow-300 to-amber-400 bg-clip-text text-transparent">99/100</p>
-                            </div>
-                        </div>
-                        <div className="h-12 w-px bg-gradient-to-b from-transparent via-yellow-400/20 to-transparent hidden md:block" />
-                        <div className="text-center md:text-left">
-                            <p className="text-lg font-bold text-yellow-300 mb-0.5">Поспішайте!</p>
-                            <p className="text-sm text-gray-400">Залишилось лише <span className="text-yellow-400 font-semibold">99 місць</span></p>
-                        </div>
-                    </motion.div>
                 </motion.div>
 
-                <div className="grid grid-cols-5 md:grid-cols-10 lg:grid-cols-10 gap-2 md:gap-3">
-                    {Array.from({ length: 100 }).map((_, index) => {
-                        const isTaken = index === 0;
-                        return (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, scale: 0 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: (index % 20) * 0.01, duration: 0.3 }}
-                                className={`relative aspect-square rounded-xl flex items-center justify-center font-bold text-sm transition-all duration-300 ${
-                                    isTaken
-                                        ? 'bg-gradient-to-br from-yellow-400 via-amber-500 to-orange-500 text-gray-900 shadow-2xl shadow-amber-500/40 scale-110 border-2 border-amber-300/50'
-                                        : 'bg-gradient-to-br from-slate-900/80 to-slate-800/80 border-2 border-slate-700/30 text-gray-500 hover:border-amber-500/40 hover:bg-gradient-to-br hover:from-slate-800/90 hover:to-slate-700/90 backdrop-blur-xl hover:scale-105 hover:shadow-lg hover:shadow-amber-500/10'
-                                }`}
-                            >
-                                {isTaken ? (
-                                    <FaCrown className="text-lg" />
-                                ) : (
-                                    <span className="opacity-50 text-xs">{index + 1}</span>
-                                )}
-                                {isTaken && (
-                                    <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-400 rounded-full" />
-                                )}
-                            </motion.div>
-                        );
-                    })}
-                </div>
-
-                {/* Legend */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="flex flex-wrap justify-center gap-6 mt-8"
-                >
-                    <div className="flex items-center gap-2">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center">
-                            <FaCrown className="text-gray-900 text-sm" />
-                        </div>
-                        <div>
-                            <p className="text-white font-semibold text-sm">Зайняте місце</p>
-                            <p className="text-gray-500 text-xs">1 учасник</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center">
-                            <span className="text-gray-500 font-semibold text-xs">99</span>
-                        </div>
-                        <div>
-                            <p className="text-white font-semibold text-sm">Вільні місця</p>
-                            <p className="text-gray-500 text-xs">99 можливостей</p>
-                        </div>
-                    </div>
-                </motion.div>
+                {/* Members Grid Component */}
+                <MembersGrid />
             </div>
 
             {/* CTA Section */}

@@ -51,26 +51,24 @@ const SponsorsPage = () => {
     );
 
     return (
-        <div className="min-h-screen relative overflow-hidden text-white">
-            {/* Modern Background with Gradient Mesh */}
-            <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-slate-900 to-gray-900"></div>
+        <div className="min-h-screen relative overflow-hidden text-white bg-gradient-to-br from-slate-950 via-indigo-950/50 to-slate-950">
+            {/* Premium Background Gradients */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-amber-900/10 via-transparent to-transparent"></div>
             
-            {/* Animated Background Blobs */}
-            <div className="absolute inset-0 overflow-hidden opacity-30">
-                <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-3xl"></div>
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-amber-600/10 to-yellow-600/10 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute bottom-1/3 right-1/4 w-[450px] h-[450px] bg-gradient-to-br from-indigo-600/10 to-blue-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-amber-600/5 to-yellow-600/5 rounded-full blur-3xl"></div>
             </div>
 
-            {/* Subtle Grid Pattern */}
+            {/* Premium Grid Pattern */}
             <div 
-                className="absolute inset-0 opacity-[0.02]"
+                className="absolute inset-0 opacity-[0.03]"
                 style={{
-                    backgroundImage: `
-                        linear-gradient(to right, #ffffff 1px, transparent 1px),
-                        linear-gradient(to bottom, #ffffff 1px, transparent 1px)
-                    `,
-                    backgroundSize: '60px 60px'
+                    backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
+                    backgroundSize: '80px 80px'
                 }}
             ></div>
 
@@ -78,16 +76,18 @@ const SponsorsPage = () => {
                 <div className="max-w-6xl mx-auto">
                 {/* Olympic Invitation Section */}
                 <motion.div
-                    className="relative overflow-hidden bg-gradient-to-r from-blue-900/80 via-blue-800/80 to-blue-900/80 backdrop-blur-xl rounded-xl p-6 md:p-8 mb-16 shadow-xl border border-blue-700/30"
-                    initial={{ opacity: 0, y: 10 }}
+                    className="relative overflow-hidden bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-10 mb-20 shadow-2xl border-2 border-amber-500/20"
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    {/* Subtle Background Elements */}
-                    <div className="absolute inset-0 overflow-hidden opacity-10">
-                        <div className="absolute -top-20 -left-20 w-48 h-48 bg-yellow-400 rounded-full blur-3xl"></div>
-                        <div className="absolute -bottom-20 -right-20 w-56 h-56 bg-blue-400 rounded-full blur-3xl"></div>
+                    {/* Premium Background Elements */}
+                    <div className="absolute inset-0 overflow-hidden">
+                        <div className="absolute -top-20 -left-20 w-48 h-48 bg-amber-400/10 rounded-full blur-3xl"></div>
+                        <div className="absolute -bottom-20 -right-20 w-56 h-56 bg-indigo-400/10 rounded-full blur-3xl"></div>
                     </div>
+                    {/* Decorative Corner */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full"></div>
 
                     <div className="relative z-10">
                         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
@@ -123,7 +123,7 @@ const SponsorsPage = () => {
                                     transition={{ delay: 0.5, duration: 0.4 }}
                                 >
                                     <button
-                                        onClick={scrollToContact}
+                                        onClick={() => navigate('/benefits')}
                                         className="group relative px-6 py-3 bg-gradient-to-r from-yellow-500 to-amber-600 text-gray-900 font-bold text-sm rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/20"
                                     >
                                         <span className="relative z-10 flex items-center">
@@ -290,98 +290,98 @@ const SponsorsPage = () => {
                 </div>
 
                 {/* Company Sponsors Section */}
-                <div className="max-w-6xl mx-auto mt-8">
-                    <motion.h2
+                <div className="max-w-6xl mx-auto mt-16">
+                    <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="text-2xl md:text-3xl font-bold text-center mb-10 text-yellow-300"
+                        className="text-center mb-12"
                     >
-                        {language === 'UA' ? 'Компанії-партнери' : language === 'EN' ? 'Company Partners' : 'Céges Partnerek'}
-                    </motion.h2>
+                        <div className="inline-block">
+                            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent mb-2">
+                                {language === 'UA' ? 'Компанії-партнери' : language === 'EN' ? 'Company Partners' : 'Céges Partnerek'}
+                            </h2>
+                            <div className="h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div>
+                        </div>
+                    </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                         {companySponsors.map((sponsor, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.08, duration: 0.4 }}
-                                className="bg-white/5 backdrop-blur-sm rounded-lg p-5 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-yellow-400/20"
+                                className="group relative"
                             >
-                                <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
-                                    <div className="h-32 flex items-center justify-center mb-3">
-                                        <img
-                                            src={sponsor.image}
-                                            alt={sponsor.name}
-                                            className="max-h-full max-w-full object-contain"
-                                        />
+                                {/* Glow Effect */}
+                                <div className="absolute -inset-0.5 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-2xl opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
+                                
+                                {/* Card Content */}
+                                <a href={sponsor.url} target="_blank" rel="noopener noreferrer" className="relative block">
+                                    <div className="relative bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border-2 border-slate-700/30 group-hover:border-amber-500/30 transition-all duration-500 p-6 h-full">
+                                        <div className="h-32 flex items-center justify-center mb-4 bg-gradient-to-br from-slate-800/50 to-slate-700/30 rounded-xl">
+                                            <img
+                                                src={sponsor.image}
+                                                alt={sponsor.name}
+                                                className="max-h-full max-w-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                                            />
+                                        </div>
+                                        <h3 className="text-lg font-bold text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-amber-300 group-hover:to-yellow-400 transition-all duration-300">
+                                            {sponsor.name}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-base font-semibold text-center text-yellow-300">
-                                        {sponsor.name}
-                                    </h3>
                                 </a>
                             </motion.div>
                         ))}
                     </div>
 
                     {/* Personal Sponsors Section */}
-                    <motion.h2
+                    <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="text-2xl md:text-3xl font-bold text-center mb-10 text-yellow-300 mt-16"
+                        className="text-center mb-12 mt-20"
                     >
-                        {personalSponsorsTitle}
-                    </motion.h2>
+                        <div className="inline-block">
+                            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent mb-2">
+                                {personalSponsorsTitle}
+                            </h2>
+                            <div className="h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div>
+                        </div>
+                    </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                         {personalSponsors.map((sponsor, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.08, duration: 0.4 }}
-                                className="bg-white/5 backdrop-blur-sm rounded-lg p-5 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-yellow-400/20 flex flex-col items-center text-center"
+                                className="group relative"
                             >
-                                <div className="w-24 h-24 rounded-full overflow-hidden mb-3 border-2 border-yellow-400/30">
-                                    <img
-                                        src={sponsor.image}
-                                        alt={sponsor.name}
-                                        className="w-full h-full object-cover"
-                                    />
+                                {/* Glow Effect */}
+                                <div className="absolute -inset-0.5 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-2xl opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
+                                
+                                {/* Card Content */}
+                                <div className="relative bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border-2 border-slate-700/30 group-hover:border-amber-500/30 transition-all duration-500 p-6 flex flex-col items-center text-center h-full">
+                                    <div className="w-28 h-28 rounded-full overflow-hidden mb-4 border-3 border-amber-500/20 group-hover:border-amber-500/40 transition-all duration-500">
+                                        <img
+                                            src={sponsor.image}
+                                            alt={sponsor.name}
+                                            className="w-full h-full object-cover filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                                        />
+                                    </div>
+                                    <h3 className="text-lg font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-amber-300 group-hover:to-yellow-400 transition-all duration-300 mb-1">
+                                        {sponsor.name}
+                                    </h3>
+                                    <p className="text-gray-500 text-xs font-medium">
+                                        {sponsor.position}
+                                    </p>
                                 </div>
-                                <h3 className="text-lg font-bold text-yellow-300 mb-1">
-                                    {sponsor.name}
-                                </h3>
-                                <p className="text-gray-400 text-xs">
-                                    {sponsor.position}
-                                </p>
                             </motion.div>
                         ))}
                     </div>
-
-                    {/* Become a Sponsor Button */}
-                    <motion.div
-                        ref={contactRef}
-                        id="contact"
-                        className="flex justify-center mt-12"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
-                    >
-                        <button
-                            onClick={scrollToContact}
-                            className="px-8 py-3 bg-gradient-to-r from-yellow-500 to-amber-600 text-gray-900 font-bold rounded-lg text-base hover:from-yellow-600 hover:to-amber-700 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/20 flex items-center gap-2"
-                        >
-                            {language === 'UA' ? 'Підтримати' : language === 'EN' ? 'Support' : 'Támogatás'}
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </button>
-                    </motion.div>
                 </div>
                 </div>
             </div>

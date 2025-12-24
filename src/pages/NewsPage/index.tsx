@@ -71,6 +71,14 @@ const NewsPage = () => {
                     description: 'Збірна України U16 з регбі-7 успішно завершила інтенсивний навчально-тренувальний збір у м. Батумі, Грузія. За участю провідних іноземних тренерів команда провела тренування з техніки, тактики, фізичної підготовки та психологічного тренінгу.',
                     expense: '15700',
                     image: '/news8.webp'
+                },
+                {
+                    id: 9,
+                    date: '22-23 Грудня 2025',
+                    title: 'Тренувальні збори у Хмельницькому',
+                    description: 'У Хмельницькому відбулися навчально-тренувальні збори, під час яких збірна України U16 провела серію тренувальних матчів проти команди U17. Ці товариські ігри стали важливим етапом підготовки молодших гравців, дозволивши їм отримати цінний досвід гри проти старших та досвідченіших суперників. Інтенсивні тренування та практичні матчі допомогли команді покращити тактичну взаємодію та підвищити рівень майстерності.',
+                    expense: '300',
+                    image: '/news9.webp'
                 }
 
             ]
@@ -136,6 +144,14 @@ const NewsPage = () => {
         description: 'The Ukrainian U16 rugby-7 national team successfully completed an intensive training camp in Batumi, Georgia. With leading foreign coaches, the team conducted training sessions on technique, tactics, physical conditioning, and psychological preparation.',
         expense: '15700',
         image: '/news8.webp'
+    },
+    {
+        id: 9,
+        date: 'December 22-23, 2025',
+        title: 'Training Camp in Khmelnytskyi',
+        description: 'A training camp was held in Khmelnytskyi where the Ukrainian U16 national team played a series of practice matches against the U17 team. These friendly games became an important stage in the preparation of younger players, allowing them to gain valuable experience playing against older and more experienced opponents. Intensive training and practice matches helped the team improve tactical coordination and enhance their skill level.',
+        expense: '300',
+        image: '/news9.webp'
     }
 ]
         },
@@ -200,6 +216,14 @@ const NewsPage = () => {
         description: 'Az ukrán U16-os rögbi-7 válogatott sikeresen befejezte az intenzív edzőtábort Batumiban, Grúziában. Vezető külföldi edzők irányításával a csapat technikai, taktikai, fizikai felkészítési és pszichológiai edzéseket tartott.',
         expense: '15700',
         image: '/news8.webp'
+    },
+    {
+        id: 9,
+        date: '2025. december 22-23.',
+        title: 'Edzőtábor Hmelnickijben',
+        description: 'Hmelnickijben edzőtábort tartottak, ahol az ukrán U16-os válogatott edzőmérkőzéseket játszott az U17-es csapat ellen. Ezek a barátságos játékok fontos szakaszt jelentettek a fiatalabb játékosok felkészítésében, lehetővé téve számukra, hogy értékes tapasztalatot szerezzenek idősebb és tapasztaltabb ellenfelek ellen játszva. Az intenzív edzések és gyakorló mérkőzések segítették a csapatot a taktikai koordináció javításában és a képességek szintjének emelésében.',
+        expense: '300',
+        image: '/news9.webp'
     }
 ]
         }
