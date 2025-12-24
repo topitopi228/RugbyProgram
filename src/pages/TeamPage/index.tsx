@@ -1,4 +1,5 @@
 import { useLanguage } from '../../components/LanguageUtils';
+import { motion } from 'framer-motion';
 import HeroSection from './components/HeroSection';
 import TeamSection from './components/TeamSection';
 import ContactSection from './components/ContactSection';
@@ -44,18 +45,71 @@ const TeamPage = () => {
             
             <HeroSection title={t.title} />
 
-            <div className="container mx-auto px-4 py-12 relative z-10">
+            {/* Transition Section with Decorative Elements */}
+            <div className="relative -mt-20 z-30">
+                <div className="container mx-auto px-4">
+                    {/* Subtitle Section */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="text-center mb-20"
+                    >
+                        <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-full border border-amber-500/30 shadow-2xl">
+                            <span className="text-amber-400 font-semibold text-lg tracking-wide">
+                                {language === 'UA' ? 'Наша команда професіоналів' : language === 'EN' ? 'Our Professional Team' : 'Professzionális csapatunk'}
+                            </span>
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+
+            <div className="container mx-auto px-4 py-8 relative z-10">
                 <TeamSection
                     title={t.mainCoaches}
                     items={teamData.coaches}
                     fadeInUp={fadeInUp}
                 />
 
+                {/* Section Divider */}
+                <motion.div
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    whileInView={{ opacity: 1, scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="relative h-32 flex items-center justify-center my-8"
+                >
+                    <div className="absolute inset-0 flex items-center">
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
+                    </div>
+                    <div className="relative bg-slate-950 px-4">
+                        <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full"></div>
+                    </div>
+                </motion.div>
+
                 <TeamSection
                     title={t.doctors}
                     items={teamData.doctors}
                     fadeInUp={fadeInUp}
                 />
+
+                {/* Section Divider with Icon */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="relative h-32 flex items-center justify-center my-8"
+                >
+                    <div className="absolute inset-0 flex items-center">
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
+                    </div>
+                    <div className="relative bg-slate-950 px-6">
+                        <div className="w-12 h-12 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-full flex items-center justify-center border border-amber-500/30">
+                            <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                </motion.div>
 
                 <TeamSection
                     title={t.players}
@@ -64,6 +118,22 @@ const TeamPage = () => {
                     viceCaptainLabel={t.viceCaptain}
                     fadeInUp={fadeInUp}
                 />
+
+                {/* Section Divider */}
+                <motion.div
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    whileInView={{ opacity: 1, scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="relative h-32 flex items-center justify-center my-8"
+                >
+                    <div className="absolute inset-0 flex items-center">
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
+                    </div>
+                    <div className="relative bg-slate-950 px-4">
+                        <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full"></div>
+                    </div>
+                </motion.div>
 
                 <TeamSection
                     title={t.foreignCoaches}

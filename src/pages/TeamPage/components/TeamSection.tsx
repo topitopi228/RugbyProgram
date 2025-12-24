@@ -32,16 +32,34 @@ const TeamSection: React.FC<TeamSectionProps> = ({
             animate="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className="mb-16"
+            className="mb-24 relative"
         >
-            <motion.h2
-                className="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-200"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-            >
-                {title}
-            </motion.h2>
+            {/* Section Decorative Header */}
+            <div className="relative mb-16">
+                {/* Decorative Lines */}
+                <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div>
+                
+                {/* Title with Background */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="relative z-10 text-center"
+                >
+                    <div className="inline-block">
+                        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 via-yellow-500/20 to-amber-500/20 blur-3xl"></div>
+                        <h2 className="relative text-4xl md:text-5xl lg:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-300 px-8 py-2">
+                            {title}
+                        </h2>
+                        {/* Decorative Dots */}
+                        <div className="flex justify-center gap-2 mt-4">
+                            <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+                            <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></span>
+                            <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></span>
+                        </div>
+                    </div>
+                </motion.div>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 md:gap-8 items-stretch">
                 {items.map((item, index) => {
                     const imagePath = `/${item.id}.webp`;
