@@ -142,7 +142,7 @@ const ClubBenefitsPage = () => {
                             transition={{ delay: 0.2, duration: 0.4 }}
                             className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-yellow-400/20 to-amber-500/20 backdrop-blur-sm rounded-2xl mb-6 border-2 border-yellow-400/30 shadow-lg shadow-yellow-500/20"
                         >
-                            <span className="text-3xl font-bold bg-gradient-to-br from-yellow-300 to-amber-400 bg-clip-text text-transparent">1/100</span>
+                            <span className="text-3xl font-bold bg-gradient-to-br from-yellow-300 to-amber-400 bg-clip-text text-transparent">4/100</span>
                         </motion.div>
                         <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-200 to-amber-400 bg-clip-text text-transparent">{t.aboutTitle}</h2>
                         <p className="text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
