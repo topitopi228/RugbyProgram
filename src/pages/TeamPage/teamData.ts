@@ -43,7 +43,7 @@ export const getTeamData = (language: string, t: any) => {
         ],
         players: [
             { id: 'player15', name: 'Олександр Бишук', isCaptain: true },
-            { id: 'player11', name: 'Владислав Кошелюк', isViceCaptain: true },
+            { id: 'player11', name: 'Михайло Четвертик', isViceCaptain: true },
             { id: 'player1', name: 'Микола Денбновецький ' },
             { id: 'player2', name: 'Ерік Тіппан' },
             { id: 'player3', name: 'Володимир Рец' },
@@ -54,8 +54,8 @@ export const getTeamData = (language: string, t: any) => {
             { id: 'player8', name: 'Богдан Пікульський' },
             { id: 'player9', name: 'Владислав Садовський' },
             { id: 'player10', name: 'Роман Присяжнюк' },
-            { id: 'player12', name: 'Артем Кухарський' },
-            { id: 'player13', name: 'Даниіл Плєшаков' },
+            { id: 'player12', name: 'Владислав Кошелюк' },
+            { id: 'player13', name: 'Артем Кухарський' },
         ],
         foreignCoaches: [
             {
