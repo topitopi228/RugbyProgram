@@ -43,18 +43,6 @@ export const getMediaItems = (): MediaItem[] => {
             },
             category: 'matches'
         },
-        {
-            id: 2,
-            type: 'video',
-            url: '/media2.webm',
-            poster: '/team1.webp',
-            title: { 
-                UA: 'Товариський матч зі збірною України U17', 
-                EN: 'Friendly match with Ukraine U17 team', 
-                HUN: 'Barátságos mérkőzés az U17-es ukrán csapattal' 
-            },
-            category: 'matches'
-        },
         // Photos
         {
             id: 15,
