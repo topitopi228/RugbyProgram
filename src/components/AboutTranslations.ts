@@ -3,38 +3,53 @@ export const translations = {
         pageTitle: 'Майбутні заходи',
         upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
         event1: {
-            date: '10-15 Лютого 2026',
-            title: 'Турнір - Lisbon 7s',
+            date: '9-16 Лютого 2026',
+            title: 'Турнір Lisbon 7s',
+            description: 'Міжнародний турнір у Португалії',
             location: 'м. Лісабон, Португалія',
             funding: '10,000-13,000 €'
         },
+        event2: {
+            date: '24-30 Березня 2026',
+            title: 'Gdynia Rugby Sevens',
+            description: 'Міжнародний турнір',
+            location: 'м. Гдиня, Польща',
+            funding: '8,000-10,000 €'
+        },
         event3: {
-            date: '25-29 Червня 2026',
-            title: 'Міжнародний турнір',
-            description: 'з 30 національними командами з різних куточків світу',
-            location: 'м. Клагенфурт, Австрія',
-            funding: '15,000 - 17,000 €'
+            date: '1-7 Травня 2026',
+            title: 'Навчально-тренувальний збір збірної',
+            description: 'Підготовка команди до міжнародних змагань',
+            location: 'м. Хмельницький, Україна',
+            funding: '300 €'
         },
         event4: {
-            date: '1-7 Травня 2026',
-            title: 'Навчально-тренувальний збір у Польщі',
-            description: ' ',
-            location: 'м. Гданськ, Польща',
-            funding: '≈10,500 €'
+            date: '27-31 Травня 2026',
+            title: 'Міжнародний турнір',
+            description: 'Участь у турнірі',
+            location: 'Італія',
+            funding: '12,000-15,000 €'
         },
         event5: {
-            date: '8-14 Червня 2026',
-            title: 'Навчально-тренувальний збір у Франції',
-            description: ' ',
-            location: 'м. Париж, Франція',
-            funding: '≈15,800 €'
+            date: '16-21 Червня 2026',
+            title: 'Міжнародний турнір Клагенфурт',
+            description: 'з 30 національними командами з різних куточків світу',
+            location: 'м. Клагенфурт, Австрія',
+            funding: '15,000-17,000 €'
         },
         event6: {
-            date: '20-28 Січня 2026',
-            title: 'Відрядження тренерів до Нової Зеландії',
-            description: ' ',
-            location: 'Нова Зеландія',
-            funding: '≈3,500 €'
+            date: '3-7 Вересня 2026',
+            title: 'Осінній турнір Gdynia',
+            description: 'Міжнародний турнір',
+            location: 'м. Гдиня, Польща',
+            funding: '8,000-10,000 €'
+        },
+        event7: {
+            date: '19-25 Листопада 2026',
+            title: 'Міжнародний турнір',
+            description: 'Фінальний турнір року',
+            location: 'Грузія',
+            funding: '10,000-12,000 €'
         },
         contactTitle: "Зв'яжіться з нами",
         contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
@@ -50,52 +65,67 @@ export const translations = {
             description: 'Допоможіть нам забезпечити команду необхідним інвентарем для тренувань та ігор',
             amount: '1,500€',
             items: [
-                '14 регбійних м\'ячів для тренувань',
-                '4 захисних щити',
-                '2 набори конусів для розминки',
-                '16 манішок для тренувань',
-                '8 тренувальних резинок',
+                'Комплект манішок для тренувань',
+                'М\'ячі для регбі-7',
+                'Тренувальні конуси та драбини',
+                'Захисне спорядження'
             ],
-            cta: 'Підтримати'
-        }
+            cta: 'Підтримати команду'
+        },
+        fundingBreakdownTitle: 'Детальний кошторис'
     },
     EN: {
         pageTitle: 'Upcoming Events',
-        upcomingEvents: 'Upcoming Events of Ukraine U16 Rugby-7 Team',
+        upcomingEvents: 'Upcoming Events for Ukraine U16 Rugby-7 National Team',
         event1: {
-            date: '10-15 February 2026',
-            title: 'Tournament - Lisbon 7s',
+            date: 'February 9-16, 2026',
+            title: 'Lisbon 7s Tournament',
+            description: 'International tournament in Portugal',
             location: 'Lisbon, Portugal',
-            funding: '12,000 - 14,000 €'
+            funding: '10,000-13,000 €'
+        },
+        event2: {
+            date: 'March 24-30, 2026',
+            title: 'Gdynia Rugby Sevens',
+            description: 'International tournament',
+            location: 'Gdynia, Poland',
+            funding: '8,000-10,000 €'
         },
         event3: {
-            date: '25-29 June 2026',
-            title: 'International Tournament',
-            description: 'with 30 national teams from around the world',
-            location: 'Klagenfurt, Austria',
-            funding: '17,000-19,000 €'
+            date: 'May 1-7, 2026',
+            title: 'National Team Training Camp',
+            description: 'Team preparation for international competitions',
+            location: 'Khmelnytskyi, Ukraine',
+            funding: '300 €'
         },
         event4: {
-            date: '1-7 May 2026',
-            title: 'Training Camp in Poland',
-            description: ' ',
-            location: 'Gdańsk, Poland',
-            funding: '≈10,500 €'
+            date: 'May 27-31, 2026',
+            title: 'International Tournament',
+            description: 'Tournament participation',
+            location: 'Italy',
+            funding: '12,000-15,000 €'
         },
         event5: {
-            date: '8-14 June 2026',
-            title: 'Training Camp in France',
-            description: ' ',
-            location: 'Paris, France',
-            funding: '≈15,800 €'
+            date: 'June 16-21, 2026',
+            title: 'Klagenfurt International Tournament',
+            description: 'with 30 national teams from around the world',
+            location: 'Klagenfurt, Austria',
+            funding: '15,000-17,000 €'
         },
         event6: {
-    date: 'January 20-28, 2026',
-    title: 'Coaches\' Training in New Zealand',
-    description: ' ',
-    location: 'New Zealand',
-    funding: '≈3,500 €'
-},
+            date: 'September 3-7, 2026',
+            title: 'Autumn Gdynia Tournament',
+            description: 'International tournament',
+            location: 'Gdynia, Poland',
+            funding: '8,000-10,000 €'
+        },
+        event7: {
+            date: 'November 19-25, 2026',
+            title: 'International Tournament',
+            description: 'Final tournament of the year',
+            location: 'Georgia',
+            funding: '10,000-12,000 €'
+        },
         contactTitle: "Contact Us",
         contactText: "Have questions or want to support our team? Contact us using the information below.",
         contactPhone: '+380 50 949 82 09',
@@ -110,52 +140,67 @@ export const translations = {
             description: 'Help us provide the team with necessary training and game equipment',
             amount: '1,500 €',
             items: [
-                '14 rugby training balls',
-                '4 tackle shields',
-                '2 sets of warm-up cones',
-                '16 training bibs',
-                '8 resistance bands',
+                'Training bibs set',
+                'Rugby-7 balls',
+                'Training cones and ladders',
+                'Protective equipment'
             ],
-            cta: 'Support with Equipment'
-        }
+            cta: 'Support the Team'
+        },
+        fundingBreakdownTitle: 'Detailed Budget'
     },
     HUN: {
         pageTitle: 'Közelgő események',
-        upcomingEvents: 'Az Ukrán U16-os Rögbi-7 Válogatott közelgő eseményei',
+        upcomingEvents: 'Az U16-os ukrán rögbi-7-es válogatott közelgő eseményei',
         event1: {
-            date: '2026. február 10-15.',
-            title: 'Lisbon 7s Bajnokság',
+            date: '2026. február 9-16.',
+            title: 'Lisbon 7s Torna',
+            description: 'Nemzetközi torna Portugáliában',
             location: 'Lisszabon, Portugália',
-            funding: '12 000 - 14 000 €'
+            funding: '10,000-13,000 €'
+        },
+        event2: {
+            date: '2026. március 24-30.',
+            title: 'Gdynia Rugby Sevens',
+            description: 'Nemzetközi torna',
+            location: 'Gdynia, Lengyelország',
+            funding: '8,000-10,000 €'
         },
         event3: {
-            date: '2026. június 25-29.',
-            title: 'Nemzetközi Torna',
-            description: '30 nemzeti csapattal a világ különböző részeiről',
-            location: 'Klagenfurt, Ausztria',
-            funding: '15 000 - 17 000 €'
+            date: '2026. május 1-7.',
+            title: 'Válogatott edzőtábor',
+            description: 'Csapat felkészítése nemzetközi versenyekre',
+            location: 'Hmelnickij, Ukrajna',
+            funding: '300 €'
         },
         event4: {
-            date: '2026. május 1-7.',
-            title: 'Edzőtábor Lengyelországban',
-            description: ' ',
-            location: 'Gdańsk, Lengyelország',
-            funding: '≈10,500 €'
+            date: '2026. május 27-31.',
+            title: 'Nemzetközi Torna',
+            description: 'Torna részvétel',
+            location: 'Olaszország',
+            funding: '12,000-15,000 €'
         },
         event5: {
-            date: '2026. június 8-14.',
-            title: 'Edzőtábor Franciaországban',
-            description: ' ',
-            location: 'Párizs, Franciaország',
-            funding: '≈15,800 €'
+            date: '2026. június 16-21.',
+            title: 'Klagenfurt Nemzetközi Torna',
+            description: '30 nemzeti csapattal a világ különböző részeiről',
+            location: 'Klagenfurt, Ausztria',
+            funding: '15,000-17,000 €'
         },
         event6: {
-    date: '2026. január 20-28.',
-    title: 'Edzők kiküldetése Új-Zélandra',
-    description: ' ',
-    location: 'Új-Zéland',
-    funding: '≈3,500 €'
-},
+            date: '2026. szeptember 3-7.',
+            title: 'Őszi Gdynia Torna',
+            description: 'Nemzetközi torna',
+            location: 'Gdynia, Lengyelország',
+            funding: '8,000-10,000 €'
+        },
+        event7: {
+            date: '2026. november 19-25.',
+            title: 'Nemzetközi Torna',
+            description: 'Az év utolsó tornája',
+            location: 'Grúzia',
+            funding: '10,000-12,000 €'
+        },
         contactTitle: "Lépjen kapcsolatba velünk",
         contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
         contactPhone: '+380 50 949 82 09',
@@ -170,33 +215,18 @@ export const translations = {
             description: 'Segítsen nekünk biztosítani a csapat számára a szükséges edzés- és játékfelszerelést',
             amount: '1,500 €',
             items: [
-                '14 rögbi edzőlabda',
-                '4 védőpajzs',
-                '2 szett bemelegítő bója',
-                '16 edzőmellény',
-                '8 edzőrugó',
+                'Edzőmellények garnitura',
+                'Rögbi-7 labdák',
+                'Edzési bóják és létrák',
+                'Védőfelszerelés'
             ],
-            cta: 'Támogatás felszereléssel'
-        }
+            cta: 'Csapat támogatása'
+        },
+        fundingBreakdownTitle: 'Részletes költségvetés'
     }
 };
 
-
 export const getEvents = (language: string, t: any) => [
-    {
-    id: 6,
-    image: '/maj7.webp',
-    date: t.event6.date,
-    title: t.event6.title,
-    description: t.event6.description,
-    location: t.event6.location,
-    funding: t.event6.funding,
-    details: language === 'UA' ?
-        'Відрядження 2 тренерів збірної України з регбі-7 U16 до Нової Зеландії для підвищення кваліфікації. Тренери пройдуть навчання у провідних спеціалістів з регбі, вивчать сучасні методики підготовки гравців та отримають міжнародний досвід роботи.' :
-        language === 'EN' ?
-            'Business trip for 2 coaches of the Ukrainian U16 rugby-7 team to New Zealand for professional development. Coaches will receive training from leading rugby specialists, learn modern player preparation techniques, and gain international work experience.' :
-            'Az ukrán U16-os rögbi-7 válogatott 2 edzőjének szakmai fejlesztési úton Új-Zélandra. Az edzők képzést fognak kapni vezető rögbi szakemberektől, megismerik a játékosfelkészítés modern módszereit és nemzetközi munkatapasztalatot szereznek.'
-},
     {
         id: 1,
         image: '/maj1.webp',
@@ -206,10 +236,24 @@ export const getEvents = (language: string, t: any) => [
         location: t.event1.location,
         funding: t.event1.funding,
         details: language === 'UA' ?
-            'Турнір з регбі-7 для юніорських команд у Лісабоні. Наші гравці отримають можливість змагатися з найсильнішими командами Європи, показати свій рівень підготовки та набратися досвіду міжнародних змагань.' :
+            'Турнір з регбі-7 для юніорських команд у Лісабоні. Наші гравці отримають можливість змагатися з найсильнішими командами Європи.' :
             language === 'EN' ?
-                'Rugby-7 tournament for junior teams in Lisbon. Our players will have the opportunity to compete with the strongest teams in Europe, demonstrate their skill level, and gain international competition experience.' :
-                'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban. Játékosaink lehetőséget kapnak arra, hogy versenyezzenek Euróga legerősebb csapataival, bemutassák szintjüket és nemzetközi versenytapasztalatot szerezzenek.'
+                'Rugby-7 tournament for junior teams in Lisbon. Our players will compete with the strongest teams in Europe.' :
+                'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban.'
+    },
+    {
+        id: 2,
+        image: '/maj2.webp',
+        date: t.event2.date,
+        title: t.event2.title,
+        description: t.event2.description,
+        location: t.event2.location,
+        funding: t.event2.funding,
+        details: language === 'UA' ?
+            'Міжнародний турнір у Гдині з участю провідних європейських команд.' :
+            language === 'EN' ?
+                'International tournament in Gdynia with leading European teams.' :
+                'Nemzetközi torna Gdyniában vezető európai csapatokkal.'
     },
     {
         id: 3,
@@ -220,840 +264,259 @@ export const getEvents = (language: string, t: any) => [
         location: t.event3.location,
         funding: t.event3.funding,
         details: language === 'UA' ?
-            'Великий міжнародний турнір за участі 30 національних команд з усього світу. Унікальна можливість для наших юних гравців виступити на міжнародній арені та показати свій потенціал.' :
+            'Інтенсивний навчально-тренувальний збір збірної України U16 у Хмельницькому. Програма включає тренування з техніки, тактики, фізичної підготовки та командної взаємодії для підготовки до міжнародних змагань.' :
             language === 'EN' ?
-                'Major international tournament featuring 30 national teams from around the world. A unique opportunity for our young players to perform on the international stage and demonstrate their potential.' :
-                'Nagy nemzetközi torna, 30 ország csapataival. Kiváló lehetőség fiatal játékosaink számára, hogy nemzetközi színtéren mutathassák be tudásukat és potenciáljukat.'
+                'Intensive training camp for Ukraine U16 national team in Khmelnytskyi. The program includes technical, tactical, physical training and team building to prepare for international competitions.' :
+                'Intenzív edzőtábor az ukrán U16-os válogatottnak Hmelnickijben. A program technikai, taktikai, fizikai edzéseket és csapatépítést tartalmaz a nemzetközi versenyekre való felkészüléshez.'
     },
     {
         id: 4,
-        image: '/maj5.webp',
+        image: '/maj4.webp',
         date: t.event4.date,
         title: t.event4.title,
         description: t.event4.description,
         location: t.event4.location,
         funding: t.event4.funding,
         details: language === 'UA' ?
-            'Інтенсивний навчально-тренувальний збір у Польщі для підготовки команди до міжнародних змагань. Програма включає тренування з техніки, тактики та фізичної підготовки.' :
+            'Престижний турнір в Італії з участю найкращих команд Південної Європи.' :
             language === 'EN' ?
-                'Intensive training camp in Poland to prepare the team for international competitions. The program includes technical, tactical, and physical training sessions.' :
-                'Intenzív edzőtábor Lengyelországban a csapat nemzetközi versenyekre való felkészítésére. A program technikai, taktikai és fizikai edzéseket tartalmaz.'
+                'Prestigious tournament in Italy with the best teams from Southern Europe.' :
+                'Rangos torna Olaszországban Dél-Európa legjobb csapataival.'
     },
     {
         id: 5,
-        image: '/maj6.webp',
+        image: '/maj5.webp',
         date: t.event5.date,
         title: t.event5.title,
         description: t.event5.description,
         location: t.event5.location,
         funding: t.event5.funding,
         details: language === 'UA' ?
-            'Престижний навчально-тренувальний збір у Франції з можливістю тренувань на професійних спортивних базах. Команда матиме можливість попрацювати з досвідченими французькими тренерами.' :
+            'Великий міжнародний турнір за участі 30 національних команд з усього світу.' :
             language === 'EN' ?
-                'Prestigious training camp in France with access to professional sports facilities. The team will have the opportunity to work with experienced French coaches.' :
-                'Rangos edzőtábor Franciaországban professzionális sportlétesítményekkel. A csapat lehetőséget kap, hogy tapasztalt francia edzőkkel dolgozzon.'
+                'Major international tournament featuring 30 national teams from around the world.' :
+                'Nagy nemzetközi torna, 30 ország csapataival.'
+    },
+    {
+        id: 6,
+        image: '/maj6.webp',
+        date: t.event6.date,
+        title: t.event6.title,
+        description: t.event6.description,
+        location: t.event6.location,
+        funding: t.event6.funding,
+        details: language === 'UA' ?
+            'Осінній турнір у Гдині для підготовки до завершення сезону.' :
+            language === 'EN' ?
+                'Autumn tournament in Gdynia to prepare for the end of the season.' :
+                'Őszi torna Gdyniában a szezon végének előkészítésére.'
+    },
+    {
+        id: 7,
+        image: '/maj7.webp',
+        date: t.event7.date,
+        title: t.event7.title,
+        description: t.event7.description,
+        location: t.event7.location,
+        funding: t.event7.funding,
+        details: language === 'UA' ?
+            'Фінальний турнір року в Грузії з найсильнішими командами регіону.' :
+            language === 'EN' ?
+                'Final tournament of the year in Georgia with the strongest teams in the region.' :
+                'Az év utolsó tornája Grúziában a régió legerősebb csapataival.'
     }
 ];
-export const fundingBreakdowns = {
-    1: [
-        {
-            category: {
-                UA: 'Внесок за турнір',
-                EN: 'Tournament Fee',
-                HUN: 'Torna díj'
-            },
-            amount: '5 200 €',
-            description: {
-                UA: 'Внесок',
-                EN: 'Entry Fee',
-                HUN: 'Nevezési díj'
-            },
-            subItems: [
-                {
-                    UA: 'проживання',
-                    EN: 'Accommodation',
-                    HUN: 'Szállás'
-                },
-                {
-                    UA: 'харчування',
-                    EN: 'Meals',
-                    HUN: 'Étkeztetés'
-                },
-                {
-                    UA: 'турнірний внесок',
-                    EN: 'Tournament Fee',
-                    HUN: 'Torna díj'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Спортивне харчування',
-                EN: 'Sports Nutrition',
-                HUN: 'Sporttáplálék'
-            },
-            amount: '2 000 €',
-            description: {
-                UA: 'Спортивне харчування',
-                EN: 'Athlete Nutrition',
-                HUN: 'Sportolói táplálkozás'
-            },
-            subItems: [
-                {
-                    UA: 'амінокислоти, протеїн, креатин',
-                    EN: 'Amino Acids, Protein, Creatine',
-                    HUN: 'Aminosavak, fehérje, kreatin'
-                },
-                {
-                    UA: 'аптечка',
-                    EN: 'First Aid Kit',
-                    HUN: 'Elsősegély doboz'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Трансфери',
-                EN: 'Transfers',
-                HUN: 'Transzfer'
-            },
-            amount: '1 500 €',
-            description: {
-                UA: 'Аеропорт-готель-аеропорт',
-                EN: 'Airport-Hotel-Airport',
-                HUN: 'Repülőtér-szálloda-repülőtér'
-            },
-            subItems: [
-                {
-                    UA: 'трансфер по Україні (зібрати всіх гравців у Ужгороді)',
-                    EN: 'Transfer within Ukraine (gathering all players in Uzhhorod)',
-                    HUN: 'Transzfer Ukrajnán belül (játékosok összegyűjtése Ungváron)'
-                },
-                {
-                    UA: 'трансфер з України в Аеоропорт Будапешта',
-                    EN: 'Transfer from Ukraine to Budapest Airport',
-                    HUN: 'Transzfer Ukrajnából a budapesti repülőtérre'
-                },
-                {
-                    UA: 'трнасфер аеропрт готель у Лісабоні ',
-                    EN: 'Transfer from airport to hotel in Lisbon',
-                    HUN: 'Transzfer a repülőtérről a szállodába Lisszabonban'
-                },
-                {
-                    UA: 'трансфер по самому Лісобону',
-                    EN: 'Local transfers in Lisbon',
-                    HUN: 'Helyi közlekedés Lisszabonban'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Тренери',
-                EN: 'Coaches',
-                HUN: 'Edzők'
-            },
-            amount: '2 000 €',
-            description: {
-                UA: 'Гонорари провідних спеціалістів',
-                EN: 'Fees for leading specialists',
-                HUN: 'Vezető szakemberek díjazása'
-            },
-            subItems: [
-                {
-                    UA: 'Добові тренерському штабу в розмірі 45 євро, лікарям , менеджерам (6 чол)',
-                    EN: 'Daily allowance of €45 for coaching staff, doctors, managers (6 people)',
-                    HUN: 'Napi 45 eurós juttatás az edzői stábnak, orvosoknak, menedzsereknek (6 fő)'
-                },
-                {
-                    UA: 'Страхування',
-                    EN: 'Insurance',
-                    HUN: 'Biztosítás'
-                }
-            ]
-        }
-    ],
-    2: [
-        {
-            category: {
-                UA: 'Проживання',
-                EN: 'Accommodation',
-                HUN: 'Szállás'
-            },
-            amount: '3,200 €',
-            description: {
-                UA: 'Спортивна база на 5 днів',
-                EN: 'Sports base for 5 days',
-                HUN: 'Sporthal 5 napra'
-            },
-            subItems: [
-                {
-                    UA: '20 осіб × 5 ночей × 32€/ніч = 3,200 €',
-                    EN: '20 people × 5 nights × €32/night = €3,200',
-                    HUN: '20 fő × 5 éjszaka × 32€/éj = 3 200 €'
-                },
-                {
-                    UA: 'Двокімнатні номери зі зручностями',
-                    EN: 'Twin rooms with amenities',
-                    HUN: 'Kétágyas szobák kényelemmel'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Харчування',
-                EN: 'Meals',
-                HUN: 'Étkeztetés'
-            },
-            amount: '4,200 €',
-            description: {
-                UA: 'Спортивне харчування',
-                EN: 'Athlete nutrition',
-                HUN: 'Sportolói táplálkozás'
-            },
-            subItems: [
-                {
-                    UA: '20 осіб × 6 днів × 35€/день = 4,200€',
-                    EN: '20 people × 6 days × €35/day = €4,200',
-                    HUN: '20 fő × 6 nap × 35€/nap = 4 200 €'
-                },
-                {
-                    UA: 'Сніданок, обід, вечеря (шведський стіл)',
-                    EN: 'Breakfast, lunch, dinner (buffet)',
-                    HUN: 'Reggeli, ebéd, vacsora (büfé)'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Тренери',
-                EN: 'Coaches',
-                HUN: 'Edzők'
-            },
-            amount: '1,850 €',
-            description: {
-                UA: 'Добові провідних спеціалістів',
-                EN: 'Fees for leading specialists',
-                HUN: 'Vezető szakemberek díjazása'
-            },
-            subItems: [
-                {
-                    UA: 'Добові тренерському штабу в розмірі 45 євро, лікарям , менеджерам (6 чоловік)',
-                    EN: 'Daily allowance of €45 for coaching staff, doctors, managers (6 people)',
-                    HUN: 'Napi 45 eurós juttatás az edzői stábnak, orvosoknak, menedzsereknek (6 fő)'
-                },
-                {
-                    UA: 'Страхування всієї команди',
-                    EN: 'Insurance for the entire team',
-                    HUN: 'A teljes csapat biztosítása'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Транспорт',
-                EN: 'Transportation',
-                HUN: 'Szállítás'
-            },
-            amount: '4,500 €',
-            description: {
-                UA: 'Внутрішні переїзди',
-                EN: 'Local transportation',
-                HUN: 'Helyi közlekedés'
-            },
-            subItems: [
-                {
-                    UA: 'Трансфер по Україні (зібрати всіх гравців у Львові)',
-                    EN: 'Transfer within Ukraine (gathering all players in Lviv)',
-                    HUN: 'Transzfer Ukrajnán belül (játékosok összegyűjtése Lvivben)'
-                },
-                {
-                    UA: 'Трансфер з України в Аеропорт "Познань" Польща',
-                    EN: 'Transfer from Ukraine to Poznań Airport, Poland',
-                    HUN: 'Átszállítás Ukrajnából a lengyelországi Poznań repülőtérre'
-                },
-                {
-                    UA: 'Переліт Познань-Кутаїсі',
-                    EN: 'Flight from Poznań to Kutaisi',
-                    HUN: 'Repülés Poznańból Kutaisiba'
-                },
-                {
-                    UA: 'Трансфер з Кутаїсі в Батумі',
-                    EN: 'Transfer from Kutaisi to Batumi',
-                    HUN: 'Átszállás Kutaisiból Batumiba'
-                },
-                {
-                    UA: 'Трансфер по Батумі',
-                    EN: 'Local transfers in Batumi',
-                    HUN: 'Helyi közlekedés Batumiban'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Спортивне обладнання',
-                EN: 'Sports Equipment',
-                HUN: 'Sportfelszerelés'
-            },
-            amount: '1,600 €',
-            description: {
-                UA: 'Амуніція для команди',
-                EN: 'Team equipment',
-                HUN: 'Csapatfelszerelés'
-            },
-            subItems: [
-                {
-                    UA: 'Екіпування (костюм спортивний, штани, кофта, шорти, футболка поло та ще 1 футболка, кросівки, тапочки)',
-                    EN: 'Equipment (tracksuit, pants, hoodie, shorts, polo shirt + 1 t-shirt, sneakers, slippers)',
-                    HUN: 'Felszerelés (melegítő, nadrág, pulóver, rövidnadrág, póló + 1 póló, tornacipő, papucs)'
-                },
-                {
-                    UA: 'Форма (регбійка, регбійки, шорти, гетри)',
-                    EN: 'Uniform (rugby jersey, rugby shirts, shorts, socks)',
-                    HUN: 'Mez (rögbi mezek, pólók, rövidnadrágok, sportszárvédők)'
-                },
-                {
-                    UA: 'Аптечка',
-                    EN: 'First aid kit',
-                    HUN: 'Elsősegély doboz'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Спортивне харчування',
-                EN: 'Sports Nutrition',
-                HUN: 'Sporttáplálék'
-            },
-            amount: '350 €',
-            description: {
-                UA: 'Спортивні добавки',
-                EN: 'Sports supplements',
-                HUN: 'Sportkiegészítők'
-            },
-            subItems: [
-                {
-                    UA: 'амінокислоти, протеїн, креатин',
-                    EN: 'Amino acids, protein, creatine',
-                    HUN: 'Aminosavak, fehérje, kreatin'
-                }
-            ]
-        }
-    ],
-    3: [
-        {
-            category: {
-                UA: 'Реєстраційний внесок',
-                EN: 'Registration Fee',
-                HUN: 'Nevezési díj'
-            },
-            amount: '5 000 €',
-            description: {
-                UA: 'Участь у турнірі',
-                EN: 'Participation in the tournament',
-                HUN: 'Részvétel a tornán'
-            },
-            subItems: [
-                {
-                    UA: 'Реєстраційний внесок',
-                    EN: 'Registration Fee',
-                    HUN: 'Nevezési díj'
-                },
-                {
-                    UA: 'Включено участь у турнірі',
-                    EN: 'Includes participation in the tournament',
-                    HUN: 'Tartalmazza a részvételt a tornán'
-                }
-            ]
-        },
 
+export const fundingBreakdowns = {
+    3: [ // Навчально-тренувальний збір у Хмельницькому
         {
             category: {
-                UA: 'Проживання',
-                EN: 'Accommodation',
-                HUN: 'Szállás'
+                UA: 'Оренда спортивного залу',
+                EN: 'Sports Hall Rental',
+                HUN: 'Sportcsarnok bérlés'
             },
-            amount: '7 000 €',
+            amount: '150 €',
             description: {
-                UA: 'Готель 3* на 5 днів',
-                EN: '3* hotel for 5 days',
-                HUN: '3*-os szálloda 5 napra'
-            },
-            subItems: [
-                {
-                    UA: '20 осіб × 5 нічей × 70€/ніч = 7 000€',
-                    EN: '20 people × 5 nights × €70/night = €7,000',
-                    HUN: '20 fő × 5 éjszaka × 70€/éj = 7 000 €'
-                },
-                {
-                    UA: 'Двокімнатні номери зі зручностями',
-                    EN: 'Twin rooms with amenities',
-                    HUN: 'Kétágyas szobák kényelemmel'
-                }
-            ]
+                UA: 'Оренда залу для тренувань на 7 днів',
+                EN: 'Hall rental for 7 days of training',
+                HUN: 'Csarnok bérlés 7 napos edzéshez'
+            }
         },
         {
             category: {
                 UA: 'Харчування',
                 EN: 'Meals',
-                HUN: 'Étkeztetés'
+                HUN: 'Étkezés'
             },
-            amount: '3 500 €',
+            amount: '100 €',
             description: {
-                UA: 'Повний пансіон',
-                EN: 'Full board',
-                HUN: 'Teljes ellátás'
-            },
-            subItems: [
-                {
-                    UA: '20 осіб × 5 днів × 35€/день = 3 500€',
-                    EN: '20 people × 5 days × €35/day = €3,500',
-                    HUN: '20 fő × 5 nap × 35€/nap = 3 500 €'
-                },
-                {
-                    UA: 'Сніданок, обід, вечеря (шведський стіл)',
-                    EN: 'Breakfast, lunch, dinner (buffet)',
-                    HUN: 'Reggeli, ebéd, vacsora (büfé)'
-                }
-            ]
+                UA: 'Харчування для команди під час збору',
+                EN: 'Team meals during the camp',
+                HUN: 'Csapat étkezés a tábor alatt'
+            }
         },
         {
             category: {
-                UA: 'Спортивне харчування',
-                EN: 'Sports Nutrition',
-                HUN: 'Sporttáplálék'
-            },
-            amount: '900 €',
-            description: {
-                UA: 'Спортивні добавки',
-                EN: 'Sports supplements',
-                HUN: 'Sportkiegészítők'
-            },
-            subItems: [
-                {
-                    UA: 'амінокислоти, протеїн, креатин',
-                    EN: 'Amino acids, protein, creatine',
-                    HUN: 'Aminosavak, fehérje, kreatin'
-                },
-                {
-                    UA: 'аптечка',
-                    EN: 'First aid kit',
-                    HUN: 'Elsősegély doboz'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Трансфери',
-                EN: 'Transfers',
-                HUN: 'Transzfer'
-            },
-            amount: '2 500 €',
-            description: {
-                UA: 'Міжміські переїзди',
-                EN: 'Inter-city transfers',
-                HUN: 'Városközi közlekedés'
-            },
-            subItems: [
-                {
-                    UA: 'Групові трансфери на 20 осіб',
-                    EN: 'Group transfers for 20 people',
-                    HUN: 'Csoportos transzfer 20 főre'
-                },
-                {
-                    UA: 'Включено всі переїзди за програмою',
-                    EN: 'Includes all transfers according to the program',
-                    HUN: 'Tartalmazza a program szerinti összes transzfert'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Тренери',
-                EN: 'Coaches',
-                HUN: 'Edzők'
-            },
-            amount: '2 000 €',
-            description: {
-                UA: 'Гонорари провідних спеціалістів',
-                EN: 'Fees for leading specialists',
-                HUN: 'Vezető szakemberek díjazása'
-            },
-            subItems: [
-                {
-                    UA: 'Добові тренерському штабу в розмірі 45 євро, лікарям , менеджерам (6 чол)',
-                    EN: 'Daily allowance of €45 for coaching staff, doctors, managers (6 people)',
-                    HUN: 'Napi 45 eurós juttatás az edzői stábnak, orvosoknak, menedzsereknek (6 fő)'
-                },
-                {
-                    UA: 'Страхування',
-                    EN: 'Insurance',
-                    HUN: 'Biztosítás'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Спортивна форма',
-                EN: 'Sports Uniform',
-                HUN: 'Sportmez'
-            },
-            amount: '900 €',
-            description: {
-                UA: 'Комплект форми на гравця',
-                EN: 'Uniform set for each player',
-                HUN: 'Játékosonkénti mez készlet'
-            },
-            subItems: [
-                {
-                    UA: 'Комплект форми на гравця',
-                    EN: 'Uniform set for each player',
-                    HUN: 'Játékosonkénti mez készlet'
-                },
-                {
-                    UA: 'Включено всі необхідні матеріали',
-                    EN: 'Includes all necessary materials',
-                    HUN: 'Tartalmazza az összes szükséges anyagot'
-                }
-            ]
-        }
-    ],
-    4: [
-        {
-            category: {
-                UA: 'Проживання',
-                EN: 'Accommodation',
-                HUN: 'Szállás'
-            },
-            amount: '2,600 €',
-            description: {
-                UA: 'Готель на 7 днів',
-                EN: 'Hotel for 7 days',
-                HUN: 'Szálloda 7 napra'
-            },
-            subItems: [
-                {
-                    UA: '20 осіб × 7 ночей',
-                    EN: '20 people × 7 nights',
-                    HUN: '20 fő × 7 éjszaka'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Харчування',
-                EN: 'Meals',
-                HUN: 'Étkeztetés'
-            },
-            amount: '3,700 €',
-            description: {
-                UA: 'Повний пансіон',
-                EN: 'Full board',
-                HUN: 'Teljes ellátás'
-            },
-            subItems: [
-                {
-                    UA: 'Сніданок, обід, вечеря',
-                    EN: 'Breakfast, lunch, dinner',
-                    HUN: 'Reggeli, ebéd, vacsora'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Страхування',
-                EN: 'Insurance',
-                HUN: 'Biztosítás'
-            },
-            amount: '200 €',
-            description: {
-                UA: 'Страхування команди',
-                EN: 'Team insurance',
-                HUN: 'Csapatbiztosítás'
-            },
-            subItems: [
-                {
-                    UA: 'Медичне страхування всіх учасників',
-                    EN: 'Medical insurance for all participants',
-                    HUN: 'Orvosi biztosítás minden résztvevőnek'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Трансфер',
-                EN: 'Transfers',
-                HUN: 'Transzfer'
-            },
-            amount: '1,400 €',
-            description: {
-                UA: 'Міжміські переїзди',
-                EN: 'Inter-city transfers',
-                HUN: 'Városközi közlekedés'
-            },
-            subItems: [
-                {
-                    UA: 'Трансфери аеропорт-готель',
-                    EN: 'Airport-hotel transfers',
-                    HUN: 'Repülőtér-szálloda transzfer'
-                },
-                {
-                    UA: 'Місцеві переїзди',
-                    EN: 'Local transportation',
-                    HUN: 'Helyi közlekedés'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Оренда поля',
-                EN: 'Field Rental',
-                HUN: 'Pályabérlés'
-            },
-            amount: '500 €',
-            description: {
-                UA: 'Оренда тренувального поля',
-                EN: 'Training field rental',
-                HUN: 'Edzőpálya bérlés'
-            },
-            subItems: [
-                {
-                    UA: 'Професійне регбійне поле',
-                    EN: 'Professional rugby field',
-                    HUN: 'Professzionális rögbi pálya'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Спортивне обладнання',
+                UA: 'Спортивний інвентар',
                 EN: 'Sports Equipment',
                 HUN: 'Sportfelszerelés'
             },
-            amount: '1,800 €',
+            amount: '50 €',
             description: {
-                UA: 'Інвентар для тренувань',
-                EN: 'Training equipment',
-                HUN: 'Edzésfelszerelés'
-            },
-            subItems: [
-                {
-                    UA: 'М\'ячі, манішки, конуси',
-                    EN: 'Balls, bibs, cones',
-                    HUN: 'Labdák, mellények, bóják'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Спортивне харчування',
-                EN: 'Sports Nutrition',
-                HUN: 'Sporttáplálék'
-            },
-            amount: '300 €',
-            description: {
-                UA: 'Добавки для спортсменів',
-                EN: 'Sports supplements',
-                HUN: 'Sportkiegészítők'
-            },
-            subItems: [
-                {
-                    UA: 'Протеїн, амінокислоти',
-                    EN: 'Protein, amino acids',
-                    HUN: 'Fehérje, aminosavak'
-                }
-            ]
+                UA: 'М\'ячі, манішки та інше обладнання',
+                EN: 'Balls, bibs and other equipment',
+                HUN: 'Labdák, mellények és egyéb felszerelés'
+            }
         }
     ],
-    5: [
-        {
-            category: {
-                UA: 'Проживання',
-                EN: 'Accommodation',
-                HUN: 'Szállás'
-            },
-            amount: '4,000 €',
-            description: {
-                UA: 'Готель на 7 днів',
-                EN: 'Hotel for 7 days',
-                HUN: 'Szálloda 7 napra'
-            },
-            subItems: [
-                {
-                    UA: '20 осіб × 7 ночей',
-                    EN: '20 people × 7 nights',
-                    HUN: '20 fő × 7 éjszaka'
-                }
-            ]
+    default: [
+    {
+        category: {
+            UA: 'Проїзд',
+            EN: 'Transportation',
+            HUN: 'Közlekedés'
         },
-        {
-            category: {
-                UA: 'Харчування',
-                EN: 'Meals',
-                HUN: 'Étkeztetés'
-            },
-            amount: '4,500 €',
-            description: {
-                UA: 'Повний пансіон',
-                EN: 'Full board',
-                HUN: 'Teljes ellátás'
-            },
-            subItems: [
-                {
-                    UA: 'Сніданок, обід, вечеря (шведський стіл)',
-                    EN: 'Breakfast, lunch, dinner (buffet)',
-                    HUN: 'Reggeli, ebéd, vacsora (büfé)'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Добові тренерам',
-                EN: 'Coaches Allowance',
-                HUN: 'Edzői napidíj'
-            },
-            amount: '1,500 €',
-            description: {
-                UA: 'Винагорода тренерському штабу',
-                EN: 'Coaching staff compensation',
-                HUN: 'Edzői stáb díjazása'
-            },
-            subItems: [
-                {
-                    UA: 'Добові для 6 тренерів та супроводу',
-                    EN: 'Daily allowance for 6 coaches and staff',
-                    HUN: 'Napi juttatás 6 edzőnek és személyzetnek'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Страхування',
-                EN: 'Insurance',
-                HUN: 'Biztosítás'
-            },
-            amount: '400 €',
-            description: {
-                UA: 'Страхування команди',
-                EN: 'Team insurance',
-                HUN: 'Csapatbiztosítás'
-            },
-            subItems: [
-                {
-                    UA: 'Медичне страхування всіх учасників',
-                    EN: 'Medical insurance for all participants',
-                    HUN: 'Orvosi biztosítás minden résztvevőnek'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Трансфер',
-                EN: 'Transfers',
-                HUN: 'Transzfer'
-            },
-            amount: '3,700 €',
-            description: {
-                UA: 'Міжнародні та місцеві переїзди',
-                EN: 'International and local transfers',
-                HUN: 'Nemzetközi és helyi közlekedés'
-            },
-            subItems: [
-                {
-                    UA: 'Трансфери аеропорт-готель',
-                    EN: 'Airport-hotel transfers',
-                    HUN: 'Repülőtér-szálloda transzfer'
-                },
-                {
-                    UA: 'Місцеві переїзди по Парижу',
-                    EN: 'Local transfers in Paris',
-                    HUN: 'Helyi közlekedés Párizsban'
-                },
-                {
-                    UA: 'Трансфер по Україні (200 €)',
-                    EN: 'Transfer within Ukraine (200 €)',
-                    HUN: 'Transzfer Ukrajnán belül (200 €)'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Оренда поля',
-                EN: 'Field Rental',
-                HUN: 'Pályabérlés'
-            },
-            amount: '1,000 €',
-            description: {
-                UA: 'Оренда тренувального поля',
-                EN: 'Training field rental',
-                HUN: 'Edzőpálya bérlés'
-            },
-            subItems: [
-                {
-                    UA: 'Професійне регбійне поле у Парижі',
-                    EN: 'Professional rugby field in Paris',
-                    HUN: 'Professzionális rögbi pálya Párizsban'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Спортивне обладнання',
-                EN: 'Sports Equipment',
-                HUN: 'Sportfelszerelés'
-            },
-            amount: '1,800 €',
-            description: {
-                UA: 'Інвентар для тренувань',
-                EN: 'Training equipment',
-                HUN: 'Edzésfelszerelés'
-            },
-            subItems: [
-                {
-                    UA: 'М\'ячі, манішки, тренувальне обладнання',
-                    EN: 'Balls, bibs, training equipment',
-                    HUN: 'Labdák, mellények, edzésfelszerelés'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Спортивне харчування',
-                EN: 'Sports Nutrition',
-                HUN: 'Sporttáplálék'
-            },
-            amount: '200 €',
-            description: {
-                UA: 'Добавки для спортсменів',
-                EN: 'Sports supplements',
-                HUN: 'Sportkiegészítők'
-            },
-            subItems: [
-                {
-                    UA: 'Протеїн, амінокислоти, креатин',
-                    EN: 'Protein, amino acids, creatine',
-                    HUN: 'Fehérje, aminosavak, kreatin'
-                }
-            ]
-        },
-        {
-            category: {
-                UA: 'Аптечка',
-                EN: 'First Aid Kit',
-                HUN: 'Elsősegély doboz'
-            },
-            amount: '200 €',
-            description: {
-                UA: 'Медикаменти та матеріали',
-                EN: 'Medical supplies and materials',
-                HUN: 'Orvosi kellékek és anyagok'
-            },
-            subItems: [
-                {
-                    UA: 'Перша допомога, медикаменти',
-                    EN: 'First aid, medications',
-                    HUN: 'Elsősegély, gyógyszerek'
-                }
-            ]
+        amount: '3,500 €',
+        description: {
+            UA: 'Авіаквитки та місцевий транспорт',
+            EN: 'Flight tickets and local transport',
+            HUN: 'Repülőjegyek és helyi közlekedés'
         }
-    ]
+    },
+    {
+        category: {
+            UA: 'Проживання',
+            EN: 'Accommodation',
+            HUN: 'Szállás'
+        },
+        amount: '2,800 €',
+        description: {
+            UA: 'Готель для команди на 7 днів',
+            EN: 'Team hotel for 7 days',
+            HUN: 'Csapat szállás 7 napra'
+        }
+    },
+    {
+        category: {
+            UA: 'Харчування',
+            EN: 'Meals',
+            HUN: 'Étkezés'
+        },
+        amount: '1,400 €',
+        description: {
+            UA: 'Триразове харчування для команди',
+            EN: 'Three meals a day for the team',
+            HUN: 'Napi háromszori étkezés a csapatnak'
+        }
+    },
+    {
+        category: {
+            UA: 'Реєстраційний внесок',
+            EN: 'Registration Fee',
+            HUN: 'Regisztrációs díj'
+        },
+        amount: '1,500 €',
+        description: {
+            UA: 'Участь у турнірі',
+            EN: 'Tournament participation',
+            HUN: 'Torna részvétel'
+        }
+    },
+    {
+        category: {
+            UA: 'Медичне забезпечення',
+            EN: 'Medical Support',
+            HUN: 'Orvosi támogatás'
+        },
+        amount: '800 €',
+        description: {
+            UA: 'Медичні препарати та страхування',
+            EN: 'Medical supplies and insurance',
+            HUN: 'Orvosi kellékek és biztosítás'
+        }
+    }
+]
 };
+
+export const equipmentCategories = [
+    {
+        category: {
+            UA: 'Ігрова форма',
+            EN: 'Game Uniforms',
+            HUN: 'Játékmezek'
+        },
+        amount: '3,200 €',
+        description: {
+            UA: 'Комплекти форми для команди',
+            EN: 'Team uniform sets',
+            HUN: 'Csapat formagarnitúrák'
+        },
+        subItems: [
+            {
+                UA: 'Майки, шорти, гетри для 20 гравців',
+                EN: 'Jerseys, shorts, socks for 20 players',
+                HUN: 'Mezek, rövidnadrágok, zoknik 20 játékosnak'
+            }
+        ]
+    },
+    {
+        category: {
+            UA: 'Спортивне обладнання',
+            EN: 'Sports Equipment',
+            HUN: 'Sportfelszerelés'
+        },
+        amount: '1,800 €',
+        description: {
+            UA: 'Інвентар для тренувань',
+            EN: 'Training equipment',
+            HUN: 'Edzésfelszerelés'
+        },
+        subItems: [
+            {
+                UA: 'М\'ячі, манішки, тренувальне обладнання',
+                EN: 'Balls, bibs, training equipment',
+                HUN: 'Labdák, mellények, edzésfelszerelés'
+            }
+        ]
+    },
+    {
+        category: {
+            UA: 'Спортивне харчування',
+            EN: 'Sports Nutrition',
+            HUN: 'Sporttáplálék'
+        },
+        amount: '200 €',
+        description: {
+            UA: 'Добавки для спортсменів',
+            EN: 'Sports supplements',
+            HUN: 'Sportkiegészítők'
+        },
+        subItems: [
+            {
+                UA: 'Протеїн, амінокислоти, креатин',
+                EN: 'Protein, amino acids, creatine',
+                HUN: 'Fehérje, aminosavak, kreatin'
+            }
+        ]
+    },
+    {
+        category: {
+            UA: 'Аптечка',
+            EN: 'First Aid Kit',
+            HUN: 'Elsősegély doboz'
+        },
+        amount: '200 €',
+        description: {
+            UA: 'Медикаменти та матеріали',
+            EN: 'Medical supplies and materials',
+            HUN: 'Orvosi kellékek és anyagok'
+        },
+        subItems: [
+            {
+                UA: 'Перша допомога, медикаменти',
+                EN: 'First aid, medications',
+                HUN: 'Elsősegély, gyógyszerek'
+            }
+        ]
+    }
+];

@@ -153,7 +153,11 @@ export const getMediaItems = (): MediaItem[] => {
             type: 'image',
             url: '/drag10.webp',
             poster: '',
-            title: { UA: 'Фото 10', EN: 'Photo 10', HUN: 'Fénykép 10' },
+            title: {
+                UA: 'Силові вправи',
+                EN: 'Strength exercises',
+                HUN: 'Erőnléti gyakorlatok'
+            },
             category: 'photos'
         },
     ];

@@ -57,7 +57,7 @@ const FundingModal: React.FC<FundingModalProps> = ({
                                     language === 'EN' ? 'Funding Breakdown' : 'Pénzügyi felosztás'}
                             </h3>
                             <div className="space-y-4">
-                                {fundingBreakdowns[selectedEvent.id]?.map((item, index) => (
+                                {(fundingBreakdowns[selectedEvent.id] || fundingBreakdowns.default)?.map((item, index) => (
                                     <div key={index} className="bg-white/5 rounded-lg overflow-hidden border border-white/10">
                                         <div className="p-4 bg-white/5 flex justify-between items-center">
                                             <div>
@@ -66,16 +66,18 @@ const FundingModal: React.FC<FundingModalProps> = ({
                                             </div>
                                             <span className="text-sm text-gray-300">{item.description[language]}</span>
                                         </div>
-                                        <div className="p-4 pt-2 bg-white/2.5">
-                                            <ul className="space-y-2 text-sm text-gray-300">
-                                                {item.subItems?.map((subItem, subIndex) => (
-                                                    <li key={subIndex} className="flex items-start">
-                                                        <span className="text-yellow-400 mr-2">•</span>
-                                                        <span>{subItem[language]}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
+                                        {item.subItems && (
+                                            <div className="p-4 pt-2 bg-white/2.5">
+                                                <ul className="space-y-2 text-sm text-gray-300">
+                                                    {item.subItems?.map((subItem, subIndex) => (
+                                                        <li key={subIndex} className="flex items-start">
+                                                            <span className="text-yellow-400 mr-2">•</span>
+                                                            <span>{subItem[language]}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
                                     </div>
                                 ))}
                             </div>
