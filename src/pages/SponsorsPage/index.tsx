@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../components/LanguageUtils';
-import { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRef, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { getCompanySponsors, getPersonalSponsors, getOlympicInvitation } from './sponsorsData';
 import OlympicRings from './components/OlympicRings';
 
@@ -9,10 +9,31 @@ const SponsorsPage = () => {
     const { language } = useLanguage();
     const navigate = useNavigate();
     const contactRef = useRef<HTMLDivElement>(null);
+    const location = useLocation();
 
     const scrollToContact = () => {
-        navigate('/#ggwp');
+        if (contactRef.current) {
+            contactRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+        navigate('/sponsors#contact');
     };
+
+    useEffect(() => {
+        // Scroll to top first when page loads
+        window.scrollTo(0, 0);
+        
+        if (location.hash === '#contact' || location.hash === '#ggwp') {
+            // Scroll after mount when arriving with hash
+            setTimeout(() => {
+                const contactElement = document.getElementById('contact');
+                if (contactElement) {
+                    contactElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else if (contactRef.current) {
+                    contactRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 500);
+        }
+    }, [location]);
 
     const olympicInvitation = getOlympicInvitation(language);
     const companySponsors = getCompanySponsors(language);
@@ -342,6 +363,8 @@ const SponsorsPage = () => {
 
                     {/* Become a Sponsor Button */}
                     <motion.div
+                        ref={contactRef}
+                        id="contact"
                         className="flex justify-center mt-12"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -360,8 +383,6 @@ const SponsorsPage = () => {
                         </button>
                     </motion.div>
                 </div>
-
-                <div ref={contactRef} id="contact" className="h-1"></div>
                 </div>
             </div>
         </div>

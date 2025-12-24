@@ -2,14 +2,24 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../components/LanguageUtils';
 import { useNavigate } from 'react-router-dom';
+import { useRef } from 'react';
 import { FaCrown, FaTrophy, FaStar, FaGift, FaUsers, FaMedal, FaGlobe, FaChartLine, FaFire, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import { translations } from './translations';
+import ContactSection from '../TeamPage/components/ContactSection';
 
 const ClubBenefitsPage = () => {
     const { language } = useLanguage();
     const navigate = useNavigate();
+    const contactRef = useRef<HTMLDivElement>(null);
 
     const t = translations[language as keyof typeof translations] || translations.UA;
+
+    const handleContactClick = () => {
+        // Scroll to contact section on the same page
+        if (contactRef.current) {
+            contactRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
 
     const getIcon = (iconName: string) => {
         const iconMap: { [key: string]: JSX.Element } = {
@@ -26,10 +36,23 @@ const ClubBenefitsPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-yellow-900/10 via-transparent to-transparent"></div>
-            <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950/50 to-slate-950 text-white relative overflow-hidden">
+            {/* Premium Background Patterns */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-900/20 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent"></div>
+            
+            {/* Animated Grid Pattern */}
+            <div 
+                className="absolute inset-0 opacity-[0.03]"
+                style={{
+                    backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
+                    backgroundSize: '100px 100px'
+                }}
+            ></div>
+            
+            {/* Floating Orbs */}
+            <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-yellow-600/10 to-amber-600/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
             {/* Hero Section */}
             <motion.div
                 initial={{ opacity: 0 }}
@@ -85,7 +108,7 @@ const ClubBenefitsPage = () => {
                         initial={{ y: 10, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.6, duration: 0.6 }}
-                        onClick={() => navigate('/#ggwp')}
+                        onClick={handleContactClick}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         className="group relative inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-yellow-500 to-amber-600 text-gray-900 font-bold text-base rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/30"
@@ -104,7 +127,7 @@ const ClubBenefitsPage = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="relative bg-gradient-to-br from-slate-800/80 via-slate-900/80 to-gray-900/80 backdrop-blur-xl rounded-xl p-8 md:p-10 border border-slate-700/50 shadow-xl overflow-hidden"
+                    className="relative bg-gradient-to-br from-slate-900/90 via-indigo-900/20 to-slate-900/90 backdrop-blur-xl rounded-2xl p-10 md:p-12 border-2 border-gradient-to-r from-amber-500/20 to-indigo-500/20 shadow-2xl overflow-hidden"
                 >
                     {/* Subtle Decorative Elements */}
                     <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-full blur-3xl" />
@@ -116,7 +139,7 @@ const ClubBenefitsPage = () => {
                             whileInView={{ scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2, duration: 0.4 }}
-                            className="inline-flex items-center justify-center w-20 h-20 bg-yellow-400/10 backdrop-blur-sm rounded-xl mb-6 border border-yellow-400/20"
+                            className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-yellow-400/20 to-amber-500/20 backdrop-blur-sm rounded-2xl mb-6 border-2 border-yellow-400/30 shadow-lg shadow-yellow-500/20"
                         >
                             <span className="text-3xl font-bold bg-gradient-to-br from-yellow-300 to-amber-400 bg-clip-text text-transparent">1/100</span>
                         </motion.div>
@@ -131,7 +154,7 @@ const ClubBenefitsPage = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
-                        className="relative flex flex-col items-center mt-8 p-6 bg-yellow-500/5 backdrop-blur-sm rounded-xl border border-yellow-400/20"
+                        className="relative flex flex-col items-center mt-8 p-8 bg-gradient-to-br from-amber-500/10 to-yellow-500/10 backdrop-blur-sm rounded-2xl border-2 border-amber-400/30 shadow-xl"
                     >
                         <p className="text-gray-300 text-sm mb-2 font-medium uppercase tracking-wide">{t.membershipTitle}</p>
                         <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-200 to-amber-400 bg-clip-text text-transparent mb-2">
@@ -164,16 +187,16 @@ const ClubBenefitsPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.08, duration: 0.5 }}
-                            className="group relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-yellow-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-yellow-500/10"
+                            className="group relative bg-gradient-to-br from-slate-900/80 via-slate-800/50 to-slate-900/80 backdrop-blur-xl rounded-2xl p-7 border-2 border-slate-700/30 hover:border-amber-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/20"
                         >
                             <div className="flex flex-col items-center text-center">
-                                <div className="w-14 h-14 bg-gradient-to-br from-yellow-400/20 to-amber-500/20 rounded-xl flex items-center justify-center mb-4 border border-yellow-400/20">
+                                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400/30 to-amber-500/30 rounded-2xl flex items-center justify-center mb-4 border-2 border-yellow-400/30 shadow-lg shadow-yellow-500/20 group-hover:scale-110 transition-transform duration-300">
                                     <div className="text-yellow-400">
                                         {getIcon(benefit.icon)}
                                     </div>
                                 </div>
-                                <h3 className="text-lg font-semibold text-yellow-300 mb-3">{benefit.title}</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">{benefit.description}</p>
+                                <h3 className="text-lg font-bold bg-gradient-to-r from-yellow-300 to-amber-400 bg-clip-text text-transparent mb-3">{benefit.title}</h3>
+                                <p className="text-gray-400/90 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">{benefit.description}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -212,27 +235,44 @@ const ClubBenefitsPage = () => {
                                     </span>
                                 </div>
                             )}
-                            <div className={`relative bg-gradient-to-br ${level.color} backdrop-blur-sm rounded-xl p-6 border ${
-                                level.popular ? 'border-yellow-400/50 shadow-lg shadow-yellow-500/20' : 'border-slate-700/50'
-                            } hover:border-yellow-500/30 transition-all duration-300 h-full flex flex-col hover:-translate-y-1`}>
-                                <div className="text-center mb-6">
-                                    <h3 className="text-xl font-bold text-white mb-3">{level.name}</h3>
-                                    <p className="text-2xl font-bold bg-gradient-to-r from-yellow-200 to-amber-400 bg-clip-text text-transparent">{level.amount}</p>
+                            <div className={`relative ${level.popular ? 'shadow-2xl shadow-amber-500/30' : ''}`}>
+                                {/* Glow effect for popular plan */}
+                                {level.popular && (
+                                    <div className="absolute -inset-1 bg-gradient-to-br from-yellow-400 via-amber-500 to-orange-500 rounded-2xl blur-lg opacity-70"></div>
+                                )}
+                                
+                                <div className={`relative bg-gradient-to-br ${level.color ? level.color : 'from-slate-900/90 via-slate-800/90 to-slate-900/90'} backdrop-blur-xl rounded-2xl p-7 border-2 ${
+                                    level.popular ? 'border-amber-400/50' : 'border-slate-700/30'
+                                } hover:border-amber-500/50 transition-all duration-500 h-full flex flex-col hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/20`}>
+                                    {/* Premium corner accent */}
+                                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full"></div>
+                                    
+                                    <div className="text-center mb-8 relative z-10">
+                                        <h3 className="text-xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-4">{level.name}</h3>
+                                        <p className="text-3xl font-bold bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-300 bg-clip-text text-transparent animate-pulse">{level.amount}</p>
+                                    </div>
+                                    <ul className="space-y-4 flex-grow mb-8">
+                                        {level.benefits.map((benefit, idx) => (
+                                            <li key={idx} className="flex items-start gap-3 group">
+                                                <div className="relative mt-0.5">
+                                                    <FaCheckCircle className="text-amber-400 text-sm relative z-10" />
+                                                    <div className="absolute inset-0 bg-amber-400/30 blur-md"></div>
+                                                </div>
+                                                <span className="text-gray-300/90 text-sm leading-relaxed group-hover:text-white transition-colors duration-300">{benefit}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <button
+                                        onClick={handleContactClick}
+                                        className={`w-full py-3 ${
+                                            level.popular 
+                                                ? 'bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900 hover:from-amber-500 hover:to-yellow-400 font-bold' 
+                                                : 'bg-gradient-to-r from-slate-700/50 to-slate-800/50 hover:from-amber-400 hover:to-yellow-500 text-white hover:text-gray-900 font-semibold'
+                                        } rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-amber-500/30 transform hover:scale-105`}
+                                    >
+                                        Обрати план
+                                    </button>
                                 </div>
-                                <ul className="space-y-3 flex-grow mb-6">
-                                    {level.benefits.map((benefit, idx) => (
-                                        <li key={idx} className="flex items-start gap-2">
-                                            <FaCheckCircle className="text-yellow-400 mt-0.5 flex-shrink-0 text-xs" />
-                                            <span className="text-gray-300 text-xs leading-relaxed">{benefit}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <button
-                                    onClick={() => navigate('/#ggwp')}
-                                    className="w-full py-2.5 bg-white/10 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-amber-500 hover:text-gray-900 rounded-lg font-semibold text-sm text-white transition-all duration-300"
-                                >
-                                    Обрати план
-                                </button>
                             </div>
                         </motion.div>
                     ))}
@@ -284,10 +324,10 @@ const ClubBenefitsPage = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: (index % 20) * 0.01, duration: 0.3 }}
-                                className={`relative aspect-square rounded-lg flex items-center justify-center font-semibold text-sm transition-all duration-200 ${
+                                className={`relative aspect-square rounded-xl flex items-center justify-center font-bold text-sm transition-all duration-300 ${
                                     isTaken
-                                        ? 'bg-gradient-to-br from-yellow-400 to-amber-500 text-gray-900 shadow-lg shadow-yellow-500/30'
-                                        : 'bg-slate-800/60 border border-slate-700/50 text-gray-500 hover:border-yellow-500/20 backdrop-blur-sm'
+                                        ? 'bg-gradient-to-br from-yellow-400 via-amber-500 to-orange-500 text-gray-900 shadow-2xl shadow-amber-500/40 scale-110 border-2 border-amber-300/50'
+                                        : 'bg-gradient-to-br from-slate-900/80 to-slate-800/80 border-2 border-slate-700/30 text-gray-500 hover:border-amber-500/40 hover:bg-gradient-to-br hover:from-slate-800/90 hover:to-slate-700/90 backdrop-blur-xl hover:scale-105 hover:shadow-lg hover:shadow-amber-500/10'
                                 }`}
                             >
                                 {isTaken ? (
@@ -338,7 +378,7 @@ const ClubBenefitsPage = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="relative overflow-hidden bg-gradient-to-br from-slate-800/80 via-slate-900/80 to-gray-900/80 backdrop-blur-xl rounded-xl p-10 md:p-12 border border-slate-700/50 shadow-xl text-center"
+                    className="relative overflow-hidden bg-gradient-to-br from-slate-900/90 via-indigo-900/30 to-slate-900/90 backdrop-blur-xl rounded-3xl p-12 md:p-16 border-2 border-amber-500/30 shadow-2xl shadow-amber-500/10 text-center"
                 >
                     {/* Subtle Background */}
                     <div className="absolute inset-0 overflow-hidden opacity-10">
@@ -363,7 +403,7 @@ const ClubBenefitsPage = () => {
                         <motion.button
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            onClick={() => navigate('/#ggwp')}
+                            onClick={handleContactClick}
                             className="group relative inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-yellow-500 to-amber-600 text-gray-900 font-bold text-base rounded-lg overflow-hidden transition-all duration-300 shadow-lg hover:shadow-yellow-500/30"
                         >
                             <span className="relative z-10">{t.ctaButton}</span>
@@ -372,6 +412,11 @@ const ClubBenefitsPage = () => {
                         </motion.button>
                     </div>
                 </motion.div>
+            </div>
+
+            {/* Contact Section */}
+            <div ref={contactRef}>
+                <ContactSection language={language} />
             </div>
 
             {/* Back Button */}

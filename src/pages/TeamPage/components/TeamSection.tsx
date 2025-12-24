@@ -53,63 +53,99 @@ const TeamSection: React.FC<TeamSectionProps> = ({
                             initial={{ opacity: 0, y: 24 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.06 }}
-                            className="relative h-full"
+                            className="relative h-full group"
                         >
-                            <div className="relative rounded-2xl p-[1px] bg-gradient-to-br from-amber-400/20 to-indigo-400/10 h-full">
-                                <div className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 overflow-hidden h-full flex flex-col">
-                                    <div className="relative aspect-[4/5] overflow-hidden">
-                                        <img
-                                            src={imagePath}
-                                            alt={item.name}
-                                            loading="lazy"
-                                            decoding="async"
-                                            onError={(e) => {
-                                                const target = e.target as HTMLImageElement;
-                                                if (target.src !== fallbackImagePath) {
-                                                    target.src = fallbackImagePath;
-                                                } else {
-                                                    (target as any).onerror = null;
-                                                }
-                                            }}
-                                            className="w-full h-full object-cover object-top"
-                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                        />
-                                        {/* no hover overlay */}
+                            {/* Premium Card Design */}
+                            <div className="relative h-full">
+                                {/* Glow Effect on Hover */}
+                                <div className="absolute -inset-0.5 bg-gradient-to-br from-amber-500 via-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-75 blur-xl transition-opacity duration-500"></div>
+                                
+                                {/* Main Card Container */}
+                                <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-amber-500/30 via-purple-500/20 to-blue-500/30 h-full">
+                                    <div className="relative rounded-2xl bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-white/10 overflow-hidden h-full flex flex-col group-hover:border-amber-500/30 transition-all duration-500">
+                                        {/* Image Container */}
+                                        <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
+                                            {/* Subtle Pattern Overlay */}
+                                            <div 
+                                                className="absolute inset-0 opacity-10"
+                                                style={{
+                                                    backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                                                    backgroundSize: '20px 20px'
+                                                }}
+                                            ></div>
+                                            
+                                            <img
+                                                src={imagePath}
+                                                alt={item.name}
+                                                loading="lazy"
+                                                decoding="async"
+                                                onError={(e) => {
+                                                    const target = e.target as HTMLImageElement;
+                                                    if (target.src !== fallbackImagePath) {
+                                                        target.src = fallbackImagePath;
+                                                    } else {
+                                                        (target as any).onerror = null;
+                                                    }
+                                                }}
+                                                className="w-full h-full object-cover object-top relative z-10 group-hover:scale-105 transition-transform duration-500"
+                                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                            />
+                                            
+                                            {/* Gradient Overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-60 z-20"></div>
 
-                                        {(item.isCaptain || item.isViceCaptain) && (
-                                            <div
-                                                className={`absolute top-3 right-3 text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg ${
-                                                    item.isCaptain
-                                                        ? 'bg-gradient-to-r from-yellow-500 to-amber-600'
-                                                        : 'bg-gradient-to-r from-gray-300 to-gray-400'
-                                                }`}
-                                            >
-                                                {item.isCaptain ? captainLabel : viceCaptainLabel}
-                                            </div>
-                                        )}
-                                    </div>
+                                            {/* Captain/Vice-Captain Badge */}
+                                            {(item.isCaptain || item.isViceCaptain) && (
+                                                <div className="absolute top-3 right-3 z-30">
+                                                    <div className={`relative px-4 py-2 rounded-lg backdrop-blur-md shadow-2xl ${
+                                                        item.isCaptain
+                                                            ? 'bg-gradient-to-r from-yellow-500/90 to-amber-600/90 text-black'
+                                                            : 'bg-gradient-to-r from-slate-600/90 to-slate-700/90 text-white'
+                                                    }`}>
+                                                        <div className="absolute inset-0 bg-white/20 rounded-lg blur-xl"></div>
+                                                        <span className="relative text-xs font-bold tracking-wider uppercase">
+                                                            {item.isCaptain ? captainLabel : viceCaptainLabel}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
 
-                                    <div className="p-5 flex flex-col grow">
-                                        <h3 className="text-xl font-bold tracking-tight">{item.name}</h3>
-                                        {item.role && (
-                                            <p className="text-amber-400/90 text-sm font-medium mt-1">{item.role}</p>
-                                        )}
-                                        {(item.description || item.gg) && (
-                                            <p className="text-gray-300/90 text-sm mt-2">{item.description || item.gg}</p>
-                                        )}
+                                        {/* Content Section */}
+                                        <div className="p-6 flex flex-col grow relative">
+                                            {/* Decorative Corner */}
+                                            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full"></div>
+                                            
+                                            <h3 className="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent relative z-10">
+                                                {item.name}
+                                            </h3>
+                                            {item.role && (
+                                                <p className="text-amber-400 text-sm font-semibold mt-1.5 tracking-wide uppercase relative z-10">
+                                                    {item.role}
+                                                </p>
+                                            )}
+                                            {(item.description || item.gg) && (
+                                                <p className="text-gray-400 text-sm mt-3 leading-relaxed relative z-10">
+                                                    {item.description || item.gg}
+                                                </p>
+                                            )}
 
-                                        <div className="mt-auto pt-4 border-t border-white/10">
-                                            <div className="flex gap-2 flex-wrap">
-                                                {item.isCaptain && (
-                                                    <span className="px-3 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded-full border border-yellow-500/20">
-                                                        {captainLabel}
-                                                    </span>
-                                                )}
-                                                {item.isViceCaptain && (
-                                                    <span className="px-3 py-1 bg-white/5 text-gray-200 text-xs rounded-full border border-white/20">
-                                                        {viceCaptainLabel}
-                                                    </span>
-                                                )}
+                                            {/* Bottom Section with Badges */}
+                                            <div className="mt-auto pt-4 border-t border-white/5 relative z-10">
+                                                <div className="flex gap-2 flex-wrap">
+                                                    {item.isCaptain && (
+                                                        <span className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 text-yellow-300 text-xs font-semibold rounded-lg border border-yellow-500/30 backdrop-blur-sm">
+                                                            <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2 animate-pulse"></span>
+                                                            {captainLabel}
+                                                        </span>
+                                                    )}
+                                                    {item.isViceCaptain && (
+                                                        <span className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-slate-600/20 to-slate-700/20 text-gray-300 text-xs font-semibold rounded-lg border border-slate-500/30 backdrop-blur-sm">
+                                                            <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span>
+                                                            {viceCaptainLabel}
+                                                        </span>
+                                                    )}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
