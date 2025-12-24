@@ -186,9 +186,9 @@ const SponsorsPage = () => {
                                     <div className="text-center mb-6">
                                         <h2 className="text-3xl md:text-4xl font-bold mb-3">
                                             <span className="bg-gradient-to-r from-yellow-200 via-yellow-300 to-amber-400 bg-clip-text text-transparent">
-                                                {language === 'UA' ? 'Клуб "Олімпійська Надія"' :
-                                                    language === 'EN' ? 'Club "Olympic Hope"' :
-                                                        'Klub "Olimpiai Remény"'}
+                                                {language === 'UA' ? 'Клуб "100"' :
+                                                    language === 'EN' ? 'Club "100"' :
+                                                        'Klub "100"'}
                                             </span>
                                         </h2>
                                         <div className="flex items-center justify-center gap-2 text-yellow-400/40">

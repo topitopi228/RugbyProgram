@@ -39,13 +39,13 @@ export interface Translations {
 
 export const translations: Record<string, Translations> = {
     UA: {
-        heroTitle: 'Олімпійська Надія',
+        heroTitle: 'Клуб 100',
         heroSubtitle: 'Ексклюзивні привілеї для спонсорів збірної України U16 з регбі-7',
         heroDescription: 'Приєднуйтесь до елітного клубу підтримки українського спорту та отримайте унікальні можливості',
         joinButton: 'Приєднатися до клубу',
 
-        aboutTitle: 'Про Клуб "Олімпійська Надія"',
-        aboutDescription: 'Клуб "Олімпійська Надія" - це унікальна можливість стати частиною історії українського регбі. Ми об\'єднуємо 100 найвідданіших спонсорів, які підтримують юнацьку збірну України U16 і вірять у майбутнє українського спорту - це інвестиції в юних українців, спорт і прогрес країни.',
+        aboutTitle: 'Про Клуб "100"',
+        aboutDescription: 'Клуб "100" - це унікальна можливість стати частиною історії українського регбі. Ми об\'єднуємо 100 найвідданіших спонсорів, які підтримують юнацьку збірну України U16 і вірять у майбутнє українського спорту - це інвестиції в юних українців, спорт і прогрес країни.',
 
         membershipTitle: 'Членство починається від щомісячного внеску',
         membershipAmount: '5 000 ₴ ',
@@ -161,13 +161,13 @@ export const translations: Record<string, Translations> = {
         backButton: 'Повернутися до спонсорів'
     },
     EN: {
-        heroTitle: 'Olympic Hope',
+        heroTitle: 'Club 100',
         heroSubtitle: 'Exclusive benefits for Ukraine U16 Rugby-7 national team sponsors',
         heroDescription: 'Join the elite club supporting Ukrainian sports and gain unique opportunities',
         joinButton: 'Join the Club',
 
-        aboutTitle: 'About Club "Olympic Hope"',
-        aboutDescription: 'Club "Olympic Hope" is a unique opportunity to become part of Ukrainian rugby history. We unite the 100 most dedicated sponsors who support Ukraine\'s U16 youth team and believe in the future of Ukrainian sports - it\'s an investment in young Ukrainians, sports, and the country\'s progress.',
+        aboutTitle: 'About Club "100"',
+        aboutDescription: 'Club "100" is a unique opportunity to become part of Ukrainian rugby history. We unite the 100 most dedicated sponsors who support Ukraine\'s U16 youth team and believe in the future of Ukrainian sports - it\'s an investment in young Ukrainians, sports, and the country\'s progress.',
 
         membershipTitle: 'Membership starts from monthly contribution',
         membershipAmount: '5 000 ₴',
@@ -283,13 +283,13 @@ export const translations: Record<string, Translations> = {
         backButton: 'Back to Sponsors'
     },
     HUN: {
-        heroTitle: 'Olimpiai Remény',
+        heroTitle: 'Klub 100',
         heroSubtitle: 'Exkluzív előnyök az Ukrajna U16 Rögbi-7 válogatott szponzorai számára',
         heroDescription: 'Csatlakozzon az ukrán sportot támogató elit klubhoz és szerezzen egyedi lehetőségeket',
         joinButton: 'Csatlakozás a Klubhoz',
 
-        aboutTitle: 'A "Olimpiai Remény" Klubról',
-        aboutDescription: 'A "Olimpiai Remény" Klub egyedülálló lehetőség arra, hogy része legyen az ukrán rögbi történetének. Egyesítjük a 100 legelkötelezettebb szponzort, akik támogatják Ukrajna U16-os ifjúsági csapatát és hisznek az ukrán sport jövőjében - ez befektetés a fiatal ukrajnokban, a sportban és az ország fejlődésében.',
+        aboutTitle: 'A "100" Klubról',
+        aboutDescription: 'A "100" Klub egyedülálló lehetőség arra, hogy része legyen az ukrán rögbi történetének. Egyesítjük a 100 legelkötelezettebb szponzort, akik támogatják Ukrajna U16-os ifjúsági csapatát és hisznek az ukrán sport jövőjében - ez befektetés a fiatal ukrajnokban, a sportban és az ország fejlődésében.',
 
         membershipTitle: 'Tagság kezdődik havi hozzájárulástól',
         membershipAmount: '5 000 ₴',
