@@ -3,53 +3,53 @@ export const translations = {
         pageTitle: 'Майбутні заходи',
         upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
         event1: {
-            date: '9-16 Лютого 2026',
-            title: 'Турнір Lisbon 7s',
+            date: '20-28 Січня 2026',
+            title: 'Подорож для обміну знань тренерів',
+            description: 'Підвищення кваліфікації тренерського складу',
+            location: 'м. Окленд, Нова Зеландія',
+            funding: '8,000-10,000 €'
+        },
+        event2: {
+            date: '10-15 Лютого 2026',
+            title: 'Міжнародний турнір Lisbon 7s',
             description: 'Міжнародний турнір у Португалії',
             location: 'м. Лісабон, Португалія',
             funding: '10,000-13,000 €'
         },
-        event2: {
-            date: '24-30 Березня 2026',
-            title: 'Gdynia Rugby Sevens',
-            description: 'Міжнародний турнір',
+        event3: {
+            date: '1-7 Травня 2026',
+            title: 'Навчально-тренувальний збір',
+            description: 'Підготовка команди до міжнародних змагань',
             location: 'м. Гдиня, Польща',
             funding: '8,000-10,000 €'
         },
-        event3: {
-            date: '1-7 Травня 2026',
-            title: 'Навчально-тренувальний збір збірної',
-            description: 'Підготовка команди до міжнародних змагань',
-            location: 'м. Хмельницький, Україна',
-            funding: '300 €'
-        },
         event4: {
             date: '27-31 Травня 2026',
-            title: 'Міжнародний турнір',
-            description: 'Участь у турнірі',
-            location: 'Італія',
+            title: 'Міжнародний турнір у Крамі',
+            description: 'Локальний турнір з провідними молодіжними командами регіону',
+            location: 'м. Крама, Італія',
             funding: '12,000-15,000 €'
         },
         event5: {
+            date: '1-7 Червня 2026',
+            title: 'Навчально-тренувальний збір',
+            description: 'Інтенсивна підготовка перед United World Games',
+            location: 'Франція',
+            funding: '10,000-12,000 €'
+        },
+        event6: {
             date: '16-21 Червня 2026',
-            title: 'Міжнародний турнір Клагенфурт',
+            title: 'United World Games',
             description: 'з 30 національними командами з різних куточків світу',
             location: 'м. Клагенфурт, Австрія',
             funding: '15,000-17,000 €'
         },
-        event6: {
-            date: '3-7 Вересня 2026',
-            title: 'Осінній турнір Gdynia',
-            description: 'Міжнародний турнір',
-            location: 'м. Гдиня, Польща',
-            funding: '8,000-10,000 €'
-        },
         event7: {
-            date: '19-25 Листопада 2026',
-            title: 'Міжнародний турнір',
-            description: 'Фінальний турнір року',
-            location: 'Грузія',
-            funding: '10,000-12,000 €'
+            date: '13-17 Серпня 2026',
+            title: 'Чемпіонат Європи з Touch (ІІ ранг)',
+            description: 'Європейський турнір з сильними командами',
+            location: 'м. Ноттінгем, Велика Британія',
+            funding: '12,000-14,000 €'
         },
         contactTitle: "Зв'яжіться з нами",
         contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
@@ -78,53 +78,53 @@ export const translations = {
         pageTitle: 'Upcoming Events',
         upcomingEvents: 'Upcoming Events for Ukraine U16 Rugby-7 National Team',
         event1: {
-            date: 'February 9-16, 2026',
-            title: 'Lisbon 7s Tournament',
+            date: 'January 20-28, 2026',
+            title: 'Coaches Knowledge Exchange Trip',
+            description: 'Professional development for coaching staff',
+            location: 'Auckland, New Zealand',
+            funding: '8,000-10,000 €'
+        },
+        event2: {
+            date: 'February 10-15, 2026',
+            title: 'Lisbon 7s International Tournament',
             description: 'International tournament in Portugal',
             location: 'Lisbon, Portugal',
             funding: '10,000-13,000 €'
         },
-        event2: {
-            date: 'March 24-30, 2026',
-            title: 'Gdynia Rugby Sevens',
-            description: 'International tournament',
+        event3: {
+            date: 'May 1-7, 2026',
+            title: 'Training Camp',
+            description: 'Team preparation for international competitions',
             location: 'Gdynia, Poland',
             funding: '8,000-10,000 €'
         },
-        event3: {
-            date: 'May 1-7, 2026',
-            title: 'National Team Training Camp',
-            description: 'Team preparation for international competitions',
-            location: 'Khmelnytskyi, Ukraine',
-            funding: '300 €'
-        },
         event4: {
             date: 'May 27-31, 2026',
-            title: 'International Tournament',
-            description: 'Tournament participation',
-            location: 'Italy',
+            title: 'International Tournament in Crama',
+            description: 'Local tournament with leading regional youth teams',
+            location: 'Crama, Italy',
             funding: '12,000-15,000 €'
         },
         event5: {
+            date: 'June 1-7, 2026',
+            title: 'Training Camp',
+            description: 'Intensive preparation before United World Games',
+            location: 'France',
+            funding: '10,000-12,000 €'
+        },
+        event6: {
             date: 'June 16-21, 2026',
-            title: 'Klagenfurt International Tournament',
+            title: 'United World Games',
             description: 'with 30 national teams from around the world',
             location: 'Klagenfurt, Austria',
             funding: '15,000-17,000 €'
         },
-        event6: {
-            date: 'September 3-7, 2026',
-            title: 'Autumn Gdynia Tournament',
-            description: 'International tournament',
-            location: 'Gdynia, Poland',
-            funding: '8,000-10,000 €'
-        },
         event7: {
-            date: 'November 19-25, 2026',
-            title: 'International Tournament',
-            description: 'Final tournament of the year',
-            location: 'Georgia',
-            funding: '10,000-12,000 €'
+            date: 'August 13-17, 2026',
+            title: 'European Touch Championship (Tier II)',
+            description: 'European tournament with strong teams',
+            location: 'Nottingham, Great Britain',
+            funding: '12,000-14,000 €'
         },
         contactTitle: "Contact Us",
         contactText: "Have questions or want to support our team? Contact us using the information below.",
@@ -153,53 +153,53 @@ export const translations = {
         pageTitle: 'Közelgő események',
         upcomingEvents: 'Az U16-os ukrán rögbi-7-es válogatott közelgő eseményei',
         event1: {
-            date: '2026. február 9-16.',
-            title: 'Lisbon 7s Torna',
+            date: '2026. január 20-28.',
+            title: 'Edzők Tudománycsere Utazása',
+            description: 'Szakmai fejlesztés az edzői csapat számára',
+            location: 'Auckland, Új-Zéland',
+            funding: '8,000-10,000 €'
+        },
+        event2: {
+            date: '2026. február 10-15.',
+            title: 'Lisbon 7s Nemzetközi Torna',
             description: 'Nemzetközi torna Portugáliában',
             location: 'Lisszabon, Portugália',
             funding: '10,000-13,000 €'
         },
-        event2: {
-            date: '2026. március 24-30.',
-            title: 'Gdynia Rugby Sevens',
-            description: 'Nemzetközi torna',
+        event3: {
+            date: '2026. május 1-7.',
+            title: 'Edzőtábor',
+            description: 'Csapat felkészítése nemzetközi versenyekre',
             location: 'Gdynia, Lengyelország',
             funding: '8,000-10,000 €'
         },
-        event3: {
-            date: '2026. május 1-7.',
-            title: 'Válogatott edzőtábor',
-            description: 'Csapat felkészítése nemzetközi versenyekre',
-            location: 'Hmelnickij, Ukrajna',
-            funding: '300 €'
-        },
         event4: {
             date: '2026. május 27-31.',
-            title: 'Nemzetközi Torna',
-            description: 'Torna részvétel',
-            location: 'Olaszország',
+            title: 'Nemzetközi Torna Cramában',
+            description: 'Helyi torna vezérő ifjúsági csapatokkal',
+            location: 'Crama, Olaszország',
             funding: '12,000-15,000 €'
         },
         event5: {
+            date: '2026. június 1-7.',
+            title: 'Edzőtábor',
+            description: 'Intenzív felkészülés a United World Games előtt',
+            location: 'Franciaország',
+            funding: '10,000-12,000 €'
+        },
+        event6: {
             date: '2026. június 16-21.',
-            title: 'Klagenfurt Nemzetközi Torna',
+            title: 'United World Games',
             description: '30 nemzeti csapattal a világ különböző részeiről',
             location: 'Klagenfurt, Ausztria',
             funding: '15,000-17,000 €'
         },
-        event6: {
-            date: '2026. szeptember 3-7.',
-            title: 'Őszi Gdynia Torna',
-            description: 'Nemzetközi torna',
-            location: 'Gdynia, Lengyelország',
-            funding: '8,000-10,000 €'
-        },
         event7: {
-            date: '2026. november 19-25.',
-            title: 'Nemzetközi Torna',
-            description: 'Az év utolsó tornája',
-            location: 'Grúzia',
-            funding: '10,000-12,000 €'
+            date: '2026. augusztus 13-17.',
+            title: 'Európai Touch Bajnokság (II. szint)',
+            description: 'Európai torna erős csapatokkal',
+            location: 'Nottingham, Nagy-Britannia',
+            funding: '12,000-14,000 €'
         },
         contactTitle: "Lépjen kapcsolatba velünk",
         contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
@@ -229,45 +229,45 @@ export const translations = {
 export const getEvents = (language: string, t: any) => [
     {
         id: 1,
-        image: '/maj1.webp',
+        image: '/maj7.webp',
         date: t.event1.date,
         title: t.event1.title,
         description: t.event1.description,
         location: t.event1.location,
         funding: t.event1.funding,
         details: language === 'UA' ?
-            'Турнір з регбі-7 для юніорських команд у Лісабоні. Наші гравці отримають можливість змагатися з найсильнішими командами Європи.' :
+            'Відрядження 2 тренерів збірної України з регбі-7 U16 до Нової Зеландії для підвищення кваліфікації. Тренери пройдуть навчання у провідних спеціалістів з регбі, вивчать сучасні методики підготовки гравців та отримають міжнародний досвід роботи.' :
             language === 'EN' ?
-                'Rugby-7 tournament for junior teams in Lisbon. Our players will compete with the strongest teams in Europe.' :
-                'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban.'
+                'Business trip for 2 coaches of the Ukrainian U16 rugby-7 team to New Zealand for professional development. Coaches will receive training from leading rugby specialists, learn modern player preparation techniques, and gain international work experience.' :
+                'Az ukrán U16-os rögbi-7 válogatott 2 edzőjének szakmai fejlesztési úton Új-Zélandra. Az edzők képzést fognak kapni vezető rögbi szakemberektől, megismerik a játékosfelkészítés modern módszereit és nemzetközi muntatapasztalatot szereznek.'
     },
     {
         id: 2,
-        image: '/maj2.webp',
+        image: '/maj1.webp',
         date: t.event2.date,
         title: t.event2.title,
         description: t.event2.description,
         location: t.event2.location,
         funding: t.event2.funding,
         details: language === 'UA' ?
-            'Міжнародний турнір у Гдині з участю провідних європейських команд.' :
+            'Турнір з регбі-7 для юніорських команд у Лісабоні. Наші гравці отримають можливість змагатися з найсильнішими командами Європи, показати свій рівень підготовки та набратися досвіду міжнародних змагань.' :
             language === 'EN' ?
-                'International tournament in Gdynia with leading European teams.' :
-                'Nemzetközi torna Gdyniában vezető európai csapatokkal.'
+                'Rugby-7 tournament for junior teams in Lisbon. Our players will have the opportunity to compete with the strongest teams in Europe, demonstrate their skill level, and gain international competition experience.' :
+                'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban. Játékosaink lehetőséget kapnak arra, hogy versenyezzenek Európa legerősebb csapataival.'
     },
     {
         id: 3,
-        image: '/maj3.webp',
+        image: '/maj2.webp',
         date: t.event3.date,
         title: t.event3.title,
         description: t.event3.description,
         location: t.event3.location,
         funding: t.event3.funding,
         details: language === 'UA' ?
-            'Інтенсивний навчально-тренувальний збір збірної України U16 у Хмельницькому. Програма включає тренування з техніки, тактики, фізичної підготовки та командної взаємодії для підготовки до міжнародних змагань.' :
+            'Інтенсивний навчально-тренувальний збір збірної України U16 у Гдині. Програма включає тренування з техніки, тактики, фізичної підготовки та командної взаємодії для підготовки до міжнародних змагань.' :
             language === 'EN' ?
-                'Intensive training camp for Ukraine U16 national team in Khmelnytskyi. The program includes technical, tactical, physical training and team building to prepare for international competitions.' :
-                'Intenzív edzőtábor az ukrán U16-os válogatottnak Hmelnickijben. A program technikai, taktikai, fizikai edzéseket és csapatépítést tartalmaz a nemzetközi versenyekre való felkészüléshez.'
+                'Intensive training camp for Ukraine U16 national team in Gdynia. The program includes technical, tactical, physical training and team building to prepare for international competitions.' :
+                'Intenzív edzőtábor az ukrán U16-os válogatottnak Gdyniában. A program technikai, taktikai, fizikai edzéseket és csapatépítést tartalmaz.'
     },
     {
         id: 4,
@@ -278,10 +278,10 @@ export const getEvents = (language: string, t: any) => [
         location: t.event4.location,
         funding: t.event4.funding,
         details: language === 'UA' ?
-            'Престижний турнір в Італії з участю найкращих команд Південної Європи.' :
+            'Наші партнери з Італії запросили збірну України U16 до участі у локальному турнірі, де змагатимуться провідні молодіжні команди регіону. Це чудова можливість для команди отримати ігрову практику, відчути інший стиль регбі та зміцнити дружні міжнародні зв\'язки.' :
             language === 'EN' ?
-                'Prestigious tournament in Italy with the best teams from Southern Europe.' :
-                'Rangos torna Olaszországban Dél-Európa legjobb csapataival.'
+                'Our Italian partners invited Ukraine U16 team to participate in a local tournament featuring leading regional youth teams. This is a great opportunity for the team to gain game practice, experience a different rugby style, and strengthen friendly international ties.' :
+                'Olasz partnereink meghívták az ukrán U16-os csapatot egy helyi tornára, ahol a régió vezető ifjúsági csapatai versenyeznek.'
     },
     {
         id: 5,
@@ -292,10 +292,10 @@ export const getEvents = (language: string, t: any) => [
         location: t.event5.location,
         funding: t.event5.funding,
         details: language === 'UA' ?
-            'Великий міжнародний турнір за участі 30 національних команд з усього світу.' :
+            'Інтенсивний навчально-тренувальний збір у Франції для підготовки команди до United World Games. Програма включає тренування з техніки, тактики та фізичної підготовки.' :
             language === 'EN' ?
-                'Major international tournament featuring 30 national teams from around the world.' :
-                'Nagy nemzetközi torna, 30 ország csapataival.'
+                'Intensive training camp in France to prepare the team for United World Games. The program includes technical, tactical, and physical training sessions.' :
+                'Intenzív edzőtábor Franciaországban a csapat United World Games-re való felkészítésére.'
     },
     {
         id: 6,
@@ -306,10 +306,10 @@ export const getEvents = (language: string, t: any) => [
         location: t.event6.location,
         funding: t.event6.funding,
         details: language === 'UA' ?
-            'Осінній турнір у Гдині для підготовки до завершення сезону.' :
+            'Великий міжнародний турнір United World Games за участі 30 національних команд з усього світу. Унікальна можливість для наших юних гравців виступити на міжнародній арені та показати свій потенціал.' :
             language === 'EN' ?
-                'Autumn tournament in Gdynia to prepare for the end of the season.' :
-                'Őszi torna Gdyniában a szezon végének előkészítésére.'
+                'Major international United World Games tournament featuring 30 national teams from around the world. A unique opportunity for our young players to perform on the international stage and demonstrate their potential.' :
+                'Nagy nemzetközi United World Games torna, 30 ország csapataival. Kiváló lehetőség fiatal játékosaink számára.'
     },
     {
         id: 7,
@@ -320,10 +320,10 @@ export const getEvents = (language: string, t: any) => [
         location: t.event7.location,
         funding: t.event7.funding,
         details: language === 'UA' ?
-            'Фінальний турнір року в Грузії з найсильнішими командами регіону.' :
+            'Серпневий турнір у Ноттінгемі стане для збірної з Touch можливістю зіграти з сильними європейськими командами, перевірити свій рівень та отримати новий міжнародний досвід.' :
             language === 'EN' ?
-                'Final tournament of the year in Georgia with the strongest teams in the region.' :
-                'Az év utolsó tornája Grúziában a régió legerősebb csapataival.'
+                'The August tournament in Nottingham will give the Touch team an opportunity to play against strong European teams, test their level and gain new international experience.' :
+                'Az augusztusi nottinghami torna lehetőséget ad a Touch csapatnak, hogy erős európai csapatokkal játsszon.'
     }
 ];
 
