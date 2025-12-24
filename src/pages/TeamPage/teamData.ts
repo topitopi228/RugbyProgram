@@ -29,12 +29,6 @@ export const getTeamData = (language: string, t: any) => {
         ],
         doctors: [
             {
-                id: 'doc1',
-                name: t.doctor1,
-                role: t.headDoctor,
-                gg: t.doctor1Desc
-            },
-            {
                 id: 'doc2',
                 name: t.doctor2,
                 role: t.sportsDoctor,

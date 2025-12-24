@@ -88,7 +88,7 @@ const MembersGrid: React.FC = () => {
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-gray-400 shadow-[0_0_8px_rgba(192,192,192,0.5)]" />
-            <span className="text-gray-300">Silver (700₴)</span>
+            <span className="text-gray-300">Silver</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)]" />

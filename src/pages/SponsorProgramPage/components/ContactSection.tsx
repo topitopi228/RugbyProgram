@@ -68,7 +68,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                             whileHover={{ y: -8 }}
-                            href="tel:+48501820396"
+                            href="tel:+380509498209"
                             className="group relative"
                         >
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400/0 via-yellow-400/50 to-yellow-400/0 rounded-xl opacity-0 group-hover:opacity-100 blur-lg transition-all duration-500"></div>
@@ -81,7 +81,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                                 <span className="text-base font-bold text-white mb-1 group-hover:text-yellow-400 transition-colors">
                                     {language === 'UA' ? 'Телефон' : language === 'EN' ? 'Phone' : 'Telefon'}
                                 </span>
-                                <span className="text-slate-300 text-sm font-medium">+48 501 820 396</span>
+                                <span className="text-slate-300 text-sm font-medium">+380 50 949 82 09</span>
                             </div>
                         </motion.a>
 
