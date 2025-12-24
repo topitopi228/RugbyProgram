@@ -160,6 +160,90 @@ export const getMediaItems = (): MediaItem[] => {
             },
             category: 'photos'
         },
+        {
+            id: 25,
+            type: 'image',
+            url: '/media11.webp',
+            poster: '/media11.webp',
+            title: {
+                UA: 'Тренувальний момент',
+                EN: 'Training moment',
+                HUN: 'Edzési pillanat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 26,
+            type: 'image',
+            url: '/media12.webp',
+            poster: '/media12.webp',
+            title: {
+                UA: 'Командна робота',
+                EN: 'Teamwork',
+                HUN: 'Csapatmunka'
+            },
+            category: 'photos'
+        },
+        {
+            id: 27,
+            type: 'image',
+            url: '/media13.webp',
+            poster: '/media13.webp',
+            title: {
+                UA: 'Ігрова практика',
+                EN: 'Game practice',
+                HUN: 'Játék gyakorlat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 28,
+            type: 'image',
+            url: '/media14.webp',
+            poster: '/media14.webp',
+            title: {
+                UA: 'Тактичні вправи',
+                EN: 'Tactical exercises',
+                HUN: 'Taktikai gyakorlatok'
+            },
+            category: 'photos'
+        },
+        {
+            id: 29,
+            type: 'image',
+            url: '/media15.webp',
+            poster: '/media15.webp',
+            title: {
+                UA: 'Фізична підготовка',
+                EN: 'Physical training',
+                HUN: 'Fizikai edzés'
+            },
+            category: 'photos'
+        },
+        {
+            id: 30,
+            type: 'image',
+            url: '/media16.webp',
+            poster: '/media16.webp',
+            title: {
+                UA: 'Командний дух',
+                EN: 'Team spirit',
+                HUN: 'Csapatszellem'
+            },
+            category: 'photos'
+        },
+        {
+            id: 31,
+            type: 'image',
+            url: '/media17.webp',
+            poster: '/media17.webp',
+            title: {
+                UA: 'Тренування на полі',
+                EN: 'Field training',
+                HUN: 'Pályán edzés'
+            },
+            category: 'photos'
+        },
     ];
 };
 
