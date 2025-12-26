@@ -20,8 +20,8 @@ const getMemberPhoto = (memberId: number): string => {
 export const clubMembers: ClubMember[] = [
   {
     id: 1,
-    firstName: 'Шандор',
-    lastName: 'Федір',
+    firstName: 'Федір',
+    lastName: 'Шандор',
     photo: getMemberPhoto(1), // /club1.webp
     membershipLevel: 'gold',
     joinDate: '2025-12-18',
@@ -31,7 +31,7 @@ export const clubMembers: ClubMember[] = [
   {
     id: 2,
     firstName: 'Антон',
-    lastName: 'Копілов',
+    lastName: 'Копилов',
     photo: getMemberPhoto(2), // /club2.webp
     membershipLevel: 'gold',
     joinDate: '2025-12-24',
