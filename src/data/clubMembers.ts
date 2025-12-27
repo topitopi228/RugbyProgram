@@ -24,7 +24,7 @@ export const clubMembers: ClubMember[] = [
     lastName: 'Шандор',
     photo: getMemberPhoto(1), // /club1.webp
     membershipLevel: 'gold',
-    joinDate: '2025-12-18',
+    joinDate: '2025-04-07',
     bio: 'Надзвичайний і Повноважний Посол України в Угорщині. Активний промоутер розвитку регбі в регіоні та підтримки молодіжних команд.',
     position: 'Надзвичайний і Повноважний Посол України в Угорщині'
   },
@@ -34,7 +34,7 @@ export const clubMembers: ClubMember[] = [
     lastName: 'Копилов',
     photo: getMemberPhoto(2), // /club2.webp
     membershipLevel: 'gold',
-    joinDate: '2025-12-24',
+    joinDate: '2025-07-10',
     bio: 'Підприємець, який активно підтримує розвиток молодіжного спорту в Україні. Вірить у силу регбі як інструменту виховання характеру та командного духу.',
     position: 'Підприємець'
   },
@@ -44,7 +44,7 @@ export const clubMembers: ClubMember[] = [
     lastName: 'Петьовка',
     photo: getMemberPhoto(3), // /club3.webp
     membershipLevel: 'gold',
-    joinDate: '2025-12-24',
+    joinDate: '2025-07-10',
     bio: 'Меценат спорту, який присвятив себе підтримці молодих спортсменів. Активно сприяє розвитку регбі-7 серед юніорів України.',
     position: 'Меценат спорту'
   },
@@ -54,7 +54,7 @@ export const clubMembers: ClubMember[] = [
     lastName: 'Юренко',
     photo: getMemberPhoto(4), // /club4.webp
     membershipLevel: 'gold',
-    joinDate: '2025-12-24',
+    joinDate: '2025-04-07',
     bio: 'Засновник благодійного фонду "Міла". Підтримує соціальні ініціативи та розвиток молодіжного спорту в Україні.',
     position: 'Засновник БФ "Міла"'
   }
