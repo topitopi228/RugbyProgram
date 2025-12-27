@@ -56,6 +56,8 @@ export const getTeamData = (language: string, t: any) => {
             { id: 'player10', name: 'Роман Присяжнюк' },
             { id: 'player12', name: 'Владислав Кошелюк' },
             { id: 'player13', name: 'Артем Кухарський' },
+            { id: 'player16', name: 'Даниіл Плєшаков' },
+            { id: 'player17', name: 'Микита Джусоєв' },
         ],
         foreignCoaches: [
             {

@@ -76,31 +76,24 @@ const MemberCard: React.FC<MemberCardProps> = ({ member }) => {
           className={`absolute inset-0 w-full h-full rounded-lg border-2 ${borderStyle} 
             bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 
             backdrop-blur-sm rotate-y-180 backface-hidden 
-            flex flex-col p-3 transition-all overflow-y-auto`}
+            flex flex-col items-center justify-center p-2 sm:p-3 transition-all overflow-hidden`}
         >
           {/* Position Badge */}
           {member.position && (
-            <div className="text-[11px] sm:text-xs md:text-sm text-amber-400 font-semibold mb-1 text-center leading-tight">
+            <div className="text-[7px] sm:text-[9px] md:text-xs text-amber-400 font-semibold mb-0.5 sm:mb-1 text-center leading-[1.1] px-1 break-words max-w-full">
               {member.position}
             </div>
           )}
 
           {/* Join Date */}
-          <div className="text-[10px] sm:text-[11px] md:text-xs text-gray-400 mb-2 text-center leading-tight">
+          <div className="text-[8px] sm:text-[10px] md:text-xs text-gray-400 mb-0.5 sm:mb-1 text-center leading-tight px-1">
             <span className="text-gray-500">Член з:</span>
             <br />
-            <span className="text-white/70 text-[11px] sm:text-xs md:text-sm">{formatDate(member.joinDate)}</span>
+            <span className="text-white/70 text-[8px] sm:text-[10px] md:text-xs whitespace-nowrap">{formatDate(member.joinDate)}</span>
           </div>
 
-          {/* Bio */}
-          {member.bio && (
-            <div className="text-[10px] sm:text-[11px] md:text-xs text-gray-300 text-center leading-snug flex-1 overflow-y-auto">
-              {member.bio}
-            </div>
-          )}
-
-          {/* Membership Level - Hidden on mobile */}
-          <div className={`mt-2 text-[10px] sm:text-xs md:text-sm font-bold text-center hidden sm:block ${
+          {/* Membership Level */}
+          <div className={`mt-0.5 sm:mt-1 text-[9px] sm:text-xs md:text-sm font-bold text-center ${
             member.membershipLevel === 'platinum' ? 'text-purple-400' :
             member.membershipLevel === 'gold' ? 'text-amber-500' :
             member.membershipLevel === 'silver' ? 'text-gray-400' :
