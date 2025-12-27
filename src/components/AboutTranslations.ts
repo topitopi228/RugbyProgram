@@ -35,14 +35,14 @@ export const translations = {
             title: 'Міжнародний турнір у Крамі',
             description: 'Локальний турнір з провідними молодіжними командами регіону',
             location: 'м. Крама, Італія',
-            funding: '13,900 €'
+            funding: '4,000 €'
         },
         event6: {
             date: '1-7 Червня 2026',
             title: 'Навчально-тренувальний збір',
             description: 'Інтенсивна підготовка перед United World Games',
             location: 'Франція',
-            funding: '18,000 €'
+            funding: '12,000 €'
         },
         event7: {
             date: '16-21 Червня 2026',
@@ -117,14 +117,14 @@ export const translations = {
             title: 'International Tournament in Crama',
             description: 'Local tournament with leading regional youth teams',
             location: 'Crama, Italy',
-            funding: '13,900 €'
+            funding: '4,000 €'
         },
         event6: {
             date: 'June 1-7, 2026',
             title: 'Training Camp',
             description: 'Intensive preparation before United World Games',
             location: 'France',
-            funding: '18,000 €'
+            funding: '12,000 €'
         },
         event7: {
             date: 'June 16-21, 2026',
@@ -199,14 +199,14 @@ export const translations = {
             title: 'Nemzetközi Torna Cramában',
             description: 'Helyi torna vezérő ifjúsági csapatokkal',
             location: 'Crama, Olaszország',
-            funding: '13,900 €'
+            funding: '4,000 €'
         },
         event6: {
             date: '2026. június 1-7.',
             title: 'Edzőtábor',
             description: 'Intenzív felkészülés a United World Games előtt',
             location: 'Franciaország',
-            funding: '18,000 €'
+            funding: '12,000 €'
         },
         event7: {
             date: '2026. június 16-21.',
@@ -465,11 +465,11 @@ export const fundingBreakdowns = {
                 EN: 'Transportation',
                 HUN: 'Közlekedés'
             },
-            amount: '3,000 €',
+            amount: '2,400 €',
             description: {
-                UA: 'Автобус, міжнародні та місцеві трансфери',
-                EN: 'Bus, international and local transfers',
-                HUN: 'Busz, nemzetközi és helyi transzferek'
+                UA: 'Автобус, міжнародні та місцеві трансфери (економний варіант)',
+                EN: 'Bus, international and local transfers (budget option)',
+                HUN: 'Busz, nemzetközi és helyi transzferek (gazdaságos változat)'
             }
         },
         {
@@ -478,11 +478,11 @@ export const fundingBreakdowns = {
                 EN: 'Accommodation',
                 HUN: 'Szállás'
             },
-            amount: '5,600 €',
+            amount: '3,600 €',
             description: {
-                UA: 'Готель для гравців та тренерів на 5 днів',
-                EN: 'Hotel for players and coaches for 5 days',
-                HUN: 'Szálloda játékosok és edzők számára 5 napra'
+                UA: 'Гуртожиток / апартаменти для гравців та тренерів на 5 днів',
+                EN: 'Dormitory / apartments for players and coaches for 5 days',
+                HUN: 'Kollégium / apartmanok játékosok és edzők számára 5 napra'
             }
         },
         {
@@ -491,11 +491,11 @@ export const fundingBreakdowns = {
                 EN: 'Meals',
                 HUN: 'Étkezés'
             },
-            amount: '4,800 €',
+            amount: '3,000 €',
             description: {
-                UA: 'Триразове спортивне харчування',
-                EN: 'Three sports meals a day',
-                HUN: 'Napi háromszori sport étkezés'
+                UA: 'Два основних прийоми їжі на день, частково самостійне приготування',
+                EN: 'Two main meals per day, partially self-catering',
+                HUN: 'Két fő étkezés naponta, részben önellátás'
             }
         },
         {
@@ -504,11 +504,11 @@ export const fundingBreakdowns = {
                 EN: 'Sports Infrastructure Rental',
                 HUN: 'Sport infrastruktúra bérlés'
             },
-            amount: '1,500 €',
+            amount: '1,000 €',
             description: {
-                UA: 'Регбійне поле, тренажерний зал',
-                EN: 'Rugby field, gym',
-                HUN: 'Rögbi pálya, edzőterem'
+                UA: 'Регбійне поле, тренажерний зал (пакетна знижка / дешевші майданчики)',
+                EN: 'Rugby field, gym (package discount / cheaper facilities)',
+                HUN: 'Rögbi pálya, edzőterem (csomagkedvezmény / olcsóbb létesítmények)'
             }
         },
         {
@@ -556,11 +556,11 @@ export const fundingBreakdowns = {
                 EN: 'Contingency / Reserve',
                 HUN: 'Váratlan költségek / tartalék'
             },
-            amount: '1,300 €',
+            amount: '200 €',
             description: {
-                UA: 'Коливання цін, додаткові потреби',
-                EN: 'Price fluctuations, additional needs',
-                HUN: 'Árváltozások, további szükségletek'
+                UA: 'Мінімальний резерв',
+                EN: 'Minimum reserve',
+                HUN: 'Minimális tartalék'
             }
         }
     ],
@@ -571,11 +571,11 @@ export const fundingBreakdowns = {
                 EN: 'Transportation',
                 HUN: 'Közlekedés'
             },
-            amount: '2,800 €',
+            amount: '1,400 €',
             description: {
-                UA: 'Автобус, міжнародні та місцеві трансфери',
-                EN: 'Bus, international and local transfers',
-                HUN: 'Busz, nemzetközi és helyi transzferek'
+                UA: 'Автобус, дешевий трансфер, спільна поїздка',
+                EN: 'Bus, cheap transfer, shared ride',
+                HUN: 'Busz, olcsó transzfer, közös utazás'
             }
         },
         {
@@ -584,37 +584,11 @@ export const fundingBreakdowns = {
                 EN: 'Accommodation',
                 HUN: 'Szállás'
             },
-            amount: '3,400 €',
+            amount: '1,200 €',
             description: {
-                UA: 'Готель для гравців та тренерів на 5 днів',
-                EN: 'Hotel for players and coaches for 5 days',
-                HUN: 'Szálloda játékosok és edzők számára 5 napra'
-            }
-        },
-        {
-            category: {
-                UA: 'Харчування',
-                EN: 'Meals',
-                HUN: 'Étkezés'
-            },
-            amount: '3,300 €',
-            description: {
-                UA: 'Триразове спортивне харчування',
-                EN: 'Three sports meals a day',
-                HUN: 'Napi háromszori sport étkezés'
-            }
-        },
-        {
-            category: {
-                UA: 'Оренда спортивної інфраструктури',
-                EN: 'Sports Infrastructure Rental',
-                HUN: 'Sport infrastruktúra bérlés'
-            },
-            amount: '1,400 €',
-            description: {
-                UA: 'Регбійне поле, тренажерний зал',
-                EN: 'Rugby field, gym',
-                HUN: 'Rögbi pálya, edzőterem'
+                UA: 'Готель для гравців та тренерів',
+                EN: 'Hotel for players and coaches',
+                HUN: 'Szálloda játékosok és edzők számára'
             }
         },
         {
@@ -623,11 +597,11 @@ export const fundingBreakdowns = {
                 EN: 'Sports Equipment and Gear',
                 HUN: 'Sport felszerelés és eszközök'
             },
-            amount: '800 €',
+            amount: '600 €',
             description: {
-                UA: 'Форма, костюми, рюкзаки',
-                EN: 'Uniforms, suits, backpacks',
-                HUN: 'Egyenruha, öltönyök, hátizsákok'
+                UA: 'Форма, рюкзаки, дрібний інвентар',
+                EN: 'Uniforms, backpacks, small equipment',
+                HUN: 'Egyenruha, hátizsákok, apró felszerelés'
             }
         },
         {
@@ -636,24 +610,11 @@ export const fundingBreakdowns = {
                 EN: 'Medical Support and Insurance',
                 HUN: 'Orvosi támogatás és biztosítás'
             },
-            amount: '600 €',
+            amount: '300 €',
             description: {
-                UA: 'Аптечка, страхування, фізіотерапія',
-                EN: 'First aid kit, insurance, physiotherapy',
-                HUN: 'Elsősegély készlet, biztosítás, fizioterápia'
-            }
-        },
-        {
-            category: {
-                UA: 'Суддівство та організаційні витрати',
-                EN: 'Refereeing and Organizational Costs',
-                HUN: 'Játékvezetés és szervezési költségek'
-            },
-            amount: '400 €',
-            description: {
-                UA: 'Судді спарингів, адміністрування',
-                EN: 'Sparring referees, administration',
-                HUN: 'Edzőmérkőzés játékvezetők, adminisztráció'
+                UA: 'Аптечка, мінімальна страховка',
+                EN: 'First aid kit, minimum insurance',
+                HUN: 'Elsősegély készlet, minimális biztosítás'
             }
         },
         {
@@ -662,24 +623,11 @@ export const fundingBreakdowns = {
                 EN: 'Contingency / Reserve',
                 HUN: 'Váratlan költségek / tartalék'
             },
-            amount: '700 €',
-            description: {
-                UA: 'Коливання цін, додаткові потреби',
-                EN: 'Price fluctuations, additional needs',
-                HUN: 'Árváltozások, további szükségletek'
-            }
-        },
-        {
-            category: {
-                UA: 'Реєстраційний внесок',
-                EN: 'Registration Fee',
-                HUN: 'Regisztrációs díj'
-            },
             amount: '500 €',
             description: {
-                UA: 'Участь у турнірі',
-                EN: 'Tournament participation',
-                HUN: 'Torna részvétel'
+                UA: 'Мінімальний резерв',
+                EN: 'Minimum reserve',
+                HUN: 'Minimális tartalék'
             }
         }
     ],
