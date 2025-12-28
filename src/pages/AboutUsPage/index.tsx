@@ -1,7 +1,6 @@
 // @ts-nocheck
 import { useRef, useState } from 'react';
 import { useLanguage } from '../../components/LanguageUtils';
-import DonationProgress from '../../components/DonationProgress';
 import { translations, getEvents, fundingBreakdowns } from '../../components/AboutTranslations';
 import HeroSection from './components/HeroSection';
 import EventsList from './components/EventsList';
@@ -73,7 +72,6 @@ const AboutUsPage = () => {
                     subtitle={t.upcomingEvents} 
                     fadeIn={fadeIn} 
                 />
-                <DonationProgress />
                 <EventsList 
                     events={events} 
                     language={language} 

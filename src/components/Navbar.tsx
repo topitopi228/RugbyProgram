@@ -160,7 +160,7 @@ const Navbar: React.FC = () => {
                     {/* Mobile menu button */}
                     <div className="md:hidden">
                         <motion.button
-                            whileTap={{ scale: 0.95 }}
+                                whileTap={{ scale: 0.95 }}
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             className="relative inline-flex items-center justify-center w-10 h-10 rounded-lg 
                                      bg-slate-800/70 backdrop-blur-sm
