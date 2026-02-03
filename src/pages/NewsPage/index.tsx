@@ -82,9 +82,9 @@ const NewsPage = () => {
                 },
                 {
                     id: 10,
-                    date: '20-28 Січня 2026',
+                    date: '30 Січня - 9 Лютого 2026',
                     title: 'Успішна подорож тренерів до Нової Зеландії',
-                    description: 'Два тренери збірної України U16 з регбі-7 успішно завершили навчальну подорож до Окленда, Нова Зеландія.',
+                    description: 'Два тренери збірної України U16 з регбі-7 успішно проводять навчальну подорож до Окленда, Нова Зеландія.',
                     expense: '5650',
                     image: '/newzealand.webp'
                 }
@@ -163,9 +163,9 @@ const NewsPage = () => {
     },
     {
         id: 10,
-        date: 'January 20-28, 2026',
+        date: 'January 30 - February 9, 2026',
         title: 'Successful Coaches\' Trip to New Zealand',
-        description: 'Two coaches from the Ukrainian U16 rugby-7 national team successfully completed their educational trip to Auckland, New Zealand.',
+        description: 'Two coaches from the Ukrainian U16 rugby-7 national team are successfully conducting their educational trip to Auckland, New Zealand.',
         expense: '5650',
         image: '/newzealand.webp'
     }
@@ -243,9 +243,9 @@ const NewsPage = () => {
     },
     {
         id: 10,
-        date: '2026. január 20-28.',
+        date: '2026. január 30. - február 9.',
         title: 'Sikeres edzői utazás Új-Zélandra',
-        description: 'Az ukrán U16-os rögbi-7 válogatott két edzője sikeresen befejezte képzési útját Aucklandbe, Új-Zélandra.',
+        description: 'Az ukrán U16-os rögbi-7 válogatott két edzője sikeresen folytatja képzési útját Aucklandben, Új-Zélandon.',
         expense: '5650',
         image: '/newzealand.webp'
     }
