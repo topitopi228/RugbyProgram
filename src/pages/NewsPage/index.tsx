@@ -79,6 +79,14 @@ const NewsPage = () => {
                     description: 'У Хмельницькому відбулися навчально-тренувальні збори, під час яких збірна України U16 провела серію тренувальних матчів проти команди U17. Ці товариські ігри стали важливим етапом підготовки молодших гравців, дозволивши їм отримати цінний досвід гри проти старших та досвідченіших суперників. Інтенсивні тренування та практичні матчі допомогли команді покращити тактичну взаємодію та підвищити рівень майстерності.',
                     expense: '300',
                     image: '/news9.webp'
+                },
+                {
+                    id: 10,
+                    date: '20-28 Січня 2026',
+                    title: 'Успішна подорож тренерів до Нової Зеландії',
+                    description: 'Два тренери збірної України U16 з регбі-7 успішно завершили навчальну подорож до Окленда, Нова Зеландія.',
+                    expense: '5650',
+                    image: '/newzealand.webp'
                 }
 
             ]
@@ -152,6 +160,14 @@ const NewsPage = () => {
         description: 'A training camp was held in Khmelnytskyi where the Ukrainian U16 national team played a series of practice matches against the U17 team. These friendly games became an important stage in the preparation of younger players, allowing them to gain valuable experience playing against older and more experienced opponents. Intensive training and practice matches helped the team improve tactical coordination and enhance their skill level.',
         expense: '300',
         image: '/news9.webp'
+    },
+    {
+        id: 10,
+        date: 'January 20-28, 2026',
+        title: 'Successful Coaches\' Trip to New Zealand',
+        description: 'Two coaches from the Ukrainian U16 rugby-7 national team successfully completed their educational trip to Auckland, New Zealand.',
+        expense: '5650',
+        image: '/newzealand.webp'
     }
 ]
         },
@@ -224,6 +240,14 @@ const NewsPage = () => {
         description: 'Hmelnickijben edzőtábort tartottak, ahol az ukrán U16-os válogatott edzőmérkőzéseket játszott az U17-es csapat ellen. Ezek a barátságos játékok fontos szakaszt jelentettek a fiatalabb játékosok felkészítésében, lehetővé téve számukra, hogy értékes tapasztalatot szerezzenek idősebb és tapasztaltabb ellenfelek ellen játszva. Az intenzív edzések és gyakorló mérkőzések segítették a csapatot a taktikai koordináció javításában és a képességek szintjének emelésében.',
         expense: '300',
         image: '/news9.webp'
+    },
+    {
+        id: 10,
+        date: '2026. január 20-28.',
+        title: 'Sikeres edzői utazás Új-Zélandra',
+        description: 'Az ukrán U16-os rögbi-7 válogatott két edzője sikeresen befejezte képzési útját Aucklandbe, Új-Zélandra.',
+        expense: '5650',
+        image: '/newzealand.webp'
     }
 ]
         }

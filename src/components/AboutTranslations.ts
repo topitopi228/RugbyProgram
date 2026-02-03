@@ -3,48 +3,41 @@ export const translations = {
         pageTitle: 'Майбутні заходи',
         upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
         event1: {
-            date: '20-28 Січня 2026',
-            title: 'Подорож для обміну знань тренерів',
-            description: 'Підвищення кваліфікації тренерського складу',
-            location: 'м. Окленд, Нова Зеландія',
-            funding: '5,650 €'
-        },
-        event2: {
             date: '10-15 Лютого 2026',
             title: 'Міжнародний турнір Lisbon 7s',
             description: 'Міжнародний турнір у Португалії',
             location: 'м. Лісабон, Португалія',
             funding: '10,100 €'
         },
-        event3: {
+        event2: {
             date: '1-7 Травня 2026',
             title: 'Навчально-тренувальний збір',
             description: 'Підготовка команди до міжнародних змагань',
             location: 'м. Гдиня, Польща',
             funding: '9,500 €'
         },
-        event4: {
+        event3: {
             date: '27-31 Травня 2026',
             title: 'Міжнародний турнір у Крамі',
             description: 'Локальний турнір з провідними молодіжними командами регіону',
             location: 'м. Крама, Італія',
             funding: '4,000 €'
         },
-        event5: {
+        event4: {
             date: '1-7 Червня 2026',
             title: 'Навчально-тренувальний збір',
             description: 'Інтенсивна підготовка перед United World Games',
             location: 'Франція',
             funding: '12,000 €'
         },
-        event6: {
+        event5: {
             date: '16-21 Червня 2026',
             title: 'United World Games',
             description: 'з 30 національними командами з різних куточків світу',
             location: 'м. Клагенфурт, Австрія',
             funding: '14,100 €'
         },
-        event7: {
+        event6: {
             date: '13-17 Серпня 2026',
             title: 'Чемпіонат Європи з Touch (ІІ ранг)',
             description: 'Європейський турнір з сильними командами',
@@ -78,48 +71,41 @@ export const translations = {
         pageTitle: 'Upcoming Events',
         upcomingEvents: 'Upcoming Events for Ukraine U16 Rugby-7 National Team',
         event1: {
-            date: 'January 20-28, 2026',
-            title: 'Coaches Knowledge Exchange Trip',
-            description: 'Professional development for coaching staff',
-            location: 'Auckland, New Zealand',
-            funding: '5,650 €'
-        },
-        event2: {
             date: 'February 10-15, 2026',
             title: 'Lisbon 7s International Tournament',
             description: 'International tournament in Portugal',
             location: 'Lisbon, Portugal',
             funding: '10,100 €'
         },
-        event3: {
+        event2: {
             date: 'May 1-7, 2026',
             title: 'Training Camp',
             description: 'Team preparation for international competitions',
             location: 'Gdynia, Poland',
             funding: '9,500 €'
         },
-        event4: {
+        event3: {
             date: 'May 27-31, 2026',
             title: 'International Tournament in Crama',
             description: 'Local tournament with leading regional youth teams',
             location: 'Crama, Italy',
             funding: '4,000 €'
         },
-        event5: {
+        event4: {
             date: 'June 1-7, 2026',
             title: 'Training Camp',
             description: 'Intensive preparation before United World Games',
             location: 'France',
             funding: '12,000 €'
         },
-        event6: {
+        event5: {
             date: 'June 16-21, 2026',
             title: 'United World Games',
             description: 'with 30 national teams from around the world',
             location: 'Klagenfurt, Austria',
             funding: '14,100 €'
         },
-        event7: {
+        event6: {
             date: 'August 13-17, 2026',
             title: 'European Touch Championship (Tier II)',
             description: 'European tournament with strong teams',
@@ -153,48 +139,41 @@ export const translations = {
         pageTitle: 'Közelgő események',
         upcomingEvents: 'Az U16-os ukrán rögbi-7-es válogatott közelgő eseményei',
         event1: {
-            date: '2026. január 20-28.',
-            title: 'Edzők Tudománycsere Utazása',
-            description: 'Szakmai fejlesztés az edzői csapat számára',
-            location: 'Auckland, Új-Zéland',
-            funding: '5,650 €'
-        },
-        event2: {
             date: '2026. február 10-15.',
             title: 'Lisbon 7s Nemzetközi Torna',
             description: 'Nemzetközi torna Portugáliában',
             location: 'Lisszabon, Portugália',
             funding: '10,100 €'
         },
-        event3: {
+        event2: {
             date: '2026. május 1-7.',
             title: 'Edzőtábor',
             description: 'Csapat felkészítése nemzetközi versenyekre',
             location: 'Gdynia, Lengyelország',
             funding: '9,500 €'
         },
-        event4: {
+        event3: {
             date: '2026. május 27-31.',
             title: 'Nemzetközi Torna Cramában',
             description: 'Helyi torna vezérő ifjúsági csapatokkal',
             location: 'Crama, Olaszország',
             funding: '4,000 €'
         },
-        event5: {
+        event4: {
             date: '2026. június 1-7.',
             title: 'Edzőtábor',
             description: 'Intenzív felkészülés a United World Games előtt',
             location: 'Franciaország',
             funding: '12,000 €'
         },
-        event6: {
+        event5: {
             date: '2026. június 16-21.',
             title: 'United World Games',
             description: '30 nemzeti csapattal a világ különböző részeiről',
             location: 'Klagenfurt, Ausztria',
             funding: '14,100 €'
         },
-        event7: {
+        event6: {
             date: '2026. augusztus 13-17.',
             title: 'Európai Touch Bajnokság (II. szint)',
             description: 'Európai torna erős csapatokkal',
@@ -229,26 +208,12 @@ export const translations = {
 export const getEvents = (language: string, t: any) => [
     {
         id: 1,
-        image: '/maj7.webp',
+        image: '/maj1.webp',
         date: t.event1.date,
         title: t.event1.title,
         description: t.event1.description,
         location: t.event1.location,
         funding: t.event1.funding,
-        details: language === 'UA' ?
-            'Відрядження 2 тренерів збірної України з регбі-7 U16 до Нової Зеландії для підвищення кваліфікації. Тренери пройдуть навчання у провідних спеціалістів з регбі, вивчать сучасні методики підготовки гравців та отримають міжнародний досвід роботи.' :
-            language === 'EN' ?
-                'Business trip for 2 coaches of the Ukrainian U16 rugby-7 team to New Zealand for professional development. Coaches will receive training from leading rugby specialists, learn modern player preparation techniques, and gain international work experience.' :
-                'Az ukrán U16-os rögbi-7 válogatott 2 edzőjének szakmai fejlesztési úton Új-Zélandra. Az edzők képzést fognak kapni vezető rögbi szakemberektől, megismerik a játékosfelkészítés modern módszereit és nemzetközi muntatapasztalatot szereznek.'
-    },
-    {
-        id: 2,
-        image: '/maj1.webp',
-        date: t.event2.date,
-        title: t.event2.title,
-        description: t.event2.description,
-        location: t.event2.location,
-        funding: t.event2.funding,
         details: language === 'UA' ?
             'Турнір з регбі-7 для юніорських команд у Лісабоні. Наші гравці отримають можливість змагатися з найсильнішими командами Європи, показати свій рівень підготовки та набратися досвіду міжнародних змагань.' :
             language === 'EN' ?
@@ -256,13 +221,13 @@ export const getEvents = (language: string, t: any) => [
                 'Rögbi-7 torna ifjúsági csapatok számára Lisszabonban. Játékosaink lehetőséget kapnak arra, hogy versenyezzenek Európa legerősebb csapataival.'
     },
     {
-        id: 3,
+        id: 2,
         image: '/maj2.webp',
-        date: t.event3.date,
-        title: t.event3.title,
-        description: t.event3.description,
-        location: t.event3.location,
-        funding: t.event3.funding,
+        date: t.event2.date,
+        title: t.event2.title,
+        description: t.event2.description,
+        location: t.event2.location,
+        funding: t.event2.funding,
         details: language === 'UA' ?
             'Інтенсивний навчально-тренувальний збір збірної України U16 у Гдині. Програма включає тренування з техніки, тактики, фізичної підготовки та командної взаємодії для підготовки до міжнародних змагань.' :
             language === 'EN' ?
@@ -270,13 +235,13 @@ export const getEvents = (language: string, t: any) => [
                 'Intenzív edzőtábor az ukrán U16-os válogatottnak Gdyniában. A program technikai, taktikai, fizikai edzéseket és csapatépítést tartalmaz.'
     },
     {
-        id: 4,
+        id: 3,
         image: '/maj4.webp',
-        date: t.event4.date,
-        title: t.event4.title,
-        description: t.event4.description,
-        location: t.event4.location,
-        funding: t.event4.funding,
+        date: t.event3.date,
+        title: t.event3.title,
+        description: t.event3.description,
+        location: t.event3.location,
+        funding: t.event3.funding,
         details: language === 'UA' ?
             'Наші партнери з Італії запросили збірну України U16 до участі у локальному турнірі, де змагатимуться провідні молодіжні команди регіону. Це чудова можливість для команди отримати ігрову практику, відчути інший стиль регбі та зміцнити дружні міжнародні зв\'язки.' :
             language === 'EN' ?
@@ -284,13 +249,13 @@ export const getEvents = (language: string, t: any) => [
                 'Olasz partnereink meghívták az ukrán U16-os csapatot egy helyi tornára, ahol a régió vezető ifjúsági csapatai versenyeznek.'
     },
     {
-        id: 5,
+        id: 4,
         image: '/maj5.webp',
-        date: t.event5.date,
-        title: t.event5.title,
-        description: t.event5.description,
-        location: t.event5.location,
-        funding: t.event5.funding,
+        date: t.event4.date,
+        title: t.event4.title,
+        description: t.event4.description,
+        location: t.event4.location,
+        funding: t.event4.funding,
         details: language === 'UA' ?
             'Інтенсивний навчально-тренувальний збір у Франції для підготовки команди до United World Games. Програма включає тренування з техніки, тактики та фізичної підготовки.' :
             language === 'EN' ?
@@ -298,13 +263,13 @@ export const getEvents = (language: string, t: any) => [
                 'Intenzív edzőtábor Franciaországban a csapat United World Games-re való felkészítésére.'
     },
     {
-        id: 6,
+        id: 5,
         image: '/maj6.webp',
-        date: t.event6.date,
-        title: t.event6.title,
-        description: t.event6.description,
-        location: t.event6.location,
-        funding: t.event6.funding,
+        date: t.event5.date,
+        title: t.event5.title,
+        description: t.event5.description,
+        location: t.event5.location,
+        funding: t.event5.funding,
         details: language === 'UA' ?
             'Великий міжнародний турнір United World Games за участі 30 національних команд з усього світу. Унікальна можливість для наших юних гравців виступити на міжнародній арені та показати свій потенціал.' :
             language === 'EN' ?
@@ -312,13 +277,13 @@ export const getEvents = (language: string, t: any) => [
                 'Nagy nemzetközi United World Games torna, 30 ország csapataival. Kiváló lehetőség fiatal játékosaink számára.'
     },
     {
-        id: 7,
+        id: 6,
         image: '/maj10.webp',
-        date: t.event7.date,
-        title: t.event7.title,
-        description: t.event7.description,
-        location: t.event7.location,
-        funding: t.event7.funding,
+        date: t.event6.date,
+        title: t.event6.title,
+        description: t.event6.description,
+        location: t.event6.location,
+        funding: t.event6.funding,
         details: language === 'UA' ?
             'Серпневий турнір у Ноттінгемі стане для збірної з Touch можливістю зіграти з сильними європейськими командами, перевірити свій рівень та отримати новий міжнародний досвід.' :
             language === 'EN' ?
@@ -328,61 +293,7 @@ export const getEvents = (language: string, t: any) => [
 ];
 
 export const fundingBreakdowns = {
-    1: [ // Нова Зеландія - подорож тренерів
-        {
-            category: {
-                UA: 'Проїзд',
-                EN: 'Transportation',
-                HUN: 'Közlekedés'
-            },
-            amount: '3,000 €',
-            description: {
-                UA: 'Авіаквитки та місцеві трансфери',
-                EN: 'Flight tickets and local transfers',
-                HUN: 'Repülőjegyek és helyi transzferek'
-            }
-        },
-        {
-            category: {
-                UA: 'Проживання',
-                EN: 'Accommodation',
-                HUN: 'Szállás'
-            },
-            amount: '1,250 €',
-            description: {
-                UA: 'Готель на 8 днів',
-                EN: 'Hotel for 8 days',
-                HUN: 'Szálloda 8 napra'
-            }
-        },
-        {
-            category: {
-                UA: 'Харчування',
-                EN: 'Meals',
-                HUN: 'Étkezés'
-            },
-            amount: '900 €',
-            description: {
-                UA: 'Триразове харчування',
-                EN: 'Three meals a day',
-                HUN: 'Napi háromszori étkezés'
-            }
-        },
-        {
-            category: {
-                UA: 'Медичне забезпечення',
-                EN: 'Medical Support',
-                HUN: 'Orvosi támogatás'
-            },
-            amount: '500 €',
-            description: {
-                UA: 'Медичні препарати та страхування',
-                EN: 'Medical supplies and insurance',
-                HUN: 'Orvosi kellékek és biztosítás'
-            }
-        }
-    ],
-    5: [ // Франція - НТЗ
+    4: [ // Франція - НТЗ
         {
             category: {
                 UA: 'Проїзд',
@@ -488,7 +399,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    4: [ // Італія - Крама
+    3: [ // Італія - Крама
         {
             category: {
                 UA: 'Проїзд',
@@ -555,7 +466,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    3: [ // Польща - НТЗ Гдиня
+    2: [ // Польща - НТЗ Гдиня
         {
             category: {
                 UA: 'Проїзд',
@@ -661,7 +572,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    2: [ // Португалія - Lisbon 7s
+    1: [ // Португалія - Lisbon 7s
         {
             category: {
                 UA: 'Проїзд',
@@ -741,7 +652,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    6: [ // United World Games - Австрія
+    5: [ // United World Games - Австрія
         {
             category: {
                 UA: 'Проїзд',
@@ -834,7 +745,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    7: [ // Велика Британія - Touch Championship
+    6: [ // Велика Британія - Touch Championship
         {
             category: {
                 UA: 'Проїзд',
