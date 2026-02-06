@@ -101,6 +101,20 @@ export const getTeamData = (language: string, t: any) => {
                     : language === 'EN'
                         ? 'Legendary coach who led the All Blacks to victory in the 2011 Rugby World Cup. At the helm from 2004 to 2011, he set new standards in world rugby. Under his leadership, the All Blacks won the Bledisloe Cup 7 times in a row and the Tri Nations 5 times. Honored with numerous awards, including the Order of the British Empire and induction into the World Rugby Hall of Fame.'
                         : 'Legendás edző, aki az All Blackst a 2011-es rögbi-világbajnoki győzelemhez vezette. 2004-től 2011-ig állt a csapat élén, új szabványokat állítva fel a világrögbi számára. Vezetésével az All Blacks 7-szer nyerte meg egymás után a Bledisloe-kupát és 5-ször a Három Nemzet Kupáját. Számos kitüntetés birtokosa, köztük a Brit Birodalom Rendjével és a World Rugby Hírességek Csarnokának tagjaként.'
+            },
+            {
+                id: 'trenout4',
+                name: 'Вейн Тейлор "Tails"',
+                role: language === 'UA'
+                    ? 'Спеціаліст з фізичної підготовки та високої продуктивності'
+                    : language === 'EN'
+                        ? 'Strength & Conditioning and High-Performance Specialist'
+                        : 'Erőnléti és nagy teljesítményű szakember',
+                description: language === 'UA'
+                    ? 'Висококваліфікований спеціаліст з фізичної підготовки і високопродуктивного тренінгу новозеландського походження з великим досвідом роботи в міжнародному регбі та Super Rugby. Працював з національною командою Японії, Sunwolves, SA Lions, Southern Kings та Румунією, спеціалізується на розвитку спортсменів, спортивних показниках та регбійному тренінгу.'
+                    : language === 'EN'
+                        ? 'Wayne Taylor is a highly experienced New Zealand-born strength and conditioning (S&C) coach and high-performance specialist with extensive experience in international and Super Rugby. Known as "Tails," he has worked with the Japan National Team, Sunwolves, SA Lions, Southern Kings, and Romania, specializing in athlete development, athletic performance, and rugby-specific training.'
+                        : 'Új-zélandszületésű erőnléti és kondicionálási (S&C) edző és nagy teljesítményű szakember kiterjedt tapasztalattal a nemzetközi és Super Rugby területén. "Tails" néven ismert, dolgozott a japán válogatottal, a Sunwolvesszal, az SA Lionsszal, a Southern Kingsszel és Romániával, specializált sportolófejlesztésre, sportteljesítményre és rögbi-specifikus edzésekre.'
             }
         ]
     };
