@@ -24,20 +24,13 @@ export const translations = {
             funding: '4,000 €'
         },
         event4: {
-            date: '1-7 Червня 2026',
-            title: 'Навчально-тренувальний збір',
-            description: 'Інтенсивна підготовка перед United World Games',
-            location: 'Франція',
-            funding: '12,000 €'
-        },
-        event5: {
             date: '16-21 Червня 2026',
             title: 'United World Games',
             description: 'з 30 національними командами з різних куточків світу',
             location: 'м. Клагенфурт, Австрія',
             funding: '14,100 €'
         },
-        event6: {
+        event5: {
             date: '13-17 Серпня 2026',
             title: 'Чемпіонат Європи з Touch (ІІ ранг)',
             description: 'Європейський турнір з сильними командами',
@@ -92,20 +85,13 @@ export const translations = {
             funding: '4,000 €'
         },
         event4: {
-            date: 'June 1-7, 2026',
-            title: 'Training Camp',
-            description: 'Intensive preparation before United World Games',
-            location: 'France',
-            funding: '12,000 €'
-        },
-        event5: {
             date: 'June 16-21, 2026',
             title: 'United World Games',
             description: 'with 30 national teams from around the world',
             location: 'Klagenfurt, Austria',
             funding: '14,100 €'
         },
-        event6: {
+        event5: {
             date: 'August 13-17, 2026',
             title: 'European Touch Championship (Tier II)',
             description: 'European tournament with strong teams',
@@ -160,20 +146,13 @@ export const translations = {
             funding: '4,000 €'
         },
         event4: {
-            date: '2026. június 1-7.',
-            title: 'Edzőtábor',
-            description: 'Intenzív felkészülés a United World Games előtt',
-            location: 'Franciaország',
-            funding: '12,000 €'
-        },
-        event5: {
             date: '2026. június 16-21.',
             title: 'United World Games',
             description: '30 nemzeti csapattal a világ különböző részeiről',
             location: 'Klagenfurt, Ausztria',
             funding: '14,100 €'
         },
-        event6: {
+        event5: {
             date: '2026. augusztus 13-17.',
             title: 'Európai Touch Bajnokság (II. szint)',
             description: 'Európai torna erős csapatokkal',
@@ -250,26 +229,12 @@ export const getEvents = (language: string, t: any) => [
     },
     {
         id: 4,
-        image: '/maj5.webp',
+        image: '/maj6.webp',
         date: t.event4.date,
         title: t.event4.title,
         description: t.event4.description,
         location: t.event4.location,
         funding: t.event4.funding,
-        details: language === 'UA' ?
-            'Інтенсивний навчально-тренувальний збір у Франції для підготовки команди до United World Games. Програма включає тренування з техніки, тактики та фізичної підготовки.' :
-            language === 'EN' ?
-                'Intensive training camp in France to prepare the team for United World Games. The program includes technical, tactical, and physical training sessions.' :
-                'Intenzív edzőtábor Franciaországban a csapat United World Games-re való felkészítésére.'
-    },
-    {
-        id: 5,
-        image: '/maj6.webp',
-        date: t.event5.date,
-        title: t.event5.title,
-        description: t.event5.description,
-        location: t.event5.location,
-        funding: t.event5.funding,
         details: language === 'UA' ?
             'Великий міжнародний турнір United World Games за участі 30 національних команд з усього світу. Унікальна можливість для наших юних гравців виступити на міжнародній арені та показати свій потенціал.' :
             language === 'EN' ?
@@ -277,13 +242,13 @@ export const getEvents = (language: string, t: any) => [
                 'Nagy nemzetközi United World Games torna, 30 ország csapataival. Kiváló lehetőség fiatal játékosaink számára.'
     },
     {
-        id: 6,
+        id: 5,
         image: '/maj10.webp',
-        date: t.event6.date,
-        title: t.event6.title,
-        description: t.event6.description,
-        location: t.event6.location,
-        funding: t.event6.funding,
+        date: t.event5.date,
+        title: t.event5.title,
+        description: t.event5.description,
+        location: t.event5.location,
+        funding: t.event5.funding,
         details: language === 'UA' ?
             'Серпневий турнір у Ноттінгемі стане для збірної з Touch можливістю зіграти з сильними європейськими командами, перевірити свій рівень та отримати новий міжнародний досвід.' :
             language === 'EN' ?
@@ -293,112 +258,6 @@ export const getEvents = (language: string, t: any) => [
 ];
 
 export const fundingBreakdowns = {
-    4: [ // Франція - НТЗ
-        {
-            category: {
-                UA: 'Проїзд',
-                EN: 'Transportation',
-                HUN: 'Közlekedés'
-            },
-            amount: '2,400 €',
-            description: {
-                UA: 'Автобус, міжнародні та місцеві трансфери (економний варіант)',
-                EN: 'Bus, international and local transfers (budget option)',
-                HUN: 'Busz, nemzetközi és helyi transzferek (gazdaságos változat)'
-            }
-        },
-        {
-            category: {
-                UA: 'Проживання',
-                EN: 'Accommodation',
-                HUN: 'Szállás'
-            },
-            amount: '3,600 €',
-            description: {
-                UA: 'Гуртожиток / апартаменти для гравців та тренерів на 5 днів',
-                EN: 'Dormitory / apartments for players and coaches for 5 days',
-                HUN: 'Kollégium / apartmanok játékosok és edzők számára 5 napra'
-            }
-        },
-        {
-            category: {
-                UA: 'Харчування',
-                EN: 'Meals',
-                HUN: 'Étkezés'
-            },
-            amount: '3,000 €',
-            description: {
-                UA: 'Два основних прийоми їжі на день, частково самостійне приготування',
-                EN: 'Two main meals per day, partially self-catering',
-                HUN: 'Két fő étkezés naponta, részben önellátás'
-            }
-        },
-        {
-            category: {
-                UA: 'Оренда спортивної інфраструктури',
-                EN: 'Sports Infrastructure Rental',
-                HUN: 'Sport infrastruktúra bérlés'
-            },
-            amount: '1,000 €',
-            description: {
-                UA: 'Регбійне поле, тренажерний зал (пакетна знижка / дешевші майданчики)',
-                EN: 'Rugby field, gym (package discount / cheaper facilities)',
-                HUN: 'Rögbi pálya, edzőterem (csomagkedvezmény / olcsóbb létesítmények)'
-            }
-        },
-        {
-            category: {
-                UA: 'Спортивне екіпірування та інвентар',
-                EN: 'Sports Equipment and Gear',
-                HUN: 'Sport felszerelés és eszközök'
-            },
-            amount: '800 €',
-            description: {
-                UA: 'Форма, костюми, рюкзаки',
-                EN: 'Uniforms, suits, backpacks',
-                HUN: 'Egyenruha, öltönyök, hátizsákok'
-            }
-        },
-        {
-            category: {
-                UA: 'Медичне забезпечення та страхування',
-                EN: 'Medical Support and Insurance',
-                HUN: 'Orvosi támogatás és biztosítás'
-            },
-            amount: '600 €',
-            description: {
-                UA: 'Аптечка, страхування, фізіотерапія',
-                EN: 'First aid kit, insurance, physiotherapy',
-                HUN: 'Elsősegély készlet, biztosítás, fizioterápia'
-            }
-        },
-        {
-            category: {
-                UA: 'Суддівство та організаційні витрати',
-                EN: 'Refereeing and Organizational Costs',
-                HUN: 'Játékvezetés és szervezési költségek'
-            },
-            amount: '400 €',
-            description: {
-                UA: 'Судді спарингів, адміністрування',
-                EN: 'Sparring referees, administration',
-                HUN: 'Edzőmérkőzés játékvezetők, adminisztráció'
-            }
-        },
-        {
-            category: {
-                UA: 'Непередбачені витрати / резерв',
-                EN: 'Contingency / Reserve',
-                HUN: 'Váratlan költségek / tartalék'
-            },
-            amount: '200 €',
-            description: {
-                UA: 'Мінімальний резерв',
-                EN: 'Minimum reserve',
-                HUN: 'Minimális tartalék'
-            }
-        }
-    ],
     3: [ // Італія - Крама
         {
             category: {
@@ -652,7 +511,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    5: [ // United World Games - Австрія
+    4: [ // United World Games - Австрія
         {
             category: {
                 UA: 'Проїзд',
@@ -745,7 +604,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    6: [ // Велика Британія - Touch Championship
+    5: [ // Велика Британія - Touch Championship
         {
             category: {
                 UA: 'Проїзд',

@@ -75,16 +75,6 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 position: 'Президент федерації регбі Харківської області',
             },
             {
-                image: '/spon4.webp',
-                name: 'ПОТАПЕНКО ОЛЕКСАНДР',
-                position: 'Президент Київської міської федерації регбі',
-            },
-            {
-                image: '/spon5.webp',
-                name: 'ЕТНАРОВИЧ ОЛЕГ ',
-                position: 'Український підприємець, меценат, президент федерації регбі Одещини',
-            },
-            {
                 image: '/spon6.webp',
                 name: 'ЮРЕНКО ОЛЕКСІЙ',
                 position: 'Засновник БФ "Міла", підприємець',
@@ -128,16 +118,6 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 position: 'President of the Kharkiv Regional Rugby Federation',
             },
             {
-                image: '/spon4.webp',
-                name: 'OLEKSANDR POTAPENKO',
-                position: 'President of the Kyiv City Rugby Federation',
-            },
-            {
-                image: '/spon5.webp',
-                name: 'OLEH ETNAROVYCH',
-                position: 'Ukrainian entrepreneur, philanthropist, President of the Odesa Regional Rugby Federation',
-            },
-            {
                 image: '/spon6.webp',
                 name: 'OLEKSIY YURENKO',
                 position: 'Founder of "Mila" Charity Fund, entrepreneur',
@@ -148,12 +128,12 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 position: 'Entrepreneur, sports patron',
             },
             {
-                image: '/spon9.webp',
+                image: '/spon8.webp',
                 name: 'ANTON KOPILOV',
                 position: 'Entrepreneur, investor',
             },
             {
-                image: '/spon8.webp',
+                image: '/spon9.webp',
                 name: 'PETRO ADAMYK',
                 position: 'Businessman, philanthropist',
             },
@@ -181,16 +161,6 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 position: 'A Harkovi Területi Rögbi Szövetség elnöke',
             },
             {
-                image: '/spon4.webp',
-                name: 'OLEKSANDR POTAPENKO',
-                position: 'A Kijevi Városi Rögbi Szövetség elnöke',
-            },
-            {
-                image: '/spon5.webp',
-                name: 'OLEH ETNAROVICS',
-                position: 'Ukrán vállalkozó, mecénás, az Odeszai Területi Rögbi Szövetség elnöke',
-            },
-            {
                 image: '/spon6.webp',
                 name: 'OLEKSIY YURENKO',
                 position: 'A "Mila" Alapítvány alapítója, vállalkozó',
@@ -201,12 +171,12 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 position: 'Vállalkozó, sporttámogató',
             },
             {
-                image: '/spon9.webp',
+                image: '/spon8.webp',
                 name: 'ANTON KOPILOV',
                 position: 'Vállalkozó, befektető',
             },
             {
-                image: '/spon8.webp',
+                image: '/spon9.webp',
                 name: 'PETRO ADAMYK',
                 position: 'Üzletember, mecénás',
             },

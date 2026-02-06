@@ -84,8 +84,8 @@ const NewsPage = () => {
                     id: 10,
                     date: '30 Січня - 9 Лютого 2026',
                     title: 'Успішна подорож тренерів до Нової Зеландії',
-                    description: 'Два тренери збірної України U16 з регбі-7 успішно проводять навчальну подорож до Окленда, Нова Зеландія.',
-                    expense: '5650',
+                    description: 'Тренери збірної України U16 проводять навчальний збір на базі MZCIS в Новій Зеландії для підвищення тренерської кваліфікації. Дякуємо MZCIIZ за підтримку і можливість професійного розвитку.',
+                    expense: '8100',
                     image: '/newzealand.webp'
                 }
 
@@ -165,8 +165,8 @@ const NewsPage = () => {
         id: 10,
         date: 'January 30 - February 9, 2026',
         title: 'Successful Coaches\' Trip to New Zealand',
-        description: 'Two coaches from the Ukrainian U16 rugby-7 national team are successfully conducting their educational trip to Auckland, New Zealand.',
-        expense: '5650',
+        description: 'Ukrainian U16 national team coaches are conducting a training camp at MZCIS base in New Zealand for coaching qualification enhancement. We thank MZCIIZ for their support and opportunity for professional development.',
+        expense: '8100',
         image: '/newzealand.webp'
     }
 ]
@@ -245,8 +245,8 @@ const NewsPage = () => {
         id: 10,
         date: '2026. január 30. - február 9.',
         title: 'Sikeres edzői utazás Új-Zélandra',
-        description: 'Az ukrán U16-os rögbi-7 válogatott két edzője sikeresen folytatja képzési útját Aucklandben, Új-Zélandon.',
-        expense: '5650',
+        description: 'Az ukrán U16-os válogatott edzői oktatási tábort tartanak az MZCIS bázisán Új-Zélandon az edzői képességek fejlesztésére. Köszönjük az MZCIIZ-nek a támogatást és a szakmai fejlődés lehetőségét.',
+        expense: '8100',
         image: '/newzealand.webp'
     }
 ]
