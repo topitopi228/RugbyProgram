@@ -67,12 +67,12 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon2.webp',
                 name: 'БАЖЕНКОВ ЄВГЕН',
-                position: 'Президент федерації регбі України',
+                position: 'Приватний підприємець',
             },
             {
                 image: '/spon3.webp',
                 name: 'БИХОВ РОМАН',
-                position: 'Президент федерації регбі Харківської області',
+                position: 'Приватний підприємець',
             },
             {
                 image: '/spon6.webp',
@@ -92,12 +92,17 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon9.webp',
                 name: 'АДАМИК ПЕТРО',
-                position: 'Бізнесмен, меценат,резидент федерації регбі Львівщини',
+                position: 'Приватний підприємець, бізнесмен, меценат',
             },
             {
                 image: '/spon10.webp',
                 name: 'Brent Impey',
                 position: 'Бізнесмен, меценат',
+            },
+            {
+                image: '/trenout4.webp',
+                name: 'Wayne Taylor',
+                position: 'Директор IRANZ, спеціаліст з фізичної підготовки та високої продуктивності',
             },
         ];
     } else if (language === 'EN') {
@@ -110,12 +115,12 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon2.webp',
                 name: 'YEVHEN BAZHENKOV',
-                position: 'President of the Ukraine Rugby Union',
+                position: 'Private entrepreneur',
             },
             {
                 image: '/spon3.webp',
                 name: 'ROMAN BIKHOV',
-                position: 'President of the Kharkiv Regional Rugby Federation',
+                position: 'Private entrepreneur',
             },
             {
                 image: '/spon6.webp',
@@ -135,12 +140,17 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon9.webp',
                 name: 'PETRO ADAMYK',
-                position: 'Businessman, philanthropist',
+                position: 'Private entrepreneur, businessman, philanthropist',
             },
             {
                 image: '/spon10.webp',
                 name: 'Brent Impey',
                 position: 'Businessman, philanthropist',
+            },
+            {
+                image: '/trenout4.webp',
+                name: 'Wayne Taylor',
+                position: 'Director of IRANZ, Strength & Conditioning and High-Performance Specialist',
             },
         ];
     } else {
@@ -153,12 +163,12 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon2.webp',
                 name: 'YEVHEN BAZHENKOV',
-                position: 'Az Ukrán Rögbi Szövetség elnöke',
+                position: 'Magánvállalkozó',
             },
             {
                 image: '/spon3.webp',
                 name: 'ROMAN BIKHOV',
-                position: 'A Harkovi Területi Rögbi Szövetség elnöke',
+                position: 'Magánvállalkozó',
             },
             {
                 image: '/spon6.webp',
@@ -178,12 +188,17 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon9.webp',
                 name: 'PETRO ADAMYK',
-                position: 'Üzletember, mecénás',
+                position: 'Magánvállalkozó, üzletember, mecénás',
             },
             {
                 image: '/spon10.webp',
                 name: 'Brent Impey',
                 position: 'Üzletember, mecénás',
+            },
+            {
+                image: '/trenout4.webp',
+                name: 'Wayne Taylor',
+                position: 'IRANZ igazgatója, erőnléti és nagy teljesítményű szakember',
             },
         ];
     }

@@ -104,7 +104,7 @@ export const getTeamData = (language: string, t: any) => {
             },
             {
                 id: 'trenout4',
-                name: 'Вейн Тейлор "Tails"',
+                name: 'Вейн Тейлор',
                 role: language === 'UA'
                     ? 'Спеціаліст з фізичної підготовки та високої продуктивності'
                     : language === 'EN'
@@ -113,8 +113,8 @@ export const getTeamData = (language: string, t: any) => {
                 description: language === 'UA'
                     ? 'Висококваліфікований спеціаліст з фізичної підготовки і високопродуктивного тренінгу новозеландського походження з великим досвідом роботи в міжнародному регбі та Super Rugby. Працював з національною командою Японії, Sunwolves, SA Lions, Southern Kings та Румунією, спеціалізується на розвитку спортсменів, спортивних показниках та регбійному тренінгу.'
                     : language === 'EN'
-                        ? 'Wayne Taylor is a highly experienced New Zealand-born strength and conditioning (S&C) coach and high-performance specialist with extensive experience in international and Super Rugby. Known as "Tails," he has worked with the Japan National Team, Sunwolves, SA Lions, Southern Kings, and Romania, specializing in athlete development, athletic performance, and rugby-specific training.'
-                        : 'Új-zélandszületésű erőnléti és kondicionálási (S&C) edző és nagy teljesítményű szakember kiterjedt tapasztalattal a nemzetközi és Super Rugby területén. "Tails" néven ismert, dolgozott a japán válogatottal, a Sunwolvesszal, az SA Lionsszal, a Southern Kingsszel és Romániával, specializált sportolófejlesztésre, sportteljesítményre és rögbi-specifikus edzésekre.'
+                        ? 'Wayne Taylor is a highly experienced New Zealand-born strength and conditioning (S&C) coach and high-performance specialist with extensive experience in international and Super Rugby. He has worked with the Japan National Team, Sunwolves, SA Lions, Southern Kings, and Romania, specializing in athlete development, athletic performance, and rugby-specific training.'
+                        : 'Új-zélandszületésű erőnléti és kondicionálási (S&C) edző és nagy teljesítményű szakember kiterjedt tapasztalattal a nemzetközi és Super Rugby területén. Dolgozott a japán válogatottal, a Sunwolvesszal, az SA Lionsszal, a Southern Kingsszel és Romániával, specializált sportolófejlesztésre, sportteljesítményre és rögbi-specifikus edzésekre.'
             }
         ]
     };

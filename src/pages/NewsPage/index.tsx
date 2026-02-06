@@ -84,7 +84,7 @@ const NewsPage = () => {
                     id: 10,
                     date: '30 Січня - 9 Лютого 2026',
                     title: 'Успішна подорож тренерів до Нової Зеландії',
-                    description: 'Тренери збірної України U16 проводять навчальний збір на базі MZCIS в Новій Зеландії для підвищення тренерської кваліфікації. Дякуємо MZCIIZ за підтримку і можливість професійного розвитку.',
+                    description: 'Тренери збірної України U16 проводять навчальний збір на базі NZCIS та IRANZ в Новій Зеландії для підвищення тренерської кваліфікації. Дякуємо NZCIS та IRANZ за підтримку і можливість професійного розвитку.',
                     expense: '8100',
                     image: '/newzealand.webp'
                 }
@@ -165,7 +165,7 @@ const NewsPage = () => {
         id: 10,
         date: 'January 30 - February 9, 2026',
         title: 'Successful Coaches\' Trip to New Zealand',
-        description: 'Ukrainian U16 national team coaches are conducting a training camp at MZCIS base in New Zealand for coaching qualification enhancement. We thank MZCIIZ for their support and opportunity for professional development.',
+        description: 'Ukrainian U16 national team coaches are conducting a training camp at NZCIS and IRANZ base in New Zealand for coaching qualification enhancement. We thank NZCIS and IRANZ for their support and opportunity for professional development.',
         expense: '8100',
         image: '/newzealand.webp'
     }
@@ -245,7 +245,7 @@ const NewsPage = () => {
         id: 10,
         date: '2026. január 30. - február 9.',
         title: 'Sikeres edzői utazás Új-Zélandra',
-        description: 'Az ukrán U16-os válogatott edzői oktatási tábort tartanak az MZCIS bázisán Új-Zélandon az edzői képességek fejlesztésére. Köszönjük az MZCIIZ-nek a támogatást és a szakmai fejlődés lehetőségét.',
+        description: 'Az ukrán U16-os válogatott edzői oktatási tábort tartanak az NZCIS és IRANZ bázisán Új-Zélandon az edzői képességek fejlesztésére. Köszönjük az NZCIS és IRANZ-nak a támogatást és a szakmai fejlődés lehetőségét.',
         expense: '8100',
         image: '/newzealand.webp'
     }
