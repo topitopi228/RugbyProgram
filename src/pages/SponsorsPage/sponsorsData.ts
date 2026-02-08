@@ -62,7 +62,7 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon1.webp',
                 name: 'ШАНДОР ФЕДІР',
-                position: 'Посол України в Угорщині, президент федерації регбі Закарпатської області',
+                position: 'Посол України в Угорщині',
             },
             {
                 image: '/spon2.webp',
@@ -90,11 +90,6 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 position: 'Підприємець, інвестор',
             },
             {
-                image: '/spon9.webp',
-                name: 'АДАМИК ПЕТРО',
-                position: 'Приватний підприємець, бізнесмен, меценат',
-            },
-            {
                 image: '/spon10.webp',
                 name: 'Brent Impey',
                 position: 'Бізнесмен, меценат',
@@ -110,7 +105,7 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon1.webp',
                 name: 'FEDIR SHANDOR',
-                position: 'Ambassador of Ukraine to Hungary, President of the Zakarpattia Regional Rugby Federation',
+                position: 'Ambassador of Ukraine to Hungary',
             },
             {
                 image: '/spon2.webp',
@@ -138,11 +133,6 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 position: 'Entrepreneur, investor',
             },
             {
-                image: '/spon9.webp',
-                name: 'PETRO ADAMYK',
-                position: 'Private entrepreneur, businessman, philanthropist',
-            },
-            {
                 image: '/spon10.webp',
                 name: 'Brent Impey',
                 position: 'Businessman, philanthropist',
@@ -158,7 +148,7 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon1.webp',
                 name: 'FEDIR SHANDOR',
-                position: 'Ukrajna magyarországi nagykövete, a Kárpátaljai Területi Rögbi Szövetség elnöke',
+                position: 'Ukrajna magyarországi nagykövete',
             },
             {
                 image: '/spon2.webp',
@@ -184,11 +174,6 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 image: '/spon8.webp',
                 name: 'ANTON KOPILOV',
                 position: 'Vállalkozó, befektető',
-            },
-            {
-                image: '/spon9.webp',
-                name: 'PETRO ADAMYK',
-                position: 'Magánvállalkozó, üzletember, mecénás',
             },
             {
                 image: '/spon10.webp',
