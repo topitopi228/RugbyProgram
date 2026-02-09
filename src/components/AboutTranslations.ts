@@ -3,11 +3,11 @@ export const translations = {
         pageTitle: 'Майбутні заходи',
         upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
         event1: {
-            date: '10-15 Лютого 2026',
+            date: '12-16 Лютого 2026',
             title: 'Міжнародний турнір Lisbon 7s',
             description: 'Міжнародний турнір у Португалії',
             location: 'м. Лісабон, Португалія',
-            funding: '10,100 €'
+            funding: '9,700 €'
         },
         event2: {
             date: '1-7 Травня 2026',
@@ -64,11 +64,11 @@ export const translations = {
         pageTitle: 'Upcoming Events',
         upcomingEvents: 'Upcoming Events for Ukraine U16 Rugby-7 National Team',
         event1: {
-            date: 'February 10-15, 2026',
+            date: 'February 12-16, 2026',
             title: 'Lisbon 7s International Tournament',
             description: 'International tournament in Portugal',
             location: 'Lisbon, Portugal',
-            funding: '10,100 €'
+            funding: '9,700 €'
         },
         event2: {
             date: 'May 1-7, 2026',
@@ -125,11 +125,11 @@ export const translations = {
         pageTitle: 'Közelgő események',
         upcomingEvents: 'Az U16-os ukrán rögbi-7-es válogatott közelgő eseményei',
         event1: {
-            date: '2026. február 10-15.',
+            date: '2026. február 12-16.',
             title: 'Lisbon 7s Nemzetközi Torna',
             description: 'Nemzetközi torna Portugáliában',
             location: 'Lisszabon, Portugália',
-            funding: '10,100 €'
+            funding: '9,700 €'
         },
         event2: {
             date: '2026. május 1-7.',
@@ -434,80 +434,80 @@ export const fundingBreakdowns = {
     1: [ // Португалія - Lisbon 7s
         {
             category: {
-                UA: 'Проїзд',
-                EN: 'Transportation',
-                HUN: 'Közlekedés'
-            },
-            amount: '2,800 €',
-            description: {
-                UA: 'Авіаквитки та місцевий транспорт',
-                EN: 'Flight tickets and local transport',
-                HUN: 'Repülőjegyek és helyi közlekedés'
-            }
-        },
-        {
-            category: {
-                UA: 'Проживання',
-                EN: 'Accommodation',
-                HUN: 'Szállás'
-            },
-            amount: '2,500 €',
-            description: {
-                UA: 'Готель на 5 днів',
-                EN: 'Hotel for 5 days',
-                HUN: 'Szálloda 5 napra'
-            }
-        },
-        {
-            category: {
-                UA: 'Харчування',
-                EN: 'Meals',
-                HUN: 'Étkezés'
-            },
-            amount: '1,800 €',
-            description: {
-                UA: 'Триразове харчування для команди',
-                EN: 'Three meals a day for the team',
-                HUN: 'Napi háromszori étkezés a csapatnak'
-            }
-        },
-        {
-            category: {
-                UA: 'Реєстраційний внесок',
-                EN: 'Registration Fee',
-                HUN: 'Regisztrációs díj'
-            },
-            amount: '1,500 €',
-            description: {
                 UA: 'Участь у турнірі',
-                EN: 'Tournament participation',
+                EN: 'Tournament Participation',
                 HUN: 'Torna részvétel'
+            },
+            amount: '5,175 €',
+            description: {
+                UA: 'Реєстраційний внесок (включає проживання та харчування), організаційні витрати',
+                EN: 'Registration fee (includes accommodation and meals), organizational costs',
+                HUN: 'Regisztrációs díj (szállás és étkezés), szervezési költségek'
             }
         },
         {
             category: {
-                UA: 'Екіпірування збірної',
-                EN: 'Team Equipment',
-                HUN: 'Csapat felszerelés'
+                UA: 'Авіаперельоти',
+                EN: 'Flights',
+                HUN: 'Repülőjáratok'
             },
-            amount: '1,000 €',
+            amount: '2,265 €',
             description: {
-                UA: 'Форма, костюми, рюкзаки',
-                EN: 'Uniforms, suits, backpacks',
-                HUN: 'Egyenruha, öltönyök, hátizsákok'
+                UA: 'Авіаквитки: Варшава – Лісабон – Будапешт, багаж',
+                EN: 'Flight tickets: Warsaw – Lisbon – Budapest, baggage',
+                HUN: 'Repülőjegyek: Varsó – Lisszabon – Budapest, poggyász'
             }
         },
         {
             category: {
-                UA: 'Медичне забезпечення',
-                EN: 'Medical Support',
-                HUN: 'Orvosi támogatás'
+                UA: 'Транспорт і логістика',
+                EN: 'Transport & Logistics',
+                HUN: 'Szállítás és logisztika'
             },
-            amount: '500 €',
+            amount: '700 €',
             description: {
-                UA: 'Медичні препарати та страхування',
-                EN: 'Medical supplies and insurance',
-                HUN: 'Orvosi kellékek és biztosítás'
+                UA: 'Проїзд до аеропорту та у зворотному напрямку, місцеві трансфери',
+                EN: 'Airport transfers and return, local transfers',
+                HUN: 'Repülőtéri transzferek és visszaút, helyi transzferek'
+            }
+        },
+        {
+            category: {
+                UA: 'Спортивне екіпірування та інвентар',
+                EN: 'Sports Equipment and Gear',
+                HUN: 'Sport felszerelés és eszközök'
+            },
+            amount: '580 €',
+            description: {
+                UA: 'Ігрова форма, спортивне спорядження, аптечка',
+                EN: 'Game uniforms, sports equipment, first aid kit',
+                HUN: 'Játék egyenruha, sport felszerelés, elsősegély'
+            }
+        },
+        {
+            category: {
+                UA: 'Покриття першого дня участі',
+                EN: 'First Day Participation Coverage',
+                HUN: 'Első napi részvételi fedezet'
+            },
+            amount: '780 €',
+            description: {
+                UA: 'Організаційні витрати першого дня турніру',
+                EN: 'Organizational costs for the first day of the tournament',
+                HUN: 'A torna első napjának szervezési költségei'
+            }
+        },
+        {
+            category: {
+                UA: 'Непередбачені витрати / резерв',
+                EN: 'Contingency / Reserve',
+                HUN: 'Váratlan költségek / tartalék'
+            },
+            amount: '200 €',
+            description: {
+                UA: 'Можливі додаткові витрати та коливання цін',
+                EN: 'Possible additional expenses and price fluctuations',
+                HUN: 'Esetleges további kiadások és áringadozások'
             }
         }
     ],
