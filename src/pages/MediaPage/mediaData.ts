@@ -43,6 +43,42 @@ export const getMediaItems = (): MediaItem[] => {
             },
             category: 'matches'
         },
+        {
+            id: 2,
+            type: 'video',
+            url: '/media25.webm',
+            poster: '',
+            title: { 
+                UA: 'Тренувальний момент', 
+                EN: 'Training moment', 
+                HUN: 'Edzési pillanat' 
+            },
+            category: 'matches'
+        },
+        {
+            id: 3,
+            type: 'video',
+            url: '/media26.webm',
+            poster: '',
+            title: { 
+                UA: 'Командна робота', 
+                EN: 'Teamwork', 
+                HUN: 'Csapatmunka' 
+            },
+            category: 'matches'
+        },
+        {
+            id: 4,
+            type: 'video',
+            url: '/media27.webm',
+            poster: '',
+            title: { 
+                UA: 'Ігрова практика', 
+                EN: 'Game practice', 
+                HUN: 'Játék gyakorlat' 
+            },
+            category: 'matches'
+        },
         // Photos
         {
             id: 15,
@@ -241,6 +277,42 @@ export const getMediaItems = (): MediaItem[] => {
                 UA: 'Тренування на полі',
                 EN: 'Field training',
                 HUN: 'Pályán edzés'
+            },
+            category: 'photos'
+        },
+        {
+            id: 32,
+            type: 'image',
+            url: '/media22.webp',
+            poster: '/media22.webp',
+            title: {
+                UA: 'Командна підготовка',
+                EN: 'Team preparation',
+                HUN: 'Csapat felkészítés'
+            },
+            category: 'photos'
+        },
+        {
+            id: 33,
+            type: 'image',
+            url: '/media23.webp',
+            poster: '/media23.webp',
+            title: {
+                UA: 'Тренувальний процес',
+                EN: 'Training process',
+                HUN: 'Edzési folyamat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 34,
+            type: 'image',
+            url: '/media24.webp',
+            poster: '/media24.webp',
+            title: {
+                UA: 'Спортивна підготовка',
+                EN: 'Sports preparation',
+                HUN: 'Sport felkészítés'
             },
             category: 'photos'
         },

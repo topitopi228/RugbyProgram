@@ -186,14 +186,6 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ currentMedia, onNext, onPrevi
                         exit={{ opacity: 0 }}
                         className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"
                     >
-                        {/* Top Bar */}
-                        <div className="absolute top-0 left-0 right-0 p-4">
-                            <h3 className="text-white text-lg font-semibold">{currentMedia.title}</h3>
-                            {currentMedia.description && (
-                                <p className="text-gray-300 text-sm mt-1">{currentMedia.description}</p>
-                            )}
-                        </div>
-
                         {/* Side Navigation Controls */}
                         <button
                             onClick={onPrevious}

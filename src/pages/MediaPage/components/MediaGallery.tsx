@@ -78,12 +78,22 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                 >
                     {/* Thumbnail */}
                     <div className="absolute inset-0">
-                        <img
-                            src={mediaItem.thumbnail}
-                            alt={mediaItem.title}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            loading="lazy"
-                        />
+                        {mediaItem.type === 'video' && mediaItem.thumbnail === mediaItem.src ? (
+                            <video
+                                src={mediaItem.src}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                muted
+                                playsInline
+                                preload="metadata"
+                            />
+                        ) : (
+                            <img
+                                src={mediaItem.thumbnail}
+                                alt={mediaItem.title}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                loading="lazy"
+                            />
+                        )}
                     </div>
 
                     {/* Gradient Overlay */}
@@ -126,18 +136,6 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
                         />
                     )}
-
-                    {/* Hover Content */}
-                    <div className="absolute inset-0 flex flex-col justify-end p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <h4 className="text-white text-sm font-semibold line-clamp-1">
-                            {mediaItem.title}
-                        </h4>
-                        {mediaItem.date && (
-                            <p className="text-gray-300 text-xs mt-0.5">
-                                {mediaItem.date}
-                            </p>
-                        )}
-                    </div>
 
                     {/* Play Button Overlay for Videos */}
                     {mediaItem.type === 'video' && (

@@ -57,6 +57,76 @@ export const clubMembers: ClubMember[] = [
     joinDate: '2025-04-07',
     bio: 'Засновник благодійного фонду "Міла". Підтримує соціальні ініціативи та розвиток молодіжного спорту в Україні.',
     position: 'Засновник БФ "Міла"'
+  },
+  {
+    id: 5,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/logo_ukr.jpg',
+    membershipLevel: 'gold',
+    joinDate: '2025-08-15',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Анонімний член клубу'
+  },
+  {
+    id: 6,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/logo_ukr.jpg',
+    membershipLevel: 'gold',
+    joinDate: '2025-09-20',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Анонімний член клубу'
+  },
+  {
+    id: 7,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/logo_ukr.jpg',
+    membershipLevel: 'gold',
+    joinDate: '2025-10-05',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Анонімний член клубу'
+  },
+  {
+    id: 8,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/logo_ukr.jpg',
+    membershipLevel: 'gold',
+    joinDate: '2025-11-12',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Анонімний член клубу'
+  },
+  {
+    id: 9,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/logo_ukr.jpg',
+    membershipLevel: 'gold',
+    joinDate: '2025-12-01',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Анонімний член клубу'
+  },
+  {
+    id: 10,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/logo_ukr.jpg',
+    membershipLevel: 'gold',
+    joinDate: '2026-01-10',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Анонімний член клубу'
+  },
+  {
+    id: 11,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/logo_ukr.jpg',
+    membershipLevel: 'gold',
+    joinDate: '2026-02-15',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Анонімний член клубу'
   }
 ];
 
