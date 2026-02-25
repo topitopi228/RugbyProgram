@@ -11,9 +11,9 @@ export const translations = {
         },
         event2: {
             date: '27-31 Травня 2026',
-            title: 'Міжнародний турнір у Крамі',
+            title: 'Міжнародний турнір у Кремоні',
             description: 'Локальний турнір з провідними молодіжними командами регіону',
-            location: 'м. Крама, Італія',
+            location: 'м. Кремона, Італія',
             funding: '4,000 €'
         },
         event3: {
@@ -65,9 +65,9 @@ export const translations = {
         },
         event2: {
             date: 'May 27-31, 2026',
-            title: 'International Tournament in Crama',
+            title: 'International Tournament in Cremona',
             description: 'Local tournament with leading regional youth teams',
-            location: 'Crama, Italy',
+            location: 'Cremona, Italy',
             funding: '4,000 €'
         },
         event3: {
@@ -119,9 +119,9 @@ export const translations = {
         },
         event2: {
             date: '2026. május 27-31.',
-            title: 'Nemzetközi Torna Cramában',
+            title: 'Nemzetközi Torna Cremonában',
             description: 'Helyi torna vezérő ifjúsági csapatokkal',
-            location: 'Crama, Olaszország',
+            location: 'Cremona, Olaszország',
             funding: '4,000 €'
         },
         event3: {
@@ -223,7 +223,7 @@ export const getEvents = (language: string, t: any) => [
 ];
 
 export const fundingBreakdowns = {
-    2: [ // Італія - Крама
+    2: [ // Італія - Кремона
         {
             category: {
                 UA: 'Проїзд',
