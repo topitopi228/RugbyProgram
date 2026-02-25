@@ -87,6 +87,14 @@ const NewsPage = () => {
                     description: 'Тренери збірної України U16 проводять навчальний збір на базі NZCIS та IRANZ в Новій Зеландії для підвищення тренерської кваліфікації. Дякуємо NZCIS та IRANZ за підтримку і можливість професійного розвитку.',
                     expense: '8100',
                     image: '/newzealand.webp'
+                },
+                {
+                    id: 11,
+                    date: '12-16 Лютого 2026',
+                    title: 'Участь у міжнародному турнірі Lisbon 7s',
+                    description: 'Збірна України U16 з регбі-7 успішно взяла участь у престижному міжнародному турнірі Lisbon 7s у Португалії. Наші гравці отримали цінний досвід змагань з найсильнішими командами Європи, показали високий рівень підготовки та командної взаємодії.',
+                    expense: '9700',
+                    image: '/news11.webp'
                 }
 
             ]
@@ -168,6 +176,14 @@ const NewsPage = () => {
         description: 'Ukrainian U16 national team coaches are conducting a training camp at NZCIS and IRANZ base in New Zealand for coaching qualification enhancement. We thank NZCIS and IRANZ for their support and opportunity for professional development.',
         expense: '8100',
         image: '/newzealand.webp'
+    },
+    {
+        id: 11,
+        date: 'February 12-16, 2026',
+        title: 'Participation in Lisbon 7s International Tournament',
+        description: 'Ukraine U16 rugby-7 national team successfully participated in the prestigious Lisbon 7s international tournament in Portugal. Our players gained valuable experience competing with the strongest teams in Europe, demonstrating high level of preparation and team coordination.',
+        expense: '9700',
+        image: '/news11.webp'
     }
 ]
         },
@@ -248,6 +264,14 @@ const NewsPage = () => {
         description: 'Az ukrán U16-os válogatott edzői oktatási tábort tartanak az NZCIS és IRANZ bázisán Új-Zélandon az edzői képességek fejlesztésére. Köszönjük az NZCIS és IRANZ-nak a támogatást és a szakmai fejlődés lehetőségét.',
         expense: '8100',
         image: '/newzealand.webp'
+    },
+    {
+        id: 11,
+        date: '2026. február 12-16.',
+        title: 'Részvétel a Lisbon 7s nemzetközi tornán',
+        description: 'Az ukrán U16-os rögbi-7 válogatott sikeresen részt vett a rangos Lisbon 7s nemzetközi tornán Portugáliában. Játékosaink értékes tapasztalatot szereztek Európa legerősebb csapataival való versengésben, magas szintű felkészültséget és csapatkoordinációt mutatva.',
+        expense: '9700',
+        image: '/news11.webp'
     }
 ]
         }
