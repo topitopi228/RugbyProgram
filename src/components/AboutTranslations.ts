@@ -301,6 +301,19 @@ export const fundingBreakdowns = {
                 EN: 'Additional organizational costs and possible price fluctuations',
                 HUN: 'További szervezési költségek és esetleges árváltozások'
             }
+        },
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '5,125 € / 9,325 €',
+            description: {
+                UA: 'Без добових / З добовими',
+                EN: 'Without allowances / With allowances',
+                HUN: 'Napidíjak nélkül / Napidíjakkal'
+            }
         }
     ],
     1: [ // Польща - НТЗ Гдиня
@@ -380,6 +393,19 @@ export const fundingBreakdowns = {
                 UA: 'Додаткові організаційні потреби та можливі коливання витрат',
                 EN: 'Additional organizational needs and possible cost fluctuations',
                 HUN: 'További szervezési szükségletek és esetleges költségingadozások'
+            }
+        },
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '10,825 € / 17,545 €',
+            description: {
+                UA: 'Без добових / З добовими',
+                EN: 'Without allowances / With allowances',
+                HUN: 'Napidíjak nélkül / Napidíjakkal'
             }
         }
     ],
@@ -461,6 +487,19 @@ export const fundingBreakdowns = {
                 EN: 'Additional organizational costs and possible price fluctuations',
                 HUN: 'További szervezési költségek és esetleges árváltozások'
             }
+        },
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '17,025 € / 21,225 €',
+            description: {
+                UA: 'Без добових / З добовими',
+                EN: 'Without allowances / With allowances',
+                HUN: 'Napidíjak nélkül / Napidíjakkal'
+            }
         }
     ],
     4: [ // Грузія - Батумі
@@ -540,6 +579,19 @@ export const fundingBreakdowns = {
                 UA: 'Коливання цін, додаткові потреби',
                 EN: 'Price fluctuations, additional needs',
                 HUN: 'Árváltozások, további szükségletek'
+            }
+        },
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '11,985 € / 20,385 €',
+            description: {
+                UA: 'Без добових / З добовими',
+                EN: 'Without allowances / With allowances',
+                HUN: 'Napidíjak nélkül / Napidíjakkal'
             }
         }
     ],

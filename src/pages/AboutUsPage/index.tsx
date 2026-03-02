@@ -92,7 +92,6 @@ const AboutUsPage = () => {
                     language={language}
                     fundingBreakdowns={fundingBreakdowns}
                     onClose={closeModal}
-                    onScrollToContact={scrollToContact}
                 />
             </div>
         </div>
