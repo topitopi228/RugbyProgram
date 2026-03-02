@@ -16,6 +16,7 @@ const MediaPage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeCategory, setActiveCategory] = useState('all');
     const [isLoading, setIsLoading] = useState(true);
+    const [isMobile, setIsMobile] = useState(false);
 
     const translations = {
         UA: {
@@ -77,16 +78,27 @@ const MediaPage = () => {
         const loadMedia = async () => {
             try {
                 const items = getMediaItems();
-                const formattedItems = items.map(item => ({
-                    id: item.id.toString(),
-                    type: item.type === 'video' ? 'video' : 'photo',
-                    src: item.url,
-                    thumbnail: item.poster || item.url,
-                    title: item.title[language],
-                    category: item.category,
-                    duration: item.type === 'video' ? '2:34' : undefined,
-                    date: '2025'
-                }));
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+                setIsMobile(isMobileDevice);
+                
+                const formattedItems = items
+                    .filter(item => {
+                        // Приховати відео на мобільних пристроях
+                        if (isMobileDevice && item.type === 'video') {
+                            return false;
+                        }
+                        return true;
+                    })
+                    .map(item => ({
+                        id: item.id.toString(),
+                        type: item.type === 'video' ? 'video' : 'photo',
+                        src: item.url,
+                        thumbnail: item.poster || item.url,
+                        title: item.title[language],
+                        category: item.category,
+                        duration: item.type === 'video' ? '2:34' : undefined,
+                        date: '2025'
+                    }));
                 setMediaItems(formattedItems);
                 setFilteredItems(formattedItems);
             } catch (error) {
@@ -169,7 +181,7 @@ const MediaPage = () => {
             <div className="relative z-10 container mx-auto px-4 py-12">
                 {/* Category Filter */}
                 <div className="flex flex-wrap justify-center gap-3 mb-12">
-                    {categoryButtons.map((button) => (
+                    {categoryButtons.filter(button => !(isMobile && button.id === 'videos')).map((button) => (
                         <motion.button
                             key={button.id}
                             onClick={() => setActiveCategory(button.id)}
