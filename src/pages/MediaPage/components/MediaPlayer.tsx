@@ -149,7 +149,10 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ currentMedia, onNext, onPrevi
                     onClick={togglePlay}
                     preload="auto"
                     playsInline
+                    webkit-playsinline="true"
+                    x-webkit-airplay="allow"
                     muted={isMuted}
+                    controlsList="nodownload"
                 />
             ) : (
                 <motion.img

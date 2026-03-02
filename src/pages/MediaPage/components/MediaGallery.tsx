@@ -84,6 +84,7 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 muted
                                 playsInline
+                                webkit-playsinline="true"
                                 preload="metadata"
                             />
                         ) : (
