@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPlay, FaImage, FaClock } from 'react-icons/fa';
+import { FaPlay, FaImage } from 'react-icons/fa';
 
 interface MediaItem {
     id: string;
@@ -116,16 +116,6 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                             )}
                         </div>
                     </div>
-
-                    {/* Duration for videos */}
-                    {mediaItem.type === 'video' && mediaItem.duration && (
-                        <div className="absolute bottom-2 right-2 z-10">
-                            <div className="flex items-center gap-1 px-2 py-1 bg-black/50 backdrop-blur-sm rounded-lg">
-                                <FaClock className="w-2.5 h-2.5 text-white" />
-                                <span className="text-xs text-white font-medium">{mediaItem.duration}</span>
-                            </div>
-                        </div>
-                    )}
 
                     {/* Active Indicator */}
                     {index === currentIndex && (

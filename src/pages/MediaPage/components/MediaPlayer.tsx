@@ -87,12 +87,27 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ currentMedia, onNext, onPrevi
 
     const toggleFullscreen = () => {
         if (!isFullscreen) {
-            if (containerRef.current?.requestFullscreen) {
-                containerRef.current.requestFullscreen();
+            const elem = containerRef.current;
+            if (elem) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if ((elem as any).webkitRequestFullscreen) {
+                    (elem as any).webkitRequestFullscreen();
+                } else if ((elem as any).mozRequestFullScreen) {
+                    (elem as any).mozRequestFullScreen();
+                } else if ((elem as any).msRequestFullscreen) {
+                    (elem as any).msRequestFullscreen();
+                }
             }
         } else {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
+            } else if ((document as any).webkitExitFullscreen) {
+                (document as any).webkitExitFullscreen();
+            } else if ((document as any).mozCancelFullScreen) {
+                (document as any).mozCancelFullScreen();
+            } else if ((document as any).msExitFullscreen) {
+                (document as any).msExitFullscreen();
             }
         }
         setIsFullscreen(!isFullscreen);
@@ -122,6 +137,12 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ currentMedia, onNext, onPrevi
             className="relative w-full aspect-video bg-black rounded-2xl overflow-hidden group"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
+            onTouchStart={() => setIsHovering(true)}
+            onClick={(e) => {
+                if ((e.target as HTMLElement).tagName !== 'BUTTON' && (e.target as HTMLElement).tagName !== 'INPUT') {
+                    setIsHovering(!isHovering);
+                }
+            }}
         >
             {/* Media Content */}
             {currentMedia.type === 'video' ? (
@@ -182,7 +203,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ currentMedia, onNext, onPrevi
 
             {/* Overlay Controls */}
             <AnimatePresence>
-                {(isHovering || !isPlaying) && (
+                {(isHovering || !isPlaying || 'ontouchstart' in window) && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -191,15 +212,21 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ currentMedia, onNext, onPrevi
                     >
                         {/* Side Navigation Controls */}
                         <button
-                            onClick={onPrevious}
-                            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 backdrop-blur-sm rounded-full hover:bg-black/70 transition-all hover:scale-110 group"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                onPrevious();
+                            }}
+                            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 backdrop-blur-sm rounded-full hover:bg-black/70 active:bg-black/80 transition-all hover:scale-110 active:scale-95 group z-10"
                         >
                             <FaChevronLeft className="w-5 h-5 text-white/70 group-hover:text-white" />
                         </button>
 
                         <button
-                            onClick={onNext}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 backdrop-blur-sm rounded-full hover:bg-black/70 transition-all hover:scale-110 group"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                onNext();
+                            }}
+                            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 backdrop-blur-sm rounded-full hover:bg-black/70 active:bg-black/80 transition-all hover:scale-110 active:scale-95 group z-10"
                         >
                             <FaChevronRight className="w-5 h-5 text-white/70 group-hover:text-white" />
                         </button>
@@ -286,8 +313,11 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ currentMedia, onNext, onPrevi
                                     </div>
 
                                     <button
-                                        onClick={toggleFullscreen}
-                                        className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            toggleFullscreen();
+                                        }}
+                                        className="p-2 hover:bg-white/10 active:bg-white/20 rounded-lg transition-colors touch-manipulation"
                                     >
                                         {isFullscreen ? (
                                             <FaCompress className="w-5 h-5 text-white" />
