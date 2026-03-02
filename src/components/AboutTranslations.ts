@@ -14,21 +14,21 @@ export const translations = {
             title: 'Міжнародний турнір у Кремоні',
             description: 'Локальний турнір з провідними молодіжними командами регіону',
             location: 'м. Кремона, Італія',
-            funding: '4,000 €'
+            funding: '9,325 €'
         },
         event3: {
-            date: '16-21 Червня 2026',
-            title: 'United World Games',
-            description: 'з 30 національними командами з різних куточків світу',
-            location: 'м. Клагенфурт, Австрія',
-            funding: '14,100 €'
-        },
-        event4: {
             date: '13-17 Серпня 2026',
             title: 'Чемпіонат Європи з Touch (ІІ ранг)',
             description: 'Європейський турнір з сильними командами',
             location: 'м. Ноттінгем, Велика Британія',
-            funding: '16,200 €'
+            funding: '21,225 €'
+        },
+        event4: {
+            date: '9-18 Листопада 2026',
+            title: 'Навчально-тренувальний збір',
+            description: 'Підготовка команди до міжнародних змагань',
+            location: 'м. Батумі, Грузія',
+            funding: '20,385 €'
         },
         contactTitle: "Зв'яжіться з нами",
         contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
@@ -68,21 +68,21 @@ export const translations = {
             title: 'International Tournament in Cremona',
             description: 'Local tournament with leading regional youth teams',
             location: 'Cremona, Italy',
-            funding: '4,000 €'
+            funding: '9,325 €'
         },
         event3: {
-            date: 'June 16-21, 2026',
-            title: 'United World Games',
-            description: 'with 30 national teams from around the world',
-            location: 'Klagenfurt, Austria',
-            funding: '14,100 €'
-        },
-        event4: {
             date: 'August 13-17, 2026',
             title: 'European Touch Championship (Tier II)',
             description: 'European tournament with strong teams',
             location: 'Nottingham, Great Britain',
-            funding: '16,200 €'
+            funding: '21,225 €'
+        },
+        event4: {
+            date: 'November 9-18, 2026',
+            title: 'Training Camp',
+            description: 'Team preparation for international competitions',
+            location: 'Batumi, Georgia',
+            funding: '20,385 €'
         },
         contactTitle: "Contact Us",
         contactText: "Have questions or want to support our team? Contact us using the information below.",
@@ -122,21 +122,21 @@ export const translations = {
             title: 'Nemzetközi Torna Cremonában',
             description: 'Helyi torna vezérő ifjúsági csapatokkal',
             location: 'Cremona, Olaszország',
-            funding: '4,000 €'
+            funding: '9,325 €'
         },
         event3: {
-            date: '2026. június 16-21.',
-            title: 'United World Games',
-            description: '30 nemzeti csapattal a világ különböző részeiről',
-            location: 'Klagenfurt, Ausztria',
-            funding: '14,100 €'
-        },
-        event4: {
             date: '2026. augusztus 13-17.',
             title: 'Európai Touch Bajnokság (II. szint)',
             description: 'Európai torna erős csapatokkal',
             location: 'Nottingham, Nagy-Britannia',
-            funding: '16,200 €'
+            funding: '21,225 €'
+        },
+        event4: {
+            date: '2026. november 9-18.',
+            title: 'Edzőtábor',
+            description: 'Csapat felkészítése nemzetközi versenyekre',
+            location: 'Batumi, Grúzia',
+            funding: '20,385 €'
         },
         contactTitle: "Lépjen kapcsolatba velünk",
         contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
@@ -194,31 +194,31 @@ export const getEvents = (language: string, t: any) => [
     },
     {
         id: 3,
-        image: '/maj6.webp',
+        image: '/maj10.webp',
         date: t.event3.date,
         title: t.event3.title,
         description: t.event3.description,
         location: t.event3.location,
         funding: t.event3.funding,
         details: language === 'UA' ?
-            'Великий міжнародний турнір United World Games за участі 30 національних команд з усього світу. Унікальна можливість для наших юних гравців виступити на міжнародній арені та показати свій потенціал.' :
+            'Серпневий турнір у Ноттінгемі стане для збірної з Touch можливістю зіграти з сильними європейськими командами, перевірити свій рівень та отримати новий міжнародний досвід.' :
             language === 'EN' ?
-                'Major international United World Games tournament featuring 30 national teams from around the world. A unique opportunity for our young players to perform on the international stage and demonstrate their potential.' :
-                'Nagy nemzetközi United World Games torna, 30 ország csapataival. Kiváló lehetőség fiatal játékosaink számára.'
+                'The August tournament in Nottingham will give the Touch team an opportunity to play against strong European teams, test their level and gain new international experience.' :
+                'Az augusztusi nottinghami torna lehetőséget ad a Touch csapatnak, hogy erős európai csapatokkal játsszon.'
     },
     {
         id: 4,
-        image: '/maj10.webp',
+        image: '/maj6.webp',
         date: t.event4.date,
         title: t.event4.title,
         description: t.event4.description,
         location: t.event4.location,
         funding: t.event4.funding,
         details: language === 'UA' ?
-            'Серпневий турнір у Ноттінгемі стане для збірної з Touch можливістю зіграти з сильними європейськими командами, перевірити свій рівень та отримати новий міжнародний досвід.' :
+            'Навчально-тренувальний збір у Батумі для підготовки команди до майбутніх міжнародних змагань. Програма включає інтенсивні тренування, тактичну підготовку та командну взаємодію.' :
             language === 'EN' ?
-                'The August tournament in Nottingham will give the Touch team an opportunity to play against strong European teams, test their level and gain new international experience.' :
-                'Az augusztusi nottinghami torna lehetőséget ad a Touch csapatnak, hogy erős európai csapatokkal játsszon.'
+                'Training camp in Batumi to prepare the team for upcoming international competitions. The program includes intensive training, tactical preparation and team building.' :
+                'Edzőtábor Batumiban a csapat felkészítésére a közelgő nemzetközi versenyekre. A program intenzív edzéseket, taktikai felkészítést és csapatépítést tartalmaz.'
     }
 ];
 
@@ -226,28 +226,54 @@ export const fundingBreakdowns = {
     2: [ // Італія - Кремона
         {
             category: {
-                UA: 'Проїзд',
-                EN: 'Transportation',
-                HUN: 'Közlekedés'
+                UA: 'Транспорт і логістика',
+                EN: 'Transport & Logistics',
+                HUN: 'Szállítás és logisztika'
             },
-            amount: '1,400 €',
+            amount: '3,340 €',
             description: {
-                UA: 'Автобус, дешевий трансфер, спільна поїздка',
-                EN: 'Bus, cheap transfer, shared ride',
-                HUN: 'Busz, olcsó transzfer, közös utazás'
+                UA: 'Авіаперельоти Варшава – Мілан – Кремона – Варшава, автобусні трансфери до/з Кремони, багаж, проїзд по місту',
+                EN: 'Flights Warsaw – Milan – Cremona – Warsaw, bus transfers to/from Cremona, baggage, city transport',
+                HUN: 'Repülőjáratok Varsó – Milánó – Cremona – Varsó, busz transzferek Cremonába/Cremonából, poggyász, városi közlekedés'
             }
         },
         {
             category: {
-                UA: 'Проживання',
-                EN: 'Accommodation',
-                HUN: 'Szállás'
+                UA: 'Проживання та харчування',
+                EN: 'Accommodation & Meals',
+                HUN: 'Szállás és étkezés'
             },
-            amount: '1,200 €',
+            amount: '420 €',
             description: {
-                UA: 'Готель для гравців та тренерів',
-                EN: 'Hotel for players and coaches',
-                HUN: 'Szálloda játékosok és edzők számára'
+                UA: 'Спортивне харчування, питна вода для тренувань і проживання',
+                EN: 'Sports nutrition, drinking water for training and accommodation',
+                HUN: 'Sporttáplálkozás, ivóvíz edzésekhez és szálláshoz'
+            }
+        },
+        {
+            category: {
+                UA: 'Участь',
+                EN: 'Participation',
+                HUN: 'Részvétel'
+            },
+            amount: '140 €',
+            description: {
+                UA: 'Страхування учасників',
+                EN: 'Participant insurance',
+                HUN: 'Résztvevők biztosítása'
+            }
+        },
+        {
+            category: {
+                UA: 'Штаб і персонал',
+                EN: 'Staff & Personnel',
+                HUN: 'Stáb és személyzet'
+            },
+            amount: '4,200 €',
+            description: {
+                UA: 'Добові тренерського та адміністративного штабу',
+                EN: 'Daily allowances for coaching and administrative staff',
+                HUN: 'Edzői és adminisztratív személyzet napidíjai'
             }
         },
         {
@@ -256,24 +282,11 @@ export const fundingBreakdowns = {
                 EN: 'Sports Equipment and Gear',
                 HUN: 'Sport felszerelés és eszközök'
             },
-            amount: '600 €',
+            amount: '725 €',
             description: {
-                UA: 'Форма, рюкзаки, дрібний інвентар',
-                EN: 'Uniforms, backpacks, small equipment',
-                HUN: 'Egyenruha, hátizsákok, apró felszerelés'
-            }
-        },
-        {
-            category: {
-                UA: 'Медичне забезпечення та страхування',
-                EN: 'Medical Support and Insurance',
-                HUN: 'Orvosi támogatás és biztosítás'
-            },
-            amount: '300 €',
-            description: {
-                UA: 'Аптечка, мінімальна страховка',
-                EN: 'First aid kit, minimum insurance',
-                HUN: 'Elsősegély készlet, minimális biztosítás'
+                UA: 'Ігрова форма, медична аптечка',
+                EN: 'Game uniforms, medical kit',
+                HUN: 'Játék egyenruha, orvosi készlet'
             }
         },
         {
@@ -284,9 +297,9 @@ export const fundingBreakdowns = {
             },
             amount: '500 €',
             description: {
-                UA: 'Мінімальний резерв',
-                EN: 'Minimum reserve',
-                HUN: 'Minimális tartalék'
+                UA: 'Додаткові організаційні витрати та можливі коливання цін',
+                EN: 'Additional organizational costs and possible price fluctuations',
+                HUN: 'További szervezési költségek és esetleges árváltozások'
             }
         }
     ],
@@ -370,189 +383,150 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    3: [ // United World Games - Австрія
+    3: [ // Велика Британія - ЧЄ з Touch
         {
             category: {
-                UA: 'Проїзд',
-                EN: 'Transportation',
-                HUN: 'Közlekedés'
+                UA: 'Транспорт і логістика',
+                EN: 'Transport & Logistics',
+                HUN: 'Szállítás és logisztika'
             },
-            amount: '2,800 €',
+            amount: '5,940 €',
             description: {
-                UA: 'Автобус, міжнародні та місцеві трансфери',
-                EN: 'Bus, international and local transfers',
-                HUN: 'Busz, nemzetközi és helyi transzferek'
+                UA: 'Авіаперельоти Варшава – Лондон – Варшава, залізничні переїзди Лондон – Ноттінгем – Лондон, багаж, міський транспорт',
+                EN: 'Flights Warsaw – London – Warsaw, train journeys London – Nottingham – London, baggage, city transport',
+                HUN: 'Repülőjáratok Varsó – London – Varsó, vonatutazások London – Nottingham – London, poggyász, városi közlekedés'
             }
         },
         {
             category: {
-                UA: 'Проживання',
-                EN: 'Accommodation',
-                HUN: 'Szállás'
+                UA: 'Проживання та харчування',
+                EN: 'Accommodation & Meals',
+                HUN: 'Szállás és étkezés'
             },
-            amount: '4,700 €',
+            amount: '6,720 €',
             description: {
-                UA: 'Готель для гравців та тренерів на 6 днів',
-                EN: 'Hotel for players and coaches for 6 days',
-                HUN: 'Szálloda játékosok és edzők számára 6 napra'
+                UA: 'Готель для команди, повне харчування, спортивне харчування, питна вода',
+                EN: 'Team hotel, full meals, sports nutrition, drinking water',
+                HUN: 'Csapat szállás, teljes étkezés, sporttáplálkozás, ivóvíz'
             }
         },
         {
             category: {
-                UA: 'Харчування',
-                EN: 'Meals',
-                HUN: 'Étkezés'
+                UA: 'Участь',
+                EN: 'Participation',
+                HUN: 'Részvétel'
             },
-            amount: '4,100 €',
+            amount: '3,140 €',
             description: {
-                UA: 'Триразове спортивне харчування',
-                EN: 'Three sports meals a day',
-                HUN: 'Napi háromszori sport étkezés'
+                UA: 'Страхування учасників, відкриття віз',
+                EN: 'Participant insurance, visa opening',
+                HUN: 'Résztvevők biztosítása, vízum nyitás'
             }
         },
         {
             category: {
-                UA: 'Реєстрація',
-                EN: 'Registration',
-                HUN: 'Regisztráció'
+                UA: 'Штаб і персонал',
+                EN: 'Staff & Personnel',
+                HUN: 'Stáb és személyzet'
             },
-            amount: '600 €',
+            amount: '4,200 €',
             description: {
-                UA: 'Участь у турнірі, організаційні витрати',
-                EN: 'Tournament participation, organizational costs',
-                HUN: 'Torna részvétel, szervezési költségek'
+                UA: 'Добові тренерського та адміністративного штабу',
+                EN: 'Daily allowances for coaching and administrative staff',
+                HUN: 'Edzői és adminisztratív személyzet napidíjai'
             }
         },
         {
             category: {
-                UA: 'Медицина',
-                EN: 'Medical',
-                HUN: 'Orvosi'
+                UA: 'Спортивне екіпірування та інвентар',
+                EN: 'Sports Equipment and Gear',
+                HUN: 'Sport felszerelés és eszközök'
             },
-            amount: '600 €',
+            amount: '725 €',
             description: {
-                UA: 'Аптечка, страхування, фізіотерапія',
-                EN: 'First aid kit, insurance, physiotherapy',
-                HUN: 'Elsősegély készlet, biztosítás, fizioterápia'
+                UA: 'Ігрова форма, медична аптечка',
+                EN: 'Game uniforms, medical kit',
+                HUN: 'Játék egyenruha, orvosi készlet'
             }
         },
         {
             category: {
-                UA: 'Екіпірування',
-                EN: 'Equipment',
-                HUN: 'Felszerelés'
+                UA: 'Непередбачені витрати / резерв',
+                EN: 'Contingency / Reserve',
+                HUN: 'Váratlan költségek / tartalék'
             },
-            amount: '700 €',
+            amount: '500 €',
             description: {
-                UA: 'Форма, костюми, рюкзаки',
-                EN: 'Uniforms, suits, backpacks',
-                HUN: 'Egyenruha, öltönyök, hátizsákok'
-            }
-        },
-        {
-            category: {
-                UA: 'Резерв',
-                EN: 'Reserve',
-                HUN: 'Tartalék'
-            },
-            amount: '600 €',
-            description: {
-                UA: 'Непередбачені витрати, коливання цін',
-                EN: 'Unforeseen expenses, price fluctuations',
-                HUN: 'Váratlan kiadások, árváltozások'
+                UA: 'Додаткові організаційні витрати та можливі коливання цін',
+                EN: 'Additional organizational costs and possible price fluctuations',
+                HUN: 'További szervezési költségek és esetleges árváltozások'
             }
         }
     ],
-    4: [ // Велика Британія - Touch Championship
+    4: [ // Грузія - Батумі
         {
             category: {
-                UA: 'Проїзд',
-                EN: 'Transportation',
-                HUN: 'Közlekedés'
+                UA: 'Проїзд / Транспорт і логістика',
+                EN: 'Transport & Logistics',
+                HUN: 'Szállítás és logisztika'
             },
-            amount: '3,200 €',
+            amount: '3,690 €',
             description: {
-                UA: 'Автобус/комбінація автобус + паром/локальні трансфери',
-                EN: 'Bus/bus + ferry combination/local transfers',
-                HUN: 'Busz/busz + komp kombináció/helyi transzferek'
+                UA: 'Автобус, авіаквитки, багаж, трансфери, проїзд по місту, оренда транспорту, паливо та платні дороги',
+                EN: 'Bus, flight tickets, baggage, transfers, city transport, vehicle rental, fuel and toll roads',
+                HUN: 'Busz, repülőjegyek, poggyász, transzferek, városi közlekedés, járműbérlés, üzemanyag és fizetős utak'
             }
         },
         {
             category: {
-                UA: 'Проживання',
-                EN: 'Accommodation',
-                HUN: 'Szállás'
+                UA: 'Проживання та харчування',
+                EN: 'Accommodation & Meals',
+                HUN: 'Szállás és étkezés'
             },
-            amount: '5,100 €',
+            amount: '5,930 €',
             description: {
-                UA: 'Готель для гравців та тренерів на 4 ночі',
-                EN: 'Hotel for players and coaches for 4 nights',
-                HUN: 'Szálloda játékosok és edzők számára 4 éjszakára'
+                UA: 'Готель для гравців та тренерів на 4 ночі, триразове харчування, спортивне харчування, вода на тренування',
+                EN: 'Hotel for players and coaches for 4 nights, three meals a day, sports nutrition, training water',
+                HUN: 'Szálloda játékosok és edzők számára 4 éjszakára, napi háromszori étkezés, sporttáplálkozás, edzési víz'
             }
         },
         {
             category: {
-                UA: 'Харчування',
-                EN: 'Meals',
-                HUN: 'Étkezés'
+                UA: 'Участь / Реєстраційний внесок',
+                EN: 'Participation / Registration Fee',
+                HUN: 'Részvétel / Regisztrációs díj'
             },
-            amount: '4,000 €',
+            amount: '1,140 €',
             description: {
-                UA: 'Триразове спортивне харчування',
-                EN: 'Three sports meals a day',
-                HUN: 'Napi háromszori sport étkezés'
+                UA: 'Реєстрація у турнірі, страхування, оренда тренувального поля',
+                EN: 'Tournament registration, insurance, training field rental',
+                HUN: 'Torna regisztráció, biztosítás, edzőpálya bérlés'
             }
         },
         {
             category: {
-                UA: 'Реєстрація / внесок',
-                EN: 'Registration / Fee',
-                HUN: 'Regisztráció / díj'
+                UA: 'Штаб та персонал',
+                EN: 'Staff & Personnel',
+                HUN: 'Stáb és személyzet'
             },
-            amount: '1,300 €',
+            amount: '8,400 €',
             description: {
-                UA: 'Участь у турнірі, організаційні витрати',
-                EN: 'Tournament participation, organizational costs',
-                HUN: 'Torna részvétel, szervezési költségek'
+                UA: 'Добові та компенсації тренерів і персоналу',
+                EN: 'Daily allowances and compensation for coaches and staff',
+                HUN: 'Napidíjak és kompenzáció edzők és személyzet számára'
             }
         },
         {
             category: {
-                UA: 'Інфраструктура',
-                EN: 'Infrastructure',
-                HUN: 'Infrastruktúra'
+                UA: 'Екіпірування та інвентар',
+                EN: 'Equipment and Gear',
+                HUN: 'Felszerelés és eszközök'
             },
-            amount: '700 €',
+            amount: '725 €',
             description: {
-                UA: 'Оренда тренувального поля, тренажерного залу',
-                EN: 'Training field rental, gym',
-                HUN: 'Edzőpálya bérlés, edzőterem'
-            }
-        },
-        {
-            category: {
-                UA: 'Медицина',
-                EN: 'Medical',
-                HUN: 'Orvosi'
-            },
-            amount: '600 €',
-            description: {
-                UA: 'Аптечка, страхування, фізіотерапія',
-                EN: 'First aid kit, insurance, physiotherapy',
-                HUN: 'Elsősegély készlet, biztosítás, fizioterápia'
-            }
-        },
-        {
-            category: {
-                UA: 'Екіпірування',
-                EN: 'Equipment',
-                HUN: 'Felszerelés'
-            },
-            amount: '700 €',
-            description: {
-                UA: 'Форма, костюми, рюкзаки',
-                EN: 'Uniforms, suits, backpacks',
-                HUN: 'Egyenruha, öltönyök, hátizsákok'
+                UA: 'Форма, аптечки, спортивний інвентар',
+                EN: 'Uniforms, medical kits, sports equipment',
+                HUN: 'Egyenruhák, orvosi készletek, sportfelszerelés'
             }
         },
         {
@@ -561,7 +535,7 @@ export const fundingBreakdowns = {
                 EN: 'Reserve / Contingency',
                 HUN: 'Tartalék / váratlan költségek'
             },
-            amount: '600 €',
+            amount: '500 €',
             description: {
                 UA: 'Коливання цін, додаткові потреби',
                 EN: 'Price fluctuations, additional needs',
