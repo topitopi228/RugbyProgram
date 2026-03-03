@@ -17,13 +17,20 @@ export const translations = {
             funding: '9,325 €'
         },
         event3: {
+            date: '16-21 Червня 2026',
+            title: 'United World Games',
+            description: 'Міжнародні змагання з регбі-7',
+            location: 'м. Клагенфурт, Австрія',
+            funding: '14,100 €'
+        },
+        event4: {
             date: '13-17 Серпня 2026',
             title: 'Чемпіонат Європи з Touch (ІІ ранг)',
             description: 'Європейський турнір з сильними командами',
             location: 'м. Ноттінгем, Велика Британія',
             funding: '21,225 €'
         },
-        event4: {
+        event5: {
             date: '9-18 Листопада 2026',
             title: 'Навчально-тренувальний збір',
             description: 'Підготовка команди до міжнародних змагань',
@@ -71,13 +78,20 @@ export const translations = {
             funding: '9,325 €'
         },
         event3: {
+            date: 'June 16-21, 2026',
+            title: 'United World Games',
+            description: 'International Rugby-7 competition',
+            location: 'Klagenfurt, Austria',
+            funding: '14,100 €'
+        },
+        event4: {
             date: 'August 13-17, 2026',
             title: 'European Touch Championship (Tier II)',
             description: 'European tournament with strong teams',
             location: 'Nottingham, Great Britain',
             funding: '21,225 €'
         },
-        event4: {
+        event5: {
             date: 'November 9-18, 2026',
             title: 'Training Camp',
             description: 'Team preparation for international competitions',
@@ -125,13 +139,20 @@ export const translations = {
             funding: '9,325 €'
         },
         event3: {
+            date: '2026. június 16-21.',
+            title: 'United World Games',
+            description: 'Nemzetközi rögbi-7-es verseny',
+            location: 'Klagenfurt, Ausztria',
+            funding: '14,100 €'
+        },
+        event4: {
             date: '2026. augusztus 13-17.',
             title: 'Európai Touch Bajnokság (II. szint)',
             description: 'Európai torna erős csapatokkal',
             location: 'Nottingham, Nagy-Britannia',
             funding: '21,225 €'
         },
-        event4: {
+        event5: {
             date: '2026. november 9-18.',
             title: 'Edzőtábor',
             description: 'Csapat felkészítése nemzetközi versenyekre',
@@ -194,12 +215,26 @@ export const getEvents = (language: string, t: any) => [
     },
     {
         id: 3,
-        image: '/maj10.webp',
+        image: '/maj6.webp',
         date: t.event3.date,
         title: t.event3.title,
         description: t.event3.description,
         location: t.event3.location,
         funding: t.event3.funding,
+        details: language === 'UA' ?
+            'United World Games в Клагенфурті - престижні міжнародні змагання з регбі-7, де збірна України U16 зіграє проти команд з різних країн світу. Відмінна можливість для команди показати свій рівень на міжнародній арені.' :
+            language === 'EN' ?
+                'United World Games in Klagenfurt - prestigious international Rugby-7 competition where Ukraine U16 team will play against teams from different countries. An excellent opportunity for the team to showcase their level on the international stage.' :
+                'United World Games Klagenfurtban - rangos nemzetközi rögbi-7-es verseny, ahol az ukrán U16-os csapat különböző országok csapataival játszik.'
+    },
+    {
+        id: 4,
+        image: '/maj10.webp',
+        date: t.event4.date,
+        title: t.event4.title,
+        description: t.event4.description,
+        location: t.event4.location,
+        funding: t.event4.funding,
         details: language === 'UA' ?
             'Серпневий турнір у Ноттінгемі стане для збірної з Touch можливістю зіграти з сильними європейськими командами, перевірити свій рівень та отримати новий міжнародний досвід.' :
             language === 'EN' ?
@@ -207,13 +242,13 @@ export const getEvents = (language: string, t: any) => [
                 'Az augusztusi nottinghami torna lehetőséget ad a Touch csapatnak, hogy erős európai csapatokkal játsszon.'
     },
     {
-        id: 4,
-        image: '/maj6.webp',
-        date: t.event4.date,
-        title: t.event4.title,
-        description: t.event4.description,
-        location: t.event4.location,
-        funding: t.event4.funding,
+        id: 5,
+        image: '/maj12.webp',
+        date: t.event5.date,
+        title: t.event5.title,
+        description: t.event5.description,
+        location: t.event5.location,
+        funding: t.event5.funding,
         details: language === 'UA' ?
             'Навчально-тренувальний збір у Батумі для підготовки команди до майбутніх міжнародних змагань. Програма включає інтенсивні тренування, тактичну підготовку та командну взаємодію.' :
             language === 'EN' ?
@@ -409,7 +444,87 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    3: [ // Велика Британія - ЧЄ з Touch
+    3: [ // Австрія - United World Games
+        {
+            category: {
+                UA: 'Транспорт і логістика',
+                EN: 'Transport & Logistics',
+                HUN: 'Szállítás és logisztika'
+            },
+            amount: '4,200 €',
+            description: {
+                UA: 'Авіаперельоти Варшава – Відень – Клагенфурт – Варшава, трансфери, багаж, місцевий транспорт',
+                EN: 'Flights Warsaw – Vienna – Klagenfurt – Warsaw, transfers, baggage, local transport',
+                HUN: 'Repülőjáratok Varsó – Bécs – Klagenfurt – Varsó, transzferek, poggyász, helyi közlekedés'
+            }
+        },
+        {
+            category: {
+                UA: 'Проживання та харчування',
+                EN: 'Accommodation & Meals',
+                HUN: 'Szállás és étkezés'
+            },
+            amount: '5,600 €',
+            description: {
+                UA: 'Готель для команди на 5 ночей, повне харчування, спортивне харчування',
+                EN: 'Team hotel for 5 nights, full meals, sports nutrition',
+                HUN: 'Csapat szállás 5 éjszakára, teljes étkezés, sporttáplálkozás'
+            }
+        },
+        {
+            category: {
+                UA: 'Реєстрація та участь',
+                EN: 'Registration & Participation',
+                HUN: 'Regisztráció és részvétel'
+            },
+            amount: '1,800 €',
+            description: {
+                UA: 'Реєстраційний внесок, страхування учасників',
+                EN: 'Registration fee, participant insurance',
+                HUN: 'Regisztrációs díj, résztvevők biztosítása'
+            }
+        },
+        {
+            category: {
+                UA: 'Штаб і персонал',
+                EN: 'Staff & Personnel',
+                HUN: 'Stáb és személyzet'
+            },
+            amount: '2,000 €',
+            description: {
+                UA: 'Добові тренерського та адміністративного штабу',
+                EN: 'Daily allowances for coaching and administrative staff',
+                HUN: 'Edzői és adminisztratív személyzet napidíja'
+            }
+        },
+        {
+            category: {
+                UA: 'Непередбачені витрати / резерв',
+                EN: 'Contingency / Reserve',
+                HUN: 'Váratlan költségek / tartalék'
+            },
+            amount: '500 €',
+            description: {
+                UA: 'Додаткові організаційні витрати та можливі коливання цін',
+                EN: 'Additional organizational costs and possible price fluctuations',
+                HUN: 'További szervezési költségek és esetleges árváltozások'
+            }
+        },
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '12,100 € / 14,100 €',
+            description: {
+                UA: 'Без добових / З добовими',
+                EN: 'Without allowances / With allowances',
+                HUN: 'Napidíjak nélkül / Napidíjakkal'
+            }
+        }
+    ],
+    4: [ // Велика Британія - ЧЄ з Touch
         {
             category: {
                 UA: 'Транспорт і логістика',
@@ -502,7 +617,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    4: [ // Грузія - Батумі
+    5: [ // Грузія - Батумі
         {
             category: {
                 UA: 'Проїзд / Транспорт і логістика',
