@@ -95,6 +95,14 @@ const NewsPage = () => {
                     description: 'Збірна України U16 з регбі-7 успішно взяла участь у престижному міжнародному турнірі Lisbon 7s у Португалії. Наші гравці отримали цінний досвід змагань з найсильнішими командами Європи, показали високий рівень підготовки та командної взаємодії.',
                     expense: '9700',
                     image: '/news11.webp'
+                },
+                {
+                    id: 12,
+                    date: '5-6 Березня 2026',
+                    title: 'Тест-матч збірних U-16 проти U-18',
+                    description: 'З 5 по 6 березня у місті Хмельницький були проведені тест-матчі юнацьких збірних України з Регбі-7 між командами U-16 та U-18. Збірні команди проводять підготовку до участі в міжнародних змаганнях, зокрема до етапів Чемпіонату Європи з регбі-7 серед юнацьких команд. За підсумками тестових матчів команди показали хороші результати. Після ігор тренерські штаби провели детальний розбір матчів, зробили необхідні висновки та продовжують працювати над покращенням індивідуальних і командних навичок гравців перед майбутніми турнірами.',
+                    expense: '300',
+                    image: '/news12.webp'
                 }
 
             ]
@@ -184,6 +192,14 @@ const NewsPage = () => {
         description: 'Ukraine U16 rugby-7 national team successfully participated in the prestigious Lisbon 7s international tournament in Portugal. Our players gained valuable experience competing with the strongest teams in Europe, demonstrating high level of preparation and team coordination.',
         expense: '9700',
         image: '/news11.webp'
+    },
+    {
+        id: 12,
+        date: 'March 5-6, 2026',
+        title: 'U-16 vs U-18 Test Match',
+        description: 'From March 5 to 6, test matches of Ukrainian youth Rugby-7 national teams between U-16 and U-18 teams were held in Khmelnytskyi. The national teams are preparing for international competitions, particularly for the European Rugby-7 Championship stages among youth teams. Based on the test match results, the teams showed good performance. After the games, the coaching staff conducted a detailed match analysis, drew necessary conclusions, and continue to work on improving individual and team skills of players before upcoming tournaments.',
+        expense: '300',
+        image: '/news12.webp'
     }
 ]
         },
@@ -272,6 +288,14 @@ const NewsPage = () => {
         description: 'Az ukrán U16-os rögbi-7 válogatott sikeresen részt vett a rangos Lisbon 7s nemzetközi tornán Portugáliában. Játékosaink értékes tapasztalatot szereztek Európa legerősebb csapataival való versengésben, magas szintű felkészültséget és csapatkoordinációt mutatva.',
         expense: '9700',
         image: '/news11.webp'
+    },
+    {
+        id: 12,
+        date: '2026. március 5-6.',
+        title: 'U-16 vs U-18 tesztmérkőzés',
+        description: 'Március 5-6 között tesztmérkőzéseket tartottak az ukrán ifjúsági rögbi-7 válogatottak között U-16 és U-18 csapatok között Hmelnickijben. A válogatottak nemzetközi versenyekre készülnek, különösen az ifjúsági csapatok közötti Európa rögbi-7 bajnokság szakaszaira. A tesztmérkőzések eredményei alapján a csapatok jó teljesítményt mutattak. A játékok után az edzői stáb részletes mérkőzéselemzést végzett, levonta a szükséges következtetéseket, és folytatja a játékosok egyéni és csapatképességeinek fejlesztését a közelgő tornák előtt.',
+        expense: '300',
+        image: '/news12.webp'
     }
 ]
         }

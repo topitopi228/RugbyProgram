@@ -52,6 +52,13 @@ export const getCompanySponsors = (language: string): Sponsor[] => {
                   'Étterem-Szálló "Zharda"',
             url: 'https://www.instagram.com/zgardadragobrat/'
         },
+        {
+            image: '/spin-5.webp',
+            name: language === 'UA' ? 'Chervona Kalyna medical resort' : 
+                  language === 'EN' ? 'Chervona Kalyna medical resort' : 
+                  'Chervona Kalyna medical resort',
+            url: 'https://chervona-kalina.rv.ua/'
+        },
     ];
     return sponsors;
 };
