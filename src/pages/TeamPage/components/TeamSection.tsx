@@ -9,6 +9,7 @@ interface TeamMember {
     description?: string;
     isCaptain?: boolean;
     isViceCaptain?: boolean;
+    birthDate?: string;
 }
 
 interface TeamSectionProps {
@@ -121,6 +122,16 @@ const TeamSection: React.FC<TeamSectionProps> = ({
                                             <h3 className="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent relative z-10">
                                                 {item.name}
                                             </h3>
+                                            {item.birthDate && (
+                                                <div className="flex items-center gap-2 mt-2 relative z-10">
+                                                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-lg border border-blue-500/20">
+                                                        <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                                        </svg>
+                                                        <span className="text-blue-300 text-sm font-semibold">{item.birthDate}</span>
+                                                    </div>
+                                                </div>
+                                            )}
                                             {item.role && (
                                                 <p className="text-amber-400 text-sm font-semibold mt-1.5 tracking-wide uppercase relative z-10">
                                                     {item.role}
