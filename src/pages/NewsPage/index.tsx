@@ -103,6 +103,14 @@ const NewsPage = () => {
                     description: 'З 5 по 6 березня у місті Хмельницький були проведені тест-матчі юнацьких збірних України з Регбі-7 між командами U-16 та U-18. Збірні команди проводять підготовку до участі в міжнародних змаганнях, зокрема до етапів Чемпіонату Європи з регбі-7 серед юнацьких команд. За підсумками тестових матчів команди показали хороші результати. Після ігор тренерські штаби провели детальний розбір матчів, зробили необхідні висновки та продовжують працювати над покращенням індивідуальних і командних навичок гравців перед майбутніми турнірами.',
                     expense: '300',
                     image: '/news12.webp'
+                },
+                {
+                    id: 13,
+                    date: '20-23 Березня 2026',
+                    title: 'Збори гравців сутички в Ужгороді',
+                    description: 'Семеро гравців сутички юнацької збірної України з регбі провели чотириденні навчально-тренувальні збори в місті Ужгород. Упродовж зборів відпрацьовували ліфт, гру в повітрі, командну взаємодію та комунікацію. Команда суттєво додала в зіграності й стала ще більш згуртованою. Збори пройшли під керівництвом тренера Максима Дулі, менеджера Марцела Цитряка та лікаря Олександра Ткаченка. Усі учасники відпрацювали на максимум — потужно, дисципліновано та з повною віддачею.',
+                    expense: '750',
+                    image: '/news13.webp'
                 }
 
             ]
@@ -200,6 +208,14 @@ const NewsPage = () => {
         description: 'From March 5 to 6, test matches of Ukrainian youth Rugby-7 national teams between U-16 and U-18 teams were held in Khmelnytskyi. The national teams are preparing for international competitions, particularly for the European Rugby-7 Championship stages among youth teams. Based on the test match results, the teams showed good performance. After the games, the coaching staff conducted a detailed match analysis, drew necessary conclusions, and continue to work on improving individual and team skills of players before upcoming tournaments.',
         expense: '300',
         image: '/news12.webp'
+    },
+    {
+        id: 13,
+        date: 'March 20-23, 2026',
+        title: 'Forward Players Training Camp in Uzhhorod',
+        description: 'Seven forward players of the Ukrainian youth rugby national team completed a four-day training camp in Uzhhorod. During the camp, they practiced lineouts, aerial play, team coordination, and communication. The team significantly improved their cohesion and became even more united. The camp was conducted under the leadership of coach Maksym Dulia, manager Martsel Tsytriak, and team doctor Oleksandr Tkachenko. All participants worked to the maximum — powerfully, disciplined, and with complete dedication.',
+        expense: '750',
+        image: '/news13.webp'
     }
 ]
         },
@@ -296,6 +312,14 @@ const NewsPage = () => {
         description: 'Március 5-6 között tesztmérkőzéseket tartottak az ukrán ifjúsági rögbi-7 válogatottak között U-16 és U-18 csapatok között Hmelnickijben. A válogatottak nemzetközi versenyekre készülnek, különösen az ifjúsági csapatok közötti Európa rögbi-7 bajnokság szakaszaira. A tesztmérkőzések eredményei alapján a csapatok jó teljesítményt mutattak. A játékok után az edzői stáb részletes mérkőzéselemzést végzett, levonta a szükséges következtetéseket, és folytatja a játékosok egyéni és csapatképességeinek fejlesztését a közelgő tornák előtt.',
         expense: '300',
         image: '/news12.webp'
+    },
+    {
+        id: 13,
+        date: '2026. március 20-23.',
+        title: 'Csatárjátékosok edzőtábora Ungvárott',
+        description: 'Az ukrán ifjúsági rögbi válogatott hét csatárjátékosa négynapos edzőtábort teljesített Ungvárott. A tábor során gyakorolták a bedobásokat, a levegőben való játékot, a csapatkoordinációt és a kommunikációt. A csapat jelentősen javította az összhangjukat és még egységesebbé vált. Az edzőtábort Maksym Dulia edző, Martsel Tsytriak menedzser és Olekszandr Tkachenko csapatorvos irányításával tartották. Minden résztvevő maximálisan dolgozott — erőteljesen, fegyelmezetten és teljes elkötelezettséggel.',
+        expense: '750',
+        image: '/news13.webp'
     }
 ]
         }
