@@ -69,9 +69,9 @@ const TeamSection: React.FC<TeamSectionProps> = ({
                     return (
                         <motion.div
                             key={item.id}
-                            initial={{ opacity: 0, y: 24 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.06 }}
+                            initial={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0 }}
                             className="relative group w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] xl:w-[calc(25%-1.5rem)] 2xl:w-[calc(20%-1.5rem)]"
                         >
                             {/* Premium Card Design */}

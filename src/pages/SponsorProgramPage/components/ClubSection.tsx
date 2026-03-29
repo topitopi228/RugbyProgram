@@ -75,10 +75,10 @@ const ClubSection: React.FC<ClubSectionProps> = ({ language }) => {
             
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <motion.div
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, type: "spring" }}
+                    transition={{ duration: 0.4 }}
                     className="relative"
                 >
                     {/* Premium Card Container */}
@@ -150,15 +150,8 @@ const ClubSection: React.FC<ClubSectionProps> = ({ language }) => {
                                         desc: language === 'UA' ? 'Гарантовані місця на іграх' : language === 'EN' ? 'Guaranteed seats at games' : 'Garantált helyek a játékokon'
                                     }
                                 ].map((item, idx) => (
-                                    <motion.div
+                                    <div
                                         key={idx}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ 
-                                            delay: 0.1 * idx, 
-                                            duration: 0.5
-                                        }}
                                         className="relative bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700/50 hover:border-slate-600/50 transition-colors duration-300"
                                     >
                                         <div className="flex items-start gap-4">
@@ -171,7 +164,7 @@ const ClubSection: React.FC<ClubSectionProps> = ({ language }) => {
                                                 <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
                                             </div>
                                         </div>
-                                    </motion.div>
+                                    </div>
                                 ))}
                             </div>
 

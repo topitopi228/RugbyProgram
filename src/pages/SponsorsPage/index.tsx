@@ -95,32 +95,32 @@ const SponsorsPage = () => {
                             <div className="lg:w-2/3">
                                 <motion.h2
                                     className="text-2xl md:text-3xl font-bold mb-3 text-yellow-300"
-                                    initial={{ opacity: 0, x: -10 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.2, duration: 0.4 }}
+                                    initial={{ opacity: 1 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0 }}
                                 >
                                     {olympicInvitation.title}
                                 </motion.h2>
                                 <motion.p
                                     className="text-lg md:text-xl font-semibold mb-3 leading-relaxed text-white"
-                                    initial={{ opacity: 0, x: -10 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.3, duration: 0.4 }}
+                                    initial={{ opacity: 1 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0 }}
                                 >
                                     {olympicInvitation.highlight}
                                 </motion.p>
                                 <motion.p
                                     className="text-blue-100 mb-6 text-base max-w-2xl"
-                                    initial={{ opacity: 0, x: -10 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.4, duration: 0.4 }}
+                                    initial={{ opacity: 1 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0 }}
                                 >
                                     {olympicInvitation.description}
                                 </motion.p>
                                 <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.5, duration: 0.4 }}
+                                    initial={{ opacity: 1 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0 }}
                                 >
                                     <button
                                         onClick={() => navigate('/benefits')}
@@ -255,9 +255,9 @@ const SponsorsPage = () => {
                                     {/* CTA Button */}
                                     <div className="flex flex-col items-center gap-4">
                                         <motion.button
-                                            initial={{ opacity: 0, scale: 0.95 }}
-                                            animate={{ opacity: 1, scale: 1 }}
-                                            transition={{ delay: 0.4, duration: 0.4 }}
+                                            initial={{ opacity: 1 }}
+                                            animate={{ opacity: 1 }}
+                                            transition={{ duration: 0 }}
                                             onClick={() => navigate('/benefits')}
                                             whileHover={{ scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}
@@ -311,7 +311,7 @@ const SponsorsPage = () => {
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.08, duration: 0.4 }}
+                                transition={{ duration: 0 }}
                                 className="group relative"
                             >
                                 {/* Glow Effect */}
@@ -357,7 +357,7 @@ const SponsorsPage = () => {
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.08, duration: 0.4 }}
+                                transition={{ duration: 0 }}
                                 className="group relative"
                             >
                                 {/* Glow Effect */}

@@ -14,12 +14,16 @@ import MediaPage from './pages/MediaPage';
 import { LanguageProvider } from './components/LanguageContext.tsx';
 import Navbar from './components/Navbar';
 
-// Scroll to top on route change
+// Smooth scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }, [pathname]);
 
   return null;

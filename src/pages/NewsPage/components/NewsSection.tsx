@@ -18,14 +18,28 @@ interface NewsSectionProps {
 
 const NewsSection: React.FC<NewsSectionProps> = ({ news, language }) => {
     const [hoveredId, setHoveredId] = useState<number | null>(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const newsPerPage = 6;
+
+    // Розраховуємо індекси для поточної сторінки
+    const indexOfLastNews = currentPage * newsPerPage;
+    const indexOfFirstNews = indexOfLastNews - newsPerPage;
+    const sortedNews = news.sort((a, b) => b.id - a.id);
+    const currentNews = sortedNews.slice(indexOfFirstNews, indexOfLastNews);
+    const totalPages = Math.ceil(news.length / newsPerPage);
 
     const fadeInUp = {
-        hidden: { opacity: 0, y: 20 },
+        hidden: { opacity: 1 },
         visible: {
             opacity: 1,
-            y: 0,
-            transition: { duration: 0.6 }
+            transition: { duration: 0 }
         }
+    };
+
+    const handlePageChange = (pageNumber: number) => {
+        setCurrentPage(pageNumber);
+        // Скролимо до секції новин
+        document.getElementById('news')?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -54,9 +68,7 @@ const NewsSection: React.FC<NewsSectionProps> = ({ news, language }) => {
 
             <div className="relative container mx-auto max-w-6xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                    {news
-                        .sort((a, b) => b.id - a.id)
-                        .map((item, index) => {
+                    {currentNews.map((item, index) => {
                             const isHovered = hoveredId === item.id;
                             return (
                                 <motion.article
@@ -65,7 +77,7 @@ const NewsSection: React.FC<NewsSectionProps> = ({ news, language }) => {
                                     animate="visible"
                                     viewport={{ once: true, margin: "-50px" }}
                                     variants={fadeInUp}
-                                    className={`group relative transition-all duration-500 ${isHovered ? 'z-50 transform scale-105' : 'z-10'}`}
+                                    className="group relative transition-all duration-300"
                                     onMouseEnter={() => setHoveredId(item.id)}
                                     onMouseLeave={() => setHoveredId(null)}
                                 >
@@ -99,15 +111,9 @@ const NewsSection: React.FC<NewsSectionProps> = ({ news, language }) => {
                                         {/* Expense Badge */}
                                         {item.expense !== '0' && (
                                             <div className="absolute top-4 right-4 z-20">
-                                                <motion.div
-                                                    initial={{ opacity: 0, scale: 0.8 }}
-                                                    animate={{ opacity: 1, scale: 1 }}
-                                                    viewport={{ once: true }}
-                                                    transition={{ duration: 0.5, delay: 0.2 }}
-                                                    className="bg-emerald-500/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg"
-                                                >
+                                                <div className="bg-emerald-500/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
                                                     {item.expense}€
-                                                </motion.div>
+                                                </div>
                                             </div>
                                         )}
                                     </div>
@@ -130,6 +136,48 @@ const NewsSection: React.FC<NewsSectionProps> = ({ news, language }) => {
                             );
                         })}
                 </div>
+
+                {/* Пагінація */}
+                {totalPages > 1 && (
+                    <div className="mt-16 flex justify-center items-center gap-3">
+                        {/* Кнопка Попередня */}
+                        <button
+                            onClick={() => handlePageChange(currentPage - 1)}
+                            disabled={currentPage === 1}
+                            className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 disabled:bg-slate-900/50 disabled:cursor-not-allowed disabled:opacity-50 text-white font-semibold rounded-xl border border-slate-700/50 hover:border-amber-500/50 transition-all duration-300 disabled:hover:border-slate-700/50"
+                        >
+                            ←
+                        </button>
+
+                        {/* Номери сторінок */}
+                        <div className="flex gap-2">
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
+                                <button
+                                    key={pageNumber}
+                                    onClick={() => handlePageChange(pageNumber)}
+                                    className={`
+                                        px-4 py-2 font-semibold rounded-xl border transition-all duration-300
+                                        ${currentPage === pageNumber
+                                            ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-900 border-amber-400 shadow-lg shadow-amber-500/30'
+                                            : 'bg-slate-800/80 hover:bg-slate-700/80 text-white border-slate-700/50 hover:border-amber-500/30'
+                                        }
+                                    `}
+                                >
+                                    {pageNumber}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Кнопка Наступна */}
+                        <button
+                            onClick={() => handlePageChange(currentPage + 1)}
+                            disabled={currentPage === totalPages}
+                            className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 disabled:bg-slate-900/50 disabled:cursor-not-allowed disabled:opacity-50 text-white font-semibold rounded-xl border border-slate-700/50 hover:border-amber-500/50 transition-all duration-300 disabled:hover:border-slate-700/50"
+                        >
+                            →
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );

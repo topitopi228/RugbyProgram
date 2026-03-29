@@ -213,9 +213,9 @@ const MediaPage = () => {
                     <div className="grid lg:grid-cols-12 gap-8">
                         {/* Premium Media Player - Left Side */}
                         <motion.div 
-                            initial={{ opacity: 0, x: -30, rotateY: -5 }}
-                            animate={{ opacity: 1, x: 0, rotateY: 0 }}
-                            transition={{ duration: 0.6, type: "spring" }}
+                            initial={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0 }}
                             className="lg:col-span-8"
                         >
                             <div className="relative group">
@@ -243,9 +243,9 @@ const MediaPage = () => {
 
                         {/* Premium Info & Stats - Right Side */}
                         <motion.div 
-                            initial={{ opacity: 0, x: 30, rotateY: 5 }}
-                            animate={{ opacity: 1, x: 0, rotateY: 0 }}
-                            transition={{ duration: 0.6, delay: 0.15, type: "spring" }}
+                            initial={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0 }}
                             className="lg:col-span-4 space-y-6"
                         >
                             {/* Premium Current Media Info */}
@@ -349,9 +349,9 @@ const MediaPage = () => {
                 {/* Premium Media Gallery */}
                 {filteredItems.length > 0 && (
                     <motion.div 
-                        initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
+                        initial={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0 }}
                         className="mt-16"
                     >
                         {/* Premium Section Header */}
@@ -402,9 +402,9 @@ const MediaPage = () => {
 
                 {/* Premium External Links */}
                 <motion.div 
-                    initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.3, type: "spring" }}
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0 }}
                     className="mt-20 mb-12"
                 >
                     {/* Premium Section Header */}
@@ -434,10 +434,10 @@ const MediaPage = () => {
                                 href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 1 }}
+                                whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: index * 0.1, type: "spring" }}
+                                transition={{ duration: 0 }}
                                 whileHover={{ y: -8, scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className="group relative"

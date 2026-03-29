@@ -3,6 +3,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Smooth Scroll like g2esports.com */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
 /* Lazy loading optimization */
 img[loading="lazy"]:not(.no-shimmer) {
     background: linear-gradient(110deg, #1f2937 8%, #374151 18%, #1f2937 33%);

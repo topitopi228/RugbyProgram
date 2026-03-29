@@ -28,19 +28,17 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
         show: { 
             opacity: 1, 
             transition: { 
-                staggerChildren: 0.05,
-                delayChildren: 0.1
+                staggerChildren: 0
             } 
         }
     };
 
     const item = {
-        hidden: { opacity: 0, y: 20 },
+        hidden: { opacity: 1 },
         show: { 
             opacity: 1, 
-            y: 0,
             transition: { 
-                duration: 0.3
+                duration: 0
             }
         }
     };
