@@ -1,15 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo_ukr.jpg"  />
+    <link rel="icon" type="image/svg+xml" href="/logo_ukr.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Performance optimizations -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#0f172a" />
     <title>RUGBY JUNIORS UA</title>
     
-    <!-- Preload critical images -->
+    <!-- Preload critical images (hero + перші новини) -->
     <link rel="preload" as="image" href="/backmaj.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/news8.webp" />
-    <link rel="preload" as="image" href="/news7.webp" />
+    <link rel="preload" as="image" href="/news13.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/news12.webp" />
+    <link rel="preload" as="image" href="/news11.webp" />
+    
+    <!-- DNS Prefetch для зовнішніх ресурсів (якщо використовуєте CDN) -->
+    <!-- <link rel="dns-prefetch" href="https://ik.imagekit.io" /> -->
   </head>
   <body>
     <div id="root"></div>

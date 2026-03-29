@@ -17,7 +17,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Lazy loading optimization */
+/* Lazy loading optimization with blur placeholder */
 img[loading="lazy"]:not(.no-shimmer) {
     background: linear-gradient(110deg, #1f2937 8%, #374151 18%, #1f2937 33%);
     background-size: 200% 100%;
@@ -47,10 +47,40 @@ img[loading="lazy"].no-shimmer {
 /* Video optimization */
 video {
     will-change: transform;
+    content-visibility: auto;
+}
+
+/* Content visibility для покращення rendering */
+.news-card,
+.team-card,
+.sponsor-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
+/* Оптимізація анімацій - використовувати GPU */
+.animate-gpu {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Зменшити repaint для hover ефектів */
+.hover-optimize {
+    will-change: transform, opacity;
 }
 
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
     img[loading="lazy"] {
         animation: none;
     }

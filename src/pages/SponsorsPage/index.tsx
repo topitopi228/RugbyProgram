@@ -324,6 +324,8 @@ const SponsorsPage = () => {
                                             <img
                                                 src={sponsor.image}
                                                 alt={sponsor.name}
+                                                loading={index < 10 ? "eager" : "lazy"}
+                                                decoding="async"
                                                 className="max-h-full max-w-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
                                             />
                                         </div>
@@ -369,6 +371,8 @@ const SponsorsPage = () => {
                                         <img
                                             src={sponsor.image}
                                             alt={sponsor.name}
+                                            loading={index < 8 ? "eager" : "lazy"}
+                                            decoding="async"
                                             className="w-full h-full object-cover filter brightness-90 group-hover:brightness-110 transition-all duration-300"
                                         />
                                     </div>

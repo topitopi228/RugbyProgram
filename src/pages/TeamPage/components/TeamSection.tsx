@@ -96,8 +96,9 @@ const TeamSection: React.FC<TeamSectionProps> = ({
                                             <img
                                                 src={imagePath}
                                                 alt={item.name}
-                                                loading="lazy"
+                                                loading={index < 8 ? "eager" : "lazy"}
                                                 decoding="async"
+                                                fetchPriority={index < 4 ? "high" : "low"}
                                                 onError={(e) => {
                                                     const target = e.target as HTMLImageElement;
                                                     if (target.src !== fallbackImagePath) {

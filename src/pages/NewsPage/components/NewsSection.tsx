@@ -92,8 +92,9 @@ const NewsSection: React.FC<NewsSectionProps> = ({ news, language }) => {
                                         <img
                                             src={`/news${item.id}.webp`}
                                             alt={item.title}
-                                            loading={index < 3 ? "eager" : "lazy"}
+                                            loading={index < 6 ? "eager" : "lazy"}
                                             decoding="async"
+                                            fetchPriority={index < 3 ? "high" : "low"}
                                             onError={(e) => {
                                                 const target = e.target as HTMLImageElement;
                                                 target.src = '/backmaj.webp';

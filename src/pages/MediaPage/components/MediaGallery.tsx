@@ -82,7 +82,9 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                                         src={mediaItem.thumbnail}
                                         alt={mediaItem.title}
                                         className="w-full h-full object-cover"
-                                        loading="lazy"
+                                        loading={index < 12 ? "eager" : "lazy"}
+                                        decoding="async"
+                                        fetchPriority={index < 6 ? "high" : "low"}
                                     />
                                 )}
                             </div>
