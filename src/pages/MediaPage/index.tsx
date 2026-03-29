@@ -211,75 +211,133 @@ const MediaPage = () => {
                     </div>
                 ) : filteredItems.length > 0 ? (
                     <div className="grid lg:grid-cols-12 gap-8">
-                        {/* Media Player - Left Side */}
+                        {/* Premium Media Player - Left Side */}
                         <motion.div 
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5 }}
+                            initial={{ opacity: 0, x: -30, rotateY: -5 }}
+                            animate={{ opacity: 1, x: 0, rotateY: 0 }}
+                            transition={{ duration: 0.6, type: "spring" }}
                             className="lg:col-span-8"
                         >
-                            <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-2xl p-4 border border-slate-700/50 shadow-2xl">
-                                <MediaPlayer
-                                    currentMedia={filteredItems[currentIndex]}
-                                    onNext={handleNext}
-                                    onPrevious={handlePrevious}
-                                    language={language}
-                                />
+                            <div className="relative group">
+                                {/* Glow Effect */}
+                                <div className="absolute -inset-[2px] bg-gradient-to-r from-amber-500/30 via-yellow-500/30 to-amber-500/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+                                
+                                <div className="relative bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-2xl rounded-3xl p-5 border border-slate-700/50 shadow-2xl overflow-hidden"
+                                    style={{
+                                        boxShadow: '0 25px 50px rgba(0,0,0,0.5), 0 0 100px rgba(251, 191, 36, 0.1)'
+                                    }}
+                                >
+                                    {/* Decorative Corner Elements */}
+                                    <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/5 to-transparent rounded-full blur-3xl"></div>
+                                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-yellow-500/5 to-transparent rounded-full blur-3xl"></div>
+                                    
+                                    <MediaPlayer
+                                        currentMedia={filteredItems[currentIndex]}
+                                        onNext={handleNext}
+                                        onPrevious={handlePrevious}
+                                        language={language}
+                                    />
+                                </div>
                             </div>
                         </motion.div>
 
-                        {/* Info & Stats - Right Side */}
+                        {/* Premium Info & Stats - Right Side */}
                         <motion.div 
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
+                            initial={{ opacity: 0, x: 30, rotateY: 5 }}
+                            animate={{ opacity: 1, x: 0, rotateY: 0 }}
+                            transition={{ duration: 0.6, delay: 0.15, type: "spring" }}
                             className="lg:col-span-4 space-y-6"
                         >
-                            {/* Current Media Info */}
-                            <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50">
-                                <h3 className="text-xl font-bold text-amber-400 mb-4">
-                                    {filteredItems[currentIndex]?.title}
-                                </h3>
-                                <div className="space-y-3">
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-gray-400 text-sm">{t.type}</span>
-                                        <span className="text-white">
-                                            {filteredItems[currentIndex]?.type === 'video' ? t.videos : t.photos}
-                                        </span>
+                            {/* Premium Current Media Info */}
+                            <motion.div 
+                                whileHover={{ y: -4 }}
+                                className="relative group overflow-hidden"
+                            >
+                                {/* Glow Border */}
+                                <div className="absolute -inset-[1px] bg-gradient-to-r from-amber-500/40 via-yellow-500/40 to-amber-500/40 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
+                                
+                                <div className="relative bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 shadow-xl overflow-hidden"
+                                    style={{
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.4)'
+                                    }}
+                                >
+                                    {/* Decorative Elements */}
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-500/10 to-transparent rounded-full blur-2xl"></div>
+                                    
+                                    <h3 className="relative text-xl font-bold bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent mb-5 pb-3 border-b border-slate-700/50">
+                                        {filteredItems[currentIndex]?.title}
+                                    </h3>
+                                    <div className="relative space-y-3">
+                                        <div className="flex items-center justify-between p-3 bg-slate-800/40 rounded-xl border border-slate-700/30 hover:border-amber-500/30 transition-colors">
+                                            <span className="text-slate-400 text-sm font-medium">{t.type}</span>
+                                            <span className="text-amber-400 font-semibold">
+                                                {filteredItems[currentIndex]?.type === 'video' ? t.videos : t.photos}
+                                            </span>
+                                        </div>
+                                        {filteredItems[currentIndex]?.date && (
+                                            <div className="flex items-center justify-between p-3 bg-slate-800/40 rounded-xl border border-slate-700/30 hover:border-amber-500/30 transition-colors">
+                                                <span className="text-slate-400 text-sm font-medium">{t.date}</span>
+                                                <span className="text-white font-semibold">{filteredItems[currentIndex].date}</span>
+                                            </div>
+                                        )}
+                                        {filteredItems[currentIndex]?.duration && (
+                                            <div className="flex items-center justify-between p-3 bg-slate-800/40 rounded-xl border border-slate-700/30 hover:border-amber-500/30 transition-colors">
+                                                <span className="text-slate-400 text-sm font-medium">{t.duration}</span>
+                                                <span className="text-white font-semibold">{filteredItems[currentIndex].duration}</span>
+                                            </div>
+                                        )}
                                     </div>
-                                    {filteredItems[currentIndex]?.date && (
-                                        <div className="flex items-center gap-3">
-                                            <span className="text-gray-400 text-sm">{t.date}</span>
-                                            <span className="text-white">{filteredItems[currentIndex].date}</span>
-                                        </div>
-                                    )}
-                                    {filteredItems[currentIndex]?.duration && (
-                                        <div className="flex items-center gap-3">
-                                            <span className="text-gray-400 text-sm">{t.duration}</span>
-                                            <span className="text-white">{filteredItems[currentIndex].duration}</span>
-                                        </div>
-                                    )}
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            {/* Statistics */}
-                            <div className="bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50">
-                                <h3 className="text-lg font-semibold text-white mb-4">{t.statistics}</h3>
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div className="text-center p-3 bg-slate-800/50 rounded-xl">
-                                        <p className="text-2xl font-bold text-amber-400">
-                                            {mediaItems.filter(i => i.type === 'video').length}
-                                        </p>
-                                        <p className="text-xs text-gray-400 mt-1">{t.videos}</p>
-                                    </div>
-                                    <div className="text-center p-3 bg-slate-800/50 rounded-xl">
-                                        <p className="text-2xl font-bold text-amber-400">
-                                            {mediaItems.filter(i => i.type === 'photo').length}
-                                        </p>
-                                        <p className="text-xs text-gray-400 mt-1">{t.photos}</p>
+                            {/* Premium Statistics */}
+                            <motion.div
+                                whileHover={{ y: -4 }}
+                                className="relative group overflow-hidden"
+                            >
+                                {/* Glow Border */}
+                                <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-500/40 via-purple-500/40 to-blue-500/40 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
+                                
+                                <div className="relative bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 shadow-xl overflow-hidden"
+                                    style={{
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.4)'
+                                    }}
+                                >
+                                    {/* Decorative Elements */}
+                                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-full blur-2xl"></div>
+                                    
+                                    <h3 className="relative text-lg font-bold text-white mb-5 flex items-center gap-2 pb-3 border-b border-slate-700/50">
+                                        <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+                                        {t.statistics}
+                                    </h3>
+                                    <div className="relative grid grid-cols-2 gap-4">
+                                        <motion.div 
+                                            whileHover={{ scale: 1.05, y: -2 }}
+                                            className="text-center p-4 bg-gradient-to-br from-slate-800/60 to-slate-900/60 rounded-2xl border border-slate-700/30 hover:border-blue-500/40 transition-all shadow-lg"
+                                        >
+                                            <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center border border-blue-400/30">
+                                                <FaPlay className="w-4 h-4 text-blue-400" />
+                                            </div>
+                                            <p className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                                                {mediaItems.filter(i => i.type === 'video').length}
+                                            </p>
+                                            <p className="text-xs text-slate-400 mt-1 font-medium">{t.videos}</p>
+                                        </motion.div>
+                                        <motion.div 
+                                            whileHover={{ scale: 1.05, y: -2 }}
+                                            className="text-center p-4 bg-gradient-to-br from-slate-800/60 to-slate-900/60 rounded-2xl border border-slate-700/30 hover:border-purple-500/40 transition-all shadow-lg"
+                                        >
+                                            <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center border border-purple-400/30">
+                                                <FaImage className="w-4 h-4 text-purple-400" />
+                                            </div>
+                                            <p className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                                                {mediaItems.filter(i => i.type === 'photo').length}
+                                            </p>
+                                            <p className="text-xs text-slate-400 mt-1 font-medium">{t.photos}</p>
+                                        </motion.div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     </div>
                 ) : (
@@ -288,68 +346,159 @@ const MediaPage = () => {
                     </div>
                 )}
 
-                {/* Media Gallery */}
+                {/* Premium Media Gallery */}
                 {filteredItems.length > 0 && (
                     <motion.div 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="mt-12"
+                        initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
+                        className="mt-16"
                     >
-                        <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                            <FaTh className="w-6 h-6 text-amber-400" />
-                            <span>{t.gallery}</span>
-                        </h2>
-                        <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50">
-                            <MediaGallery
-                                items={filteredItems}
-                                currentIndex={currentIndex}
-                                onSelect={handleMediaSelect}
-                                language={language}
+                        {/* Premium Section Header */}
+                        <div className="relative mb-8">
+                            <motion.div
+                                initial={{ scaleX: 0 }}
+                                whileInView={{ scaleX: 1 }}
+                                viewport={{ once: true }}
+                                className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent"
                             />
+                            <h2 className="relative text-3xl font-bold mb-3 flex items-center gap-4">
+                                <div className="p-3 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-2xl border border-amber-400/30 shadow-lg">
+                                    <FaTh className="w-6 h-6 text-amber-400" />
+                                </div>
+                                <span className="bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent">
+                                    {t.gallery}
+                                </span>
+                                <div className="flex-1 h-px bg-gradient-to-r from-amber-500/30 to-transparent"></div>
+                            </h2>
+                        </div>
+
+                        {/* Gallery Container */}
+                        <div className="relative group">
+                            {/* Animated Glow Border */}
+                            <div className="absolute -inset-[2px] bg-gradient-to-r from-amber-500/20 via-yellow-500/30 to-amber-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-700"></div>
+                            
+                            <div className="relative bg-gradient-to-br from-slate-900/70 to-slate-800/70 backdrop-blur-2xl rounded-3xl p-8 border border-slate-700/50 shadow-2xl overflow-hidden"
+                                style={{
+                                    boxShadow: '0 25px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)'
+                                }}
+                            >
+                                {/* Decorative Background Elements */}
+                                <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-amber-500/5 to-transparent rounded-full blur-3xl"></div>
+                                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-yellow-500/5 to-transparent rounded-full blur-3xl"></div>
+                                
+                                <div className="relative z-10">
+                                    <MediaGallery
+                                        items={filteredItems}
+                                        currentIndex={currentIndex}
+                                        onSelect={handleMediaSelect}
+                                        language={language}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 )}
 
-                {/* External Links */}
+                {/* Premium External Links */}
                 <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="mt-16"
+                    initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.3, type: "spring" }}
+                    className="mt-20 mb-12"
                 >
-                    <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                        <FaExternalLinkAlt className="w-6 h-6 text-amber-400" />
-                        <span>{t.externalLinks}</span>
-                    </h2>
+                    {/* Premium Section Header */}
+                    <div className="relative mb-8">
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            viewport={{ once: true }}
+                            className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
+                        />
+                        <h2 className="relative text-3xl font-bold mb-3 flex items-center gap-4">
+                            <div className="p-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-400/30 shadow-lg">
+                                <FaExternalLinkAlt className="w-6 h-6 text-blue-400" />
+                            </div>
+                            <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                                {t.externalLinks}
+                            </span>
+                            <div className="flex-1 h-px bg-gradient-to-r from-blue-500/30 to-transparent"></div>
+                        </h2>
+                    </div>
+
+                    {/* Links Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {externalLinks.map((link) => (
+                        {externalLinks.map((link, index) => (
                             <motion.a
                                 key={link.id}
                                 href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                whileHover={{ y: -5, scale: 1.02 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1, type: "spring" }}
+                                whileHover={{ y: -8, scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="group relative bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-amber-500/50 transition-all duration-300 shadow-xl hover:shadow-amber-500/20"
+                                className="group relative"
                             >
-                                <div className="flex items-start gap-4">
-                                    <div className="p-3 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-xl group-hover:from-amber-500/30 group-hover:to-yellow-500/30 transition-all duration-300">
-                                        {getIconForLink(link.type)}
+                                {/* Animated Glow Border */}
+                                <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
+                                
+                                <div className="relative bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 group-hover:border-blue-500/50 transition-all duration-300 shadow-xl overflow-hidden"
+                                    style={{
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.4)'
+                                    }}
+                                >
+                                    {/* Decorative Corner Glow */}
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    
+                                    {/* Content */}
+                                    <div className="relative flex items-start gap-4">
+                                        {/* Icon Container */}
+                                        <motion.div 
+                                            className="flex-shrink-0 p-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-400/30 shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300"
+                                            whileHover={{ scale: 1.1, rotate: 5 }}
+                                            style={{
+                                                boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)'
+                                            }}
+                                        >
+                                            <div className="absolute inset-0 bg-gradient-to-br from-blue-300/10 to-transparent rounded-2xl"></div>
+                                            <div className="relative text-blue-400 group-hover:text-blue-300 transition-colors">
+                                                {getIconForLink(link.type)}
+                                            </div>
+                                        </motion.div>
+                                        
+                                        {/* Text Content */}
+                                        <div className="flex-1 min-w-0">
+                                            <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-300 mb-1">
+                                                {link.title[language]}
+                                            </h3>
+                                            {link.description && (
+                                                <p className="text-sm text-slate-400 line-clamp-2 leading-relaxed">
+                                                    {link.description[language]}
+                                                </p>
+                                            )}
+                                        </div>
                                     </div>
-                                    <div className="flex-1">
-                                        <h3 className="text-lg font-semibold text-white group-hover:text-amber-400 transition-colors">
-                                            {link.title[language]}
-                                        </h3>
-                                        {link.description && (
-                                            <p className="text-sm text-gray-400 mt-1">
-                                                {link.description[language]}
-                                            </p>
-                                        )}
-                                    </div>
-                                </div>
-                                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <FaExternalLinkAlt className="w-4 h-4 text-amber-400" />
+                                    
+                                    {/* Hover Arrow */}
+                                    <motion.div 
+                                        className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                        animate={{ x: [0, 4, 0] }}
+                                        transition={{
+                                            duration: 1.5,
+                                            repeat: Infinity,
+                                            ease: "easeInOut"
+                                        }}
+                                    >
+                                        <div className="p-2 bg-blue-500/20 rounded-lg border border-blue-400/30">
+                                            <FaExternalLinkAlt className="w-4 h-4 text-blue-400" />
+                                        </div>
+                                    </motion.div>
+                                    
+                                    {/* Bottom Shine Effect */}
+                                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
                             </motion.a>
                         ))}
