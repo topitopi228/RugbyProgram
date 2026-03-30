@@ -17,6 +17,8 @@ const MediaPage = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [isLoading, setIsLoading] = useState(true);
     const [isMobile, setIsMobile] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 12;
 
     const translations = {
         UA: {
@@ -125,7 +127,16 @@ const MediaPage = () => {
         
         setFilteredItems(filtered);
         setCurrentIndex(0);
+        setCurrentPage(1); // Скинути на першу сторінку при зміні категорії
     }, [activeCategory, mediaItems]);
+
+    // Синхронізація сторінки галереї з currentIndex (коли клікаєм на стрілки в плеєрі)
+    useEffect(() => {
+        const pageForCurrentIndex = Math.floor(currentIndex / itemsPerPage) + 1;
+        if (pageForCurrentIndex !== currentPage) {
+            setCurrentPage(pageForCurrentIndex);
+        }
+    }, [currentIndex]); // Тільки currentIndex в залежностях
 
     const handleNext = () => {
         setCurrentIndex((prev) => (prev + 1) % filteredItems.length);
@@ -137,6 +148,15 @@ const MediaPage = () => {
 
     const handleMediaSelect = (index) => {
         setCurrentIndex(index);
+    };
+
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+        // Прокрутити до галереї
+        const galleryElement = document.getElementById('media-gallery');
+        if (galleryElement) {
+            galleryElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     };
 
     const getIconForLink = (type) => {
@@ -353,6 +373,7 @@ const MediaPage = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0 }}
                         className="mt-16"
+                        id="media-gallery"
                     >
                         {/* Premium Section Header */}
                         <div className="relative mb-8">
@@ -393,6 +414,8 @@ const MediaPage = () => {
                                         currentIndex={currentIndex}
                                         onSelect={handleMediaSelect}
                                         language={language}
+                                        currentPage={currentPage}
+                                        onPageChange={handlePageChange}
                                     />
                                 </div>
                             </div>

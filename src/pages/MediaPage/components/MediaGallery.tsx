@@ -20,9 +20,18 @@ interface MediaGalleryProps {
     currentIndex: number;
     onSelect: (index: number) => void;
     language: string;
+    currentPage: number;
+    onPageChange: (page: number) => void;
 }
 
-const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSelect, language }) => {
+const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSelect, language, currentPage, onPageChange }) => {
+    const itemsPerPage = 12; // 2 ряди по 6 колонок
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    
+    // Обчислити індекси для поточної сторінки
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
     const container = {
         hidden: { opacity: 0 },
         show: { 
@@ -44,13 +53,15 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
     };
 
     return (
-        <motion.div 
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4"
-        >
-            {items.map((mediaItem, index) => {
+        <div>
+            <motion.div 
+                variants={container}
+                initial="hidden"
+                animate="show"
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4"
+            >
+                {currentItems.map((mediaItem, indexInPage) => {
+                    const index = indexOfFirstItem + indexInPage;
                 const isActive = index === currentIndex;
                 
                 return (
@@ -114,8 +125,51 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                         </div>
                     </motion.div>
                 );
-            })}
-        </motion.div>
+                })}
+            </motion.div>
+
+            {/* Пагінація */}
+            {totalPages > 1 && (
+                <div className="mt-12 flex justify-center items-center gap-3">
+                    {/* Кнопка Попередня */}
+                    <button
+                        onClick={() => onPageChange(currentPage - 1)}
+                        disabled={currentPage === 1}
+                        className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 disabled:bg-slate-900/50 disabled:cursor-not-allowed disabled:opacity-50 text-white font-semibold rounded-xl border border-slate-700/50 hover:border-amber-500/50 transition-all duration-300 disabled:hover:border-slate-700/50"
+                    >
+                        ←
+                    </button>
+
+                    {/* Номери сторінок */}
+                    <div className="flex gap-2">
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
+                            <button
+                                key={pageNumber}
+                                onClick={() => onPageChange(pageNumber)}
+                                className={`
+                                    px-4 py-2 font-semibold rounded-xl border transition-all duration-300
+                                    ${currentPage === pageNumber
+                                        ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-900 border-amber-400 shadow-lg shadow-amber-500/30'
+                                        : 'bg-slate-800/80 hover:bg-slate-700/80 text-white border-slate-700/50 hover:border-amber-500/30'
+                                    }
+                                `}
+                            >
+                                {pageNumber}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Кнопка Наступна */}
+                    <button
+                        onClick={() => onPageChange(currentPage + 1)}
+                        disabled={currentPage === totalPages}
+                        className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 disabled:bg-slate-900/50 disabled:cursor-not-allowed disabled:opacity-50 text-white font-semibold rounded-xl border border-slate-700/50 hover:border-amber-500/50 transition-all duration-300 disabled:hover:border-slate-700/50"
+                    >
+                        →
+                    </button>
+                </div>
+            )}
+        </div>
     );
 };
 
