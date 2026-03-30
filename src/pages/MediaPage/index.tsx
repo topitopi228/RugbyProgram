@@ -309,55 +309,6 @@ const MediaPage = () => {
                                     </div>
                                 </div>
                             </motion.div>
-
-                            {/* Premium Statistics */}
-                            <motion.div
-                                whileHover={{ y: -4 }}
-                                className="relative group overflow-hidden"
-                            >
-                                {/* Glow Border */}
-                                <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-500/40 via-purple-500/40 to-blue-500/40 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
-                                
-                                <div className="relative bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 shadow-xl overflow-hidden"
-                                    style={{
-                                        boxShadow: '0 10px 30px rgba(0,0,0,0.4)'
-                                    }}
-                                >
-                                    {/* Decorative Elements */}
-                                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-full blur-2xl"></div>
-                                    
-                                    <h3 className="relative text-lg font-bold text-white mb-5 flex items-center gap-2 pb-3 border-b border-slate-700/50">
-                                        <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
-                                        {t.statistics}
-                                    </h3>
-                                    <div className="relative grid grid-cols-2 gap-4">
-                                        <motion.div 
-                                            whileHover={{ scale: 1.05, y: -2 }}
-                                            className="text-center p-4 bg-gradient-to-br from-slate-800/60 to-slate-900/60 rounded-2xl border border-slate-700/30 hover:border-blue-500/40 transition-all shadow-lg"
-                                        >
-                                            <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center border border-blue-400/30">
-                                                <FaPlay className="w-4 h-4 text-blue-400" />
-                                            </div>
-                                            <p className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                                                {mediaItems.filter(i => i.type === 'video').length}
-                                            </p>
-                                            <p className="text-xs text-slate-400 mt-1 font-medium">{t.videos}</p>
-                                        </motion.div>
-                                        <motion.div 
-                                            whileHover={{ scale: 1.05, y: -2 }}
-                                            className="text-center p-4 bg-gradient-to-br from-slate-800/60 to-slate-900/60 rounded-2xl border border-slate-700/30 hover:border-purple-500/40 transition-all shadow-lg"
-                                        >
-                                            <div className="w-10 h-10 mx-auto mb-2 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center border border-purple-400/30">
-                                                <FaImage className="w-4 h-4 text-purple-400" />
-                                            </div>
-                                            <p className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                                                {mediaItems.filter(i => i.type === 'photo').length}
-                                            </p>
-                                            <p className="text-xs text-slate-400 mt-1 font-medium">{t.photos}</p>
-                                        </motion.div>
-                                    </div>
-                                </div>
-                            </motion.div>
                         </motion.div>
                     </div>
                 ) : (
