@@ -59,6 +59,13 @@ export const getCompanySponsors = (language: string): Sponsor[] => {
                   'Chervona Kalyna medical resort',
             url: 'https://chervona-kalina.rv.ua/'
         },
+        {
+            image: '/spin-6.webp',
+            name: language === 'UA' ? 'Головне управління розвідки МО України' : 
+                  language === 'EN' ? 'Main Intelligence Directorate of Ukraine' : 
+                  'Ukrán Védelmi Minisztérium Hírszerzési Főigazgatósága',
+            url: 'https://gur.gov.ua/'
+        },
     ];
     return sponsors;
 };
@@ -70,6 +77,11 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 image: '/spon1.webp',
                 name: 'ШАНДОР ФЕДІР',
                 position: 'Посол України в Угорщині',
+            },
+            {
+                image: '/spon11.webp',
+                name: 'БУДАНОВ КИРИЛО',
+                position: '',
             },
             {
                 image: '/spon2.webp',
@@ -115,6 +127,11 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 position: 'Ambassador of Ukraine to Hungary',
             },
             {
+                image: '/spon11.webp',
+                name: 'KYRYLO BUDANOV',
+                position: '',
+            },
+            {
                 image: '/spon2.webp',
                 name: 'YEVHEN BAZHENKOV',
                 position: 'Private entrepreneur',
@@ -156,6 +173,11 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
                 image: '/spon1.webp',
                 name: 'FEDIR SHANDOR',
                 position: 'Ukrajna magyarországi nagykövete',
+            },
+            {
+                image: '/spon11.webp',
+                name: 'KYRYLO BUDANOV',
+                position: '',
             },
             {
                 image: '/spon2.webp',

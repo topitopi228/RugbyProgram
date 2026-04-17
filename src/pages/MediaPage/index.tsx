@@ -199,27 +199,6 @@ const MediaPage = () => {
             <HeroSection title={t.title} subtitle={t.subtitle} />
 
             <div className="relative z-10 container mx-auto px-4 py-12">
-                {/* Category Filter */}
-                <div className="flex flex-wrap justify-center gap-3 mb-12">
-                    {categoryButtons.filter(button => !(isMobile && button.id === 'videos')).map((button) => (
-                        <motion.button
-                            key={button.id}
-                            onClick={() => setActiveCategory(button.id)}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className={`
-                                flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300
-                                ${activeCategory === button.id 
-                                    ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-900 shadow-lg shadow-amber-500/30' 
-                                    : 'bg-slate-800/50 backdrop-blur-sm text-gray-300 hover:bg-slate-700/50 border border-slate-700/50'
-                                }
-                            `}
-                        >
-                            {button.icon}
-                            <span>{button.label}</span>
-                        </motion.button>
-                    ))}
-                </div>
 
                 {/* Main Content Area */}
                 {isLoading ? (
@@ -230,13 +209,13 @@ const MediaPage = () => {
                         </div>
                     </div>
                 ) : filteredItems.length > 0 ? (
-                    <div className="grid lg:grid-cols-12 gap-8">
-                        {/* Premium Media Player - Left Side */}
+                    <div>
+                        {/* Premium Media Player */}
                         <motion.div 
                             initial={{ opacity: 1 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0 }}
-                            className="lg:col-span-8"
+                            className="max-w-5xl mx-auto"
                         >
                             <div className="relative group">
                                 {/* Glow Effect */}
@@ -259,56 +238,6 @@ const MediaPage = () => {
                                     />
                                 </div>
                             </div>
-                        </motion.div>
-
-                        {/* Premium Info & Stats - Right Side */}
-                        <motion.div 
-                            initial={{ opacity: 1 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0 }}
-                            className="lg:col-span-4 space-y-6"
-                        >
-                            {/* Premium Current Media Info */}
-                            <motion.div 
-                                whileHover={{ y: -4 }}
-                                className="relative group overflow-hidden"
-                            >
-                                {/* Glow Border */}
-                                <div className="absolute -inset-[1px] bg-gradient-to-r from-amber-500/40 via-yellow-500/40 to-amber-500/40 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
-                                
-                                <div className="relative bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 shadow-xl overflow-hidden"
-                                    style={{
-                                        boxShadow: '0 10px 30px rgba(0,0,0,0.4)'
-                                    }}
-                                >
-                                    {/* Decorative Elements */}
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-500/10 to-transparent rounded-full blur-2xl"></div>
-                                    
-                                    <h3 className="relative text-xl font-bold bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent mb-5 pb-3 border-b border-slate-700/50">
-                                        {filteredItems[currentIndex]?.title}
-                                    </h3>
-                                    <div className="relative space-y-3">
-                                        <div className="flex items-center justify-between p-3 bg-slate-800/40 rounded-xl border border-slate-700/30 hover:border-amber-500/30 transition-colors">
-                                            <span className="text-slate-400 text-sm font-medium">{t.type}</span>
-                                            <span className="text-amber-400 font-semibold">
-                                                {filteredItems[currentIndex]?.type === 'video' ? t.videos : t.photos}
-                                            </span>
-                                        </div>
-                                        {filteredItems[currentIndex]?.date && (
-                                            <div className="flex items-center justify-between p-3 bg-slate-800/40 rounded-xl border border-slate-700/30 hover:border-amber-500/30 transition-colors">
-                                                <span className="text-slate-400 text-sm font-medium">{t.date}</span>
-                                                <span className="text-white font-semibold">{filteredItems[currentIndex].date}</span>
-                                            </div>
-                                        )}
-                                        {filteredItems[currentIndex]?.duration && (
-                                            <div className="flex items-center justify-between p-3 bg-slate-800/40 rounded-xl border border-slate-700/30 hover:border-amber-500/30 transition-colors">
-                                                <span className="text-slate-400 text-sm font-medium">{t.duration}</span>
-                                                <span className="text-white font-semibold">{filteredItems[currentIndex].duration}</span>
-                                            </div>
-                                        )}
-                                    </div>
-                                </div>
-                            </motion.div>
                         </motion.div>
                     </div>
                 ) : (

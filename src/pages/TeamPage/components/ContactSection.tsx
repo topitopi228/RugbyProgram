@@ -163,7 +163,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                             {/* Infinite scrolling marquee */}
                             <div className="flex">
                                 <div className="flex animate-marquee">
-                                    {[1, 2, 3, 4, 5].map((num) => (
+                                    {[1, 2, 3, 4, 5, 6].map((num) => (
                                         <div
                                             key={`set1-${num}`}
                                             className="mx-6 md:mx-8 flex-shrink-0 group cursor-pointer"
@@ -186,7 +186,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                                 </div>
                                 {/* Duplicate for seamless loop */}
                                 <div className="flex animate-marquee" aria-hidden="true">
-                                    {[1, 2, 3, 4, 5].map((num) => (
+                                    {[1, 2, 3, 4, 5, 6].map((num) => (
                                         <div
                                             key={`set2-${num}`}
                                             className="mx-6 md:mx-8 flex-shrink-0 group cursor-pointer"

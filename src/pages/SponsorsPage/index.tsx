@@ -39,16 +39,9 @@ const SponsorsPage = () => {
     const companySponsors = getCompanySponsors(language);
     const personalSponsors = getPersonalSponsors(language);
 
-    const personalSponsorsTitle = (
-        <>
-            <span className="block text-2xl md:text-3xl font-bold text-white mb-2">
-                {language === 'UA' ? 'Наші меценати' : language === 'EN' ? 'Our patrons' : 'Mecénásaink'}
-            </span>
-            <span className="text-base text-gray-300 font-medium">
-                {language === 'UA' ? 'хто вже нас підтримав' : language === 'EN' ? 'who have previously supported the development of Ukrainian rugby' : 'akik korábban támogatták az ukrán rögbi fejlődését'}
-            </span>
-        </>
-    );
+    const personalSponsorsTitle = language === 'UA' ? 'Хто вже нас підтримав' : 
+                                    language === 'EN' ? 'Who has already supported us' : 
+                                    'Akik már támogattak minket';
 
     return (
         <div className="min-h-screen relative overflow-hidden text-white bg-gradient-to-br from-slate-950 via-indigo-950/50 to-slate-950">
@@ -305,7 +298,7 @@ const SponsorsPage = () => {
                         </div>
                     </motion.div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
                         {companySponsors.map((sponsor, index) => (
                             <motion.div
                                 key={index}
@@ -318,9 +311,9 @@ const SponsorsPage = () => {
                                 <div className="absolute -inset-0.5 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-2xl opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
                                 
                                 {/* Card Content */}
-                                <a href={sponsor.url} target="_blank" rel="noopener noreferrer" className="relative block">
-                                    <div className="relative bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border-2 border-slate-700/30 group-hover:border-amber-500/30 transition-all duration-500 p-4 h-full">
-                                        <div className="h-24 flex items-center justify-center mb-3 bg-gradient-to-br from-slate-800/50 to-slate-700/30 rounded-xl">
+                                <a href={sponsor.url} target="_blank" rel="noopener noreferrer" className="relative block h-full">
+                                    <div className="relative bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-2xl border-2 border-slate-700/30 group-hover:border-amber-500/30 transition-all duration-500 p-6 h-full">
+                                        <div className="h-40 flex items-center justify-center mb-4 bg-gradient-to-br from-slate-800/50 to-slate-700/30 rounded-xl p-4">
                                             <img
                                                 src={sponsor.image}
                                                 alt={sponsor.name}
@@ -329,7 +322,7 @@ const SponsorsPage = () => {
                                                 className="max-h-full max-w-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
                                             />
                                         </div>
-                                        <h3 className="text-sm font-bold text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-amber-300 group-hover:to-yellow-400 transition-all duration-300">
+                                        <h3 className="text-base font-bold text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-amber-300 group-hover:to-yellow-400 transition-all duration-300 leading-snug min-h-[3rem] flex items-center justify-center">
                                             {sponsor.name}
                                         </h3>
                                     </div>
@@ -379,9 +372,11 @@ const SponsorsPage = () => {
                                     <h3 className="text-lg font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-amber-300 group-hover:to-yellow-400 transition-all duration-300 mb-1">
                                         {sponsor.name}
                                     </h3>
-                                    <p className="text-gray-500 text-xs font-medium">
-                                        {sponsor.position}
-                                    </p>
+                                    {sponsor.position && (
+                                        <p className="text-gray-500 text-xs font-medium">
+                                            {sponsor.position}
+                                        </p>
+                                    )}
                                 </div>
                             </motion.div>
                         ))}

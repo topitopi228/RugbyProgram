@@ -30,6 +30,79 @@ export interface ExternalLink {
 
 export const getMediaItems = (): MediaItem[] => {
     return [
+        // New Photos - media28-31 (First)
+        {
+            id: 101,
+            type: 'image',
+            url: '/media28.webp',
+            poster: '/media28.webp',
+            title: {
+                UA: 'Командне фото',
+                EN: 'Team photo',
+                HUN: 'Csapatfotó'
+            },
+            category: 'photos'
+        },
+        {
+            id: 102,
+            type: 'image',
+            url: '/media29.webp',
+            poster: '/media29.webp',
+            title: {
+                UA: 'Тренувальний момент',
+                EN: 'Training moment',
+                HUN: 'Edzési pillanat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 103,
+            type: 'image',
+            url: '/media30.webp',
+            poster: '/media30.webp',
+            title: {
+                UA: 'Командна підготовка',
+                EN: 'Team preparation',
+                HUN: 'Csapat felkészítés'
+            },
+            category: 'photos'
+        },
+        {
+            id: 104,
+            type: 'image',
+            url: '/media31.webp',
+            poster: '/media31.webp',
+            title: {
+                UA: 'Спортивна практика',
+                EN: 'Sports practice',
+                HUN: 'Sport gyakorlat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 105,
+            type: 'image',
+            url: '/media32.webp',
+            poster: '/media32.webp',
+            title: {
+                UA: 'Тренувальний процес',
+                EN: 'Training process',
+                HUN: 'Edzési folyamat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 106,
+            type: 'image',
+            url: '/media33.webp',
+            poster: '/media33.webp',
+            title: {
+                UA: 'Командна гра',
+                EN: 'Team game',
+                HUN: 'Csapatjáték'
+            },
+            category: 'photos'
+        },
         // Videos
         {
             id: 1,
@@ -89,42 +162,6 @@ export const getMediaItems = (): MediaItem[] => {
                 UA: 'НТЗ на Драгобраті - Командне фото', 
                 EN: 'Training camp at Dragobrat - Team photo', 
                 HUN: 'Edzőtábor Dragobratban - Csapatfotó' 
-            },
-            category: 'photos'
-        },
-        {
-            id: 16,
-            type: 'image',
-            url: '/drag2.webp',
-            poster: '/drag2.webp',
-            title: { 
-                UA: 'НТЗ на Драгобраті - Тренування', 
-                EN: 'Training camp at Dragobrat - Training', 
-                HUN: 'Edzőtábor Dragobratban - Edzés' 
-            },
-            category: 'photos'
-        },
-        {
-            id: 17,
-            type: 'image',
-            url: '/drag3.webp',
-            poster: '/drag3.webp',
-            title: { 
-                UA: 'Гірські тренування', 
-                EN: 'Mountain training', 
-                HUN: 'Hegyi edzés' 
-            },
-            category: 'photos'
-        },
-        {
-            id: 18,
-            type: 'image',
-            url: '/drag4.webp',
-            poster: '/drag4.webp',
-            title: { 
-                UA: 'Фізична підготовка', 
-                EN: 'Physical training', 
-                HUN: 'Fizikai felkészítés' 
             },
             category: 'photos'
         },
