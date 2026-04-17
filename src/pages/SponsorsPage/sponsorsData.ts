@@ -81,7 +81,7 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon11.webp',
                 name: 'БУДАНОВ КИРИЛО',
-                position: '',
+                position: 'Почесний президент асоціації регбі України',
             },
             {
                 image: '/spon2.webp',
@@ -129,7 +129,7 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon11.webp',
                 name: 'KYRYLO BUDANOV',
-                position: '',
+                position: 'Honorary President of the Rugby Association of Ukraine',
             },
             {
                 image: '/spon2.webp',
@@ -177,7 +177,7 @@ export const getPersonalSponsors = (language: string): Sponsor[] => {
             {
                 image: '/spon11.webp',
                 name: 'KYRYLO BUDANOV',
-                position: '',
+                position: 'Ukrajna Rögbi Szövetség tiszteletbeli elnöke',
             },
             {
                 image: '/spon2.webp',

@@ -154,18 +154,6 @@ export const getMediaItems = (): MediaItem[] => {
         },
         // Photos
         {
-            id: 15,
-            type: 'image',
-            url: '/drag1.webp',
-            poster: '/drag1.webp',
-            title: { 
-                UA: 'НТЗ на Драгобраті - Командне фото', 
-                EN: 'Training camp at Dragobrat - Team photo', 
-                HUN: 'Edzőtábor Dragobratban - Csapatfotó' 
-            },
-            category: 'photos'
-        },
-        {
             id: 19,
             type: 'image',
             url: '/drag5.webp',
