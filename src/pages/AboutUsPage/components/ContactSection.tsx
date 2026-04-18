@@ -9,13 +9,10 @@ interface ContactSectionProps {
 const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
     return (
         <div className="w-full relative overflow-hidden">
-            {/* Modern Background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-gray-900 to-slate-950"></div>
-
-            {/* Animated Background Blobs */}
-            <div className="absolute inset-0 overflow-hidden opacity-20">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-500/30 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"></div>
+            {/* Dynamic Background */}
+            <div className="absolute inset-0">
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-purple-950/30 to-slate-900"></div>
+                <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
             </div>
 
             {/* Subtle Grid Pattern */}
@@ -137,14 +134,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="inline-flex items-center px-3 py-1.5 mb-3 text-xs font-semibold tracking-wide text-yellow-400 uppercase bg-yellow-400/10 rounded-full border border-yellow-400/20 backdrop-blur-sm"
+                                className="inline-flex items-center px-6 py-3 mb-6 text-base font-bold tracking-wider text-yellow-400 uppercase bg-yellow-400/10 rounded-full border-2 border-yellow-400/30 backdrop-blur-sm shadow-lg shadow-yellow-400/20"
                             >
                                 {language === 'UA' ? 'Партнери' : language === 'EN' ? 'Partners' : 'Partnerek'}
                             </motion.div>
-
-                            <h3 className="text-2xl md:text-3xl font-bold text-white">
-                                {language === 'UA' ? 'Наші спонсори' : language === 'EN' ? 'Our Sponsors' : 'Szponzoraink'}
-                            </h3>
                         </motion.div>
 
                         <div className="relative py-8 overflow-hidden">

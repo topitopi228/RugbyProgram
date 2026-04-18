@@ -9,14 +9,10 @@ interface ContactSectionProps {
 const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
     return (
         <div className="w-full relative overflow-hidden">
-            {/* Premium Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-indigo-950/50 to-slate-950"></div>
-
-            {/* Enhanced Animated Background */}
-            <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-amber-600/20 to-yellow-600/20 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-indigo-600/20 to-purple-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-full blur-3xl"></div>
+            {/* Dynamic Background */}
+            <div className="absolute inset-0">
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-purple-950/30 to-slate-900"></div>
+                <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
             </div>
 
             {/* Subtle Grid Pattern */}
@@ -31,15 +27,17 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                 }}
             ></div>
 
-            <div className="relative text-white py-12 px-4 sm:px-6 lg:px-8">
+            <div className="relative text-white py-12">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="max-w-6xl mx-auto relative z-10"
+                    className="relative z-10"
                 >
-                    <div className="text-center mb-10">
+                    {/* Contact cards section with max-width */}
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-10">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -59,80 +57,82 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                                     ? 'Contact us in any convenient way!'
                                     : 'Lépjen velünk kapcsolatba bármilyen kényelmes módon!'}
                         </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                            {/* Phone */}
+                            <motion.a
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.1 }}
+                                whileHover={{ y: -8 }}
+                                href="tel:+380509498209"
+                                className="group relative"
+                            >
+                                <div className="absolute -inset-1 bg-gradient-to-br from-amber-500 via-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-60 blur-xl transition-all duration-500"></div>
+                                <div className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 rounded-2xl border-2 border-slate-700/30 group-hover:border-amber-500/50 transition-all duration-500 shadow-2xl flex flex-col items-center text-center h-full hover:shadow-amber-500/20">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-yellow-400/30 to-amber-500/30 rounded-2xl flex items-center justify-center mb-4 border-2 border-yellow-400/30 shadow-lg shadow-yellow-500/20 group-hover:scale-110 transition-transform duration-300">
+                                        <svg className="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                    </div>
+                                    <span className="text-base font-bold text-white mb-1 group-hover:text-yellow-400 transition-colors">
+                                        {language === 'UA' ? 'Телефон' : language === 'EN' ? 'Phone' : 'Telefon'}
+                                    </span>
+                                    <span className="text-slate-300 text-sm font-medium">+380 50 949 82 09</span>
+                                </div>
+                            </motion.a>
+
+                            {/* Email */}
+                            <motion.a
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                                whileHover={{ y: -8 }}
+                                href="mailto:shashero10@gmail.com"
+                                className="group relative"
+                            >
+                                <div className="absolute -inset-1 bg-gradient-to-br from-amber-500 via-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-60 blur-xl transition-all duration-500"></div>
+                                <div className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 rounded-2xl border-2 border-slate-700/30 group-hover:border-amber-500/50 transition-all duration-500 shadow-2xl flex flex-col items-center text-center h-full hover:shadow-amber-500/20">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-yellow-400/30 to-amber-500/30 rounded-2xl flex items-center justify-center mb-4 border-2 border-yellow-400/30 shadow-lg shadow-yellow-500/20 group-hover:scale-110 transition-transform duration-300">
+                                        <svg className="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <span className="text-base font-bold text-white mb-1 group-hover:text-yellow-400 transition-colors">Email</span>
+                                    <span className="text-slate-300 text-sm font-medium break-all">shashero10@gmail.com</span>
+                                </div>
+                            </motion.a>
+
+                            {/* Telegram */}
+                            <motion.a
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.3 }}
+                                whileHover={{ y: -8 }}
+                                href="https://t.me/Shashero"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative"
+                            >
+                                <div className="absolute -inset-1 bg-gradient-to-br from-amber-500 via-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-60 blur-xl transition-all duration-500"></div>
+                                <div className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 rounded-2xl border-2 border-slate-700/30 group-hover:border-amber-500/50 transition-all duration-500 shadow-2xl flex flex-col items-center text-center h-full hover:shadow-amber-500/20">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-yellow-400/30 to-amber-500/30 rounded-2xl flex items-center justify-center mb-4 border-2 border-yellow-400/30 shadow-lg shadow-yellow-500/20 group-hover:scale-110 transition-transform duration-300">
+                                        <svg className="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.243-1.865-.44-.752-.245-1.35-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                                        </svg>
+                                    </div>
+                                    <span className="text-base font-bold text-white mb-1 group-hover:text-yellow-400 transition-colors">Telegram</span>
+                                    <span className="text-slate-300 text-sm font-medium">@Shashero</span>
+                                </div>
+                            </motion.a>
+                        </div>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-                        {/* Phone */}
-                        <motion.a
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            whileHover={{ y: -8 }}
-                            href="tel:+380509498209"
-                            className="group relative"
-                        >
-                            <div className="absolute -inset-1 bg-gradient-to-br from-amber-500 via-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-60 blur-xl transition-all duration-500"></div>
-                            <div className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 rounded-2xl border-2 border-slate-700/30 group-hover:border-amber-500/50 transition-all duration-500 shadow-2xl flex flex-col items-center text-center h-full hover:shadow-amber-500/20">
-                                <div className="w-14 h-14 bg-gradient-to-br from-yellow-400/30 to-amber-500/30 rounded-2xl flex items-center justify-center mb-4 border-2 border-yellow-400/30 shadow-lg shadow-yellow-500/20 group-hover:scale-110 transition-transform duration-300">
-                                    <svg className="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                    </svg>
-                                </div>
-                                <span className="text-base font-bold text-white mb-1 group-hover:text-yellow-400 transition-colors">
-                                    {language === 'UA' ? 'Телефон' : language === 'EN' ? 'Phone' : 'Telefon'}
-                                </span>
-                                <span className="text-slate-300 text-sm font-medium">+380 50 949 82 09</span>
-                            </div>
-                        </motion.a>
-
-                        {/* Email */}
-                        <motion.a
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                            whileHover={{ y: -8 }}
-                            href="mailto:shashero10@gmail.com"
-                            className="group relative"
-                        >
-                            <div className="absolute -inset-1 bg-gradient-to-br from-amber-500 via-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-60 blur-xl transition-all duration-500"></div>
-                            <div className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 rounded-2xl border-2 border-slate-700/30 group-hover:border-amber-500/50 transition-all duration-500 shadow-2xl flex flex-col items-center text-center h-full hover:shadow-amber-500/20">
-                                <div className="w-14 h-14 bg-gradient-to-br from-yellow-400/30 to-amber-500/30 rounded-2xl flex items-center justify-center mb-4 border-2 border-yellow-400/30 shadow-lg shadow-yellow-500/20 group-hover:scale-110 transition-transform duration-300">
-                                    <svg className="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                    </svg>
-                                </div>
-                                <span className="text-base font-bold text-white mb-1 group-hover:text-yellow-400 transition-colors">Email</span>
-                                <span className="text-slate-300 text-sm font-medium break-all">shashero10@gmail.com</span>
-                            </div>
-                        </motion.a>
-
-                        {/* Telegram */}
-                        <motion.a
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
-                            whileHover={{ y: -8 }}
-                            href="https://t.me/Shashero"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group relative"
-                        >
-                            <div className="absolute -inset-1 bg-gradient-to-br from-amber-500 via-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-60 blur-xl transition-all duration-500"></div>
-                            <div className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 rounded-2xl border-2 border-slate-700/30 group-hover:border-amber-500/50 transition-all duration-500 shadow-2xl flex flex-col items-center text-center h-full hover:shadow-amber-500/20">
-                                <div className="w-14 h-14 bg-gradient-to-br from-yellow-400/30 to-amber-500/30 rounded-2xl flex items-center justify-center mb-4 border-2 border-yellow-400/30 shadow-lg shadow-yellow-500/20 group-hover:scale-110 transition-transform duration-300">
-                                    <svg className="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.243-1.865-.44-.752-.245-1.35-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
-                                    </svg>
-                                </div>
-                                <span className="text-base font-bold text-white mb-1 group-hover:text-yellow-400 transition-colors">Telegram</span>
-                                <span className="text-slate-300 text-sm font-medium">@Shashero</span>
-                            </div>
-                        </motion.a>
-                    </div>
-
+                    {/* Sponsors section - full width */}
                     <div className="mt-16">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -145,14 +145,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="inline-flex items-center px-3 py-1.5 mb-3 text-xs font-semibold tracking-wide text-yellow-400 uppercase bg-yellow-400/10 rounded-full border border-yellow-400/20 backdrop-blur-sm"
+                                className="inline-flex items-center px-6 py-3 mb-6 text-base font-bold tracking-wider text-yellow-400 uppercase bg-yellow-400/10 rounded-full border-2 border-yellow-400/30 backdrop-blur-sm shadow-lg shadow-yellow-400/20"
                             >
                                 {language === 'UA' ? 'Партнери' : language === 'EN' ? 'Partners' : 'Partnerek'}
                             </motion.div>
-
-                            <h3 className="text-2xl md:text-3xl font-bold text-white">
-                                {language === 'UA' ? 'Наші спонсори' : language === 'EN' ? 'Our Sponsors' : 'Szponzoraink'}
-                            </h3>
                         </motion.div>
 
                         <div className="relative py-8 overflow-hidden">

@@ -11,8 +11,11 @@ const ClubSection: React.FC<ClubSectionProps> = ({ language }) => {
 
     return (
         <div id="club-section" className="relative py-24 overflow-hidden">
-            {/* Premium Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
+            {/* Dynamic Background - matches GoalsContent section */}
+            <div className="absolute inset-0">
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-purple-950/30 to-slate-900"></div>
+                <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+            </div>
             
             {/* Animated Floating Particles */}
             {[...Array(15)].map((_, i) => (
@@ -84,11 +87,11 @@ const ClubSection: React.FC<ClubSectionProps> = ({ language }) => {
                     {/* Premium Card Container */}
                     <div className="relative">
                         <div 
-                            className="relative bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-3xl border border-slate-700/50 shadow-2xl overflow-hidden"
+                            className="relative bg-gradient-to-br from-slate-800/60 to-slate-700/50 backdrop-blur-xl rounded-3xl border border-slate-600/40 shadow-2xl overflow-hidden"
                         >
                             {/* Decorative Corner Elements */}
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-slate-600/5 to-transparent rounded-full blur-3xl"></div>
-                            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-slate-600/5 to-transparent rounded-full blur-3xl"></div>
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/5 to-transparent rounded-full blur-3xl"></div>
+                            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-500/5 to-transparent rounded-full blur-3xl"></div>
 
                         <div className="relative z-10 px-6 py-12 md:px-12 md:py-16">
                             {/* Badge */}
