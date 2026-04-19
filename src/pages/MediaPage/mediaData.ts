@@ -103,6 +103,78 @@ export const getMediaItems = (): MediaItem[] => {
             },
             category: 'photos'
         },
+        {
+            id: 107,
+            type: 'image',
+            url: '/media34.webp',
+            poster: '/media34.webp',
+            title: {
+                UA: 'Тренувальний момент',
+                EN: 'Training moment',
+                HUN: 'Edzési pillanat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 108,
+            type: 'image',
+            url: '/media35.webp',
+            poster: '/media35.webp',
+            title: {
+                UA: 'Командна підготовка',
+                EN: 'Team preparation',
+                HUN: 'Csapat felkészítés'
+            },
+            category: 'photos'
+        },
+        {
+            id: 109,
+            type: 'image',
+            url: '/media36.webp',
+            poster: '/media36.webp',
+            title: {
+                UA: 'Спортивна практика',
+                EN: 'Sports practice',
+                HUN: 'Sport gyakorlat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 110,
+            type: 'image',
+            url: '/media37.webp',
+            poster: '/media37.webp',
+            title: {
+                UA: 'Тренувальний процес',
+                EN: 'Training process',
+                HUN: 'Edzési folyamat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 111,
+            type: 'image',
+            url: '/media38.webp',
+            poster: '/media38.webp',
+            title: {
+                UA: 'Командна робота',
+                EN: 'Teamwork',
+                HUN: 'Csapatmunka'
+            },
+            category: 'photos'
+        },
+        {
+            id: 112,
+            type: 'image',
+            url: '/media39.webp',
+            poster: '/media39.webp',
+            title: {
+                UA: 'Ігрова практика',
+                EN: 'Game practice',
+                HUN: 'Játék gyakorlat'
+            },
+            category: 'photos'
+        },
         // Videos
         {
             id: 1,

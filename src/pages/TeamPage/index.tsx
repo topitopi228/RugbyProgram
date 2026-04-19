@@ -45,24 +45,7 @@ const TeamPage = () => {
             
             <HeroSection title={t.title} />
 
-            {/* Transition Section with Decorative Elements */}
-            <div className="relative -mt-20 z-30">
-                <div className="container mx-auto px-4">
-                    {/* Subtitle Section */}
-                    <motion.div 
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        className="text-center mb-20"
-                    >
-                        <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-slate-900/90 to-slate-800/90 backdrop-blur-xl rounded-full border border-amber-500/30 shadow-2xl">
-                            <span className="text-amber-400 font-semibold text-lg tracking-wide">
-                                {language === 'UA' ? 'Наша команда професіоналів' : language === 'EN' ? 'Our Professional Team' : 'Professzionális csapatunk'}
-                            </span>
-                        </div>
-                    </motion.div>
-                </div>
-            </div>
+            {/* Transition Section - removed subtitle to show more sky */}
 
             <div className="container mx-auto px-4 py-8 relative z-10">
                 <TeamSection
