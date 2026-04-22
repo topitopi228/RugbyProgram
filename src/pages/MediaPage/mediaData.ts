@@ -175,6 +175,54 @@ export const getMediaItems = (): MediaItem[] => {
             },
             category: 'photos'
         },
+        {
+            id: 113,
+            type: 'image',
+            url: '/media60.webp',
+            poster: '/media60.webp',
+            title: {
+                UA: 'Тренувальний момент',
+                EN: 'Training moment',
+                HUN: 'Edzési pillanat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 114,
+            type: 'image',
+            url: '/media61.webp',
+            poster: '/media61.webp',
+            title: {
+                UA: 'Командна підготовка',
+                EN: 'Team preparation',
+                HUN: 'Csapat felkészítés'
+            },
+            category: 'photos'
+        },
+        {
+            id: 115,
+            type: 'image',
+            url: '/media62.webp',
+            poster: '/media62.webp',
+            title: {
+                UA: 'Спортивна практика',
+                EN: 'Sports practice',
+                HUN: 'Sport gyakorlat'
+            },
+            category: 'photos'
+        },
+        {
+            id: 116,
+            type: 'image',
+            url: '/media64.webp',
+            poster: '/media64.webp',
+            title: {
+                UA: 'Командна робота',
+                EN: 'Teamwork',
+                HUN: 'Csapatmunka'
+            },
+            category: 'photos'
+        },
         // Videos
         {
             id: 1,
