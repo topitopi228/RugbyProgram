@@ -110,7 +110,15 @@ const NewsPage = () => {
                     title: 'Збори гравців сутички в Ужгороді',
                     description: 'Семеро гравців сутички юнацької збірної України з регбі провели чотириденні навчально-тренувальні збори в місті Ужгород. Упродовж зборів відпрацьовували ліфт, гру в повітрі, командну взаємодію та комунікацію. Команда суттєво додала в зіграності й стала ще більш згуртованою. Збори пройшли під керівництвом тренера Максима Дулі, менеджера Марцела Цитряка та лікаря Олександра Ткаченка. Усі учасники відпрацювали на максимум — потужно, дисципліновано та з повною віддачею.',
                     expense: '750',
-                    image: '/news13.webp'
+                    image: '/media28.webp'
+                },
+                {
+                    id: 14,
+                    date: '21-23 Квітня 2026',
+                    title: 'Завершено тренувальні збори в сутичках',
+                    description: 'Успішно завершилися навчально-тренувальні збори гравців сутички збірної України U16 з регбі-7. Упродовж трьох днів команда працювала над покращенням техніки виконання стандартних положень, зокрема схватів та коридорів. Особлива увага приділялася синхронізації дій гравців першої лінії та відпрацюванню тактичних схем. Збори пройшли в інтенсивному режимі з повною віддачею від кожного учасника.',
+                    expense: '750',
+                    image: '/news14.webp'
                 }
 
             ]
@@ -215,7 +223,15 @@ const NewsPage = () => {
         title: 'Forward Players Training Camp in Uzhhorod',
         description: 'Seven forward players of the Ukrainian youth rugby national team completed a four-day training camp in Uzhhorod. During the camp, they practiced lineouts, aerial play, team coordination, and communication. The team significantly improved their cohesion and became even more united. The camp was conducted under the leadership of coach Maksym Dulia, manager Martsel Tsytriak, and team doctor Oleksandr Tkachenko. All participants worked to the maximum — powerfully, disciplined, and with complete dedication.',
         expense: '750',
-        image: '/news13.webp'
+        image: '/media28.webp'
+    },
+    {
+        id: 14,
+        date: 'April 21-23, 2026',
+        title: 'Forward Training Camp Completed',
+        description: 'The forward players training camp of Ukraine U16 rugby-7 national team has been successfully completed. For three days, the team worked on improving the technique of set pieces, particularly scrums and lineouts. Special attention was paid to synchronizing the actions of front row players and practicing tactical schemes. The camp was held in intensive mode with full dedication from each participant.',
+        expense: '750',
+        image: '/news14.webp'
     }
 ]
         },
@@ -319,7 +335,15 @@ const NewsPage = () => {
         title: 'Csatárjátékosok edzőtábora Ungvárott',
         description: 'Az ukrán ifjúsági rögbi válogatott hét csatárjátékosa négynapos edzőtábort teljesített Ungvárott. A tábor során gyakorolták a bedobásokat, a levegőben való játékot, a csapatkoordinációt és a kommunikációt. A csapat jelentősen javította az összhangjukat és még egységesebbé vált. Az edzőtábort Maksym Dulia edző, Martsel Tsytriak menedzser és Olekszandr Tkachenko csapatorvos irányításával tartották. Minden résztvevő maximálisan dolgozott — erőteljesen, fegyelmezetten és teljes elkötelezettséggel.',
         expense: '750',
-        image: '/news13.webp'
+        image: '/media28.webp'
+    },
+    {
+        id: 14,
+        date: '2026. április 21-23.',
+        title: 'Csatár edzőtábor befejezve',
+        description: 'Sikeresen befejeződött az ukrán U16-os rögbi-7 válogatott csatárjátékosainak edzőtábora. Három napig a csapat a standard helyzetek technikájának javításán dolgozott, különösen a scrumok és bedobások terén. Különös figyelmet fordítottak az első sor játékosainak szinkronizálására és a taktikai sémák gyakorlására. Az edzőtábor intenzív üzemmódban zajlott, minden résztvevő teljes elkötelezettségével.',
+        expense: '750',
+        image: '/news14.webp'
     }
 ]
         }

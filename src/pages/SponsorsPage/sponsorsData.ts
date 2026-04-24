@@ -25,6 +25,13 @@ export interface Translations {
 export const getCompanySponsors = (language: string): Sponsor[] => {
     const sponsors = [
         {
+            image: '/spin-6.webp',
+            name: language === 'UA' ? 'Головне управління розвідки МО України' : 
+                  language === 'EN' ? 'Main Intelligence Directorate of Ukraine' : 
+                  'Ukrán Védelmi Minisztérium Hírszerzési Főigazgatósága',
+            url: 'https://gur.gov.ua/'
+        },
+        {
             image: '/spin-4.webp',
             name: language === 'UA' ? 'БФ "Міла" Олексія Юренка' : 
                   language === 'EN' ? 'Charity Fund "Mila" by Oleksiy Yurenko' : 
@@ -58,13 +65,6 @@ export const getCompanySponsors = (language: string): Sponsor[] => {
                   language === 'EN' ? 'Chervona Kalyna medical resort' : 
                   'Chervona Kalyna medical resort',
             url: 'https://chervona-kalina.rv.ua/'
-        },
-        {
-            image: '/spin-6.webp',
-            name: language === 'UA' ? 'Головне управління розвідки МО України' : 
-                  language === 'EN' ? 'Main Intelligence Directorate of Ukraine' : 
-                  'Ukrán Védelmi Minisztérium Hírszerzési Főigazgatósága',
-            url: 'https://gur.gov.ua/'
         },
     ];
     return sponsors;

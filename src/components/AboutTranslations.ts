@@ -37,13 +37,6 @@ export const translations = {
             location: 'м. Батумі, Грузія',
             funding: '20,385 €'
         },
-        event6: {
-            date: '21-23 Квітня 2026',
-            title: 'Збір сутички в Ужгороді',
-            description: 'Навчально-тренувальні збори гравців сутички юнацької збірної України з регбі',
-            location: 'м. Ужгород, Україна',
-            funding: '750 €'
-        },
         contactTitle: "Зв'яжіться з нами",
         contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
         contactPhone: '+380 50 949 82 09',
@@ -104,13 +97,6 @@ export const translations = {
             description: 'Team preparation for international competitions',
             location: 'Batumi, Georgia',
             funding: '20,385 €'
-        },
-        event6: {
-            date: 'April 21-23, 2026',
-            title: 'Collision Training Camp in Uzhhorod',
-            description: 'Training camp for collision practice of Ukraine youth rugby team players',
-            location: 'Uzhhorod, Ukraine',
-            funding: '750 €'
         },
         contactTitle: "Contact Us",
         contactText: "Have questions or want to support our team? Contact us using the information below.",
@@ -173,13 +159,6 @@ export const translations = {
             location: 'Batumi, Grúzia',
             funding: '20,385 €'
         },
-        event6: {
-            date: '2026. április 21-23.',
-            title: 'Ütközés edzőtábor Ungváron',
-            description: 'Ütközési gyakorlatok az ukrán ifjúsági rögbi válogatott játékosainak',
-            location: 'Ungvár, Ukrajna',
-            funding: '750 €'
-        },
         contactTitle: "Lépjen kapcsolatba velünk",
         contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
         contactPhone: '+380 50 949 82 09',
@@ -206,20 +185,6 @@ export const translations = {
 };
 
 export const getEvents = (language: string, t: any) => [
-    {
-        id: 6,
-        image: '/maj13.webp',
-        date: t.event6.date,
-        title: t.event6.title,
-        description: t.event6.description,
-        location: t.event6.location,
-        funding: t.event6.funding,
-        details: language === 'UA' ?
-            'Плануються навчально-тренувальні збори гравців сутички юнацької збірної України з регбі, які відбудуться в місті Ужгород. Метою зборів є подальша підготовка спортсменів до майбутніх міжнародних турнірів та підвищення рівня їхньої гри. Упродовж зборів основну увагу буде зосереджено на груповій взаємодії, командній грі, стандартних положеннях і комунікації на полі.' :
-            language === 'EN' ?
-                'Training camp for collision practice of Ukraine youth rugby team players is planned in Uzhhorod. The aim of the camp is to further prepare athletes for upcoming international tournaments and improve their game level. During the camp, focus will be on group interaction, team play, standard positions and communication on the field.' :
-                'Edzőtábor tervezve az ukrán ifjúsági rögbi válogatott ütközési gyakorlataihoz Ungváron. A tábor célja a sportolók további felkészítése a közelgő nemzetközi tornákra és játékszintjük emelése. A tábor során a hangsúly a csoportos együttműködésen, a csapatjátékon, a standard helyzetekén és a pályán való kommunikáción lesz.'
-    },
     {
         id: 1,
         image: '/maj2.webp',
@@ -811,74 +776,7 @@ export const fundingBreakdowns = {
             HUN: 'Orvosi kellékek és biztosítás'
         }
     }
-],
-    6: [ // Збір сутички в Ужгороді
-        {
-            category: {
-                UA: 'Проживання та харчування',
-                EN: 'Accommodation & Meals',
-                HUN: 'Szállás és étkezés'
-            },
-            amount: '300 €',
-            description: {
-                UA: 'Проживання для тренерського складу та харчування всіх учасників зборів',
-                EN: 'Accommodation for coaching staff and meals for all participants',
-                HUN: 'Szállás az edzői személyzet számára és étkezés minden résztvevő számára'
-            }
-        },
-        {
-            category: {
-                UA: 'Транспорт',
-                EN: 'Transport',
-                HUN: 'Szállítás'
-            },
-            amount: '150 €',
-            description: {
-                UA: 'Трансфер з різних міст до Ужгорода та назад',
-                EN: 'Transfer from various cities to Uzhhorod and back',
-                HUN: 'Transzfer különböző városokból Ungvárra és vissza'
-            }
-        },
-        {
-            category: {
-                UA: 'Оренда майданчика',
-                EN: 'Field Rental',
-                HUN: 'Pálya bérlés'
-            },
-            amount: '150 €',
-            description: {
-                UA: 'Оренда тренувального майданчика на 3 дні',
-                EN: 'Training field rental for 3 days',
-                HUN: 'Edzőpálya bérlése 3 napra'
-            }
-        },
-        {
-            category: {
-                UA: 'Інвентар та обладнання',
-                EN: 'Equipment & Gear',
-                HUN: 'Felszerelés és eszközök'
-            },
-            amount: '100 €',
-            description: {
-                UA: 'Тренувальні м\'ячі, манішки, медична аптечка',
-                EN: 'Training balls, bibs, medical kit',
-                HUN: 'Edzőlabdák, mellények, orvosi készlet'
-            }
-        },
-        {
-            category: {
-                UA: 'Непередбачені витрати',
-                EN: 'Contingency',
-                HUN: 'Váratlan költségek'
-            },
-            amount: '50 €',
-            description: {
-                UA: 'Резервний фонд на непередбачені витрати',
-                EN: 'Reserve fund for unforeseen expenses',
-                HUN: 'Tartalék alap előre nem látható költségekre'
-            }
-        }
-    ]
+]
 };
 
 export const equipmentCategories = [

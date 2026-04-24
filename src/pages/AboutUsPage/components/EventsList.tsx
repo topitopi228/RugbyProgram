@@ -69,7 +69,7 @@ const EventsList: React.FC<EventsListProps> = ({ events, language, fadeIn, onOpe
                                         alt={`Event ${event.id}`}
                                         loading="eager"
                                         decoding="async"
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                        className="w-full h-full object-cover transition-transform duration-700"
                                     />
                                     {/* Gradient Overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
