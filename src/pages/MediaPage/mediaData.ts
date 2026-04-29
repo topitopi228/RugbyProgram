@@ -541,14 +541,14 @@ export const getExternalLinks = (): ExternalLink[] => {
         {
             id: 7,
             type: 'youtube',
-            url: 'https://youtu.be/gl_hsrpof3c',
-            title: { UA: 'Відео з тренувань', EN: 'Training Video', HUN: 'Edzés videó' },
+            url: 'https://youtu.be/MT6fQ7OK8qA',
+            title: { UA: 'НТЗ сутички в Ужгороді', EN: 'Forward Training Camp in Uzhhorod', HUN: 'Csatár edzőtábor Ungvárott' },
             description: {
-                UA: 'Огляд тренувального процесу',
-                EN: 'Training process overview',
-                HUN: 'Az edzésfolyamat áttekintése'
+                UA: 'Навчально-тренувальні збори гравців сутички в Ужгороді',
+                EN: 'Forward players training camp in Uzhhorod',
+                HUN: 'Csatárjátékosok edzőtábora Ungvárott'
             },
-            image: 'https://img.youtube.com/vi/gl_hsrpof3c/maxresdefault.jpg',
+            image: 'https://img.youtube.com/vi/MT6fQ7OK8qA/maxresdefault.jpg',
         },
     ];
 };
