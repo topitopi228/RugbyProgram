@@ -96,8 +96,10 @@ const STATIC_IMAGES: Record<string, string[]> = {
         'IMG_2073_2_qkamsx',
         'IMG_2018_5_xm9vvc',
         'IMG_1714_geuyw8',
+        'IMG_1713_2_qy7kdf',
         'IMG_1712_asqglc',
         'IMG_1710_pm6nxo',
+        'IMG_1709_2_ikjugt',
         '20251120_180545_clshzv',
     ],
     'newzealand2026': [
@@ -169,15 +171,15 @@ const getTitleForEvent = (eventId: EventCategory): { UA: string; EN: string; HUN
             EN: 'Gdynia II',
             HUN: 'Gdynia II',
         },
+        batumi2025: {
+            UA: 'Батумі 2025',
+            EN: 'Batumi 2025',
+            HUN: 'Batumi 2025',
+        },
         newzealand2026: {
             UA: 'Нова Зеландія 2026',
             EN: 'New Zealand 2026',
             HUN: 'Új-Zéland 2026',
-        },
-        dragobrat2025: {
-            UA: 'Драгобрат 2025',
-            EN: 'Dragobrat 2025',
-            HUN: 'Dragobrat 2025',
         },
         italy2026: {
             UA: 'Італія 2026',
@@ -220,8 +222,8 @@ export const loadAllCloudinaryImages = async (): Promise<MediaItem[]> => {
         { folder: 'Lisbon2026', eventId: 'lisbon2026' as EventCategory },
         { folder: '1gdynia2025', eventId: 'gdynia1' as EventCategory },
         { folder: '2gdynia2025', eventId: 'gdynia2' as EventCategory },
+        { folder: 'batumi2025', eventId: 'batumi2025' as EventCategory },
         { folder: 'newzealand2026', eventId: 'newzealand2026' as EventCategory },
-        { folder: 'dragobrat2025', eventId: 'dragobrat2025' as EventCategory },
         { folder: 'italy2026', eventId: 'italy2026' as EventCategory },
         { folder: 'france2026', eventId: 'france2026' as EventCategory },
         { folder: 'austria2026', eventId: 'austria2026' as EventCategory },
