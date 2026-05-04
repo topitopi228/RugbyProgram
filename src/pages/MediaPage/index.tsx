@@ -1,11 +1,14 @@
 // @ts-nocheck
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useLanguage } from '../../components/LanguageUtils';
 import { motion, AnimatePresence } from 'framer-motion';
 import HeroSection from './components/HeroSection';
 import MediaPlayer from './components/MediaPlayer';
 import MediaGallery from './components/MediaGallery';
-import { getMediaItems, getExternalLinks } from './mediaData';
+import { getMediaItems, getExternalLinks, eventCategories } from './mediaData';
+import type { EventCategory } from './mediaData';
+import { loadAllCloudinaryImages } from './cloudinaryService';
+import EventFilter from './components/EventFilter';
 import { FaInstagram, FaYoutube, FaNewspaper, FaFacebook, FaExternalLinkAlt, FaFilter, FaPlay, FaImage, FaTh } from 'react-icons/fa';
 
 const MediaPage = () => {
@@ -15,6 +18,7 @@ const MediaPage = () => {
     const [externalLinks] = useState(getExternalLinks());
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeCategory, setActiveCategory] = useState('all');
+    const [activeEvent, setActiveEvent] = useState<EventCategory>('all'); // Нова змінна для події
     const [isLoading, setIsLoading] = useState(true);
     const [isMobile, setIsMobile] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
@@ -76,14 +80,17 @@ const MediaPage = () => {
 
     const t = translations[language];
 
+    // Завантаження медіа при завантаженні сторінки
     useEffect(() => {
         const loadMedia = async () => {
             try {
-                const items = getMediaItems();
+                setIsLoading(true);
                 const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
                 setIsMobile(isMobileDevice);
                 
-                const formattedItems = items
+                // Завантажуємо локальні медіа (фото + відео)
+                const localItems = getMediaItems();
+                const formattedLocal = localItems
                     .filter(item => {
                         // Приховати відео на мобільних пристроях
                         if (isMobileDevice && item.type === 'video') {
@@ -93,16 +100,35 @@ const MediaPage = () => {
                     })
                     .map(item => ({
                         id: item.id.toString(),
-                        type: item.type === 'video' ? 'video' : 'photo',
+                        type: item.type,
                         src: item.url,
                         thumbnail: item.poster || item.url,
                         title: item.title[language],
                         category: item.category,
+                        event: item.event,
                         duration: item.type === 'video' ? '2:34' : undefined,
-                        date: '2025'
+                        date: '2025-2026'
                     }));
-                setMediaItems(formattedItems);
-                setFilteredItems(formattedItems);
+                
+                // Завантажуємо фото з Cloudinary
+                const cloudinaryMedia = await loadAllCloudinaryImages();
+                const formattedCloudinary = cloudinaryMedia.map(item => ({
+                    id: item.id.toString(),
+                    type: item.type,
+                    src: item.url,
+                    thumbnail: item.poster || item.url,
+                    title: item.title[language],
+                    category: item.category,
+                    event: item.event,
+                    duration: undefined,
+                    date: '2025-2026'
+                }));
+                
+                // Об'єднуємо локальні та Cloudinary медіа
+                const allMedia = [...formattedLocal, ...formattedCloudinary];
+                
+                setMediaItems(allMedia);
+                setFilteredItems(allMedia);
             } catch (error) {
                 console.error('Error loading media:', error);
             } finally {
@@ -112,23 +138,39 @@ const MediaPage = () => {
         loadMedia();
     }, [language]);
 
+    // Підрахунок кількості фото для кожної події
+    const photoCounts = useMemo(() => {
+        const counts: Record<string, number> = {};
+        eventCategories.forEach(event => {
+            if (event.id === 'all') {
+                counts[event.id] = mediaItems.length;
+            } else {
+                counts[event.id] = mediaItems.filter(item => item.event === event.id).length;
+            }
+        });
+        return counts;
+    }, [mediaItems]);
+
+    // Фільтрація по події
     useEffect(() => {
         let filtered = mediaItems;
         
+        // Спочатку фільтруємо по події
+        if (activeEvent !== 'all') {
+            filtered = mediaItems.filter(item => item.event === activeEvent);
+        }
+        
+        // Потім фільтруємо по категорії (фото/відео)
         if (activeCategory === 'videos') {
-            filtered = mediaItems.filter(item => item.type === 'video');
+            filtered = filtered.filter(item => item.type === 'video');
         } else if (activeCategory === 'photos') {
-            filtered = mediaItems.filter(item => item.type === 'photo');
-        } else if (activeCategory === 'matches') {
-            filtered = mediaItems.filter(item => item.category === 'matches');
-        } else if (activeCategory === 'training') {
-            filtered = mediaItems.filter(item => item.category === 'training');
+            filtered = filtered.filter(item => item.type === 'photo');
         }
         
         setFilteredItems(filtered);
         setCurrentIndex(0);
-        setCurrentPage(1); // Скинути на першу сторінку при зміні категорії
-    }, [activeCategory, mediaItems]);
+        setCurrentPage(1);
+    }, [activeEvent, activeCategory, mediaItems]);
 
     // Синхронізація сторінки галереї з currentIndex (коли клікаєм на стрілки в плеєрі)
     useEffect(() => {
@@ -169,13 +211,11 @@ const MediaPage = () => {
         }
     };
 
-    const categoryButtons = [
-        { id: 'all', label: t.allMedia, icon: <FaTh className="w-4 h-4" /> },
-        { id: 'videos', label: t.videos, icon: <FaPlay className="w-4 h-4" /> },
-        { id: 'photos', label: t.photos, icon: <FaImage className="w-4 h-4" /> },
-        { id: 'matches', label: t.matches, icon: <FaFilter className="w-4 h-4" /> },
-        { id: 'training', label: t.training, icon: <FaFilter className="w-4 h-4" /> }
-    ];
+    const handleEventChange = (eventId: EventCategory) => {
+        setActiveEvent(eventId);
+        setCurrentIndex(0);
+        setCurrentPage(1);
+    };
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 text-white">
@@ -199,6 +239,15 @@ const MediaPage = () => {
             <HeroSection title={t.title} subtitle={t.subtitle} />
 
             <div className="relative z-10 container mx-auto px-4 py-12">
+                
+                {/* Event Filter */}
+                <EventFilter
+                    eventCategories={eventCategories}
+                    activeEvent={activeEvent}
+                    onEventChange={handleEventChange}
+                    language={language}
+                    photoCounts={photoCounts}
+                />
 
                 {/* Main Content Area */}
                 {isLoading ? (

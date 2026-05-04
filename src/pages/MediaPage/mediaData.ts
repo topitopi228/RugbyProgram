@@ -1,6 +1,6 @@
 export interface MediaItem {
     id: number;
-    type: 'video' | 'image';
+    type: 'video' | 'photo';
     url: string;
     poster: string;
     title: {
@@ -9,6 +9,37 @@ export interface MediaItem {
         HUN: string;
     };
     category?: string;
+    event?: EventCategory; // Нова властивість для події
+    cloudinaryId?: string; // ID в Cloudinary
+}
+
+export type EventCategory = 
+    | 'all'
+    | 'lisbon2026'
+    | 'gdynia1'
+    | 'gdynia2'
+    | 'batumi2025'
+    | 'newzealand2026'
+    | 'italy2026'
+    | 'france2026'
+    | 'austria2026'
+    | 'britain2026'
+    | 'other';
+
+export interface EventCategoryInfo {
+    id: EventCategory;
+    folder: string; // Назва папки в Cloudinary
+    name: {
+        UA: string;
+        EN: string;
+        HUN: string;
+    };
+    date: string;
+    location: {
+        UA: string;
+        EN: string;
+        HUN: string;
+    };
 }
 
 export interface ExternalLink {
@@ -33,7 +64,7 @@ export const getMediaItems = (): MediaItem[] => {
         // New Photos - media28-31 (First)
         {
             id: 101,
-            type: 'image',
+            type: 'photo',
             url: '/media28.webp',
             poster: '/media28.webp',
             title: {
@@ -41,11 +72,12 @@ export const getMediaItems = (): MediaItem[] => {
                 EN: 'Team photo',
                 HUN: 'Csapatfotó'
             },
-            category: 'photos'
+            category: 'photos',
+            event: 'other'
         },
         {
             id: 102,
-            type: 'image',
+            type: 'photo',
             url: '/media29.webp',
             poster: '/media29.webp',
             title: {
@@ -57,7 +89,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 103,
-            type: 'image',
+            type: 'photo',
             url: '/media30.webp',
             poster: '/media30.webp',
             title: {
@@ -69,7 +101,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 104,
-            type: 'image',
+            type: 'photo',
             url: '/media31.webp',
             poster: '/media31.webp',
             title: {
@@ -81,7 +113,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 105,
-            type: 'image',
+            type: 'photo',
             url: '/media32.webp',
             poster: '/media32.webp',
             title: {
@@ -93,7 +125,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 106,
-            type: 'image',
+            type: 'photo',
             url: '/media33.webp',
             poster: '/media33.webp',
             title: {
@@ -105,7 +137,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 107,
-            type: 'image',
+            type: 'photo',
             url: '/media34.webp',
             poster: '/media34.webp',
             title: {
@@ -117,7 +149,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 108,
-            type: 'image',
+            type: 'photo',
             url: '/media35.webp',
             poster: '/media35.webp',
             title: {
@@ -129,7 +161,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 109,
-            type: 'image',
+            type: 'photo',
             url: '/media36.webp',
             poster: '/media36.webp',
             title: {
@@ -141,7 +173,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 110,
-            type: 'image',
+            type: 'photo',
             url: '/media37.webp',
             poster: '/media37.webp',
             title: {
@@ -153,7 +185,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 111,
-            type: 'image',
+            type: 'photo',
             url: '/media38.webp',
             poster: '/media38.webp',
             title: {
@@ -165,7 +197,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 112,
-            type: 'image',
+            type: 'photo',
             url: '/media39.webp',
             poster: '/media39.webp',
             title: {
@@ -177,7 +209,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 113,
-            type: 'image',
+            type: 'photo',
             url: '/media60.webp',
             poster: '/media60.webp',
             title: {
@@ -189,7 +221,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 114,
-            type: 'image',
+            type: 'photo',
             url: '/media61.webp',
             poster: '/media61.webp',
             title: {
@@ -201,7 +233,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 115,
-            type: 'image',
+            type: 'photo',
             url: '/media62.webp',
             poster: '/media62.webp',
             title: {
@@ -213,7 +245,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 116,
-            type: 'image',
+            type: 'photo',
             url: '/media64.webp',
             poster: '/media64.webp',
             title: {
@@ -275,7 +307,7 @@ export const getMediaItems = (): MediaItem[] => {
         // Photos
         {
             id: 19,
-            type: 'image',
+            type: 'photo',
             url: '/drag5.webp',
             poster: '/drag5.webp',
             title: { 
@@ -287,7 +319,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 20,
-            type: 'image',
+            type: 'photo',
             url: '/drag6.webp',
             poster: '/drag6.webp',
             title: { 
@@ -299,7 +331,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 21,
-            type: 'image',
+            type: 'photo',
             url: '/drag7.webp',
             poster: '/drag7.webp',
             title: { 
@@ -311,7 +343,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 22,
-            type: 'image',
+            type: 'photo',
             url: '/drag8.webp',
             poster: '/drag8.webp',
             title: { 
@@ -323,7 +355,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 23,
-            type: 'image',
+            type: 'photo',
             url: '/drag9.webp',
             poster: '',
             title: { UA: 'Фото 9', EN: 'Photo 9', HUN: 'Fénykép 9' },
@@ -331,7 +363,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 24,
-            type: 'image',
+            type: 'photo',
             url: '/drag10.webp',
             poster: '',
             title: {
@@ -343,7 +375,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 25,
-            type: 'image',
+            type: 'photo',
             url: '/media11.webp',
             poster: '/media11.webp',
             title: {
@@ -355,7 +387,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 26,
-            type: 'image',
+            type: 'photo',
             url: '/media12.webp',
             poster: '/media12.webp',
             title: {
@@ -367,7 +399,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 27,
-            type: 'image',
+            type: 'photo',
             url: '/media13.webp',
             poster: '/media13.webp',
             title: {
@@ -379,7 +411,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 28,
-            type: 'image',
+            type: 'photo',
             url: '/media14.webp',
             poster: '/media14.webp',
             title: {
@@ -391,7 +423,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 29,
-            type: 'image',
+            type: 'photo',
             url: '/media15.webp',
             poster: '/media15.webp',
             title: {
@@ -403,7 +435,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 30,
-            type: 'image',
+            type: 'photo',
             url: '/media16.webp',
             poster: '/media16.webp',
             title: {
@@ -415,7 +447,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 31,
-            type: 'image',
+            type: 'photo',
             url: '/media17.webp',
             poster: '/media17.webp',
             title: {
@@ -427,7 +459,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 32,
-            type: 'image',
+            type: 'photo',
             url: '/media22.webp',
             poster: '/media22.webp',
             title: {
@@ -439,7 +471,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 33,
-            type: 'image',
+            type: 'photo',
             url: '/media23.webp',
             poster: '/media23.webp',
             title: {
@@ -451,7 +483,7 @@ export const getMediaItems = (): MediaItem[] => {
         },
         {
             id: 34,
-            type: 'image',
+            type: 'photo',
             url: '/media24.webp',
             poster: '/media24.webp',
             title: {
@@ -552,6 +584,80 @@ export const getExternalLinks = (): ExternalLink[] => {
         },
     ];
 };
+
+// Категорії подій для фільтрації
+export const eventCategories: EventCategoryInfo[] = [
+    {
+        id: 'all',
+        folder: 'all',
+        name: { UA: 'Усі події', EN: 'All Events', HUN: 'Összes esemény' },
+        date: '',
+        location: { UA: '', EN: '', HUN: '' }
+    },
+    {
+        id: 'lisbon2026',
+        folder: 'Lisbon2026',
+        name: { UA: 'Лісабон 2026', EN: 'Lisbon 2026', HUN: 'Lisszabon 2026' },
+        date: '10-15 Лютого 2026',
+        location: { UA: 'Португалія', EN: 'Portugal', HUN: 'Portugália' }
+    },
+    {
+        id: 'gdynia1',
+        folder: '1gdynia2025',
+        name: { UA: 'Гдиня I (2025)', EN: 'Gdynia I (2025)', HUN: 'Gdynia I (2025)' },
+        date: '1-7 Травня 2025',
+        location: { UA: 'Польща', EN: 'Poland', HUN: 'Lengyelország' }
+    },
+    {
+        id: 'gdynia2',
+        folder: '2gdynia2025',
+        name: { UA: 'Гдиня II (2025)', EN: 'Gdynia II (2025)', HUN: 'Gdynia II (2025)' },
+        date: '2025',
+        location: { UA: 'Польща', EN: 'Poland', HUN: 'Lengyelország' }
+    },
+    {
+        id: 'batumi2025',
+        folder: 'batumi2025',
+        name: { UA: 'Батумі 2025', EN: 'Batumi 2025', HUN: 'Batumi 2025' },
+        date: 'Листопад 2025',
+        location: { UA: 'Грузія', EN: 'Georgia', HUN: 'Grúzia' }
+    },
+    {
+        id: 'newzealand2026',
+        folder: 'newzealand2026',
+        name: { UA: 'Нова Зеландія 2026', EN: 'New Zealand 2026', HUN: 'Új-Zéland 2026' },
+        date: '20-28 Січня 2026',
+        location: { UA: 'Нова Зеландія', EN: 'New Zealand', HUN: 'Új-Zéland' }
+    },
+    {
+        id: 'italy2026',
+        folder: 'italy2026',
+        name: { UA: 'Крам, Італія 2026', EN: 'Cram, Italy 2026', HUN: 'Cram, Olaszország 2026' },
+        date: '27-31 Травня 2026',
+        location: { UA: 'Італія', EN: 'Italy', HUN: 'Olaszország' }
+    },
+    {
+        id: 'france2026',
+        folder: 'france2026',
+        name: { UA: 'Франція 2026', EN: 'France 2026', HUN: 'Franciaország 2026' },
+        date: '1-7 Червня 2026',
+        location: { UA: 'Франція', EN: 'France', HUN: 'Franciaország' }
+    },
+    {
+        id: 'austria2026',
+        folder: 'austria2026',
+        name: { UA: 'Австрія 2026', EN: 'Austria 2026', HUN: 'Ausztria 2026' },
+        date: '16-21 Червня 2026',
+        location: { UA: 'Австрія', EN: 'Austria', HUN: 'Ausztria' }
+    },
+    {
+        id: 'britain2026',
+        folder: 'britain2026',
+        name: { UA: 'Британія 2026', EN: 'Britain 2026', HUN: 'Britannia 2026' },
+        date: '13-17 Серпня 2026',
+        location: { UA: 'Великобританія', EN: 'Great Britain', HUN: 'Nagy-Britannia' }
+    }
+];
 
 export const categories = [
     { id: 'all', name: { UA: 'Усі', EN: 'All', HUN: 'Mind' } },
