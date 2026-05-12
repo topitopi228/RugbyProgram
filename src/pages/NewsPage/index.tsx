@@ -119,6 +119,14 @@ const NewsPage = () => {
                     description: 'Успішно завершилися навчально-тренувальні збори гравців сутички збірної України U16 з регбі-7. Упродовж трьох днів команда працювала над покращенням техніки виконання стандартних положень, зокрема схватів та коридорів. Особлива увага приділялася синхронізації дій гравців першої лінії та відпрацюванню тактичних схем. Збори пройшли в інтенсивному режимі з повною віддачею від кожного учасника.',
                     expense: '750',
                     image: '/news14.webp'
+                },
+                {
+                    id: 15,
+                    date: '1-7 Травня 2026',
+                    title: 'Завершено НТЗ у Гдині - команда готова до Кремони',
+                    description: 'У місті Гдиня завершилися дуже продуктивні навчально-тренувальні збори, які стали важливим етапом підготовки нашої команди до майбутнього турніру в місті Кремона. Протягом зборів команда активно працювала над захисними діями, реалізацією простору, технічними аспектами гри та розвитком нейрошвидкості. Хлопці отримали багато нових знань, підняли рівень індивідуальної майстерності та почали значно краще бачити й читати ігрові ситуації на полі. Особливо цінним став досвід роботи зі шотландським тренером, який поділився важливими тонкощами регбі та допоміг команді дивитися на гру під іншим кутом. Щиро дякуємо йому за професіоналізм і внесок у розвиток команди. Також у межах збору ми провели спаринги проти Arka Gdynia U18 та здобули впевнені перемоги у всіх трьох матчах. Дякуємо всім тренерам, організаторам, партнерам і кожному, хто долучився до цього збору. Попереду нові виклики, нові емоції та нові перемоги!',
+                    expense: '17545',
+                    image: '/news15.webp'
                 }
 
             ]
@@ -232,6 +240,14 @@ const NewsPage = () => {
         description: 'The forward players training camp of Ukraine U16 rugby-7 national team has been successfully completed. For three days, the team worked on improving the technique of set pieces, particularly scrums and lineouts. Special attention was paid to synchronizing the actions of front row players and practicing tactical schemes. The camp was held in intensive mode with full dedication from each participant.',
         expense: '750',
         image: '/news14.webp'
+    },
+    {
+        id: 15,
+        date: 'May 1-7, 2026',
+        title: 'Training Camp in Gdynia Completed - Team Ready for Cremona',
+        description: 'A highly productive training camp concluded in Gdynia, which became an important stage in our team\'s preparation for the upcoming tournament in Cremona. Throughout the camp, the team actively worked on defensive actions, space utilization, technical aspects of the game, and neurocognitive speed development. The players gained a lot of new knowledge, raised their individual skill level, and started to see and read game situations on the field much better. Particularly valuable was the experience of working with a Scottish coach who shared important rugby nuances and helped the team look at the game from a different angle. We sincerely thank him for his professionalism and contribution to the team\'s development. Also, during the camp, we played friendly matches against Arka Gdynia U18 and secured confident victories in all three matches. We thank all the coaches, organizers, partners, and everyone who contributed to this camp. New challenges, new emotions, and new victories are ahead!',
+        expense: '17545',
+        image: '/news15.webp'
     }
 ]
         },
@@ -344,6 +360,14 @@ const NewsPage = () => {
         description: 'Sikeresen befejeződött az ukrán U16-os rögbi-7 válogatott csatárjátékosainak edzőtábora. Három napig a csapat a standard helyzetek technikájának javításán dolgozott, különösen a scrumok és bedobások terén. Különös figyelmet fordítottak az első sor játékosainak szinkronizálására és a taktikai sémák gyakorlására. Az edzőtábor intenzív üzemmódban zajlott, minden résztvevő teljes elkötelezettségével.',
         expense: '750',
         image: '/news14.webp'
+    },
+    {
+        id: 15,
+        date: '2026. május 1-7.',
+        title: 'Gdyniai edzőtábor befejezve - csapat készen áll Cremonára',
+        description: 'Gdyniában befejeződött egy rendkívül produktív edzőtábor, amely fontos szakasz volt csapatunk felkészítésében a közelgő cremonai tornára. A tábor során a csapat aktívan dolgozott a védekező akciókon, a tér kihasználásán, a játék technikai szempontjain és a neuro-sebesség fejlesztésén. A játékosok rengeteg új tudást szereztek, megemelték egyéni képességeik szintjét, és sokkal jobban kezdték látni és olvasni a játékhelyzeteket a pályán. Különösen értékes volt a skót edzővel való munka tapasztalata, aki fontos rögbi finomságokat osztott meg, és segített a csapatnak más szemszögből nézni a játékot. Őszintén köszönjük neki a professzionalizmust és a csapat fejlődéséhez való hozzájárulást. A tábor keretében barátságos mérkőzéseket játszottunk az Arka Gdynia U18 ellen, és mindhárom meccsen magabiztos győzelmet arattunk. Köszönjük minden edzőnek, szervezőnek, partnernek és mindenkinek, aki hozzájárult ehhez a táborhoz. Új kihívások, új érzelmek és új győzelmek várnak ránk!',
+        expense: '17545',
+        image: '/news15.webp'
     }
 ]
         }

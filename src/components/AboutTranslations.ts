@@ -3,34 +3,27 @@ export const translations = {
         pageTitle: 'Майбутні заходи',
         upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
         event1: {
-            date: '1-8 Травня 2026',
-            title: 'НТЗ Гдиня',
-            description: 'Навчально-тренувальний збір для підготовки команди',
-            location: 'м. Гдиня, Польща',
-            funding: '17,545 €'
-        },
-        event2: {
             date: '27-31 Травня 2026',
             title: 'Міжнародний турнір у Кремоні',
             description: 'Локальний турнір з провідними молодіжними командами регіону',
             location: 'м. Кремона, Італія',
             funding: '9,325 €'
         },
-        event3: {
+        event2: {
             date: '16-21 Червня 2026',
             title: 'United World Games',
             description: 'Міжнародні змагання з регбі-7',
             location: 'м. Клагенфурт, Австрія',
             funding: '14,100 €'
         },
-        event4: {
+        event3: {
             date: '13-17 Серпня 2026',
             title: 'Чемпіонат Європи з Touch (ІІ ранг)',
             description: 'Європейський турнір з сильними командами',
             location: 'м. Ноттінгем, Велика Британія',
             funding: '21,225 €'
         },
-        event5: {
+        event4: {
             date: '9-18 Листопада 2026',
             title: 'Навчально-тренувальний збір',
             description: 'Підготовка команди до міжнародних змагань',
@@ -64,34 +57,27 @@ export const translations = {
         pageTitle: 'Upcoming Events',
         upcomingEvents: 'Upcoming Events for Ukraine U16 Rugby-7 National Team',
         event1: {
-            date: 'May 1-8, 2026',
-            title: 'Training Camp Gdynia',
-            description: 'Training camp for team preparation',
-            location: 'Gdynia, Poland',
-            funding: '17,545 €'
-        },
-        event2: {
             date: 'May 27-31, 2026',
             title: 'International Tournament in Cremona',
             description: 'Local tournament with leading regional youth teams',
             location: 'Cremona, Italy',
             funding: '9,325 €'
         },
-        event3: {
+        event2: {
             date: 'June 16-21, 2026',
             title: 'United World Games',
             description: 'International Rugby-7 competition',
             location: 'Klagenfurt, Austria',
             funding: '14,100 €'
         },
-        event4: {
+        event3: {
             date: 'August 13-17, 2026',
             title: 'European Touch Championship (Tier II)',
             description: 'European tournament with strong teams',
             location: 'Nottingham, Great Britain',
             funding: '21,225 €'
         },
-        event5: {
+        event4: {
             date: 'November 9-18, 2026',
             title: 'Training Camp',
             description: 'Team preparation for international competitions',
@@ -125,34 +111,27 @@ export const translations = {
         pageTitle: 'Közelgő események',
         upcomingEvents: 'Az U16-os ukrán rögbi-7-es válogatott közelgő eseményei',
         event1: {
-            date: '2026. május 1-8.',
-            title: 'Edzőtábor Gdynia',
-            description: 'Edzőtábor a csapat felkészítésére',
-            location: 'Gdynia, Lengyelország',
-            funding: '17,545 €'
-        },
-        event2: {
             date: '2026. május 27-31.',
             title: 'Nemzetközi Torna Cremonában',
             description: 'Helyi torna vezérő ifjúsági csapatokkal',
             location: 'Cremona, Olaszország',
             funding: '9,325 €'
         },
-        event3: {
+        event2: {
             date: '2026. június 16-21.',
             title: 'United World Games',
             description: 'Nemzetközi rögbi-7-es verseny',
             location: 'Klagenfurt, Ausztria',
             funding: '14,100 €'
         },
-        event4: {
+        event3: {
             date: '2026. augusztus 13-17.',
             title: 'Európai Touch Bajnokság (II. szint)',
             description: 'Európai torna erős csapatokkal',
             location: 'Nottingham, Nagy-Britannia',
             funding: '21,225 €'
         },
-        event5: {
+        event4: {
             date: '2026. november 9-18.',
             title: 'Edzőtábor',
             description: 'Csapat felkészítése nemzetközi versenyekre',
@@ -187,26 +166,12 @@ export const translations = {
 export const getEvents = (language: string, t: any) => [
     {
         id: 1,
-        image: '/maj2.webp',
+        image: '/maj4.webp',
         date: t.event1.date,
         title: t.event1.title,
         description: t.event1.description,
         location: t.event1.location,
         funding: t.event1.funding,
-        details: language === 'UA' ?
-            'Інтенсивний навчально-тренувальний збір збірної України U16 у Гдині. Програма включає тренування з техніки, тактики, фізичної підготовки та командної взаємодії для підготовки до міжнародних змагань.' :
-            language === 'EN' ?
-                'Intensive training camp for Ukraine U16 national team in Gdynia. The program includes technical, tactical, physical training and team building to prepare for international competitions.' :
-                'Intenzív edzőtábor az ukrán U16-os válogatottnak Gdyniában. A program technikai, taktikai, fizikai edzéseket és csapatépítést tartalmaz.'
-    },
-    {
-        id: 2,
-        image: '/maj4.webp',
-        date: t.event2.date,
-        title: t.event2.title,
-        description: t.event2.description,
-        location: t.event2.location,
-        funding: t.event2.funding,
         details: language === 'UA' ?
             'Наші партнери з Італії запросили збірну України U16 до участі у локальному турнірі, де змагатимуться провідні молодіжні команди регіону. Це чудова можливість для команди отримати ігрову практику, відчути інший стиль регбі та зміцнити дружні міжнародні зв\'язки.' :
             language === 'EN' ?
@@ -214,13 +179,13 @@ export const getEvents = (language: string, t: any) => [
                 'Olasz partnereink meghívták az ukrán U16-os csapatot egy helyi tornára, ahol a régió vezető ifjúsági csapatai versenyeznek.'
     },
     {
-        id: 3,
+        id: 2,
         image: '/maj6.webp',
-        date: t.event3.date,
-        title: t.event3.title,
-        description: t.event3.description,
-        location: t.event3.location,
-        funding: t.event3.funding,
+        date: t.event2.date,
+        title: t.event2.title,
+        description: t.event2.description,
+        location: t.event2.location,
+        funding: t.event2.funding,
         details: language === 'UA' ?
             'United World Games в Клагенфурті - престижні міжнародні змагання з регбі-7, де збірна України U16 зіграє проти команд з різних країн світу. Відмінна можливість для команди показати свій рівень на міжнародній арені.' :
             language === 'EN' ?
@@ -228,13 +193,13 @@ export const getEvents = (language: string, t: any) => [
                 'United World Games Klagenfurtban - rangos nemzetközi rögbi-7-es verseny, ahol az ukrán U16-os csapat különböző országok csapataival játszik.'
     },
     {
-        id: 4,
+        id: 3,
         image: '/maj10.webp',
-        date: t.event4.date,
-        title: t.event4.title,
-        description: t.event4.description,
-        location: t.event4.location,
-        funding: t.event4.funding,
+        date: t.event3.date,
+        title: t.event3.title,
+        description: t.event3.description,
+        location: t.event3.location,
+        funding: t.event3.funding,
         details: language === 'UA' ?
             'Серпневий турнір у Ноттінгемі стане для збірної з Touch можливістю зіграти з сильними європейськими командами, перевірити свій рівень та отримати новий міжнародний досвід.' :
             language === 'EN' ?
@@ -242,13 +207,13 @@ export const getEvents = (language: string, t: any) => [
                 'Az augusztusi nottinghami torna lehetőséget ad a Touch csapatnak, hogy erős európai csapatokkal játsszon.'
     },
     {
-        id: 5,
+        id: 4,
         image: '/maj12.webp',
-        date: t.event5.date,
-        title: t.event5.title,
-        description: t.event5.description,
-        location: t.event5.location,
-        funding: t.event5.funding,
+        date: t.event4.date,
+        title: t.event4.title,
+        description: t.event4.description,
+        location: t.event4.location,
+        funding: t.event4.funding,
         details: language === 'UA' ?
             'Навчально-тренувальний збір у Батумі для підготовки команди до майбутніх міжнародних змагань. Програма включає інтенсивні тренування, тактичну підготовку та командну взаємодію.' :
             language === 'EN' ?
@@ -258,7 +223,7 @@ export const getEvents = (language: string, t: any) => [
 ];
 
 export const fundingBreakdowns = {
-    2: [ // Італія - Кремона
+    1: [ // Італія - Кремона
         {
             category: {
                 UA: 'Транспорт і логістика',
@@ -351,100 +316,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    1: [ // Польща - НТЗ Гдиня
-        {
-            category: {
-                UA: 'Транспорт і логістика',
-                EN: 'Transport & Logistics',
-                HUN: 'Szállítás és logisztika'
-            },
-            amount: '1,040 €',
-            description: {
-                UA: 'Авіаквитки, багаж, трансфери та місцевий проїзд',
-                EN: 'Flight tickets, baggage, transfers and local transport',
-                HUN: 'Repülőjegyek, poggyász, transzferek és helyi közlekedés'
-            }
-        },
-        {
-            category: {
-                UA: 'Проживання та харчування',
-                EN: 'Accommodation & Meals',
-                HUN: 'Szállás és étkezés'
-            },
-            amount: '8,420 €',
-            description: {
-                UA: 'Готель для команди, повне харчування, спортивне харчування, вода',
-                EN: 'Team hotel, full meals, sports nutrition, water',
-                HUN: 'Csapat szállás, teljes étkezés, sporttáplálkozás, víz'
-            }
-        },
-        {
-            category: {
-                UA: 'Участь',
-                EN: 'Participation',
-                HUN: 'Részvétel'
-            },
-            amount: '140 €',
-            description: {
-                UA: 'Страхування учасників',
-                EN: 'Participant insurance',
-                HUN: 'Résztvevők biztosítása'
-            }
-        },
-        {
-            category: {
-                UA: 'Штаб і персонал',
-                EN: 'Staff & Personnel',
-                HUN: 'Stáb és személyzet'
-            },
-            amount: '6,720 €',
-            description: {
-                UA: 'Добові тренерського та адміністративного штабу',
-                EN: 'Daily allowances for coaching and administrative staff',
-                HUN: 'Edzői és adminisztratív személyzet napidíja'
-            }
-        },
-        {
-            category: {
-                UA: 'Спортивне екіпірування та інвентар',
-                EN: 'Sports Equipment and Gear',
-                HUN: 'Sport felszerelés és eszközök'
-            },
-            amount: '725 €',
-            description: {
-                UA: 'Ігрова форма, медична аптечка',
-                EN: 'Game uniforms, medical kit',
-                HUN: 'Játék egyenruha, orvosi készlet'
-            }
-        },
-        {
-            category: {
-                UA: 'Непередбачені витрати / резерв',
-                EN: 'Contingency / Reserve',
-                HUN: 'Váratlan költségek / tartalék'
-            },
-            amount: '500 €',
-            description: {
-                UA: 'Додаткові організаційні потреби та можливі коливання витрат',
-                EN: 'Additional organizational needs and possible cost fluctuations',
-                HUN: 'További szervezési szükségletek és esetleges költségingadozások'
-            }
-        },
-        {
-            category: {
-                UA: 'Загальна сума',
-                EN: 'Total Amount',
-                HUN: 'Teljes összeg'
-            },
-            amount: '10,825 € / 17,545 €',
-            description: {
-                UA: 'Без добових / З добовими',
-                EN: 'Without allowances / With allowances',
-                HUN: 'Napidíjak nélkül / Napidíjakkal'
-            }
-        }
-    ],
-    3: [ // Австрія - United World Games
+    2: [ // Австрія - United World Games
         {
             category: {
                 UA: 'Транспорт і логістика',
@@ -524,7 +396,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    4: [ // Велика Британія - ЧЄ з Touch
+    3: [ // Велика Британія - ЧЄ з Touch
         {
             category: {
                 UA: 'Транспорт і логістика',
@@ -617,7 +489,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    5: [ // Грузія - Батумі
+    4: [ // Грузія - Батумі
         {
             category: {
                 UA: 'Проїзд / Транспорт і логістика',
