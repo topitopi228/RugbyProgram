@@ -84,6 +84,19 @@ const STATIC_IMAGES: Record<string, string[]> = {
         'IMG_3888_2_md3n5h',
         'IMG_3848_2_gopxqn',
     ],
+    'gdynia2026': [
+        'IMG_6361_dfoixh',
+        'IMG_6370_sbaboy',
+        'IMG_6373_heerni',
+        'IMG_5910_nzhcnz',
+        'IMG_6554_ficuuy',
+        'IMG_6555_x8ov5m',
+        'IMG_6412_smb8jm',
+        'IMG_6038_usuylo',
+        'IMG_6460_ilxnhl',
+        'IMG_6482_qupwoh',
+        'IMG_6486_vv5rrp',
+    ],
     'batumi2025': [
         'IMG_2435_2_tktf2w',
         'IMG_2434_2_yfqogl',
@@ -103,12 +116,13 @@ const STATIC_IMAGES: Record<string, string[]> = {
         '20251120_180545_clshzv',
     ],
     'newzealand2026': [
-        // Фото скоро буде додано
+        'zeland1_ewpcdp',
+        'zeland4_cqp9ef',
+        'zeland2_qw44hm',
+        'zeland3_y5vt9t',
+        'zeland5_lv5iru',
     ],
     'italy2026': [
-        // Фото скоро буде додано
-    ],
-    'france2026': [
         // Фото скоро буде додано
     ],
     'austria2026': [
@@ -171,6 +185,11 @@ const getTitleForEvent = (eventId: EventCategory): { UA: string; EN: string; HUN
             EN: 'Gdynia II',
             HUN: 'Gdynia II',
         },
+        gdynia2026: {
+            UA: 'Гдиня 2026',
+            EN: 'Gdynia 2026',
+            HUN: 'Gdynia 2026',
+        },
         batumi2025: {
             UA: 'Батумі 2025',
             EN: 'Batumi 2025',
@@ -185,11 +204,6 @@ const getTitleForEvent = (eventId: EventCategory): { UA: string; EN: string; HUN
             UA: 'Італія 2026',
             EN: 'Italy 2026',
             HUN: 'Olaszország 2026',
-        },
-        france2026: {
-            UA: 'Франція 2026',
-            EN: 'France 2026',
-            HUN: 'Franciaország 2026',
         },
         austria2026: {
             UA: 'Австрія 2026',
@@ -222,10 +236,10 @@ export const loadAllCloudinaryImages = async (): Promise<MediaItem[]> => {
         { folder: 'Lisbon2026', eventId: 'lisbon2026' as EventCategory },
         { folder: '1gdynia2025', eventId: 'gdynia1' as EventCategory },
         { folder: '2gdynia2025', eventId: 'gdynia2' as EventCategory },
+        { folder: 'gdynia2026', eventId: 'gdynia2026' as EventCategory },
         { folder: 'batumi2025', eventId: 'batumi2025' as EventCategory },
         { folder: 'newzealand2026', eventId: 'newzealand2026' as EventCategory },
         { folder: 'italy2026', eventId: 'italy2026' as EventCategory },
-        { folder: 'france2026', eventId: 'france2026' as EventCategory },
         { folder: 'austria2026', eventId: 'austria2026' as EventCategory },
         { folder: 'britain2026', eventId: 'britain2026' as EventCategory },
         { folder: 'etc', eventId: 'other' as EventCategory },

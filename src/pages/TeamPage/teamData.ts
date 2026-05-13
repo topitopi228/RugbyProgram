@@ -58,6 +58,8 @@ export const getTeamData = (language: string, t: any) => {
             { id: 'player13', name: 'Артем Кухарський', birthDate: '30.10.2010' },
             { id: 'player16', name: 'Даниіл Плєшаков', birthDate: '05.04.2010' },
             { id: 'player17', name: 'Микита Джусоєв', birthDate: '26.03.2010' },
+            { id: 'player18', name: 'Артем Гуртовий', birthDate: '05.11.2010' },
+            { id: 'player19', name: 'Данило Жук', birthDate: '12.09.2011' },
         ],
         foreignCoaches: [
             {

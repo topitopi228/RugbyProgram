@@ -3,14 +3,14 @@ export const translations = {
         pageTitle: 'Майбутні заходи',
         upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
         event1: {
-            date: '27-31 Травня 2026',
+            date: '26 Травня - 3 Червня 2026',
             title: 'Міжнародний турнір у Кремоні',
             description: 'Локальний турнір з провідними молодіжними командами регіону',
             location: 'м. Кремона, Італія',
             funding: '9,325 €'
         },
         event2: {
-            date: '16-21 Червня 2026',
+            date: '18-21 Червня 2026',
             title: 'United World Games',
             description: 'Міжнародні змагання з регбі-7',
             location: 'м. Клагенфурт, Австрія',
@@ -57,14 +57,14 @@ export const translations = {
         pageTitle: 'Upcoming Events',
         upcomingEvents: 'Upcoming Events for Ukraine U16 Rugby-7 National Team',
         event1: {
-            date: 'May 27-31, 2026',
+            date: 'May 26 - June 3, 2026',
             title: 'International Tournament in Cremona',
             description: 'Local tournament with leading regional youth teams',
             location: 'Cremona, Italy',
             funding: '9,325 €'
         },
         event2: {
-            date: 'June 16-21, 2026',
+            date: 'June 18-21, 2026',
             title: 'United World Games',
             description: 'International Rugby-7 competition',
             location: 'Klagenfurt, Austria',
@@ -111,14 +111,14 @@ export const translations = {
         pageTitle: 'Közelgő események',
         upcomingEvents: 'Az U16-os ukrán rögbi-7-es válogatott közelgő eseményei',
         event1: {
-            date: '2026. május 27-31.',
+            date: '2026. május 26. - június 3.',
             title: 'Nemzetközi Torna Cremonában',
             description: 'Helyi torna vezérő ifjúsági csapatokkal',
             location: 'Cremona, Olaszország',
             funding: '9,325 €'
         },
         event2: {
-            date: '2026. június 16-21.',
+            date: '2026. június 18-21.',
             title: 'United World Games',
             description: 'Nemzetközi rögbi-7-es verseny',
             location: 'Klagenfurt, Ausztria',

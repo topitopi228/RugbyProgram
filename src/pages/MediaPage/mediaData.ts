@@ -18,10 +18,10 @@ export type EventCategory =
     | 'lisbon2026'
     | 'gdynia1'
     | 'gdynia2'
+    | 'gdynia2026'
     | 'batumi2025'
     | 'newzealand2026'
     | 'italy2026'
-    | 'france2026'
     | 'austria2026'
     | 'britain2026'
     | 'other';
@@ -616,6 +616,13 @@ export const eventCategories: EventCategoryInfo[] = [
         location: { UA: 'Польща', EN: 'Poland', HUN: 'Lengyelország' }
     },
     {
+        id: 'gdynia2026',
+        folder: 'gdynia2026',
+        name: { UA: 'Гдиня 2026', EN: 'Gdynia 2026', HUN: 'Gdynia 2026' },
+        date: '1-7 Травня 2026',
+        location: { UA: 'Польща', EN: 'Poland', HUN: 'Lengyelország' }
+    },
+    {
         id: 'batumi2025',
         folder: 'batumi2025',
         name: { UA: 'Батумі 2025', EN: 'Batumi 2025', HUN: 'Batumi 2025' },
@@ -633,21 +640,14 @@ export const eventCategories: EventCategoryInfo[] = [
         id: 'italy2026',
         folder: 'italy2026',
         name: { UA: 'Крам, Італія 2026', EN: 'Cram, Italy 2026', HUN: 'Cram, Olaszország 2026' },
-        date: '27-31 Травня 2026',
+        date: '26 Травня - 3 Червня 2026',
         location: { UA: 'Італія', EN: 'Italy', HUN: 'Olaszország' }
-    },
-    {
-        id: 'france2026',
-        folder: 'france2026',
-        name: { UA: 'Франція 2026', EN: 'France 2026', HUN: 'Franciaország 2026' },
-        date: '1-7 Червня 2026',
-        location: { UA: 'Франція', EN: 'France', HUN: 'Franciaország' }
     },
     {
         id: 'austria2026',
         folder: 'austria2026',
         name: { UA: 'Австрія 2026', EN: 'Austria 2026', HUN: 'Ausztria 2026' },
-        date: '16-21 Червня 2026',
+        date: '18-21 Червня 2026',
         location: { UA: 'Австрія', EN: 'Austria', HUN: 'Ausztria' }
     },
     {
