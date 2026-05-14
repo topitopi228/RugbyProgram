@@ -14,17 +14,17 @@ const NewsPage = () => {
             news: [
                 {
                     id: 1,
-                    date: '7 Квітня 2025',
-                    title: 'Перша перемога в Турнірі',
-                    description: 'Наша команда здобула першу перемогу на міжнародному турнірі в м. Гдиня, Польща. Це історична подія для нашої збірної!',
-                    expense: '10500'
-                },
-                {
-                    id: 2,
                     date: '16 Червня 2025',
                     title: 'Відбір найкращих кандидатів',
                     description: 'У м. Хмельницький пройшов відбірковий етап, де було відібрано найперспективніших гравців з усієї України для участі у збірній команді.',
                     expense: '300'
+                },
+                {
+                    id: 2,
+                    date: '7 Квітня 2025',
+                    title: 'Перша перемога в Турнірі',
+                    description: 'Наша команда здобула першу перемогу на міжнародному турнірі в м. Гдиня, Польща. Це історична подія для нашої збірної!',
+                    expense: '10500'
                 },
                 {
                     id: 3,
@@ -122,18 +122,18 @@ const NewsPage = () => {
                 },
                 {
                     id: 15,
-                    date: '1-7 Травня 2026',
-                    title: 'Завершено НТЗ у Гдині - команда готова до Кремони',
-                    description: 'У місті Гдиня завершилися дуже продуктивні навчально-тренувальні збори, які стали важливим етапом підготовки нашої команди до майбутнього турніру в місті Кремона. Протягом зборів команда активно працювала над захисними діями, реалізацією простору, технічними аспектами гри та розвитком нейрошвидкості. Хлопці отримали багато нових знань, підняли рівень індивідуальної майстерності та почали значно краще бачити й читати ігрові ситуації на полі. Особливо цінним став досвід роботи зі шотландським тренером, який поділився важливими тонкощами регбі та допоміг команді дивитися на гру під іншим кутом. Щиро дякуємо йому за професіоналізм і внесок у розвиток команди. Також у межах збору ми провели спаринги проти Arka Gdynia U18 та здобули впевнені перемоги у всіх трьох матчах. Дякуємо всім тренерам, організаторам, партнерам і кожному, хто долучився до цього збору. Попереду нові виклики, нові емоції та нові перемоги!',
-                    expense: '17545',
-                    image: '/news15.webp'
-                },
-                {
-                    id: 16,
                     date: '4-9 Квітня 2026',
                     title: 'Навчально-тренувальні збори гравців віяла у Гдині',
                     description: 'З 4 по 9 квітня відбулись навчально-тренувальні збори у 4 гравців віяла юнацької національної збірної команди України з регбі-7 Ю-16. Збори проходили у місті Гдиня (Республіка Польща) та були зосереджені на індивідуальному розвитку гравців: відпрацюванні техніки передачі м\'яча, початкового удару, а також розвитку індивідуальних здібностей. Кожен із гравців максимально використав цю можливість - усі залишились задоволені, зробили для себе важливі висновки, покращили свої навички та піднялись на новий рівень. Це ще один крок вперед і важливий досвід, який наближає нас до великих досягнень.',
                     expense: '1600',
+                    image: '/news15.webp'
+                },
+                {
+                    id: 16,
+                    date: '1-7 Травня 2026',
+                    title: 'Завершено НТЗ у Гдині - команда готова до Кремони',
+                    description: 'У місті Гдиня завершилися дуже продуктивні навчально-тренувальні збори, які стали важливим етапом підготовки нашої команди до майбутнього турніру в місті Кремона. Протягом зборів команда активно працювала над захисними діями, реалізацією простору, технічними аспектами гри та розвитком нейрошвидкості. Хлопці отримали багато нових знань, підняли рівень індивідуальної майстерності та почали значно краще бачити й читати ігрові ситуації на полі. Особливо цінним став досвід роботи зі шотландським тренером, який поділився важливими тонкощами регбі та допоміг команді дивитися на гру під іншим кутом. Щиро дякуємо йому за професіоналізм і внесок у розвиток команди. Також у межах збору ми провели спаринги проти Arka Gdynia U18 та здобули впевнені перемоги у всіх трьох матчах. Дякуємо всім тренерам, організаторам, партнерам і кожному, хто долучився до цього збору. Попереду нові виклики, нові емоції та нові перемоги!',
+                    expense: '9500',
                     image: '/news16.webp'
                 }
 
@@ -144,17 +144,17 @@ const NewsPage = () => {
             news: [
     {
         id: 1,
-        date: 'April 7, 2025',
-        title: 'First Tournament Victory',
-        description: 'Our team achieved its first victory at the international tournament in Gdynia, Poland. This is a historic event for our national team!',
-        expense: '10500'
-    },
-    {
-        id: 2,
         date: 'June 16, 2025',
         title: 'Selection of the Best Candidates',
         description: 'A selection stage was held in Khmelnytskyi where the most promising players from all over Ukraine were selected to join the national team.',
         expense: '300'
+    },
+    {
+        id: 2,
+        date: 'April 7, 2025',
+        title: 'First Tournament Victory',
+        description: 'Our team achieved its first victory at the international tournament in Gdynia, Poland. This is a historic event for our national team!',
+        expense: '10500'
     },
     {
         id: 3,
@@ -251,18 +251,18 @@ const NewsPage = () => {
     },
     {
         id: 15,
-        date: 'May 1-7, 2026',
-        title: 'Training Camp in Gdynia Completed - Team Ready for Cremona',
-        description: 'A highly productive training camp concluded in Gdynia, which became an important stage in our team\'s preparation for the upcoming tournament in Cremona. Throughout the camp, the team actively worked on defensive actions, space utilization, technical aspects of the game, and neurocognitive speed development. The players gained a lot of new knowledge, raised their individual skill level, and started to see and read game situations on the field much better. Particularly valuable was the experience of working with a Scottish coach who shared important rugby nuances and helped the team look at the game from a different angle. We sincerely thank him for his professionalism and contribution to the team\'s development. Also, during the camp, we played friendly matches against Arka Gdynia U18 and secured confident victories in all three matches. We thank all the coaches, organizers, partners, and everyone who contributed to this camp. New challenges, new emotions, and new victories are ahead!',
-        expense: '17545',
-        image: '/news15.webp'
-    },
-    {
-        id: 16,
         date: 'April 4-9, 2026',
         title: 'Back Line Players Training Camp in Gdynia',
         description: 'From April 4 to 9, a training camp was held for 4 back line players of the Ukrainian youth rugby-7 U-16 national team. The camp took place in Gdynia (Republic of Poland) and focused on individual player development: practicing ball passing technique, kick-off, and developing individual abilities. Each player made the most of this opportunity - everyone was satisfied, drew important conclusions, improved their skills and reached a new level. This is another step forward and important experience that brings us closer to great achievements.',
         expense: '1600',
+        image: '/news15.webp'
+    },
+    {
+        id: 16,
+        date: 'May 1-7, 2026',
+        title: 'Training Camp in Gdynia Completed - Team Ready for Cremona',
+        description: 'A highly productive training camp concluded in Gdynia, which became an important stage in our team\'s preparation for the upcoming tournament in Cremona. Throughout the camp, the team actively worked on defensive actions, space utilization, technical aspects of the game, and neurocognitive speed development. The players gained a lot of new knowledge, raised their individual skill level, and started to see and read game situations on the field much better. Particularly valuable was the experience of working with a Scottish coach who shared important rugby nuances and helped the team look at the game from a different angle. We sincerely thank him for his professionalism and contribution to the team\'s development. Also, during the camp, we played friendly matches against Arka Gdynia U18 and secured confident victories in all three matches. We thank all the coaches, organizers, partners, and everyone who contributed to this camp. New challenges, new emotions, and new victories are ahead!',
+        expense: '9500',
         image: '/news16.webp'
     }
 ]
@@ -272,17 +272,17 @@ const NewsPage = () => {
             news: [
     {
         id: 1,
-        date: '2025. április 7.',
-        title: 'Első győzelem a versenyen',
-        description: 'Csapatunk megszerezte első győzelmét a lengyelországi Gdyniában megrendezett nemzetközi versenyen. Történelmi pillanat a válogatottunk számára!',
-        expense: '10500'
-    },
-    {
-        id: 2,
         date: '2025. június 16.',
         title: 'A legjobb játékosok kiválasztása',
         description: 'Kijevben lezajlott a válogató, ahol Ukrajna legígéretesebb játékosait válogatták be a válogatottba.',
         expense: '300'
+    },
+    {
+        id: 2,
+        date: '2025. április 7.',
+        title: 'Első győzelem a versenyen',
+        description: 'Csapatunk megszerezte első győzelmét a lengyelországi Gdyniában megrendezett nemzetközi versenyen. Történelmi pillanat a válogatottunk számára!',
+        expense: '10500'
     },
     {
         id: 3,
@@ -379,18 +379,18 @@ const NewsPage = () => {
     },
     {
         id: 15,
-        date: '2026. május 1-7.',
-        title: 'Gdyniai edzőtábor befejezve - csapat készen áll Cremonára',
-        description: 'Gdyniában befejeződött egy rendkívül produktív edzőtábor, amely fontos szakasz volt csapatunk felkészítésében a közelgő cremonai tornára. A tábor során a csapat aktívan dolgozott a védekező akciókon, a tér kihasználásán, a játék technikai szempontjain és a neuro-sebesség fejlesztésén. A játékosok rengeteg új tudást szereztek, megemelték egyéni képességeik szintjét, és sokkal jobban kezdték látni és olvasni a játékhelyzeteket a pályán. Különösen értékes volt a skót edzővel való munka tapasztalata, aki fontos rögbi finomságokat osztott meg, és segített a csapatnak más szemszögből nézni a játékot. Őszintén köszönjük neki a professzionalizmust és a csapat fejlődéséhez való hozzájárulást. A tábor keretében barátságos mérkőzéseket játszottunk az Arka Gdynia U18 ellen, és mindhárom meccsen magabiztos győzelmet arattunk. Köszönjük minden edzőnek, szervezőnek, partnernek és mindenkinek, aki hozzájárult ehhez a táborhoz. Új kihívások, új érzelmek és új győzelmek várnak ránk!',
-        expense: '17545',
-        image: '/news15.webp'
-    },
-    {
-        id: 16,
         date: '2026. április 4-9.',
         title: 'Hátvédjátékosok edzőtábora Gdyniában',
         description: 'Április 4-9 között edzőtábort tartottak az ukrán ifjúsági rögbi-7 U-16 válogatott 4 hátvédjátékosa számára. Az edzőtábor Gdyniában (Lengyel Köztársaság) zajlott, és a játékosok egyéni fejlesztésére összpontosított: a labdaátadás technikájának gyakorlására, a kezdőrúgásra, valamint az egyéni képességek fejlesztésére. Minden játékos maximálisan kihasználta ezt a lehetőséget - mindenki elégedett volt, fontos következtetéseket vont le, javította készségeit és új szintre lépett. Ez újabb előrelépés és fontos tapasztalat, amely közelebb visz minket a nagy eredményekhez.',
         expense: '1600',
+        image: '/news15.webp'
+    },
+    {
+        id: 16,
+        date: '2026. május 1-7.',
+        title: 'Gdyniai edzőtábor befejezve - csapat készen áll Cremonára',
+        description: 'Gdyniában befejeződött egy rendkívül produktív edzőtábor, amely fontos szakasz volt csapatunk felkészítésében a közelgő cremonai tornára. A tábor során a csapat aktívan dolgozott a védekező akciókon, a tér kihasználásán, a játék technikai szempontjain és a neuro-sebesség fejlesztésén. A játékosok rengeteg új tudást szereztek, megemelték egyéni képességeik szintjét, és sokkal jobban kezdték látni és olvasni a játékhelyzeteket a pályán. Különösen értékes volt a skót edzővel való munka tapasztalata, aki fontos rögbi finomságokat osztott meg, és segített a csapatnak más szemszögből nézni a játékot. Őszintén köszönjük neki a professzionalizmust és a csapat fejlődéséhez való hozzájárulást. A tábor keretében barátságos mérkőzéseket játszottunk az Arka Gdynia U18 ellen, és mindhárom meccsen magabiztos győzelmet arattunk. Köszönjük minden edzőnek, szervezőnek, partnernek és mindenkinek, aki hozzájárult ehhez a táborhoz. Új kihívások, új érzelmek és új győzelmek várnak ránk!',
+        expense: '9500',
         image: '/news16.webp'
     }
 ]
