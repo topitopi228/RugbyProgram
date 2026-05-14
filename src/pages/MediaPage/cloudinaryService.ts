@@ -120,7 +120,7 @@ const STATIC_IMAGES: Record<string, string[]> = {
         'zeland4_cqp9ef',
         'zeland2_qw44hm',
         'zeland3_y5vt9t',
-        'zeland5_lv5iru',
+        'zeland10_rdrquq',
     ],
     'italy2026': [
         // Фото скоро буде додано
