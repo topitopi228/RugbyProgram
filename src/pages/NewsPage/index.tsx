@@ -13,14 +13,14 @@ const NewsPage = () => {
             title: 'Новини',
             news: [
                 {
-                    id: 1,
+                    id: 2,
                     date: '16 Червня 2025',
                     title: 'Відбір найкращих кандидатів',
                     description: 'У м. Хмельницький пройшов відбірковий етап, де було відібрано найперспективніших гравців з усієї України для участі у збірній команді.',
                     expense: '300'
                 },
                 {
-                    id: 2,
+                    id: 1,
                     date: '7 Квітня 2025',
                     title: 'Перша перемога в Турнірі',
                     description: 'Наша команда здобула першу перемогу на міжнародному турнірі в м. Гдиня, Польща. Це історична подія для нашої збірної!',
@@ -115,8 +115,8 @@ const NewsPage = () => {
                 {
                     id: 14,
                     date: '21-23 Квітня 2026',
-                    title: 'Завершено тренувальні збори в сутичках',
-                    description: 'Успішно завершилися навчально-тренувальні збори гравців сутички збірної України U16 з регбі-7. Упродовж трьох днів команда працювала над покращенням техніки виконання стандартних положень, зокрема схватів та коридорів. Особлива увага приділялася синхронізації дій гравців першої лінії та відпрацюванню тактичних схем. Збори пройшли в інтенсивному режимі з повною віддачею від кожного учасника.',
+                    title: 'Завершено тренувальні збори в Сутички',
+                    description: 'Успішно завершилися навчально-тренувальні збори гравців сутички збірної України U16 з регбі-7. Упродовж трьох днів команда працювала над покращенням техніки виконання стандартних положень, зокрема схватів та коридорів. Особлива увага приділялася синхронізації дій гравців  та відпрацюванню тактичних схем. Збори пройшли в інтенсивному режимі з повною віддачею від кожного учасника.',
                     expense: '750',
                     image: '/news14.webp'
                 },
@@ -143,14 +143,14 @@ const NewsPage = () => {
             title: 'News',
             news: [
     {
-        id: 1,
+        id: 2,
         date: 'June 16, 2025',
         title: 'Selection of the Best Candidates',
         description: 'A selection stage was held in Khmelnytskyi where the most promising players from all over Ukraine were selected to join the national team.',
         expense: '300'
     },
     {
-        id: 2,
+        id: 1,
         date: 'April 7, 2025',
         title: 'First Tournament Victory',
         description: 'Our team achieved its first victory at the international tournament in Gdynia, Poland. This is a historic event for our national team!',
@@ -271,14 +271,14 @@ const NewsPage = () => {
             title: 'Hírek',
             news: [
     {
-        id: 1,
+        id: 2,
         date: '2025. június 16.',
         title: 'A legjobb játékosok kiválasztása',
         description: 'Kijevben lezajlott a válogató, ahol Ukrajna legígéretesebb játékosait válogatták be a válogatottba.',
         expense: '300'
     },
     {
-        id: 2,
+        id: 1,
         date: '2025. április 7.',
         title: 'Első győzelem a versenyen',
         description: 'Csapatunk megszerezte első győzelmét a lengyelországi Gdyniában megrendezett nemzetközi versenyen. Történelmi pillanat a válogatottunk számára!',
