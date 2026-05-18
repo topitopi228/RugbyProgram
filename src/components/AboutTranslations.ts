@@ -17,11 +17,11 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-            date: '13-17 Серпня 2026',
-            title: 'Чемпіонат Європи з Touch (ІІ ранг)',
-            description: 'Європейський турнір з сильними командами',
-            location: 'м. Ноттінгем, Велика Британія',
-            funding: '21,225 €'
+            date: '10-20 Липня 2026',
+            title: 'Навчально-тренувальний збір у Драгобраті',
+            description: 'Загальний збір для всіх вікових категорій 2010-2014 та тренерів',
+            location: 'м. Драгобрат, Україна',
+            funding: '2300 ₴ / доба (все включено)'
         },
         event4: {
             date: '9-18 Листопада 2026',
@@ -71,12 +71,12 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-            date: 'August 13-17, 2026',
-            title: 'European Touch Championship (Tier II)',
-            description: 'European tournament with strong teams',
-            location: 'Nottingham, Great Britain',
-            funding: '21,225 €'
-        },
+    date: 'July 10-20, 2026',
+    title: 'Training Camp in Dragobrat',
+    description: 'General training camp for all age categories 2010-2014 and coaches',
+    location: 'Dragobrat, Ukraine',
+    funding: '2300 ₴ / day (all inclusive)'
+},
         event4: {
             date: 'November 9-18, 2026',
             title: 'Training Camp',
@@ -125,12 +125,12 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-            date: '2026. augusztus 13-17.',
-            title: 'Európai Touch Bajnokság (II. szint)',
-            description: 'Európai torna erős csapatokkal',
-            location: 'Nottingham, Nagy-Britannia',
-            funding: '21,225 €'
-        },
+    date: '2026. július 10-20.',
+    title: 'Edzőtábor Drahobratban',
+    description: 'Általános edzőtábor 2010-2014-es korosztályok és edzők számára',
+    location: 'Drahobrat, Ukrajna',
+    funding: '2300 ₴ / nap (minden benne van)'
+},
         event4: {
             date: '2026. november 9-18.',
             title: 'Edzőtábor',
@@ -193,19 +193,19 @@ export const getEvents = (language: string, t: any) => [
                 'United World Games Klagenfurtban - rangos nemzetközi rögbi-7-es verseny, ahol az ukrán U16-os csapat különböző országok csapataival játszik.'
     },
     {
-        id: 3,
-        image: '/maj10.webp',
-        date: t.event3.date,
-        title: t.event3.title,
-        description: t.event3.description,
-        location: t.event3.location,
-        funding: t.event3.funding,
-        details: language === 'UA' ?
-            'Серпневий турнір у Ноттінгемі стане для збірної з Touch можливістю зіграти з сильними європейськими командами, перевірити свій рівень та отримати новий міжнародний досвід.' :
-            language === 'EN' ?
-                'The August tournament in Nottingham will give the Touch team an opportunity to play against strong European teams, test their level and gain new international experience.' :
-                'Az augusztusi nottinghami torna lehetőséget ad a Touch csapatnak, hogy erős európai csapatokkal játsszon.'
-    },
+    id: 3,
+    image: '/maj10.webp',   // можете змінити на інше фото Драгобрату пізніше
+    date: t.event3.date,
+    title: t.event3.title,
+    description: t.event3.description,
+    location: t.event3.location,
+    funding: t.event3.funding,
+    details: language === 'UA' ?
+        'Загальний навчально-тренувальний збір у Драгобраті для всіх бажаючих гравців вікових категорій 2010-2014 років народження, а також тренерів. Збір включає якісне проживання, повне харчування, тренування у сучасних спортзалах. Програма передбачає інтенсивні тренування, тактичну підготовку, відновлення (басейн, сауна, екскурсії). Вартість — 2300 € за добу з людини (все включено).' :
+        language === 'EN' ?
+            'General training camp in Dragobrat for all interested players of age categories 2010-2014, as well as coaches. The camp includes quality accommodation, full board, and training in modern sports halls. The program features intensive training sessions, tactical preparation, and recovery days (3rd day — swimming pool, sauna, excursions). Price — 2300 € per person per day (all inclusive).' :
+            'Általános edzőtábor Drahobratban minden érdeklődő 2010-2014-es korosztályú játékos és edző számára. A tábor magában foglalja a minőségi szállást, teljes ellátást és edzéseket modern sportcsarnokokban. A program intenzív edzéseket, taktikai felkészítést és regenerációt tartalmaz (3. nap — medence, szauna, kirándulások). Ár — 2300 € / fő / nap (minden benne van).'
+},
     {
         id: 4,
         image: '/maj12.webp',
@@ -396,99 +396,44 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    3: [ // Велика Британія - ЧЄ з Touch
-        {
-            category: {
-                UA: 'Транспорт і логістика',
-                EN: 'Transport & Logistics',
-                HUN: 'Szállítás és logisztika'
-            },
-            amount: '5,940 €',
-            description: {
-                UA: 'Авіаперельоти Варшава – Лондон – Варшава, залізничні переїзди Лондон – Ноттінгем – Лондон, багаж, міський транспорт',
-                EN: 'Flights Warsaw – London – Warsaw, train journeys London – Nottingham – London, baggage, city transport',
-                HUN: 'Repülőjáratok Varsó – London – Varsó, vonatutazások London – Nottingham – London, poggyász, városi közlekedés'
-            }
-        },
-        {
-            category: {
-                UA: 'Проживання та харчування',
-                EN: 'Accommodation & Meals',
-                HUN: 'Szállás és étkezés'
-            },
-            amount: '6,720 €',
-            description: {
-                UA: 'Готель для команди, повне харчування, спортивне харчування, питна вода',
-                EN: 'Team hotel, full meals, sports nutrition, drinking water',
-                HUN: 'Csapat szállás, teljes étkezés, sporttáplálkozás, ivóvíz'
-            }
-        },
-        {
-            category: {
-                UA: 'Участь',
-                EN: 'Participation',
-                HUN: 'Részvétel'
-            },
-            amount: '3,140 €',
-            description: {
-                UA: 'Страхування учасників, відкриття віз',
-                EN: 'Participant insurance, visa opening',
-                HUN: 'Résztvevők biztosítása, vízum nyitás'
-            }
-        },
-        {
-            category: {
-                UA: 'Штаб і персонал',
-                EN: 'Staff & Personnel',
-                HUN: 'Stáb és személyzet'
-            },
-            amount: '4,200 €',
-            description: {
-                UA: 'Добові тренерського та адміністративного штабу',
-                EN: 'Daily allowances for coaching and administrative staff',
-                HUN: 'Edzői és adminisztratív személyzet napidíjai'
-            }
-        },
-        {
-            category: {
-                UA: 'Спортивне екіпірування та інвентар',
-                EN: 'Sports Equipment and Gear',
-                HUN: 'Sport felszerelés és eszközök'
-            },
-            amount: '725 €',
-            description: {
-                UA: 'Ігрова форма, медична аптечка',
-                EN: 'Game uniforms, medical kit',
-                HUN: 'Játék egyenruha, orvosi készlet'
-            }
-        },
-        {
-            category: {
-                UA: 'Непередбачені витрати / резерв',
-                EN: 'Contingency / Reserve',
-                HUN: 'Váratlan költségek / tartalék'
-            },
-            amount: '500 €',
-            description: {
-                UA: 'Додаткові організаційні витрати та можливі коливання цін',
-                EN: 'Additional organizational costs and possible price fluctuations',
-                HUN: 'További szervezési költségek és esetleges árváltozások'
-            }
-        },
-        {
-            category: {
-                UA: 'Загальна сума',
-                EN: 'Total Amount',
-                HUN: 'Teljes összeg'
-            },
-            amount: '17,025 € / 21,225 €',
-            description: {
-                UA: 'Без добових / З добовими',
-                EN: 'Without allowances / With allowances',
-                HUN: 'Napidíjak nélkül / Napidíjakkal'
-            }
+    3: [
+    {
+        category: { UA: 'Проживання та харчування', EN: 'Accommodation & Meals', HUN: 'Szállás és étkezés' },
+        amount: '—',
+        description: {
+            UA: 'Повний пансіон + проживання (все включено)',
+            EN: 'Full board + accommodation (all inclusive)',
+            HUN: 'Teljes ellátás + szállás (minden benne van)'
         }
-    ],
+    },
+    {
+        category: { UA: 'Тренувальна база', EN: 'Training Facilities', HUN: 'Edzések helyszíne' },
+        amount: '—',
+        description: {
+            UA: 'Оренда спортзалів у Драгобраті',
+            EN: 'Rental of sports halls in Dragobrat',
+            HUN: 'Sportcsarnokok bérlése Drahobratban'
+        }
+    },
+    {
+        category: { UA: 'Відновлення та програма', EN: 'Recovery & Program', HUN: 'Regeneráció és program' },
+        amount: '—',
+        description: {
+            UA: 'Басейн, сауна, екскурсії, тактичні заняття',
+            EN: 'Pool, sauna, excursions, tactical sessions',
+            HUN: 'Medence, szauna, kirándulások, taktikai foglalkozások'
+        }
+    },
+    {
+        category: { UA: 'Загальна вартість', EN: 'Total Cost', HUN: 'Teljes költség' },
+        amount: '2300 ₴ / доба з людини',
+        description: {
+            UA: 'Все включено',
+            EN: 'All inclusive',
+            HUN: 'Minden benne van'
+        }
+    }
+],
     4: [ // Грузія - Батумі
         {
             category: {
@@ -583,72 +528,72 @@ export const fundingBreakdowns = {
         }
     ],
     default: [
-    {
-        category: {
-            UA: 'Проїзд',
-            EN: 'Transportation',
-            HUN: 'Közlekedés'
+        {
+            category: {
+                UA: 'Проїзд',
+                EN: 'Transportation',
+                HUN: 'Közlekedés'
+            },
+            amount: '3,500 €',
+            description: {
+                UA: 'Авіаквитки та місцевий транспорт',
+                EN: 'Flight tickets and local transport',
+                HUN: 'Repülőjegyek és helyi közlekedés'
+            }
         },
-        amount: '3,500 €',
-        description: {
-            UA: 'Авіаквитки та місцевий транспорт',
-            EN: 'Flight tickets and local transport',
-            HUN: 'Repülőjegyek és helyi közlekedés'
-        }
-    },
-    {
-        category: {
-            UA: 'Проживання',
-            EN: 'Accommodation',
-            HUN: 'Szállás'
+        {
+            category: {
+                UA: 'Проживання',
+                EN: 'Accommodation',
+                HUN: 'Szállás'
+            },
+            amount: '2,800 €',
+            description: {
+                UA: 'Готель для команди на 7 днів',
+                EN: 'Team hotel for 7 days',
+                HUN: 'Csapat szállás 7 napra'
+            }
         },
-        amount: '2,800 €',
-        description: {
-            UA: 'Готель для команди на 7 днів',
-            EN: 'Team hotel for 7 days',
-            HUN: 'Csapat szállás 7 napra'
-        }
-    },
-    {
-        category: {
-            UA: 'Харчування',
-            EN: 'Meals',
-            HUN: 'Étkezés'
+        {
+            category: {
+                UA: 'Харчування',
+                EN: 'Meals',
+                HUN: 'Étkezés'
+            },
+            amount: '1,400 €',
+            description: {
+                UA: 'Триразове харчування для команди',
+                EN: 'Three meals a day for the team',
+                HUN: 'Napi háromszori étkezés a csapatnak'
+            }
         },
-        amount: '1,400 €',
-        description: {
-            UA: 'Триразове харчування для команди',
-            EN: 'Three meals a day for the team',
-            HUN: 'Napi háromszori étkezés a csapatnak'
-        }
-    },
-    {
-        category: {
-            UA: 'Реєстраційний внесок',
-            EN: 'Registration Fee',
-            HUN: 'Regisztrációs díj'
+        {
+            category: {
+                UA: 'Реєстраційний внесок',
+                EN: 'Registration Fee',
+                HUN: 'Regisztrációs díj'
+            },
+            amount: '1,500 €',
+            description: {
+                UA: 'Участь у турнірі',
+                EN: 'Tournament participation',
+                HUN: 'Torna részvétel'
+            }
         },
-        amount: '1,500 €',
-        description: {
-            UA: 'Участь у турнірі',
-            EN: 'Tournament participation',
-            HUN: 'Torna részvétel'
+        {
+            category: {
+                UA: 'Медичне забезпечення',
+                EN: 'Medical Support',
+                HUN: 'Orvosi támogatás'
+            },
+            amount: '800 €',
+            description: {
+                UA: 'Медичні препарати та страхування',
+                EN: 'Medical supplies and insurance',
+                HUN: 'Orvosi kellékek és biztosítás'
+            }
         }
-    },
-    {
-        category: {
-            UA: 'Медичне забезпечення',
-            EN: 'Medical Support',
-            HUN: 'Orvosi támogatás'
-        },
-        amount: '800 €',
-        description: {
-            UA: 'Медичні препарати та страхування',
-            EN: 'Medical supplies and insurance',
-            HUN: 'Orvosi kellékek és biztosítás'
-        }
-    }
-]
+    ]
 };
 
 export const equipmentCategories = [
