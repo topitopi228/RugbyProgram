@@ -201,7 +201,7 @@ export const getEvents = (language: string, t: any) => [
     location: t.event3.location,
     funding: t.event3.funding,
     details: language === 'UA' ?
-        'Загальний навчально-тренувальний збір у Драгобраті для всіх бажаючих гравців вікових категорій 2010-2014 років народження, а також тренерів. Збір включає якісне проживання, повне харчування, тренування у сучасних спортзалах. Програма передбачає інтенсивні тренування, тактичну підготовку, відновлення (басейн, сауна, екскурсії). Вартість — 2300 € за добу з людини (все включено).' :
+        'Загальний навчально-тренувальний табір у Драгобраті для всіх бажаючих гравців вікових категорій 2010-2014 років народження, а також тренерів. Збір включає якісне проживання, повне харчування, тренування у сучасних спортзалах. Програма передбачає інтенсивні тренування, тактичну підготовку, відновлення (басейн, сауна, екскурсії). Вартість — 2300 € за добу з людини (все включено).' :
         language === 'EN' ?
             'General training camp in Dragobrat for all interested players of age categories 2010-2014, as well as coaches. The camp includes quality accommodation, full board, and training in modern sports halls. The program features intensive training sessions, tactical preparation, and recovery days (3rd day — swimming pool, sauna, excursions). Price — 2300 € per person per day (all inclusive).' :
             'Általános edzőtábor Drahobratban minden érdeklődő 2010-2014-es korosztályú játékos és edző számára. A tábor magában foglalja a minőségi szállást, teljes ellátást és edzéseket modern sportcsarnokokban. A program intenzív edzéseket, taktikai felkészítést és regenerációt tartalmaz (3. nap — medence, szauna, kirándulások). Ár — 2300 € / fő / nap (minden benne van).'
