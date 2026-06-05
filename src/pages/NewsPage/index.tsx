@@ -131,8 +131,12 @@ const NewsPage = () => {
                 {
                     id: 17,
                     date: '26 Травня - 3 Червня 2026',
-                    title: 'Перемога в Кремоні (Італія)',
-                    description: 'Збірна України U16 з регбі-7 тріумфально виступила на міжнародному турнірі в Кремоні (Італія). Наша команда посіла 1 місце, показавши високий рівень гри та командної взаємодії. За тиждень турніру хлопці набралися безцінного міжнародного досвіду, зіграли з сильними європейськими командами та продемонстрували характер і майстерність.',
+                    title: 'Перемога в Кремі (Італія)',
+                    description: 'Збірна України U16 з регбі-7 тріумфально виступила на міжнародному турнірі в Кремі (Італія). Наша команда посіла 1 місце серед 5 команд-учасниць турніру, не зазнавши жодної поразки протягом усього змагання, продемонструвавши високий рівень гри, дисципліну та командну взаємодію. Протягом перебування в Італії хлопці здобули безцінний міжнародний досвід, зіграли з сильними європейськими командами та показали характер і майстерність.\n' +
+                        '\n' +
+                        'Окрім матчів, під час перебування в Італії було проведено декілька спільних тренувань з італійськими командами, зокрема Crema Rugby. Під час цих занять тренери та гравці обох сторін обмінялися досвідом, методиками підготовки та підходами до розвитку молодих спортсменів. \n' +
+                        '\n' +
+                        'Поїздка стала важливим кроком не лише у спортивному розвитку команди, а й у зміцненні міжнародних зв’язків. Турнір у Кремі став яскравим прикладом того, як спорт об’єднує молодь різних країн та сприяє розвитку дружніх відносин між спортивними спільнотами.',
                     expense: '9325',
                     image: '/news17.webp'
                 },
@@ -268,8 +272,8 @@ const NewsPage = () => {
                 {
                     id: 17,
                     date: 'May 26 - June 3, 2026',
-                    title: 'Victory in Cremona (Italy)',
-                    description: 'The Ukrainian U16 rugby-7 national team performed triumphantly at the international tournament in Cremona, Italy. Our team took 1st place, demonstrating a high level of play and team coordination. During the week of the tournament, the boys gained invaluable international experience, played against strong European teams, and showed character and skill.',
+                    title: 'Victory in Crema (Italy)',
+                    description: 'The Ukrainian U16 rugby-7 national team performed triumphantly at the international tournament in Crema, Italy. Our team took 1st place, demonstrating a high level of play and team coordination. During the week of the tournament, the boys gained invaluable international experience, played against strong European teams, and showed character and skill.',
                     expense: '9325',
                     image: '/news17.webp'
                 },
@@ -404,7 +408,7 @@ const NewsPage = () => {
                 {
                     id: 17,
                     date: '2026. május 26. - június 3.',
-                    title: 'Győzelem Cremonában (Olaszország)',
+                    title: 'Győzelem Crema (Olaszország)',
                     description: 'Az ukrán U16-os rögbi-7 válogatott diadalmasan szerepelt a cremonai nemzetközi tornán Olaszországban. Csapatunk az 1. helyen végzett, magas szintű játékot és csapatkoordinációt mutatva. A torna hetében a fiúk felbecsülhetetlen nemzetközi tapasztalatot szereztek, erős európai csapatok ellen játszottak, és jellemet és képességet mutattak.',
                     expense: '9325',
                     image: '/news17.webp'

@@ -639,7 +639,7 @@ export const eventCategories: EventCategoryInfo[] = [
     {
         id: 'italy2026',
         folder: 'italy2026',
-        name: { UA: 'Крам, Італія 2026', EN: 'Cram, Italy 2026', HUN: 'Cram, Olaszország 2026' },
+        name: { UA: 'Крема, Італія 2026', EN: 'Crema, Italy 2026', HUN: 'Crema, Olaszország 2026' },
         date: '26 Травня - 3 Червня 2026',
         location: { UA: 'Італія', EN: 'Italy', HUN: 'Olaszország' }
     },
