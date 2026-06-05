@@ -123,7 +123,17 @@ const STATIC_IMAGES: Record<string, string[]> = {
         'zeland10_rdrquq',
     ],
     'italy2026': [
-        // Фото скоро буде додано
+        'v1780652043/4_pvvxwy',
+        'v1780652048/888_yqd6qk',
+        'v1780652048/%D0%B7%D0%B7%D0%B7%D0%B7%D0%B7_t5fecg',
+        'v1780652046/%D1%83%D1%83%D1%83%D1%83_ndujhw',
+        'v1780652045/IMG_9079_fo09ex',
+        'v1780652045/8_wycrnq',
+        'v1780652043/2_ygwqfk',
+        'v1780652043/5_f9yvre',
+        'v1780652043/6_tytsdf',
+        'v1780652043/1_nz0tey'
+
     ],
     'austria2026': [
         // Фото скоро буде додано
