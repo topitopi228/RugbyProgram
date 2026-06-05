@@ -132,7 +132,8 @@ const STATIC_IMAGES: Record<string, string[]> = {
         'v1780652043/2_ygwqfk',
         'v1780652043/5_f9yvre',
         'v1780652043/6_tytsdf',
-        'v1780652043/1_nz0tey'
+        'v1780652043/1_nz0tey',
+        'v1780652043/4_pvvxwy',
 
     ],
     'austria2026': [
