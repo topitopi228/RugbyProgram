@@ -164,20 +164,7 @@ export const translations = {
 };
 
 export const getEvents = (language: string, t: any) => [
-    {
-        id: 1,
-        image: '/maj4.webp',
-        date: t.event1.date,
-        title: t.event1.title,
-        description: t.event1.description,
-        location: t.event1.location,
-        funding: t.event1.funding,
-        details: language === 'UA' ?
-            'Наші партнери з Італії запросили збірну України U16 до участі у локальному турнірі, де змагатимуться провідні молодіжні команди регіону. Це чудова можливість для команди отримати ігрову практику, відчути інший стиль регбі та зміцнити дружні міжнародні зв\'язки.' :
-            language === 'EN' ?
-                'Our Italian partners invited Ukraine U16 team to participate in a local tournament featuring leading regional youth teams. This is a great opportunity for the team to gain game practice, experience a different rugby style, and strengthen friendly international ties.' :
-                'Olasz partnereink meghívták az ukrán U16-os csapatot egy helyi tornára, ahol a régió vezető ifjúsági csapatai versenyeznek.'
-    },
+
     {
         id: 2,
         image: '/maj6.webp',
