@@ -147,6 +147,18 @@ const NewsPage = () => {
                     description: 'У місті Гдиня завершилися дуже продуктивні навчально-тренувальні збори, які стали важливим етапом підготовки нашої команди до майбутнього турніру в місті Кремона. Протягом зборів команда активно працювала над захисними діями, реалізацією простору, технічними аспектами гри та розвитком нейрошвидкості. Хлопці отримали багато нових знань, підняли рівень індивідуальної майстерності та почали значно краще бачити й читати ігрові ситуації на полі. Особливо цінним став досвід роботи зі шотландським тренером, який поділився важливими тонкощами регбі та допоміг команді дивитися на гру під іншим кутом. Щиро дякуємо йому за професіоналізм і внесок у розвиток команди. Також у межах збору ми провели спаринги проти Arka Gdynia U18 та здобули впевнені перемоги у всіх трьох матчах. Дякуємо всім тренерам, організаторам, партнерам і кожному, хто долучився до цього збору. Попереду нові виклики, нові емоції та нові перемоги!',
                     expense: '9500',
                     image: '/news16.webp'
+                },
+                {
+                    id: 18,
+                    date: '15-17 червня 2026',
+                    title: 'збір-перегляд кандидатів у збірну',
+                    description: 'Проводиться відбір гравців для збірної України на виїзд у Клагенфурт.\n' +
+                        'Відбір кандидатів до збірної здійснюється серед спортсменів 2010–2011 р.н. зі всіх клубів України.\n' +
+                        'Метою відбору є формування розширеного списку гравців, які розглядаються до складу збірної та подальшого залучення до роботи з національною командою.\n' +
+                        'У рамках відбору буде оцінюватися рівень підготовки спортсменів та їх готовність до участі у міжнародному виїзді.\n' +
+                        'Це можливість для гравців з усієї країни проявити себе та претендувати на місце у складі збірної України.',
+                    expense: '300',
+                    image: '/news16.webp'
                 }
 
             ]
@@ -284,7 +296,17 @@ const NewsPage = () => {
         description: 'A highly productive training camp concluded in Gdynia, which became an important stage in our team\'s preparation for the upcoming tournament in Cremona. Throughout the camp, the team actively worked on defensive actions, space utilization, technical aspects of the game, and neurocognitive speed development. The players gained a lot of new knowledge, raised their individual skill level, and started to see and read game situations on the field much better. Particularly valuable was the experience of working with a Scottish coach who shared important rugby nuances and helped the team look at the game from a different angle. We sincerely thank him for his professionalism and contribution to the team\'s development. Also, during the camp, we played friendly matches against Arka Gdynia U18 and secured confident victories in all three matches. We thank all the coaches, organizers, partners, and everyone who contributed to this camp. New challenges, new emotions, and new victories are ahead!',
         expense: '9500',
         image: '/news16.webp'
-    }
+    },{
+                    id: 18,
+                    date: '15-17 june 2026',
+                    title: 'Selection of players for the Ukraine national team for the trip to Klagenfurt is underway.',
+                    description: 'The selection of candidates for the national team is being carried out among athletes born in 2010–2011 from all clubs across Ukraine.\n' +
+                        'The purpose of the selection is to form an extended list of players who will be considered for the national team squad and for further involvement in the work with the national team.\n' +
+                        'As part of the selection process, the level of athletes’ preparation and their readiness to participate in the international trip will be evaluated.\n' +
+                        'This is an opportunity for players from all over the country to show themselves and compete for a place in the Ukraine national team.',
+                    expense: '300',
+                    image: '/news16.webp'
+                }
 ]
         },
         HUN: {
