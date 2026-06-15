@@ -442,7 +442,17 @@ const NewsPage = () => {
         description: 'Gdyniában befejeződött egy rendkívül produktív edzőtábor, amely fontos szakasz volt csapatunk felkészítésében a közelgő cremonai tornára. A tábor során a csapat aktívan dolgozott a védekező akciókon, a tér kihasználásán, a játék technikai szempontjain és a neuro-sebesség fejlesztésén. A játékosok rengeteg új tudást szereztek, megemelték egyéni képességeik szintjét, és sokkal jobban kezdték látni és olvasni a játékhelyzeteket a pályán. Különösen értékes volt a skót edzővel való munka tapasztalata, aki fontos rögbi finomságokat osztott meg, és segített a csapatnak más szemszögből nézni a játékot. Őszintén köszönjük neki a professzionalizmust és a csapat fejlődéséhez való hozzájárulást. A tábor keretében barátságos mérkőzéseket játszottunk az Arka Gdynia U18 ellen, és mindhárom meccsen magabiztos győzelmet arattunk. Köszönjük minden edzőnek, szervezőnek, partnernek és mindenkinek, aki hozzájárult ehhez a táborhoz. Új kihívások, új érzelmek és új győzelmek várnak ránk!',
         expense: '9500',
         image: '/news16.webp'
-    }
+    },{
+                    id: 18,
+                    date: '15-17 june 2026',
+                    title: 'Folyamatban van a játékosok kiválasztása az ukrán válogatottba a klagenfurti útra.',
+                    description: 'A válogatott jelöltjeinek kiválasztása 2010–2011-ben született sportolók közül zajlik Ukrajna összes klubjából.\n' +
+                        'A kiválasztás célja egy bővebb játékoslista összeállítása, akik bekerülhetnek a válogatott keretébe, és később bekapcsolódhatnak a nemzeti csapat munkájába.\n' +
+                        'A kiválasztás során értékelik a sportolók felkészültségi szintjét és felkészültségüket a nemzetközi útra való részvételre.\n' +
+                        'Ez lehetőség a játékosoknak az egész országból, hogy megmutassák magukat és pályázzanak a helyre az ukrán válogatottban.',
+                    expense: '300',
+                    image: '/news16.webp'
+                }
 ]
         }
     };
