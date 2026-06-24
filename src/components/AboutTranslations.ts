@@ -165,20 +165,7 @@ export const translations = {
 
 export const getEvents = (language: string, t: any) => [
 
-    {
-        id: 2,
-        image: '/maj6.webp',
-        date: t.event2.date,
-        title: t.event2.title,
-        description: t.event2.description,
-        location: t.event2.location,
-        funding: t.event2.funding,
-        details: language === 'UA' ?
-            'United World Games в Клагенфурті - престижні міжнародні змагання з регбі-7, де збірна України U16 зіграє проти команд з різних країн світу. Відмінна можливість для команди показати свій рівень на міжнародній арені.' :
-            language === 'EN' ?
-                'United World Games in Klagenfurt - prestigious international Rugby-7 competition where Ukraine U16 team will play against teams from different countries. An excellent opportunity for the team to showcase their level on the international stage.' :
-                'United World Games Klagenfurtban - rangos nemzetközi rögbi-7-es verseny, ahol az ukrán U16-os csapat különböző országok csapataival játszik.'
-    },
+
     {
     id: 3,
     image: '/maj10.webp',   // можете змінити на інше фото Драгобрату пізніше
