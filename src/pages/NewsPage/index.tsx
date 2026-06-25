@@ -159,6 +159,25 @@ const NewsPage = () => {
                         'Це можливість для гравців з усієї країни проявити себе та претендувати на місце у складі збірної України.',
                     expense: '300',
                     image: '/news16.webp'
+                },{
+                    id: 19,
+                    date: '18-21 червня 2026',
+                    title: 'Перемога на United World Games ',
+                    description: 'Збірна команда України U-16 з регбі-7 стала переможцем міжнародного турніру United World Games 2026, який відбувся у місті Клагенфурт (Австрія).\n' +
+                        '\n' +
+                        'United World Games є одним із найбільших молодіжних спортивних турнірів Європи та щороку об’єднує тисячі спортсменів із десятків країн світу. У 2026 році турнір зібрав понад 8 000 учасників, які змагалися у різних видах спорту на спортивних аренах федеральної землі Каринтія.\n' +
+                        '\n' +
+                        'Українська делегація, представлена збірними командами України U-16 та U-18 з регбі-7, стала єдиним представником України на цих змаганнях.\n' +
+                        '\n' +
+                        'Збірна України U-16 впевнено пройшла турнірну дистанцію без жодної поразки. На груповому етапі українські регбісти здобули перемоги над командами Wassenaar (Нідерланди) — 63:0, Zagrebacki Ragbi Savez (Хорватія) — 53:3, Sporto Gimnazija «Vairas» (Литва) — 26:0 та Vienna Celtic (Австрія) — 33:0.\n' +
+                        '\n' +
+                        'У півфіналі українська команда перемогла AS Rugby Morges (Швейцарія) з рахунком 56:0, а у фінальному матчі здолала Westcoast Warriors (Нідерланди) — 47:0 та стала володарем золотих нагород турніру.\n' +
+                        '\n' +
+                        'За підсумками шести матчів збірна України U-16 набрала 278 очок та пропустила лише 3, продемонструвавши високий рівень підготовки та командної взаємодії.\n' +
+                        '\n' +
+                        'Участь у United World Games стала важливим етапом міжнародної змагальної практики для українських спортсменів, сприяла розвитку спортивних та культурних зв’язків із представниками інших країн, а також стала черговою нагодою гідно представити Україну на міжнародній спортивній арені.',
+                    expense: '14 100',
+                    image: '/news19.webp'
                 }
 
             ]
@@ -306,6 +325,19 @@ const NewsPage = () => {
                         'This is an opportunity for players from all over the country to show themselves and compete for a place in the Ukraine national team.',
                     expense: '300',
                     image: '/news16.webp'
+                },{
+                    id: 19,
+                    date: '18-21 june 2026',
+                    title: 'Victory at the United World Games',
+                    description: 'The Ukraine U-16 rugby-7 national team became the winner of the United World Games 2026 international tournament, held in Klagenfurt, Austria.\n' +
+                        'The United World Games is one of the largest youth sports tournaments in Europe and brings together thousands of athletes from dozens of countries every year. In 2026, the tournament gathered over 8,000 participants who competed in various sports at venues across the federal state of Carinthia.\n' +
+                        'The Ukrainian delegation, represented by the U-16 and U-18 national rugby-7 teams, was the only representative of Ukraine at these competitions.\n' +
+                        'The Ukraine U-16 team confidently went through the entire tournament without a single defeat. In the group stage, the Ukrainian rugby players secured victories over Wassenaar (Netherlands) — 63:0, Zagrebacki Ragbi Savez (Croatia) — 53:3, Sporto Gimnazija «Vairas» (Lithuania) — 26:0, and Vienna Celtic (Austria) — 33:0.\n' +
+                        'In the semi-final, the Ukrainian team defeated AS Rugby Morges (Switzerland) with a score of 56:0, and in the final match, they beat Westcoast Warriors (Netherlands) — 47:0, becoming the champions of the tournament.\n' +
+                        'Over six matches, the Ukraine U-16 team scored 278 points and conceded only 3, demonstrating a high level of preparation and team coordination.\n' +
+                        'Participation in the United World Games became an important stage of international competitive practice for Ukrainian athletes, contributed to the development of sports and cultural ties with representatives of other countries, and was another opportunity to proudly represent Ukraine on the international sports arena.',
+                    expense: '14 100',
+                    image: '/news19.webp'
                 }
 ]
         },
@@ -452,6 +484,20 @@ const NewsPage = () => {
                         'Ez lehetőség a játékosoknak az egész országból, hogy megmutassák magukat és pályázzanak a helyre az ukrán válogatottban.',
                     expense: '300',
                     image: '/news16.webp'
+                }
+                ,{
+                    id: 19,
+                    date: '18-21 june 2026',
+                    title: 'Győzelem a United World Gamesen',
+                    description: 'Az ukrán U-16-os rögbi-7 válogatott a United World Games 2026 nemzetközi torna győztese lett, amelyet Klagenfurtban (Ausztria) rendeztek meg.\n' +
+                        'A United World Games Európa egyik legnagyobb ifjúsági sporteseménye, amely minden évben több ezer sportolót vonz több tucat országból. 2026-ban a torna több mint 8000 résztvevőt gyűjtött össze, akik különböző sportágakban versenyeztek Karintia szövetségi tartomány sportlétesítményeiben.\n' +
+                        'Az ukrán delegáció, amelyet az U-16-os és U-18-as rögbi-7 válogatottak képviseltek, Ukrajna egyetlen képviselője volt a versenyen.\n' +
+                        'Az ukrán U-16-os csapat magabiztosan teljesítette a tornát egyetlen vereség nélkül. A csoportkörben az ukrán rögbisek győzelmet arattak a Wassenaar (Hollandia) — 63:0, Zagrebacki Ragbi Savez (Horvátország) — 53:3, Sporto Gimnazija «Vairas» (Litvánia) — 26:0 és Vienna Celtic (Ausztria) — 33:0 csapatok ellen.\n' +
+                        'Az elődöntőben az ukrán csapat 56:0-ra győzte le az AS Rugby Morges (Svájc) csapatát, a döntőben pedig 47:0-ra győzte le a Westcoast Warriors (Hollandia) csapatát, így a torna bajnoka lett.\n' +
+                        'Hat mérkőzés során az ukrán U-16-os válogatott 278 pontot szerzett és mindössze 3-at kapott, magas szintű felkészültséget és csapatmunkát mutatva.\n' +
+                        'A United World Gamesen való részvétel fontos állomás volt az ukrán sportolók nemzetközi versenyszakmai gyakorlatában, hozzájárult a sport- és kulturális kapcsolatok fejlesztéséhez más országok képviselőivel, valamint újabb lehetőség volt arra, hogy méltó módon képviseljék Ukrajnát a nemzetközi sportarénán.',
+                    expense: '14 100',
+                    image: '/news19.webp'
                 }
 ]
         }
