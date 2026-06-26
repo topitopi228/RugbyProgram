@@ -28,7 +28,7 @@ export const translations = {
             title: 'Навчально-тренувальний збір',
             description: 'Підготовка команди до міжнародних змагань',
             location: 'м. Батумі, Грузія',
-            funding: '20,385 €'
+            funding: '21,300 €'
         },
         contactTitle: "Зв'яжіться з нами",
         contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
@@ -456,8 +456,8 @@ export const fundingBreakdowns = {
             },
             amount: '8,400 €',
             description: {
-                UA: 'Добові та компенсації тренерів і персоналу',
-                EN: 'Daily allowances and compensation for coaches and staff',
+                UA: 'Добові та компенсації тренерів і гравців',
+                EN: 'Daily allowances and compensation for coaches and players',
                 HUN: 'Napidíjak és kompenzáció edzők és személyzet számára'
             }
         },
@@ -493,7 +493,7 @@ export const fundingBreakdowns = {
                 EN: 'Total Amount',
                 HUN: 'Teljes összeg'
             },
-            amount: '11,985 € / 20,385 €',
+            amount: '12,900 € / 21,300 €',
             description: {
                 UA: 'Без добових / З добовими',
                 EN: 'Without allowances / With allowances',
