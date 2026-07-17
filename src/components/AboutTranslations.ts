@@ -17,12 +17,12 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-            date: '10-20 Липня 2026',
-            title: 'Навчально-тренувальний табір у Драгобраті',
-            description: 'Загальний збір для всіх вікових категорій 2010-2014 та тренерів',
-            location: 'м. Драгобрат, Україна',
-            funding: '2300 ₴ / доба (все включено)'
-        },
+    date: '3-10 Серпня 2026',
+    title: 'Навчально-тренувальні збори у Гдині',
+    description: 'Індивідуальна підготовка 7 гравців віяла юнацької збірної України U-16 з регбі-7',
+    location: 'м. Гдиня, Польща',
+    funding: '3,200 €'
+},
         event4: {
             date: '9-18 Листопада 2026',
             title: 'Навчально-тренувальний збір',
@@ -71,11 +71,11 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-    date: 'July 10-20, 2026',
-    title: 'Training Camp in Dragobrat',
-    description: 'General training camp for all age categories 2010-2014 and coaches',
-    location: 'Dragobrat, Ukraine',
-    funding: '2300 ₴ / day (all inclusive)'
+    date: 'August 3-10, 2026',
+    title: 'Training Camp in Gdynia',
+    description: 'Individual training camp for 7 wing players of the Ukraine U16 Rugby-7 National Team',
+    location: 'Gdynia, Poland',
+    funding: '3,200 €'
 },
         event4: {
             date: 'November 9-18, 2026',
@@ -125,11 +125,11 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-    date: '2026. július 10-20.',
-    title: 'Edzőtábor Drahobratban',
-    description: 'Általános edzőtábor 2010-2014-es korosztályok és edzők számára',
-    location: 'Drahobrat, Ukrajna',
-    funding: '2300 ₴ / nap (minden benne van)'
+    date: '2026. augusztus 3-10.',
+    title: 'Edzőtábor Gdyniában',
+    description: 'Egyéni felkészítő tábor az U16-os ukrán rögbi-7-es válogatott 7 szélsőjátékosa számára',
+    location: 'Gdynia, Lengyelország',
+    funding: '3,200 €'
 },
         event4: {
             date: '2026. november 9-18.',
@@ -168,17 +168,18 @@ export const getEvents = (language: string, t: any) => [
 
     {
     id: 3,
-    image: '/maj10.webp',   // можете змінити на інше фото Драгобрату пізніше
+    image: '/maj15.webp',
     date: t.event3.date,
     title: t.event3.title,
     description: t.event3.description,
     location: t.event3.location,
     funding: t.event3.funding,
-    details: language === 'UA' ?
-        'Загальний навчально-тренувальний табір у Драгобраті для всіх бажаючих гравців вікових категорій 2010-2014 років народження, а також тренерів. Збір включає якісне проживання, повне харчування, тренування у сучасних спортзалах. Програма передбачає інтенсивні тренування, тактичну підготовку, відновлення (басейн, сауна, екскурсії). Вартість — 2300 € за добу з людини (все включено).' :
-        language === 'EN' ?
-            'General training camp in Dragobrat for all interested players of age categories 2010-2014, as well as coaches. The camp includes quality accommodation, full board, and training in modern sports halls. The program features intensive training sessions, tactical preparation, and recovery days (3rd day — swimming pool, sauna, excursions). Price — 2300 € per person per day (all inclusive).' :
-            'Általános edzőtábor Drahobratban minden érdeklődő 2010-2014-es korosztályú játékos és edző számára. A tábor magában foglalja a minőségi szállást, teljes ellátást és edzéseket modern sportcsarnokokban. A program intenzív edzéseket, taktikai felkészítést és regenerációt tartalmaz (3. nap — medence, szauna, kirándulások). Ár — 2300 € / fő / nap (minden benne van).'
+    details:
+        language === 'UA'
+            ? 'З 3 по 10 серпня у місті Гдиня (Республіка Польща) відбудуться навчально-тренувальні збори за участю 7 гравців віяла юнацької національної збірної команди України з регбі-7 U-16. Основною метою зборів є індивідуальний розвиток спортсменів, вдосконалення техніки передачі м’яча, початкового удару, швидкісно-силових якостей, а також розвиток ігрового мислення та техніко-тактичної майстерності.'
+            : language === 'EN'
+            ? 'From August 3 to 10, Gdynia (Poland) will host a training camp for seven wing players of the Ukraine U16 Rugby-7 National Team. The main goal is individual player development, improving passing technique, kick-offs, speed and strength, as well as game awareness and technical-tactical skills.'
+            : '2026. augusztus 3. és 10. között Gdyniában (Lengyelország) edzőtábor kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott 7 szélsőjátékosának részvételével. A fő cél az egyéni fejlődés, a passzolási technika, a kezdőrúgás, a gyorsasági-erőnléti képességek, valamint a játékintelligencia és a technikai-taktikai tudás fejlesztése.'
 },
     {
         id: 4,
@@ -372,39 +373,16 @@ export const fundingBreakdowns = {
     ],
     3: [
     {
-        category: { UA: 'Проживання та харчування', EN: 'Accommodation & Meals', HUN: 'Szállás és étkezés' },
-        amount: '—',
+        category: {
+            UA: 'Загальна сума',
+            EN: 'Total Amount',
+            HUN: 'Teljes összeg'
+        },
+        amount: '3,200 €',
         description: {
-            UA: 'Повний пансіон + проживання (все включено)',
-            EN: 'Full board + accommodation (all inclusive)',
-            HUN: 'Teljes ellátás + szállás (minden benne van)'
-        }
-    },
-    {
-        category: { UA: 'Тренувальна база', EN: 'Training Facilities', HUN: 'Edzések helyszíne' },
-        amount: '—',
-        description: {
-            UA: 'Оренда спортзалів у Драгобраті',
-            EN: 'Rental of sports halls in Dragobrat',
-            HUN: 'Sportcsarnokok bérlése Drahobratban'
-        }
-    },
-    {
-        category: { UA: 'Відновлення та програма', EN: 'Recovery & Program', HUN: 'Regeneráció és program' },
-        amount: '—',
-        description: {
-            UA: 'Басейн, сауна, екскурсії, тактичні заняття',
-            EN: 'Pool, sauna, excursions, tactical sessions',
-            HUN: 'Medence, szauna, kirándulások, taktikai foglalkozások'
-        }
-    },
-    {
-        category: { UA: 'Загальна вартість', EN: 'Total Cost', HUN: 'Teljes költség' },
-        amount: '2300 ₴ / доба з людини',
-        description: {
-            UA: 'Все включено',
-            EN: 'All inclusive',
-            HUN: 'Minden benne van'
+            UA: 'Навчально-тренувальні збори у Гдині',
+            EN: 'Training Camp in Gdynia',
+            HUN: 'Edzőtábor Gdyniában'
         }
     }
 ],
