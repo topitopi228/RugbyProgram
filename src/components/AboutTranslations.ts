@@ -168,7 +168,7 @@ export const getEvents = (language: string, t: any) => [
 
     {
     id: 3,
-    image: '/maj15.webp',
+    image: '/maj4.webp',
     date: t.event3.date,
     title: t.event3.title,
     description: t.event3.description,
