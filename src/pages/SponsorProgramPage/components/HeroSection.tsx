@@ -53,10 +53,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
                         </span>
                         <span className="block text-xl sm:text-2xl md:text-3xl font-medium text-slate-200 mt-3">
                             {language === 'UA'
-                                ? 'з регбі-7s U16'
+                                ? 'з регбі-7s U17'
                                 : language === 'EN'
-                                    ? 'Rugby 7s U16'
-                                    : 'Rögbi 7s U16'}
+                                    ? 'Rugby 7s U17'
+                                    : 'Rögbi 7s U17'}
                         </span>
                     </motion.h1>
 

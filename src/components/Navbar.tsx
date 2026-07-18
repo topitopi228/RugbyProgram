@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
                         <motion.span
                             whileHover={{ scale: 1.05 }}
                             className="text-2xl font-bold bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 bg-clip-text text-transparent drop-shadow-lg">
-                            UKRAINE U16
+                            UKRAINE U17
                             RUGBY 7S
                         </motion.span>
                     </Link>
