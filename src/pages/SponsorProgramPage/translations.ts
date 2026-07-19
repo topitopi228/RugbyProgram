@@ -18,7 +18,7 @@ export type Translations = {
 
 export const translations: Record<string, Translations> = {
     UA: {
-        title: 'Ласкаво просимо на офіційний сайт юнацької Збірної України з регбі-7 Ю-16!',
+        title: 'Ласкаво просимо на офіційний сайт юнацької Збірної України з регбі-7 Ю-17!',
         subtitle: 'ПІДТРИМАТИ НАЦІОНАЛЬНУ ЗБІРНУ УКРАЇНИ З РЕГБІ-7s',
         description: 'Наш проєкт вже має соціальну цінність, результати, команду, систему тренувань та мотивацію — більше, ніж у 90% заявників на гранти. Ви можете розраховувати на підтримку в таких напрямках:',
         supportTitle: 'Напрямки підтримки:',
@@ -46,7 +46,7 @@ export const translations: Record<string, Translations> = {
         olympicTitle: 'Вихід на юнацькі олімпійські ігри'
     },
     EN: {
-        title: 'Welcome to the official website of the Ukrainian U-16 Rugby 7s National Team!',
+        title: 'Welcome to the official website of the Ukrainian U-17 Rugby 7s National Team!',
         subtitle: 'SUPPORT THE UKRAINIAN NATIONAL RUGBY-7s TEAM',
         description: 'Our project already has social value, results, a team, a training system, and motivation—more than 90% of grant applicants. You can count on support in the following areas:',
         supportTitle: 'Areas of support:',
@@ -74,7 +74,7 @@ export const translations: Record<string, Translations> = {
         olympicTitle: 'Qualifying for the Youth Olympic Games'
     },
     HUN: {
-        title: 'Üdvözöljük az Ukrán U16-os Rögbi 7-es Válogatott hivatalos weboldalán!',
+        title: 'Üdvözöljük az Ukrán U17-os Rögbi 7-es Válogatott hivatalos weboldalán!',
         subtitle: 'TÁMOGASD AZ UKRÁN RÖGBI-7-ES VÁLOGATOTTAT',
         description: 'Projektünk már most társadalmi értéket, eredményeket, csapatot, edzésrendszert és motivációt kínál – többet, mint a pályázók 90%-a. A következő területeken számíthatsz támogatásra:',
         supportTitle: 'Támogatási területek:',

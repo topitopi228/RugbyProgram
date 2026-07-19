@@ -1,7 +1,7 @@
 export const translations = {
     UA: {
         pageTitle: 'Майбутні заходи',
-        upcomingEvents: 'Майбутні заходи збірної України U16 з регбі-7',
+        upcomingEvents: 'Майбутні заходи збірної України U17 з регбі-7',
         event1: {
             date: '26 Травня - 3 Червня 2026',
             title: 'Міжнародний турнір у Кремоні',
@@ -55,7 +55,7 @@ export const translations = {
     },
     EN: {
         pageTitle: 'Upcoming Events',
-        upcomingEvents: 'Upcoming Events for Ukraine U16 Rugby-7 National Team',
+        upcomingEvents: 'Upcoming Events for Ukraine U17 Rugby-7 National Team',
         event1: {
             date: 'May 26 - June 3, 2026',
             title: 'International Tournament in Cremona',
@@ -109,7 +109,7 @@ export const translations = {
     },
     HUN: {
         pageTitle: 'Közelgő események',
-        upcomingEvents: 'Az U16-os ukrán rögbi-7-es válogatott közelgő eseményei',
+        upcomingEvents: 'Az U17-os ukrán rögbi-7-es válogatott közelgő eseményei',
         event1: {
             date: '2026. május 26. - június 3.',
             title: 'Nemzetközi Torna Cremonában',
