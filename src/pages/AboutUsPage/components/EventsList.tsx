@@ -74,12 +74,7 @@ const EventsList: React.FC<EventsListProps> = ({ events, language, fadeIn, onOpe
                                     {/* Gradient Overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
                                     
-                                    {/* Event Number Badge */}
-                                    <div className="absolute top-4 left-4">
-                                        <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg">
-                                            <span className="text-slate-900 font-bold text-lg">0{index + 1}</span>
-                                        </div>
-                                    </div>
+
 
                                     {/* Date Badge */}
                                     <div className="absolute bottom-4 left-4 right-4">

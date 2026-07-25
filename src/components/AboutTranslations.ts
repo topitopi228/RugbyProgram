@@ -17,18 +17,88 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-    date: '3-10 Серпня 2026',
-    title: 'Навчально-тренувальні збори у Гдині',
-    description: 'Індивідуальна підготовка 7 гравців віяла юнацької збірної України U-16 з регбі-7',
-    location: 'м. Гдиня, Польща',
-    funding: '3,200 €'
-},
+            date: '3-10 Серпня 2026',
+            title: 'Навчально-тренувальні збори у Гдині',
+            description: 'Індивідуальна підготовка 7 гравців віяла юнацької збірної України U-17 з регбі-7',
+            location: 'м. Гдиня, Польща',
+            funding: '6,200 €'
+        },
         event4: {
             date: '9-18 Листопада 2026',
             title: 'Навчально-тренувальний збір',
             description: 'Підготовка команди до міжнародних змагань',
             location: 'м. Батумі, Грузія',
             funding: '21,300 €'
+        },
+        event5: {
+            date: '26-30 Серпня 2026',
+            title: 'Навчально-тренувальні збори в Ужгороді',
+            description: 'Підготовка гравців сутички',
+            location: 'м. Ужгород, Україна',
+            funding: '950 €'
+        },
+        event6: {
+            date: '13-18 Жовтня 2026',
+            title: 'Міжнародні навчально-тренувальні збори (Чехія)',
+            description: 'TBC — точне місце та програма уточнюється',
+            location: 'Чехія (TBC)',
+            funding: 'TBC'
+        },
+        event7: {
+            date: '23-29 Листопада 2026',
+            title: 'Міжнародні навчально-тренувальні збори в Грузії',
+            description: 'Ключовий етап підготовки до сезону 2027',
+            location: 'Грузія',
+            funding: '16,900 €'
+        },
+        event8: {
+            date: '1-6 Грудня 2026',
+            title: 'Заключний навчально-тренувальний збір',
+            description: 'Підсумкова перевірка підготовки в Хмельницькому',
+            location: 'м. Хмельницький, Україна',
+            funding: '1,800 €'
+        },
+        event9: {
+            date: 'Січень 2027',
+            title: 'Навчально-тренувальні збори (Іспанія)',
+            description: 'TBC — точне місце та програма уточнюється',
+            location: 'Іспанія (TBC)',
+            funding: 'TBC'
+        },
+        event10: {
+            date: '13-14 Лютого 2027',
+            title: 'Lisbon Rugby Youth Festival',
+            description: 'Portugal Junior 7s',
+            location: 'Лісабон, Португалія',
+            funding: '10,800 €'
+        },
+        event11: {
+            date: '15-21 Березня 2027',
+            title: 'Міжнародні навчально-тренувальні збори в Гдині',
+            description: 'Підготовка в Польщі',
+            location: 'м. Гдиня, Польща',
+            funding: '10,200 €'
+        },
+        event12: {
+            date: 'Квітень 2027',
+            title: 'Міжнародний турнір / збори (Франція)',
+            description: 'TBC — точне місце та програма уточнюється',
+            location: 'Франція (TBC)',
+            funding: 'TBC'
+        },
+        event13: {
+            date: 'Травень 2027',
+            title: 'Міжнародний турнір / збори (Чехія)',
+            description: 'TBC — точне місце та програма уточнюється',
+            location: 'Чехія (TBC)',
+            funding: 'TBC'
+        },
+        event14: {
+            date: '24-27 Червня 2027',
+            title: 'United World Games',
+            description: 'Міжнародний турнір в Австрії',
+            location: 'м. Клагенфурт, Австрія',
+            funding: '16,200 €'
         },
         contactTitle: "Зв'яжіться з нами",
         contactText: "Маєте питання або бажаєте підтримати нашу команду? Зв'яжіться з нами за допомогою наведених нижче контактів.",
@@ -71,18 +141,88 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-    date: 'August 3-10, 2026',
-    title: 'Training Camp in Gdynia',
-    description: 'Individual training camp for 7 wing players of the Ukraine U16 Rugby-7 National Team',
-    location: 'Gdynia, Poland',
-    funding: '3,200 €'
-},
+            date: 'August 3-10, 2026',
+            title: 'Training Camp in Gdynia',
+            description: 'Individual training camp for 7 wing players of the Ukraine U16 Rugby-7 National Team',
+            location: 'Gdynia, Poland',
+            funding: '6,200 €'
+        },
         event4: {
             date: 'November 9-18, 2026',
             title: 'Training Camp',
             description: 'Team preparation for international competitions',
             location: 'Batumi, Georgia',
             funding: '20,385 €'
+        },
+        event5: {
+            date: 'August 26-30, 2026',
+            title: 'Training Camp in Uzhhorod',
+            description: 'Forwards training camp',
+            location: 'Uzhhorod, Ukraine',
+            funding: '950 €'
+        },
+        event6: {
+            date: 'October 13-18, 2026',
+            title: 'International Training Camp (Czechia)',
+            description: 'TBC — exact venue and program to be confirmed',
+            location: 'Czechia (TBC)',
+            funding: 'TBC'
+        },
+        event7: {
+            date: 'November 23-29, 2026',
+            title: 'International Training Camp in Georgia',
+            description: 'Key preparation stage for 2027 season',
+            location: 'Georgia',
+            funding: '16,900 €'
+        },
+        event8: {
+            date: 'December 1-6, 2026',
+            title: 'Final Training Camp',
+            description: 'Final preparation check in Khmelnytskyi',
+            location: 'Khmelnytskyi, Ukraine',
+            funding: '1,800 €'
+        },
+        event9: {
+            date: 'January 2027',
+            title: 'Training Camp (Spain)',
+            description: 'TBC — exact venue and program to be confirmed',
+            location: 'Spain (TBC)',
+            funding: 'TBC'
+        },
+        event10: {
+            date: 'February 13-14, 2027',
+            title: 'Lisbon Rugby Youth Festival',
+            description: 'Portugal Junior 7s',
+            location: 'Lisbon, Portugal',
+            funding: '10,800 €'
+        },
+        event11: {
+            date: 'March 15-21, 2027',
+            title: 'International Training Camp in Gdynia',
+            description: 'Training camp in Poland',
+            location: 'Gdynia, Poland',
+            funding: '10,200 €'
+        },
+        event12: {
+            date: 'April 2027',
+            title: 'International Tournament / Camp (France)',
+            description: 'TBC — exact venue and program to be confirmed',
+            location: 'France (TBC)',
+            funding: 'TBC'
+        },
+        event13: {
+            date: 'May 2027',
+            title: 'International Tournament / Camp (Czechia)',
+            description: 'TBC — exact venue and program to be confirmed',
+            location: 'Czechia (TBC)',
+            funding: 'TBC'
+        },
+        event14: {
+            date: 'June 24-27, 2027',
+            title: 'United World Games',
+            description: 'International tournament in Austria',
+            location: 'Klagenfurt, Austria',
+            funding: '16,200 €'
         },
         contactTitle: "Contact Us",
         contactText: "Have questions or want to support our team? Contact us using the information below.",
@@ -125,12 +265,12 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-    date: '2026. augusztus 3-10.',
-    title: 'Edzőtábor Gdyniában',
-    description: 'Egyéni felkészítő tábor az U16-os ukrán rögbi-7-es válogatott 7 szélsőjátékosa számára',
-    location: 'Gdynia, Lengyelország',
-    funding: '3,200 €'
-},
+            date: '2026. augusztus 3-10.',
+            title: 'Edzőtábor Gdyniában',
+            description: 'Egyéni felkészítő tábor az U16-os ukrán rögbi-7-es válogatott 7 szélsőjátékosa számára',
+            location: 'Gdynia, Lengyelország',
+            funding: '6,200 €'
+        },
         event4: {
             date: '2026. november 9-18.',
             title: 'Edzőtábor',
@@ -166,34 +306,147 @@ export const translations = {
 export const getEvents = (language: string, t: any) => [
 
 
+
+
     {
-    id: 3,
-    image: '/maj4.webp',
-    date: t.event3.date,
-    title: t.event3.title,
-    description: t.event3.description,
-    location: t.event3.location,
-    funding: t.event3.funding,
-    details:
-        language === 'UA'
-            ? 'З 3 по 10 серпня у місті Гдиня (Республіка Польща) відбудуться навчально-тренувальні збори за участю 7 гравців віяла юнацької національної збірної команди України з регбі-7 U-16. Основною метою зборів є індивідуальний розвиток спортсменів, вдосконалення техніки передачі м’яча, початкового удару, швидкісно-силових якостей, а також розвиток ігрового мислення та техніко-тактичної майстерності.'
+        id: 5,
+        image: '/maj4.webp',
+        date: t.event5.date,
+        title: t.event5.title,
+        description: t.event5.description,
+        location: t.event5.location,
+        funding: t.event5.funding,
+        details: language === 'UA'
+            ? 'З 26 по 30 серпня в місті Ужгород відбудуться навчально-тренувальні збори гравців сутички юнацької національної збірної команди України з регбі-7 U16. Протягом п\'яти днів спортсмени працюватимуть над удосконаленням техніки виконання стандартних положень, зокрема схватів та коридорів. Основна увага буде приділена індивідуальній технічній підготовці, синхронізації дій гравців сутички, взаємодії в ігрових епізодах та відпрацюванню тактичних схем.'
             : language === 'EN'
-            ? 'From August 3 to 10, Gdynia (Poland) will host a training camp for seven wing players of the Ukraine U16 Rugby-7 National Team. The main goal is individual player development, improving passing technique, kick-offs, speed and strength, as well as game awareness and technical-tactical skills.'
-            : '2026. augusztus 3. és 10. között Gdyniában (Lengyelország) edzőtábor kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott 7 szélsőjátékosának részvételével. A fő cél az egyéni fejlődés, a passzolási technika, a kezdőrúgás, a gyorsasági-erőnléti képességek, valamint a játékintelligencia és a technikai-taktikai tudás fejlesztése.'
-},
+                ? 'From August 26 to 30 in Uzhhorod, a training camp for forwards of the Ukraine U17 Rugby-7 National Team will take place. Over five days the athletes will work on improving set-piece technique, especially scrums and lineouts. The main focus will be on individual technical preparation, synchronisation of the forward pack and practising tactical schemes.'
+                : '2026. augusztus 26-30. között Ungváron edzőtábor kerül megrendezésre az U17-os ukrán rögbi-7-es válogatott előjátékosai számára. Öt nap alatt a sportolók a standard helyzetek (különösen a scrumok és a lineoutok) technikájának tökéletesítésén dolgoznak.'
+    },
     {
-        id: 4,
+        id: 6,
+        image: '/tbc.webp',
+        date: t.event6.date,
+        title: t.event6.title,
+        description: t.event6.description,
+        location: t.event6.location,
+        funding: t.event6.funding,
+        details: language === 'UA'
+            ? 'TBC — точне місце та програма уточнюються.'
+            : language === 'EN'
+                ? 'TBC — exact venue and programme to be confirmed.'
+                : 'TBC — pontos helyszín és program még egyeztetés alatt.'
+    },
+    {
+        id: 7,
         image: '/maj12.webp',
-        date: t.event4.date,
-        title: t.event4.title,
-        description: t.event4.description,
-        location: t.event4.location,
-        funding: t.event4.funding,
-        details: language === 'UA' ?
-            'Навчально-тренувальний збір у Батумі для підготовки команди до майбутніх міжнародних змагань. Програма включає інтенсивні тренування, тактичну підготовку та командну взаємодію.' :
-            language === 'EN' ?
-                'Training camp in Batumi to prepare the team for upcoming international competitions. The program includes intensive training, tactical preparation and team building.' :
-                'Edzőtábor Batumiban a csapat felkészítésére a közelgő nemzetközi versenyekre. A program intenzív edzéseket, taktikai felkészítést és csapatépítést tartalmaz.'
+        date: t.event7.date,
+        title: t.event7.title,
+        description: t.event7.description,
+        location: t.event7.location,
+        funding: t.event7.funding,
+        details: language === 'UA'
+            ? 'З 23 по 29 листопада на території Грузії відбудуться міжнародні навчально-тренувальні збори юнацької національної збірної команди України з регбі-7 U16. Цей етап стане одним із ключових у підготовці команди до міжнародного сезону 2027 року. Упродовж семи днів спортсмени працюватимуть за насиченою програмою (техніка, тактика, фізична і психологічна підготовка). Заплановано контрольні матчі та спільні тренування з грузинськими командами.'
+            : language === 'EN'
+                ? 'From November 23 to 29 in Georgia, an international training camp for the Ukraine U17 Rugby-7 National Team will take place. This will be one of the key stages of preparation for the 2027 season. Over seven days the athletes will follow an intensive programme covering technical, tactical, physical and psychological preparation. Test matches and joint sessions with Georgian teams are planned.'
+                : '2026. november 23-29. között Grúziában nemzetközi edzőtábor kerül megrendezésre az U17-os ukrán rögbi-7-es válogatott számára. Ez a szakasz kulcsfontosságú lesz a 2027-es szezonra való felkészülésben. Hét nap alatt intenzív programot követnek (technika, taktika, fizikai és pszichológiai felkészítés). Ellenőrző mérkőzések és közös edzések is tervezettek.'
+    },
+    {
+        id: 8,
+        image: '/maj8.webp',
+        date: t.event8.date,
+        title: t.event8.title,
+        description: t.event8.description,
+        location: t.event8.location,
+        funding: t.event8.funding,
+        details: language === 'UA'
+            ? 'З 1 по 6 грудня у місті Хмельницький відбудеться заключний навчально-тренувальний збір юнацької національної збірної команди України з регбі-7 U16. Основною метою стане підсумкова перевірка рівня підготовки, удосконалення командної взаємодії та закріплення всіх напрацьованих елементів. Заплановано серію контрольних матчів проти збірної України U17.'
+            : language === 'EN'
+                ? 'From December 1 to 6 in Khmelnytskyi, the final training camp of the Ukraine U17 Rugby-7 National Team will take place. The main goal is a final check of the athletes’ preparation level, improvement of team interaction and consolidation of all practised elements. A series of test matches against the Ukraine U17 team is planned.'
+                : '2026. december 1-6. között Hmelnyickijben kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott záró edzőtábora. A fő cél a felkészültség végső ellenőrzése és a csapat együttműködésének fejlesztése. Ellenőrző mérkőzések sorozata is tervezett az U17-es válogatott ellen.'
+    },
+    {
+        id: 9,
+        image: '/tbc.webp',
+        date: t.event9.date,
+        title: t.event9.title,
+        description: t.event9.description,
+        location: t.event9.location,
+        funding: t.event9.funding,
+        details: language === 'UA'
+            ? 'TBC — точне місце та програма уточнюються.'
+            : language === 'EN'
+                ? 'TBC — exact venue and programme to be confirmed.'
+                : 'TBC — pontos helyszín és program még egyeztetés alatt.'
+    },
+    {
+        id: 10,
+        image: '/maj2.webp',
+        date: t.event10.date,
+        title: t.event10.title,
+        description: t.event10.description,
+        location: t.event10.location,
+        funding: t.event10.funding,
+        details: language === 'UA'
+            ? 'Юнацька національна збірна команда України з регбі-7 U17 планує взяти участь у Lisbon Rugby Youth Festival 2027 — одному з наймасштабніших і найпрестижніших юнацьких регбійних турнірів Європи (Лісабон, Португалія). Минулого року команда виграла Silver Cup. У 2027 році мета — перемога в головному турнірі.'
+            : language === 'EN'
+                ? 'The Ukraine U17 Rugby-7 National Team plans to take part in the Lisbon Rugby Youth Festival 2027 — one of the largest and most prestigious youth rugby tournaments in Europe (Lisbon, Portugal). Last year the team won the Silver Cup. In 2027 the goal is to win the main tournament.'
+                : 'Az U17-os ukrán rögbi-7-es válogatott tervezi a részvételt a Lisbon Rugby Youth Festival 2027-en — Európa egyik legnagyobb és legrangosabb ifjúsági rögbi tornáján (Lisszabon). Tavaly a csapat megnyerte a Silver Cupot. 2027-ben a cél a főtorna megnyerése.'
+    },
+    {
+        id: 11,
+        image: '/maj11.webp',
+        date: t.event11.date,
+        title: t.event11.title,
+        description: t.event11.description,
+        location: t.event11.location,
+        funding: t.event11.funding,
+        details: language === 'UA'
+            ? 'У березні 2027 року юнацька національна збірна команда України з регбі-7 U17 проведе міжнародні навчально-тренувальні збори в місті Гдиня (Польща). Команда працюватиме над техніко-тактичною підготовкою, індивідуальною майстерністю, організацією атаки і захисту. Заплановано спільні тренування та контрольні матчі з місцевими командами.'
+            : language === 'EN'
+                ? 'In March 2027 the Ukraine U16 Rugby-7 National Team will hold an international training camp in Gdynia (Poland). The team will work on technical-tactical preparation, individual skills, organisation of attack and defence. Joint training sessions and test matches with local teams are planned.'
+                : '2027 márciusában az U17-os ukrán rögbi-7-es válogatott nemzetközi edzőtábort tart Gdyniában (Lengyelország). A csapat a technikai-taktikai felkészülésen, az egyéni készségeken, a támadás és védekezés szervezésén dolgozik. Közös edzések és ellenőrző mérkőzések is tervezettek.'
+    },
+    {
+        id: 12,
+        image: '/tbc.webp',
+        date: t.event12.date,
+        title: t.event12.title,
+        description: t.event12.description,
+        location: t.event12.location,
+        funding: t.event12.funding,
+        details: language === 'UA'
+            ? 'TBC — точне місце та програма уточнюються.'
+            : language === 'EN'
+                ? 'TBC — exact venue and programme to be confirmed.'
+                : 'TBC — pontos helyszín és program még egyeztetés alatt.'
+    },
+    {
+        id: 13,
+        image: '/tbc.webp',
+        date: t.event13.date,
+        title: t.event13.title,
+        description: t.event13.description,
+        location: t.event13.location,
+        funding: t.event13.funding,
+        details: language === 'UA'
+            ? 'TBC — точне місце та програма уточнюються.'
+            : language === 'EN'
+                ? 'TBC — exact venue and programme to be confirmed.'
+                : 'TBC — pontos helyszín és program még egyeztetés alatt.'
+    },
+    {
+        id: 14,
+        image: '/maj14.webp',
+        date: t.event14.date,
+        title: t.event14.title,
+        description: t.event14.description,
+        location: t.event14.location,
+        funding: t.event14.funding,
+        details: language === 'UA'
+            ? 'У червні 2027 року юнацька національна збірна команда України з регбі-7 U17 планує взяти участь у United World Games (Клагенфурт, Австрія). У 2026 році команда стала чемпіоном турніру без жодної поразки. У 2027 році мета — захистити титул.'
+            : language === 'EN'
+                ? 'In June 2027 the Ukraine U17 Rugby-7 National Team plans to take part in the United World Games (Klagenfurt, Austria). In 2026 the team became the tournament champions without a single defeat. In 2027 the goal is to defend the title.'
+                : '2027 júniusában az U17-os ukrán rögbi-7-es válogatott tervezi a részvételt a United World Games-en (Klagenfurt, Ausztria). 2026-ban a csapat vereség nélkül megnyerte a tornát. 2027-ben a cél a cím megvédése.'
     }
 ];
 
@@ -372,20 +625,20 @@ export const fundingBreakdowns = {
         }
     ],
     3: [
-    {
-        category: {
-            UA: 'Загальна сума',
-            EN: 'Total Amount',
-            HUN: 'Teljes összeg'
-        },
-        amount: '3,200 €',
-        description: {
-            UA: 'Навчально-тренувальні збори у Гдині',
-            EN: 'Training Camp in Gdynia',
-            HUN: 'Edzőtábor Gdyniában'
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '6,200 €',
+            description: {
+                UA: 'Навчально-тренувальні збори у Гдині',
+                EN: 'Training Camp in Gdynia',
+                HUN: 'Edzőtábor Gdyniában'
+            }
         }
-    }
-],
+    ],
     4: [ // Грузія - Батумі
         {
             category: {
@@ -545,7 +798,156 @@ export const fundingBreakdowns = {
                 HUN: 'Orvosi kellékek és biztosítás'
             }
         }
-    ]
+    ], 5: [ // Ужгород
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '950 €',
+            description: {
+                UA: 'Навчально-тренувальні збори в Ужгороді (гравці сутички)',
+                EN: 'Training Camp in Uzhhorod (forwards)',
+                HUN: 'Edzőtábor Ungváron (előjátékosok)'
+            }
+        }
+    ],
+    6: [ // Чехія TBC
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: 'TBC',
+            description: {
+                UA: 'Міжнародні навчально-тренувальні збори в Чехії (TBC)',
+                EN: 'International Training Camp in Czechia (TBC)',
+                HUN: 'Nemzetközi edzőtábor Csehországban (TBC)'
+            }
+        }
+    ],
+    7: [ // Грузія листопад
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '16,900 €',
+            description: {
+                UA: 'Міжнародні навчально-тренувальні збори в Грузії',
+                EN: 'International Training Camp in Georgia',
+                HUN: 'Nemzetközi edzőtábor Grúziában'
+            }
+        }
+    ],
+    8: [ // Хмельницький
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '1,800 €',
+            description: {
+                UA: 'Заключний навчально-тренувальний збір у Хмельницькому',
+                EN: 'Final Training Camp in Khmelnytskyi',
+                HUN: 'Záró edzőtábor Hmelnyickijben'
+            }
+        }
+    ],
+    9: [ // Іспанія TBC
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: 'TBC',
+            description: {
+                UA: 'Навчально-тренувальні збори в Іспанії (TBC)',
+                EN: 'Training Camp in Spain (TBC)',
+                HUN: 'Edzőtábor Spanyolországban (TBC)'
+            }
+        }
+    ],
+    10: [ // Lisbon
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '10,800 €',
+            description: {
+                UA: 'Lisbon Rugby Youth Festival (Portugal Junior 7s)',
+                EN: 'Lisbon Rugby Youth Festival (Portugal Junior 7s)',
+                HUN: 'Lisbon Rugby Youth Festival (Portugal Junior 7s)'
+            }
+        }
+    ],
+    11: [ // Гдиня березень
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '10,200 €',
+            description: {
+                UA: 'Міжнародні навчально-тренувальні збори в Гдині',
+                EN: 'International Training Camp in Gdynia',
+                HUN: 'Nemzetközi edzőtábor Gdyniában'
+            }
+        }
+    ],
+    12: [ // Франція TBC
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: 'TBC',
+            description: {
+                UA: 'Міжнародний турнір / збори у Франції (TBC)',
+                EN: 'International Tournament / Camp in France (TBC)',
+                HUN: 'Nemzetközi torna / tábor Franciaországban (TBC)'
+            }
+        }
+    ],
+    13: [ // Чехія травень TBC
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: 'TBC',
+            description: {
+                UA: 'Міжнародний турнір / збори в Чехії (TBC)',
+                EN: 'International Tournament / Camp in Czechia (TBC)',
+                HUN: 'Nemzetközi torna / tábor Csehországban (TBC)'
+            }
+        }
+    ],
+    14: [ // United World Games 2027
+        {
+            category: {
+                UA: 'Загальна сума',
+                EN: 'Total Amount',
+                HUN: 'Teljes összeg'
+            },
+            amount: '16,200 €',
+            description: {
+                UA: 'United World Games (Клагенфурт, Австрія)',
+                EN: 'United World Games (Klagenfurt, Austria)',
+                HUN: 'United World Games (Klagenfurt, Ausztria)'
+            }
+        }
+    ],
 };
 
 export const equipmentCategories = [
