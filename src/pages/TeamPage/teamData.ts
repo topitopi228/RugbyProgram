@@ -33,12 +33,6 @@ export const getTeamData = (language: string, t: any) => {
                 name: t.doctor2,
                 role: t.sportsDoctor,
                 gg: t.doctor2Desc
-            },
-            {
-                id: 'doc3',
-                name: t.doctor3,
-                role: t.rehabilitationSpecialist,
-                gg: t.doctor3Desc
             }
         ],
         players: [
@@ -47,7 +41,6 @@ export const getTeamData = (language: string, t: any) => {
             { id: 'player1', name: 'Микола Денбновецький ', birthDate: '08.12.2010' },
             { id: 'player2', name: 'Ерік Тіппан', birthDate: '12.09.2013' },
             { id: 'player3', name: 'Володимир Рец', birthDate: '05.04.2011' },
-            { id: 'player4', name: 'Нікіта Сачек ', birthDate: '04.04.2010' },
             { id: 'player5', name: 'Даниіл Казнін', birthDate: '07.05.2010' },
             { id: 'player6', name: 'Мирослав Тарасюк', birthDate: '15.05.2011' },
             { id: 'player7', name: 'Юрій Штець', birthDate: '07.05.2011' },

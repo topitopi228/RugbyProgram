@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <!-- Platinum gradient with crystal effect -->
+    <linearGradient id="platinumGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c4b5fd;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="platinumGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e9d5ff;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#c4b5fd;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <radialGradient id="platinumGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#c4b5fd;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Filter for inner glow -->
+    <filter id="innerGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feComposite in="coloredBlur" in2="SourceAlpha" operator="in" result="innerBlur"/>
+      <feComposite in="SourceGraphic" in2="innerBlur" operator="over"/>
+    </filter>
+    
+    <!-- Filter for outer glow -->
+    <filter id="outerGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Dark background -->
+  <rect width="400" height="400" fill="#1e1b4b"/>
+  
+  <!-- Glow circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#platinumGlow)"/>
+  
+  <!-- Main crystal structure - hexagonal with depth -->
+  <g filter="url(#outerGlow)">
+    <!-- Center large hexagon -->
+    <path d="M 200 80 L 280 130 L 280 230 L 200 280 L 120 230 L 120 130 Z" 
+          fill="url(#platinumGradient1)" 
+          stroke="#e9d5ff" 
+          stroke-width="3"
+          opacity="0.95"/>
+    
+    <!-- Inner hexagon for depth -->
+    <path d="M 200 110 L 250 140 L 250 210 L 200 240 L 150 210 L 150 140 Z" 
+          fill="url(#platinumGradient2)" 
+          opacity="0.7"/>
+    
+    <!-- Central diamond -->
+    <path d="M 200 140 L 230 180 L 200 220 L 170 180 Z" 
+          fill="#ffffff" 
+          opacity="0.6"
+          filter="url(#innerGlow)"/>
+    
+    <!-- Top facets -->
+    <path d="M 200 80 L 230 115 L 200 140 L 170 115 Z" 
+          fill="url(#platinumGradient2)" 
+          opacity="0.8"/>
+    
+    <!-- Side facets -->
+    <path d="M 280 130 L 250 140 L 230 180 L 250 210 Z" 
+          fill="url(#platinumGradient1)" 
+          opacity="0.6"/>
+    
+    <path d="M 120 130 L 150 140 L 170 180 L 150 210 Z" 
+          fill="url(#platinumGradient1)" 
+          opacity="0.6"/>
+    
+    <!-- Bottom facets -->
+    <path d="M 200 280 L 230 245 L 200 220 L 170 245 Z" 
+          fill="url(#platinumGradient2)" 
+          opacity="0.8"/>
+  </g>
+  
+  <!-- Accent lines emanating from center -->
+  <g opacity="0.4" stroke="#e9d5ff" stroke-width="2" fill="none">
+    <line x1="200" y1="180" x2="200" y2="40"/>
+    <line x1="200" y1="180" x2="330" y2="100"/>
+    <line x1="200" y1="180" x2="330" y2="260"/>
+    <line x1="200" y1="180" x2="200" y2="320"/>
+    <line x1="200" y1="180" x2="70" y2="260"/>
+    <line x1="200" y1="180" x2="70" y2="100"/>
+  </g>
+  
+  <!-- Small corner crystals -->
+  <g opacity="0.5">
+    <path d="M 50 50 L 60 45 L 70 50 L 60 60 Z" fill="#c4b5fd"/>
+    <path d="M 350 50 L 340 45 L 330 50 L 340 60 Z" fill="#c4b5fd"/>
+    <path d="M 50 350 L 60 340 L 70 350 L 60 355 Z" fill="#c4b5fd"/>
+    <path d="M 350 350 L 340 340 L 330 350 L 340 355 Z" fill="#c4b5fd"/>
+  </g>
+  
+  <!-- Sparkle effects -->
+  <g fill="#ffffff" opacity="0.9">
+    <circle cx="200" cy="140" r="3"/>
+    <circle cx="230" cy="180" r="2"/>
+    <circle cx="170" cy="180" r="2"/>
+    <circle cx="200" cy="220" r="3"/>
+    <circle cx="150" cy="150" r="2"/>
+    <circle cx="250" cy="150" r="2"/>
+    <circle cx="150" cy="200" r="2"/>
+    <circle cx="250" cy="200" r="2"/>
+  </g>
+  
+  <!-- Outer ring with geometric pattern -->
+  <g opacity="0.3" fill="none" stroke="#a78bfa" stroke-width="2">
+    <circle cx="200" cy="200" r="160"/>
+    <circle cx="200" cy="200" r="170"/>
+  </g>
+  
+  <!-- Small accent stars in corners -->
+  <g fill="#c4b5fd" opacity="0.6">
+    <path d="M 80 80 l 3 -10 l 3 10 l 10 3 l -10 3 l -3 10 l -3 -10 l -10 -3 Z"/>
+    <path d="M 320 80 l 3 -10 l 3 10 l 10 3 l -10 3 l -3 10 l -3 -10 l -10 -3 Z"/>
+    <path d="M 80 320 l 3 -10 l 3 10 l 10 3 l -10 3 l -3 10 l -3 -10 l -10 -3 Z"/>
+    <path d="M 320 320 l 3 -10 l 3 10 l 10 3 l -10 3 l -3 10 l -3 -10 l -10 -3 Z"/>
+  </g>
+</svg>

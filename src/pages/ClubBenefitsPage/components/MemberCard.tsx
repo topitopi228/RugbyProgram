@@ -64,7 +64,7 @@ const MemberCard: React.FC<MemberCardProps> = ({ member }) => {
 
           {/* Membership Badge */}
           <div className={`absolute top-2 right-2 w-2.5 h-2.5 rounded-full ${
-            member.membershipLevel === 'platinum' ? 'bg-purple-400' :
+            member.membershipLevel === 'platinum' ? 'bg-[#a78bfa] shadow-[0_0_10px_rgba(167,139,250,0.8)]' :
             member.membershipLevel === 'gold' ? 'bg-amber-500' :
             member.membershipLevel === 'silver' ? 'bg-gray-400' :
             'bg-slate-600'
@@ -94,7 +94,7 @@ const MemberCard: React.FC<MemberCardProps> = ({ member }) => {
 
           {/* Membership Level */}
           <div className={`mt-0.5 sm:mt-1 text-[9px] sm:text-xs md:text-sm font-bold text-center ${
-            member.membershipLevel === 'platinum' ? 'text-purple-400' :
+            member.membershipLevel === 'platinum' ? 'text-[#c4b5fd] drop-shadow-[0_0_8px_rgba(196,181,253,0.6)]' :
             member.membershipLevel === 'gold' ? 'text-amber-500' :
             member.membershipLevel === 'silver' ? 'text-gray-400' :
             'text-slate-500'

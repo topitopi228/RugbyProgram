@@ -53,9 +53,9 @@ const MembersFilter: React.FC<MembersFilterProps> = ({
     { 
       value: 'platinum' as const, 
       label: 'Platinum',
-      color: 'from-purple-600 to-purple-700',
-      borderColor: 'border-purple-400',
-      shadowColor: 'shadow-purple-400/30',
+      color: 'from-violet-600 via-purple-600 to-indigo-600',
+      borderColor: 'border-[#a78bfa]',
+      shadowColor: 'shadow-purple-400/50',
       count: memberCounts.platinum
     }
   ];

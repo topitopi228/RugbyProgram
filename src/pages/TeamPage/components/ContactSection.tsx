@@ -162,18 +162,15 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                                     {[1, 2, 3, 4, 5, 6].map((num) => (
                                         <div
                                             key={`set1-${num}`}
-                                            className="mx-6 md:mx-8 flex-shrink-0 group cursor-pointer"
+                                            className="mx-6 md:mx-8 flex-shrink-0"
                                         >
                                             <div className="relative">
-                                                {/* Glow effect on hover */}
-                                                <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400/0 via-yellow-400/30 to-yellow-400/0 rounded-xl opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500"></div>
-
                                                 {/* Logo container */}
-                                                <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-xl p-4 md:p-5 border border-slate-700/50 group-hover:border-yellow-400/50 transition-all duration-300 shadow-2xl">
+                                                <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-xl p-4 md:p-5 border border-slate-700/50 shadow-2xl">
                                                     <img
                                                         src={`/spin-${num}.webp`}
                                                         alt={`Sponsor ${num}`}
-                                                        className="h-12 md:h-14 w-auto max-w-[120px] md:max-w-[150px] object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                                                        className="h-12 md:h-14 w-auto max-w-[120px] md:max-w-[150px] object-contain filter brightness-90"
                                                     />
                                                 </div>
                                             </div>
@@ -185,15 +182,14 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
                                     {[1, 2, 3, 4, 5, 6].map((num) => (
                                         <div
                                             key={`set2-${num}`}
-                                            className="mx-6 md:mx-8 flex-shrink-0 group cursor-pointer"
+                                            className="mx-6 md:mx-8 flex-shrink-0"
                                         >
                                             <div className="relative">
-                                                <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400/0 via-yellow-400/30 to-yellow-400/0 rounded-xl opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500"></div>
-                                                <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-xl p-4 md:p-5 border border-slate-700/50 group-hover:border-yellow-400/50 transition-all duration-300 shadow-2xl">
+                                                <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-xl p-4 md:p-5 border border-slate-700/50 shadow-2xl">
                                                     <img
                                                         src={`/spin-${num}.webp`}
                                                         alt={`Sponsor ${num}`}
-                                                        className="h-12 md:h-14 w-auto max-w-[120px] md:max-w-[150px] object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                                                        className="h-12 md:h-14 w-auto max-w-[120px] md:max-w-[150px] object-contain filter brightness-90"
                                                     />
                                                 </div>
                                             </div>

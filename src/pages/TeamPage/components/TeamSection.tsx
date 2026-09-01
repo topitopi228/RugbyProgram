@@ -72,16 +72,14 @@ const TeamSection: React.FC<TeamSectionProps> = ({
                             initial={{ opacity: 1 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0 }}
-                            className="relative group w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] xl:w-[calc(25%-1.5rem)] 2xl:w-[calc(20%-1.5rem)]"
+                            className="relative w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1.5rem)] xl:w-[calc(25%-1.5rem)] 2xl:w-[calc(20%-1.5rem)]"
                         >
                             {/* Premium Card Design */}
                             <div className="relative h-full">
-                                {/* Glow Effect on Hover */}
-                                <div className="absolute -inset-0.5 bg-gradient-to-br from-amber-500 via-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-75 blur-xl transition-opacity duration-500"></div>
                                 
                                 {/* Main Card Container */}
                                 <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-amber-500/30 via-purple-500/20 to-blue-500/30 h-full">
-                                    <div className="relative rounded-2xl bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-white/10 overflow-hidden h-full flex flex-col group-hover:border-amber-500/30 transition-all duration-500">
+                                    <div className="relative rounded-2xl bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-white/10 overflow-hidden h-full flex flex-col">
                                         {/* Image Container */}
                                         <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
                                             {/* Subtle Pattern Overlay */}
@@ -107,7 +105,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({
                                                         (target as any).onerror = null;
                                                     }
                                                 }}
-                                                className="w-full h-full object-cover object-top relative z-10 group-hover:scale-105 transition-transform duration-500"
+                                                className="w-full h-full object-cover object-top relative z-10"
                                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                             />
                                             

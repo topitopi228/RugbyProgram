@@ -21,7 +21,7 @@ const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 flex items-center justify-center space-x-4 md:space-x-9">
                         {/* Blue Ring */}
                         <motion.div
-                            className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-blue-500 shadow-lg bg-transparent cursor-pointer"
+                            className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-blue-500 shadow-lg bg-transparent"
                             initial={{ scale: 0, opacity: 0, y: -50, rotate: -180 }}
                             animate={{
                                 scale: 1,
@@ -41,12 +41,11 @@ const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
                                 opacity: { delay: 0.2, duration: 0.6 },
                                 boxShadow: { duration: 3, repeat: Infinity, repeatType: 'loop', delay: 0.8 }
                             }}
-                            whileHover={{ scale: 1.1, y: -5, transition: { duration: 0.2 } }}
                         />
 
                         {/* Black Ring */}
                         <motion.div
-                            className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-black shadow-lg bg-transparent cursor-pointer"
+                            className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-black shadow-lg bg-transparent"
                             initial={{ scale: 0, opacity: 0, y: -50, rotate: -180 }}
                             animate={{
                                 scale: 1,
@@ -66,12 +65,11 @@ const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
                                 opacity: { delay: 0.4, duration: 0.6 },
                                 boxShadow: { duration: 3, repeat: Infinity, repeatType: 'loop', delay: 1.0 }
                             }}
-                            whileHover={{ scale: 1.1, y: -5, transition: { duration: 0.2 } }}
                         />
 
                         {/* Red Ring */}
                         <motion.div
-                            className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-red-500 shadow-lg bg-transparent cursor-pointer"
+                            className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-red-500 shadow-lg bg-transparent"
                             initial={{ scale: 0, opacity: 0, y: -50, rotate: -180 }}
                             animate={{
                                 scale: 1,
@@ -91,7 +89,6 @@ const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
                                 opacity: { delay: 0.6, duration: 0.6 },
                                 boxShadow: { duration: 3, repeat: Infinity, repeatType: 'loop', delay: 1.2 }
                             }}
-                            whileHover={{ scale: 1.1, y: -5, transition: { duration: 0.2 } }}
                         />
                     </div>
 
@@ -99,7 +96,7 @@ const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center space-x-4 md:space-x-9 mt-3 md:mt-5">
                         {/* Yellow Ring */}
                         <motion.div
-                            className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-yellow-400 shadow-lg bg-transparent cursor-pointer"
+                            className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-yellow-400 shadow-lg bg-transparent"
                             initial={{ scale: 0, opacity: 0, y: 50, rotate: 180 }}
                             animate={{
                                 scale: 1,
@@ -119,12 +116,11 @@ const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
                                 opacity: { delay: 0.3, duration: 0.6 },
                                 boxShadow: { duration: 3, repeat: Infinity, repeatType: 'loop', delay: 1.4 }
                             }}
-                            whileHover={{ scale: 1.1, y: 5, transition: { duration: 0.2 } }}
                         />
 
                         {/* Green Ring */}
                         <motion.div
-                            className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-green-500 shadow-lg bg-transparent cursor-pointer"
+                            className="w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border-[4px] md:border-[5px] border-green-500 shadow-lg bg-transparent"
                             initial={{ scale: 0, opacity: 0, y: 50, rotate: 180 }}
                             animate={{
                                 scale: 1,
@@ -144,7 +140,6 @@ const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
                                 opacity: { delay: 0.5, duration: 0.6 },
                                 boxShadow: { duration: 3, repeat: Infinity, repeatType: 'loop', delay: 1.6 }
                             }}
-                            whileHover={{ scale: 1.1, y: 5, transition: { duration: 0.2 } }}
                         />
                     </div>
 

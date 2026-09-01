@@ -63,7 +63,7 @@ export const clubMembers: ClubMember[] = [
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
-    membershipLevel: 'gold',
+    membershipLevel: 'silver',
     joinDate: '2025-08-15',
     bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
     position: 'Анонімний член клубу'
@@ -73,7 +73,7 @@ export const clubMembers: ClubMember[] = [
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
-    membershipLevel: 'gold',
+    membershipLevel: 'silver',
     joinDate: '2025-09-20',
     bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
     position: 'Анонімний член клубу'
@@ -83,7 +83,7 @@ export const clubMembers: ClubMember[] = [
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
-    membershipLevel: 'gold',
+    membershipLevel: 'silver',
     joinDate: '2025-10-05',
     bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
     position: 'Анонімний член клубу'
@@ -93,7 +93,7 @@ export const clubMembers: ClubMember[] = [
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
-    membershipLevel: 'gold',
+    membershipLevel: 'silver',
     joinDate: '2025-11-12',
     bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
     position: 'Анонімний член клубу'
@@ -103,7 +103,7 @@ export const clubMembers: ClubMember[] = [
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
-    membershipLevel: 'gold',
+    membershipLevel: 'silver',
     joinDate: '2025-12-01',
     bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
     position: 'Анонімний член клубу'
@@ -113,7 +113,7 @@ export const clubMembers: ClubMember[] = [
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
-    membershipLevel: 'gold',
+    membershipLevel: 'silver',
     joinDate: '2026-01-10',
     bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
     position: 'Анонімний член клубу'
@@ -123,10 +123,50 @@ export const clubMembers: ClubMember[] = [
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
-    membershipLevel: 'gold',
+    membershipLevel: 'silver',
     joinDate: '2026-02-15',
     bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
     position: 'Анонімний член клубу'
+  },
+  {
+    id: 12,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/platinum.svg',
+    membershipLevel: 'platinum',
+    joinDate: '2026-03-01',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Елітний меценат'
+  },
+  {
+    id: 13,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/platinum.svg',
+    membershipLevel: 'platinum',
+    joinDate: '2026-03-15',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Елітний меценат'
+  },
+  {
+    id: 14,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/platinum.svg',
+    membershipLevel: 'platinum',
+    joinDate: '2026-04-01',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Елітний меценат'
+  },
+  {
+    id: 15,
+    firstName: 'Анонімний',
+    lastName: 'член клубу',
+    photo: '/platinum.svg',
+    membershipLevel: 'platinum',
+    joinDate: '2026-04-20',
+    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    position: 'Елітний меценат'
   }
 ];
 
@@ -140,7 +180,7 @@ export const getMembershipBorderStyle = (level: MembershipLevel): string => {
     case 'gold':
       return 'border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]';
     case 'platinum':
-      return 'border-purple-400 shadow-[0_0_20px_rgba(192,132,252,0.5)]';
+      return 'border-[#a78bfa] shadow-[0_0_25px_rgba(167,139,250,0.8),0_0_50px_rgba(139,92,246,0.4)]';
     default:
       return 'border-slate-600';
   }
@@ -156,7 +196,7 @@ export const getMembershipGradient = (level: MembershipLevel): string => {
     case 'gold':
       return 'from-amber-900/30 via-amber-800/20 to-amber-900/30';
     case 'platinum':
-      return 'from-purple-900/30 via-purple-800/20 to-purple-900/30';
+      return 'from-violet-900/40 via-purple-800/30 to-indigo-900/40';
     default:
       return 'from-slate-800/80 to-slate-700/80';
   }

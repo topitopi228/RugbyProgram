@@ -178,6 +178,14 @@ const NewsPage = () => {
                         'Участь у United World Games стала важливим етапом міжнародної змагальної практики для українських спортсменів, сприяла розвитку спортивних та культурних зв’язків із представниками інших країн, а також стала черговою нагодою гідно представити Україну на міжнародній спортивній арені.',
                     expense: '14 100',
                     image: '/news19.webp'
+                },
+                {
+                    id: 20,
+                    date: '26-30 Серпня 2026',
+                    title: 'Завершено НТЗ гравців сутички в Ужгороді',
+                    description: 'Успішно завершилися навчально-тренувальні збори гравців сутички юнацької збірної України з регбі-7 у місті Ужгород. Протягом п\'яти днів спортсмени активно працювали над удосконаленням техніки виконання стандартних положень, зокрема схватів та коридорів. Основна увага була приділена індивідуальній технічній підготовці, синхронізації дій гравців сутички та відпрацюванню тактичних схем. Всі учасники показали високу віддачу та прогрес у майстерності.',
+                    expense: '950',
+                    image: '/news20.webp'
                 }
 
             ]
@@ -338,6 +346,14 @@ const NewsPage = () => {
                         'Participation in the United World Games became an important stage of international competitive practice for Ukrainian athletes, contributed to the development of sports and cultural ties with representatives of other countries, and was another opportunity to proudly represent Ukraine on the international sports arena.',
                     expense: '14 100',
                     image: '/news19.webp'
+                },
+                {
+                    id: 20,
+                    date: 'August 26-30, 2026',
+                    title: 'Forwards Training Camp in Uzhhorod Completed',
+                    description: 'The forwards training camp of the Ukrainian youth rugby-7 national team successfully concluded in Uzhhorod. Over five days, athletes actively worked on improving set-piece technique, particularly scrums and lineouts. Main focus was on individual technical preparation, synchronization of forward pack actions, and practicing tactical schemes. All participants showed high dedication and progress in their skills.',
+                    expense: '950',
+                    image: '/news20.webp'
                 }
 ]
         },
@@ -498,6 +514,14 @@ const NewsPage = () => {
                         'A United World Gamesen való részvétel fontos állomás volt az ukrán sportolók nemzetközi versenyszakmai gyakorlatában, hozzájárult a sport- és kulturális kapcsolatok fejlesztéséhez más országok képviselőivel, valamint újabb lehetőség volt arra, hogy méltó módon képviseljék Ukrajnát a nemzetközi sportarénán.',
                     expense: '14 100',
                     image: '/news19.webp'
+                },
+                {
+                    id: 20,
+                    date: '2026. augusztus 26-30.',
+                    title: 'Előjátékosok edzőtábora Ungváron befejezve',
+                    description: 'Sikeresen befejeződött az ukrán ifjúsági rögbi-7 válogatott előjátékosainak edzőtábora Ungváron. Öt nap alatt a sportolók aktívan dolgoztak a standard helyzetek technikájának tökéletesítésén, különösen a scrumok és lineoutok terén. A fő hangsúly az egyéni technikai felkészítésen, az előjátékosok cselekvéseinek szinkronizálásán és a taktikai sémák gyakorlásán volt. Minden résztvevő magas elkötelezettséget és fejlődést mutatott képességeiben.',
+                    expense: '950',
+                    image: '/news20.webp'
                 }
 ]
         }
