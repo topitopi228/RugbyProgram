@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <!-- Градієнти для золота -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Градієнт для діаманта -->
+    <linearGradient id="diamondGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F7FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A8DAFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F7FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Градієнт для purple/platinum -->
+    <radialGradient id="platinumGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#E0C3FC;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C084FC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Фільтр для блиску -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Фон з м'яким сяйвом -->
+  <circle cx="100" cy="100" r="95" fill="url(#platinumGradient)" opacity="0.2"/>
+  
+  <!-- Зовнішнє кільце з золотом -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="url(#goldGradient)" stroke-width="3" opacity="0.6" filter="url(#glow)"/>
+  
+  <!-- Корона (crown) на верху -->
+  <g transform="translate(100, 40)">
+    <!-- Основа корони -->
+    <path d="M -20,-5 L -25,10 L 25,10 L 20,-5 Z" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="1"/>
+    <!-- Зубці корони -->
+    <path d="M -20,-5 L -20,-15 L -10,-10 L 0,-20 L 10,-10 L 20,-15 L 20,-5" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="1"/>
+    <!-- Діаманти на короні -->
+    <circle cx="-15" cy="-12" r="2.5" fill="url(#diamondGradient)" filter="url(#glow)"/>
+    <circle cx="0" cy="-17" r="3" fill="url(#diamondGradient)" filter="url(#glow)"/>
+    <circle cx="15" cy="-12" r="2.5" fill="url(#diamondGradient)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Центральний великий діамант -->
+  <g transform="translate(100, 100)">
+    <path d="M 0,-25 L 15,-10 L 15,15 L 0,30 L -15,15 L -15,-10 Z" 
+          fill="url(#diamondGradient)" 
+          stroke="#A8DAFF" 
+          stroke-width="2"
+          filter="url(#glow)"/>
+    <!-- Внутрішні грані діаманта -->
+    <path d="M 0,-25 L 0,30" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+    <path d="M -15,-10 L 15,15" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+    <path d="M 15,-10 L -15,15" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Золоті монети навколо -->
+  <g opacity="0.8">
+    <!-- Монета 1 (top right) -->
+    <circle cx="140" cy="70" r="12" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="140" y="75" font-family="serif" font-size="14" font-weight="bold" fill="#8B4513" text-anchor="middle">€</text>
+    
+    <!-- Монета 2 (right) -->
+    <circle cx="155" cy="120" r="10" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="155" y="124" font-family="serif" font-size="12" font-weight="bold" fill="#8B4513" text-anchor="middle">€</text>
+    
+    <!-- Монета 3 (bottom right) -->
+    <circle cx="135" cy="155" r="11" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="135" y="160" font-family="serif" font-size="13" font-weight="bold" fill="#8B4513" text-anchor="middle">€</text>
+    
+    <!-- Монета 4 (bottom left) -->
+    <circle cx="65" cy="155" r="10" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="65" y="159" font-family="serif" font-size="12" font-weight="bold" fill="#8B4513" text-anchor="middle">€</text>
+    
+    <!-- Монета 5 (left) -->
+    <circle cx="45" cy="120" r="11" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="45" y="125" font-family="serif" font-size="13" font-weight="bold" fill="#8B4513" text-anchor="middle">€</text>
+    
+    <!-- Монета 6 (top left) -->
+    <circle cx="60" cy="70" r="12" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="60" y="75" font-family="serif" font-size="14" font-weight="bold" fill="#8B4513" text-anchor="middle">€</text>
+  </g>
+
+  <!-- Маленькі зірочки-діаманти для прикраси -->
+  <g fill="url(#diamondGradient)" opacity="0.6">
+    <circle cx="75" cy="55" r="3" filter="url(#glow)"/>
+    <circle cx="125" cy="55" r="3" filter="url(#glow)"/>
+    <circle cx="165" cy="95" r="2.5" filter="url(#glow)"/>
+    <circle cx="165" cy="145" r="2.5" filter="url(#glow)"/>
+    <circle cx="35" cy="95" r="2.5" filter="url(#glow)"/>
+    <circle cx="35" cy="145" r="2.5" filter="url(#glow)"/>
+    <circle cx="100" cy="170" r="3" filter="url(#glow)"/>
+  </g>
+
+  <!-- Нижній текст ELITE -->
+  <text x="100" y="190" 
+        font-family="serif" 
+        font-size="16" 
+        font-weight="bold" 
+        fill="url(#goldGradient)" 
+        text-anchor="middle"
+        filter="url(#glow)">
+    ELITE
+  </text>
+</svg>

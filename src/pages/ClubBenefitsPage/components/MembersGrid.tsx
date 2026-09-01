@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import type { MembershipLevel } from '../../../data/clubMembers';
 import { clubMembers } from '../../../data/clubMembers';
 import MemberCard from './MemberCard';
+import PlatinumMemberCard from './PlatinumMemberCard';
 import MembersFilter from './MembersFilter';
 
 const MembersGrid: React.FC = () => {
@@ -67,7 +68,11 @@ const MembersGrid: React.FC = () => {
             }}
           >
             {member ? (
-              <MemberCard member={member} />
+              member.membershipLevel === 'platinum' ? (
+                <PlatinumMemberCard member={member} />
+              ) : (
+                <MemberCard member={member} />
+              )
             ) : (
               // Empty slot
               <div className="h-full w-full rounded-lg border border-slate-700/30 bg-slate-800/20 backdrop-blur-sm flex items-center justify-center hover:border-amber-500/30 transition-colors">
@@ -79,24 +84,27 @@ const MembersGrid: React.FC = () => {
       </div>
 
       {/* Legend */}
-      <div className="mt-8 p-4 rounded-2xl bg-slate-800/30 backdrop-blur-sm border border-slate-700/30">
-        <h3 className="text-lg font-semibold text-white mb-3">Рівні підписки:</h3>
-        <div className="flex flex-wrap gap-4 text-sm">
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-slate-600" />
-            <span className="text-gray-300">Starter</span>
+      <div className="mt-8 p-6 rounded-2xl bg-slate-800/30 backdrop-blur-sm border border-slate-700/30">
+        <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500 mb-4">Рівні підписки:</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="flex items-center gap-3 p-2 rounded-lg bg-slate-900/20">
+            <div className="w-5 h-5 rounded-full bg-slate-600 flex-shrink-0" />
+            <span className="text-gray-300 font-medium">Starter</span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-gray-400 shadow-[0_0_8px_rgba(192,192,192,0.5)]" />
-            <span className="text-gray-300">Silver</span>
+          <div className="flex items-center gap-3 p-2 rounded-lg bg-slate-900/20">
+            <div className="w-5 h-5 rounded-full bg-gray-400 shadow-[0_0_8px_rgba(192,192,192,0.5)] flex-shrink-0" />
+            <span className="text-gray-300 font-medium">Silver</span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)]" />
-            <span className="text-gray-300">Gold</span>
+          <div className="flex items-center gap-3 p-2 rounded-lg bg-slate-900/20">
+            <div className="w-5 h-5 rounded-full bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)] flex-shrink-0" />
+            <span className="text-gray-300 font-medium">Gold</span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-purple-400 shadow-[0_0_12px_rgba(192,132,252,0.6)]" />
-            <span className="text-gray-300">Platinum</span>
+          <div className="flex items-center gap-3 p-2 rounded-lg bg-slate-900/40 border border-[#a78bfa]/20 relative overflow-hidden">
+            <div className="w-5 h-5 flex-shrink-0 relative">
+              <img src="/diamond-platinum.svg" alt="Diamond" className="w-full h-full object-contain" />
+            </div>
+            <span className="text-violet-300 font-medium">💎 Platinum</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent animate-pulse pointer-events-none" />
           </div>
         </div>
       </div>

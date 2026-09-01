@@ -60,6 +60,36 @@ export const clubMembers: ClubMember[] = [
   },
   {
     id: 5,
+    firstName: 'Денис',
+    lastName: 'Рибачок',
+    photo: '/logo_ukr.jpg',
+    membershipLevel: 'gold',
+    joinDate: '2026-09-01',
+    bio: 'Підтримує розвиток молодіжного регбі в Україні та сприяє підготовці національної збірної.',
+    position: 'Меценат'
+  },
+  {
+    id: 16,
+    firstName: 'Максим',
+    lastName: 'Рашовський',
+    photo: '/logo_ukr.jpg',
+    membershipLevel: 'gold',
+    joinDate: '2026-09-01',
+    bio: 'Активний прихильник українського спорту, який вірить у майбутнє юних регбістів.',
+    position: 'Меценат'
+  },
+  {
+    id: 17,
+    firstName: 'Максим',
+    lastName: 'Замрика',
+    photo: '/logo_ukr.jpg',
+    membershipLevel: 'gold',
+    joinDate: '2026-09-01',
+    bio: 'Підприємець, який підтримує розвиток регбі-7 та допомагає молодим спортсменам.',
+    position: 'Меценат'
+  },
+  {
+    id: 18,
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
@@ -69,7 +99,7 @@ export const clubMembers: ClubMember[] = [
     position: 'Анонімний член клубу'
   },
   {
-    id: 6,
+    id: 19,
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
@@ -79,7 +109,7 @@ export const clubMembers: ClubMember[] = [
     position: 'Анонімний член клубу'
   },
   {
-    id: 7,
+    id: 20,
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
@@ -89,7 +119,7 @@ export const clubMembers: ClubMember[] = [
     position: 'Анонімний член клубу'
   },
   {
-    id: 8,
+    id: 21,
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
@@ -99,7 +129,7 @@ export const clubMembers: ClubMember[] = [
     position: 'Анонімний член клубу'
   },
   {
-    id: 9,
+    id: 22,
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
@@ -109,7 +139,7 @@ export const clubMembers: ClubMember[] = [
     position: 'Анонімний член клубу'
   },
   {
-    id: 10,
+    id: 23,
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
@@ -119,7 +149,7 @@ export const clubMembers: ClubMember[] = [
     position: 'Анонімний член клубу'
   },
   {
-    id: 11,
+    id: 24,
     firstName: 'Анонімний',
     lastName: 'член клубу',
     photo: '/logo_ukr.jpg',
@@ -131,41 +161,41 @@ export const clubMembers: ClubMember[] = [
   {
     id: 12,
     firstName: 'Анонімний',
-    lastName: 'член клубу',
-    photo: '/platinum.svg',
+    lastName: 'меценат',
+    photo: '/diamond-platinum.svg',
     membershipLevel: 'platinum',
     joinDate: '2026-03-01',
-    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    bio: 'Високоповажний благодійник, який робить значний внесок у розвиток українського регбі. Підтримка на найвищому рівні.',
     position: 'Елітний меценат'
   },
   {
     id: 13,
     firstName: 'Анонімний',
-    lastName: 'член клубу',
-    photo: '/platinum.svg',
+    lastName: 'меценат',
+    photo: '/diamond-platinum.svg',
     membershipLevel: 'platinum',
     joinDate: '2026-03-15',
-    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    bio: 'Видатний благодійник, чия щедра підтримка допомагає юним спортсменам досягати найвищих результатів.',
     position: 'Елітний меценат'
   },
   {
     id: 14,
     firstName: 'Анонімний',
-    lastName: 'член клубу',
-    photo: '/platinum.svg',
+    lastName: 'меценат',
+    photo: '/diamond-platinum.svg',
     membershipLevel: 'platinum',
     joinDate: '2026-04-01',
-    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    bio: 'Преміум-партнер проєкту, який вірить у силу спорту та інвестує в майбутнє українських чемпіонів.',
     position: 'Елітний меценат'
   },
   {
     id: 15,
     firstName: 'Анонімний',
-    lastName: 'член клубу',
-    photo: '/platinum.svg',
+    lastName: 'меценат',
+    photo: '/diamond-platinum.svg',
     membershipLevel: 'platinum',
     joinDate: '2026-04-20',
-    bio: 'За бажанням члена клубу особисті дані залишаються конфіденційними.',
+    bio: 'VIP-благодійник найвищого рівня, чия підтримка є фундаментом успіху збірної України з регбі-7.',
     position: 'Елітний меценат'
   }
 ];
@@ -180,7 +210,7 @@ export const getMembershipBorderStyle = (level: MembershipLevel): string => {
     case 'gold':
       return 'border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]';
     case 'platinum':
-      return 'border-[#a78bfa] shadow-[0_0_25px_rgba(167,139,250,0.8),0_0_50px_rgba(139,92,246,0.4)]';
+      return 'border-[#a78bfa] shadow-[0_0_20px_rgba(167,139,250,0.4)]';
     default:
       return 'border-slate-600';
   }
@@ -196,7 +226,7 @@ export const getMembershipGradient = (level: MembershipLevel): string => {
     case 'gold':
       return 'from-amber-900/30 via-amber-800/20 to-amber-900/30';
     case 'platinum':
-      return 'from-violet-900/40 via-purple-800/30 to-indigo-900/40';
+      return 'from-slate-800/90 via-slate-900 to-slate-800/90';
     default:
       return 'from-slate-800/80 to-slate-700/80';
   }
