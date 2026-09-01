@@ -17,11 +17,11 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-            date: '3-10 Серпня 2026',
-            title: 'Навчально-тренувальні збори у Гдині',
-            description: 'Індивідуальна підготовка 7 гравців віяла юнацької збірної України U-17 з регбі-7',
-            location: 'м. Гдиня, Польща',
-            funding: '6,200 €'
+            date: '16-20 Вересня 2026',
+            title: 'Навчально-тренувальні збори гравців сутички в Ужгороді',
+            description: 'Підготовка гравців сутички',
+            location: 'м. Ужгород, Україна',
+            funding: '950 €'
         },
         event4: {
             date: '9-18 Листопада 2026',
@@ -134,11 +134,11 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-            date: 'August 3-10, 2026',
-            title: 'Training Camp in Gdynia',
-            description: 'Individual training camp for 7 wing players of the Ukraine U17 Rugby-7 National Team',
-            location: 'Gdynia, Poland',
-            funding: '6,200 €'
+            date: 'September 16-20, 2026',
+            title: 'Forwards Training Camp in Uzhhorod',
+            description: 'Forwards training camp',
+            location: 'Uzhhorod, Ukraine',
+            funding: '950 €'
         },
         event4: {
             date: 'November 9-18, 2026',
@@ -251,11 +251,11 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-            date: '2026. augusztus 3-10.',
-            title: 'Edzőtábor Gdyniában',
-            description: 'Egyéni felkészítő tábor az U17-os ukrán rögbi-7-es válogatott 7 szélsőjátékosa számára',
-            location: 'Gdynia, Lengyelország',
-            funding: '6,200 €'
+            date: '2026. szeptember 16-20.',
+            title: 'Előjátékosok edzőtábora Ungváron',
+            description: 'Előjátékosok edzőtábora',
+            location: 'Ungvár, Ukrajna',
+            funding: '950 €'
         },
         event4: {
             date: '2026. november 9-18.',
@@ -291,7 +291,21 @@ export const translations = {
 
 export const getEvents = (language: string, t: any) => [
     {
-        id: 5,
+        id: 3,
+        image: '/media28.webp',
+        date: t.event3.date,
+        title: t.event3.title,
+        description: t.event3.description,
+        location: t.event3.location,
+        funding: t.event3.funding,
+        details: language === 'UA'
+            ? 'З 16 по 20 вересня в місті Ужгород відбудуться навчально-тренувальні збори гравців сутички юнацької національної збірної команди України з регбі-7 U16. Протягом п\'яти днів спортсмени працюватимуть над удосконаленням техніки виконання стандартних положень, зокрема схватів та коридорів. Основна увага буде приділена індивідуальній технічній підготовці, синхронізації дій гравців сутички, взаємодії в ігрових епізодах та відпрацюванню тактичних схем.'
+            : language === 'EN'
+                ? 'From September 16 to 20 in Uzhhorod, a training camp for forwards of the Ukraine U16 Rugby-7 National Team will take place. Over five days the athletes will work on improving set-piece technique, especially scrums and lineouts. The main focus will be on individual technical preparation, synchronisation of the forward pack and practising tactical schemes.'
+                : '2026. szeptember 16-20. között Ungváron edzőtábor kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott előjátékosai számára. Öt nap alatt a sportolók a standard helyzetek (különösen a scrumok és a lineoutok) technikájának tökéletesítésén dolgoznak.'
+    },
+    {
+        id: 4,
         image: '/tbc.webp',
         date: t.event5.date,
         title: t.event5.title,
@@ -305,7 +319,7 @@ export const getEvents = (language: string, t: any) => [
                 : 'TBC — pontos helyszín és program még egyeztetés alatt.'
     },
     {
-        id: 6,
+        id: 5,
         image: '/maj12.webp',
         date: t.event6.date,
         title: t.event6.title,
@@ -319,7 +333,7 @@ export const getEvents = (language: string, t: any) => [
                 : '2026. november 23-29. között Grúziában nemzetközi edzőtábor kerül megrendezésre az U17-os ukrán rögbi-7-es válogatott számára. Ez a szakasz kulcsfontosságú lesz a 2027-es szezonra való felkészülésben. Hét nap alatt intenzív programot követnek (technika, taktika, fizikai és pszichológiai felkészítés). Ellenőrző mérkőzések és közös edzések is tervezettek.'
     },
     {
-        id: 7,
+        id: 6,
         image: '/maj8.webp',
         date: t.event7.date,
         title: t.event7.title,
@@ -333,7 +347,7 @@ export const getEvents = (language: string, t: any) => [
                 : '2026. december 1-6. között Hmelnyickijben kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott záró edzőtábora. A fő cél a felkészültség végső ellenőrzése és a csapat együttműködésének fejlesztése. Ellenőrző mérkőzések sorozata is tervezett az U17-es válogatott ellen.'
     },
     {
-        id: 8,
+        id: 7,
         image: '/tbc.webp',
         date: t.event8.date,
         title: t.event8.title,
@@ -347,7 +361,7 @@ export const getEvents = (language: string, t: any) => [
                 : 'TBC — pontos helyszín és program még egyeztetés alatt.'
     },
     {
-        id: 9,
+        id: 8,
         image: '/maj2.webp',
         date: t.event9.date,
 
@@ -362,7 +376,7 @@ export const getEvents = (language: string, t: any) => [
                 : 'Az U17-os ukrán rögbi-7-es válogatott tervezi a részvételt a Lisbon Rugby Youth Festival 2027-en — Európa egyik legnagyobb és legrangosabb ifjúsági rögbi tornáján (Lisszabon). Tavaly a csapat megnyerte a Silver Cupot. 2027-ben a cél a főtorna megnyerése.'
     },
     {
-        id: 10,
+        id: 9,
         image: '/maj11.webp',
         date: t.event10.date,
         title: t.event10.title,
@@ -376,7 +390,7 @@ export const getEvents = (language: string, t: any) => [
                 : '2027 márciusában az U17-os ukrán rögbi-7-es válogatott nemzetközi edzőtábort tart Gdyniában (Lengyelország). A csapat a technikai-taktikai felkészülésen, az egyéni készségeken, a támadás és védekezés szervezésén dolgozik. Közös edzések és ellenőrző mérkőzések is tervezettek.'
     },
     {
-        id: 11,
+        id: 10,
         image: '/tbc.webp',
         date: t.event11.date,
         title: t.event11.title,
@@ -390,7 +404,7 @@ export const getEvents = (language: string, t: any) => [
                 : 'TBC — pontos helyszín és program még egyeztetés alatt.'
     },
     {
-        id: 12,
+        id: 11,
         image: '/tbc.webp',
         date: t.event12.date,
         title: t.event12.title,
@@ -404,7 +418,7 @@ export const getEvents = (language: string, t: any) => [
                 : 'TBC — pontos helyszín és program még egyeztetés alatt.'
     },
     {
-        id: 13,
+        id: 12,
         image: '/maj14.webp',
         date: t.event13.date,
         title: t.event13.title,

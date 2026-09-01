@@ -181,11 +181,19 @@ const NewsPage = () => {
                 },
                 {
                     id: 20,
+                    date: '3-7 Серпня 2026',
+                    title: 'Завершено НТЗ гравців віяла у Гдині',
+                    description: 'Успішно завершилися індивідуальні навчально-тренувальні збори 7 гравців віяла юнацької збірної України U-17 з регбі-7 у місті Гдиня, Польща. Протягом п\'яти днів гравці активно працювали над розвитком індивідуальних навичок: техніки передачі м\'яча, початкових ударів, швидкості прийняття рішень та реалізації простору. Кожен гравець показав значний прогрес та підняв свою гру на новий рівень. Ці збори стали важливим етапом підготовки до майбутніх змагань.',
+                    expense: '6200',
+                    image: '/news20.webp'
+                },
+                {
+                    id: 21,
                     date: '26-30 Серпня 2026',
                     title: 'Завершено НТЗ гравців сутички в Ужгороді',
                     description: 'Успішно завершилися навчально-тренувальні збори гравців сутички юнацької збірної України з регбі-7 у місті Ужгород. Протягом п\'яти днів спортсмени активно працювали над удосконаленням техніки виконання стандартних положень, зокрема схватів та коридорів. Основна увага була приділена індивідуальній технічній підготовці, синхронізації дій гравців сутички та відпрацюванню тактичних схем. Всі учасники показали високу віддачу та прогрес у майстерності.',
                     expense: '950',
-                    image: '/news20.webp'
+                    image: '/news21.webp'
                 }
 
             ]
@@ -349,11 +357,19 @@ const NewsPage = () => {
                 },
                 {
                     id: 20,
+                    date: 'August 3-7, 2026',
+                    title: 'Back Line Players Training Camp in Gdynia Completed',
+                    description: 'Individual training camp for 7 back line players of the Ukrainian U-17 rugby-7 national team successfully concluded in Gdynia, Poland. Over five days, players actively worked on developing individual skills: ball passing technique, kick-offs, decision-making speed, and space utilization. Each player showed significant progress and raised their game to a new level. This training camp became an important stage in preparation for future competitions.',
+                    expense: '6200',
+                    image: '/news20.webp'
+                },
+                {
+                    id: 21,
                     date: 'August 26-30, 2026',
                     title: 'Forwards Training Camp in Uzhhorod Completed',
                     description: 'The forwards training camp of the Ukrainian youth rugby-7 national team successfully concluded in Uzhhorod. Over five days, athletes actively worked on improving set-piece technique, particularly scrums and lineouts. Main focus was on individual technical preparation, synchronization of forward pack actions, and practicing tactical schemes. All participants showed high dedication and progress in their skills.',
                     expense: '950',
-                    image: '/news20.webp'
+                    image: '/news21.webp'
                 }
 ]
         },
@@ -517,11 +533,19 @@ const NewsPage = () => {
                 },
                 {
                     id: 20,
+                    date: '2026. augusztus 3-7.',
+                    title: 'Hátvédjátékosok edzőtábora Gdyniában befejezve',
+                    description: 'Sikeresen befejeződött az egyedi edzőtábor 7 hátvédjátékos számára az ukrán U-17-es rögbi-7 válogatottból Gdyniában, Lengyelországban. Öt nap alatt a játékosok aktívan dolgoztak az egyedi képességek fejlesztésén: labdaátadási technika, kezdőrúgások, döntéshozatal sebessége és a tér kihasználása. Minden játékos jelentős fejlődést mutatott és új szintre emelte játékát. Ez az edzőtábor fontos szakasz volt a jövőbeli versenyek előkészítésében.',
+                    expense: '6200',
+                    image: '/news20.webp'
+                },
+                {
+                    id: 21,
                     date: '2026. augusztus 26-30.',
                     title: 'Előjátékosok edzőtábora Ungváron befejezve',
                     description: 'Sikeresen befejeződött az ukrán ifjúsági rögbi-7 válogatott előjátékosainak edzőtábora Ungváron. Öt nap alatt a sportolók aktívan dolgoztak a standard helyzetek technikájának tökéletesítésén, különösen a scrumok és lineoutok terén. A fő hangsúly az egyéni technikai felkészítésen, az előjátékosok cselekvéseinek szinkronizálásán és a taktikai sémák gyakorlásán volt. Minden résztvevő magas elkötelezettséget és fejlődést mutatott képességeiben.',
                     expense: '950',
-                    image: '/news20.webp'
+                    image: '/news21.webp'
                 }
 ]
         }
