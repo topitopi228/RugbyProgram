@@ -1,15 +1,14 @@
 // @ts-nocheck
 import { useState, useEffect, useMemo } from 'react';
 import { useLanguage } from '../../components/LanguageUtils';
-import { motion, AnimatePresence } from 'framer-motion';
 import HeroSection from './components/HeroSection';
-import MediaPlayer from './components/MediaPlayer';
 import MediaGallery from './components/MediaGallery';
+import Lightbox from './components/Lightbox';
 import { getMediaItems, getExternalLinks, eventCategories } from './mediaData';
 import type { EventCategory } from './mediaData';
 import { loadAllCloudinaryImages } from './cloudinaryService';
 import EventFilter from './components/EventFilter';
-import { FaInstagram, FaYoutube, FaNewspaper, FaFacebook, FaExternalLinkAlt, FaFilter, FaPlay, FaImage, FaTh } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaNewspaper, FaFacebook, FaExternalLinkAlt, FaTh } from 'react-icons/fa';
 
 const MediaPage = () => {
     const { language } = useLanguage();
@@ -22,6 +21,7 @@ const MediaPage = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isMobile, setIsMobile] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     const itemsPerPage = 12;
 
     const translations = {
@@ -190,6 +190,11 @@ const MediaPage = () => {
 
     const handleMediaSelect = (index) => {
         setCurrentIndex(index);
+        setIsLightboxOpen(true);
+    };
+
+    const closeLightbox = () => {
+        setIsLightboxOpen(false);
     };
 
     const handlePageChange = (page) => {
@@ -218,23 +223,7 @@ const MediaPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 text-white">
-            {/* Animated Background */}
-            <div className="fixed inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-20 -left-20 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-20 -right-20 w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/5 rounded-full blur-3xl" />
-            </div>
-
-            {/* Grid Pattern */}
-            <div 
-                className="fixed inset-0 opacity-[0.02] pointer-events-none"
-                style={{
-                    backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
-                    backgroundSize: '60px 60px'
-                }}
-            />
-
+        <div className="min-h-screen bg-black text-white">
             {/* Hero Section */}
             <HeroSection title={t.title} subtitle={t.subtitle} />
 
@@ -250,213 +239,110 @@ const MediaPage = () => {
                 />
 
                 {/* Main Content Area */}
-                {isLoading ? (
+                {isLoading && (
                     <div className="flex items-center justify-center h-96">
-                        <div className="flex flex-col items-center gap-4">
-                            <div className="w-16 h-16 border-4 border-amber-500 border-t-transparent rounded-full animate-spin" />
-                            <p className="text-gray-400">{t.loading}</p>
-                        </div>
+                        <p className="text-neutral-400 font-bold uppercase tracking-wide">{t.loading}</p>
                     </div>
-                ) : filteredItems.length > 0 ? (
-                    <div>
-                        {/* Premium Media Player */}
-                        <motion.div 
-                            initial={{ opacity: 1 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0 }}
-                            className="max-w-5xl mx-auto"
-                        >
-                            <div className="relative group">
-                                {/* Glow Effect */}
-                                <div className="absolute -inset-[2px] bg-gradient-to-r from-amber-500/30 via-yellow-500/30 to-amber-500/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
-                                
-                                <div className="relative bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-2xl rounded-3xl p-5 border border-slate-700/50 shadow-2xl overflow-hidden"
-                                    style={{
-                                        boxShadow: '0 25px 50px rgba(0,0,0,0.5), 0 0 100px rgba(251, 191, 36, 0.1)'
-                                    }}
-                                >
-                                    {/* Decorative Corner Elements */}
-                                    <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/5 to-transparent rounded-full blur-3xl"></div>
-                                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-yellow-500/5 to-transparent rounded-full blur-3xl"></div>
-                                    
-                                    <MediaPlayer
-                                        currentMedia={filteredItems[currentIndex]}
-                                        onNext={handleNext}
-                                        onPrevious={handlePrevious}
-                                        language={language}
-                                    />
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
-                ) : (
+                )}
+                {!isLoading && filteredItems.length === 0 && (
                     <div className="flex items-center justify-center h-96">
-                        <p className="text-gray-400 text-lg">{t.noMedia}</p>
+                        <p className="text-neutral-400 text-lg">{t.noMedia}</p>
                     </div>
                 )}
 
-                {/* Premium Media Gallery */}
+                {/* Media Gallery */}
                 {filteredItems.length > 0 && (
-                    <motion.div 
-                        initial={{ opacity: 1 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0 }}
-                        className="mt-16"
-                        id="media-gallery"
-                    >
-                        {/* Premium Section Header */}
-                        <div className="relative mb-8">
-                            <motion.div
-                                initial={{ scaleX: 0 }}
-                                whileInView={{ scaleX: 1 }}
-                                viewport={{ once: true }}
-                                className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent"
-                            />
-                            <h2 className="relative text-3xl font-bold mb-3 flex items-center gap-4">
-                                <div className="p-3 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-2xl border border-amber-400/30 shadow-lg">
-                                    <FaTh className="w-6 h-6 text-amber-400" />
+                    <div className="mt-16" id="media-gallery">
+                        {/* Section Header */}
+                        <div className="relative mb-8 border-b border-white/10 pb-4">
+                            <h2 className="animate-fade-up relative text-3xl font-bold uppercase tracking-wide flex items-center gap-4 text-white">
+                                <div className="p-3 bg-neutral-950 rounded-lg border border-white/10">
+                                    <FaTh className="w-6 h-6 text-yellow-400" />
                                 </div>
-                                <span className="bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent">
-                                    {t.gallery}
-                                </span>
-                                <div className="flex-1 h-px bg-gradient-to-r from-amber-500/30 to-transparent"></div>
+                                <span>{t.gallery}</span>
                             </h2>
                         </div>
 
                         {/* Gallery Container */}
-                        <div className="relative group">
-                            {/* Animated Glow Border */}
-                            <div className="absolute -inset-[2px] bg-gradient-to-r from-amber-500/20 via-yellow-500/30 to-amber-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-700"></div>
-                            
-                            <div className="relative bg-gradient-to-br from-slate-900/70 to-slate-800/70 backdrop-blur-2xl rounded-3xl p-8 border border-slate-700/50 shadow-2xl overflow-hidden"
-                                style={{
-                                    boxShadow: '0 25px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)'
-                                }}
-                            >
-                                {/* Decorative Background Elements */}
-                                <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-amber-500/5 to-transparent rounded-full blur-3xl"></div>
-                                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-yellow-500/5 to-transparent rounded-full blur-3xl"></div>
-                                
-                                <div className="relative z-10">
-                                    <MediaGallery
-                                        items={filteredItems}
-                                        currentIndex={currentIndex}
-                                        onSelect={handleMediaSelect}
-                                        language={language}
-                                        currentPage={currentPage}
-                                        onPageChange={handlePageChange}
-                                    />
-                                </div>
-                            </div>
+                        <div className="relative bg-neutral-950 rounded-lg p-8 border border-white/10">
+                            <MediaGallery
+                                items={filteredItems}
+                                currentIndex={currentIndex}
+                                onSelect={handleMediaSelect}
+                                language={language}
+                                currentPage={currentPage}
+                                onPageChange={handlePageChange}
+                            />
                         </div>
-                    </motion.div>
+                    </div>
                 )}
 
-                {/* Premium External Links */}
-                <motion.div 
-                    initial={{ opacity: 1 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0 }}
-                    className="mt-20 mb-12"
-                >
-                    {/* Premium Section Header */}
-                    <div className="relative mb-8">
-                        <motion.div
-                            initial={{ scaleX: 0 }}
-                            whileInView={{ scaleX: 1 }}
-                            viewport={{ once: true }}
-                            className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
-                        />
-                        <h2 className="relative text-3xl font-bold mb-3 flex items-center gap-4">
-                            <div className="p-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-400/30 shadow-lg">
-                                <FaExternalLinkAlt className="w-6 h-6 text-blue-400" />
+                {/* External Links */}
+                <div className="mt-20 mb-12">
+                    {/* Section Header */}
+                    <div className="relative mb-8 border-b border-white/10 pb-4">
+                        <h2 className="animate-fade-up relative text-3xl font-bold uppercase tracking-wide flex items-center gap-4 text-white">
+                            <div className="p-3 bg-neutral-950 rounded-lg border border-brand-blue-light/30">
+                                <FaExternalLinkAlt className="w-6 h-6 text-brand-blue-light" />
                             </div>
-                            <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                                {t.externalLinks}
-                            </span>
-                            <div className="flex-1 h-px bg-gradient-to-r from-blue-500/30 to-transparent"></div>
+                            <span>{t.externalLinks}</span>
                         </h2>
                     </div>
 
                     {/* Links Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {externalLinks.map((link, index) => (
-                            <motion.a
+                        {externalLinks.map((link) => (
+                            <a
                                 key={link.id}
                                 href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                initial={{ opacity: 1 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0 }}
-                                whileHover={{ y: -8, scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
                                 className="group relative"
                             >
-                                {/* Animated Glow Border */}
-                                <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
-                                
-                                <div className="relative bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 group-hover:border-blue-500/50 transition-all duration-300 shadow-xl overflow-hidden"
-                                    style={{
-                                        boxShadow: '0 10px 30px rgba(0,0,0,0.4)'
-                                    }}
-                                >
-                                    {/* Decorative Corner Glow */}
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    
+                                <div className="relative bg-neutral-950 rounded-lg p-6 border border-white/10 group-hover:border-brand-blue-light transition-all duration-200 group-hover:-translate-y-1">
                                     {/* Content */}
                                     <div className="relative flex items-start gap-4">
                                         {/* Icon Container */}
-                                        <motion.div 
-                                            className="flex-shrink-0 p-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-400/30 shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300"
-                                            whileHover={{ scale: 1.1, rotate: 5 }}
-                                            style={{
-                                                boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)'
-                                            }}
-                                        >
-                                            <div className="absolute inset-0 bg-gradient-to-br from-blue-300/10 to-transparent rounded-2xl"></div>
-                                            <div className="relative text-blue-400 group-hover:text-blue-300 transition-colors">
+                                        <div className="flex-shrink-0 p-4 bg-black rounded-lg border border-white/10 transition-transform duration-200 group-hover:scale-110">
+                                            <div className="relative text-brand-blue-light">
                                                 {getIconForLink(link.type)}
                                             </div>
-                                        </motion.div>
+                                        </div>
                                         
                                         {/* Text Content */}
                                         <div className="flex-1 min-w-0">
-                                            <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-300 mb-1">
+                                            <h3 className="text-lg font-bold text-white mb-1">
                                                 {link.title[language]}
                                             </h3>
                                             {link.description && (
-                                                <p className="text-sm text-slate-400 line-clamp-2 leading-relaxed">
+                                                <p className="text-sm text-neutral-400 line-clamp-2 leading-relaxed">
                                                     {link.description[language]}
                                                 </p>
                                             )}
                                         </div>
                                     </div>
-                                    
+
                                     {/* Hover Arrow */}
-                                    <motion.div 
-                                        className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                        animate={{ x: [0, 4, 0] }}
-                                        transition={{
-                                            duration: 1.5,
-                                            repeat: Infinity,
-                                            ease: "easeInOut"
-                                        }}
-                                    >
-                                        <div className="p-2 bg-blue-500/20 rounded-lg border border-blue-400/30">
-                                            <FaExternalLinkAlt className="w-4 h-4 text-blue-400" />
+                                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                        <div className="p-2 bg-brand-blue-light/10 rounded-lg border border-brand-blue-light/30">
+                                            <FaExternalLinkAlt className="w-4 h-4 text-brand-blue-light" />
                                         </div>
-                                    </motion.div>
-                                    
-                                    {/* Bottom Shine Effect */}
-                                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    </div>
                                 </div>
-                            </motion.a>
+                            </a>
                         ))}
                     </div>
-                </motion.div>
+                </div>
             </div>
+
+            {isLightboxOpen && (
+                <Lightbox
+                    item={filteredItems[currentIndex] ?? null}
+                    onClose={closeLightbox}
+                    onNext={handleNext}
+                    onPrevious={handlePrevious}
+                />
+            )}
         </div>
     );
 };

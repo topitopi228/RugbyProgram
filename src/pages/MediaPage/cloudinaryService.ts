@@ -1,20 +1,6 @@
 import { CLOUDINARY_CONFIG } from '../../config/cloudinary';
 import type { MediaItem, EventCategory } from './mediaData';
 
-interface CloudinaryResource {
-    public_id: string;
-    format: string;
-    version: number;
-    resource_type: string;
-    type: string;
-    created_at: string;
-    bytes: number;
-    width: number;
-    height: number;
-    url: string;
-    secure_url: string;
-}
-
 // Функція для генерації URL зображення з Cloudinary
 export const getCloudinaryImageUrl = (publicId: string, width: number = 1200): string => {
     return `https://res.cloudinary.com/${CLOUDINARY_CONFIG.cloudName}/image/upload/w_${width},q_auto,f_auto/${publicId}`;

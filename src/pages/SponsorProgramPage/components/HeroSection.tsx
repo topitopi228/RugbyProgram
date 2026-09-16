@@ -1,78 +1,84 @@
-// @ts-nocheck
-import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 interface HeroSectionProps {
     language: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
-    return (
-        <div className="relative w-full overflow-hidden">
-            {/* Image Section */}
-            <div className="relative h-[450px] md:h-[65vh] w-full overflow-hidden mt-20">
-                <picture>
-                    <source 
-                        media="(max-width: 768px)" 
-                        srcSet="/background_main_page.webp" 
-                        type="image/webp"
-                    />
-                    <img
-                        src="/background_main_page.webp"
-                        alt="Rugby team"
-                        fetchPriority="high"
-                        loading="eager"
-                        className="w-full h-full object-cover object-[center_45%]"
-                    />
-                </picture>
-                {/* Gradient overlays - smooth transition */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent via-40% to-slate-900/95"></div>
-                {/* Additional bottom gradient for smoother blend */}
-                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-slate-900"></div>
-            </div>
+    const navigate = useNavigate();
 
-            {/* Text Section Below Image */}
-            <div className="relative bg-gradient-to-b from-slate-900 via-purple-950/30 to-slate-900 py-16 px-4 sm:px-6 lg:px-8">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="max-w-4xl mx-auto w-full text-center"
-                >
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-                    >
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500">
+    return (
+        <div className="relative w-full overflow-hidden bg-black mt-20">
+            <div className="flex flex-col md:flex-row md:min-h-[70vh]">
+                {/* Text Column */}
+                <div className="relative w-full md:w-[55%] flex items-center order-2 md:order-1 bg-gradient-to-br from-black via-black to-brand-blue/10 px-4 sm:px-6 lg:px-12 py-14 md:py-0">
+                    <div className="max-w-xl mx-auto md:mx-0 md:ml-auto md:mr-0 w-full">
+                        <span className="animate-fade-up inline-block mb-5 px-4 py-2 border border-brand-yellow/40 text-xs font-semibold uppercase tracking-wider text-brand-yellow">
                             {language === 'UA'
-                                ? 'Юнацька Збірна України'
-                                : language === 'EN'
-                                    ? 'Ukrainian Youth National Team'
-                                    : 'Ukrán Ifjúsági Válogatott'}
-                        </span>
-                        <span className="block text-xl sm:text-2xl md:text-3xl font-medium text-slate-200 mt-3">
-                            {language === 'UA'
-                                ? 'з регбі-7s U17'
+                                ? 'Регбі-7s U17'
                                 : language === 'EN'
                                     ? 'Rugby 7s U17'
                                     : 'Rögbi 7s U17'}
                         </span>
-                    </motion.h1>
 
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                        className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed"
-                    >
-                        {language === 'UA'
-                            ? 'Об\'єднуємо таланти, виховуємо чемпіонів, пишемо історію українського регбі разом'
-                            : language === 'EN'
-                                ? 'Uniting talents, raising champions, writing the history of Ukrainian rugby together'
-                                : 'Tehetségeket egyesítünk, bajnokokat nevelünk, közösen írjuk az ukrán rögbi történetét'}
-                    </motion.p>
-                </motion.div>
+                        <h1 className="animate-fade-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight uppercase tracking-tight">
+                            <span className="text-brand-yellow">
+                                {language === 'UA'
+                                    ? 'Юнацька Збірна України'
+                                    : language === 'EN'
+                                        ? 'Ukrainian Youth National Team'
+                                        : 'Ukrán Ifjúsági Válogatott'}
+                            </span>
+                        </h1>
+
+                        <p className="animate-fade-up-1 text-lg md:text-xl text-neutral-400 leading-relaxed mb-8">
+                            {language === 'UA'
+                                ? 'Об\'єднуємо таланти, виховуємо чемпіонів, пишемо історію українського регбі разом'
+                                : language === 'EN'
+                                    ? 'Uniting talents, raising champions, writing the history of Ukrainian rugby together'
+                                    : 'Tehetségeket egyesítünk, bajnokokat nevelünk, közösen írjuk az ukrán rögbi történetét'}
+                        </p>
+
+                        <div className="animate-fade-up-2">
+                            <button
+                                onClick={() => navigate('/team')}
+                                className="inline-flex items-center gap-2 px-8 py-3.5 bg-brand-yellow hover:bg-yellow-300 text-black font-bold uppercase tracking-wide text-sm sm:text-base transition-colors"
+                            >
+                                {language === 'UA'
+                                    ? 'Познайомитися з командою'
+                                    : language === 'EN'
+                                        ? 'Meet the Team'
+                                        : 'Ismerje meg a csapatot'}
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Image Column */}
+                <div className="relative w-full md:w-[45%] order-1 md:order-2 h-[320px] md:h-auto">
+                    <div className="relative h-full w-full border border-white/10 border-l-4 md:border-l-4 border-l-brand-yellow overflow-hidden">
+                        <picture>
+                            <source
+                                media="(max-width: 768px)"
+                                srcSet="/background_main_page.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="/background_main_page.webp"
+                                alt="Rugby team"
+                                fetchPriority="high"
+                                loading="eager"
+                                className="w-full h-full object-cover object-[center_45%]"
+                            />
+                        </picture>
+                        <div className="absolute inset-0 bg-black/30"></div>
+                        {/* Corner accent */}
+                        <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-brand-blue/70"></div>
+                    </div>
+                </div>
             </div>
         </div>
     );

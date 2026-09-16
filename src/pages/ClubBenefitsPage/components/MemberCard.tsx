@@ -1,110 +1,93 @@
-import React, { useState } from 'react';
+import React from 'react';
 import type { ClubMember } from '../../../data/clubMembers';
-import { getMembershipBorderStyle, getMembershipGradient } from '../../../data/clubMembers';
 
 interface MemberCardProps {
   member: ClubMember;
 }
 
+const levelLabel = (level: ClubMember['membershipLevel']) => {
+  switch (level) {
+    case 'platinum':
+      return 'PLATINUM';
+    case 'gold':
+      return 'GOLD';
+    case 'silver':
+      return 'SILVER';
+    default:
+      return 'STARTER';
+  }
+};
+
+const levelDotColor = (level: ClubMember['membershipLevel']) => {
+  switch (level) {
+    case 'platinum':
+      return 'bg-brand-yellow';
+    case 'gold':
+      return 'bg-brand-yellow';
+    case 'silver':
+      return 'bg-brand-blue';
+    default:
+      return 'bg-neutral-600';
+  }
+};
+
+// Gold/Platinum tiers get the brand-yellow accent, Silver gets brand-blue,
+// Starter stays neutral — gives the grid some visual variety.
+const levelAccentColor = (level: ClubMember['membershipLevel']) => {
+  switch (level) {
+    case 'platinum':
+    case 'gold':
+      return 'text-brand-yellow';
+    case 'silver':
+      return 'text-brand-blue';
+    default:
+      return 'text-neutral-400';
+  }
+};
+
+const levelHoverBorder = (level: ClubMember['membershipLevel']) => {
+  switch (level) {
+    case 'silver':
+      return 'hover:border-brand-blue';
+    default:
+      return 'hover:border-brand-yellow';
+  }
+};
+
 const MemberCard: React.FC<MemberCardProps> = ({ member }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
-
-  const formatDate = (dateStr: string) => {
-    const date = new Date(dateStr);
-    return date.toLocaleDateString('uk-UA', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-  };
-
-  const borderStyle = getMembershipBorderStyle(member.membershipLevel);
-  const gradientStyle = getMembershipGradient(member.membershipLevel);
-
   return (
-    <div className="h-full w-full perspective-1000">
-      <div
-        className={`relative h-full w-full transition-all duration-500 transform-style-3d cursor-pointer ${
-          isFlipped ? 'rotate-y-180' : ''
-        }`}
-        onClick={handleFlip}
-        style={{ transformStyle: 'preserve-3d' }}
-      >
-        {/* Front Side */}
-        <div
-          className={`absolute inset-0 w-full h-full rounded-lg border-2 ${borderStyle} 
-            bg-gradient-to-br ${gradientStyle} backdrop-blur-sm backface-hidden 
-            flex flex-col items-center justify-center p-3 transition-all hover:scale-110`}
-        >
-          {/* Photo Container */}
-          <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden border-2 border-white/30 mb-2">
-            <img
-              src={member.photo}
-              alt={`${member.firstName} ${member.lastName}`}
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${member.firstName}+${member.lastName}&background=random`;
-              }}
-            />
-          </div>
-          
-          {/* Name */}
-          <div className="text-center">
-            <p className="text-white text-xs sm:text-sm md:text-base font-semibold leading-tight">
-              {member.firstName}
-            </p>
-            <p className="text-white/70 text-[11px] sm:text-xs md:text-sm leading-tight">
-              {member.lastName}
-            </p>
-          </div>
+    <div
+      className={`h-full w-full rounded-lg border border-white/10 ${levelHoverBorder(member.membershipLevel)} hover:-translate-y-1 transition-all duration-200
+        bg-neutral-950 flex flex-col items-center justify-center p-3 relative`}
+    >
+      {/* Membership Badge */}
+      <div className={`absolute top-2 right-2 w-2.5 h-2.5 rounded-full ${levelDotColor(member.membershipLevel)}`} />
 
-          {/* Membership Badge */}
-          <div className={`absolute top-2 right-2 w-2.5 h-2.5 rounded-full ${
-            member.membershipLevel === 'platinum' ? 'bg-[#a78bfa] shadow-[0_0_10px_rgba(167,139,250,0.8)]' :
-            member.membershipLevel === 'gold' ? 'bg-amber-500' :
-            member.membershipLevel === 'silver' ? 'bg-gray-400' :
-            'bg-slate-600'
-          } animate-pulse`} />
-        </div>
+      {/* Photo Container */}
+      <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden border border-white/20 mb-2">
+        <img
+          src={member.photo}
+          alt={`${member.firstName} ${member.lastName}`}
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${member.firstName}+${member.lastName}&background=random`;
+          }}
+        />
+      </div>
 
-        {/* Back Side */}
-        <div
-          className={`absolute inset-0 w-full h-full rounded-lg border-2 ${borderStyle} 
-            bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 
-            backdrop-blur-sm rotate-y-180 backface-hidden 
-            flex flex-col items-center justify-center p-2 sm:p-3 transition-all overflow-hidden`}
-        >
-          {/* Position Badge */}
-          {member.position && (
-            <div className="text-[7px] sm:text-[9px] md:text-xs text-amber-400 font-semibold mb-0.5 sm:mb-1 text-center leading-[1.1] px-1 break-words max-w-full">
-              {member.position}
-            </div>
-          )}
+      {/* Name */}
+      <div className="text-center">
+        <p className="text-white text-xs sm:text-sm md:text-base font-semibold leading-tight">
+          {member.firstName}
+        </p>
+        <p className="text-neutral-400 text-[11px] sm:text-xs md:text-sm leading-tight">
+          {member.lastName}
+        </p>
+      </div>
 
-          {/* Join Date */}
-          <div className="text-[8px] sm:text-[10px] md:text-xs text-gray-400 mb-0.5 sm:mb-1 text-center leading-tight px-1">
-            <span className="text-gray-500">Член з:</span>
-            <br />
-            <span className="text-white/70 text-[8px] sm:text-[10px] md:text-xs whitespace-nowrap">{formatDate(member.joinDate)}</span>
-          </div>
-
-          {/* Membership Level */}
-          <div className={`mt-0.5 sm:mt-1 text-[9px] sm:text-xs md:text-sm font-bold text-center ${
-            member.membershipLevel === 'platinum' ? 'text-[#c4b5fd] drop-shadow-[0_0_8px_rgba(196,181,253,0.6)]' :
-            member.membershipLevel === 'gold' ? 'text-amber-500' :
-            member.membershipLevel === 'silver' ? 'text-gray-400' :
-            'text-slate-500'
-          }`}>
-            {member.membershipLevel === 'platinum' ? 'PLATINUM' :
-             member.membershipLevel === 'gold' ? 'GOLD' :
-             member.membershipLevel === 'silver' ? 'SILVER' :
-             'STARTER'}
-          </div>
-        </div>
+      {/* Membership Level */}
+      <div className={`mt-1 text-[9px] sm:text-xs md:text-sm font-bold text-center ${levelAccentColor(member.membershipLevel)}`}>
+        {levelLabel(member.membershipLevel)}
       </div>
     </div>
   );

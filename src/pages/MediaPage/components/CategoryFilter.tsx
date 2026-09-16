@@ -1,5 +1,4 @@
 // @ts-nocheck
-import { motion } from 'framer-motion';
 
 interface Category {
     id: string;
@@ -18,31 +17,34 @@ interface CategoryFilterProps {
 }
 
 const CategoryFilter: React.FC<CategoryFilterProps> = ({ categories, activeCategory, onCategoryChange, language }) => {
-    const container = {
-        hidden: { opacity: 0 },
-        show: { opacity: 1, transition: { staggerChildren: 0.1 } },
-    };
-
-    const item = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    };
+    // Give the "photos" category a distinct blue accent for a bit of color variety,
+    // while everything else keeps the primary yellow accent.
+    const isBlueCategory = (id: string) => id === 'photos';
 
     return (
-        <motion.div className="flex flex-wrap justify-center gap-2 mb-8" variants={container} initial="hidden" animate="show">
-            {categories.map((category) => (
-                <motion.button
-                    key={category.id}
-                    onClick={() => onCategoryChange(category.id)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category.id ? 'bg-amber-500 text-gray-900 shadow-lg shadow-amber-500/20' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}
-                    variants={item}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                >
-                    {category.name[language]}
-                </motion.button>
-            ))}
-        </motion.div>
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {categories.map((category) => {
+                const active = activeCategory === category.id;
+                const blue = isBlueCategory(category.id);
+                return (
+                    <button
+                        key={category.id}
+                        onClick={() => onCategoryChange(category.id)}
+                        className={`px-4 py-2 rounded-lg text-sm font-bold uppercase tracking-wide transition-all duration-200 hover:-translate-y-0.5 ${
+                            active
+                                ? blue
+                                    ? 'bg-brand-blue-light text-white'
+                                    : 'bg-yellow-400 text-black'
+                                : blue
+                                    ? 'border border-white/20 text-white/70 hover:border-brand-blue-light'
+                                    : 'border border-white/20 text-white/70 hover:border-yellow-400'
+                        }`}
+                    >
+                        {category.name[language]}
+                    </button>
+                );
+            })}
+        </div>
     );
 };
 

@@ -13,6 +13,7 @@ import MediaPage from './pages/MediaPage';
 // Shared components
 import { LanguageProvider } from './components/LanguageContext.tsx';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 // Smooth scroll to top on route change
 const ScrollToTop = () => {
@@ -33,15 +34,7 @@ const App: React.FC = () => {
     return (
         <LanguageProvider>
             <Router>
-                <div
-                    className="min-h-screen relative"
-                    style={{
-                        background: 'whitesmoke',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                    }}
-                >
+                <div className="min-h-screen relative bg-black">
                     <Navbar/>
                     <ScrollToTop />
                     <main
@@ -51,7 +44,6 @@ const App: React.FC = () => {
                             paddingRight: 0,
                             paddingLeft: 0,
                             overflowX: 'hidden',
-                            overflowY: 'hidden',
                         }}
                     >
                         <Routes>
@@ -64,6 +56,7 @@ const App: React.FC = () => {
                             <Route path="/benefits" element={<ClubBenefitsPage/>}/>
                         </Routes>
                     </main>
+                    <Footer />
                 </div>
             </Router>
         </LanguageProvider>

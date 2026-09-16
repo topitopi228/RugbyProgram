@@ -1,6 +1,5 @@
 // @ts-nocheck
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaPlay, FaImage } from 'react-icons/fa';
 
 interface MediaItem {
@@ -32,50 +31,25 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
-    const container = {
-        hidden: { opacity: 0 },
-        show: { 
-            opacity: 1, 
-            transition: { 
-                staggerChildren: 0
-            } 
-        }
-    };
-
-    const item = {
-        hidden: { opacity: 1 },
-        show: { 
-            opacity: 1, 
-            transition: { 
-                duration: 0
-            }
-        }
-    };
 
     return (
         <div>
-            <motion.div 
-                variants={container}
-                initial="hidden"
-                animate="show"
-                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4"
-            >
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                 {currentItems.map((mediaItem, indexInPage) => {
                     const index = indexOfFirstItem + indexInPage;
                 const isActive = index === currentIndex;
                 
                 return (
-                    <motion.div
+                    <div
                         key={mediaItem.id}
-                        variants={item}
                         onClick={() => onSelect(index)}
-                        className="relative cursor-pointer"
+                        className="relative cursor-pointer transition-all duration-200 hover:-translate-y-1"
                     >
                         {/* Card Container */}
                         <div className={`
-                            relative aspect-video rounded-xl overflow-hidden border-2
-                            ${isActive ? 'border-amber-500 shadow-lg' : 'border-slate-700/50'}
-                            transition-all duration-200
+                            relative aspect-video rounded-lg overflow-hidden border-2
+                            ${isActive ? 'border-yellow-400' : 'border-white/10 hover:border-yellow-400/50'}
+                            transition-colors duration-200
                         `}>
                             {/* Thumbnail */}
                             <div className="absolute inset-0">
@@ -101,11 +75,11 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                             </div>
 
                             {/* Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-200" />
+                            <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-200" />
 
                             {/* Media Type Badge */}
                             <div className="absolute top-2 left-2 z-10">
-                                <div className="px-2 py-1 bg-slate-900/80 backdrop-blur-sm rounded-lg">
+                                <div className="px-2 py-1 bg-black/80 rounded-lg">
                                     {mediaItem.type === 'video' ? (
                                         <FaPlay className="w-3 h-3 text-white" />
                                     ) : (
@@ -117,16 +91,16 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                             {/* Play Button for Videos */}
                             {mediaItem.type === 'video' && (
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200 z-10">
-                                    <div className="p-3 bg-black/50 backdrop-blur-sm rounded-full">
+                                    <div className="p-3 bg-black/60 rounded-full">
                                         <FaPlay className="w-5 h-5 text-white ml-0.5" />
                                     </div>
                                 </div>
                             )}
                         </div>
-                    </motion.div>
+                    </div>
                 );
                 })}
-            </motion.div>
+            </div>
 
             {/* Пагінація */}
             {totalPages > 1 && (
@@ -135,7 +109,7 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                     <button
                         onClick={() => onPageChange(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 disabled:bg-slate-900/50 disabled:cursor-not-allowed disabled:opacity-50 text-white font-semibold rounded-xl border border-slate-700/50 hover:border-amber-500/50 transition-all duration-300 disabled:hover:border-slate-700/50"
+                        className="px-4 py-2 bg-neutral-950 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold rounded-lg border border-white/10 hover:border-yellow-400 transition-colors duration-200 disabled:hover:border-white/10"
                     >
                         ←
                     </button>
@@ -147,10 +121,10 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                                 key={pageNumber}
                                 onClick={() => onPageChange(pageNumber)}
                                 className={`
-                                    px-4 py-2 font-semibold rounded-xl border transition-all duration-300
+                                    px-4 py-2 font-bold rounded-lg border transition-colors duration-200
                                     ${currentPage === pageNumber
-                                        ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-900 border-amber-400 shadow-lg shadow-amber-500/30'
-                                        : 'bg-slate-800/80 hover:bg-slate-700/80 text-white border-slate-700/50 hover:border-amber-500/30'
+                                        ? 'bg-yellow-400 text-black border-yellow-400'
+                                        : 'bg-neutral-950 text-white border-white/10 hover:border-yellow-400'
                                     }
                                 `}
                             >
@@ -163,7 +137,7 @@ const MediaGallery: React.FC<MediaGalleryProps> = ({ items, currentIndex, onSele
                     <button
                         onClick={() => onPageChange(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700/80 disabled:bg-slate-900/50 disabled:cursor-not-allowed disabled:opacity-50 text-white font-semibold rounded-xl border border-slate-700/50 hover:border-amber-500/50 transition-all duration-300 disabled:hover:border-slate-700/50"
+                        className="px-4 py-2 bg-neutral-950 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold rounded-lg border border-white/10 hover:border-yellow-400 transition-colors duration-200 disabled:hover:border-white/10"
                     >
                         →
                     </button>

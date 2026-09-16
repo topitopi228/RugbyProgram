@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaCalendar, FaClock } from 'react-icons/fa';
 import type { EventCategoryInfo, EventCategory } from '../mediaData';
 
@@ -22,13 +21,13 @@ const EventFilter = ({ eventCategories, activeEvent, onEventChange, language, ph
 
     return (
         <div className="mb-12">
-            {/* Premium Section Header */}
+            {/* Section Header */}
             <div className="relative mb-6">
-                <h3 className="text-2xl font-bold mb-2 flex items-center gap-3">
-                    <div className="p-2 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl border border-purple-400/30">
-                        <FaMapMarkerAlt className="w-5 h-5 text-purple-400" />
+                <h3 className="animate-fade-up text-2xl font-bold uppercase tracking-wide mb-2 flex items-center gap-3 text-white">
+                    <div className="p-2 bg-neutral-950 rounded-lg border border-white/10">
+                        <FaMapMarkerAlt className="w-5 h-5 text-yellow-400" />
                     </div>
-                    <span className="bg-gradient-to-r from-white via-purple-100 to-white bg-clip-text text-transparent">
+                    <span>
                         {language === 'UA' ? 'Виберіть подію' : language === 'EN' ? 'Select Event' : 'Válassz eseményt'}
                     </span>
                 </h3>
@@ -40,78 +39,59 @@ const EventFilter = ({ eventCategories, activeEvent, onEventChange, language, ph
                     const isActive = activeEvent === event.id;
                     const photoCount = photoCounts[event.id] || 0;
                     const hasPhotos = photoCount > 0 || event.id === 'all';
-                    
+                    // "All" gets a distinct blue accent to stand out from the individual event cards.
+                    const isAll = event.id === 'all';
+                    const accentText = isAll ? 'text-brand-blue-light' : 'text-yellow-400';
+                    const accentBorder = isAll ? 'border-brand-blue-light' : 'border-yellow-400';
+                    const accentBorderHover = isAll ? 'hover:border-brand-blue-light/50' : 'hover:border-yellow-400/50';
+                    const accentBg = isAll ? 'bg-brand-blue-light/10' : 'bg-yellow-400/10';
+                    const accentBadgeBorder = isAll ? 'border-brand-blue-light/40' : 'border-yellow-400/40';
+
                     return (
-                        <motion.button
+                        <button
                             key={event.id}
                             onClick={() => onEventChange(event.id)}
-                            whileHover={{ scale: 1.02, y: -4 }}
-                            whileTap={{ scale: 0.98 }}
-                            className={`group relative text-left transition-all duration-300 ${
-                                isActive ? 'z-10' : 'z-0'
-                            }`}
+                            className="group relative text-left"
                         >
-                            {/* Glow Effect for Active */}
-                            {isActive && (
-                                <div className="absolute -inset-[2px] bg-gradient-to-r from-amber-500/50 via-yellow-500/50 to-amber-500/50 rounded-2xl blur-lg"></div>
-                            )}
-                            
                             {/* Card */}
-                            <div className={`relative bg-gradient-to-br backdrop-blur-xl rounded-2xl p-4 border-2 transition-all duration-300 overflow-hidden ${
-                                isActive 
-                                    ? 'from-slate-800/95 to-slate-900/95 border-amber-500/70 shadow-2xl shadow-amber-500/20' 
-                                    : 'from-slate-900/70 to-slate-800/70 border-slate-700/50 hover:border-slate-600/70'
+                            <div className={`relative bg-neutral-950 rounded-lg p-4 border transition-all duration-200 hover:-translate-y-1 ${
+                                isActive
+                                    ? accentBorder
+                                    : `border-white/10 ${accentBorderHover}`
                             }`}>
-                                {/* Background Glow */}
-                                <div className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl transition-opacity duration-500 ${
-                                    isActive 
-                                        ? 'bg-amber-500/20 opacity-100' 
-                                        : 'bg-purple-500/10 opacity-0 group-hover:opacity-100'
-                                }`}></div>
-                                
                                 {/* Content */}
                                 <div className="relative">
                                     {/* Event Name with Badge */}
                                     <div className="flex items-start justify-between gap-2 mb-2">
-                                        <h4 className={`text-lg font-bold transition-colors duration-300 flex-1 ${
-                                            isActive 
-                                                ? 'text-transparent bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text' 
-                                                : 'text-white group-hover:text-purple-300'
+                                        <h4 className={`text-lg font-bold transition-colors duration-200 flex-1 ${
+                                            isActive ? accentText : 'text-white'
                                         }`}>
                                             {event.name[language]}
                                         </h4>
                                         
                                         {/* Coming Soon Badge */}
                                         {!hasPhotos && event.id !== 'all' && (
-                                            <motion.div
-                                                initial={{ scale: 0 }}
-                                                animate={{ scale: 1 }}
-                                                className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-slate-700/80 to-slate-600/80 border border-slate-500/50 rounded-lg"
-                                            >
-                                                <FaClock className="w-2.5 h-2.5 text-slate-400" />
-                                                <span className="text-[10px] font-medium text-slate-300 whitespace-nowrap">
+                                            <div className="flex items-center gap-1 px-2 py-1 border border-white/20 rounded-lg">
+                                                <FaClock className="w-2.5 h-2.5 text-neutral-400" />
+                                                <span className="text-[10px] font-medium text-neutral-400 whitespace-nowrap">
                                                     {getComingSoonText()}
                                                 </span>
-                                            </motion.div>
+                                            </div>
                                         )}
                                         
                                         {/* Photo Count Badge */}
                                         {hasPhotos && photoCount > 0 && (
-                                            <motion.div
-                                                initial={{ scale: 0 }}
-                                                animate={{ scale: 1 }}
-                                                className={`px-2 py-1 rounded-lg border transition-all duration-300 ${
-                                                    isActive
-                                                        ? 'bg-gradient-to-r from-amber-500/20 to-yellow-500/20 border-amber-500/50'
-                                                        : 'bg-slate-700/50 border-slate-600/50 group-hover:border-purple-500/50'
-                                                }`}
-                                            >
+                                            <div className={`px-2 py-1 rounded-lg border ${
+                                                isActive
+                                                    ? `${accentBg} ${accentBadgeBorder}`
+                                                    : 'border-white/10'
+                                            }`}>
                                                 <span className={`text-xs font-bold ${
-                                                    isActive ? 'text-amber-400' : 'text-slate-300 group-hover:text-purple-300'
+                                                    isActive ? accentText : 'text-neutral-400'
                                                 }`}>
                                                     {photoCount}
                                                 </span>
-                                            </motion.div>
+                                            </div>
                                         )}
                                     </div>
                                     
@@ -120,7 +100,7 @@ const EventFilter = ({ eventCategories, activeEvent, onEventChange, language, ph
                                         <div className="space-y-1">
                                             {/* Date */}
                                             {event.date && (
-                                                <div className="flex items-center gap-2 text-xs text-slate-400">
+                                                <div className="flex items-center gap-2 text-xs text-neutral-400">
                                                     <FaCalendar className="w-3 h-3" />
                                                     <span>{event.date}</span>
                                                 </div>
@@ -128,7 +108,7 @@ const EventFilter = ({ eventCategories, activeEvent, onEventChange, language, ph
                                             
                                             {/* Location */}
                                             {event.location[language] && (
-                                                <div className="flex items-center gap-2 text-xs text-slate-400">
+                                                <div className="flex items-center gap-2 text-xs text-neutral-400">
                                                     <FaMapMarkerAlt className="w-3 h-3" />
                                                     <span>{event.location[language]}</span>
                                                 </div>
@@ -136,22 +116,13 @@ const EventFilter = ({ eventCategories, activeEvent, onEventChange, language, ph
                                         </div>
                                     )}
                                 </div>
-                                
+
                                 {/* Active Indicator */}
                                 {isActive && (
-                                    <motion.div
-                                        layoutId="activeEvent"
-                                        className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500"
-                                        initial={false}
-                                        transition={{
-                                            type: "spring",
-                                            stiffness: 500,
-                                            damping: 30
-                                        }}
-                                    />
+                                    <div className={`absolute bottom-0 left-0 right-0 h-1 ${isAll ? 'bg-brand-blue-light' : 'bg-yellow-400'}`} />
                                 )}
                             </div>
-                        </motion.button>
+                        </button>
                     );
                 })}
             </div>

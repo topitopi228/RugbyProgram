@@ -3,7 +3,7 @@ import React from 'react';
 import { useLanguage } from '../../components/LanguageUtils';
 import HeroSection from './components/HeroSection';
 import NewsSection from './components/NewsSection';
-import ContactSection from './components/ContactSection';
+import ContactPartnersSection from '../../components/ContactPartnersSection';
 
 const NewsPage = () => {
     const { language } = useLanguage();
@@ -554,10 +554,10 @@ const NewsPage = () => {
     const t = translations[language];
 
     return (
-        <div className="min-h-screen text-white">
+        <div className="min-h-screen bg-black text-white">
             <HeroSection language={language} title={t.title} />
             <NewsSection news={t.news} language={language} />
-            <ContactSection language={language} />
+            <ContactPartnersSection language={language} />
         </div>
     );
 };

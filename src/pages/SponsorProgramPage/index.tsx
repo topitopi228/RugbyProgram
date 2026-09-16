@@ -5,7 +5,7 @@ import HeroSection from './components/HeroSection';
 import OlympicGoalSection from './components/OlympicGoalSection';
 import ClubSection from './components/ClubSection';
 import GoalsContent from './components/GoalsContent';
-import ContactSection from './components/ContactSection';
+import ContactPartnersSection from '../../components/ContactPartnersSection';
 import { translations } from './translations';
 
 const SponsorProgram = () => {
@@ -27,7 +27,7 @@ const SponsorProgram = () => {
     }, [location]);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+        <div className="min-h-screen bg-black text-white">
             <HeroSection language={language} />
             <OlympicGoalSection 
                 olympicTitle={t.olympicTitle} 
@@ -35,9 +35,7 @@ const SponsorProgram = () => {
             />
             <ClubSection language={language} />
             <GoalsContent europeanGoal={t.europeanGoal} />
-            <ContactSection
-                language={language}
-            />
+            <ContactPartnersSection language={language} />
         </div>
     );
 };

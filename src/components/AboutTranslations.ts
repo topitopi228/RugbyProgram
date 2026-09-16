@@ -291,7 +291,7 @@ export const translations = {
 
 export const getEvents = (language: string, t: any) => [
     {
-        id: 3,
+        id: 5,
         image: '/media28.webp',
         date: t.event3.date,
         title: t.event3.title,
@@ -305,7 +305,7 @@ export const getEvents = (language: string, t: any) => [
                 : '2026. szeptember 16-20. között Ungváron edzőtábor kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott előjátékosai számára. Öt nap alatt a sportolók a standard helyzetek (különösen a scrumok és a lineoutok) technikájának tökéletesítésén dolgoznak.'
     },
     {
-        id: 4,
+        id: 6,
         image: '/tbc.webp',
         date: t.event5.date,
         title: t.event5.title,
@@ -319,7 +319,7 @@ export const getEvents = (language: string, t: any) => [
                 : 'TBC — pontos helyszín és program még egyeztetés alatt.'
     },
     {
-        id: 5,
+        id: 7,
         image: '/maj12.webp',
         date: t.event6.date,
         title: t.event6.title,
@@ -333,7 +333,7 @@ export const getEvents = (language: string, t: any) => [
                 : '2026. november 23-29. között Grúziában nemzetközi edzőtábor kerül megrendezésre az U17-os ukrán rögbi-7-es válogatott számára. Ez a szakasz kulcsfontosságú lesz a 2027-es szezonra való felkészülésben. Hét nap alatt intenzív programot követnek (technika, taktika, fizikai és pszichológiai felkészítés). Ellenőrző mérkőzések és közös edzések is tervezettek.'
     },
     {
-        id: 6,
+        id: 8,
         image: '/maj8.webp',
         date: t.event7.date,
         title: t.event7.title,
@@ -347,7 +347,7 @@ export const getEvents = (language: string, t: any) => [
                 : '2026. december 1-6. között Hmelnyickijben kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott záró edzőtábora. A fő cél a felkészültség végső ellenőrzése és a csapat együttműködésének fejlesztése. Ellenőrző mérkőzések sorozata is tervezett az U17-es válogatott ellen.'
     },
     {
-        id: 7,
+        id: 9,
         image: '/tbc.webp',
         date: t.event8.date,
         title: t.event8.title,
@@ -361,7 +361,7 @@ export const getEvents = (language: string, t: any) => [
                 : 'TBC — pontos helyszín és program még egyeztetés alatt.'
     },
     {
-        id: 8,
+        id: 10,
         image: '/maj2.webp',
         date: t.event9.date,
 
@@ -376,7 +376,7 @@ export const getEvents = (language: string, t: any) => [
                 : 'Az U17-os ukrán rögbi-7-es válogatott tervezi a részvételt a Lisbon Rugby Youth Festival 2027-en — Európa egyik legnagyobb és legrangosabb ifjúsági rögbi tornáján (Lisszabon). Tavaly a csapat megnyerte a Silver Cupot. 2027-ben a cél a főtorna megnyerése.'
     },
     {
-        id: 9,
+        id: 11,
         image: '/maj11.webp',
         date: t.event10.date,
         title: t.event10.title,
@@ -390,7 +390,7 @@ export const getEvents = (language: string, t: any) => [
                 : '2027 márciusában az U17-os ukrán rögbi-7-es válogatott nemzetközi edzőtábort tart Gdyniában (Lengyelország). A csapat a technikai-taktikai felkészülésen, az egyéni készségeken, a támadás és védekezés szervezésén dolgozik. Közös edzések és ellenőrző mérkőzések is tervezettek.'
     },
     {
-        id: 10,
+        id: 12,
         image: '/tbc.webp',
         date: t.event11.date,
         title: t.event11.title,
@@ -404,7 +404,7 @@ export const getEvents = (language: string, t: any) => [
                 : 'TBC — pontos helyszín és program még egyeztetés alatt.'
     },
     {
-        id: 11,
+        id: 13,
         image: '/tbc.webp',
         date: t.event12.date,
         title: t.event12.title,
@@ -418,7 +418,7 @@ export const getEvents = (language: string, t: any) => [
                 : 'TBC — pontos helyszín és program még egyeztetés alatt.'
     },
     {
-        id: 12,
+        id: 14,
         image: '/maj14.webp',
         date: t.event13.date,
         title: t.event13.title,

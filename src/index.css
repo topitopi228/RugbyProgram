@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Brand palette: black base + national-team yellow & blue accents.
+   Blue is tuned brighter/more saturated than a flag-blue so it actually
+   pops as text/borders on a black background instead of reading muddy/dull. */
+@theme {
+    --color-brand-yellow: #FFD100;
+    --color-brand-yellow-dim: #E0B400;
+    --color-brand-blue: #1863DC;
+    --color-brand-blue-light: #4C9AFF;
+}
+
 /* Smooth Scroll like g2esports.com */
 html {
     scroll-behavior: smooth;
@@ -11,37 +21,74 @@ html {
 
 body {
     overflow-x: hidden;
+    background-color: #000;
+}
+
+/*
+ * Give the flat black background a bit of depth/texture instead of being
+ * pure flat #000 everywhere — a very faint diagonal weave + two soft color
+ * glows (yellow/blue), kept subtle on purpose. Written as plain (unlayered)
+ * CSS so it always wins over Tailwind's own `@layer utilities` bg-black rule,
+ * meaning every element using the `bg-black` utility automatically gets it.
+ */
+.bg-black {
+    background-color: #000;
+    background-image:
+        radial-gradient(circle at 12% 8%, rgba(24, 99, 220, 0.10), transparent 40%),
+        radial-gradient(circle at 88% 92%, rgba(255, 209, 0, 0.05), transparent 42%),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.018) 0px, rgba(255, 255, 255, 0.018) 1px, transparent 1px, transparent 9px);
+}
+
+/* Real photography gets a touch more punch/contrast so it doesn't look washed out */
+img.object-cover {
+    filter: contrast(1.08) saturate(1.12);
+}
+
+/*
+ * Cards/panels need to visibly separate from the textured black page
+ * background, not just sit flush on top of it — a touch lighter fill,
+ * a slightly stronger border and a soft drop shadow so they "lift" off
+ * the page. Unlayered on purpose so it overrides Tailwind's utilities
+ * everywhere these classes are used, without editing every component.
+ */
+.bg-neutral-950 {
+    background-color: #111111;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset, 0 14px 30px -18px rgba(0, 0, 0, 0.9);
+}
+
+.border-white\/10 {
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.border-white\/15 {
+    border-color: rgba(255, 255, 255, 0.22);
+}
+
+.border-white\/20 {
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+/* Primary yellow CTAs/accents get a soft glow so they read as the clear focal point */
+.bg-brand-yellow {
+    box-shadow: 0 4px 16px -4px rgba(255, 209, 0, 0.4);
 }
 
 * {
     scroll-behavior: smooth;
 }
 
-/* Lazy loading optimization with blur placeholder */
+/* Lazy loading placeholder (static, no animation) */
 img[loading="lazy"]:not(.no-shimmer) {
-    background: linear-gradient(110deg, #1f2937 8%, #374151 18%, #1f2937 33%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s linear infinite;
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: -200% 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
+    background: #171717;
 }
 
 img[loading="lazy"].loaded {
-    animation: none;
     background: none;
 }
 
-/* Disable shimmer for sponsor logos */
+/* Disable placeholder for sponsor logos */
 img[loading="lazy"].no-shimmer {
     background: none;
-    animation: none;
 }
 
 /* Video optimization */
@@ -80,39 +127,34 @@ video {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-    
-    img[loading="lazy"] {
-        animation: none;
-    }
 }
 
-/* Infinite scrolling marquee animation */
+/* Infinite scrolling ticker/marquee (used for footer ticker & partner logos) */
 @keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .animate-marquee {
-    animation: marquee 25s linear infinite;
+    animation: marquee 28s linear infinite;
 }
 
-/* 3D Card Flip Styles */
-.perspective-1000 {
-    perspective: 1000px;
+/* Purposeful, subtle one-shot entrance animation (not looping/decorative) */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.transform-style-3d {
-    transform-style: preserve-3d;
+.animate-fade-up {
+    animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.backface-hidden {
-    backface-visibility: hidden;
-}
-
-.rotate-y-180 {
-    transform: rotateY(180deg);
-}
+.animate-fade-up-1 { animation-delay: 0.1s; }
+.animate-fade-up-2 { animation-delay: 0.2s; }
+.animate-fade-up-3 { animation-delay: 0.3s; }
