@@ -17,11 +17,11 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-            date: '16-20 Вересня 2026',
+            date: '17-21 Вересня 2026',
             title: 'Навчально-тренувальні збори гравців сутички в Ужгороді',
-            description: 'Підготовка гравців сутички',
+            description: 'Підготовка гравців сутички, склад — 14 кандидатів',
             location: 'м. Ужгород, Україна',
-            funding: '950 €'
+            funding: '1,300 €'
         },
         event4: {
             date: '9-18 Листопада 2026',
@@ -32,10 +32,10 @@ export const translations = {
         },
         event5: {
             date: '13-18 Жовтня 2026',
-            title: 'Міжнародні навчально-тренувальні збори (Чехія)',
-            description: 'TBC — точне місце та програма уточнюється',
-            location: 'Чехія (TBC)',
-            funding: 'TBC'
+            title: 'Міжнародні навчально-тренувальні збори (Барселона, Іспанія)',
+            description: 'Підготовка команди в Барселоні',
+            location: 'м. Барселона, Іспанія',
+            funding: '12,900 €'
         },
         event6: {
             date: '23-29 Листопада 2026',
@@ -134,11 +134,11 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-            date: 'September 16-20, 2026',
+            date: 'September 17-21, 2026',
             title: 'Forwards Training Camp in Uzhhorod',
-            description: 'Forwards training camp',
+            description: 'Forwards training camp, squad of 14 candidates',
             location: 'Uzhhorod, Ukraine',
-            funding: '950 €'
+            funding: '1,300 €'
         },
         event4: {
             date: 'November 9-18, 2026',
@@ -149,10 +149,10 @@ export const translations = {
         },
         event5: {
             date: 'October 13-18, 2026',
-            title: 'International Training Camp (Czechia)',
-            description: 'TBC — exact venue and program to be confirmed',
-            location: 'Czechia (TBC)',
-            funding: 'TBC'
+            title: 'International Training Camp (Barcelona, Spain)',
+            description: 'Team preparation in Barcelona',
+            location: 'Barcelona, Spain',
+            funding: '12,900 €'
         },
         event6: {
             date: 'November 23-29, 2026',
@@ -251,11 +251,11 @@ export const translations = {
             funding: '14,100 €'
         },
         event3: {
-            date: '2026. szeptember 16-20.',
+            date: '2026. szeptember 17-21.',
             title: 'Előjátékosok edzőtábora Ungváron',
-            description: 'Előjátékosok edzőtábora',
+            description: 'Előjátékosok edzőtábora, 14 jelölt',
             location: 'Ungvár, Ukrajna',
-            funding: '950 €'
+            funding: '1,300 €'
         },
         event4: {
             date: '2026. november 9-18.',
@@ -263,6 +263,13 @@ export const translations = {
             description: 'Csapat felkészítése nemzetközi versenyekre',
             location: 'Batumi, Grúzia',
             funding: '20,385 €'
+        },
+        event5: {
+            date: '2026. október 13-18.',
+            title: 'Nemzetközi edzőtábor (Barcelona, Spanyolország)',
+            description: 'Csapat felkészítése Barcelonában',
+            location: 'Barcelona, Spanyolország',
+            funding: '12,900 €'
         },
         contactTitle: "Lépjen kapcsolatba velünk",
         contactText: "Kérdése van vagy támogatná csapatunkat? Lépjen velünk kapcsolatba az alábbi elérhetőségeken.",
@@ -299,24 +306,24 @@ export const getEvents = (language: string, t: any) => [
         location: t.event3.location,
         funding: t.event3.funding,
         details: language === 'UA'
-            ? 'З 16 по 20 вересня в місті Ужгород відбудуться навчально-тренувальні збори гравців сутички юнацької національної збірної команди України з регбі-7 U16. Протягом п\'яти днів спортсмени працюватимуть над удосконаленням техніки виконання стандартних положень, зокрема схватів та коридорів. Основна увага буде приділена індивідуальній технічній підготовці, синхронізації дій гравців сутички, взаємодії в ігрових епізодах та відпрацюванню тактичних схем.'
+            ? 'З 17 по 21 вересня в місті Ужгород відбудуться навчально-тренувальні збори гравців сутички юнацької національної збірної команди України з регбі-7 U16. Склад збору — 14 кандидатів. Протягом п\'яти днів спортсмени працюватимуть над удосконаленням техніки виконання стандартних положень, зокрема схватів та коридорів. Основна увага буде приділена індивідуальній технічній підготовці, синхронізації дій гравців сутички, взаємодії в ігрових епізодах та відпрацюванню тактичних схем.'
             : language === 'EN'
-                ? 'From September 16 to 20 in Uzhhorod, a training camp for forwards of the Ukraine U16 Rugby-7 National Team will take place. Over five days the athletes will work on improving set-piece technique, especially scrums and lineouts. The main focus will be on individual technical preparation, synchronisation of the forward pack and practising tactical schemes.'
-                : '2026. szeptember 16-20. között Ungváron edzőtábor kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott előjátékosai számára. Öt nap alatt a sportolók a standard helyzetek (különösen a scrumok és a lineoutok) technikájának tökéletesítésén dolgoznak.'
+                ? 'From September 17 to 21 in Uzhhorod, a training camp for forwards of the Ukraine U16 Rugby-7 National Team will take place, with a squad of 14 candidates. Over five days the athletes will work on improving set-piece technique, especially scrums and lineouts. The main focus will be on individual technical preparation, synchronisation of the forward pack and practising tactical schemes.'
+                : '2026. szeptember 17-21. között Ungváron edzőtábor kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott előjátékosai számára, 14 jelölttel. Öt nap alatt a sportolók a standard helyzetek (különösen a scrumok és a lineoutok) technikájának tökéletesítésén dolgoznak.'
     },
     {
         id: 6,
-        image: '/tbc.webp',
+        image: '/maj5.webp',
         date: t.event5.date,
         title: t.event5.title,
         description: t.event5.description,
         location: t.event5.location,
         funding: t.event5.funding,
         details: language === 'UA'
-            ? 'TBC — точне місце та програма уточнюються.'
+            ? 'З 13 по 18 жовтня юнацька національна збірна команда України з регбі-7 U16 проведе міжнародні навчально-тренувальні збори в місті Барселона (Іспанія). Команда працюватиме над технічною та фізичною підготовкою, а також проведе спільні тренування і контрольні матчі з місцевими клубами.'
             : language === 'EN'
-                ? 'TBC — exact venue and programme to be confirmed.'
-                : 'TBC — pontos helyszín és program még egyeztetés alatt.'
+                ? 'From October 13 to 18 the Ukraine U16 Rugby-7 National Team will hold an international training camp in Barcelona, Spain. The team will focus on technical and physical preparation, with joint training sessions and test matches against local clubs.'
+                : '2026. október 13-18. között az U16-os ukrán rögbi-7-es válogatott nemzetközi edzőtábort tart Barcelonában, Spanyolországban. A csapat a technikai és fizikai felkészülésen dolgozik, közös edzésekkel és ellenőrző mérkőzésekkel a helyi klubokkal.'
     },
     {
         id: 7,
@@ -788,26 +795,104 @@ export const fundingBreakdowns = {
                 EN: 'Total Amount',
                 HUN: 'Teljes összeg'
             },
-            amount: '950 €',
+            amount: '1,300 €',
             description: {
-                UA: 'Навчально-тренувальні збори в Ужгороді (гравці сутички)',
-                EN: 'Training Camp in Uzhhorod (forwards)',
-                HUN: 'Edzőtábor Ungváron (előjátékosok)'
+                UA: 'Навчально-тренувальні збори в Ужгороді (гравці сутички, 14 кандидатів)',
+                EN: 'Training Camp in Uzhhorod (forwards, 14 candidates)',
+                HUN: 'Edzőtábor Ungváron (előjátékosok, 14 jelölt)'
             }
         }
     ],
-    6: [ // Чехія TBC
+    6: [ // Іспанія - Барселона
+        {
+            category: {
+                UA: 'Транспорт і логістика',
+                EN: 'Transport & Logistics',
+                HUN: 'Szállítás és logisztika'
+            },
+            amount: '3,200 €',
+            description: {
+                UA: 'Авіаперельоти до Барселони та назад, трансфери, багаж',
+                EN: 'Return flights to Barcelona, transfers, baggage',
+                HUN: 'Repülőjegyek Barcelonába és vissza, transzferek, poggyász'
+            }
+        },
+        {
+            category: {
+                UA: 'Проживання',
+                EN: 'Accommodation',
+                HUN: 'Szállás'
+            },
+            amount: '3,100 €',
+            description: {
+                UA: 'Готель для команди на 6 ночей',
+                EN: 'Team hotel for 6 nights',
+                HUN: 'Csapat szállás 6 éjszakára'
+            }
+        },
+        {
+            category: {
+                UA: 'Харчування',
+                EN: 'Meals',
+                HUN: 'Étkezés'
+            },
+            amount: '2,200 €',
+            description: {
+                UA: 'Триразове харчування та спортивне харчування',
+                EN: 'Three meals a day and sports nutrition',
+                HUN: 'Napi háromszori étkezés és sporttáplálkozás'
+            }
+        },
+        {
+            category: {
+                UA: 'Участь / страхування',
+                EN: 'Participation / Insurance',
+                HUN: 'Részvétel / biztosítás'
+            },
+            amount: '900 €',
+            description: {
+                UA: 'Страхування учасників, оренда тренувального поля',
+                EN: 'Participant insurance, training field rental',
+                HUN: 'Résztvevők biztosítása, edzőpálya bérlés'
+            }
+        },
+        {
+            category: {
+                UA: 'Штаб і персонал',
+                EN: 'Staff & Personnel',
+                HUN: 'Stáb és személyzet'
+            },
+            amount: '2,500 €',
+            description: {
+                UA: 'Добові тренерського та адміністративного штабу',
+                EN: 'Daily allowances for coaching and administrative staff',
+                HUN: 'Edzői és adminisztratív személyzet napidíjai'
+            }
+        },
+        {
+            category: {
+                UA: 'Непередбачені витрати / резерв',
+                EN: 'Contingency / Reserve',
+                HUN: 'Váratlan költségek / tartalék'
+            },
+            amount: '1,000 €',
+            description: {
+                UA: 'Додаткові організаційні витрати та можливі коливання цін',
+                EN: 'Additional organizational costs and possible price fluctuations',
+                HUN: 'További szervezési költségek és esetleges árváltozások'
+            }
+        },
         {
             category: {
                 UA: 'Загальна сума',
                 EN: 'Total Amount',
                 HUN: 'Teljes összeg'
             },
-            amount: 'TBC',
+            amount: '12,900 €',
             description: {
-                UA: 'Міжнародні навчально-тренувальні збори в Чехії (TBC)',
-                EN: 'International Training Camp in Czechia (TBC)',
-                HUN: 'Nemzetközi edzőtábor Csehországban (TBC)'
+                UA: 'Навчально-тренувальні збори в Барселоні',
+                EN: 'Training Camp in Barcelona',
+                HUN: 'Edzőtábor Barcelonában'
             }
         }
     ],
