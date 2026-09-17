@@ -38,12 +38,11 @@ const EventsList: React.FC<EventsListProps> = ({ events, language, onOpenFunding
 
             {/* Events Grid */}
             <div className="space-y-8">
-                {events.map((event, index) => {
-                    const isAlt = index % 2 === 1;
-                    const accentBorder = isAlt ? 'border-brand-blue' : 'border-brand-yellow';
-                    const accentBorderSoft = isAlt ? 'border-brand-blue/40' : 'border-brand-yellow/40';
-                    const accentText = isAlt ? 'text-brand-blue' : 'text-brand-yellow';
-                    const accentHover = isAlt ? 'hover:border-brand-blue/60' : 'hover:border-brand-yellow/60';
+                {events.map((event) => {
+                    const accentBorder = 'border-brand-yellow';
+                    const accentBorderSoft = 'border-brand-yellow/40';
+                    const accentText = 'text-brand-yellow';
+                    const accentHover = 'hover:border-brand-yellow/60';
 
                     return (
                     <div

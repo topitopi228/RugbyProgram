@@ -78,10 +78,10 @@ const ContactPartnersSection: React.FC<ContactPartnersSectionProps> = ({ languag
 
                     <a
                         href="mailto:shashero10@gmail.com"
-                        className="group flex flex-col items-center text-center gap-3 p-6 bg-neutral-950 border border-white/10 hover:border-brand-blue-light hover:-translate-y-1 transition-all duration-200"
+                        className="group flex flex-col items-center text-center gap-3 p-6 bg-neutral-950 border border-white/10 hover:border-brand-yellow hover:-translate-y-1 transition-all duration-200"
                     >
-                        <span className="flex items-center justify-center w-14 h-14 border border-brand-blue-light/40 bg-black transition-colors duration-200 group-hover:border-brand-blue-light group-hover:bg-brand-blue-light/10">
-                            <svg className="h-6 w-6 text-brand-blue-light transition-transform duration-200 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <span className="flex items-center justify-center w-14 h-14 border border-brand-yellow/40 bg-black transition-colors duration-200 group-hover:border-brand-yellow group-hover:bg-brand-yellow/10">
+                            <svg className="h-6 w-6 text-brand-yellow transition-transform duration-200 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                         </span>
@@ -118,23 +118,18 @@ const ContactPartnersSection: React.FC<ContactPartnersSectionProps> = ({ languag
                         <div className="flex">
                             {[0, 1].map((set) => (
                                 <div key={set} className="flex animate-marquee flex-shrink-0" aria-hidden={set === 1}>
-                                    {sponsorLogos.map((num) => {
-                                        const isBlue = num % 2 === 0;
-                                        return (
-                                            <div
-                                                key={`${set}-${num}`}
-                                                className={`mx-3 flex-shrink-0 bg-neutral-950 border border-white/10 border-t-2 p-4 md:p-5 transition-colors ${
-                                                    isBlue ? 'border-t-brand-blue-light hover:border-brand-blue-light/60' : 'border-t-brand-yellow hover:border-brand-yellow/60'
-                                                }`}
-                                            >
-                                                <img
-                                                    src={`/spin-${num}.webp`}
-                                                    alt={`Sponsor ${num}`}
-                                                    className="h-12 md:h-14 w-auto max-w-[120px] md:max-w-[150px] object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all"
-                                                />
-                                            </div>
-                                        );
-                                    })}
+                                    {sponsorLogos.map((num) => (
+                                        <div
+                                            key={`${set}-${num}`}
+                                            className="mx-3 flex-shrink-0 bg-neutral-950 border border-white/10 border-t-2 border-t-brand-yellow p-4 md:p-5 transition-colors hover:border-brand-yellow/60"
+                                        >
+                                            <img
+                                                src={`/spin-${num}.webp`}
+                                                alt={`Sponsor ${num}`}
+                                                className="h-12 md:h-14 w-auto max-w-[120px] md:max-w-[150px] object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all"
+                                            />
+                                        </div>
+                                    ))}
                                 </div>
                             ))}
                         </div>
