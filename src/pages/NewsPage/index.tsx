@@ -194,6 +194,14 @@ const NewsPage = () => {
                     description: 'Успішно завершилися навчально-тренувальні збори гравців сутички юнацької збірної України з регбі-7 у місті Ужгород. Протягом п\'яти днів спортсмени активно працювали над удосконаленням техніки виконання стандартних положень, зокрема схватів та коридорів. Основна увага була приділена індивідуальній технічній підготовці, синхронізації дій гравців сутички та відпрацюванню тактичних схем. Всі учасники показали високу віддачу та прогрес у майстерності.',
                     expense: '950',
                     image: '/news21.webp'
+                },
+                {
+                    id: 22,
+                    date: '17-21 Вересня 2026',
+                    title: 'Завершено НТЗ гравців сутички в Ужгороді',
+                    description: 'Успішно завершилися навчально-тренувальні збори гравців сутички юнацької збірної України з регбі-7 у місті Ужгород. Склад збору — 14 кандидатів. Протягом п\'яти днів спортсмени активно працювали над удосконаленням техніки виконання стандартних положень, зокрема схватів та коридорів. Основна увага була приділена індивідуальній технічній підготовці, синхронізації дій гравців сутички та відпрацюванню тактичних схем.',
+                    expense: '1300',
+                    image: '/media28.webp'
                 }
 
             ]
@@ -370,6 +378,14 @@ const NewsPage = () => {
                     description: 'The forwards training camp of the Ukrainian youth rugby-7 national team successfully concluded in Uzhhorod. Over five days, athletes actively worked on improving set-piece technique, particularly scrums and lineouts. Main focus was on individual technical preparation, synchronization of forward pack actions, and practicing tactical schemes. All participants showed high dedication and progress in their skills.',
                     expense: '950',
                     image: '/news21.webp'
+                },
+                {
+                    id: 22,
+                    date: 'September 17-21, 2026',
+                    title: 'Forwards Training Camp in Uzhhorod Completed',
+                    description: 'The forwards training camp of the Ukrainian youth rugby-7 national team successfully concluded in Uzhhorod, with a squad of 14 candidates. Over five days, athletes actively worked on improving set-piece technique, particularly scrums and lineouts. Main focus was on individual technical preparation, synchronization of forward pack actions, and practicing tactical schemes.',
+                    expense: '1300',
+                    image: '/media28.webp'
                 }
 ]
         },
@@ -546,6 +562,14 @@ const NewsPage = () => {
                     description: 'Sikeresen befejeződött az ukrán ifjúsági rögbi-7 válogatott előjátékosainak edzőtábora Ungváron. Öt nap alatt a sportolók aktívan dolgoztak a standard helyzetek technikájának tökéletesítésén, különösen a scrumok és lineoutok terén. A fő hangsúly az egyéni technikai felkészítésen, az előjátékosok cselekvéseinek szinkronizálásán és a taktikai sémák gyakorlásán volt. Minden résztvevő magas elkötelezettséget és fejlődést mutatott képességeiben.',
                     expense: '950',
                     image: '/news21.webp'
+                },
+                {
+                    id: 22,
+                    date: '2026. szeptember 17-21.',
+                    title: 'Előjátékosok edzőtábora Ungváron befejezve',
+                    description: 'Sikeresen befejeződött az ukrán ifjúsági rögbi-7 válogatott előjátékosainak edzőtábora Ungváron, 14 jelölttel. Öt nap alatt a sportolók aktívan dolgoztak a standard helyzetek technikájának tökéletesítésén, különösen a scrumok és lineoutok terén. A fő hangsúly az egyéni technikai felkészítésen, az előjátékosok cselekvéseinek szinkronizálásán és a taktikai sémák gyakorlásán volt.',
+                    expense: '1300',
+                    image: '/media28.webp'
                 }
 ]
         }

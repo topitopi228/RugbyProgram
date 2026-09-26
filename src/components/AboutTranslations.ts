@@ -31,17 +31,17 @@ export const translations = {
             funding: '21,300 €'
         },
         event5: {
-            date: '13-18 Жовтня 2026',
-            title: 'Міжнародні навчально-тренувальні збори (Барселона, Іспанія)',
-            description: 'Підготовка команди в Барселоні',
-            location: 'м. Барселона, Іспанія',
+            date: '12-21 Жовтня 2026',
+            title: 'Міжнародні навчально-тренувальні збори (Батумі, Грузія)',
+            description: 'Підготовка команди в Батумі',
+            location: 'м. Батумі, Грузія',
             funding: '12,900 €'
         },
         event6: {
-            date: '23-29 Листопада 2026',
-            title: 'Міжнародні навчально-тренувальні збори в Грузії',
+            date: '30 Листопада - 6 Грудня 2026',
+            title: 'Міжнародні навчально-тренувальні збори в Тбілісі',
             description: 'Ключовий етап підготовки до сезону 2027',
-            location: 'Грузія',
+            location: 'м. Тбілісі, Грузія',
             funding: '16,900 €'
         },
         event7: {
@@ -148,17 +148,17 @@ export const translations = {
             funding: '20,385 €'
         },
         event5: {
-            date: 'October 13-18, 2026',
-            title: 'International Training Camp (Barcelona, Spain)',
-            description: 'Team preparation in Barcelona',
-            location: 'Barcelona, Spain',
+            date: 'October 12-21, 2026',
+            title: 'International Training Camp (Batumi, Georgia)',
+            description: 'Team preparation in Batumi',
+            location: 'Batumi, Georgia',
             funding: '12,900 €'
         },
         event6: {
-            date: 'November 23-29, 2026',
-            title: 'International Training Camp in Georgia',
+            date: 'November 30 - December 6, 2026',
+            title: 'International Training Camp in Tbilisi',
             description: 'Key preparation stage for 2027 season',
-            location: 'Georgia',
+            location: 'Tbilisi, Georgia',
             funding: '16,900 €'
         },
         event7: {
@@ -265,10 +265,10 @@ export const translations = {
             funding: '20,385 €'
         },
         event5: {
-            date: '2026. október 13-18.',
-            title: 'Nemzetközi edzőtábor (Barcelona, Spanyolország)',
-            description: 'Csapat felkészítése Barcelonában',
-            location: 'Barcelona, Spanyolország',
+            date: '2026. október 12-21.',
+            title: 'Nemzetközi edzőtábor (Batumi, Grúzia)',
+            description: 'Csapat felkészítése Batumiban',
+            location: 'Batumi, Grúzia',
             funding: '12,900 €'
         },
         contactTitle: "Lépjen kapcsolatba velünk",
@@ -298,32 +298,18 @@ export const translations = {
 
 export const getEvents = (language: string, t: any) => [
     {
-        id: 5,
-        image: '/media28.webp',
-        date: t.event3.date,
-        title: t.event3.title,
-        description: t.event3.description,
-        location: t.event3.location,
-        funding: t.event3.funding,
-        details: language === 'UA'
-            ? 'З 17 по 21 вересня в місті Ужгород відбудуться навчально-тренувальні збори гравців сутички юнацької національної збірної команди України з регбі-7 U16. Склад збору — 14 кандидатів. Протягом п\'яти днів спортсмени працюватимуть над удосконаленням техніки виконання стандартних положень, зокрема схватів та коридорів. Основна увага буде приділена індивідуальній технічній підготовці, синхронізації дій гравців сутички, взаємодії в ігрових епізодах та відпрацюванню тактичних схем.'
-            : language === 'EN'
-                ? 'From September 17 to 21 in Uzhhorod, a training camp for forwards of the Ukraine U16 Rugby-7 National Team will take place, with a squad of 14 candidates. Over five days the athletes will work on improving set-piece technique, especially scrums and lineouts. The main focus will be on individual technical preparation, synchronisation of the forward pack and practising tactical schemes.'
-                : '2026. szeptember 17-21. között Ungváron edzőtábor kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott előjátékosai számára, 14 jelölttel. Öt nap alatt a sportolók a standard helyzetek (különösen a scrumok és a lineoutok) technikájának tökéletesítésén dolgoznak.'
-    },
-    {
         id: 6,
-        image: '/maj5.webp',
+        image: '/media28.webp',
         date: t.event5.date,
         title: t.event5.title,
         description: t.event5.description,
         location: t.event5.location,
         funding: t.event5.funding,
         details: language === 'UA'
-            ? 'З 13 по 18 жовтня юнацька національна збірна команда України з регбі-7 U16 проведе міжнародні навчально-тренувальні збори в місті Барселона (Іспанія). Команда працюватиме над технічною та фізичною підготовкою, а також проведе спільні тренування і контрольні матчі з місцевими клубами.'
+            ? 'З 12 по 21 жовтня юнацька національна збірна команда України з регбі-7 U16 проведе міжнародні навчально-тренувальні збори в місті Батумі (Грузія). Команда працюватиме над технічною та фізичною підготовкою, а також проведе спільні тренування і контрольні матчі з місцевими клубами.'
             : language === 'EN'
-                ? 'From October 13 to 18 the Ukraine U16 Rugby-7 National Team will hold an international training camp in Barcelona, Spain. The team will focus on technical and physical preparation, with joint training sessions and test matches against local clubs.'
-                : '2026. október 13-18. között az U16-os ukrán rögbi-7-es válogatott nemzetközi edzőtábort tart Barcelonában, Spanyolországban. A csapat a technikai és fizikai felkészülésen dolgozik, közös edzésekkel és ellenőrző mérkőzésekkel a helyi klubokkal.'
+                ? 'From October 12 to 21 the Ukraine U16 Rugby-7 National Team will hold an international training camp in Batumi, Georgia. The team will focus on technical and physical preparation, with joint training sessions and test matches against local clubs.'
+                : '2026. október 12-21. között az U16-os ukrán rögbi-7-es válogatott nemzetközi edzőtábort tart Batumiban, Grúziában. A csapat a technikai és fizikai felkészülésen dolgozik, közös edzésekkel és ellenőrző mérkőzésekkel a helyi klubokkal.'
     },
     {
         id: 7,
@@ -334,10 +320,10 @@ export const getEvents = (language: string, t: any) => [
         location: t.event6.location,
         funding: t.event6.funding,
         details: language === 'UA'
-            ? 'З 23 по 29 листопада на території Грузії відбудуться міжнародні навчально-тренувальні збори юнацької національної збірної команди України з регбі-7 U16. Цей етап стане одним із ключових у підготовці команди до міжнародного сезону 2027 року. Упродовж семи днів спортсмени працюватимуть за насиченою програмою (техніка, тактика, фізична і психологічна підготовка). Заплановано контрольні матчі та спільні тренування з грузинськими командами.'
+            ? 'З 30 листопада по 6 грудня в місті Тбілісі (Грузія) відбудуться міжнародні навчально-тренувальні збори юнацької національної збірної команди України з регбі-7 U16. Цей етап стане одним із ключових у підготовці команди до міжнародного сезону 2027 року. Упродовж семи днів спортсмени працюватимуть за насиченою програмою (техніка, тактика, фізична і психологічна підготовка). Заплановано контрольні матчі та спільні тренування з грузинськими командами.'
             : language === 'EN'
-                ? 'From November 23 to 29 in Georgia, an international training camp for the Ukraine U17 Rugby-7 National Team will take place. This will be one of the key stages of preparation for the 2027 season. Over seven days the athletes will follow an intensive programme covering technical, tactical, physical and psychological preparation. Test matches and joint sessions with Georgian teams are planned.'
-                : '2026. november 23-29. között Grúziában nemzetközi edzőtábor kerül megrendezésre az U17-os ukrán rögbi-7-es válogatott számára. Ez a szakasz kulcsfontosságú lesz a 2027-es szezonra való felkészülésben. Hét nap alatt intenzív programot követnek (technika, taktika, fizikai és pszichológiai felkészítés). Ellenőrző mérkőzések és közös edzések is tervezettek.'
+                ? 'From November 30 to December 6 in Tbilisi, Georgia, an international training camp for the Ukraine U17 Rugby-7 National Team will take place. This will be one of the key stages of preparation for the 2027 season. Over seven days the athletes will follow an intensive programme covering technical, tactical, physical and psychological preparation. Test matches and joint sessions with Georgian teams are planned.'
+                : '2026. november 30. - december 6. között Tbilisziben, Grúziában nemzetközi edzőtábor kerül megrendezésre az U17-os ukrán rögbi-7-es válogatott számára. Ez a szakasz kulcsfontosságú lesz a 2027-es szezonra való felkészülésben. Hét nap alatt intenzív programot követnek (technika, taktika, fizikai és pszichológiai felkészítés). Ellenőrző mérkőzések és közös edzések is tervezettek.'
     },
     {
         id: 8,
@@ -803,7 +789,7 @@ export const fundingBreakdowns = {
             }
         }
     ],
-    6: [ // Іспанія - Барселона
+    6: [ // Грузія - Батумі
         {
             category: {
                 UA: 'Транспорт і логістика',
@@ -812,9 +798,9 @@ export const fundingBreakdowns = {
             },
             amount: '3,200 €',
             description: {
-                UA: 'Авіаперельоти до Барселони та назад, трансфери, багаж',
-                EN: 'Return flights to Barcelona, transfers, baggage',
-                HUN: 'Repülőjegyek Barcelonába és vissza, transzferek, poggyász'
+                UA: 'Авіаперельоти до Батумі та назад, трансфери, багаж',
+                EN: 'Return flights to Batumi, transfers, baggage',
+                HUN: 'Repülőjegyek Batumiba és vissza, transzferek, poggyász'
             }
         },
         {
@@ -890,13 +876,13 @@ export const fundingBreakdowns = {
             },
             amount: '12,900 €',
             description: {
-                UA: 'Навчально-тренувальні збори в Барселоні',
-                EN: 'Training Camp in Barcelona',
-                HUN: 'Edzőtábor Barcelonában'
+                UA: 'Навчально-тренувальні збори в Батумі',
+                EN: 'Training Camp in Batumi',
+                HUN: 'Edzőtábor Batumiban'
             }
         }
     ],
-    7: [ // Грузія листопад
+    7: [ // Грузія - Тбілісі, листопад-грудень
         {
             category: {
                 UA: 'Загальна сума',
@@ -905,9 +891,9 @@ export const fundingBreakdowns = {
             },
             amount: '16,900 €',
             description: {
-                UA: 'Міжнародні навчально-тренувальні збори в Грузії',
-                EN: 'International Training Camp in Georgia',
-                HUN: 'Nemzetközi edzőtábor Grúziában'
+                UA: 'Міжнародні навчально-тренувальні збори в Тбілісі',
+                EN: 'International Training Camp in Tbilisi',
+                HUN: 'Nemzetközi edzőtábor Tbilisziben'
             }
         }
     ],
