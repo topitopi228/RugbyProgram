@@ -334,10 +334,10 @@ export const getEvents = (language: string, t: any) => [
         location: t.event7.location,
         funding: t.event7.funding,
         details: language === 'UA'
-            ? 'З 1 по 6 грудня у місті Хмельницький відбудеться заключний навчально-тренувальний збір юнацької національної збірної команди України з регбі-7 U16. Основною метою стане підсумкова перевірка рівня підготовки, удосконалення командної взаємодії та закріплення всіх напрацьованих елементів. Заплановано серію контрольних матчів проти збірної України U17.'
+            ? 'З 21 по 28 грудня в Іспанії відбудеться заключний навчально-тренувальний збір юнацької національної збірної команди України з регбі-7 U16. Основною метою стане підсумкова перевірка рівня підготовки, удосконалення командної взаємодії та закріплення всіх напрацьованих елементів. Заплановано серію контрольних матчів проти збірної України U17.'
             : language === 'EN'
-                ? 'From December 1 to 6 in Khmelnytskyi, the final training camp of the Ukraine U17 Rugby-7 National Team will take place. The main goal is a final check of the athletes’ preparation level, improvement of team interaction and consolidation of all practised elements. A series of test matches against the Ukraine U17 team is planned.'
-                : '2026. december 1-6. között Hmelnyickijben kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott záró edzőtábora. A fő cél a felkészültség végső ellenőrzése és a csapat együttműködésének fejlesztése. Ellenőrző mérkőzések sorozata is tervezett az U17-es válogatott ellen.'
+                ? 'From December 21 to 28 in Khmelnytskyi, the final training camp of the Ukraine U17 Rugby-7 National Team will take place. The main goal is a final check of the athletes’ preparation level, improvement of team interaction and consolidation of all practised elements. A series of test matches against the Ukraine U17 team is planned.'
+                : '2026. december 21-28. között Hmelnyickijben kerül megrendezésre az U16-os ukrán rögbi-7-es válogatott záró edzőtábora. A fő cél a felkészültség végső ellenőrzése és a csapat együttműködésének fejlesztése. Ellenőrző mérkőzések sorozata is tervezett az U17-es válogatott ellen.'
     },
     {
         id: 9,
