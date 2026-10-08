@@ -45,11 +45,11 @@ export const translations = {
             funding: '16,900 €'
         },
         event7: {
-            date: '1-6 Грудня 2026',
+            date: '21-28 Грудня 2026',
             title: 'Заключний навчально-тренувальний збір',
             description: 'Підсумкова перевірка підготовки в Хмельницькому',
-            location: 'м. Хмельницький, Україна',
-            funding: '1,800 €'
+            location: 'Іспанія',
+            funding: '10,800 €'
         },
         event8: {
             date: 'Січень 2027',
@@ -162,7 +162,7 @@ export const translations = {
             funding: '16,900 €'
         },
         event7: {
-            date: 'December 1-6, 2026',
+            date: 'December 21-28, 2026',
             title: 'Final Training Camp',
             description: 'Final preparation check in Khmelnytskyi',
             location: 'Khmelnytskyi, Ukraine',
