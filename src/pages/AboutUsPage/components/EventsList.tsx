@@ -15,10 +15,9 @@ interface EventsListProps {
     events: Event[];
     language: string;
     fadeIn?: any;
-    onOpenFundingModal: (event: Event) => void;
 }
 
-const EventsList: React.FC<EventsListProps> = ({ events, language, onOpenFundingModal }) => {
+const EventsList: React.FC<EventsListProps> = ({ events, language }) => {
     return (
         <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-black">
             {/* Section Header */}
@@ -96,30 +95,15 @@ const EventsList: React.FC<EventsListProps> = ({ events, language, onOpenFunding
 
                                 {/* Funding Card */}
                                 <div className={`mt-6 p-5 bg-black border ${accentBorderSoft}`}>
-                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                                        <div>
-                                            <h4 className="text-sm font-bold text-neutral-400 mb-1 uppercase tracking-wide">
-                                                {language === 'UA' ? 'Необхідна сума' :
-                                                    language === 'EN' ? 'Required funding' :
-                                                        'Szükséges összeg'}
-                                            </h4>
-                                            <p className={`text-3xl font-extrabold ${accentText}`}>
-                                                {event.funding}
-                                            </p>
-                                        </div>
-                                        <button
-                                            onClick={() => onOpenFundingModal(event)}
-                                            className="px-6 py-3 bg-brand-yellow text-black font-bold uppercase tracking-wide hover:bg-brand-yellow-dim transition-colors"
-                                        >
-                                            <span className="flex items-center gap-2">
-                                                {language === 'UA' ? 'Детальніше' :
-                                                    language === 'EN' ? 'Details' :
-                                                        'Részletek'}
-                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                                </svg>
-                                            </span>
-                                        </button>
+                                    <div>
+                                        <h4 className="text-sm font-bold text-neutral-400 mb-1 uppercase tracking-wide">
+                                            {language === 'UA' ? 'Необхідна сума' :
+                                                language === 'EN' ? 'Required funding' :
+                                                    'Szükséges összeg'}
+                                        </h4>
+                                        <p className={`text-3xl font-extrabold ${accentText}`}>
+                                            {event.funding}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
