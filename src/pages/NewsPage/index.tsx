@@ -187,14 +187,7 @@ const NewsPage = () => {
                     expense: '6200',
                     image: '/news20.webp'
                 },
-                {
-                    id: 21,
-                    date: '26-30 Серпня 2026',
-                    title: 'Завершено НТЗ гравців сутички в Ужгороді',
-                    description: 'Успішно завершилися навчально-тренувальні збори гравців сутички юнацької збірної України з регбі-7 у місті Ужгород. Протягом п\'яти днів спортсмени активно працювали над удосконаленням техніки виконання стандартних положень, зокрема схватів та коридорів. Основна увага була приділена індивідуальній технічній підготовці, синхронізації дій гравців сутички та відпрацюванню тактичних схем. Всі учасники показали високу віддачу та прогрес у майстерності.',
-                    expense: '950',
-                    image: '/news21.webp'
-                },
+
                 {
                     id: 22,
                     date: '17-21 Вересня 2026',
@@ -209,7 +202,7 @@ const NewsPage = () => {
                     title: 'Завершено міжнародні навчально-тренувальні збори в Батумі',
                     description: 'У Батумі завершилися навчально-тренувальні збори нашої команди, які стали важливим етапом підготовки до майбутніх міжнародних змагань. Протягом зборів гравці працювали над удосконаленням технічних і тактичних навичок, командною взаємодією та підвищенням ігрової майстерності. Особливо важливим стало залучення до тренувального процесу гравців 2009 року народження, які отримали можливість проявити себе та здобути цінний досвід у складі команди.\n\nВажливою частиною підготовки стала участь у міжнародному турнірі в місті Поті, де наша команда зустрілася з місцевими колективами та за підсумками змагань виборола перше місце! Ця перемога стала результатом наполегливої роботи гравців, злагоджених командних дій і прагнення досягати найвищих результатів.\n\nЗавершення зборів у Грузії ознаменувало початок нового етапу підготовки — до чемпіонату Європи-2027 з регбі-7, який відбудеться в місті Прага. Попереду багато роботи, нові виклики та відповідальні матчі, до яких команда готуватиметься з максимальною віддачею.\n\nДякуємо всім тренерам, організаторам, партнерам і кожному, хто долучився до проведення зборів та підтримує розвиток українського регбі. Продовжуємо працювати, ставити перед собою амбітні цілі та гідно представляти Україну на міжнародній арені!',
                     expense: '12900',
-                    image: '/media28.webp'
+                    image: '/news30.webp'
                 }
 
             ]
@@ -380,14 +373,6 @@ const NewsPage = () => {
                     image: '/news20.webp'
                 },
                 {
-                    id: 21,
-                    date: 'August 26-30, 2026',
-                    title: 'Forwards Training Camp in Uzhhorod Completed',
-                    description: 'The forwards training camp of the Ukrainian youth rugby-7 national team successfully concluded in Uzhhorod. Over five days, athletes actively worked on improving set-piece technique, particularly scrums and lineouts. Main focus was on individual technical preparation, synchronization of forward pack actions, and practicing tactical schemes. All participants showed high dedication and progress in their skills.',
-                    expense: '950',
-                    image: '/news21.webp'
-                },
-                {
                     id: 22,
                     date: 'September 17-21, 2026',
                     title: 'Forwards Training Camp in Uzhhorod Completed',
@@ -401,7 +386,7 @@ const NewsPage = () => {
                     title: 'International Training Camp in Batumi Completed',
                     description: 'In Batumi, our team\'s training camp has concluded, which became an important stage of preparation for future international competitions. During the camp, players worked on improving technical and tactical skills, team interaction, and enhancing game mastery. Particularly important was the inclusion of players born in 2009 in the training process, who had the opportunity to prove themselves and gain valuable experience as part of the team.\n\nAn important part of the preparation was participation in an international tournament in Poti, where our team met local teams and won first place in the competition! This victory was the result of the players\' hard work, coordinated team actions, and the drive to achieve the highest results.\n\nThe completion of the camp in Georgia marked the beginning of a new stage of preparation — for the European Championship 2027 in rugby-7, which will take place in Prague. Ahead is a lot of work, new challenges, and responsible matches for which the team will prepare with maximum dedication.\n\nWe thank all the coaches, organizers, partners, and everyone who contributed to the camp and supports the development of Ukrainian rugby. We continue to work, set ambitious goals, and represent Ukraine worthily on the international stage!',
                     expense: '12900',
-                    image: '/media28.webp'
+                    image: '/news30.webp'
                 }
 ]
         },
@@ -571,14 +556,7 @@ const NewsPage = () => {
                     expense: '6200',
                     image: '/news20.webp'
                 },
-                {
-                    id: 21,
-                    date: '2026. augusztus 26-30.',
-                    title: 'Előjátékosok edzőtábora Ungváron befejezve',
-                    description: 'Sikeresen befejeződött az ukrán ifjúsági rögbi-7 válogatott előjátékosainak edzőtábora Ungváron. Öt nap alatt a sportolók aktívan dolgoztak a standard helyzetek technikájának tökéletesítésén, különösen a scrumok és lineoutok terén. A fő hangsúly az egyéni technikai felkészítésen, az előjátékosok cselekvéseinek szinkronizálásán és a taktikai sémák gyakorlásán volt. Minden résztvevő magas elkötelezettséget és fejlődést mutatott képességeiben.',
-                    expense: '950',
-                    image: '/news21.webp'
-                },
+
                 {
                     id: 22,
                     date: '2026. szeptember 17-21.',
@@ -593,7 +571,7 @@ const NewsPage = () => {
                     title: 'Nemzetközi edzőtábor Batumiban befejezve',
                     description: 'Batumban befejeződött csapatunk edzőtábora, amely fontos szakasz volt a jövőbeli nemzetközi versenyekre való felkészülésben. A tábor során a játékosok a technikai és taktikai készségek, a csapatmunka és a játéktudás javításán dolgoztak. Különösen fontos volt a 2009-ben született játékosok bevonása a edzési folyamatba, akik lehetőséget kaptak a bizonyításra és értékes tapasztalatot szereztek a csapat részeként.\n\nA felkészülés fontos része volt a részvétel egy nemzetközi tornán Potiban, ahol csapatunk találkozott a helyi csapatokkal és a verseny eredményeként első helyezést ért el! Ez a győzelem a játékosok kemény munkájának, a koordinált csapatmunkának és a legmagasabb eredmények elérésére való törekvésnek volt az eredménye.\n\nA grúziai tábor befejezése egy új felkészülési szakasz kezdetét jelölte — a 2027-es rögbi-7 Európa-bajnokságra, amely Prágában kerül megrendezésre. Előttünk sok munka, új kihívások és felelős mérkőzések állnak, amelyekre a csapat maximális elkötelezettséggel készül.\n\nKöszönjük minden edzőnek, szervezőnek, partnernek és mindenkinek, aki hozzájárult a tábor megszervezéséhez és támogatja az ukrán rögbi fejlődését. Folytatjuk a munkát, ambiciózus célokat tűzünk ki és méltóképpen képviseljük Ukrajnát a nemzetközi színpadon!',
                     expense: '12900',
-                    image: '/media28.webp'
+                    image: '/news30.webp'
                 }
 ]
         }

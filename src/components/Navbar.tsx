@@ -76,8 +76,8 @@ const Navbar: React.FC = () => {
                             <span className="flex-1 bg-brand-yellow" />
                         </span>
                         <span className="text-xl font-bold text-white uppercase tracking-tight leading-tight">
-                            Ukraine U17
-                            <span className="block text-brand-yellow">Rugby 7s</span>
+                            Ukraine
+                            <span className="block text-brand-yellow">Rugby 7s Academy</span>
                         </span>
                     </Link>
 

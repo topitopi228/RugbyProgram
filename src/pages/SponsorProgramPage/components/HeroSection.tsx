@@ -15,10 +15,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
                     <div className="max-w-xl mx-auto md:mx-0 md:ml-auto md:mr-0 w-full">
                         <span className="animate-fade-up inline-block mb-5 px-4 py-2 border border-brand-yellow/40 text-xs font-semibold uppercase tracking-wider text-brand-yellow">
                             {language === 'UA'
-                                ? 'Регбі-7s U17'
+                                ? 'Ukraine Rugby 7s Academy'
                                 : language === 'EN'
-                                    ? 'Rugby 7s U17'
-                                    : 'Rögbi 7s U17'}
+                                    ? 'Ukraine Rugby 7s Academy'
+                                    : 'Ukraine Rugby 7s Academy'}
                         </span>
 
                         <h1 className="animate-fade-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight uppercase tracking-tight">

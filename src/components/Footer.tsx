@@ -33,26 +33,26 @@ const navLinks: Record<Language, { [key: string]: string }> = {
 };
 
 const tickerText: Record<string, string> = {
-    UA: 'UKRAINE U17 RUGBY 7S \u00A0\u2022\u00A0 РАЗОМ ДО ОЛІМПІЙСЬКИХ ВИСОТ \u00A0\u2022\u00A0 ПІДТРИМАЙ КОМАНДУ \u00A0\u2022\u00A0 КЛУБ "100" \u00A0\u2022\u00A0 ',
-    EN: 'UKRAINE U17 RUGBY 7S \u00A0\u2022\u00A0 TOGETHER TOWARDS THE OLYMPICS \u00A0\u2022\u00A0 SUPPORT THE TEAM \u00A0\u2022\u00A0 CLUB "100" \u00A0\u2022\u00A0 ',
-    HUN: 'UKRAINE U17 RUGBY 7S \u00A0\u2022\u00A0 EGYÜTT AZ OLIMPIA FELÉ \u00A0\u2022\u00A0 TÁMOGASD A CSAPATOT \u00A0\u2022\u00A0 CLUB "100" \u00A0\u2022\u00A0 ',
+    UA: 'UKRAINE RUGBY 7S ACADEMY \u00A0\u2022\u00A0 РАЗОМ ДО ОЛІМПІЙСЬКИХ ВИСОТ \u00A0\u2022\u00A0 ПІДТРИМАЙ КОМАНДУ \u00A0\u2022\u00A0 КЛУБ "100" \u00A0\u2022\u00A0 ',
+    EN: 'UKRAINE RUGBY 7S ACADEMY \u00A0\u2022\u00A0 TOGETHER TOWARDS THE OLYMPICS \u00A0\u2022\u00A0 SUPPORT THE TEAM \u00A0\u2022\u00A0 CLUB "100" \u00A0\u2022\u00A0 ',
+    HUN: 'UKRAINE RUGBY 7S ACADEMY \u00A0\u2022\u00A0 EGYÜTT AZ OLIMPIA FELÉ \u00A0\u2022\u00A0 TÁMOGASD A CSAPATOT \u00A0\u2022\u00A0 CLUB "100" \u00A0\u2022\u00A0 ',
 };
 
 const copy: Record<string, { about: string; nav: string; contacts: string; rights: string }> = {
     UA: {
-        about: 'Юнацька збірна України з регбі-7s U17. Об\'єднуємо таланти, виховуємо чемпіонів.',
+        about: 'Ukraine Rugby 7s Academy. Об\'єднуємо таланти, виховуємо чемпіонів.',
         nav: 'Навігація',
         contacts: 'Контакти',
         rights: 'Всі права захищені.',
     },
     EN: {
-        about: 'Ukrainian U17 Rugby 7s national team. Uniting talents, raising champions.',
+        about: 'Ukraine Rugby 7s Academy. Uniting talents, raising champions.',
         nav: 'Navigation',
         contacts: 'Contacts',
         rights: 'All rights reserved.',
     },
     HUN: {
-        about: 'Ukrán Ifjúsági Válogatott, rögbi-7s U17. Tehetségeket egyesítünk, bajnokokat nevelünk.',
+        about: 'Ukraine Rugby 7s Academy. Tehetségeket egyesítünk, bajnokokat nevelünk.',
         nav: 'Navigáció',
         contacts: 'Kapcsolat',
         rights: 'Minden jog fenntartva.',
@@ -86,8 +86,8 @@ const Footer: React.FC = () => {
                 {/* Brand */}
                 <div className="md:col-span-2">
                     <span className="text-xl font-bold text-white uppercase tracking-tight leading-tight">
-                        Ukraine U17
-                        <span className="block text-brand-yellow">Rugby 7s</span>
+                        Ukraine
+                        <span className="block text-brand-yellow">Rugby 7s Academy</span>
                     </span>
                     <p className="mt-4 text-sm text-neutral-400 max-w-sm leading-relaxed">
                         {t.about}
@@ -162,7 +162,7 @@ const Footer: React.FC = () => {
             <div className="border-t border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
                     <p className="text-xs text-neutral-500">
-                        © {new Date().getFullYear()} Ukraine U17 Rugby 7s. {t.rights}
+                        © {new Date().getFullYear()} Ukraine Rugby 7s Academy. {t.rights}
                     </p>
                     <div className="flex items-center gap-1.5">
                         <span className="w-2 h-4 bg-brand-blue" />

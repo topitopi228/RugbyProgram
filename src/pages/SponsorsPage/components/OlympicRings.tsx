@@ -4,7 +4,7 @@ interface OlympicRingsProps {
     language: string;
 }
 
-const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
+const OlympicRings: React.FC<OlympicRingsProps> = () => {
     return (
         <div className="relative w-full max-w-xs h-auto lg:w-96 lg:h-[500px] flex-shrink-0 flex flex-col items-center">
             {/* Olympic Rings */}
@@ -33,12 +33,12 @@ const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
                 </div>
             </div>
 
-            {/* U-17 Badge */}
+            {/* Academy Badge */}
             <div className="animate-fade-up relative w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full border-4 border-yellow-400 bg-black flex items-center justify-center z-20 mt-6 md:mt-8" style={{ animationDelay: '0.55s' }}>
-                <div className="relative z-10 text-center">
-                    <div className="text-yellow-400 text-2xl md:text-3xl lg:text-4xl font-bold">U-17</div>
-                    <div className="text-white text-xs md:text-sm font-medium mt-1">
-                        {language === 'UA' ? 'Команда' : language === 'EN' ? 'Team' : 'Csapat'}
+                <div className="relative z-10 text-center px-2">
+                    <div className="text-yellow-400 text-xl md:text-2xl lg:text-3xl font-bold">7s</div>
+                    <div className="text-white text-[10px] md:text-xs font-medium mt-1 uppercase tracking-wide">
+                        Academy
                     </div>
                 </div>
             </div>

@@ -40,12 +40,12 @@ export interface Translations {
 export const translations: Record<string, Translations> = {
     UA: {
         heroTitle: 'Клуб 100',
-        heroSubtitle: 'Ексклюзивні привілеї для спонсорів збірної України U16 з регбі-7',
+        heroSubtitle: 'Ексклюзивні привілеї для спонсорів Ukraine Rugby 7s Academy',
         heroDescription: 'Приєднуйтесь до елітного клубу підтримки українського спорту та отримайте унікальні можливості',
         joinButton: 'Приєднатися до клубу',
 
         aboutTitle: 'Про Клуб "100"',
-        aboutDescription: 'Клуб "100" - це унікальна можливість стати частиною історії українського регбі. Ми об\'єднуємо 100 найвідданіших спонсорів, які підтримують юнацьку збірну України U16 і вірять у майбутнє українського спорту - це інвестиції в юних українців, спорт і прогрес країни.',
+        aboutDescription: 'Клуб "100" - це унікальна можливість стати частиною історії українського регбі. Ми об\'єднуємо 100 найвідданіших спонсорів, які підтримують Ukraine Rugby 7s Academy і вірять у майбутнє українського спорту - це інвестиції в юних українців, спорт і прогрес країни.',
 
         membershipTitle: 'Членство починається від щомісячного внеску',
         membershipAmount: '5 000 ₴ ',
@@ -162,12 +162,12 @@ export const translations: Record<string, Translations> = {
     },
     EN: {
         heroTitle: 'Club 100',
-        heroSubtitle: 'Exclusive benefits for Ukraine U16 Rugby-7 national team sponsors',
+        heroSubtitle: 'Exclusive benefits for Ukraine Rugby 7s Academy sponsors',
         heroDescription: 'Join the elite club supporting Ukrainian sports and gain unique opportunities',
         joinButton: 'Join the Club',
 
         aboutTitle: 'About Club "100"',
-        aboutDescription: 'Club "100" is a unique opportunity to become part of Ukrainian rugby history. We unite the 100 most dedicated sponsors who support Ukraine\'s U16 youth team and believe in the future of Ukrainian sports - it\'s an investment in young Ukrainians, sports, and the country\'s progress.',
+        aboutDescription: 'Club "100" is a unique opportunity to become part of Ukrainian rugby history. We unite the 100 most dedicated sponsors who support Ukraine Rugby 7s Academy and believe in the future of Ukrainian sports - it\'s an investment in young Ukrainians, sports, and the country\'s progress.',
 
         membershipTitle: 'Membership starts from monthly contribution',
         membershipAmount: '5 000 ₴',
@@ -284,12 +284,12 @@ export const translations: Record<string, Translations> = {
     },
     HUN: {
         heroTitle: 'Klub 100',
-        heroSubtitle: 'Exkluzív előnyök az Ukrajna U16 Rögbi-7 válogatott szponzorai számára',
+        heroSubtitle: 'Exkluzív előnyök a Ukraine Rugby 7s Academy szponzorai számára',
         heroDescription: 'Csatlakozzon az ukrán sportot támogató elit klubhoz és szerezzen egyedi lehetőségeket',
         joinButton: 'Csatlakozás a Klubhoz',
 
         aboutTitle: 'A "100" Klubról',
-        aboutDescription: 'A "100" Klub egyedülálló lehetőség arra, hogy része legyen az ukrán rögbi történetének. Egyesítjük a 100 legelkötelezettebb szponzort, akik támogatják Ukrajna U16-os ifjúsági csapatát és hisznek az ukrán sport jövőjében - ez befektetés a fiatal ukrajnokban, a sportban és az ország fejlődésében.',
+        aboutDescription: 'A "100" Klub egyedülálló lehetőség arra, hogy része legyen az ukrán rögbi történetének. Egyesítjük a 100 legelkötelezettebb szponzort, akik támogatják a Ukraine Rugby 7s Academy-t és hisznek az ukrán sport jövőjében - ez befektetés a fiatal ukrajnokban, a sportban és az ország fejlődésében.',
 
         membershipTitle: 'Tagság kezdődik havi hozzájárulástól',
         membershipAmount: '5 000 ₴',
