@@ -33,10 +33,10 @@ const OlympicRings: React.FC<OlympicRingsProps> = ({ language }) => {
                 </div>
             </div>
 
-            {/* U-16 Badge */}
+            {/* U-17 Badge */}
             <div className="animate-fade-up relative w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full border-4 border-yellow-400 bg-black flex items-center justify-center z-20 mt-6 md:mt-8" style={{ animationDelay: '0.55s' }}>
                 <div className="relative z-10 text-center">
-                    <div className="text-yellow-400 text-2xl md:text-3xl lg:text-4xl font-bold">U-16</div>
+                    <div className="text-yellow-400 text-2xl md:text-3xl lg:text-4xl font-bold">U-17</div>
                     <div className="text-white text-xs md:text-sm font-medium mt-1">
                         {language === 'UA' ? 'Команда' : language === 'EN' ? 'Team' : 'Csapat'}
                     </div>

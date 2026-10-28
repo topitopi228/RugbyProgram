@@ -11,13 +11,13 @@ export const getTeamData = (language: string, t: any) => {
             {
                 id: 'coach2',
                 name: t.coach2,
-                role: t.fitnessCoach,
+                role: t.attackCoach,
                 gg: t.coach2Desc
             },
             {
                 id: 'coach3',
                 name: t.coach3,
-                role: t.tacticalAnalyst,
+                role: t.defenseCoach,
                 gg: t.coach3Desc
             },
             {
@@ -25,26 +25,25 @@ export const getTeamData = (language: string, t: any) => {
                 name: t.coach4,
                 role: t.teamManager,
                 gg: t.coach4Desc
-            }
+            },
         ],
         doctors: [
             {
-                id: 'doc2',
-                name: t.doctor2,
-                role: t.sportsDoctor,
-                gg: t.doctor2Desc
-            }
+                id: 'doc1',
+                name: t.doctor1,
+                role: t.headDoctor,
+                gg: t.doctor1Desc
+            },
+
         ],
         players: [
             { id: 'player15', name: 'Олександр Бишук', isCaptain: true, birthDate: '26.05.2010' },
             { id: 'player12', name: 'Владислав Кошелюк', isViceCaptain: true, birthDate: '04.07.2010' },
-            { id: 'player1', name: 'Микола Денбновецький ', birthDate: '08.12.2010' },
             { id: 'player2', name: 'Ерік Тіппан', birthDate: '12.09.2013' },
             { id: 'player3', name: 'Володимир Рец', birthDate: '05.04.2011' },
             { id: 'player5', name: 'Даниіл Казнін', birthDate: '07.05.2010' },
             { id: 'player6', name: 'Мирослав Тарасюк', birthDate: '15.05.2011' },
             { id: 'player7', name: 'Юрій Штець', birthDate: '07.05.2011' },
-            { id: 'player8', name: 'Богдан Пікульський', birthDate: '19.01.2010' },
             { id: 'player9', name: 'Владислав Садовський', birthDate: '09.03.2010' },
             { id: 'player10', name: 'Роман Присяжнюк', birthDate: '18.05.2010' },
             { id: 'player11', name: 'Михайло Четвертик', birthDate: '16.10.2010' },
