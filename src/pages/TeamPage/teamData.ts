@@ -3,19 +3,19 @@ export const getTeamData = (language: string, t: any) => {
     return {
         coaches: [
             {
-                id: 'coach1',
+                id: 'coach3',
                 name: t.coach1,
                 role: t.headCoach,
                 gg: t.coach1Desc
             },
             {
-                id: 'coach2',
+                id: 'coach1',
                 name: t.coach2,
                 role: t.attackCoach,
                 gg: t.coach2Desc
             },
             {
-                id: 'coach3',
+                id: 'coach2',
                 name: t.coach3,
                 role: t.defenseCoach,
                 gg: t.coach3Desc
@@ -26,6 +26,12 @@ export const getTeamData = (language: string, t: any) => {
                 role: t.teamManager,
                 gg: t.coach4Desc
             },
+            {
+                id: 'coach5',
+                name: t.coach5,
+                role: t.fitnessCoach,
+                gg: t.coach5Desc
+            }
         ],
         doctors: [
             {
@@ -34,7 +40,12 @@ export const getTeamData = (language: string, t: any) => {
                 role: t.headDoctor,
                 gg: t.doctor1Desc
             },
-
+            {
+                id: 'doc2',
+                name: t.doctor2,
+                role: t.rehabilitationSpecialist,
+                gg: t.doctor2Desc
+            }
         ],
         players: [
             { id: 'player15', name: 'Олександр Бишук', isCaptain: true, birthDate: '26.05.2010' },

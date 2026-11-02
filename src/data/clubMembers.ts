@@ -60,13 +60,13 @@ export const clubMembers: ClubMember[] = [
   },
   {
     id: 5,
-    firstName: 'Денис',
-    lastName: 'Рибачок',
+    firstName: 'Анонімний',
+    lastName: 'спонсор',
     photo: '/logo_ukr.jpg',
     membershipLevel: 'gold',
     joinDate: '2026-09-01',
     bio: 'Підтримує розвиток молодіжного регбі в Україні та сприяє підготовці національної збірної.',
-    position: 'Меценат'
+    position: 'Анонімний спонсор'
   },
   {
     id: 16,

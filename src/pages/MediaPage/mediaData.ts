@@ -23,7 +23,6 @@ export type EventCategory =
     | 'newzealand2026'
     | 'italy2026'
     | 'austria2026'
-    | 'britain2026'
     | 'other';
 
 export interface EventCategoryInfo {
@@ -649,13 +648,6 @@ export const eventCategories: EventCategoryInfo[] = [
         name: { UA: 'Австрія 2026', EN: 'Austria 2026', HUN: 'Ausztria 2026' },
         date: '18-21 Червня 2026',
         location: { UA: 'Австрія', EN: 'Austria', HUN: 'Ausztria' }
-    },
-    {
-        id: 'britain2026',
-        folder: 'britain2026',
-        name: { UA: 'Британія 2026', EN: 'Britain 2026', HUN: 'Britannia 2026' },
-        date: '13-17 Серпня 2026',
-        location: { UA: 'Великобританія', EN: 'Great Britain', HUN: 'Nagy-Britannia' }
     }
 ];
 

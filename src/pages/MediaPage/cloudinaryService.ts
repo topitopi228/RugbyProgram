@@ -206,11 +206,6 @@ const getTitleForEvent = (eventId: EventCategory): { UA: string; EN: string; HUN
             EN: 'Austria 2026',
             HUN: 'Ausztria 2026',
         },
-        britain2026: {
-            UA: 'Британія 2026',
-            EN: 'Britain 2026',
-            HUN: 'Britannia 2026',
-        },
         other: {
             UA: 'Інше',
             EN: 'Other',
@@ -237,7 +232,6 @@ export const loadAllCloudinaryImages = async (): Promise<MediaItem[]> => {
         { folder: 'newzealand2026', eventId: 'newzealand2026' as EventCategory },
         { folder: 'italy2026', eventId: 'italy2026' as EventCategory },
         { folder: 'austria2026', eventId: 'austria2026' as EventCategory },
-        { folder: 'britain2026', eventId: 'britain2026' as EventCategory },
         { folder: 'etc', eventId: 'other' as EventCategory },
     ];
 
