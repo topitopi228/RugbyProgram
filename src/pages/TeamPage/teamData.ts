@@ -26,12 +26,7 @@ export const getTeamData = (language: string, t: any) => {
                 role: t.teamManager,
                 gg: t.coach4Desc
             },
-            {
-                id: 'coach5',
-                name: t.coach5,
-                role: t.fitnessCoach,
-                gg: t.coach5Desc
-            }
+
         ],
         doctors: [
             {
@@ -40,12 +35,7 @@ export const getTeamData = (language: string, t: any) => {
                 role: t.headDoctor,
                 gg: t.doctor1Desc
             },
-            {
-                id: 'doc2',
-                name: t.doctor2,
-                role: t.rehabilitationSpecialist,
-                gg: t.doctor2Desc
-            }
+
         ],
         players: [
             { id: 'player15', name: 'Олександр Бишук', isCaptain: true, birthDate: '26.05.2010' },
