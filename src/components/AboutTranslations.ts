@@ -31,7 +31,7 @@ export const translations = {
             funding: '21,300 €'
         },
         event5: {
-            date: '29 Листопада - 6 Грудня 2026',
+            date: '29 Листопада - 9 Грудня 2026',
             title: 'Міжнародні навчально-тренувальні збори в Баку',
             description: 'Ключовий етап підготовки до сезону 2027',
             location: 'м. Баку, Азербайджан',
@@ -141,7 +141,7 @@ export const translations = {
             funding: '20,385 €'
         },
         event5: {
-            date: 'November 29 - December 6, 2026',
+            date: 'November 29 - December 9, 2026',
             title: 'International Training Camp in Baku',
             description: 'Key preparation stage for 2027 season',
             location: 'Baku, Azerbaijan',
@@ -341,10 +341,10 @@ export const getEvents = (language: string, t: any) => [
         location: t.event5.location,
         funding: t.event5.funding,
         details: language === 'UA'
-            ? 'З 29 листопада по 6 грудня в місті Баку (Азербайджан) відбудуться міжнародні навчально-тренувальні збори юнацької національної збірної команди України з регбі-7 U16. Цей етап стане одним із ключових у підготовці команди до міжнародного сезону 2027 року. Упродовж семи днів спортсмени працюватимуть за насиченою програмою (техніка, тактика, фізична і психологічна підготовка). Заплановано контрольні матчі та спільні тренування з грузинськими командами.'
+            ? 'З 29 листопада по 9 грудня в місті Баку (Азербайджан) відбудуться міжнародні навчально-тренувальні збори юнацької національної збірної команди України з регбі-7 U16. Цей етап стане одним із ключових у підготовці команди до міжнародного сезону 2027 року. Упродовж семи днів спортсмени працюватимуть за насиченою програмою (техніка, тактика, фізична і психологічна підготовка). Заплановано контрольні матчі та спільні тренування з грузинськими командами.'
             : language === 'EN'
-                ? 'From November 29 to December 6 in Baku, Azerbaijan, an international training camp for the Ukraine U17 Rugby-7 National Team will take place. This will be one of the key stages of preparation for the 2027 season. Over seven days the athletes will follow an intensive programme covering technical, tactical, physical and psychological preparation. Test matches and joint sessions with Georgian teams are planned.'
-                : '2026. november 29. - december 6. között Tbilisziben, Grúziában nemzetközi edzőtábor kerül megrendezésre az U17-os ukrán rögbi-7-es válogatott számára. Ez a szakasz kulcsfontosságú lesz a 2027-es szezonra való felkészülésben. Hét nap alatt intenzív programot követnek (technika, taktika, fizikai és pszichológiai felkészítés). Ellenőrző mérkőzések és közös edzések is tervezettek.'
+                ? 'From November 29 to December 9 in Baku, Azerbaijan, an international training camp for the Ukraine U17 Rugby-7 National Team will take place. This will be one of the key stages of preparation for the 2027 season. Over seven days the athletes will follow an intensive programme covering technical, tactical, physical and psychological preparation. Test matches and joint sessions with Georgian teams are planned.'
+                : '2026. november 29. - december 9. között Tbilisziben, Grúziában nemzetközi edzőtábor kerül megrendezésre az U17-os ukrán rögbi-7-es válogatott számára. Ez a szakasz kulcsfontosságú lesz a 2027-es szezonra való felkészülésben. Hét nap alatt intenzív programot követnek (technika, taktika, fizikai és pszichológiai felkészítés). Ellenőrző mérkőzések és közös edzések is tervezettek.'
     },
     {
         id: 7,
