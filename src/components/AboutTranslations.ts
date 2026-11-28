@@ -46,9 +46,9 @@ export const translations = {
         },
         event7: {
             date: 'Січень 2027',
-            title: 'Навчально-тренувальні збори (Іспанія)',
+            title: 'Навчально-тренувальні збори (Сутички)',
             description: 'TBC — точне місце та програма уточнюється',
-            location: 'Іспанія (TBC)',
+            location: 'TBC',
             funding: 'TBC'
         },
         event8: {
